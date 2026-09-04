@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "draft",
+  "narrationDraft": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+  "narrationDecisionRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+  "timingBasis": "provisional_mapping_to_existing_output_slots_pending_audio_alignment",
+  "beats": [
+    {
+      "beatId": "beat-001",
+      "outputStartMs": 0,
+      "outputEndMs": 9600,
+      "narrationText": "在宇宙世纪 0096 年，一台白色的机动战士悄然登场。它的名字叫 RX-0，独角兽高达。",
+      "claim": {
+        "type": "object",
+        "minimumVisibleEvidence": ["可辨认的独角兽高达机体", "白色主体装甲或独角兽头部特征"]
+      },
+      "allowedVisualAlternatives": ["驾驶员与可辨认机体的同框建立关联"]
+    },
+    {
+      "beatId": "beat-002",
+      "outputStartMs": 9600,
+      "outputEndMs": 24000,
+      "narrationText": "这台机体由阿纳海姆电子秘密开发，是独角兽计划的核心测试机。它的外观并不起眼——闭合的独角、纯白的装甲，看起来更像是一件艺术品，而不是战争机器。",
+      "claim": {
+        "type": "appearance",
+        "minimumVisibleEvidence": ["闭合的单角", "纯白装甲", "机体外观可辨认"]
+      },
+      "allowedVisualAlternatives": ["机体静态全身或头部近景；不能用驾驶员、战斗烟雾或不可辨认机体替代"]
+    },
+    {
+      "beatId": "beat-003",
+      "outputStartMs": 24000,
+      "outputEndMs": 32000,
+      "narrationText": "但独角兽高达真正令人畏惧的，是它搭载的 NT-D 系统——新人类毁灭系统。",
+      "claim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": ["独角兽高达可辨认", "与 NT-D 或毁灭模式相关的可见状态线索"]
+      },
+      "allowedVisualAlternatives": ["红色精神感应框架或毁灭模式近景；仅普通白色机体动作不足以单独通过"]
+    },
+    {
+      "beatId": "beat-004",
+      "outputStartMs": 32000,
+      "outputEndMs": 48000,
+      "narrationText": "当驾驶员的新人类能力达到阈值，NT-D 系统会自动激活。装甲展开，精神力骨架外露，头部的独角分裂为标志性的 V 字形。这就是独角兽的毁灭模式。在这个形态下，机体的机动性和战斗力会获得质的飞跃。",
+      "claim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": ["装甲展开或展开后的结构", "红色精神感应框架外露", "分裂为 V 字形的头部独角", "毁灭模式下的独角兽高达"]
+      },
+      "allowedVisualAlternatives": ["可拆为变形过程、红框架细节、V 字角和毁灭模式动作连续镜头；任一片段只能承载其实际呈现的子主张"]
+    },
+    {
+      "beatId": "beat-005",
+      "outputStartMs": 48000,
+      "outputEndMs": 63000,
+      "narrationText": "但代价同样巨大。毁灭模式对驾驶员的精神负荷极高，普通人类根本无法承受。只有真正的新人类，才能驾驭这台机体。",
+      "claim": {
+        "type": "character_reaction",
+        "minimumVisibleEvidence": ["驾驶员明确可见", "紧张、痛苦、负荷或驾驶舱操作的可见反应"]
+      },
+      "allowedVisualAlternatives": ["驾驶员特写、身体反应或驾驶舱操作；机体战斗画面不能代替人物负荷"]
+    },
+    {
+      "beatId": "beat-006",
+      "outputStartMs": 63000,
+      "outputEndMs": 84000,
+      "narrationText": "独角兽高达不仅仅是一台武器。它与拉普拉斯之盒的秘密直接关联——那是宇宙世纪初期政治阴谋的核心，涉及联邦政府合法性的根本问题。而驾驶员巴纳吉·林克斯的身份，也与这个秘密有着深层的联系。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": ["独角兽高达或驾驶员巴纳吉的明确画面"]
+      },
+      "allowedVisualAlternatives": ["机体与驾驶员关系画面；不得假造政治档案或使用无关剧情画面作事实证明"]
+    },
+    {
+      "beatId": "beat-007",
+      "outputStartMs": 84000,
+      "outputEndMs": 96000,
+      "narrationText": "这就是独角兽高达。它不是最强的机体，也不是无敌的存在。但它是 UC 时间线中一个关键的转折点——一台承载着政治阴谋、新人类潜力和战争反思的机体。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": ["独角兽高达的清晰主体镜头", "可用于总结的稳定构图或收束动作"]
+      },
+      "allowedVisualAlternatives": ["机体英雄镜头、能量收束或机体与驾驶员关系镜头"]
+    },
+    {
+      "beatId": "beat-008",
+      "outputStartMs": 96000,
+      "outputEndMs": 105648,
+      "narrationText": "如果你想知道更多关于独角兽的故事，不妨去看看《机动战士高达 UC》。",
+      "claim": {
+        "type": "editorial_hold",
+        "minimumVisibleEvidence": ["独角兽高达或项目允许的稳定收束画面"]
+      },
+      "allowedVisualAlternatives": ["收束机体动作后淡出；不依赖未授权的作品 Logo、海报或片名画面"]
+    }
+  ]
+}

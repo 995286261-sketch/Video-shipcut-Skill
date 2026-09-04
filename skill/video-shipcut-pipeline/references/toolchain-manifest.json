@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.2",
+  "platform": "windows",
+  "required": [
+    {
+      "id": "python",
+      "label": "Python",
+      "version": "3.12",
+      "env": "SHIPCUT_PYTHON_HOME",
+      "installMode": "user_install",
+      "usedBy": ["G0", "G1", "G2", "G3", "G4", "G5"]
+    },
+    {
+      "id": "ffmpeg",
+      "label": "FFmpeg + FFprobe",
+      "version": "7.1.1",
+      "env": "SHIPCUT_FFMPEG_HOME",
+      "installMode": "portable_or_user_install",
+      "usedBy": ["G2", "G3", "G4", "G5"]
+    },
+    {
+      "id": "faster_whisper_runtime",
+      "label": "Faster-Whisper runtime",
+      "env": "SHIPCUT_FASTER_WHISPER_HOME",
+      "installMode": "offline_runtime",
+      "usedBy": ["G2"]
+    },
+    {
+      "id": "faster_whisper_model",
+      "label": "Faster-Whisper model cache",
+      "env": "SHIPCUT_FASTER_WHISPER_MODEL_HOME",
+      "installMode": "separate_license_review",
+      "usedBy": ["G2"]
+    }
+  ],
+  "required_capabilities": [
+    {
+      "id": "multimodal_image_understanding",
+      "label": "多模态识图能力",
+      "description": "能理解图片内容，描述画面、识别文字、判断场景类型",
+      "usedBy": ["G1", "G3"],
+      "implementation": "approved_multimodal_adapter; provider and model are recorded in artifact provenance when applicable",
+      "fallback": "若无此能力，G1 参考视频分析退化为人工描述，G3 视觉验证需用户逐帧确认",
+      "token_cost_per_frame": "2500-5000"
+    },
+    {
+      "id": "offline_speech_to_text",
+      "label": "离线语音转文字",
+      "description": "本地转写视频音频，不上传云端",
+      "usedBy": ["G2"],
+      "examples": ["Faster-Whisper", "Whisper.cpp", "Vosk"],
+      "fallback": "若无此能力，G2 退化为人工听写或用户提供字幕文件"
+    }
+  ],
+  "optional": [
+    {
+      "id": "crawl4ai",
+      "label": "Crawl4AI",
+      "path": ".tools/crawl4ai",
+      "installMode": "optional_local_environment",
+      "usedBy": ["research_only"]
+    },
+    {
+      "id": "tts_voice",
+      "label": "Local TTS voice",
+      "installMode": "must_be_discovered_or_supplied",
+      "usedBy": ["G2", "G4"]
+    }
+  ],
+  "neverAutoInstall": ["model_cache", "tts_voice", "browser_cookies", "client_media", "licensed_music"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "媒体证据准备"
+  short_description: "离线转写并生成可追溯媒体证据产物"
+  default_prompt: "使用 $media-evidence-prep 准备本地转写和证据产物。"

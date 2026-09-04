@@ -1,0 +1,11 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "platform":"not_specified",
+  "video":{"width":1920,"height":1080,"fps":30,"codec":"h264","durationTargetMs":38832,"durationActualMs":38833},
+  "audio":{"codec":"aac","narration":"included","bgm":"included","sourceAudio":"excluded"},
+  "subtitles":{"reference":"subtitles.srt","burnedIn":true,"layout":"fixed_bottom_band"},
+  "cover":"cover.jpg",
+  "authorization":"internal_test",
+  "distribution":"not_for_distribution"
+}

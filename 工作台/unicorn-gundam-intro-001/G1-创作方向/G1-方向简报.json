@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "title": "独角兽高达——最强 NT 机体的诞生与悲壮",
+  "titleExpressionType": "editorial_expression",
+  "narrativeAngle": "视觉盛宴 + 情感共鸣",
+  "narrativeAngleDescription": "画面冲击为主，配合胡汉斯风格的史诗感叙事",
+  "audience": "高达爱好者、机甲爱好者",
+  "platforms": [
+    "bilibili",
+    "douyin"
+  ],
+  "outputPreferences": {
+    "aspectRatio": "16:9",
+    "targetDurationSec": 300,
+    "usagePurpose": "social_media"
+  },
+  "styleReference": {
+    "video": "冷战奇迹 - 逆羽雄鹰 -1080P.mp4",
+    "analysisReport": "工作台/unicorn-gundam-intro-001/G1-创作方向/G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+    "analysisManifest": "工作台/unicorn-gundam-intro-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "cacheLocation": "工作台/unicorn-gundam-intro-001/G1-创作方向/G1-参考视频分析/",
+    "keyFindings": {
+      "totalScenes": 24,
+      "avgSceneDuration": 6.8,
+      "transitionType": "硬切为主",
+      "colorTone": "冷灰色调",
+      "textStyle": {
+        "topBanner": "白色粗体大号 GLOBAL MILITARY PROGRAM",
+        "mainTitle": "中文白色特大 + 英文黄色大号",
+        "subtitle": "中文白色大号 + 英文蓝色小号",
+        "position": "底部居中"
+      },
+      "infoLayers": 3,
+      "cameraMotion": "静态为主，少量 zoom/pan"
+    }
+  },
+  "claims": [
+    {
+      "claimId": "claim-001",
+      "text": "UC 0096 年秘密武器，阿纳海姆电子公司开发",
+      "status": "pending"
+    },
+    {
+      "claimId": "claim-002",
+      "text": "NT-D 系统，Newtype 触发毁灭模式",
+      "status": "pending"
+    },
+    {
+      "claimId": "claim-003",
+      "text": "毁灭模式下性能提升，框架变红",
+      "status": "pending"
+    }
+  ],
+  "expressionBoundaries": {
+    "prohibited": [],
+    "spoilerScope": "可以全部剧透",
+    "mustInclude": []
+  },
+  "bgmDecision": "provided",
+  "bgmFile": "工作台/unicorn-gundam-intro-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3",
+  "approvedAt": "2026-08-21T04:41:06Z",
+  "approvedBy": "user"
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "0.2",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3.4",
+  "sourceMedia": "工作台/unicorn-gundam-intro-001/G0-素材包/02_原始素材/独角兽-名场面.mp4",
+  "purpose": "复用已人工核验的帧观察；后续 AI 应先读取本索引，只有索引没有覆盖的时间点才请求新的视觉分析。",
+  "analysisMethod": "coarse_text_index_then_targeted_1fps_scan_then_manual_micro_probe",
+  "records": [
+    {
+      "recordId": "obs-001",
+      "sourceRange": {"startMs": 70000, "endMs": 74000},
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/micro/destroy-01.jpg",
+        "G3-最终候选验证帧-v0.1/micro/destroy-08.jpg"
+      ],
+      "observation": "连续出现独角兽高达的正面与胸部；红色精神感应框架外露，头部由未完全展开过渡到清晰 V 字角。没有烧录对白字幕。",
+      "semanticEvidence": ["毁灭模式", "红色精神感应框架", "V 字形头部独角", "装甲/头部状态变化"],
+      "reusableFor": ["beat-002 (user-authorized visual variation)", "beat-003", "beat-004", "beat-007", "beat-008"],
+      "verification": "direct_match",
+      "risks": ["左上角有来源水印；G4 需逐帧 crop_or_mask"],
+      "reuseRule": "可作为上述可见事实的画面证据。用户已允许其用于 beat-002 的风格化外观展示，但不可声称画面展示了闭合单角或纯白常态机体。"
+    },
+    {
+      "recordId": "obs-002",
+      "sourceRange": {"startMs": 96000, "endMs": 96500},
+      "probeRate": "2 fps",
+      "frameRefs": ["G3-最终候选验证帧-v0.1/micro/head-96-01.jpg"],
+      "observation": "仅约 0.5 秒的独角兽毁灭模式近景：白色装甲、红色外露框架和 V 字角可见；紧接着切入驾驶员。",
+      "semanticEvidence": ["毁灭模式头部", "红色精神感应框架", "V 字角"],
+      "reusableFor": ["短促插入镜头"],
+      "verification": "direct_match_but_too_short_for_primary_slot",
+      "risks": ["左上角有来源水印", "不可延长为连续机体镜头"],
+      "reuseRule": "只能作为 0.5 秒以内的插入镜头；不得按原候选范围 96-103 秒使用。"
+    },
+    {
+      "recordId": "obs-003",
+      "sourceRange": {"startMs": 210000, "endMs": 214000},
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/micro/pilot-01.jpg",
+        "G3-最终候选验证帧-v0.1/micro/pilot-08.jpg"
+      ],
+      "observation": "驾驶员在驾驶舱内持续紧张注视，面部有汗、表情收紧；尾端切向机体攻击，故切点固定在 214 秒。",
+      "semanticEvidence": ["驾驶员明确可见", "驾驶舱", "紧张/精神负荷反应"],
+      "reusableFor": ["beat-005", "beat-006"],
+      "verification": "direct_match",
+      "risks": ["左上角有来源水印", "约 210-212 秒有底部烧录对白字幕；G4 需逐帧 mask 或裁切"],
+      "reuseRule": "可承载驾驶员负荷或机体-驾驶员关系的叙事，不能承载机体外观或 NT-D 结构主张。"
+    },
+    {
+      "recordId": "obs-004",
+      "sourceRange": {"startMs": 157000, "endMs": 164000},
+      "probeRate": "start/middle/end manual probes",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/seg-003/start-157s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-003/middle-160s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-003/end-163s.jpg"
+      ],
+      "observation": "可见白色装甲局部、红色结构线，以及后段毁灭模式头部；没有一帧同时清晰证明闭合单角和纯白常态装甲。",
+      "semanticEvidence": ["白色装甲局部", "红色结构线", "毁灭模式结果"],
+      "reusableFor": ["补充结构细节"],
+      "verification": "partial_match",
+      "risks": ["左上角有来源水印", "不能替代闭合单角/纯白常态主张"],
+      "reuseRule": "不得用于 beat-002 的最低可见证据。"
+    },
+    {
+      "recordId": "obs-005",
+      "sourceRange": {"startMs": 68000, "endMs": 74000},
+      "probeRate": "start/middle/end plus 70-74s micro probe",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/seg-001/start-068s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-001/middle-071s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-001/end-073s.jpg"
+      ],
+      "observation": "68 秒仍为驾驶舱操控画面，70 秒后进入可用的毁灭模式镜头，因此原 68-74 秒候选必须收窄为 70-74 秒。",
+      "semanticEvidence": ["候选边界否决依据"],
+      "reusableFor": ["切点复核"],
+      "verification": "boundary_corrected",
+      "risks": ["原候选前 2 秒不是机体画面"],
+      "reuseRule": "不得再将 68-70 秒标记为独角兽机体镜头。"
+    }
+  ]
+}

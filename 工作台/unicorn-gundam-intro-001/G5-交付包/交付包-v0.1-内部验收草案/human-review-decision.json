@@ -1,0 +1,14 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "status":"approved",
+  "decision":"accepted",
+  "approvedAt":"2026-08-25T06:00:00Z",
+  "approvalStatement":"User confirmed final acceptance after reviewing the fixed-caption horizontal candidate.",
+  "acceptedWarnings":[
+    "Two short black intervals at 16.633-17.000s and 17.500-17.967s.",
+    "Top-left source watermark remains visible.",
+    "G3 short-plan source-range versus output-timeline duration traceability discrepancy."
+  ],
+  "confirmedReviewPoints":["complete_playback","burned_source_subtitle_or_watermark_residue","subtitle_safe_area_and_fixed_band","narration_picture_sync","key_shots_and_outro","audio_mix","voice_language_accent_type_rate","authorization_and_not_for_distribution_boundary"]
+}

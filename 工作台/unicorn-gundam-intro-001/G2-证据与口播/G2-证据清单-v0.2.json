@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "status": "completed",
+  "evidencePolicy": {
+    "transcriptionStatus": "draft_requires_human_fact_review",
+    "sourceLanguage": "ja",
+    "targetNarrationLanguage": "zh",
+    "factVerificationStatus": "blocked_missing_registered_fact_source",
+    "distributionRestriction": "not_for_distribution"
+  },
+  "sourceEvidence": [
+    {
+      "assetId": "source-02-f1f08154",
+      "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceProbe": {
+        "durationMs": 285977,
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRateHz": 44100,
+          "channels": 2
+        }
+      },
+      "contactSheetRef": "联系表/source-02-f1f08154-contact-sheet.jpg",
+      "transcriptRef": "转写/source-02-f1f08154-transcript.json",
+      "transcriptArtifactsRef": "转写/source-02-f1f08154",
+      "warnings": [
+        "machine_transcript_contains_one_low-confidence_short_segment_only",
+        "machine_transcript_is_not_fact_evidence_or_output_subtitle",
+        "source_audio_excluded_from_final_edit",
+        "not_for_distribution"
+      ],
+      "relativePath": "02_原始素材/独角兽-名场面.mp4"
+    }
+  ],
+  "factEvidenceRefs": [],
+  "handoff": {
+    "nextNode": "G3_after_renewed_G2_approval",
+    "availableForG3": [
+      "独角兽-名场面.mp4 的联系表与原始时间轴",
+      "仅用于语境辅助的离线转写草稿",
+      "已登记 BGM 的自然时长 105648 ms"
+    ],
+    "restrictions": [
+      "只分析 source-02-f1f08154，不使用已归档或已删除素材",
+      "不得把转写草稿作为事实或字幕",
+      "原口播含有未登记事实，须人工重新确认或提供可追溯事实依据",
+      "成片 BGM 不循环、不延长、不重排，时长不得超过 105648 ms",
+      "禁止分发或上传第三方平台"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "0.1",
+  "libraryId": "long-video-local-edit-assets",
+  "status": "active",
+  "assetRoot": "media",
+  "defaultPresetId": "horizontal-editorial-explainer-v1",
+  "policies": {
+    "requireLocalFile": true,
+    "requireSha256": true,
+    "allowedLicenseStates": ["company-owned", "user-authorized", "redistributable"],
+    "forbidUnknownLicense": true,
+    "backgroundMusicDefault": "off",
+    "allowReferenceMediaAsAsset": false
+  },
+  "assets": []
+}

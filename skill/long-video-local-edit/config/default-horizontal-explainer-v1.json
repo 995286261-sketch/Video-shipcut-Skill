@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "profileId": "default-horizontal-explainer-v1",
+  "canvas": {"defaultAspectRatio": "16:9", "defaultWidth": 1920, "defaultHeight": 1080, "defaultFps": 30, "backgroundColor": "#101418"},
+  "layout": {"titleZone": "top-left", "subtitleZone": "bottom-center", "cardZone": "left-center"},
+  "typography": {"fontFamily": ["Microsoft YaHei UI", "Microsoft YaHei", "Arial"], "bodyColor": "#F5F7FA", "accentColor": "#F5B544"},
+  "editorial": {"defaultTransition": "cut", "allowedTransitions": ["cut", "fade"], "maxFadeMs": 160, "requiresTextEvidence": true},
+  "audio": {"mode": "source_audio_excluded", "backgroundMusic": false, "clipFadeInMs": 30, "clipFadeOutMs": 30},
+  "brand": {"logo": false, "watermark": false, "overrideSource": "brandConstraints"},
+  "qualityPolicy": {
+    "onePrimaryVisualPerBeat": true,
+    "protectPeopleAndProductFocus": true,
+    "avoidUnrequestedOverlays": true,
+    "captions": {
+      "requiresEvidenceBackedText": true,
+      "singleCaptionSystem": true,
+      "reviewRenderedChineseGlyphs": true
+    },
+    "audio": {
+      "mode": "source_audio_excluded",
+      "editBeforeMusic": true,
+      "backgroundMusicAllowed": false,
+      "requiresContinuityReviewAtEdits": true
+    },
+    "reviewRequirements": [
+      "Check representative frames at visual-mode changes.",
+      "Verify no overlay obscures a person or evidence-bearing product detail.",
+      "Verify captions only use evidence-backed text when captions are enabled.",
+      "Verify audio continuity around every edit point."
+    ]
+  }
+}

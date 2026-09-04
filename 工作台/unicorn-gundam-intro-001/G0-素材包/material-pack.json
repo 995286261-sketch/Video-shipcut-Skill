@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "unicorn-gundam-intro-001",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-f1f08154",
+      "relativePath": "02_原始素材/独角兽-名场面.mp4",
+      "sourceKind": "local-file",
+      "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "byteSize": 84069954,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-aji-yema-3only-indulgence-4ef6e545",
+      "relativePath": "07_授权音频/aji-yema-3only-indulgence.mp3",
+      "sha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11",
+      "byteSize": 4272007,
+      "fileExtension": ".mp3"
+    }
+  ],
+  "packStatus": "complete",
+  "registeredAt": "2026-08-24T06:31:21.164210Z"
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G2",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+  "factCitationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "factHandling": "user_manually_verified_for_this_project",
+  "voiceBriefRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3",
+  "voiceName": "YunyangNeural",
+  "voiceDescription": "温和、沉稳；沿用既有普通话口音与试听",
+  "permittedFactIds": [
+    "claim-001",
+    "claim-002",
+    "claim-003"
+  ],
+  "prohibitedTopics": [],
+  "supersededDraftRefs": [],
+  "userManuallyVerifiedClaims": [
+    "用户确认继续使用 G2-口播草案-v0.1.md 中的独角兽高达通用设定表述，仅适用于本项目。"
+  ],
+  "provenanceRule": "User-confirmed project facts are not first-party verified sources and may not be represented as such.",
+  "reapprovalReason": "源视频范围从四个无关视频收缩为独角兽-名场面.mp4；口播与配音选择经用户重新确认。",
+  "approvedAt": "2026-08-24T06:40:00Z",
+  "approvedBy": "user"
+}

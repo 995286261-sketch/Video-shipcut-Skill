@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-f1f08154",
+    "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+    "language": "ja",
+    "model": "small",
+    "device": "legacy-recorded-unknown",
+    "computeType": "legacy-recorded-unknown",
+    "runtimeVersion": "legacy-recorded-unknown"
+  },
+  "language": "ja",
+  "languageProbability": 1,
+  "input": "工作台\\unicorn-gundam-intro-001\\G0-素材包\\02_原始素材\\独角兽-名场面.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 930,
+      "endMs": 6430,
+      "text": "当たったひとつ",
+      "words": [
+        {
+          "startMs": 930,
+          "endMs": 1190,
+          "text": "当",
+          "probability": 0.02809470146894455
+        },
+        {
+          "startMs": 5830,
+          "endMs": 5930,
+          "text": "た",
+          "probability": 0.9915332198143005
+        },
+        {
+          "startMs": 5930,
+          "endMs": 6090,
+          "text": "った",
+          "probability": 0.9949847459793091
+        },
+        {
+          "startMs": 6090,
+          "endMs": 6210,
+          "text": "ひ",
+          "probability": 0.18958526849746704
+        },
+        {
+          "startMs": 6210,
+          "endMs": 6290,
+          "text": "と",
+          "probability": 0.9747856855392456
+        },
+        {
+          "startMs": 6290,
+          "endMs": 6430,
+          "text": "つ",
+          "probability": 0.9916682243347168
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-08-24T06:36:00.371455Z"
+}

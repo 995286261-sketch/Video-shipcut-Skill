@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "0.1",
+  "presetId": "horizontal-editorial-explainer-v1",
+  "purpose": "Evidence-led horizontal explainer with restrained information layers.",
+  "canvas": {"aspectRatio": "16:9", "defaultWidth": 1920, "defaultHeight": 1080, "defaultFps": 30},
+  "visual": {
+    "allowedLayers": ["source-video", "evidence-backed-title", "evidence-backed-caption", "evidence-backed-info-card"],
+    "onePrimaryVisualPerBeat": true,
+    "protectPeopleAndProductFocus": true,
+    "defaultTransition": "cut",
+    "maxFadeMs": 160,
+    "allowUnrequestedWatermark": false
+  },
+  "audio": {
+    "defaultMode": "source_only",
+    "backgroundMusic": {"defaultEnabled": false, "requiresRegisteredAsset": true, "requiresExplicitAuthorization": true},
+    "soundEffects": {"defaultEnabled": false, "requiresRegisteredAsset": true, "requiresSemanticEvent": true, "maxPerMinute": 4},
+    "editPointFadeMs": 30
+  },
+  "captions": {
+    "requiresEvidenceBackedText": true,
+    "singleCaptionSystem": true,
+    "timebase": "output-timeline",
+    "requiresRenderedGlyphReview": true
+  },
+  "assetSelection": {
+    "selectionMode": "allowlisted",
+    "fallbackWhenNoEligibleAsset": "render_without_optional_asset_and_emit_warning",
+    "neverUse": ["unknown-license", "reference-video-media", "unregistered-local-file"]
+  },
+  "reviewRequirements": [
+    "Review title, caption, and information-card text against evidence.",
+    "Review visual-mode changes and protected regions on rendered frames.",
+    "Review audio continuity at every edit point and every optional sound-effect placement.",
+    "Review asset licenses and hashes before render."
+  ]
+}

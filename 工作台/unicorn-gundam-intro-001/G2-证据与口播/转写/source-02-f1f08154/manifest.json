@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1",
+  "status": "completed",
+  "input": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\\u8f6c\u5199\\source-02-f1f08154-transcript.json",
+  "artifacts": {
+    "srt": "transcript.srt",
+    "txt": "transcript.txt"
+  },
+  "segments": 1,
+  "validation": {
+    "passed": true,
+    "timestampsMonotonic": true,
+    "timestampsNonOverlapping": true,
+    "txtMatchesSrt": true,
+    "lastTimestampMs": 6430
+  },
+  "warning": "Machine transcription draft. Verify names, specialist terms, and factual claims before use."
+}

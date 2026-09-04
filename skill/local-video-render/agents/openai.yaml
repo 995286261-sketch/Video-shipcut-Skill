@@ -1,0 +1,4 @@
+interface:
+  display_name: "G4 剪辑与 ChatCut 交接"
+  short_description: "裁切分段素材并交接为 ChatCut 可编辑工程"
+  default_prompt: "使用 $local-video-render 执行 G4 本地剪辑并交接到 ChatCut。"

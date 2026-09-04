@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "completed",
+  "derivedFrom": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-视觉分析/G3-目标素材视觉分析-v0.1.json",
+  "sourceIdentity": {
+    "assetId": "source-02-f1f08154",
+    "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB"
+  },
+  "reusePolicy": "Read this index before any candidate search. Do not rescan the full source when sourceIdentity and derivedFrom.cacheKey match. Final selections still require only local start/middle/end frame verification.",
+  "entries": [
+    {"range":{"startMs":0,"endMs":15000},"subjectStatus":"not_target","observed":"背光人物、装饰挂毯。","editingUse":"不用于独角兽机体展示。","risks":["channel_watermark"]},
+    {"range":{"startMs":15000,"endMs":60000},"subjectStatus":"mixed_or_uncertain","observed":"绿色机体近景与工业环境。","editingUse":"默认排除，除非口播明确需要环境或对比。","risks":["channel_watermark","not_unicorn_confirmed"]},
+    {"range":{"startMs":60000,"endMs":75000},"subjectStatus":"pilot_only","observed":"白色头盔驾驶员近景。","editingUse":"可用于驾驶员关联句，不能承担机体建立。","risks":["channel_watermark"]},
+    {"range":{"startMs":75000,"endMs":90000},"subjectStatus":"unicorn_confirmed","observed":"白色装甲机体后部/下方、红色发光框架、蓝色喷焰。","editingUse":"可用于毁灭模式与性能爆发。","risks":["channel_watermark"]},
+    {"range":{"startMs":90000,"endMs":120000},"subjectStatus":"pilot_only","observed":"驾驶员面部与白色头盔。","editingUse":"可用于驾驶员负荷或人物关联。","risks":["channel_watermark","intermittent_burned_subtitle"]},
+    {"range":{"startMs":120000,"endMs":150000},"subjectStatus":"unicorn_confirmed","observed":"白色机体躯干、绿色眼部与暗色空间中的动作。","editingUse":"可用于主体建立、结构细节和动作推进。","risks":["channel_watermark"]},
+    {"range":{"startMs":150000,"endMs":165000},"subjectStatus":"pilot_only","observed":"驾驶员近景。","editingUse":"仅人物关联段。","risks":["channel_watermark","burned_subtitle"]},
+    {"range":{"startMs":165000,"endMs":180000},"subjectStatus":"unicorn_confirmed","observed":"白色机体、红色发光框架与大型火器。","editingUse":"可用于毁灭模式、武装和高潮动作。","risks":["channel_watermark"]},
+    {"range":{"startMs":180000,"endMs":195000},"subjectStatus":"mixed_or_uncertain","observed":"星空与不完整机体；后段出现白/红框架机体和深红机体同框。","editingUse":"仅可作为转场或对战关系，需逐段核验目标机体。","risks":["channel_watermark","mixed_subject"]},
+    {"range":{"startMs":195000,"endMs":240000},"subjectStatus":"pilot_only","observed":"驾驶员连续近景。","editingUse":"情绪和驾驶员负荷段。","risks":["channel_watermark","burned_subtitle"]},
+    {"range":{"startMs":240000,"endMs":255000},"subjectStatus":"character_only","observed":"年长角色与窗外星球。","editingUse":"默认不用于机体科普。","risks":["channel_watermark","burned_subtitle"]},
+    {"range":{"startMs":255000,"endMs":270000},"subjectStatus":"uncertain_action","observed":"红橙蓝高速运动画面，单帧主体不清。","editingUse":"仅在三帧验证后用作短动作重拍。","risks":["channel_watermark","motion_blur"]},
+    {"range":{"startMs":270000,"endMs":285977},"subjectStatus":"environment_only","observed":"绿色能量云，随后转黑。","editingUse":"可作为片尾情绪留白，不用于主体展示。","risks":["channel_watermark","low_information"]}
+  ],
+  "selectionOrder": ["unicorn_confirmed", "pilot_only_when_narration_requires", "mixed_or_uncertain_after_three_frame_verification"],
+  "globalRisks": ["persistent_channel_watermark", "intermittent_burned_subtitles"],
+  "nextStep": "Use entries to choose non-overlapping source ranges for the 105648 ms output slots, then verify only those ranges with three frames."
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "ready_for_source_fill",
+  "targetDurationMs": 105648,
+  "durationSource": "provided BGM native duration",
+  "slotPolicy": "BGM and reference rhythm define output slots first. Source clips fill later, must not overlap, repeat, stretch, loop, or use unverified subjects.",
+  "slots": [
+    {"slotId":"slot-001","startMs":0,"endMs":4000,"chapter":"intro","bgmMarker":"phrase-01","preferredVisual":"dark environment or verified opening mecha detail","transitionIn":"fade_in"},
+    {"slotId":"slot-002","startMs":4000,"endMs":9600,"chapter":"intro","bgmMarker":"phrase-01","preferredVisual":"title with subject silhouette/detail","transitionIn":"hard_cut"},
+    {"slotId":"slot-003","startMs":9600,"endMs":16000,"chapter":"rx0_appearance","bgmMarker":"phrase-02","preferredVisual":"verified white armor or head detail","transitionIn":"hard_cut"},
+    {"slotId":"slot-004","startMs":16000,"endMs":24000,"chapter":"rx0_appearance","bgmMarker":"phrase-02","preferredVisual":"pilot relation or full subject establish","transitionIn":"hard_cut"},
+    {"slotId":"slot-005","startMs":24000,"endMs":32000,"chapter":"context","bgmMarker":"phrase-03","preferredVisual":"mechanical environment or restrained detail","transitionIn":"hard_cut"},
+    {"slotId":"slot-006","startMs":32000,"endMs":40000,"chapter":"ntd_system","bgmMarker":"phrase-03","preferredVisual":"red frame or transformation detail","transitionIn":"hard_cut"},
+    {"slotId":"slot-007","startMs":40000,"endMs":48000,"chapter":"ntd_system","bgmMarker":"phrase-04","preferredVisual":"verified mechanism/action build","transitionIn":"hard_cut"},
+    {"slotId":"slot-008","startMs":48000,"endMs":54240,"chapter":"ntd_system","bgmMarker":"phrase-04","preferredVisual":"head, armor or frame detail","transitionIn":"hard_cut"},
+    {"slotId":"slot-009","startMs":54240,"endMs":63000,"chapter":"destroy_mode","bgmMarker":"phrase-05","preferredVisual":"verified action accent","transitionIn":"hard_cut_on_onset"},
+    {"slotId":"slot-010","startMs":63000,"endMs":72000,"chapter":"destroy_mode","bgmMarker":"phrase-05","preferredVisual":"full body or weapon action","transitionIn":"hard_cut"},
+    {"slotId":"slot-011","startMs":72000,"endMs":84000,"chapter":"pilot_cost","bgmMarker":"phrase-06","preferredVisual":"pilot reaction or subject relation","transitionIn":"short_dissolve_or_hold"},
+    {"slotId":"slot-012","startMs":84000,"endMs":96000,"chapter":"laplace_context","bgmMarker":"phrase-07","preferredVisual":"mecha action or space transition","transitionIn":"hard_cut_on_energy_change"},
+    {"slotId":"slot-013","startMs":96000,"endMs":105648,"chapter":"summary","bgmMarker":"phrase-08","preferredVisual":"verified subject hero shot or emotional release","transitionIn":"hold_then_fade_out"}
+  ],
+  "humanReviewPoints":["fill_each_slot_with_unique_verified_source_ranges","review_bgm_phrase_alignment","review_watermark_and_burned_subtitle_treatment"]
+}

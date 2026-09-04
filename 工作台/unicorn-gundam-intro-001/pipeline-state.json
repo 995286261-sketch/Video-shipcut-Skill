@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "sourcePackRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "currentNode": "completed",
+  "status": "completed_with_accepted_warnings",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G1-\u521b\u4f5c\u65b9\u5411\\G1-\u53c2\u8003\u89c6\u9891\u5206\u6790\\reference-analysis-manifest-v0.1.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G1-\u521b\u4f5c\u65b9\u5411\\G1-\u53c2\u8003\u89c6\u9891\u5206\u6790\\\u51b7\u6218\u5947\u8ff9 - \u9006\u7fbd\u96c4\u9e70 -1080P-\u6280\u672f\u5206\u6790\u62a5\u544a.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G1-\u521b\u4f5c\u65b9\u5411\\G1-\u65b9\u5411\u7b80\u62a5.json"
+      ],
+      "humanReviewPoints": [],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+        "approvedAt": "2026-08-24T06:01:09Z"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G0-\u7d20\u6750\u5305\\material-pack.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u53e3\u64ad\u8349\u6848-v0.1.md"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u7d20\u6750\u8303\u56f4\u4fee\u8ba2-v0.1.md",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u8bc1\u636e\u6e05\u5355-v0.2.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.2.md",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\\u8054\u7cfb\u8868\\source-02-f1f08154-contact-sheet.jpg",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\\u8f6c\u5199\\source-02-f1f08154-transcript.json"
+      ],
+      "humanReviewPoints": [
+        "confirm_fact_handling_for_existing_narration",
+        "confirm_existing_voice_audition_or_select_replacement",
+        "reapprove_g2_amendment"
+      ],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json",
+        "approvedAt": "2026-08-24T06:42:55Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+        "factDecisionRef": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json",
+        "voiceDecisionRef": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\\u914d\u97f3\u8bd5\u542c\\voice-audition-yunyang.mp3"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u8bc1\u636e\u6e05\u5355-v0.2.json",
+        "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u53e3\u64ad\u8349\u6848-v0.1.md"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u8bed\u4e49\u5019\u9009\u6587\u5b57\u7d22\u5f15-v0.1.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u8bed\u4e49\u5019\u9009\u7b5b\u9009-v0.1.md",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u7d22\u5f15-v0.2.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5c40\u90e8\u955c\u5934\u9a8c\u8bc1\u5e93-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "reapprove_g2_narration_wording_for_user_authorized_destroy_mode_visual",
+        "provide_narration_alignment_or_authorize_local_asr_model_installation"
+      ],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u77ed\u7248\u6700\u7ec8\u5ba1\u6838\u56de\u663e-v0.1.md",
+        "approvedAt": "2026-08-25T04:39:38Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u77ed\u7248\u6267\u884c\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u77ed\u7248\u6700\u7ec8\u5ba1\u6838\u56de\u663e-v0.1.md"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/01-\u6267\u884c\u8ba1\u5212/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.2.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u77ed\u7248\u672c\u5730\u9884\u89c8-v0.1.mp4",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u672c\u5730\u5019\u9009\u5ba1\u6838\u8bb0\u5f55-v0.1.md"
+      ],
+      "humanReviewPoints": [],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u672c\u5730\u5019\u9009\u5ba1\u6838\u8bb0\u5f55-v0.1.md",
+        "approvedAt": "2026-08-25T05:31:44Z",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u77ed\u7248\u672c\u5730\u9884\u89c8-v0.1.mp4",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed_with_accepted_warnings",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1-\u5185\u90e8\u9a8c\u6536\u8349\u6848/delivery-manifest.json"
+      ],
+      "humanReviewPoints": [
+        "complete_playback",
+        "review_black_intervals",
+        "review_watermark_and_subtitle_safe_area",
+        "confirm_audio_sync_and_mix",
+        "confirm_authorization_boundary"
+      ],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1-\u5185\u90e8\u9a8c\u6536\u8349\u6848/human-review-decision.json",
+        "approvedAt": "2026-08-25T05:55:46Z"
+      }
+    }
+  },
+  "acceptedWarnings": [
+    "Two short black intervals at 16.633-17.000s and 17.500-17.967s.",
+    "Top-left source watermark remains visible.",
+    "G3 short-plan source-range versus output-timeline duration traceability discrepancy."
+  ],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-08-24T06:01:01Z",
+  "updatedAt": "2026-08-25T05:55:46Z",
+  "amendmentHistory": [
+    {
+      "fromNode": "G3",
+      "toNode": "G2",
+      "reason": "Removed irrelevant uc-p1 to uc-p4; current G2 evidence cites only deleted sources and must be rebuilt for the retained Unicorn source.",
+      "reworkRef": "\u5de5\u4f5c\u53f0\\unicorn-gundam-intro-001\\G2-\u8bc1\u636e\u4e0e\u53e3\u64ad\\G2-\u7d20\u6750\u8303\u56f4\u4fee\u8ba2-v0.1.md",
+      "reopenedAt": "2026-08-24T06:34:43Z"
+    },
+    {
+      "fromNode": "G4",
+      "toNode": "G3",
+      "reason": "G4 diagnostic found narration-to-visual semantic mismatches in the approved G3 plan; G4 finishing work cannot correct plan-level mismatches.",
+      "reworkRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u8bed\u4e49\u5bf9\u9f50\u8fd4\u5de5\u8bf4\u660e-v0.1.md",
+      "reopenedAt": "2026-08-24T09:30:19Z"
+    }
+  ]
+}

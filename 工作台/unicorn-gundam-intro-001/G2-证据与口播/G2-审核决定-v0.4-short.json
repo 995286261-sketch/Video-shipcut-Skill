@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G2",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.3-short.md",
+  "factCitationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "voiceBriefRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3",
+  "voiceName": "YunyangNeural",
+  "voiceDescription": "温和、沉稳；用户已确认音色与短版方向",
+  "supersededDraftRefs": ["工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md", "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.2.md"],
+  "factHandling": "user_manually_verified_for_this_project",
+  "provenanceRule": "User-confirmed project facts are not first-party verified sources and may not be represented as such.",
+  "reapprovalReason": "用户批准将本次演示收敛为短版，仅保留与当前授权素材直接匹配的机体、NT-D、驾驶员负荷和总结内容。",
+  "approvedBy": "user",
+  "approvedAt": "2026-08-25T00:00:00Z"
+}

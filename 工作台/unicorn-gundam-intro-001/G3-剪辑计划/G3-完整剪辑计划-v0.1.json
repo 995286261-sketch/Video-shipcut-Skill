@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "review_required",
+  "sourceAudioPolicy": "exclude",
+  "narrationDraft": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+  "narrationDecisionRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+  "durationDecision": {
+    "targetDurationSec": 105.648,
+    "narrationEstimatedDurationSec": 105.648,
+    "resolution": "follow_narration_natural_duration",
+    "decisionReason": "用户确认成片跟随获准 BGM 的 105648 ms 自然长度；491 字口播以约每分钟 279 字可自然容纳。",
+    "intentionalSilence": [],
+    "antiFillRule": {"disallowRepeatedSegments":true,"disallowLoops":true,"disallowMeaninglessSlowMotion":true,"disallowUnverifiedFactPadding":true}
+  },
+  "segments": [
+    {"segmentId":"seg-001","assetId":"source-02-f1f08154","startMs":68000,"endMs":72000,"outputStartMs":0,"outputEndMs":4000,"outputDurationMs":4000,"mappingMode":"one_to_one","reason":"驾驶员与机体关联开场。","evidenceRefs":["G3-视觉文字索引-v0.1.json:60000-75000"],"status":"pending_verification"},
+    {"segmentId":"seg-002","assetId":"source-02-f1f08154","startMs":75000,"endMs":80600,"outputStartMs":4000,"outputEndMs":9600,"outputDurationMs":5600,"mappingMode":"one_to_one","reason":"白色装甲、红色框架与喷焰建立主体能量。","evidenceRefs":["G3-视觉文字索引-v0.1.json:75000-90000"],"status":"pending_verification"},
+    {"segmentId":"seg-003","assetId":"source-02-f1f08154","startMs":120000,"endMs":126400,"outputStartMs":9600,"outputEndMs":16000,"outputDurationMs":6400,"mappingMode":"one_to_one","reason":"白色机体躯干和绿色眼部用于主体建立。","evidenceRefs":["G3-视觉文字索引-v0.1.json:120000-150000"],"status":"pending_verification"},
+    {"segmentId":"seg-004","assetId":"source-02-f1f08154","startMs":126400,"endMs":134400,"outputStartMs":16000,"outputEndMs":24000,"outputDurationMs":8000,"mappingMode":"one_to_one","reason":"同一动作区间的连续白色机体展示。","evidenceRefs":["G3-视觉文字索引-v0.1.json:120000-150000"],"status":"pending_verification"},
+    {"segmentId":"seg-005","assetId":"source-02-f1f08154","startMs":134400,"endMs":142400,"outputStartMs":24000,"outputEndMs":32000,"outputDurationMs":8000,"mappingMode":"one_to_one","reason":"机体动作与结构细节。","evidenceRefs":["G3-视觉文字索引-v0.1.json:120000-150000"],"status":"pending_verification"},
+    {"segmentId":"seg-006","assetId":"source-02-f1f08154","startMs":142400,"endMs":150400,"outputStartMs":32000,"outputEndMs":40000,"outputDurationMs":8000,"mappingMode":"one_to_one","reason":"承接机制说明的动作细节。","evidenceRefs":["G3-视觉文字索引-v0.1.json:120000-150000"],"status":"pending_verification"},
+    {"segmentId":"seg-007","assetId":"source-02-f1f08154","startMs":165000,"endMs":173000,"outputStartMs":40000,"outputEndMs":48000,"outputDurationMs":8000,"mappingMode":"one_to_one","reason":"白色机体红色发光框架与大型火器。","evidenceRefs":["G3-视觉文字索引-v0.1.json:165000-180000"],"status":"pending_verification"},
+    {"segmentId":"seg-008","assetId":"source-02-f1f08154","startMs":173000,"endMs":179240,"outputStartMs":48000,"outputEndMs":54240,"outputDurationMs":6240,"mappingMode":"one_to_one","reason":"同一武装动作的后续段。","evidenceRefs":["G3-视觉文字索引-v0.1.json:165000-180000"],"status":"pending_verification"},
+    {"segmentId":"seg-009","assetId":"source-02-f1f08154","startMs":195000,"endMs":203760,"outputStartMs":54240,"outputEndMs":63000,"outputDurationMs":8760,"mappingMode":"one_to_one","reason":"对白色红框架机体与深红机体关系做动作段候选。","evidenceRefs":["G3-视觉文字索引-v0.1.json:180000-195000"],"status":"pending_verification"},
+    {"segmentId":"seg-010","assetId":"source-02-f1f08154","startMs":203760,"endMs":212760,"outputStartMs":63000,"outputEndMs":72000,"outputDurationMs":9000,"mappingMode":"one_to_one","reason":"驾驶员反应承担动作后的情绪段。","evidenceRefs":["G3-视觉文字索引-v0.1.json:195000-240000"],"status":"pending_verification"},
+    {"segmentId":"seg-011","assetId":"source-02-f1f08154","startMs":212760,"endMs":224760,"outputStartMs":72000,"outputEndMs":84000,"outputDurationMs":12000,"mappingMode":"one_to_one","reason":"驾驶员关联与精神负荷段候选。","evidenceRefs":["G3-视觉文字索引-v0.1.json:195000-240000"],"status":"pending_verification"},
+    {"segmentId":"seg-012","assetId":"source-02-f1f08154","startMs":224760,"endMs":236760,"outputStartMs":84000,"outputEndMs":96000,"outputDurationMs":12000,"mappingMode":"one_to_one","reason":"驾驶员关系与过渡段候选。","evidenceRefs":["G3-视觉文字索引-v0.1.json:195000-240000"],"status":"pending_verification"},
+    {"segmentId":"seg-013","assetId":"source-02-f1f08154","startMs":255000,"endMs":264648,"outputStartMs":96000,"outputEndMs":105648,"outputDurationMs":9648,"mappingMode":"one_to_one","reason":"高速动作与能量画面作为收束候选。","evidenceRefs":["G3-视觉文字索引-v0.1.json:255000-270000"],"status":"pending_verification"}
+  ],
+  "editPlan": {"timeline":[{"segmentId":"seg-001"},{"segmentId":"seg-002"},{"segmentId":"seg-003"},{"segmentId":"seg-004"},{"segmentId":"seg-005"},{"segmentId":"seg-006"},{"segmentId":"seg-007"},{"segmentId":"seg-008"},{"segmentId":"seg-009"},{"segmentId":"seg-010"},{"segmentId":"seg-011"},{"segmentId":"seg-012"},{"segmentId":"seg-013"}]},
+  "humanReviewPoints":["verify_all_candidate_ranges_before_timeline_review","review_watermark_and_burned_subtitle_treatment","review_complete_timeline_once_verified"]
+}

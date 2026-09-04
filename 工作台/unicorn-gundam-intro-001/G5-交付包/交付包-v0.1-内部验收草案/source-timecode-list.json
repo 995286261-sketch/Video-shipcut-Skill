@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "segments": [
+    {"segmentId":"seg-001","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":70000,"sourceEndMs":74000,"outputStartMs":0,"outputEndMs":4000},
+    {"segmentId":"seg-002","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":157000,"sourceEndMs":164000,"outputStartMs":4000,"outputEndMs":11102},
+    {"segmentId":"seg-003","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":165000,"sourceEndMs":170000,"outputStartMs":11102,"outputEndMs":17016},
+    {"segmentId":"seg-004","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":170000,"sourceEndMs":175000,"outputStartMs":17016,"outputEndMs":21505},
+    {"segmentId":"seg-005","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":175000,"sourceEndMs":178000,"outputStartMs":21505,"outputEndMs":24340},
+    {"segmentId":"seg-006","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":210000,"sourceEndMs":214000,"outputStartMs":24340,"outputEndMs":28340},
+    {"segmentId":"seg-007","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":195000,"sourceEndMs":197036,"outputStartMs":28340,"outputEndMs":30376},
+    {"segmentId":"seg-008","assetId":"source-02-f1f08154","sourceSha256":"C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB","sourceStartMs":214000,"sourceEndMs":222456,"outputStartMs":30376,"outputEndMs":38832}
+  ],
+  "chapters": [
+    {"chapterId":"chapter-01","output":"clips/chapter-01.mp4","outputStartMs":0,"outputEndMs":11102,"segments":["seg-001","seg-002"]},
+    {"chapterId":"chapter-02","output":"clips/chapter-02.mp4","outputStartMs":11102,"outputEndMs":24340,"segments":["seg-003","seg-004","seg-005"]},
+    {"chapterId":"chapter-03","output":"clips/chapter-03.mp4","outputStartMs":24340,"outputEndMs":38832,"segments":["seg-006","seg-007","seg-008"]}
+  ]
+}

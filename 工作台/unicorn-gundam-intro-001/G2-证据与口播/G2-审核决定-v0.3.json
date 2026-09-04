@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G2",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+  "factCitationRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "factHandling": "user_manually_verified_for_this_project",
+  "voiceBriefRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3",
+  "voiceName": "YunyangNeural",
+  "voiceDescription": "温和、沉稳；沿用既有普通话口音与试听",
+  "permittedFactIds": ["claim-001", "claim-002", "claim-003"],
+  "prohibitedTopics": [],
+  "supersededDraftRefs": ["工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md"],
+  "userManuallyVerifiedClaims": ["用户确认继续使用本项目的独角兽高达通用设定表述。", "用户确认外观段以 G3 已验证的毁灭模式视觉特征承载，不再使用闭合单角常态机主张。"],
+  "provenanceRule": "User-confirmed project facts are not first-party verified sources and may not be represented as such.",
+  "reapprovalReason": "根据用户确认，外观段由未获画面验证的闭合单角/纯白常态机改为白色装甲、红色精神感应框架和 NT-D 激活后的 V 字角，以与 G3 实际画面直接对齐。",
+  "approvedAt": "2026-08-25T00:00:00Z",
+  "approvedBy": "user"
+}

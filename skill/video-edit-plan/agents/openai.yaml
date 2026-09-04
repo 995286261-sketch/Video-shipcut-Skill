@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频编辑计划"
+  short_description: "确认 G1 方向或 G3 可编辑剪辑计划"
+  default_prompt: "使用 $video-edit-plan 按 G2 审核决定完成 G3 人工审核剪辑计划。"

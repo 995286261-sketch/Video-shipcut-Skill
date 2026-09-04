@@ -1,0 +1,30 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "status":"completed_with_accepted_warnings",
+  "finishedAt":"2026-08-25T06:00:00Z",
+  "artifacts":{
+    "finalVideo":{"path":"final-video.mp4","sha256":"E1E1F69277E2110E5604FFC5845071803036AC8EBD9A61A23746D9E1E100EE2A"},
+    "cover":{"path":"cover.jpg","sha256":"B631613EA749A411B309FB75E2A6F967313A1ADF91885B394DD3D3C370A5DBC8"},
+    "subtitles":{"path":"subtitles.srt","sha256":"5820D4975F8611301B9AC7E3B4F71AA380B80C9B7D0FCDB8AA07B46E6A9CC3C8"},
+    "chapterClips":[
+      {"path":"clips/chapter-01.mp4","sha256":"8CDD9EC484AE501155D63030BEDF28D68284B09F2A68C7753283E21B76CC0D7B"},
+      {"path":"clips/chapter-02.mp4","sha256":"6BC4F2FBB8C676770401380C517D53FEEA7BC53EA2EC6AF6E1A58DADE8E9BC12"},
+      {"path":"clips/chapter-03.mp4","sha256":"41545629DEB959954627490B5AB66BC0AAFEEDCAE8F2B3AA3531AF399FC02440"}
+    ]
+  },
+  "checks":{
+    "decode":{"status":"pass","detail":"FFmpeg full decode completed."},
+    "videoCodec":{"status":"pass","detail":"H.264 video."},
+    "dimensions":{"status":"pass","detail":"1920x1080."},
+    "fps":{"status":"pass","detail":"30fps."},
+    "audio":{"status":"pass","detail":"One AAC mix track; source audio excluded."},
+    "duration":{"status":"pass","detail":"Target 38.832s; actual 38.833s; delta +0.001s."},
+    "blackFrames":{"status":"warning","detail":"blackdetect found 16.633-17.000s and 17.500-17.967s; human review required."},
+    "silence":{"status":"pass","detail":"silencedetect found no interval at or above 0.5s below -50dB."},
+    "duplicateSegments":{"status":"warning","detail":"No reliable duplicate-shot detector was configured for this animated source; human review required."},
+    "cover":{"status":"pass","detail":"1920x1080 JPEG cover generated."}
+  },
+  "warnings":["Two short detected black intervals require playback judgment.","Top-left source watermark remains visible.","Distribution remains not_for_distribution."],
+  "manualReviewStatus":"approved_with_accepted_warnings"
+}

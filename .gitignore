@@ -1,0 +1,13 @@
+# 系统与缓存产物
+.DS_Store
+__pycache__/
+*.pyc
+
+# 模型权重与下载缓存（不得提交）
+models/
+*.bin
+
+# 临时与工作产物
+*.tmp
+.scratch/
+.zcode/

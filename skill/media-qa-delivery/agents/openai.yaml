@@ -1,0 +1,4 @@
+interface:
+  display_name: "Media QA and Delivery"
+  short_description: "Validate media and build an auditable delivery bundle"
+  default_prompt: "Use $media-qa-delivery to run final QA and package a local media delivery bundle."

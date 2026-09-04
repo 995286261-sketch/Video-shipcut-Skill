@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "editPlan": {
+    "approvedPlanRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-短版执行计划-v0.1.json",
+    "finalRenderRef": "工作台/unicorn-gundam-intro-001/G4-剪辑与渲染/G4-横版本地预览-v0.2-固定字幕条.mp4",
+    "format": {"width":1920,"height":1080,"fps":30,"targetDurationMs":38832,"actualDurationMs":38833},
+    "audio": {"narration":"G2-完整口播-yunyang-v0.3-short.mp3","bgm":"aji-yema-3only-indulgence.mp3","sourceAudio":"excluded","bgmGain":0.18,"fadeOutMs":1000},
+    "subtitles": {"source":"subtitles.srt","burnedIn":true,"layout":"fixed_bottom_band","styleContract":"skill/local-video-render/references/caption-style-contract.md"},
+    "authorization":"internal_test","distribution":"not_for_distribution"
+  },
+  "evidenceRefs":["工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-证据清单-v0.2.json","工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-短版最终审核回显-v0.1.md"],
+  "warnings":["Two short black intervals were detected at 16.633-17.000s and 17.500-17.967s; require human playback judgment.","Top-left source watermark remains visible in source-derived visuals.","G3 short-plan source-range versus output-timeline duration discrepancy remains a traceability warning and must be normalized before template reuse."],
+  "humanReviewPoints":["complete_playback","burned_source_subtitle_or_watermark_residue","subtitle_safe_area_and_fixed_band","narration_picture_sync","key_shots_and_outro","audio_mix","voice_language_accent_type_rate","authorization_and_not_for_distribution_boundary"]
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "node":"G3",
+  "sourceReference":"冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "referenceBoundary":"abstract_rules_only_no_reuse_of_visuals_audio_text_logo",
+  "analysisRef":"工作台/unicorn-gundam-intro-001/G1-创作方向/G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+  "rules":{
+    "sceneCountObserved":24,
+    "averageShotDurationSec":6.8,
+    "minShotDurationSec":2.3,
+    "maxShotDurationSec":22.8,
+    "transitionPreference":"hard_cut_first",
+    "transitionSecondary":"short_dissolve_only_at_chapter_or_emotional_pause",
+    "chapterProgression":"title_context_subject_mechanism_action_consequence_summary",
+    "cameraMotion":"mostly_static_with_limited_zoom_or_pan",
+    "textLanes":["top_title_or_chapter","middle_info_card","lower_narration_subtitle"],
+    "pacing":"stable_documentary_progression_with_short_action_accents",
+    "sourceBoundary":"reference_video_is_style_only"
+  },
+  "humanReview":"Reference rules are abstract guidance; do not copy source wording, visuals, music, logo, or subtitles."
+}

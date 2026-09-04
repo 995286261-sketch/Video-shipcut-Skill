@@ -1,0 +1,20 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: FixedBottom,Microsoft YaHei,46,&H00FFFFFF,&H000000FF,&HDC101418,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,120,120,48,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.10,0:00:05.37,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}在宇宙世纪 0096 年，RX-0 独角兽高达登场。
+Dialogue: 0,0:00:05.32,0:00:11.10,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}白色装甲之下，是在 NT-D 激活后显露的\N红色精神感应框架。
+Dialogue: 0,0:00:11.10,0:00:17.02,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}当系统启动，装甲展开，\N头部独角分裂为标志性的 V 字形。
+Dialogue: 0,0:00:17.02,0:00:21.50,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}毁灭模式因此成为独角兽最鲜明的视觉标志。
+Dialogue: 0,0:00:21.50,0:00:24.34,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}但这种力量并非没有代价。
+Dialogue: 0,0:00:24.34,0:00:30.38,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}驾驶舱里的巴纳吉必须承受极高的精神负荷，\N才能驾驭这台机体。
+Dialogue: 0,0:00:30.38,0:00:38.78,FixedBottom,,0,0,0,,{\an2\pos(960,1032)}这就是独角兽高达：一台将新人类力量、\N驾驶员意志与战斗代价同时写进画面的机体。

@@ -1,0 +1,6 @@
+interface:
+  display_name: "旧版本地剪辑兼容工具"
+  short_description: "仅供已知旧项目的显式兼容检查，不参与 Video-shipcut 新项目路由"
+  default_prompt: "仅在维护已知旧项目时使用 $long-video-local-edit 进行兼容检查。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-f1f08154",
+      "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceProbe": {
+        "durationMs": 285977,
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRateHz": 44100,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 70000,
+      "sourceEndMs": 74000,
+      "outputStartMs": 0,
+      "outputEndMs": 4000
+    },
+    {
+      "segmentId": "seg-002",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 157000,
+      "sourceEndMs": 164000,
+      "outputStartMs": 4000,
+      "outputEndMs": 11102
+    },
+    {
+      "segmentId": "seg-003",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 165000,
+      "sourceEndMs": 170000,
+      "outputStartMs": 11102,
+      "outputEndMs": 17016
+    },
+    {
+      "segmentId": "seg-004",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 170000,
+      "sourceEndMs": 175000,
+      "outputStartMs": 17016,
+      "outputEndMs": 21505
+    },
+    {
+      "segmentId": "seg-005",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 175000,
+      "sourceEndMs": 178000,
+      "outputStartMs": 21505,
+      "outputEndMs": 24340
+    },
+    {
+      "segmentId": "seg-006",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 210000,
+      "sourceEndMs": 214000,
+      "outputStartMs": 24340,
+      "outputEndMs": 28340
+    },
+    {
+      "segmentId": "seg-007",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 195000,
+      "sourceEndMs": 197036,
+      "outputStartMs": 28340,
+      "outputEndMs": 30376
+    },
+    {
+      "segmentId": "seg-008",
+      "assetId": "source-02-f1f08154",
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceStartMs": 214000,
+      "sourceEndMs": 222456,
+      "outputStartMs": 30376,
+      "outputEndMs": 38832
+    }
+  ],
+  "editPlan": {
+    "approvedPlanRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-短版执行计划-v0.1.json",
+    "finalRenderRef": "工作台/unicorn-gundam-intro-001/G4-剪辑与渲染/G4-横版本地预览-v0.2-固定字幕条.mp4",
+    "format": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "targetDurationMs": 38832,
+      "actualDurationMs": 38833
+    },
+    "audio": {
+      "narration": "G2-完整口播-yunyang-v0.3-short.mp3",
+      "bgm": "aji-yema-3only-indulgence.mp3",
+      "sourceAudio": "excluded",
+      "bgmGain": 0.18,
+      "fadeOutMs": 1000
+    },
+    "subtitles": {
+      "source": "subtitles.srt",
+      "burnedIn": true,
+      "layout": "fixed_bottom_band",
+      "styleContract": "skill/local-video-render/references/caption-style-contract.md"
+    },
+    "authorization": "internal_test",
+    "distribution": "not_for_distribution"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "E1E1F69277E2110E5604FFC5845071803036AC8EBD9A61A23746D9E1E100EE2A"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "B631613EA749A411B309FB75E2A6F967313A1ADF91885B394DD3D3C370A5DBC8"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "5820D4975F8611301B9AC7E3B4F71AA380B80C9B7D0FCDB8AA07B46E6A9CC3C8"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/chapter-01.mp4",
+        "sha256": "8CDD9EC484AE501155D63030BEDF28D68284B09F2A68C7753283E21B76CC0D7B"
+      },
+      {
+        "path": "clips/chapter-02.mp4",
+        "sha256": "6BC4F2FBB8C676770401380C517D53FEEA7BC53EA2EC6AF6E1A58DADE8E9BC12"
+      },
+      {
+        "path": "clips/chapter-03.mp4",
+        "sha256": "41545629DEB959954627490B5AB66BC0AAFEEDCAE8F2B3AA3531AF399FC02440"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "85D110C58BE854AD6D7AEE6B163338E9C9142E8DED07ED613EB1CFE155CD74CE"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "complete_playback",
+    "burned_source_subtitle_or_watermark_residue",
+    "subtitle_safe_area_and_fixed_band",
+    "narration_picture_sync",
+    "key_shots_and_outro",
+    "audio_mix",
+    "voice_language_accent_type_rate",
+    "authorization_and_not_for_distribution_boundary"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+    "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-短版最终审核回显-v0.1.md"
+  ],
+  "warnings": [
+    "Two short black intervals were detected at 16.633-17.000s and 17.500-17.967s; require human playback judgment.",
+    "Top-left source watermark remains visible in source-derived visuals.",
+    "G3 short-plan source-range versus output-timeline duration discrepancy remains a traceability warning and must be normalized before template reuse.",
+    "accepted_warning:\"Two short black intervals at 16.633-17.000s and 17.500-17.967s.\"",
+    "accepted_warning:\"Top-left source watermark remains visible.\"",
+    "accepted_warning:\"G3 short-plan source-range versus output-timeline duration traceability discrepancy.\""
+  ],
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "status": "completed_with_accepted_warnings",
+  "finishedAt": "2026-08-25T06:00:00Z",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}
