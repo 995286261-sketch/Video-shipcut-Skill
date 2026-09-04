@@ -13,3 +13,5 @@ Do not ask the user to name a skill or prepare technical artifacts. Infer the re
 5. Stop at every human-review gate. Record explicit approvals through `p0-c-pipeline`; do not treat chat context alone as a completed gate.
 
 The six nodes are G0 material intake, G1 direction, G2 evidence/narration, G3 edit plan, G4 local/ChatCut editing, and G5 QA/delivery.
+
+For project status, next steps, and local environment notes (development/platform-integration work, not video production requests), read `交接文档.md` at the repository root.
