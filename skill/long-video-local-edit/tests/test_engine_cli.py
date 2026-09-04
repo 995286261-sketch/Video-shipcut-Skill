@@ -12,37 +12,24 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 ENGINE = SKILL_ROOT / "scripts" / "local_edit_engine.py"
-
-_python_home = os.environ.get("SHIPCUT_PYTHON_HOME")
-if _python_home:
-    _p = Path(_python_home)
-    PYTHON = _p / ("python.exe" if os.name == "nt" else "bin" / "python") if _p.is_dir() else _p
-else:
-    PYTHON = Path(sys.executable)
-
-
-def find_ffmpeg():
-    home = os.environ.get("SHIPCUT_FFMPEG_HOME")
-    if home:
-        for candidate in (
-            Path(home) / "ffmpeg.exe",
-            Path(home) / "bin" / "ffmpeg.exe",
-            Path(home) / "ffmpeg",
-            Path(home) / "bin" / "ffmpeg",
-        ):
-            if candidate.is_file():
-                return str(candidate)
-    return shutil.which("ffmpeg")
-
-
-FFMPEG = find_ffmpeg()
+PYTHON = os.environ.get("P0C_PYTHON_BIN") or sys.executable
+FFMPEG_HOME = os.environ.get("P0C_FFMPEG_HOME")
 
 
 class LocalEditCliTest(unittest.TestCase):
     def build_fixture(self, workspace: Path) -> Path:
         raw = workspace / "raw"; raw.mkdir()
         source = raw / "source.mp4"
-        subprocess.run([FFMPEG, "-y", "-f", "lavfi", "-i", "color=c=blue:s=640x360:r=30", "-t", "8", "-c:v", "libx264", "-an", str(source)], capture_output=True, check=True)
+        ffmpeg = shutil.which("ffmpeg")
+        if FFMPEG_HOME:
+            root = Path(FFMPEG_HOME)
+            for candidate in (root / "ffmpeg", root / "ffmpeg.exe", root / "bin" / "ffmpeg", root / "bin" / "ffmpeg.exe"):
+                if candidate.is_file():
+                    ffmpeg = str(candidate)
+                    break
+        if not ffmpeg:
+            self.skipTest("ffmpeg is not installed")
+        subprocess.run([ffmpeg, "-y", "-f", "lavfi", "-i", "color=c=blue:s=640x360:r=30", "-t", "8", "-c:v", "libx264", "-an", str(source)], capture_output=True, check=True)
         assets = []
         hints = []
         for index, (start, end) in enumerate(((600, 7200), (400, 4500), (300, 6800)), 1):
@@ -56,17 +43,19 @@ class LocalEditCliTest(unittest.TestCase):
         return path
 
     def run_cli(self, *args: str) -> dict:
+        environment = os.environ.copy()
+        if FFMPEG_HOME:
+            environment["P0C_FFMPEG_HOME"] = str(FFMPEG_HOME)
         result = subprocess.run(
-            [str(PYTHON), str(ENGINE), *args],
+            [PYTHON, str(ENGINE), *args],
             cwd=PROJECT_ROOT,
-            env=os.environ.copy(),
+            env=environment,
             capture_output=True,
             text=True,
             check=True,
         )
         return json.loads(result.stdout)
 
-    @unittest.skipIf(FFMPEG is None, "FFmpeg not found: install FFmpeg or set SHIPCUT_FFMPEG_HOME")
     def test_micro_fixture_requires_approval_before_render_and_passes_basic_qa(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
             workspace = Path(temporary_directory)

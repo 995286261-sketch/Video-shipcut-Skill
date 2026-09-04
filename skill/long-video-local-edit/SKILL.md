@@ -1,17 +1,17 @@
 ---
 name: long-video-local-edit
-description: 仅为已知历史项目提供显式兼容检查。新 Video-shipcut 项目不得使用本 Skill，而由 video-shipcut-pipeline 路由至当前 G4/G5 Skills。
+description: 仅为已知历史项目提供显式兼容检查。新 P0-C 项目不得使用本 Skill，而由 p0-c-pipeline 路由至当前 G4/G5 Skills。
 metadata:
   pipelineNode: support
 ---
 
 # 本地长视频剪辑总调度
 
-本 Skill 是已弃用的 support 兼容运行时，不是独立流水线节点，也不得作为新项目剪辑或渲染入口。新项目必须使用 `$video-shipcut-pipeline` 路由的 `local-video-render` 与 `media-qa-delivery`。它仅可在用户明确指定的历史兼容检查中使用；归档目录不得读取，原始媒体只读。
+本 Skill 是已弃用的 support 兼容运行时，不是独立流水线节点，也不得作为新项目剪辑或渲染入口。新项目必须使用 `$p0-c-pipeline` 路由的 `local-video-render` 与 `media-qa-delivery`。它仅可在用户明确指定的历史兼容检查中使用；归档目录不得读取，原始媒体只读。
 
 ## Pipeline Boundary
 
-`$video-shipcut-pipeline` owns cross-node routing and project approval state. This skill provides local editing rules and runtime checks only; when pipeline state exists, read it and do not advance a project across nodes.
+`$p0-c-pipeline` owns cross-node routing and project approval state. This skill provides local editing rules and runtime checks only; when pipeline state exists, read it and do not advance a project across nodes.
 
 ## 前置条件
 

@@ -6,7 +6,7 @@
       "id": "python",
       "label": "Python",
       "version": "3.12",
-      "env": "SHIPCUT_PYTHON_HOME",
+      "env": "P0C_PYTHON_HOME",
       "installMode": "user_install",
       "usedBy": ["G0", "G1", "G2", "G3", "G4", "G5"]
     },
@@ -14,21 +14,21 @@
       "id": "ffmpeg",
       "label": "FFmpeg + FFprobe",
       "version": "7.1.1",
-      "env": "SHIPCUT_FFMPEG_HOME",
+      "env": "P0C_FFMPEG_HOME",
       "installMode": "portable_or_user_install",
       "usedBy": ["G2", "G3", "G4", "G5"]
     },
     {
       "id": "faster_whisper_runtime",
       "label": "Faster-Whisper runtime",
-      "env": "SHIPCUT_FASTER_WHISPER_HOME",
+      "env": "P0C_FASTER_WHISPER_HOME",
       "installMode": "offline_runtime",
       "usedBy": ["G2"]
     },
     {
       "id": "faster_whisper_model",
       "label": "Faster-Whisper model cache",
-      "env": "SHIPCUT_FASTER_WHISPER_MODEL_HOME",
+      "env": "P0C_FASTER_WHISPER_MODEL_HOME",
       "installMode": "separate_license_review",
       "usedBy": ["G2"]
     }

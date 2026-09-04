@@ -1,4 +1,4 @@
-# Video-shipcut Project Layout Contract
+# P0-C Project Layout Contract
 
 This is the single authority for active-project paths. Other Skills must link here rather than restating output roots.
 

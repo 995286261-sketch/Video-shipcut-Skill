@@ -22,7 +22,7 @@ def emit(payload: dict) -> None:
 
 def configure_offline_runtime() -> None:
     """Load the controlled Faster-Whisper package when it is not on Python's default path."""
-    runtime_home = os.environ.get("SHIPCUT_FASTER_WHISPER_HOME")
+    runtime_home = os.environ.get("P0C_FASTER_WHISPER_HOME")
     if runtime_home and Path(runtime_home).is_dir() and runtime_home not in sys.path:
         sys.path.insert(0, runtime_home)
 

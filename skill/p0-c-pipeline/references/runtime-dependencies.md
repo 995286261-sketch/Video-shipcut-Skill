@@ -1,4 +1,4 @@
-# Video-shipcut 运行依赖与可移植性
+# P0-C 运行依赖与可移植性
 
 Skill 文件本身不等于完整运行环境。把项目交给另一台电脑前，先运行各节点的本地检查；缺少依赖时应显示 `blocked` 和安装/配置说明，不得假设“当前电脑以前装过”即可复用。
 
@@ -6,10 +6,10 @@ Skill 文件本身不等于完整运行环境。把项目交给另一台电脑�
 
 | 能力 | 用途 | 当前约定 | 是否随 Skill 打包 |
 | --- | --- | --- | --- |
-| Python 3.12 | 运行各节点脚本 | `SHIPCUT_PYTHON_HOME` | 可由接收方安装；不复制系统 Python |
-| FFmpeg + FFprobe | 探测、切片、渲染、QA | `SHIPCUT_FFMPEG_HOME` | 可提供经过许可的便携包；否则由接收方安装 |
-| Faster-Whisper 运行时 | G2 离线转写 | `SHIPCUT_FASTER_WHISPER_HOME` | 可随项目提供已审核运行时，但不自动下载 |
-| Faster-Whisper 模型缓存 | G2 离线转写 | `SHIPCUT_FASTER_WHISPER_MODEL_HOME` | 不默认打包；体积和模型许可需单独确认 |
+| Python 3.12 | 运行各节点脚本 | `P0C_PYTHON_HOME` | 可由接收方安装；不复制系统 Python |
+| FFmpeg + FFprobe | 探测、切片、渲染、QA | `P0C_FFMPEG_HOME` | 可提供经过许可的便携包；否则由接收方安装 |
+| Faster-Whisper 运行时 | G2 离线转写 | `P0C_FASTER_WHISPER_HOME` | 可随项目提供已审核运行时，但不自动下载 |
+| Faster-Whisper 模型缓存 | G2 离线转写 | `P0C_FASTER_WHISPER_MODEL_HOME` | 不默认打包；体积和模型许可需单独确认 |
 | 本地 TTS/配音来源 | G2 试听、G4 完整旁白 | 以实际可发现的本地来源为准 | 不假设存在；需登记来源和许可 |
 
 ## 可选工具

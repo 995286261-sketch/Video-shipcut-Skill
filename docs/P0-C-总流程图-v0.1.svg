@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
-  <title id="title">Video-shipcut 长视频切片与本地自动成片流程图</title>
+  <title id="title">P0-C 长视频切片与本地自动成片流程图</title>
   <desc id="desc">从项目需求和素材输入，经过 G0 到 G5 六个节点，最终完成内部交付。蓝色为默认自动处理，橙色为用户确认，虚线为定向返工。</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -25,7 +25,7 @@
   </defs>
 
   <rect width="1920" height="1080" fill="url(#bg)"/>
-  <text x="110" y="92" class="title">Video-shipcut：从长视频素材到可验收成片</text>
+  <text x="110" y="92" class="title">P0-C：从长视频素材到可验收成片</text>
   <text x="110" y="132" class="subtitle">默认自动完成生产与校验；只在内容、授权和交付边界处请求用户确认</text>
 
   <!-- Start -->
@@ -139,5 +139,5 @@
   <text x="526" y="936" text-anchor="middle" class="gate">人工确认点</text>
   <line x1="690" y1="930" x2="755" y2="930" stroke="#94A3B8" stroke-width="3" stroke-dasharray="9 9" marker-end="url(#arrowSlate)"/>
   <text x="785" y="936" class="legend">问题定向返工，不推倒全流程</text>
-  <text x="110" y="1000" class="small">Video-shipcut 的关键不是一次生成成片，而是让每一次内容决策、素材身份和验收结果都可验证、可回退、可交接。</text>
+  <text x="110" y="1000" class="small">P0-C 的关键不是一次生成成片，而是让每一次内容决策、素材身份和验收结果都可验证、可回退、可交接。</text>
 </svg>

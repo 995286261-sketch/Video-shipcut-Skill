@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.1",
+  "aspectRatioPolicy": "preserve_source",
+  "explicitCanvas": null,
+  "cover": {
+    "enabled": true,
+    "durationSec": 3.5,
+    "representativeFrameRef": "work/cover-source.jpg",
+    "title": "PROCESS OVERVIEW",
+    "subtitle": "FROM MATERIAL TO DELIVERY"
+  },
+  "narration": {
+    "approvedScriptRef": "work/approved-script.txt",
+    "timingSource": "rendered_sentence_audio",
+    "voiceAssetRef": "work/narration.wav"
+  },
+  "captions": {
+    "enabled": true,
+    "approvedSrtRef": "work/narration-synced.srt",
+    "style": "fixed_bottom_band",
+    "hideDuringChapterCards": true
+  },
+  "audio": {
+    "bgmRef": "assets/licensed-bgm.mp3",
+    "duckBgmDuringNarration": true,
+    "keepSourceAudio": false
+  },
+  "quality": {
+    "rejectDoubleBurn": true,
+    "requireFullDecode": true,
+    "requireCoverFrameCheck": true,
+    "requireCaptionFrameCheck": true
+  }
+}

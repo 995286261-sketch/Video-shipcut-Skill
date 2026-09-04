@@ -1,4 +1,4 @@
-"""Canonical active-project layout helpers shared by Video-shipcut runtime scripts."""
+"""Canonical active-project layout helpers shared by P0-C runtime scripts."""
 from pathlib import Path
 
 G4_DIRECTORY = "G4-剪辑与渲染"

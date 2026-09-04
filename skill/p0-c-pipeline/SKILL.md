@@ -1,11 +1,11 @@
 ---
-name: video-shipcut-pipeline
-description: "Coordinate Video-shipcut's six-stage local video workflow: G0 material intake, G1 direction, G2 evidence and narration, G3 edit planning, G4 local/ChatCut editing, and G5 QA delivery. Use whenever a user provides or mentions video, image, document, transcript, reference video, brand asset, or music and wants clips, an edited video, a social-media video, an edit plan, a render, a delivery package, or project continuation."
+name: p0-c-pipeline
+description: "Coordinate P0-C's six-stage local video workflow: G0 material intake, G1 direction, G2 evidence and narration, G3 edit planning, G4 local/ChatCut editing, and G5 QA delivery. Use whenever a user provides or mentions video, image, document, transcript, reference video, brand asset, or music and wants clips, an edited video, a social-media video, an edit plan, a render, a delivery package, or project continuation."
 metadata:
   pipelineNode: orchestrator
 ---
 
-# Video-shipcut Pipeline
+# P0-C Pipeline
 
 Use this orchestrator as the conversational entry point. Project state and formal node artifacts belong only under `工作台/<projectId>/`; `归档/` is audit-only and never a workflow input. It routes work to the six specialist skills; it does not replace their content decisions or render logic.
 
@@ -24,7 +24,7 @@ For every user-facing status, continuation, handoff, or approval response, follo
 For a new project, start G0 with `$material-pack-intake`. Before accepting files, present the fixed G0 intake form in `$material-pack-intake` and explicitly record the user's BGM choice (`provided`, `use library later`, or `no BGM`). After the pack validates, create state with:
 
 ```powershell
-python skill/video-shipcut-pipeline/scripts/pipeline_state.py init --project-id <projectId> --source-pack <material-pack.json> --state <pipeline-state.json> --authorization <value> --distribution <value>
+python skill/p0-c-pipeline/scripts/pipeline_state.py init --project-id <projectId> --source-pack <material-pack.json> --state <pipeline-state.json> --authorization <value> --distribution <value>
 ```
 
 Use `status` when the user says "project status", "continue", or "next step". It returns the current node, valid inputs, warnings, human-review items, and the next conversational action.

@@ -8,7 +8,9 @@ metadata:
 
 # Media QA and Delivery
 
-This is the G5 QA and delivery Skill. `G5_BUNDLE_ROOT` in [Project Layout Contract](../video-shipcut-pipeline/references/project-layout-contract.md) is the only canonical delivery and audit closure. Do not create or use `G5-交付`; report a legacy directory if one exists, and remove it only with explicit user authorization. Use this skill only after G4 has produced a candidate final render or a ChatCut export. User-facing QA and delivery responses follow [Video-shipcut path display contract](../video-shipcut-pipeline/references/path-display-contract.md); delivery manifests and QA JSON retain plain machine paths.
+This is the G5 QA and delivery Skill. `G5_BUNDLE_ROOT` in [Project Layout Contract](../p0-c-pipeline/references/project-layout-contract.md) is the only canonical delivery and audit closure. Do not create or use `G5-交付`; report a legacy directory if one exists, and remove it only with explicit user authorization. Use this skill only after G4 has produced a candidate final render or a ChatCut export. User-facing QA and delivery responses follow [P0-C path display contract](../p0-c-pipeline/references/path-display-contract.md); delivery manifests and QA JSON retain plain machine paths.
+
+若 G4 使用 `local-video-render/references/demo-quality-patch.md`，G5 必须把该补丁的机器 QA 与人工 QA 纳入交付门禁：完整解码、专用封面、句子级音画同步、固定字幕安全区、章节卡不截断语音、无重复旁白或重复声道、无二次叠字，并检查字体、音乐和配音许可记录。缺少任一必需证据时不得报告为已完成。
 
 Read `references/g5-choice-cards.md` before presenting G5. Run automatic QA and show the delivery-bundle draft first; the only user gate is the final playback/acceptance decision. A validated local-direct G4 export is a valid G5 input and does not require ChatCut.
 
@@ -65,7 +67,7 @@ After the component records exist, create the contract entry point with `scripts
 
 ## Pipeline Integration
 
-Read `工作台/<projectId>/pipeline-state.json` and work only at G5. Record only G5 artifacts, machine results, human-review points, and accepted warnings through `$video-shipcut-pipeline`. Do not complete the overall project until pipeline records user G5 approval.
+Read `工作台/<projectId>/pipeline-state.json` and work only at G5. Record only G5 artifacts, machine results, human-review points, and accepted warnings through `$p0-c-pipeline`. Do not complete the overall project until pipeline records user G5 approval.
 
 ## Non-negotiable boundaries
 

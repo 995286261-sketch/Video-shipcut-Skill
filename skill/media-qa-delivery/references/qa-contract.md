@@ -6,7 +6,7 @@ Rendered final media, approved edit plan, source/segment manifest, subtitle and 
 
 ## Output
 
-Write to `G5_BUNDLE_ROOT` defined in [Project Layout Contract](../../video-shipcut-pipeline/references/project-layout-contract.md):
+Write to `G5_BUNDLE_ROOT` defined in [Project Layout Contract](../../p0-c-pipeline/references/project-layout-contract.md):
 
 ```text
 final-video.mp4

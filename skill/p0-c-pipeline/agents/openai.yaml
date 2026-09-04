@@ -1,0 +1,4 @@
+interface:
+  display_name: "P0-C Pipeline"
+  short_description: "Coordinate the six-stage local video workflow"
+  default_prompt: "Use $p0-c-pipeline to create, resume, or approve a local video project."

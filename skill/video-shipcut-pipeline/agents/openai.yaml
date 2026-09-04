@@ -1,4 +1,0 @@
-interface:
-  display_name: "Video-shipcut Pipeline"
-  short_description: "Coordinate the six-stage local video workflow"
-  default_prompt: "Use $video-shipcut-pipeline to create, resume, or approve a local video project."

@@ -5,13 +5,69 @@ import json
 import subprocess
 from pathlib import Path
 
-def fail(message): raise ValueError(message)
-def load(path): return json.loads(path.read_text(encoding="utf-8-sig"))
+IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
+
+
+def fail(message):
+    raise ValueError(message)
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def probe_canvas(path):
+    result = subprocess.run(
+        [
+            "ffprobe", "-v", "error", "-select_streams", "v:0",
+            "-show_entries", "stream=width,height", "-of", "json", str(path),
+        ],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=True,
+    )
+    streams = json.loads(result.stdout).get("streams", [])
+    if not streams or not streams[0].get("width") or not streams[0].get("height"):
+        fail(f"cannot determine source canvas: {path}")
+    return int(streams[0]["width"]), int(streams[0]["height"])
+
+
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument("--manifest",required=True,type=Path); parser.add_argument("--source-pack",required=True,type=Path); parser.add_argument("--output-dir",required=True,type=Path); parser.add_argument("--width",type=int,default=1920); parser.add_argument("--height",type=int,default=1080); parser.add_argument("--fps",type=int,default=24); parser.add_argument("--crop-bottom-ratio",type=float,default=.14); parser.add_argument("--dry-run",action="store_true"); args=parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--source-pack", required=True, type=Path)
+    parser.add_argument("--output-dir", required=True, type=Path)
+    parser.add_argument(
+        "--aspect-ratio-policy",
+        choices=("preserve_source", "explicit"),
+        default="preserve_source",
+        help="preserve_source derives one common canvas from the first approved source",
+    )
+    parser.add_argument("--width", type=int)
+    parser.add_argument("--height", type=int)
+    parser.add_argument("--fps", type=int, default=24)
+    parser.add_argument("--crop-bottom-ratio", type=float, default=0.0)
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
     data=load(args.manifest)
     if data.get("status") != "prepared_for_render": fail("manifest is not prepared_for_render")
     if not (0 <= args.crop_bottom_ratio < 1): fail("crop-bottom-ratio must be in [0,1)")
+    if args.aspect_ratio_policy == "explicit":
+        if not args.width or not args.height:
+            fail("explicit aspect ratio policy requires --width and --height")
+        target_width, target_height = args.width, args.height
+    else:
+        if args.width or args.height:
+            fail("--width/--height require --aspect-ratio-policy explicit")
+        first = next(iter(data.get("segments", [])), None)
+        if not first:
+            fail("manifest has no segments")
+        first_source = args.source_pack / first["source"]["relativePath"]
+        if not first_source.is_file():
+            fail(f"missing source {first_source}")
+        target_width, target_height = probe_canvas(first_source)
     args.output_dir.mkdir(parents=True,exist_ok=True)
     commands=[]
     for segment in data.get("segments",[]):
@@ -23,8 +79,8 @@ def main():
         if duration > source_duration:
             fail(f"output duration exceeds approved source range for {segment.get('segmentId')}")
         crop=f"crop=iw:trunc(ih*{1-args.crop_bottom_ratio}):0:0,"
-        vf=crop+f"scale={args.width}:{args.height}:force_original_aspect_ratio=decrease,pad={args.width}:{args.height}:(ow-iw)/2:(oh-ih)/2:color=0x101418,setsar=1,fps={args.fps}"
-        image_input = source.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
+        vf=crop+f"scale={target_width}:{target_height}:force_original_aspect_ratio=decrease,pad={target_width}:{target_height}:(ow-iw)/2:(oh-ih)/2:color=0x101418,setsar=1,fps={args.fps}"
+        image_input = source.suffix.lower() in IMAGE_SUFFIXES
         cmd=["ffmpeg","-y"]
         if image_input:
             cmd += ["-loop", "1", "-i", str(source)]
@@ -35,7 +91,13 @@ def main():
     if args.dry_run:
         print(json.dumps({"status":"planned","commands":commands},ensure_ascii=True)); return 0
     for cmd in commands: subprocess.run(cmd,check=True)
-    print(json.dumps({"status":"rendered","segments":len(commands),"outputDir":str(args.output_dir)},ensure_ascii=True)); return 0
+    print(json.dumps({
+        "status":"rendered",
+        "segments":len(commands),
+        "outputDir":str(args.output_dir),
+        "aspectRatioPolicy": args.aspect_ratio_policy,
+        "canvas": {"width": target_width, "height": target_height},
+    },ensure_ascii=True)); return 0
 if __name__=="__main__":
     try: raise SystemExit(main())
     except (OSError,ValueError,subprocess.CalledProcessError) as error:

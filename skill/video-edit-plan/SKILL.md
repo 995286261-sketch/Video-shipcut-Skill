@@ -8,7 +8,9 @@ metadata:
 
 # 视频编辑计划
 
-这是 G1/G3 Skill；正式项目产物分别写入 `工作台/<projectId>/G1-创作方向/` 与 `工作台/<projectId>/G3-剪辑计划/`。支持 G1「创作方向确认」和 G3「待审核编辑计划」。不执行 G4 实际剪辑、ChatCut 项目创建、上传或渲染成片。用户回显遵循 [Video-shipcut 路径展示合同](../video-shipcut-pipeline/references/path-display-contract.md)；方向和计划 JSON 中的机器路径保持原始字符串。
+这是 G1/G3 Skill；正式项目产物分别写入 `工作台/<projectId>/G1-创作方向/` 与 `工作台/<projectId>/G3-剪辑计划/`。支持 G1「创作方向确认」和 G3「待审核编辑计划」。不执行 G4 实际剪辑、ChatCut 项目创建、上传或渲染成片。用户回显遵循 [P0-C 路径展示合同](../p0-c-pipeline/references/path-display-contract.md)；方向和计划 JSON 中的机器路径保持原始字符串。
+
+当项目包含封面、章节卡、旁白或固定字幕时，G3 计划还必须为 G4 明确登记：`aspectRatioPolicy`、封面代表帧与持续时间、章节卡插入点、句子级旁白边界、字幕样式、BGM ducking 策略以及 clean master 输入。未明确这些字段时保持 `review_required`，不得让 G4 根据成片观感临时猜测。章节卡只能插在完整句子的边界或自然停顿处；字幕时序标记为 `derive_from_rendered_audio`，最终时间由实际生成音频确定，不在 G3 按字符数伪造精确时间。
 
 ## 强制门禁
 
@@ -34,7 +36,7 @@ python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路�
 
 ## Pipeline Integration
 
-Read `工作台/<projectId>/pipeline-state.json`. Work only when `currentNode` is G1 or G3 and use only registered inputs. Archived files are never inputs. Record only the active node's artifacts and review points through `$video-shipcut-pipeline`; do not advance G2 or G4.
+Read `工作台/<projectId>/pipeline-state.json`. Work only when `currentNode` is G1 or G3 and use only registered inputs. Archived files are never inputs. Record only the active node's artifacts and review points through `$p0-c-pipeline`; do not advance G2 or G4.
 
 ## G3：镜头、字幕和音频计划
 

@@ -1,4 +1,4 @@
-"""Strict state operations used internally by the conversational Video-shipcut pipeline."""
+"""Strict state operations used internally by the conversational P0-C pipeline."""
 from __future__ import annotations
 
 import argparse

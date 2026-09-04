@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-SCRIPT = ROOT / "skill" / "video-shipcut-pipeline" / "scripts" / "pipeline_state.py"
+SCRIPT = ROOT / "skill" / "p0-c-pipeline" / "scripts" / "pipeline_state.py"
 
 
 class PipelineStateTest(unittest.TestCase):

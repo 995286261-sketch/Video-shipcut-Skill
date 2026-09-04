@@ -1,4 +1,4 @@
-# Video-shipcut 长视频切片与本地自动成片 Skill
+# P0-C 长视频切片与本地自动成片 Skill
 
 状态：规划基线，待 fixture 验证与公司合同确认  
 版本：v0.1  

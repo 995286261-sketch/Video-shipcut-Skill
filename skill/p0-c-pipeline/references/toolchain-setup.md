@@ -1,13 +1,13 @@
-# Video-shipcut 工具链安装与检查
+# P0-C 工具链安装与检查
 
 把 Skill 交给新使用者时，先阅读 `toolchain-manifest.json`，再按本机许可和组织政策安装。安装工具不等于授权素材、音乐、TTS 声音或网站账号授权。
 
 ## 可安装项目
 
-- Python 3.12：由使用者安装并设置 `SHIPCUT_PYTHON_HOME`。
-- FFmpeg/FFprobe：使用者安装或提供经许可的便携版，并设置 `SHIPCUT_FFMPEG_HOME`。
-- Faster-Whisper 运行时：使用者提供离线运行时并设置 `SHIPCUT_FASTER_WHISPER_HOME`。
-- Faster-Whisper 模型：单独确认模型许可并设置 `SHIPCUT_FASTER_WHISPER_MODEL_HOME`。
+- Python 3.12：由使用者安装并设置 `P0C_PYTHON_HOME`。
+- FFmpeg/FFprobe：使用者安装或提供经许可的便携版，并设置 `P0C_FFMPEG_HOME`。
+- Faster-Whisper 运行时：使用者提供离线运行时并设置 `P0C_FASTER_WHISPER_HOME`。
+- Faster-Whisper 模型：单独确认模型许可并设置 `P0C_FASTER_WHISPER_MODEL_HOME`。
 
 ## 不自动安装项目
 

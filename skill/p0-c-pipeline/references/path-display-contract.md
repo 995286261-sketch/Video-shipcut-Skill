@@ -57,7 +57,7 @@
 
 ```text
 `工作区/unicorn-gundam-intro-001/G0-素材包/material-pack.json`
-D:\Video-shipcut\工作区\unicorn-gundam-intro-001\G2-证据与口播\G2-口播草案-v0.1.md
+D:\P0-C\工作区\unicorn-gundam-intro-001\G2-证据与口播\G2-口播草案-v0.1.md
 [G2 批准口播稿](工作区/unicorn-gundam-intro-001/G2-证据与口播/猜测的文件.md)
 ```
 

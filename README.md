@@ -1,8 +1,10 @@
-# Video-shipcut · 长视频切片与本地自动成片 Skill
+# P0-C · 长视频切片与本地自动成片 Skill
 
 一套面向长视频二次剪辑的**本地化、可追溯**自动成片流程，以 Agent Skill 的形式组织：用户提供已授权的本地素材和一句剪辑意图，系统经过六个节点、人工审核门禁、确定性本地处理和质检，输出可播放成片与完整交付证据。
 
 它要解决的不是"AI 能不能拼出一支视频"，而是自动剪辑常见的失控点：画面与口播不对应、素材授权不清、方案只存在对话里无法交接、成片无法追溯、出问题只能推倒重来。
+
+> 本项目原名 Video-shipcut，v1.1.0 起按公司平台项目代号统一更名为 **P0-C**，编排入口 Skill 为 `p0-c-pipeline`。
 
 ## 流程
 
@@ -11,7 +13,7 @@ G0 素材包整理 → G1 创作方向 → G2 证据与口播 → G3 剪辑计�
 → G4 本地剪辑/可选 ChatCut → G5 质检与交付
 ```
 
-![Video-shipcut 总流程图](docs/Video-shipcut-总流程图-v0.1.png)
+![P0-C 总流程图](docs/P0-C-总流程图-v0.1.svg)
 
 | 节点 | 核心问题 | 默认人工介入 |
 |---|---|---|
@@ -31,12 +33,30 @@ G0 素材包整理 → G1 创作方向 → G2 证据与口播 → G3 剪辑计�
 5. **成片之外，还有可验收的交付**：交付包包含成片、封面、章节片段、字幕、逐段时间表、质检报告、哈希校验和人工验收记录；机器警告不隐藏，明确留档。
 6. **全链路本地**：原始视频、音频、转写、抽帧和渲染产物默认不离开运行机器；多模态视觉分析通过能力适配器接入，不绑定具体模型或厂商。
 
+## v1.1 成片质量规则
+
+v1.1.0 吸收了"上能同创智能剪辑 Demo"（TASK-050）实际渲染与人工评审验证过的规则，完整内容见 [`skill/local-video-render/references/demo-quality-patch.md`](skill/local-video-render/references/demo-quality-patch.md)，要点：
+
+- 默认沿用原素材画幅（`aspectRatioPolicy: preserve_source`）；只有明确指定目标规格时才转换横竖版。
+- 正片前可加入"代表性画面 + 标题"的专用封面。
+- 旁白按完整句子生成和排布，避免在单词或句中插卡造成卡顿。
+- 字幕时间以实际生成的旁白音频为准，不按文字长度估算。
+- 章节卡期间隐藏正文字幕；字幕固定字号、固定锚点、统一底栏。
+- 口播、背景音乐和画面分轨处理；口播出现时 BGM 自动压低。
+- 禁止在已烧录字幕或图形的成片上二次渲染（clean master 不变量）。
+- 交付前执行封面、音画同步、音轨、清晰度、完整解码和授权记录检查。
+
+G3 计划必须为上述字段预登记，G5 必须把这些机器与人工 QA 纳入交付门禁。
+
 ## 仓库结构
 
 ```
 skill/                  # 七个 Agent Skill（唯一编排入口 + 六个节点专家）
 工作台/                 # 现役项目产物（含完整示例项目）
+examples/               # G4 运行清单示例（v1.1 扩展字段）
 docs/                   # 流程图等说明资产
+VERSION                 # 当前版本号
+CHANGELOG.md            # 版本变更记录
 CONTEXT.md              # 统一术语表
 AGENTS.md               # Agent 工作区执行规则
 PRD-v0.1.md             # 产品需求基线
@@ -44,17 +64,27 @@ PRD-v0.1.md             # 产品需求基线
 历史调研.md             # 立项前审查过的外部项目与复用边界
 ```
 
-编排入口是 [`skill/video-shipcut-pipeline/SKILL.md`](skill/video-shipcut-pipeline/SKILL.md)，其余六个 Skill 分别负责 G0–G5 节点。`工作台/<projectId>/pipeline-state.json` 是唯一状态真相，所有节点产物、人审记录和交付闭包都在项目工作台下。
+编排入口是 [`skill/p0-c-pipeline/SKILL.md`](skill/p0-c-pipeline/SKILL.md)，其余六个 Skill 分别负责 G0–G5 节点。`工作台/<projectId>/pipeline-state.json` 是唯一状态真相，所有节点产物、人审记录和交付闭包都在项目工作台下。
 
 ## 运行依赖
 
-Skill 文件本身不等于运行环境。完整执行 G2–G5 需要本地具备：Python 3.12、FFmpeg/FFprobe、Faster-Whisper（离线转写）和本地 TTS 来源；G1/G3 的多模态识图通过能力适配器提供。缺依赖时流程会明确报 `blocked` 并给出安装说明，不会编造结果。详见 [`skill/video-shipcut-pipeline/references/runtime-dependencies.md`](skill/video-shipcut-pipeline/references/runtime-dependencies.md)。
+Skill 文件本身不等于运行环境。需要 **Python ≥ 3.10（推荐 3.12）** 与可直接执行的 **FFmpeg/FFprobe**，macOS、Windows、Linux 均可；完整执行 G2–G5 另需 Faster-Whisper（离线转写）和本地 TTS 来源（均为可选，缺失时流程报 `blocked` 并给出说明，不会编造结果）。工具链目录通过 `P0C_*` 环境变量声明，未声明时从 `PATH` 解析。G1/G3 的多模态识图通过能力适配器提供。详见 [`skill/p0-c-pipeline/references/runtime-dependencies.md`](skill/p0-c-pipeline/references/runtime-dependencies.md) 与 [`references/toolchain-setup.md`](skill/p0-c-pipeline/references/toolchain-setup.md)。
+
+安装 Skill：将 `skill/` 下各目录复制到 Agent 的 Skills 目录（如 `~/.codex/skills/`），已有同名 Skill 先另存旧版，不要直接覆盖。安装后使用 `$p0-c-pipeline` 发起或续作项目；已弃用的 `$long-video-local-edit` 仅供显式历史兼容检查。
 
 ## 示例项目
 
 `工作台/unicorn-gundam-intro-001/` 是一个跑完 G0–G5 闭环的真实案例：输入多段已授权的动画切片与 BGM，输出 38.8 秒横版成片（1920×1080/30fps，独立口播 + BGM + 固定字幕条），附完整剪辑计划、逐段时间码、质检报告和验收记录。项目中可以看到真实的返工过程（G4 发现声画语义错配后定向回退 G3）和被保留的已接受警告，适合当作理解六节点合同的参考。
 
 > **素材版权说明**：示例项目中的视频、音频素材版权归各自权利人所有，仅作为流程演示与追溯证据保留，不随本仓库的 AGPL 许可证授权分发。请勿将未获授权的素材用于公开发布。
+
+## 关键口径
+
+- "自动成片"不等于跳过人工确认。脚本事实、镜头计划、品牌文字和最终成片仍需经过门禁。
+- 参考视频只用于风格分析，不能未经授权写入成片。
+- 本仓库不附带客户素材、字体、音乐或模型。所有外部资产必须单独记录来源和商用许可。
+- 本地系统 TTS 可用于演示，但不代表真人配音。正式对客成片应采用已获授权的专业配音服务或真人录音。
+- 最终成片必须从干净画面切片重新合成，不能拿已烧录字幕的历史成片继续叠字。
 
 ## License
 

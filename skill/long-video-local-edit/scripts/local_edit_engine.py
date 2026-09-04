@@ -48,7 +48,7 @@ def sha256(path: Path) -> str:
 
 
 def media_binary(name: str) -> str:
-    home = os.environ.get("SHIPCUT_FFMPEG_HOME")
+    home = os.environ.get("P0C_FFMPEG_HOME")
     if home:
         for candidate in (Path(home) / f"{name}.exe", Path(home) / "bin" / f"{name}.exe"):
             if candidate.is_file():
@@ -57,7 +57,7 @@ def media_binary(name: str) -> str:
     if found:
         return found
     raise EngineError(
-        f"{name} was not found. Set SHIPCUT_FFMPEG_HOME or add the FFmpeg bin directory to PATH."
+        f"{name} was not found. Set P0C_FFMPEG_HOME or add the FFmpeg bin directory to PATH."
     )
 
 

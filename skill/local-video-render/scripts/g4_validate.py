@@ -8,7 +8,8 @@ from pathlib import Path
 def fail(message): raise ValueError(message)
 def load(path): return json.loads(path.read_text(encoding="utf-8-sig"))
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int,default=1920); parser.add_argument("--height",type=int,default=1080); parser.add_argument("--fps",type=float,default=24); args=parser.parse_args()
+    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int); parser.add_argument("--height",type=int); parser.add_argument("--fps",type=float,default=24); args=parser.parse_args()
+    if bool(args.width) != bool(args.height): fail("--width and --height must be supplied together")
     data=load(args.manifest)
     if data.get("schemaVersion") != "0.2" or data.get("status") != "prepared_for_render": fail("invalid G4 editable manifest")
     segments=data.get("segments", [])
@@ -45,12 +46,17 @@ def main():
         if not expected.issubset(names): fail("handoff does not declare every editable segment")
         if any("粗剪" in str(name) for name in names): fail("handoff must not declare flattened rough cut as timeline asset")
     if args.segments_dir:
+        detected_canvas=None
         for segment in segments:
             file=args.segments_dir/segment["output"]["filename"]
             if not file.is_file(): fail("missing rendered segment: "+file.name)
             probe=subprocess.run(["ffprobe","-v","error","-show_entries","format=duration:stream=codec_type,width,height,r_frame_rate","-of","json",str(file)],capture_output=True,text=True,encoding="utf-8",errors="replace",check=True)
             meta=json.loads(probe.stdout); streams=meta.get("streams",[]); video=next((s for s in streams if s.get("codec_type")=="video"),None)
-            if not video or video.get("width")!=args.width or video.get("height")!=args.height: fail("bad video profile: "+file.name)
+            if not video: fail("missing video stream: "+file.name)
+            actual_canvas=(video.get("width"),video.get("height"))
+            expected_canvas=(args.width,args.height) if args.width else detected_canvas
+            if expected_canvas and actual_canvas!=expected_canvas: fail("bad video profile: "+file.name)
+            if detected_canvas is None: detected_canvas=actual_canvas
             if any(s.get("codec_type")=="audio" for s in streams): fail("source audio leaked: "+file.name)
             expected=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"])/1000
             if abs(float(meta["format"]["duration"])-expected)>.15: fail("bad duration: "+file.name)

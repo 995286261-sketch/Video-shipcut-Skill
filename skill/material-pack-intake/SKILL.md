@@ -7,7 +7,7 @@ metadata:
 
 # 素材包整理
 
-本 Skill 只负责 G0 输入治理，正式项目产物写入 `工作台/<projectId>/G0-素材包/`；它拥有素材包，下游 Skill 拥有全部生产产物。用户回显遵循 [Video-shipcut 路径展示合同](../video-shipcut-pipeline/references/path-display-contract.md)；素材包 JSON 和命令输出中的机器路径保持原始字符串。
+本 Skill 只负责 G0 输入治理，正式项目产物写入 `工作台/<projectId>/G0-素材包/`；它拥有素材包，下游 Skill 拥有全部生产产物。用户回显遵循 [P0-C 路径展示合同](../p0-c-pipeline/references/path-display-contract.md)；素材包 JSON 和命令输出中的机器路径保持原始字符串。
 
 ## 对话式引导
 
@@ -55,7 +55,7 @@ The precedence rules for older intake wording are defined in `references/g0-poli
 
 ## Pipeline Integration
 
-When `$video-shipcut-pipeline` owns the project, return only the validated material-pack path, pack status, authorization, and distribution status. Do not create downstream artifacts or advance G1. The pipeline creates `pipeline-state.json` only after intake reports a complete pack.
+When `$p0-c-pipeline` owns the project, return only the validated material-pack path, pack status, authorization, and distribution status. Do not create downstream artifacts or advance G1. The pipeline creates `pipeline-state.json` only after intake reports a complete pack.
 
 ## 完成标准
 
