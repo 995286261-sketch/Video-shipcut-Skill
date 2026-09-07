@@ -882,12 +882,14 @@
   ],
   "aspectRatioPolicy": "preserve_source",
   "outputResolution": "640x360（源即 640x360，低清警示已登记）",
-  "bgmRef": "G0-素材包/07_授权音频/Lonely Lies,GOLDKID$ - Interlinked.mp3（损坏）",
+  "bgmRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
   "bgmStatus": {
-    "status": "blocked",
-    "reason": "G0 登记的 BGM 文件实为损坏/加密数据（CTENFDAM 头，非 MP3/Musepack，任何解码路径失败）",
-    "finding": "㉓ G0 register 未验证音频可解码性",
-    "disposition": "用户裁决：成片=BGM+纯口播，原片音频剔除。现 BGM 文件损坏不可解码（㉓），槽位保留待重供有效文件；G4 先按纯口播时间线执行，有效 BGM 到达后按乐句规划插入并做口播压低"
+    "status": "resolved",
+    "reason": "用户 2026-09-04 重供有效 MP3（44.1kHz 立体声 206.707s，ID3 头，ffmpeg 全文件解码探针通过后经 material_pack register 登记，素材包 v1.2）",
+    "supersededAsset": "82DE220E…77F0（损坏，网易云加密文件暴力改扩展名，发现㉓）",
+    "audioRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+    "phraseSkeletonRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-BGM能量骨架-v0.1.json",
+    "disposition": "能量探针显示全曲无章节级低能段（单一高能量乐句 m01 0–205s）→ G4 按整曲铺底：起点淡入2s、口播区间 ducking、成片 169.835s 处淡出收尾；不循环不拉伸；非逐拍卡点（发现⑯）"
   },
   "timelineReview": {
     "status": "confirmed",

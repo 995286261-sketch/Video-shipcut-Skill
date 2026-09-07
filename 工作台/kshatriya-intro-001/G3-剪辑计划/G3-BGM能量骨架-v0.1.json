@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "kshatriya-intro-001",
+  "audioRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+  "audioSha256Ref": "material-pack.json audioAssets",
+  "method": "ffmpeg astats RMS per 5s window — 章节级能量点，非逐拍卡点（发现⑯：BGM 节奏分析能力未沉淀进 Skill，本产物为半成品探针）",
+  "totalMs": 206707,
+  "phrases": [
+    {
+      "phraseId": "m01",
+      "bgmStartMs": 0,
+      "bgmEndMs": 205000,
+      "energyAvg": 0.838,
+      "peakEnergy": 1.0
+    }
+  ],
+  "usageRule": "G4 按章节切换对齐乐句；口播区间 BGM 压低（ducking）；不循环、不拉伸、不重排"
+}

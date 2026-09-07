@@ -13,13 +13,13 @@
   ],
   "audioAssets": [
     {
-      "assetId": "audio-07-lonely-lies-goldkid-interlinked-f069e304",
-      "relativePath": "07_授权音频/Lonely Lies,GOLDKID$ - Interlinked.mp3",
-      "sha256": "82DE220E2D2801E5CDD23880D152F89B66A6F106D9374E2E2C2FD8D23E7977F0",
-      "byteSize": 8277733,
+      "assetId": "audio-07-lonely-lies-goldkid-interlinked-ad2a241b",
+      "relativePath": "07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+      "sha256": "420D489A744049FB6037EB42E9E1A1A6535948B9B028621E9C5F5A0D048076E0",
+      "byteSize": 8376385,
       "fileExtension": ".mp3"
     }
   ],
   "packStatus": "complete",
-  "registeredAt": "2026-09-07T04:07:04.564050Z"
+  "registeredAt": "2026-09-07T06:35:14.588485Z"
 }
