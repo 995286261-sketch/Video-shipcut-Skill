@@ -1,0 +1,3500 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "approved_narration_audio_alignment",
+  "audioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+  "engine": "faster-whisper",
+  "model": "small",
+  "language": "zh",
+  "languageProbability": 1,
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 4280,
+      "text": "U.C.0096 新疾翁惨党带袖的地战场上",
+      "words": [
+        {
+          "startMs": 0,
+          "endMs": 360,
+          "text": "U."
+        },
+        {
+          "startMs": 540,
+          "endMs": 740,
+          "text": "C."
+        },
+        {
+          "startMs": 900,
+          "endMs": 1260,
+          "text": "00"
+        },
+        {
+          "startMs": 1260,
+          "endMs": 1740,
+          "text": "96"
+        },
+        {
+          "startMs": 2160,
+          "endMs": 2340,
+          "text": " 新"
+        },
+        {
+          "startMs": 2340,
+          "endMs": 2500,
+          "text": "疾"
+        },
+        {
+          "startMs": 2500,
+          "endMs": 2640,
+          "text": "翁"
+        },
+        {
+          "startMs": 2640,
+          "endMs": 2880,
+          "text": "惨"
+        },
+        {
+          "startMs": 2880,
+          "endMs": 3060,
+          "text": "党"
+        },
+        {
+          "startMs": 3060,
+          "endMs": 3240,
+          "text": "带"
+        },
+        {
+          "startMs": 3240,
+          "endMs": 3400,
+          "text": "袖"
+        },
+        {
+          "startMs": 3400,
+          "endMs": 3540,
+          "text": "的"
+        },
+        {
+          "startMs": 3540,
+          "endMs": 3700,
+          "text": "地"
+        },
+        {
+          "startMs": 3700,
+          "endMs": 3860,
+          "text": "战"
+        },
+        {
+          "startMs": 3860,
+          "endMs": 4040,
+          "text": "场"
+        },
+        {
+          "startMs": 4040,
+          "endMs": 4280,
+          "text": "上"
+        }
+      ]
+    },
+    {
+      "startMs": 4280,
+      "endMs": 7640,
+      "text": "出现了一台顶着四片尖架众议的巨大机体。",
+      "words": [
+        {
+          "startMs": 4280,
+          "endMs": 4700,
+          "text": "出"
+        },
+        {
+          "startMs": 4700,
+          "endMs": 4880,
+          "text": "现"
+        },
+        {
+          "startMs": 4880,
+          "endMs": 4980,
+          "text": "了"
+        },
+        {
+          "startMs": 4980,
+          "endMs": 5100,
+          "text": "一"
+        },
+        {
+          "startMs": 5100,
+          "endMs": 5260,
+          "text": "台"
+        },
+        {
+          "startMs": 5260,
+          "endMs": 5460,
+          "text": "顶"
+        },
+        {
+          "startMs": 5460,
+          "endMs": 5660,
+          "text": "着"
+        },
+        {
+          "startMs": 5660,
+          "endMs": 5880,
+          "text": "四"
+        },
+        {
+          "startMs": 5880,
+          "endMs": 6060,
+          "text": "片"
+        },
+        {
+          "startMs": 6060,
+          "endMs": 6280,
+          "text": "尖"
+        },
+        {
+          "startMs": 6280,
+          "endMs": 6460,
+          "text": "架"
+        },
+        {
+          "startMs": 6460,
+          "endMs": 6640,
+          "text": "众"
+        },
+        {
+          "startMs": 6640,
+          "endMs": 6780,
+          "text": "议"
+        },
+        {
+          "startMs": 6780,
+          "endMs": 6900,
+          "text": "的"
+        },
+        {
+          "startMs": 6900,
+          "endMs": 7100,
+          "text": "巨"
+        },
+        {
+          "startMs": 7100,
+          "endMs": 7280,
+          "text": "大"
+        },
+        {
+          "startMs": 7280,
+          "endMs": 7460,
+          "text": "机"
+        },
+        {
+          "startMs": 7460,
+          "endMs": 7640,
+          "text": "体。"
+        }
+      ]
+    },
+    {
+      "startMs": 8340,
+      "endMs": 13840,
+      "text": "它的编号是NZ-666,名字叫做麻放沙地利。",
+      "words": [
+        {
+          "startMs": 8340,
+          "endMs": 8740,
+          "text": "它的"
+        },
+        {
+          "startMs": 8740,
+          "endMs": 8980,
+          "text": "编"
+        },
+        {
+          "startMs": 8980,
+          "endMs": 9220,
+          "text": "号"
+        },
+        {
+          "startMs": 9220,
+          "endMs": 9460,
+          "text": "是"
+        },
+        {
+          "startMs": 9460,
+          "endMs": 9780,
+          "text": "N"
+        },
+        {
+          "startMs": 9780,
+          "endMs": 9960,
+          "text": "Z"
+        },
+        {
+          "startMs": 9960,
+          "endMs": 10240,
+          "text": "-"
+        },
+        {
+          "startMs": 10240,
+          "endMs": 10640,
+          "text": "66"
+        },
+        {
+          "startMs": 10640,
+          "endMs": 11000,
+          "text": "6,"
+        },
+        {
+          "startMs": 11440,
+          "endMs": 11640,
+          "text": "名"
+        },
+        {
+          "startMs": 11640,
+          "endMs": 11820,
+          "text": "字"
+        },
+        {
+          "startMs": 11820,
+          "endMs": 12060,
+          "text": "叫"
+        },
+        {
+          "startMs": 12060,
+          "endMs": 12260,
+          "text": "做"
+        },
+        {
+          "startMs": 12260,
+          "endMs": 12680,
+          "text": "麻"
+        },
+        {
+          "startMs": 12680,
+          "endMs": 13020,
+          "text": "放"
+        },
+        {
+          "startMs": 13020,
+          "endMs": 13440,
+          "text": "沙"
+        },
+        {
+          "startMs": 13440,
+          "endMs": 13680,
+          "text": "地"
+        },
+        {
+          "startMs": 13680,
+          "endMs": 13840,
+          "text": "利。"
+        }
+      ]
+    },
+    {
+      "startMs": 14740,
+      "endMs": 17640,
+      "text": "从NZ开头的番号就能看出它的血脉。",
+      "words": [
+        {
+          "startMs": 14740,
+          "endMs": 14960,
+          "text": "从"
+        },
+        {
+          "startMs": 14960,
+          "endMs": 15180,
+          "text": "N"
+        },
+        {
+          "startMs": 15180,
+          "endMs": 15340,
+          "text": "Z"
+        },
+        {
+          "startMs": 15340,
+          "endMs": 15560,
+          "text": "开"
+        },
+        {
+          "startMs": 15560,
+          "endMs": 15720,
+          "text": "头"
+        },
+        {
+          "startMs": 15720,
+          "endMs": 15820,
+          "text": "的"
+        },
+        {
+          "startMs": 15820,
+          "endMs": 16020,
+          "text": "番"
+        },
+        {
+          "startMs": 16020,
+          "endMs": 16280,
+          "text": "号"
+        },
+        {
+          "startMs": 16280,
+          "endMs": 16520,
+          "text": "就"
+        },
+        {
+          "startMs": 16520,
+          "endMs": 16660,
+          "text": "能"
+        },
+        {
+          "startMs": 16660,
+          "endMs": 16820,
+          "text": "看"
+        },
+        {
+          "startMs": 16820,
+          "endMs": 17000,
+          "text": "出"
+        },
+        {
+          "startMs": 17000,
+          "endMs": 17220,
+          "text": "它的"
+        },
+        {
+          "startMs": 17220,
+          "endMs": 17480,
+          "text": "血"
+        },
+        {
+          "startMs": 17480,
+          "endMs": 17640,
+          "text": "脉。"
+        }
+      ]
+    },
+    {
+      "startMs": 18080,
+      "endMs": 21740,
+      "text": "它是在第一次新疾翁战争时期投入实战的",
+      "words": [
+        {
+          "startMs": 18080,
+          "endMs": 18180,
+          "text": "它"
+        },
+        {
+          "startMs": 18180,
+          "endMs": 18320,
+          "text": "是"
+        },
+        {
+          "startMs": 18320,
+          "endMs": 18480,
+          "text": "在"
+        },
+        {
+          "startMs": 18480,
+          "endMs": 18720,
+          "text": "第一"
+        },
+        {
+          "startMs": 18720,
+          "endMs": 19000,
+          "text": "次"
+        },
+        {
+          "startMs": 19000,
+          "endMs": 19420,
+          "text": "新"
+        },
+        {
+          "startMs": 19420,
+          "endMs": 19600,
+          "text": "疾"
+        },
+        {
+          "startMs": 19600,
+          "endMs": 19740,
+          "text": "翁"
+        },
+        {
+          "startMs": 19740,
+          "endMs": 19980,
+          "text": "战"
+        },
+        {
+          "startMs": 19980,
+          "endMs": 20140,
+          "text": "争"
+        },
+        {
+          "startMs": 20140,
+          "endMs": 20340,
+          "text": "时"
+        },
+        {
+          "startMs": 20340,
+          "endMs": 20640,
+          "text": "期"
+        },
+        {
+          "startMs": 20640,
+          "endMs": 21020,
+          "text": "投"
+        },
+        {
+          "startMs": 21020,
+          "endMs": 21200,
+          "text": "入"
+        },
+        {
+          "startMs": 21200,
+          "endMs": 21420,
+          "text": "实"
+        },
+        {
+          "startMs": 21420,
+          "endMs": 21580,
+          "text": "战"
+        },
+        {
+          "startMs": 21580,
+          "endMs": 21740,
+          "text": "的"
+        }
+      ]
+    },
+    {
+      "startMs": 21740,
+      "endMs": 26380,
+      "text": "NZ-00 昆曼沙的基础上发展而来的NT用机体。",
+      "words": [
+        {
+          "startMs": 21740,
+          "endMs": 22060,
+          "text": "N"
+        },
+        {
+          "startMs": 22060,
+          "endMs": 22240,
+          "text": "Z"
+        },
+        {
+          "startMs": 22240,
+          "endMs": 22380,
+          "text": "-"
+        },
+        {
+          "startMs": 22380,
+          "endMs": 22700,
+          "text": "00"
+        },
+        {
+          "startMs": 23240,
+          "endMs": 23360,
+          "text": " 昆"
+        },
+        {
+          "startMs": 23360,
+          "endMs": 23600,
+          "text": "曼"
+        },
+        {
+          "startMs": 23600,
+          "endMs": 23780,
+          "text": "沙"
+        },
+        {
+          "startMs": 23780,
+          "endMs": 23920,
+          "text": "的"
+        },
+        {
+          "startMs": 23920,
+          "endMs": 24080,
+          "text": "基"
+        },
+        {
+          "startMs": 24080,
+          "endMs": 24240,
+          "text": "础"
+        },
+        {
+          "startMs": 24240,
+          "endMs": 24440,
+          "text": "上"
+        },
+        {
+          "startMs": 24440,
+          "endMs": 24820,
+          "text": "发"
+        },
+        {
+          "startMs": 24820,
+          "endMs": 24980,
+          "text": "展"
+        },
+        {
+          "startMs": 24980,
+          "endMs": 25120,
+          "text": "而"
+        },
+        {
+          "startMs": 25120,
+          "endMs": 25260,
+          "text": "来"
+        },
+        {
+          "startMs": 25260,
+          "endMs": 25380,
+          "text": "的"
+        },
+        {
+          "startMs": 25380,
+          "endMs": 25580,
+          "text": "N"
+        },
+        {
+          "startMs": 25580,
+          "endMs": 25780,
+          "text": "T"
+        },
+        {
+          "startMs": 25780,
+          "endMs": 25960,
+          "text": "用"
+        },
+        {
+          "startMs": 25960,
+          "endMs": 26180,
+          "text": "机"
+        },
+        {
+          "startMs": 26180,
+          "endMs": 26380,
+          "text": "体。"
+        }
+      ]
+    },
+    {
+      "startMs": 27080,
+      "endMs": 30780,
+      "text": "设计之初,工程师定下了一个明确的目标,",
+      "words": [
+        {
+          "startMs": 27080,
+          "endMs": 27440,
+          "text": "设"
+        },
+        {
+          "startMs": 27440,
+          "endMs": 27580,
+          "text": "计"
+        },
+        {
+          "startMs": 27580,
+          "endMs": 27740,
+          "text": "之"
+        },
+        {
+          "startMs": 27740,
+          "endMs": 27960,
+          "text": "初,"
+        },
+        {
+          "startMs": 28320,
+          "endMs": 28420,
+          "text": "工"
+        },
+        {
+          "startMs": 28420,
+          "endMs": 28600,
+          "text": "程"
+        },
+        {
+          "startMs": 28600,
+          "endMs": 28820,
+          "text": "师"
+        },
+        {
+          "startMs": 28820,
+          "endMs": 29040,
+          "text": "定"
+        },
+        {
+          "startMs": 29040,
+          "endMs": 29240,
+          "text": "下"
+        },
+        {
+          "startMs": 29240,
+          "endMs": 29380,
+          "text": "了"
+        },
+        {
+          "startMs": 29380,
+          "endMs": 29620,
+          "text": "一个"
+        },
+        {
+          "startMs": 29620,
+          "endMs": 30080,
+          "text": "明"
+        },
+        {
+          "startMs": 30080,
+          "endMs": 30300,
+          "text": "确"
+        },
+        {
+          "startMs": 30300,
+          "endMs": 30440,
+          "text": "的"
+        },
+        {
+          "startMs": 30440,
+          "endMs": 30580,
+          "text": "目"
+        },
+        {
+          "startMs": 30580,
+          "endMs": 30780,
+          "text": "标,"
+        }
+      ]
+    },
+    {
+      "startMs": 31300,
+      "endMs": 35100,
+      "text": "保持同等规格的武装和性能,把机体做得更小。",
+      "words": [
+        {
+          "startMs": 31300,
+          "endMs": 31460,
+          "text": "保"
+        },
+        {
+          "startMs": 31460,
+          "endMs": 31700,
+          "text": "持"
+        },
+        {
+          "startMs": 31700,
+          "endMs": 31920,
+          "text": "同"
+        },
+        {
+          "startMs": 31920,
+          "endMs": 32140,
+          "text": "等"
+        },
+        {
+          "startMs": 32140,
+          "endMs": 32340,
+          "text": "规"
+        },
+        {
+          "startMs": 32340,
+          "endMs": 32540,
+          "text": "格"
+        },
+        {
+          "startMs": 32540,
+          "endMs": 32660,
+          "text": "的"
+        },
+        {
+          "startMs": 32660,
+          "endMs": 32800,
+          "text": "武"
+        },
+        {
+          "startMs": 32800,
+          "endMs": 32960,
+          "text": "装"
+        },
+        {
+          "startMs": 32960,
+          "endMs": 33120,
+          "text": "和"
+        },
+        {
+          "startMs": 33120,
+          "endMs": 33280,
+          "text": "性"
+        },
+        {
+          "startMs": 33280,
+          "endMs": 33500,
+          "text": "能,"
+        },
+        {
+          "startMs": 33920,
+          "endMs": 34020,
+          "text": "把"
+        },
+        {
+          "startMs": 34020,
+          "endMs": 34180,
+          "text": "机"
+        },
+        {
+          "startMs": 34180,
+          "endMs": 34400,
+          "text": "体"
+        },
+        {
+          "startMs": 34400,
+          "endMs": 34640,
+          "text": "做"
+        },
+        {
+          "startMs": 34640,
+          "endMs": 34740,
+          "text": "得"
+        },
+        {
+          "startMs": 34740,
+          "endMs": 34920,
+          "text": "更"
+        },
+        {
+          "startMs": 34920,
+          "endMs": 35100,
+          "text": "小。"
+        }
+      ]
+    },
+    {
+      "startMs": 36040,
+      "endMs": 40420,
+      "text": "SikeMill 股价与Nami 技术的结合,让驾驶舱被直接安置在",
+      "words": [
+        {
+          "startMs": 36040,
+          "endMs": 36200,
+          "text": "S"
+        },
+        {
+          "startMs": 36200,
+          "endMs": 36280,
+          "text": "ike"
+        },
+        {
+          "startMs": 36280,
+          "endMs": 36460,
+          "text": "M"
+        },
+        {
+          "startMs": 36460,
+          "endMs": 36520,
+          "text": "ill"
+        },
+        {
+          "startMs": 36620,
+          "endMs": 36700,
+          "text": " 股"
+        },
+        {
+          "startMs": 36700,
+          "endMs": 36900,
+          "text": "价"
+        },
+        {
+          "startMs": 36900,
+          "endMs": 37140,
+          "text": "与"
+        },
+        {
+          "startMs": 37140,
+          "endMs": 37320,
+          "text": "N"
+        },
+        {
+          "startMs": 37320,
+          "endMs": 37400,
+          "text": "ami"
+        },
+        {
+          "startMs": 37560,
+          "endMs": 37680,
+          "text": " 技"
+        },
+        {
+          "startMs": 37680,
+          "endMs": 37820,
+          "text": "术"
+        },
+        {
+          "startMs": 37820,
+          "endMs": 37920,
+          "text": "的"
+        },
+        {
+          "startMs": 37920,
+          "endMs": 38060,
+          "text": "结"
+        },
+        {
+          "startMs": 38060,
+          "endMs": 38300,
+          "text": "合,"
+        },
+        {
+          "startMs": 38600,
+          "endMs": 38720,
+          "text": "让"
+        },
+        {
+          "startMs": 38720,
+          "endMs": 38900,
+          "text": "驾"
+        },
+        {
+          "startMs": 38900,
+          "endMs": 39020,
+          "text": "驶"
+        },
+        {
+          "startMs": 39020,
+          "endMs": 39160,
+          "text": "舱"
+        },
+        {
+          "startMs": 39160,
+          "endMs": 39600,
+          "text": "被"
+        },
+        {
+          "startMs": 39600,
+          "endMs": 39920,
+          "text": "直接"
+        },
+        {
+          "startMs": 39920,
+          "endMs": 40120,
+          "text": "安"
+        },
+        {
+          "startMs": 40120,
+          "endMs": 40240,
+          "text": "置"
+        },
+        {
+          "startMs": 40240,
+          "endMs": 40420,
+          "text": "在"
+        }
+      ]
+    },
+    {
+      "startMs": 40420,
+      "endMs": 43600,
+      "text": "驱干的核心位置,Marron C 离驾驶者更近,",
+      "words": [
+        {
+          "startMs": 40420,
+          "endMs": 40660,
+          "text": "驱"
+        },
+        {
+          "startMs": 40660,
+          "endMs": 40800,
+          "text": "干"
+        },
+        {
+          "startMs": 40800,
+          "endMs": 40960,
+          "text": "的"
+        },
+        {
+          "startMs": 40960,
+          "endMs": 41100,
+          "text": "核"
+        },
+        {
+          "startMs": 41100,
+          "endMs": 41240,
+          "text": "心"
+        },
+        {
+          "startMs": 41240,
+          "endMs": 41400,
+          "text": "位"
+        },
+        {
+          "startMs": 41400,
+          "endMs": 41560,
+          "text": "置,"
+        },
+        {
+          "startMs": 41820,
+          "endMs": 42000,
+          "text": "Mar"
+        },
+        {
+          "startMs": 42000,
+          "endMs": 42160,
+          "text": "ron"
+        },
+        {
+          "startMs": 42160,
+          "endMs": 42340,
+          "text": " C"
+        },
+        {
+          "startMs": 42620,
+          "endMs": 42740,
+          "text": " 离"
+        },
+        {
+          "startMs": 42740,
+          "endMs": 42920,
+          "text": "驾"
+        },
+        {
+          "startMs": 42920,
+          "endMs": 43060,
+          "text": "驶"
+        },
+        {
+          "startMs": 43060,
+          "endMs": 43200,
+          "text": "者"
+        },
+        {
+          "startMs": 43200,
+          "endMs": 43360,
+          "text": "更"
+        },
+        {
+          "startMs": 43360,
+          "endMs": 43600,
+          "text": "近,"
+        }
+      ]
+    },
+    {
+      "startMs": 43880,
+      "endMs": 46600,
+      "text": "就能以更低号量接收并传输脑电波。",
+      "words": [
+        {
+          "startMs": 43880,
+          "endMs": 44000,
+          "text": "就"
+        },
+        {
+          "startMs": 44000,
+          "endMs": 44140,
+          "text": "能"
+        },
+        {
+          "startMs": 44140,
+          "endMs": 44300,
+          "text": "以"
+        },
+        {
+          "startMs": 44300,
+          "endMs": 44520,
+          "text": "更"
+        },
+        {
+          "startMs": 44520,
+          "endMs": 44680,
+          "text": "低"
+        },
+        {
+          "startMs": 44680,
+          "endMs": 44880,
+          "text": "号"
+        },
+        {
+          "startMs": 44880,
+          "endMs": 45040,
+          "text": "量"
+        },
+        {
+          "startMs": 45040,
+          "endMs": 45280,
+          "text": "接"
+        },
+        {
+          "startMs": 45280,
+          "endMs": 45500,
+          "text": "收"
+        },
+        {
+          "startMs": 45500,
+          "endMs": 45700,
+          "text": "并"
+        },
+        {
+          "startMs": 45700,
+          "endMs": 45920,
+          "text": "传"
+        },
+        {
+          "startMs": 45920,
+          "endMs": 46100,
+          "text": "输"
+        },
+        {
+          "startMs": 46100,
+          "endMs": 46260,
+          "text": "脑"
+        },
+        {
+          "startMs": 46260,
+          "endMs": 46420,
+          "text": "电"
+        },
+        {
+          "startMs": 46420,
+          "endMs": 46600,
+          "text": "波。"
+        }
+      ]
+    },
+    {
+      "startMs": 47520,
+      "endMs": 50780,
+      "text": "它的部分核心元件,包括精神感应框架,",
+      "words": [
+        {
+          "startMs": 47520,
+          "endMs": 47720,
+          "text": "它的"
+        },
+        {
+          "startMs": 47720,
+          "endMs": 48080,
+          "text": "部分"
+        },
+        {
+          "startMs": 48080,
+          "endMs": 48380,
+          "text": "核"
+        },
+        {
+          "startMs": 48380,
+          "endMs": 48560,
+          "text": "心"
+        },
+        {
+          "startMs": 48560,
+          "endMs": 48740,
+          "text": "元"
+        },
+        {
+          "startMs": 48740,
+          "endMs": 48940,
+          "text": "件,"
+        },
+        {
+          "startMs": 49340,
+          "endMs": 49500,
+          "text": "包括"
+        },
+        {
+          "startMs": 49500,
+          "endMs": 49820,
+          "text": "精"
+        },
+        {
+          "startMs": 49820,
+          "endMs": 50000,
+          "text": "神"
+        },
+        {
+          "startMs": 50000,
+          "endMs": 50200,
+          "text": "感"
+        },
+        {
+          "startMs": 50200,
+          "endMs": 50340,
+          "text": "应"
+        },
+        {
+          "startMs": 50340,
+          "endMs": 50520,
+          "text": "框"
+        },
+        {
+          "startMs": 50520,
+          "endMs": 50780,
+          "text": "架,"
+        }
+      ]
+    },
+    {
+      "startMs": 50780,
+      "endMs": 55960,
+      "text": "源自 0094 年代秀的从安娜海姆电子公司手中夺走的",
+      "words": [
+        {
+          "startMs": 50780,
+          "endMs": 51300,
+          "text": "源"
+        },
+        {
+          "startMs": 51300,
+          "endMs": 51540,
+          "text": "自"
+        },
+        {
+          "startMs": 51540,
+          "endMs": 52040,
+          "text": " 00"
+        },
+        {
+          "startMs": 52040,
+          "endMs": 52400,
+          "text": "94"
+        },
+        {
+          "startMs": 52720,
+          "endMs": 52780,
+          "text": " 年"
+        },
+        {
+          "startMs": 52780,
+          "endMs": 52940,
+          "text": "代"
+        },
+        {
+          "startMs": 52940,
+          "endMs": 53160,
+          "text": "秀"
+        },
+        {
+          "startMs": 53160,
+          "endMs": 53340,
+          "text": "的"
+        },
+        {
+          "startMs": 53340,
+          "endMs": 53620,
+          "text": "从"
+        },
+        {
+          "startMs": 53620,
+          "endMs": 53860,
+          "text": "安"
+        },
+        {
+          "startMs": 53860,
+          "endMs": 53960,
+          "text": "娜"
+        },
+        {
+          "startMs": 53960,
+          "endMs": 54180,
+          "text": "海"
+        },
+        {
+          "startMs": 54180,
+          "endMs": 54320,
+          "text": "姆"
+        },
+        {
+          "startMs": 54320,
+          "endMs": 54540,
+          "text": "电"
+        },
+        {
+          "startMs": 54540,
+          "endMs": 54740,
+          "text": "子"
+        },
+        {
+          "startMs": 54740,
+          "endMs": 54880,
+          "text": "公"
+        },
+        {
+          "startMs": 54880,
+          "endMs": 55060,
+          "text": "司"
+        },
+        {
+          "startMs": 55060,
+          "endMs": 55220,
+          "text": "手"
+        },
+        {
+          "startMs": 55220,
+          "endMs": 55460,
+          "text": "中"
+        },
+        {
+          "startMs": 55460,
+          "endMs": 55640,
+          "text": "夺"
+        },
+        {
+          "startMs": 55640,
+          "endMs": 55820,
+          "text": "走"
+        },
+        {
+          "startMs": 55820,
+          "endMs": 55960,
+          "text": "的"
+        }
+      ]
+    },
+    {
+      "startMs": 55960,
+      "endMs": 56680,
+      "text": "视作机体。",
+      "words": [
+        {
+          "startMs": 55960,
+          "endMs": 56140,
+          "text": "视"
+        },
+        {
+          "startMs": 56140,
+          "endMs": 56300,
+          "text": "作"
+        },
+        {
+          "startMs": 56300,
+          "endMs": 56460,
+          "text": "机"
+        },
+        {
+          "startMs": 56460,
+          "endMs": 56680,
+          "text": "体。"
+        }
+      ]
+    },
+    {
+      "startMs": 56900,
+      "endMs": 61580,
+      "text": "最终,这台NT 专用中MS 的全高被控制在了 20 米左右。",
+      "words": [
+        {
+          "startMs": 56900,
+          "endMs": 57140,
+          "text": "最"
+        },
+        {
+          "startMs": 57140,
+          "endMs": 57320,
+          "text": "终,"
+        },
+        {
+          "startMs": 57860,
+          "endMs": 57960,
+          "text": "这"
+        },
+        {
+          "startMs": 57960,
+          "endMs": 58100,
+          "text": "台"
+        },
+        {
+          "startMs": 58100,
+          "endMs": 58280,
+          "text": "N"
+        },
+        {
+          "startMs": 58280,
+          "endMs": 58440,
+          "text": "T"
+        },
+        {
+          "startMs": 58700,
+          "endMs": 58780,
+          "text": " 专"
+        },
+        {
+          "startMs": 58780,
+          "endMs": 58960,
+          "text": "用"
+        },
+        {
+          "startMs": 58960,
+          "endMs": 59140,
+          "text": "中"
+        },
+        {
+          "startMs": 59140,
+          "endMs": 59440,
+          "text": "MS"
+        },
+        {
+          "startMs": 59440,
+          "endMs": 59780,
+          "text": " 的"
+        },
+        {
+          "startMs": 59780,
+          "endMs": 59980,
+          "text": "全"
+        },
+        {
+          "startMs": 59980,
+          "endMs": 60160,
+          "text": "高"
+        },
+        {
+          "startMs": 60160,
+          "endMs": 60340,
+          "text": "被"
+        },
+        {
+          "startMs": 60340,
+          "endMs": 60520,
+          "text": "控"
+        },
+        {
+          "startMs": 60520,
+          "endMs": 60660,
+          "text": "制"
+        },
+        {
+          "startMs": 60660,
+          "endMs": 60780,
+          "text": "在"
+        },
+        {
+          "startMs": 60780,
+          "endMs": 60900,
+          "text": "了"
+        },
+        {
+          "startMs": 60900,
+          "endMs": 61180,
+          "text": " 20"
+        },
+        {
+          "startMs": 61240,
+          "endMs": 61380,
+          "text": " 米"
+        },
+        {
+          "startMs": 61380,
+          "endMs": 61580,
+          "text": "左右。"
+        }
+      ]
+    },
+    {
+      "startMs": 62460,
+      "endMs": 65480,
+      "text": "最醒目的,是四片多用图加仓尖甲。",
+      "words": [
+        {
+          "startMs": 62460,
+          "endMs": 62720,
+          "text": "最"
+        },
+        {
+          "startMs": 62720,
+          "endMs": 62920,
+          "text": "醒"
+        },
+        {
+          "startMs": 62920,
+          "endMs": 63100,
+          "text": "目"
+        },
+        {
+          "startMs": 63100,
+          "endMs": 63280,
+          "text": "的,"
+        },
+        {
+          "startMs": 63600,
+          "endMs": 63680,
+          "text": "是"
+        },
+        {
+          "startMs": 63680,
+          "endMs": 63940,
+          "text": "四"
+        },
+        {
+          "startMs": 63940,
+          "endMs": 64140,
+          "text": "片"
+        },
+        {
+          "startMs": 64140,
+          "endMs": 64340,
+          "text": "多"
+        },
+        {
+          "startMs": 64340,
+          "endMs": 64520,
+          "text": "用"
+        },
+        {
+          "startMs": 64520,
+          "endMs": 64700,
+          "text": "图"
+        },
+        {
+          "startMs": 64700,
+          "endMs": 64900,
+          "text": "加"
+        },
+        {
+          "startMs": 64900,
+          "endMs": 65100,
+          "text": "仓"
+        },
+        {
+          "startMs": 65100,
+          "endMs": 65280,
+          "text": "尖"
+        },
+        {
+          "startMs": 65280,
+          "endMs": 65480,
+          "text": "甲。"
+        }
+      ]
+    },
+    {
+      "startMs": 65980,
+      "endMs": 70500,
+      "text": "内藏六枚新型浮游炮,与可正反向设计的 Mij 粒子炮,",
+      "words": [
+        {
+          "startMs": 65980,
+          "endMs": 66140,
+          "text": "内"
+        },
+        {
+          "startMs": 66140,
+          "endMs": 66300,
+          "text": "藏"
+        },
+        {
+          "startMs": 66300,
+          "endMs": 66480,
+          "text": "六"
+        },
+        {
+          "startMs": 66480,
+          "endMs": 66620,
+          "text": "枚"
+        },
+        {
+          "startMs": 66620,
+          "endMs": 66840,
+          "text": "新"
+        },
+        {
+          "startMs": 66840,
+          "endMs": 67000,
+          "text": "型"
+        },
+        {
+          "startMs": 67000,
+          "endMs": 67160,
+          "text": "浮"
+        },
+        {
+          "startMs": 67160,
+          "endMs": 67300,
+          "text": "游"
+        },
+        {
+          "startMs": 67300,
+          "endMs": 67500,
+          "text": "炮,"
+        },
+        {
+          "startMs": 67880,
+          "endMs": 67920,
+          "text": "与"
+        },
+        {
+          "startMs": 67920,
+          "endMs": 68120,
+          "text": "可"
+        },
+        {
+          "startMs": 68120,
+          "endMs": 68320,
+          "text": "正"
+        },
+        {
+          "startMs": 68320,
+          "endMs": 68540,
+          "text": "反"
+        },
+        {
+          "startMs": 68540,
+          "endMs": 68760,
+          "text": "向"
+        },
+        {
+          "startMs": 68760,
+          "endMs": 68940,
+          "text": "设"
+        },
+        {
+          "startMs": 68940,
+          "endMs": 69120,
+          "text": "计"
+        },
+        {
+          "startMs": 69120,
+          "endMs": 69280,
+          "text": "的"
+        },
+        {
+          "startMs": 69280,
+          "endMs": 69620,
+          "text": " M"
+        },
+        {
+          "startMs": 69620,
+          "endMs": 69880,
+          "text": "ij"
+        },
+        {
+          "startMs": 70020,
+          "endMs": 70140,
+          "text": " 粒"
+        },
+        {
+          "startMs": 70140,
+          "endMs": 70300,
+          "text": "子"
+        },
+        {
+          "startMs": 70300,
+          "endMs": 70500,
+          "text": "炮,"
+        }
+      ]
+    },
+    {
+      "startMs": 70920,
+      "endMs": 75380,
+      "text": "一段藏着内藏光束件的机械臂,还搭载着矮粒产发生气。",
+      "words": [
+        {
+          "startMs": 70920,
+          "endMs": 71000,
+          "text": "一"
+        },
+        {
+          "startMs": 71000,
+          "endMs": 71140,
+          "text": "段"
+        },
+        {
+          "startMs": 71140,
+          "endMs": 71360,
+          "text": "藏"
+        },
+        {
+          "startMs": 71360,
+          "endMs": 71500,
+          "text": "着"
+        },
+        {
+          "startMs": 71500,
+          "endMs": 71680,
+          "text": "内"
+        },
+        {
+          "startMs": 71680,
+          "endMs": 71900,
+          "text": "藏"
+        },
+        {
+          "startMs": 71900,
+          "endMs": 72100,
+          "text": "光"
+        },
+        {
+          "startMs": 72100,
+          "endMs": 72320,
+          "text": "束"
+        },
+        {
+          "startMs": 72320,
+          "endMs": 72480,
+          "text": "件"
+        },
+        {
+          "startMs": 72480,
+          "endMs": 72620,
+          "text": "的"
+        },
+        {
+          "startMs": 72620,
+          "endMs": 72780,
+          "text": "机"
+        },
+        {
+          "startMs": 72780,
+          "endMs": 72900,
+          "text": "械"
+        },
+        {
+          "startMs": 72900,
+          "endMs": 73060,
+          "text": "臂,"
+        },
+        {
+          "startMs": 73460,
+          "endMs": 73660,
+          "text": "还"
+        },
+        {
+          "startMs": 73660,
+          "endMs": 73780,
+          "text": "搭"
+        },
+        {
+          "startMs": 73780,
+          "endMs": 73940,
+          "text": "载"
+        },
+        {
+          "startMs": 73940,
+          "endMs": 74180,
+          "text": "着"
+        },
+        {
+          "startMs": 74180,
+          "endMs": 74460,
+          "text": "矮"
+        },
+        {
+          "startMs": 74460,
+          "endMs": 74620,
+          "text": "粒"
+        },
+        {
+          "startMs": 74620,
+          "endMs": 74800,
+          "text": "产"
+        },
+        {
+          "startMs": 74800,
+          "endMs": 75000,
+          "text": "发"
+        },
+        {
+          "startMs": 75000,
+          "endMs": 75180,
+          "text": "生"
+        },
+        {
+          "startMs": 75180,
+          "endMs": 75380,
+          "text": "气。"
+        }
+      ]
+    },
+    {
+      "startMs": 75760,
+      "endMs": 78620,
+      "text": "Marcin 尖甲本身就是挡实弹的盾牌。",
+      "words": [
+        {
+          "startMs": 75760,
+          "endMs": 75940,
+          "text": "Mar"
+        },
+        {
+          "startMs": 75940,
+          "endMs": 76220,
+          "text": "cin"
+        },
+        {
+          "startMs": 76600,
+          "endMs": 76680,
+          "text": " 尖"
+        },
+        {
+          "startMs": 76680,
+          "endMs": 76840,
+          "text": "甲"
+        },
+        {
+          "startMs": 76840,
+          "endMs": 77080,
+          "text": "本"
+        },
+        {
+          "startMs": 77080,
+          "endMs": 77300,
+          "text": "身"
+        },
+        {
+          "startMs": 77300,
+          "endMs": 77580,
+          "text": "就是"
+        },
+        {
+          "startMs": 77580,
+          "endMs": 77780,
+          "text": "挡"
+        },
+        {
+          "startMs": 77780,
+          "endMs": 77980,
+          "text": "实"
+        },
+        {
+          "startMs": 77980,
+          "endMs": 78140,
+          "text": "弹"
+        },
+        {
+          "startMs": 78140,
+          "endMs": 78280,
+          "text": "的"
+        },
+        {
+          "startMs": 78280,
+          "endMs": 78380,
+          "text": "盾"
+        },
+        {
+          "startMs": 78380,
+          "endMs": 78620,
+          "text": "牌。"
+        }
+      ]
+    },
+    {
+      "startMs": 79360,
+      "endMs": 82720,
+      "text": "胸口是四门可极数设计的 MEGA 粒子炮,",
+      "words": [
+        {
+          "startMs": 79360,
+          "endMs": 79720,
+          "text": "胸"
+        },
+        {
+          "startMs": 79720,
+          "endMs": 79900,
+          "text": "口"
+        },
+        {
+          "startMs": 79900,
+          "endMs": 80060,
+          "text": "是"
+        },
+        {
+          "startMs": 80060,
+          "endMs": 80240,
+          "text": "四"
+        },
+        {
+          "startMs": 80240,
+          "endMs": 80400,
+          "text": "门"
+        },
+        {
+          "startMs": 80400,
+          "endMs": 80580,
+          "text": "可"
+        },
+        {
+          "startMs": 80580,
+          "endMs": 80760,
+          "text": "极"
+        },
+        {
+          "startMs": 80760,
+          "endMs": 80980,
+          "text": "数"
+        },
+        {
+          "startMs": 80980,
+          "endMs": 81180,
+          "text": "设"
+        },
+        {
+          "startMs": 81180,
+          "endMs": 81340,
+          "text": "计"
+        },
+        {
+          "startMs": 81340,
+          "endMs": 81500,
+          "text": "的"
+        },
+        {
+          "startMs": 81500,
+          "endMs": 81820,
+          "text": " ME"
+        },
+        {
+          "startMs": 81820,
+          "endMs": 82220,
+          "text": "GA"
+        },
+        {
+          "startMs": 82280,
+          "endMs": 82420,
+          "text": " 粒"
+        },
+        {
+          "startMs": 82420,
+          "endMs": 82560,
+          "text": "子"
+        },
+        {
+          "startMs": 82560,
+          "endMs": 82720,
+          "text": "炮,"
+        }
+      ]
+    },
+    {
+      "startMs": 83180,
+      "endMs": 85740,
+      "text": "与用于签制的二连装实弹连射炮。",
+      "words": [
+        {
+          "startMs": 83180,
+          "endMs": 83220,
+          "text": "与"
+        },
+        {
+          "startMs": 83220,
+          "endMs": 83400,
+          "text": "用"
+        },
+        {
+          "startMs": 83400,
+          "endMs": 83560,
+          "text": "于"
+        },
+        {
+          "startMs": 83560,
+          "endMs": 83760,
+          "text": "签"
+        },
+        {
+          "startMs": 83760,
+          "endMs": 83980,
+          "text": "制"
+        },
+        {
+          "startMs": 83980,
+          "endMs": 84120,
+          "text": "的"
+        },
+        {
+          "startMs": 84120,
+          "endMs": 84320,
+          "text": "二"
+        },
+        {
+          "startMs": 84320,
+          "endMs": 84520,
+          "text": "连"
+        },
+        {
+          "startMs": 84520,
+          "endMs": 84740,
+          "text": "装"
+        },
+        {
+          "startMs": 84740,
+          "endMs": 85000,
+          "text": "实"
+        },
+        {
+          "startMs": 85000,
+          "endMs": 85180,
+          "text": "弹"
+        },
+        {
+          "startMs": 85180,
+          "endMs": 85340,
+          "text": "连"
+        },
+        {
+          "startMs": 85340,
+          "endMs": 85540,
+          "text": "射"
+        },
+        {
+          "startMs": 85540,
+          "endMs": 85740,
+          "text": "炮。"
+        }
+      ]
+    },
+    {
+      "startMs": 86280,
+      "endMs": 90040,
+      "text": "双手装备专用光束加特林,万内光束件收拢时,",
+      "words": [
+        {
+          "startMs": 86280,
+          "endMs": 86420,
+          "text": "双"
+        },
+        {
+          "startMs": 86420,
+          "endMs": 86620,
+          "text": "手"
+        },
+        {
+          "startMs": 86620,
+          "endMs": 86780,
+          "text": "装"
+        },
+        {
+          "startMs": 86780,
+          "endMs": 86940,
+          "text": "备"
+        },
+        {
+          "startMs": 86940,
+          "endMs": 87120,
+          "text": "专"
+        },
+        {
+          "startMs": 87120,
+          "endMs": 87300,
+          "text": "用"
+        },
+        {
+          "startMs": 87300,
+          "endMs": 87500,
+          "text": "光"
+        },
+        {
+          "startMs": 87500,
+          "endMs": 87720,
+          "text": "束"
+        },
+        {
+          "startMs": 87720,
+          "endMs": 87900,
+          "text": "加"
+        },
+        {
+          "startMs": 87900,
+          "endMs": 88080,
+          "text": "特"
+        },
+        {
+          "startMs": 88080,
+          "endMs": 88280,
+          "text": "林,"
+        },
+        {
+          "startMs": 88640,
+          "endMs": 88760,
+          "text": "万"
+        },
+        {
+          "startMs": 88760,
+          "endMs": 88940,
+          "text": "内"
+        },
+        {
+          "startMs": 88940,
+          "endMs": 89100,
+          "text": "光"
+        },
+        {
+          "startMs": 89100,
+          "endMs": 89300,
+          "text": "束"
+        },
+        {
+          "startMs": 89300,
+          "endMs": 89480,
+          "text": "件"
+        },
+        {
+          "startMs": 89480,
+          "endMs": 89680,
+          "text": "收"
+        },
+        {
+          "startMs": 89680,
+          "endMs": 89820,
+          "text": "拢"
+        },
+        {
+          "startMs": 89820,
+          "endMs": 90040,
+          "text": "时,"
+        }
+      ]
+    },
+    {
+      "startMs": 90360,
+      "endMs": 91940,
+      "text": "也能充作光束发射器。",
+      "words": [
+        {
+          "startMs": 90360,
+          "endMs": 90480,
+          "text": "也"
+        },
+        {
+          "startMs": 90480,
+          "endMs": 90640,
+          "text": "能"
+        },
+        {
+          "startMs": 90640,
+          "endMs": 90860,
+          "text": "充"
+        },
+        {
+          "startMs": 90860,
+          "endMs": 91060,
+          "text": "作"
+        },
+        {
+          "startMs": 91060,
+          "endMs": 91260,
+          "text": "光"
+        },
+        {
+          "startMs": 91260,
+          "endMs": 91440,
+          "text": "束"
+        },
+        {
+          "startMs": 91440,
+          "endMs": 91600,
+          "text": "发"
+        },
+        {
+          "startMs": 91600,
+          "endMs": 91760,
+          "text": "射"
+        },
+        {
+          "startMs": 91760,
+          "endMs": 91940,
+          "text": "器。"
+        }
+      ]
+    },
+    {
+      "startMs": 92640,
+      "endMs": 95500,
+      "text": "作为安娜海姆的产品,通用接口,",
+      "words": [
+        {
+          "startMs": 92640,
+          "endMs": 92940,
+          "text": "作"
+        },
+        {
+          "startMs": 92940,
+          "endMs": 93120,
+          "text": "为"
+        },
+        {
+          "startMs": 93120,
+          "endMs": 93340,
+          "text": "安"
+        },
+        {
+          "startMs": 93340,
+          "endMs": 93420,
+          "text": "娜"
+        },
+        {
+          "startMs": 93420,
+          "endMs": 93600,
+          "text": "海"
+        },
+        {
+          "startMs": 93600,
+          "endMs": 93700,
+          "text": "姆"
+        },
+        {
+          "startMs": 93700,
+          "endMs": 93840,
+          "text": "的"
+        },
+        {
+          "startMs": 93840,
+          "endMs": 94000,
+          "text": "产"
+        },
+        {
+          "startMs": 94000,
+          "endMs": 94200,
+          "text": "品,"
+        },
+        {
+          "startMs": 94740,
+          "endMs": 94900,
+          "text": "通"
+        },
+        {
+          "startMs": 94900,
+          "endMs": 95040,
+          "text": "用"
+        },
+        {
+          "startMs": 95040,
+          "endMs": 95220,
+          "text": "接"
+        },
+        {
+          "startMs": 95220,
+          "endMs": 95500,
+          "text": "口,"
+        }
+      ]
+    },
+    {
+      "startMs": 95740,
+      "endMs": 98400,
+      "text": "甚至让它可以使用一部分联邦军的武器。",
+      "words": [
+        {
+          "startMs": 95740,
+          "endMs": 95860,
+          "text": "甚"
+        },
+        {
+          "startMs": 95860,
+          "endMs": 96000,
+          "text": "至"
+        },
+        {
+          "startMs": 96000,
+          "endMs": 96100,
+          "text": "让"
+        },
+        {
+          "startMs": 96100,
+          "endMs": 96240,
+          "text": "它"
+        },
+        {
+          "startMs": 96240,
+          "endMs": 96500,
+          "text": "可以"
+        },
+        {
+          "startMs": 96500,
+          "endMs": 96700,
+          "text": "使"
+        },
+        {
+          "startMs": 96700,
+          "endMs": 96840,
+          "text": "用"
+        },
+        {
+          "startMs": 96840,
+          "endMs": 97000,
+          "text": "一"
+        },
+        {
+          "startMs": 97000,
+          "endMs": 97300,
+          "text": "部分"
+        },
+        {
+          "startMs": 97300,
+          "endMs": 97560,
+          "text": "联"
+        },
+        {
+          "startMs": 97560,
+          "endMs": 97700,
+          "text": "邦"
+        },
+        {
+          "startMs": 97700,
+          "endMs": 97900,
+          "text": "军"
+        },
+        {
+          "startMs": 97900,
+          "endMs": 98040,
+          "text": "的"
+        },
+        {
+          "startMs": 98040,
+          "endMs": 98160,
+          "text": "武"
+        },
+        {
+          "startMs": 98160,
+          "endMs": 98400,
+          "text": "器。"
+        }
+      ]
+    },
+    {
+      "startMs": 99340,
+      "endMs": 102620,
+      "text": "驾驶它的是强化人马利达·库鲁斯,",
+      "words": [
+        {
+          "startMs": 99340,
+          "endMs": 99540,
+          "text": "驾"
+        },
+        {
+          "startMs": 99540,
+          "endMs": 99680,
+          "text": "驶"
+        },
+        {
+          "startMs": 99680,
+          "endMs": 99920,
+          "text": "它的"
+        },
+        {
+          "startMs": 99920,
+          "endMs": 100420,
+          "text": "是"
+        },
+        {
+          "startMs": 100420,
+          "endMs": 100600,
+          "text": "强"
+        },
+        {
+          "startMs": 100600,
+          "endMs": 100820,
+          "text": "化"
+        },
+        {
+          "startMs": 100820,
+          "endMs": 101040,
+          "text": "人"
+        },
+        {
+          "startMs": 101040,
+          "endMs": 101500,
+          "text": "马"
+        },
+        {
+          "startMs": 101500,
+          "endMs": 101640,
+          "text": "利"
+        },
+        {
+          "startMs": 101640,
+          "endMs": 101840,
+          "text": "达"
+        },
+        {
+          "startMs": 101840,
+          "endMs": 102220,
+          "text": "·"
+        },
+        {
+          "startMs": 102220,
+          "endMs": 102220,
+          "text": "库"
+        },
+        {
+          "startMs": 102220,
+          "endMs": 102360,
+          "text": "鲁"
+        },
+        {
+          "startMs": 102360,
+          "endMs": 102620,
+          "text": "斯,"
+        }
+      ]
+    },
+    {
+      "startMs": 103120,
+      "endMs": 106340,
+      "text": "马人普鲁十二号,带袖的葛兰雪队的王牌。",
+      "words": [
+        {
+          "startMs": 103120,
+          "endMs": 103220,
+          "text": "马"
+        },
+        {
+          "startMs": 103220,
+          "endMs": 103400,
+          "text": "人"
+        },
+        {
+          "startMs": 103400,
+          "endMs": 103620,
+          "text": "普"
+        },
+        {
+          "startMs": 103620,
+          "endMs": 103740,
+          "text": "鲁"
+        },
+        {
+          "startMs": 103740,
+          "endMs": 103940,
+          "text": "十"
+        },
+        {
+          "startMs": 103940,
+          "endMs": 104140,
+          "text": "二"
+        },
+        {
+          "startMs": 104140,
+          "endMs": 104380,
+          "text": "号,"
+        },
+        {
+          "startMs": 104780,
+          "endMs": 104900,
+          "text": "带"
+        },
+        {
+          "startMs": 104900,
+          "endMs": 105100,
+          "text": "袖"
+        },
+        {
+          "startMs": 105100,
+          "endMs": 105240,
+          "text": "的"
+        },
+        {
+          "startMs": 105240,
+          "endMs": 105400,
+          "text": "葛"
+        },
+        {
+          "startMs": 105400,
+          "endMs": 105540,
+          "text": "兰"
+        },
+        {
+          "startMs": 105540,
+          "endMs": 105740,
+          "text": "雪"
+        },
+        {
+          "startMs": 105740,
+          "endMs": 105860,
+          "text": "队"
+        },
+        {
+          "startMs": 105860,
+          "endMs": 105980,
+          "text": "的"
+        },
+        {
+          "startMs": 105980,
+          "endMs": 106120,
+          "text": "王"
+        },
+        {
+          "startMs": 106120,
+          "endMs": 106340,
+          "text": "牌。"
+        }
+      ]
+    },
+    {
+      "startMs": 106340,
+      "endMs": 110260,
+      "text": "他几乎面无表情,却乘虎队长悉尼曼为主人。",
+      "words": [
+        {
+          "startMs": 106340,
+          "endMs": 107020,
+          "text": "他"
+        },
+        {
+          "startMs": 107020,
+          "endMs": 107180,
+          "text": "几"
+        },
+        {
+          "startMs": 107180,
+          "endMs": 107340,
+          "text": "乎"
+        },
+        {
+          "startMs": 107340,
+          "endMs": 107520,
+          "text": "面"
+        },
+        {
+          "startMs": 107520,
+          "endMs": 107660,
+          "text": "无"
+        },
+        {
+          "startMs": 107660,
+          "endMs": 107840,
+          "text": "表"
+        },
+        {
+          "startMs": 107840,
+          "endMs": 108100,
+          "text": "情,"
+        },
+        {
+          "startMs": 108340,
+          "endMs": 108540,
+          "text": "却"
+        },
+        {
+          "startMs": 108540,
+          "endMs": 108740,
+          "text": "乘"
+        },
+        {
+          "startMs": 108740,
+          "endMs": 108900,
+          "text": "虎"
+        },
+        {
+          "startMs": 108900,
+          "endMs": 109040,
+          "text": "队"
+        },
+        {
+          "startMs": 109040,
+          "endMs": 109220,
+          "text": "长"
+        },
+        {
+          "startMs": 109220,
+          "endMs": 109400,
+          "text": "悉"
+        },
+        {
+          "startMs": 109400,
+          "endMs": 109540,
+          "text": "尼"
+        },
+        {
+          "startMs": 109540,
+          "endMs": 109700,
+          "text": "曼"
+        },
+        {
+          "startMs": 109700,
+          "endMs": 109900,
+          "text": "为"
+        },
+        {
+          "startMs": 109900,
+          "endMs": 110060,
+          "text": "主"
+        },
+        {
+          "startMs": 110060,
+          "endMs": 110260,
+          "text": "人。"
+        }
+      ]
+    },
+    {
+      "startMs": 111020,
+      "endMs": 116000,
+      "text": "投入实战后,这台四片翅膀的家伙给联邦军造成了极大的损失。",
+      "words": [
+        {
+          "startMs": 111020,
+          "endMs": 111320,
+          "text": "投"
+        },
+        {
+          "startMs": 111320,
+          "endMs": 111460,
+          "text": "入"
+        },
+        {
+          "startMs": 111460,
+          "endMs": 111620,
+          "text": "实"
+        },
+        {
+          "startMs": 111620,
+          "endMs": 111760,
+          "text": "战"
+        },
+        {
+          "startMs": 111760,
+          "endMs": 111980,
+          "text": "后,"
+        },
+        {
+          "startMs": 112500,
+          "endMs": 112640,
+          "text": "这"
+        },
+        {
+          "startMs": 112640,
+          "endMs": 112780,
+          "text": "台"
+        },
+        {
+          "startMs": 112780,
+          "endMs": 112960,
+          "text": "四"
+        },
+        {
+          "startMs": 112960,
+          "endMs": 113100,
+          "text": "片"
+        },
+        {
+          "startMs": 113100,
+          "endMs": 113300,
+          "text": "翅"
+        },
+        {
+          "startMs": 113300,
+          "endMs": 113440,
+          "text": "膀"
+        },
+        {
+          "startMs": 113440,
+          "endMs": 113560,
+          "text": "的"
+        },
+        {
+          "startMs": 113560,
+          "endMs": 113740,
+          "text": "家"
+        },
+        {
+          "startMs": 113740,
+          "endMs": 113920,
+          "text": "伙"
+        },
+        {
+          "startMs": 113920,
+          "endMs": 114240,
+          "text": "给"
+        },
+        {
+          "startMs": 114240,
+          "endMs": 114400,
+          "text": "联"
+        },
+        {
+          "startMs": 114400,
+          "endMs": 114540,
+          "text": "邦"
+        },
+        {
+          "startMs": 114540,
+          "endMs": 114740,
+          "text": "军"
+        },
+        {
+          "startMs": 114740,
+          "endMs": 114900,
+          "text": "造"
+        },
+        {
+          "startMs": 114900,
+          "endMs": 115080,
+          "text": "成"
+        },
+        {
+          "startMs": 115080,
+          "endMs": 115240,
+          "text": "了"
+        },
+        {
+          "startMs": 115240,
+          "endMs": 115360,
+          "text": "极"
+        },
+        {
+          "startMs": 115360,
+          "endMs": 115540,
+          "text": "大的"
+        },
+        {
+          "startMs": 115540,
+          "endMs": 115800,
+          "text": "损"
+        },
+        {
+          "startMs": 115800,
+          "endMs": 116000,
+          "text": "失。"
+        }
+      ]
+    },
+    {
+      "startMs": 116540,
+      "endMs": 118640,
+      "text": "连对手都记住了他的外形。",
+      "words": [
+        {
+          "startMs": 116540,
+          "endMs": 116900,
+          "text": "连"
+        },
+        {
+          "startMs": 116900,
+          "endMs": 117060,
+          "text": "对"
+        },
+        {
+          "startMs": 117060,
+          "endMs": 117280,
+          "text": "手"
+        },
+        {
+          "startMs": 117280,
+          "endMs": 117400,
+          "text": "都"
+        },
+        {
+          "startMs": 117400,
+          "endMs": 117560,
+          "text": "记"
+        },
+        {
+          "startMs": 117560,
+          "endMs": 117720,
+          "text": "住"
+        },
+        {
+          "startMs": 117720,
+          "endMs": 117900,
+          "text": "了"
+        },
+        {
+          "startMs": 117900,
+          "endMs": 118120,
+          "text": "他的"
+        },
+        {
+          "startMs": 118120,
+          "endMs": 118360,
+          "text": "外"
+        },
+        {
+          "startMs": 118360,
+          "endMs": 118640,
+          "text": "形。"
+        }
+      ]
+    },
+    {
+      "startMs": 119520,
+      "endMs": 125440,
+      "text": "转折发生在与巴纳吉·林克斯驾驶的RX-0独角兽高达的交战之后,",
+      "words": [
+        {
+          "startMs": 119520,
+          "endMs": 119700,
+          "text": "转"
+        },
+        {
+          "startMs": 119700,
+          "endMs": 119940,
+          "text": "折"
+        },
+        {
+          "startMs": 119940,
+          "endMs": 120180,
+          "text": "发"
+        },
+        {
+          "startMs": 120180,
+          "endMs": 120320,
+          "text": "生"
+        },
+        {
+          "startMs": 120320,
+          "endMs": 120460,
+          "text": "在"
+        },
+        {
+          "startMs": 120460,
+          "endMs": 120640,
+          "text": "与"
+        },
+        {
+          "startMs": 120640,
+          "endMs": 120880,
+          "text": "巴"
+        },
+        {
+          "startMs": 120880,
+          "endMs": 121000,
+          "text": "纳"
+        },
+        {
+          "startMs": 121000,
+          "endMs": 121240,
+          "text": "吉"
+        },
+        {
+          "startMs": 121240,
+          "endMs": 121440,
+          "text": "·"
+        },
+        {
+          "startMs": 121440,
+          "endMs": 121520,
+          "text": "林"
+        },
+        {
+          "startMs": 121520,
+          "endMs": 121740,
+          "text": "克"
+        },
+        {
+          "startMs": 121740,
+          "endMs": 121960,
+          "text": "斯"
+        },
+        {
+          "startMs": 121960,
+          "endMs": 122160,
+          "text": "驾"
+        },
+        {
+          "startMs": 122160,
+          "endMs": 122300,
+          "text": "驶"
+        },
+        {
+          "startMs": 122300,
+          "endMs": 122460,
+          "text": "的"
+        },
+        {
+          "startMs": 122460,
+          "endMs": 122720,
+          "text": "R"
+        },
+        {
+          "startMs": 122720,
+          "endMs": 123040,
+          "text": "X"
+        },
+        {
+          "startMs": 123040,
+          "endMs": 123260,
+          "text": "-"
+        },
+        {
+          "startMs": 123260,
+          "endMs": 123540,
+          "text": "0"
+        },
+        {
+          "startMs": 123540,
+          "endMs": 123880,
+          "text": "独"
+        },
+        {
+          "startMs": 123880,
+          "endMs": 124060,
+          "text": "角"
+        },
+        {
+          "startMs": 124060,
+          "endMs": 124220,
+          "text": "兽"
+        },
+        {
+          "startMs": 124220,
+          "endMs": 124520,
+          "text": "高"
+        },
+        {
+          "startMs": 124520,
+          "endMs": 124700,
+          "text": "达"
+        },
+        {
+          "startMs": 124700,
+          "endMs": 124840,
+          "text": "的"
+        },
+        {
+          "startMs": 124840,
+          "endMs": 124960,
+          "text": "交"
+        },
+        {
+          "startMs": 124960,
+          "endMs": 125100,
+          "text": "战"
+        },
+        {
+          "startMs": 125100,
+          "endMs": 125320,
+          "text": "之"
+        },
+        {
+          "startMs": 125320,
+          "endMs": 125440,
+          "text": "后,"
+        }
+      ]
+    },
+    {
+      "startMs": 126020,
+      "endMs": 129520,
+      "text": "薩蒂利遭到重创,最终被联邦军回收。",
+      "words": [
+        {
+          "startMs": 126020,
+          "endMs": 126200,
+          "text": "薩"
+        },
+        {
+          "startMs": 126200,
+          "endMs": 126380,
+          "text": "蒂"
+        },
+        {
+          "startMs": 126380,
+          "endMs": 126600,
+          "text": "利"
+        },
+        {
+          "startMs": 126600,
+          "endMs": 126860,
+          "text": "遭"
+        },
+        {
+          "startMs": 126860,
+          "endMs": 127020,
+          "text": "到"
+        },
+        {
+          "startMs": 127020,
+          "endMs": 127220,
+          "text": "重"
+        },
+        {
+          "startMs": 127220,
+          "endMs": 127420,
+          "text": "创,"
+        },
+        {
+          "startMs": 127860,
+          "endMs": 128040,
+          "text": "最"
+        },
+        {
+          "startMs": 128040,
+          "endMs": 128260,
+          "text": "终"
+        },
+        {
+          "startMs": 128260,
+          "endMs": 128520,
+          "text": "被"
+        },
+        {
+          "startMs": 128520,
+          "endMs": 128760,
+          "text": "联"
+        },
+        {
+          "startMs": 128760,
+          "endMs": 128920,
+          "text": "邦"
+        },
+        {
+          "startMs": 128920,
+          "endMs": 129160,
+          "text": "军"
+        },
+        {
+          "startMs": 129160,
+          "endMs": 129340,
+          "text": "回"
+        },
+        {
+          "startMs": 129340,
+          "endMs": 129520,
+          "text": "收。"
+        }
+      ]
+    },
+    {
+      "startMs": 130320,
+      "endMs": 132980,
+      "text": "在尼亚加马上,他被修复重生,",
+      "words": [
+        {
+          "startMs": 130320,
+          "endMs": 130520,
+          "text": "在"
+        },
+        {
+          "startMs": 130520,
+          "endMs": 130700,
+          "text": "尼"
+        },
+        {
+          "startMs": 130700,
+          "endMs": 130820,
+          "text": "亚"
+        },
+        {
+          "startMs": 130820,
+          "endMs": 130980,
+          "text": "加"
+        },
+        {
+          "startMs": 130980,
+          "endMs": 131200,
+          "text": "马"
+        },
+        {
+          "startMs": 131200,
+          "endMs": 131480,
+          "text": "上,"
+        },
+        {
+          "startMs": 131900,
+          "endMs": 132040,
+          "text": "他"
+        },
+        {
+          "startMs": 132040,
+          "endMs": 132180,
+          "text": "被"
+        },
+        {
+          "startMs": 132180,
+          "endMs": 132380,
+          "text": "修"
+        },
+        {
+          "startMs": 132380,
+          "endMs": 132560,
+          "text": "复"
+        },
+        {
+          "startMs": 132560,
+          "endMs": 132760,
+          "text": "重"
+        },
+        {
+          "startMs": 132760,
+          "endMs": 132980,
+          "text": "生,"
+        }
+      ]
+    },
+    {
+      "startMs": 133500,
+      "endMs": 137600,
+      "text": "肆意只剩起义,推进气与武装全面缓装。",
+      "words": [
+        {
+          "startMs": 133500,
+          "endMs": 133860,
+          "text": "肆"
+        },
+        {
+          "startMs": 133860,
+          "endMs": 134040,
+          "text": "意"
+        },
+        {
+          "startMs": 134040,
+          "endMs": 134260,
+          "text": "只"
+        },
+        {
+          "startMs": 134260,
+          "endMs": 134460,
+          "text": "剩"
+        },
+        {
+          "startMs": 134460,
+          "endMs": 134660,
+          "text": "起"
+        },
+        {
+          "startMs": 134660,
+          "endMs": 134860,
+          "text": "义,"
+        },
+        {
+          "startMs": 135540,
+          "endMs": 135740,
+          "text": "推"
+        },
+        {
+          "startMs": 135740,
+          "endMs": 135940,
+          "text": "进"
+        },
+        {
+          "startMs": 135940,
+          "endMs": 136180,
+          "text": "气"
+        },
+        {
+          "startMs": 136180,
+          "endMs": 136540,
+          "text": "与"
+        },
+        {
+          "startMs": 136540,
+          "endMs": 136700,
+          "text": "武"
+        },
+        {
+          "startMs": 136700,
+          "endMs": 136840,
+          "text": "装"
+        },
+        {
+          "startMs": 136840,
+          "endMs": 137060,
+          "text": "全"
+        },
+        {
+          "startMs": 137060,
+          "endMs": 137220,
+          "text": "面"
+        },
+        {
+          "startMs": 137220,
+          "endMs": 137360,
+          "text": "缓"
+        },
+        {
+          "startMs": 137360,
+          "endMs": 137600,
+          "text": "装。"
+        }
+      ]
+    },
+    {
+      "startMs": 138420,
+      "endMs": 142340,
+      "text": "拉普拉斯之争的最后阶段,为了掩护全装假读教授,",
+      "words": [
+        {
+          "startMs": 138420,
+          "endMs": 138580,
+          "text": "拉"
+        },
+        {
+          "startMs": 138580,
+          "endMs": 138720,
+          "text": "普"
+        },
+        {
+          "startMs": 138720,
+          "endMs": 138860,
+          "text": "拉"
+        },
+        {
+          "startMs": 138860,
+          "endMs": 139000,
+          "text": "斯"
+        },
+        {
+          "startMs": 139000,
+          "endMs": 139160,
+          "text": "之"
+        },
+        {
+          "startMs": 139160,
+          "endMs": 139300,
+          "text": "争"
+        },
+        {
+          "startMs": 139300,
+          "endMs": 139440,
+          "text": "的"
+        },
+        {
+          "startMs": 139440,
+          "endMs": 139620,
+          "text": "最"
+        },
+        {
+          "startMs": 139620,
+          "endMs": 139760,
+          "text": "后"
+        },
+        {
+          "startMs": 139760,
+          "endMs": 139940,
+          "text": "阶"
+        },
+        {
+          "startMs": 139940,
+          "endMs": 140120,
+          "text": "段,"
+        },
+        {
+          "startMs": 140520,
+          "endMs": 140620,
+          "text": "为"
+        },
+        {
+          "startMs": 140620,
+          "endMs": 140740,
+          "text": "了"
+        },
+        {
+          "startMs": 140740,
+          "endMs": 140880,
+          "text": "掩"
+        },
+        {
+          "startMs": 140880,
+          "endMs": 141120,
+          "text": "护"
+        },
+        {
+          "startMs": 141120,
+          "endMs": 141420,
+          "text": "全"
+        },
+        {
+          "startMs": 141420,
+          "endMs": 141660,
+          "text": "装"
+        },
+        {
+          "startMs": 141660,
+          "endMs": 141840,
+          "text": "假"
+        },
+        {
+          "startMs": 141840,
+          "endMs": 141980,
+          "text": "读"
+        },
+        {
+          "startMs": 141980,
+          "endMs": 142120,
+          "text": "教"
+        },
+        {
+          "startMs": 142120,
+          "endMs": 142340,
+          "text": "授,"
+        }
+      ]
+    },
+    {
+      "startMs": 142700,
+      "endMs": 145240,
+      "text": "马利达驾驶残破的修复型再次出击,",
+      "words": [
+        {
+          "startMs": 142700,
+          "endMs": 142840,
+          "text": "马"
+        },
+        {
+          "startMs": 142840,
+          "endMs": 142960,
+          "text": "利"
+        },
+        {
+          "startMs": 142960,
+          "endMs": 143120,
+          "text": "达"
+        },
+        {
+          "startMs": 143120,
+          "endMs": 143340,
+          "text": "驾"
+        },
+        {
+          "startMs": 143340,
+          "endMs": 143480,
+          "text": "驶"
+        },
+        {
+          "startMs": 143480,
+          "endMs": 143680,
+          "text": "残"
+        },
+        {
+          "startMs": 143680,
+          "endMs": 143840,
+          "text": "破"
+        },
+        {
+          "startMs": 143840,
+          "endMs": 143960,
+          "text": "的"
+        },
+        {
+          "startMs": 143960,
+          "endMs": 144140,
+          "text": "修"
+        },
+        {
+          "startMs": 144140,
+          "endMs": 144300,
+          "text": "复"
+        },
+        {
+          "startMs": 144300,
+          "endMs": 144500,
+          "text": "型"
+        },
+        {
+          "startMs": 144500,
+          "endMs": 144720,
+          "text": "再"
+        },
+        {
+          "startMs": 144720,
+          "endMs": 144900,
+          "text": "次"
+        },
+        {
+          "startMs": 144900,
+          "endMs": 145040,
+          "text": "出"
+        },
+        {
+          "startMs": 145040,
+          "endMs": 145240,
+          "text": "击,"
+        }
+      ]
+    },
+    {
+      "startMs": 145680,
+      "endMs": 148680,
+      "text": "在与暴丧女妖命运女神的缠斗中被击破,",
+      "words": [
+        {
+          "startMs": 145680,
+          "endMs": 145780,
+          "text": "在"
+        },
+        {
+          "startMs": 145780,
+          "endMs": 145920,
+          "text": "与"
+        },
+        {
+          "startMs": 145920,
+          "endMs": 146100,
+          "text": "暴"
+        },
+        {
+          "startMs": 146100,
+          "endMs": 146280,
+          "text": "丧"
+        },
+        {
+          "startMs": 146280,
+          "endMs": 146520,
+          "text": "女"
+        },
+        {
+          "startMs": 146520,
+          "endMs": 146680,
+          "text": "妖"
+        },
+        {
+          "startMs": 146680,
+          "endMs": 147020,
+          "text": "命"
+        },
+        {
+          "startMs": 147020,
+          "endMs": 147180,
+          "text": "运"
+        },
+        {
+          "startMs": 147180,
+          "endMs": 147380,
+          "text": "女"
+        },
+        {
+          "startMs": 147380,
+          "endMs": 147580,
+          "text": "神"
+        },
+        {
+          "startMs": 147580,
+          "endMs": 147680,
+          "text": "的"
+        },
+        {
+          "startMs": 147680,
+          "endMs": 147860,
+          "text": "缠"
+        },
+        {
+          "startMs": 147860,
+          "endMs": 148020,
+          "text": "斗"
+        },
+        {
+          "startMs": 148020,
+          "endMs": 148160,
+          "text": "中"
+        },
+        {
+          "startMs": 148160,
+          "endMs": 148340,
+          "text": "被"
+        },
+        {
+          "startMs": 148340,
+          "endMs": 148500,
+          "text": "击"
+        },
+        {
+          "startMs": 148500,
+          "endMs": 148680,
+          "text": "破,"
+        }
+      ]
+    },
+    {
+      "startMs": 148980,
+      "endMs": 149760,
+      "text": "马利达阵亡。",
+      "words": [
+        {
+          "startMs": 148980,
+          "endMs": 149140,
+          "text": "马"
+        },
+        {
+          "startMs": 149140,
+          "endMs": 149280,
+          "text": "利"
+        },
+        {
+          "startMs": 149280,
+          "endMs": 149420,
+          "text": "达"
+        },
+        {
+          "startMs": 149420,
+          "endMs": 149560,
+          "text": "阵"
+        },
+        {
+          "startMs": 149560,
+          "endMs": 149760,
+          "text": "亡。"
+        }
+      ]
+    },
+    {
+      "startMs": 150400,
+      "endMs": 155180,
+      "text": "薩蒂利的存在,像是一个时代中幕的助教。",
+      "words": [
+        {
+          "startMs": 150400,
+          "endMs": 150820,
+          "text": "薩"
+        },
+        {
+          "startMs": 150820,
+          "endMs": 151000,
+          "text": "蒂"
+        },
+        {
+          "startMs": 151000,
+          "endMs": 151160,
+          "text": "利"
+        },
+        {
+          "startMs": 151160,
+          "endMs": 151320,
+          "text": "的"
+        },
+        {
+          "startMs": 151320,
+          "endMs": 151520,
+          "text": "存"
+        },
+        {
+          "startMs": 151520,
+          "endMs": 151800,
+          "text": "在,"
+        },
+        {
+          "startMs": 152360,
+          "endMs": 153280,
+          "text": "像"
+        },
+        {
+          "startMs": 153280,
+          "endMs": 153460,
+          "text": "是"
+        },
+        {
+          "startMs": 153460,
+          "endMs": 153660,
+          "text": "一个"
+        },
+        {
+          "startMs": 153660,
+          "endMs": 153960,
+          "text": "时"
+        },
+        {
+          "startMs": 153960,
+          "endMs": 154180,
+          "text": "代"
+        },
+        {
+          "startMs": 154180,
+          "endMs": 154420,
+          "text": "中"
+        },
+        {
+          "startMs": 154420,
+          "endMs": 154660,
+          "text": "幕"
+        },
+        {
+          "startMs": 154660,
+          "endMs": 154780,
+          "text": "的"
+        },
+        {
+          "startMs": 154780,
+          "endMs": 154960,
+          "text": "助"
+        },
+        {
+          "startMs": 154960,
+          "endMs": 155180,
+          "text": "教。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G3",
+ "audioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+ "engine": "synthetic-timeline + faster-whisper readback sanity",
+ "voice": "longtian_v3",
+ "readbackCheck": {
+  "asrChars": 714,
+  "targetChars": 659,
+  "difflibRatio": 0.83,
+  "verdict": "pass — 语音完整可读（同音字误差属 ASR 正常），无 Eddy 型静默失效"
+ },
+ "sentences": [
+  {
+   "sentenceId": "S01",
+   "startMs": 0,
+   "endMs": 7970
+  },
+  {
+   "sentenceId": "S02",
+   "startMs": 8370,
+   "endMs": 14180
+  },
+  {
+   "sentenceId": "S03",
+   "startMs": 14580,
+   "endMs": 26630
+  },
+  {
+   "sentenceId": "S04",
+   "startMs": 27030,
+   "endMs": 35400
+  },
+  {
+   "sentenceId": "S05",
+   "startMs": 35800,
+   "endMs": 46970
+  },
+  {
+   "sentenceId": "S06",
+   "startMs": 47370,
+   "endMs": 61980
+  },
+  {
+   "sentenceId": "S07",
+   "startMs": 62380,
+   "endMs": 78990
+  },
+  {
+   "sentenceId": "S08",
+   "startMs": 79390,
+   "endMs": 92240
+  },
+  {
+   "sentenceId": "S09",
+   "startMs": 92640,
+   "endMs": 98770
+  },
+  {
+   "sentenceId": "S10",
+   "startMs": 99170,
+   "endMs": 110580
+  },
+  {
+   "sentenceId": "S11",
+   "startMs": 110980,
+   "endMs": 118950
+  },
+  {
+   "sentenceId": "S12",
+   "startMs": 119350,
+   "endMs": 129800
+  },
+  {
+   "sentenceId": "S13",
+   "startMs": 130200,
+   "endMs": 137850
+  },
+  {
+   "sentenceId": "S14",
+   "startMs": 138250,
+   "endMs": 150060
+  },
+  {
+   "sentenceId": "S15",
+   "startMs": 150460,
+   "endMs": 155390
+  }
+ ]
+}

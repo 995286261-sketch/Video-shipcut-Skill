@@ -1,0 +1,918 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G3",
+ "projectId": "kshatriya-intro-001",
+ "status": "approved_for_g4",
+ "sourceAudioPolicy": "exclude",
+ "narrationDraft": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+ "narrationDecisionRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+ "semanticBeatRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.3.json",
+ "durationDecision": {
+  "targetDurationSec": 155.4,
+  "narrationEstimatedDurationSec": 155.39,
+  "resolution": "follow_narration_natural_duration",
+  "decisionReason": "声音变更（发现㉘）：龙天实测 155.390s，短于婷婷 169.835s；画面全部按新拍长裁短，无扩源无填充",
+  "intentionalSilence": [],
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 70000,
+   "endMs": 78370,
+   "outputStartMs": 0,
+   "outputEndMs": 8370,
+   "outputDurationMs": 8370,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 0,
+   "narrationEndMs": 7970,
+   "narrationText": "U.C.0096，新吉翁残党\"带袖的\"的战场上，出现了一台顶着四片肩甲重翼的巨大机体。",
+   "semanticBeatIds": [
+    "B01"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "刹帝利四翼全身可见"
+   },
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "刹帝利四翼全身外形可见；战场/宇宙空间背景"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-01/start-0000000070000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-01/middle-0000000074185ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-01/end-0000000078330ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-01-start",
+     "vf-v03-seg-01-middle",
+     "vf-v03-seg-01-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "四翼绿色机体宇宙飞行全身+月亮；四翼X展开+绿色光束剑飞行；粉/绿光束交叉近距格斗特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "四肩甲重翼的巨大机体在战场出现",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B01",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B01"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 2500,
+   "endMs": 8710,
+   "outputStartMs": 8370,
+   "outputEndMs": 14580,
+   "outputDurationMs": 6210,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 8370,
+   "narrationEndMs": 14180,
+   "narrationText": "它的编号是 NZ-666，名字叫做——刹帝利。",
+   "semanticBeatIds": [
+    "B02"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "屏显命名文字+机体可见"
+   },
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "刹帝利正面或侧面全身"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-02/start-0000000002500ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-02/middle-0000000005605ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-02/end-0000000008670ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-02-start",
+     "vf-v03-seg-02-middle",
+     "vf-v03-seg-02-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "驾驶员手套操作驾驶杆特写；KSHATRIYA屏显中的四翼机体画面；四翼展开正面机体全身",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "点名 NZ-666 刹帝利",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B02",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B02"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-03",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 8710,
+   "endMs": 21160,
+   "outputStartMs": 14580,
+   "outputEndMs": 27030,
+   "outputDurationMs": 12450,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 14580,
+   "narrationEndMs": 26630,
+   "narrationText": "从 NZ 开头的番号就能看出它的血脉：它是在第一次新吉翁战争时期投入实战的 NZ-000 昆曼沙的基础上发展而来的 NT 用机体。",
+   "semanticBeatIds": [
+    "B03"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "机体全身/半身可见"
+   },
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "刹帝利全身；如素材含昆曼沙画面则更佳"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-03/start-0000000008710ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-03/middle-0000000014935ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-03/end-0000000021120ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-03-start",
+     "vf-v03-seg-03-middle",
+     "vf-v03-seg-03-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "机体四翼展开背面+腿部推进器（格纳库龙门架）；机体精神框架蓝光+背景文字；头部浮游炮发射大光束特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "由 NZ 番号推出昆曼沙血统（编辑推论+事实C-03）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B03",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B03"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 40000,
+   "endMs": 48770,
+   "outputStartMs": 27030,
+   "outputEndMs": 35800,
+   "outputDurationMs": 8770,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 27030,
+   "narrationEndMs": 35400,
+   "narrationText": "设计之初，工程师定下了一个明确的目标：保持同等规格的武装和性能，把机体做得更小。",
+   "semanticBeatIds": [
+    "B04"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "四翼全身开火"
+   },
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "机体紧凑体型的全景"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-04/start-0000000040000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-04/middle-0000000044385ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-04/end-0000000048730ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-04-start",
+     "vf-v03-seg-04-middle",
+     "vf-v03-seg-04-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "机体大枪射击+烟迹特写；机体飞向巨型橙色粒子漩涡；四翼X剪影压亮爆背景",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "设计目标：同武装性能下缩小体积（事实C-04）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B04",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B04"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 99000,
+   "endMs": 110570,
+   "outputStartMs": 35800,
+   "outputEndMs": 47370,
+   "outputDurationMs": 11570,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 35800,
+   "narrationEndMs": 46970,
+   "narrationText": "塞可缪骨架与纳米技术的结合，让驾驶舱被直接安置在躯干的核心位置——离驾驶者更近，就能以更低耗量接收并传输脑电波。",
+   "semanticBeatIds": [
+    "B05"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "躯干精神感应骨架中帧命中"
+   },
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "躯干/驾驶舱部位特写或内部结构画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-05/start-0000000099000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-05/middle-0000000104785ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-05/end-0000000110530ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-05-start",
+     "vf-v03-seg-05-middle",
+     "vf-v03-seg-05-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "粉紫光束近战+精神框架网背景；躯干粉色发光框架特写；橙纹装甲+白色光束特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "塞可缪骨架与驾驶舱置于躯干核心（事实C-05）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B05",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B05"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 120980,
+   "endMs": 135990,
+   "outputStartMs": 47370,
+   "outputEndMs": 62380,
+   "outputDurationMs": 15010,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 47370,
+   "narrationEndMs": 61980,
+   "narrationText": "它的部分核心元件，包括精神感应框架，源自 0094 年\"带袖的\"从阿纳海姆电子公司手中夺走的试作机体；最终，这台 NT 专用重 MS 的全高被控制在了二十米左右。",
+   "semanticBeatIds": [
+    "B06"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "机体全身比例参照"
+   },
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "机体全身立姿或比例参照画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-06/start-0000000120980ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-06/middle-0000000128485ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-06/end-0000000135950ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-06-start",
+     "vf-v03-seg-06-middle",
+     "vf-v03-seg-06-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "蓝机体+粉色光束剑斩击；蓝色能量爆炸+机体轮廓；白光爆+残片",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "核心元件源自被夺试作机；全高约20米（事实C-06/C-07）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B06",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B06"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 81238,
+   "endMs": 98248,
+   "outputStartMs": 62380,
+   "outputEndMs": 79390,
+   "outputDurationMs": 17010,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 62380,
+   "narrationEndMs": 78990,
+   "narrationText": "最醒目的是四片多用途夹舱肩甲：内藏六枚新型浮游炮与可正反向射击的 MEGA 粒子炮，翼段藏着内藏光束剑的机械臂，还搭载着 I 力场发生器——肩甲本身就是挡实弹的盾牌。",
+   "semanticBeatIds": [
+    "B07"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "肩甲炮口终帧命中"
+   },
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "肩甲展开特写；翼段机械臂或光束剑可见"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-07/start-0000000081238ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-07/middle-0000000089743ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-07/end-0000000098208ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-07-start",
+     "vf-v03-seg-07-middle",
+     "vf-v03-seg-07-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "白绿机体射击+圆形盾具；绿色肩甲炮口发光特写；俯视四翼机体掠过紫色框架网",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "四片多用途夹舱肩甲：浮游炮、MEGA粒子炮、内藏机械臂光束剑、I力场（事实C-08）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B07",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B07"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-08a",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 56000,
+   "endMs": 58500,
+   "outputStartMs": 79390,
+   "outputEndMs": 81890,
+   "outputDurationMs": 2500,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 79390,
+   "narrationEndMs": 92240,
+   "narrationText": "胸口是四门可集束射击的 MEGA 粒子炮与用于牵制的二连装实弹连射炮，双手装备专用光束加特林，腕内光束剑收拢时也能充作光束发射器。",
+   "semanticBeatIds": [
+    "B08"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "加特林中帧命中"
+   },
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "胸部正面火力全开或炮口特写；手持加特林射击画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08a/start-0000000056000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08a/middle-0000000057250ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08a/end-0000000058460ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-08a-start",
+     "vf-v03-seg-08a-middle",
+     "vf-v03-seg-08a-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "绿色机体头部+发光射口特写；多管旋转炮管开火特写；背面四翼X展开",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "胸部四门MEGA粒子炮+二连装实弹炮、光束加特林、腕内光束剑（事实C-09）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B08",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B08"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-08b",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 205000,
+   "endMs": 215750,
+   "outputStartMs": 81890,
+   "outputEndMs": 92640,
+   "outputDurationMs": 10750,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 79390,
+   "narrationEndMs": 92240,
+   "narrationText": "胸口是四门可集束射击的 MEGA 粒子炮与用于牵制的二连装实弹连射炮，双手装备专用光束加特林，腕内光束剑收拢时也能充作光束发射器。",
+   "semanticBeatIds": [
+    "B08"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "胸部炮口中帧命中"
+   },
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "胸部正面火力全开或炮口特写；手持加特林射击画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08b/start-0000000205000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08b/middle-0000000210375ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-08b/end-0000000215710ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-08b-start",
+     "vf-v03-seg-08b-middle",
+     "vf-v03-seg-08b-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "绿色头部粉眼特写；正面四圆胸炮口+前景白机体；白机体红绿光束战",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "胸部四门MEGA粒子炮+二连装实弹炮、光束加特林、腕内光束剑（事实C-09）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B08",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B08"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 175000,
+   "endMs": 181530,
+   "outputStartMs": 92640,
+   "outputEndMs": 99170,
+   "outputDurationMs": 6530,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 92640,
+   "narrationEndMs": 98770,
+   "narrationText": "作为阿纳海姆的产品，通用接口甚至让它可以使用一部分联邦军的武器。",
+   "semanticBeatIds": [
+    "B09"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "开火画面承载字卡"
+   },
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "机体持有非专属武器的画面若存在"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-09/start-0000000175000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-09/middle-0000000178265ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-09/end-0000000181490ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-09-start",
+     "vf-v03-seg-09-middle",
+     "vf-v03-seg-09-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "绿机体持光束剑+肩炮口发光；四翼机体与红白机体近战；绿装甲+红白机体火花缠斗",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "阿纳海姆通用接口可再用联邦军武器（事实C-10）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B09",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B09"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-10a",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 0,
+   "endMs": 2500,
+   "outputStartMs": 99170,
+   "outputEndMs": 101670,
+   "outputDurationMs": 2500,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 99170,
+   "narrationEndMs": 110580,
+   "narrationText": "驾驶它的是强化人玛莉妲·库鲁斯——普露十二号，\"带袖的\"葛兰雪队的王牌；她几乎面无表情，却称呼队长辛尼曼为\"主人\"。",
+   "semanticBeatIds": [
+    "B10"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "驾驶员中帧命中"
+   },
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "驾驶舱内或玛莉妲人物画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10a/start-0000000000000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10a/middle-0000000001250ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10a/end-0000000002460ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-10a-start",
+     "vf-v03-seg-10a-middle",
+     "vf-v03-seg-10a-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "驾驶舱内双手抱盔；紫发闭眼无表情驾驶员面部特写（玛莉妲）；手套推杆特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "驾驶员玛莉妲·库鲁斯（普露十二号）、葛兰雪队王牌、称呼辛尼曼为主人（事实C-11/C-12）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B10",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B10"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-10b",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 111360,
+   "endMs": 120670,
+   "outputStartMs": 101670,
+   "outputEndMs": 110980,
+   "outputDurationMs": 9310,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 99170,
+   "narrationEndMs": 110580,
+   "narrationText": "驾驶它的是强化人玛莉妲·库鲁斯——普露十二号，\"带袖的\"葛兰雪队的王牌；她几乎面无表情，却称呼队长辛尼曼为\"主人\"。",
+   "semanticBeatIds": [
+    "B10"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "王牌压制备战"
+   },
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "驾驶舱内或玛莉妲人物画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10b/start-0000000111360ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10b/middle-0000000116015ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-10b/end-0000000120630ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-10b-start",
+     "vf-v03-seg-10b-middle",
+     "vf-v03-seg-10b-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "蓝灰色联邦机被光束斩击；蓝联邦机红眼被斩；绿机体+蓝色爆光",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "驾驶员玛莉妲·库鲁斯（普露十二号）、葛兰雪队王牌、称呼辛尼曼为主人（事实C-11/C-12）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B10",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B10"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 139378,
+   "endMs": 147748,
+   "outputStartMs": 110980,
+   "outputEndMs": 119350,
+   "outputDurationMs": 8370,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 110980,
+   "narrationEndMs": 118950,
+   "narrationText": "投入实战后，这台\"四片翅膀的家伙\"给联邦军造成了极大的损失——连对手都记住了它的外形。",
+   "semanticBeatIds": [
+    "B11"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "战损爆炎"
+   },
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "刹帝利战斗、开火、敌机被击破画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-11/start-0000000139378ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-11/middle-0000000143563ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-11/end-0000000147708ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-11-start",
+     "vf-v03-seg-11-middle",
+     "vf-v03-seg-11-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "绿装甲+蓝色爆炸特写；刹帝利炮口阵列+白红机体光束剑突袭；月面背景光束剑格斗",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "实战中对联邦军造成极大损失（事实C-13，口径保守）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B11",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B11"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 160000,
+   "endMs": 170850,
+   "outputStartMs": 119350,
+   "outputEndMs": 130200,
+   "outputDurationMs": 10850,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 119350,
+   "narrationEndMs": 129800,
+   "narrationText": "转折发生在与巴纳吉·林克斯驾驶的 RX-0 独角兽高达的交战之后：刹帝利遭到重创，最终被联邦军回收。",
+   "semanticBeatIds": [
+    "B12"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "交战对手"
+   },
+   "narrativeClaim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": "受损机体画面；独角兽同框（如素材含）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-12/start-0000000160000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-12/middle-0000000165425ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-12/end-0000000170810ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-12-start",
+     "vf-v03-seg-12-middle",
+     "vf-v03-seg-12-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "独角兽NT-D红纹+蓝色枪火特写；暗转过渡帧+残片；白色机体大枪+月面背景",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "与独角兽交战后重创、被联邦军回收（事实C-14）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B12",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B12"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-13",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 274000,
+   "endMs": 281650,
+   "outputStartMs": 130200,
+   "outputEndMs": 137850,
+   "outputDurationMs": 7650,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 130200,
+   "narrationEndMs": 137850,
+   "narrationText": "在拟·亚加玛上，它被修复重生：四翼只剩其一，推进器与武装全面换装。",
+   "semanticBeatIds": [
+    "B13"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "拟·亚加玛格纳库修复形态"
+   },
+   "narrativeClaim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": "拟·亚加玛/格纳库场景；修复形态机体可见"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-13/start-0000000274000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-13/middle-0000000277825ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-13/end-0000000281610ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-13-start",
+     "vf-v03-seg-13-middle",
+     "vf-v03-seg-13-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "深色机体头部特写+发光眼；格纳库俯视单翼修复型机体立于甲板；修复型正面胸部四联炮口特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "修复重生：四翼存一+推进与武装换装（事实C-15，C-16并入）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B13",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B13"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-14",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 255000,
+   "endMs": 267610,
+   "outputStartMs": 137850,
+   "outputEndMs": 150460,
+   "outputDurationMs": 12610,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 138250,
+   "narrationEndMs": 150060,
+   "narrationText": "拉普拉斯之争的最后阶段，为了掩护全装甲独角兽，玛莉妲驾驶残破的修复型再次出击，在与报丧女妖·命运女神的缠斗中被击破，玛莉妲阵亡。",
+   "semanticBeatIds": [
+    "B14"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "被击破"
+   },
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "最终战缠斗、机体被击破画面"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-14/start-0000000255000ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-14/middle-0000000261305ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-14/end-0000000267570ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-14-start",
+     "vf-v03-seg-14-middle",
+     "vf-v03-seg-14-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "白红重武装机体射击+绿色翼背景；大型白红武器群+远处绿色机体；绿色装甲+橙色圆炮口特写",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "最终战缠斗被击破、玛莉妲阵亡（事实C-17/C-18）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B14",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B14"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  },
+  {
+   "segmentId": "seg-15",
+   "assetId": "source-02-nz-666-vol-2-969a57c3",
+   "startMs": 281882,
+   "endMs": 286812,
+   "outputStartMs": 150460,
+   "outputEndMs": 155390,
+   "outputDurationMs": 4930,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 150460,
+   "narrationEndMs": 155390,
+   "narrationText": "刹帝利的存在，像是一个时代终幕的注脚。",
+   "semanticBeatIds": [
+    "B15"
+   ],
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "结语留白"
+   },
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "刹帝利剪影/格纳库留白镜头"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameRefs": [
+     "G3-剪辑计划/画面验证帧-v0.2/seg-15/start-0000000281882ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-15/middle-0000000284347ms.jpg",
+     "G3-剪辑计划/画面验证帧-v0.2/seg-15/end-0000000286600ms.jpg"
+    ],
+    "derivedFromObservationIds": [
+     "vf-v03-seg-15-start",
+     "vf-v03-seg-15-middle",
+     "vf-v03-seg-15-end"
+    ],
+    "frameManifestRef": "G3-剪辑计划/画面验证帧-v0.2/G3-visual-verification-frames.json",
+    "observedVisuals": "修复型胸部四联炮+绿装甲正面；修复型格纳库俯视+下方两名乘员；修复型格纳库仰视+乘员（终帧）",
+    "verifiedBy": "zcode-main-agent-native-vision(qwen3.8-flash)+账本",
+    "verifiedAt": "2026-09-07T07:27:20+00:00"
+   },
+   "reason": "结语：时代终幕的注脚（编辑表达）",
+   "evidenceRefs": [
+    "G3-视觉观察账本-v0.1.json#B15",
+    "G2-证据与口播/G2-证据清单-v0.1.json#B15"
+   ],
+   "sourceCaptionTreatment": "none_required"
+  }
+ ],
+ "editPlan": {
+  "timeline": [
+   {
+    "segmentId": "seg-01"
+   },
+   {
+    "segmentId": "seg-02"
+   },
+   {
+    "segmentId": "seg-03"
+   },
+   {
+    "segmentId": "seg-04"
+   },
+   {
+    "segmentId": "seg-05"
+   },
+   {
+    "segmentId": "seg-06"
+   },
+   {
+    "segmentId": "seg-07"
+   },
+   {
+    "segmentId": "seg-08a"
+   },
+   {
+    "segmentId": "seg-08b"
+   },
+   {
+    "segmentId": "seg-09"
+   },
+   {
+    "segmentId": "seg-10a"
+   },
+   {
+    "segmentId": "seg-10b"
+   },
+   {
+    "segmentId": "seg-11"
+   },
+   {
+    "segmentId": "seg-12"
+   },
+   {
+    "segmentId": "seg-13"
+   },
+   {
+    "segmentId": "seg-14"
+   },
+   {
+    "segmentId": "seg-15"
+   }
+  ]
+ },
+ "humanReviewPoints": [
+  "G3.3 素材充分性分流（已裁决：选项2 短版）",
+  "G3.6 最终八列回显整体批准（待）"
+ ],
+ "aspectRatioPolicy": "preserve_source",
+ "outputResolution": "640x360（源即 640x360，低清警示已登记）",
+ "bgmRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+ "bgmStatus": {
+  "status": "resolved",
+  "reason": "用户 2026-09-04 重供有效 MP3（44.1kHz 立体声 206.707s，ID3 头，ffmpeg 全文件解码探针通过后经 material_pack register 登记，素材包 v1.2）",
+  "supersededAsset": "82DE220E…77F0（损坏，网易云加密文件暴力改扩展名，发现㉓）",
+  "audioRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+  "phraseSkeletonRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-BGM能量骨架-v0.1.json",
+  "disposition": "整曲铺底：起点淡入2s、口播区间 ducking、成片 155.390s 处淡出收尾；不循环不拉伸；非逐拍卡点（发现⑯）"
+ },
+ "supersedesRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+ "narrationAudioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+ "timelineDurationMs": 155390,
+ "timelineReview": {
+  "status": "confirmed",
+  "confirmedBy": "user",
+  "confirmedAt": "2026-09-07T07:34:32+00:00",
+  "feedback": "确定（对 G3 v0.3 八列回显的语义级批准，2026-09-04）",
+  "basisRefs": [
+   "工作台/kshatriya-intro-001/G3-剪辑计划/G3-回显数据-v0.3-final.json",
+   "工作台/kshatriya-intro-001/G3-剪辑计划/G3-旁白时间码-longtian-v0.3.json",
+   "工作台/kshatriya-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json"
+  ]
+ },
+ "g3Approval": {
+  "approvedBy": "user",
+  "approvedAt": "2026-09-07T07:34:32+00:00",
+  "approvalRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-审核批准记录-v0.3.md",
+  "userUtterance": "确定",
+  "basisRefs": [
+   "工作台/kshatriya-intro-001/G3-剪辑计划/G3-回显数据-v0.3-final.json",
+   "工作台/kshatriya-intro-001/G3-剪辑计划/G3-审核批准记录-v0.3.md"
+  ]
+ }
+}

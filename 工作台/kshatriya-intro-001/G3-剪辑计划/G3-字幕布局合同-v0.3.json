@@ -1,0 +1,15 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G3",
+ "projectId": "kshatriya-intro-001",
+ "lanes": {
+  "narration": {
+   "zone": "70-84% height, MarginV=58px on 360p",
+   "maxLines": 2,
+   "fontsize": 14
+  }
+ },
+ "assFile": "G3-字幕时间轴-v0.3.ass",
+ "srtFile": "G3-字幕时间轴-v0.3.srt",
+ "note": "按发现㉖直接生成合规版：字号14+语义断行，全部cue≤两行；源无烧录字幕"
+}

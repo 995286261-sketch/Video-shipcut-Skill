@@ -1,0 +1,99 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "kshatriya-intro-001",
+ "node": "G2",
+ "status": "approved_for_g3",
+ "decidedAt": "2026-09-07T15:15:35+08:00",
+ "userApprovalUtterance": "试听对比后：\"就用这个龙天吧\"（2026-09-04，声音裁决=G2 语义级批准）",
+ "judgementNote": "语义级批准（节点+动作明确），同 G1 口径；字符级严格校验待 harness 化（观察点③）",
+ "factDecision": {
+  "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.1.json#factDecision",
+  "mode": "conservative",
+  "statement": "保守创作：仅使用已登记且可追溯的资料。网络检索快照（素材包 v1.1，URL+检索时间留档）为唯一事实来源，且按'仅本项目确认'口径引用；C-01..C-12 获准进入口播；C-13（原始形态精确参数）、C-14（命名种姓由来）无来源，成片不得出现。",
+  "excluded": [
+   "转写文本（机器草稿、低置信、原片音频）不得作为事实来源",
+   "官方一手事实声明（不得把百科快照升级为官方口径）"
+  ]
+ },
+ "approvedNarration": {
+  "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+  "version": "v0.1",
+  "sentences": 16,
+  "estimatedDurationSec": [
+   110,
+   140
+  ],
+  "durationConflictFlaggedForG3": true
+ },
+ "voiceDecision": {
+  "ref": "工作台/kshatriya-intro-001/G2-证据与口播/配音试听-神经TTS/longtian_v3-S01.wav",
+  "language": "zh",
+  "accent": "标准普通话（中国大陆）",
+  "voiceType": "男声（百炼 CosyVoice longtian_v3 龙天·磁性理智男）",
+  "model": "cosyvoice-v3-flash（bl speech synthesize，逐句生成，wav 44100Hz 单声道）",
+  "rate": "默认（实测全片 149.79s 纯语音，较婷婷短 20.0s）",
+  "sourceStatus": "百炼 API 合成（账号计费）；产物随片仅限内部测试",
+  "usageScope": "内部演示口径；外发前须确认 CosyVoice 产物许可条款",
+  "supersededVoice": {
+   "voice": "Tingting（macOS 系统 TTS）",
+   "reason": "用户人工 QA：人机感一票否决（发现㉘）；系统 TTS 按质量补丁仅预览级"
+  },
+  "rejectedOptions": [
+   {
+    "voice": "Eddy/Grandpa (zh_CN)",
+    "reason": "ASR 回环验证仅读出'666'，中文整句被静默跳过——英文默认音回退，不可用",
+    "evidence": "发现⑪：配音试听应机器化 ASR 回环自检"
+   }
+  ]
+ },
+ "audioPolicyInherited": {
+  "bgm": "工作台/kshatriya-intro-001/G0-素材包/07_授权音频/Lonely Lies,GOLDKID$ - Interlinked.mp3",
+  "bgmDecision": "provided",
+  "sourceAudio": "excluded",
+  "distribution": "not_for_distribution"
+ },
+ "approvedNarrationRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+ "factCitationRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+ "voiceBriefRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+ "permittedFactIds": [
+  "C-01",
+  "C-02",
+  "C-03",
+  "C-04",
+  "C-05",
+  "C-06",
+  "C-07",
+  "C-08",
+  "C-09",
+  "C-10",
+  "C-11",
+  "C-12"
+ ],
+ "prohibitedTopics": [
+  "现实政治映射",
+  "未证实设定",
+  "机体性能数字未经核实的来源"
+ ],
+ "userManuallyVerifiedClaims": [],
+ "provenanceRule": "permitted facts are second-party web snapshots, not first-party official verification",
+ "supersededDraftRefs": [
+  "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.1.md"
+ ],
+ "shortVersionDecision": {
+  "trigger": "G3.3 素材充分性分流（修复型画面仅12.8s）",
+  "userChoice": "选项2 缩短口播",
+  "userUtterance": "2",
+  "date": "2026-09-04",
+  "changes": "S13+S14合并为新S13；S16回调枚举删除保留注脚为新S15；S01–S12与原S15逐字保留"
+ },
+ "approvedNarrationAudioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+ "narrationTimecodeRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-旁白时间码-v0.3.json",
+ "supersededDecisionRefs": [
+  "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.1.json"
+ ],
+ "voiceChangeNote": {
+  "trigger": "G4 预览用户反馈（发现㉘）",
+  "reworkRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-声音变更说明-v0.2.md",
+  "textUnchanged": true
+ }
+}
