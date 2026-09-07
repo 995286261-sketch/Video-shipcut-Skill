@@ -1,0 +1,100 @@
+{
+  "projectId": "kshatriya-intro-001",
+  "schemaVersion": "0.1",
+  "planRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-01"
+      },
+      {
+        "segmentId": "seg-02"
+      },
+      {
+        "segmentId": "seg-03"
+      },
+      {
+        "segmentId": "seg-04"
+      },
+      {
+        "segmentId": "seg-05"
+      },
+      {
+        "segmentId": "seg-06"
+      },
+      {
+        "segmentId": "seg-07"
+      },
+      {
+        "segmentId": "seg-08a"
+      },
+      {
+        "segmentId": "seg-08b"
+      },
+      {
+        "segmentId": "seg-09"
+      },
+      {
+        "segmentId": "seg-10a"
+      },
+      {
+        "segmentId": "seg-10b"
+      },
+      {
+        "segmentId": "seg-11"
+      },
+      {
+        "segmentId": "seg-12"
+      },
+      {
+        "segmentId": "seg-13"
+      },
+      {
+        "segmentId": "seg-14"
+      },
+      {
+        "segmentId": "seg-15"
+      }
+    ]
+  },
+  "sourceAudioPolicy": "exclude",
+  "durationDecision": {
+    "targetDurationSec": 155.4,
+    "narrationEstimatedDurationSec": 155.39,
+    "resolution": "follow_narration_natural_duration",
+    "decisionReason": "声音变更（发现㉘）：龙天实测 155.390s，短于婷婷 169.835s；画面全部按新拍长裁短，无扩源无填充",
+    "intentionalSilence": [],
+    "antiFillRule": {
+      "disallowRepeatedSegments": true,
+      "disallowLoops": true,
+      "disallowMeaninglessSlowMotion": true,
+      "disallowUnverifiedFactPadding": true
+    }
+  },
+  "aspectRatioPolicy": "preserve_source",
+  "outputResolution": "640x360（源即 640x360，低清警示已登记）",
+  "narrationAudioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+  "bgmRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+  "bgmStatus": {
+    "status": "resolved",
+    "reason": "用户 2026-09-04 重供有效 MP3（44.1kHz 立体声 206.707s，ID3 头，ffmpeg 全文件解码探针通过后经 material_pack register 登记，素材包 v1.2）",
+    "supersededAsset": "82DE220E…77F0（损坏，网易云加密文件暴力改扩展名，发现㉓）",
+    "audioRef": "G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+    "phraseSkeletonRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-BGM能量骨架-v0.1.json",
+    "disposition": "整曲铺底：起点淡入2s、口播区间 ducking、成片 155.390s 处淡出收尾；不循环不拉伸；非逐拍卡点（发现⑯）"
+  },
+  "subtitleRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.3.srt",
+  "coverRef": "工作台/kshatriya-intro-001/G4-剪辑与渲染/cover/cover-final.png",
+  "humanReviewPoints": [
+    "G3.3 素材充分性分流（已裁决：选项2 短版）",
+    "G3.6 最终八列回显整体批准（待）"
+  ],
+  "evidenceRefs": [
+    "工作台/kshatriya-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/kshatriya-intro-001/G3-剪辑计划/G3-回显数据-v0.3-final.json"
+  ],
+  "warnings": [
+    "low_resolution_source: 640x360",
+    "not_for_distribution: personal-subscription BGM and internal-test authorization"
+  ]
+}

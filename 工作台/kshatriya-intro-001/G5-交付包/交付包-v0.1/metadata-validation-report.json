@@ -1,0 +1,130 @@
+{
+  "projectId": "kshatriya-intro-001",
+  "schemaVersion": "0.1",
+  "status": "g5_pending_human_review",
+  "finishedAt": null,
+  "checks": {
+    "decode": {
+      "status": "pass"
+    },
+    "videoCodec": {
+      "status": "pass"
+    },
+    "dimensions": {
+      "status": "pass"
+    },
+    "fps": {
+      "status": "pass"
+    },
+    "audio": {
+      "status": "pass"
+    },
+    "duration": {
+      "status": "warning",
+      "targetMs": 155390,
+      "actualMs": 155458,
+      "deltaMs": 68,
+      "reason": "24fps frame rounding"
+    },
+    "blackFrames": {
+      "status": "warning",
+      "result": "not_run_as_detector",
+      "note": "No black-frame interval detector is installed in the project runtime; visual opening/middle/ending frames were reviewed."
+    },
+    "silence": {
+      "status": "warning",
+      "result": "not_run_as_detector",
+      "note": "No silence interval detector was promoted to a pass; audio was spot-checked and full decode passed."
+    },
+    "duplicateSegments": {
+      "status": "warning",
+      "result": "not_run_as_detector",
+      "note": "No duplicate-frame detector was promoted to a pass; source ranges are non-overlapping per G3 validator."
+    },
+    "cover": {
+      "status": "pass"
+    },
+    "subtitleSync": {
+      "status": "pass",
+      "note": "15 approved cues cover actual narration sentence timings; caption frame checked at 1:10."
+    },
+    "humanReview": {
+      "status": "pending",
+      "required": [
+        "full_playback",
+        "burned_source_subtitle_residue",
+        "subtitle_safe_area",
+        "narration_picture_sync",
+        "key_shots",
+        "opening",
+        "outro",
+        "audio_mix",
+        "voice_profile",
+        "authorization_boundary"
+      ]
+    }
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 640,
+        "height": 360,
+        "r_frame_rate": "24/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "155.458333"
+    }
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "7882CD5CC5C1D0E3CCB73CEDDE5D636246A09EE83271AE103D759CE0495F9913"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "BFEF4C45B7B351A90D03B448BE700DAFAE7787E4B367EC9C4CC7684095E58021"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "0DAEA187B8D04F640A39AFBBBB06EC8C0405E9371884252E4099C112A6B89D18"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/chapter-01.mp4",
+        "sha256": "5AE61F41991D8AD41A7CC8CF299CEEBEEBDFC9BD83EB191EAE43B9793F3852EE"
+      },
+      {
+        "path": "clips/chapter-02.mp4",
+        "sha256": "CEB97B7E497943D20BDA471D667AEB343B87FA5EFDBFBC36D43B91F7D9EE9F8B"
+      },
+      {
+        "path": "clips/chapter-03.mp4",
+        "sha256": "F49BC59EFA4852F838315B0F0DECDA4AA0719A7FA3F5646D03B7C7BEE8F3A3FB"
+      },
+      {
+        "path": "clips/chapter-04.mp4",
+        "sha256": "27C718FFF3129729A2F0E4ED70D80637236126D671D0B4A668747E7F307C9127"
+      }
+    ]
+  },
+  "warnings": [
+    "duration_delta: actual 155458ms vs timeline 155390ms (+68ms frame rounding)",
+    "low_resolution_source: 640x360",
+    "not_for_distribution: internal_test and personal-subscription BGM",
+    "detector_limitations: blackFrames/silence/duplicateSegments were not promoted to automatic pass"
+  ],
+  "manualReviewStatus": "pending",
+  "humanReviewRef": "human-review-decision.json"
+}

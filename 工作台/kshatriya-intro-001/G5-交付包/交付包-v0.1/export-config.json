@@ -1,0 +1,37 @@
+{
+  "projectId": "kshatriya-intro-001",
+  "platform": "not_specified",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "video": {
+    "codec": "h264",
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "durationTargetMs": 155390,
+    "durationActualMs": 155458,
+    "durationDeltaMs": 68
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": 44100,
+    "channels": 2,
+    "sourceAudio": "excluded",
+    "narration": "cosyvoice longtian_v3",
+    "bgm": "Interlinked v1.2; ducked during narration; personal subscription internal-only"
+  },
+  "subtitles": {
+    "format": "srt reference + fixed_bottom_band ASS burned in",
+    "safeArea": "70-84%",
+    "maxLines": 2
+  },
+  "cover": {
+    "format": "jpg",
+    "dimensions": "640x360",
+    "source": "approved X-wing representative frame + title mask"
+  },
+  "notes": [
+    "Actual duration differs from narration timeline by 68ms due to 24fps frame rounding.",
+    "CosyVoice output license and BGM personal-subscription terms prohibit external distribution until separately confirmed."
+  ]
+}

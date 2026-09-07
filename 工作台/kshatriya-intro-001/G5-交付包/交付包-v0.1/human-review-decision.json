@@ -1,0 +1,18 @@
+{
+  "projectId": "kshatriya-intro-001",
+  "status": "pending",
+  "decision": "pending",
+  "acceptedWarnings": [],
+  "requiredChecks": [
+    "full_playback",
+    "burned_source_subtitle_residue",
+    "subtitle_safe_area",
+    "narration_picture_sync",
+    "key_shots",
+    "opening",
+    "outro",
+    "audio_mix",
+    "voice_profile",
+    "authorization_boundary"
+  ]
+}
