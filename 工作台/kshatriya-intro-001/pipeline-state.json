@@ -4,7 +4,7 @@
   "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
   "authorization": "internal_test",
   "distribution": "not_for_distribution",
-  "currentNode": "G2",
+  "currentNode": "G3",
   "status": "in_progress",
   "nodes": {
     "G0": {
@@ -34,14 +34,30 @@
       }
     },
     "G2": {
-      "status": "in_progress",
-      "inputRefs": [],
-      "artifactRefs": [],
-      "humanReviewPoints": [],
-      "approval": null
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/source-02-nz-666-vol-2-969a57c3-transcript.json"
+      ],
+      "humanReviewPoints": [
+        "G2 \u56db\u7ec4\u5361\u5df2\u56de\u663e\uff1a\u4e8b\u5b9e\u5904\u7406=\u4fdd\u5b88\u521b\u4f5c\u3001\u53e3\u64ad\u65b9\u5411=\u6218\u4e89\u8f68\u8ff9\u3001\u97f3\u9891\u6cbf\u7528\u3001\u914d\u97f3\u8bd5\u542c\u4e09\u9009\u4e00\uff08Eddy\u88abASR\u56de\u73af\u5426\u51b3\uff0cTingting \u83b7\u9009\uff09\uff1b\u8349\u684816\u53e5\u65e0\u6539\u52a8\uff1b\u7b49\u5f85\u5e76\u5df2\u83b7\u5f97\u7528\u6237\u6279\u51c6"
+      ],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+        "approvedAt": "2026-09-07T05:21:39Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+        "factDecisionRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+        "voiceDecisionRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/voice-audition-tingting.mp3"
+      }
     },
     "G3": {
-      "status": "pending",
+      "status": "in_progress",
       "inputRefs": [],
       "artifactRefs": [],
       "humanReviewPoints": [],
@@ -63,7 +79,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Prepare evidence, narration, and fact review.",
+  "nextAction": "Prepare timecoded edit plan and request user review.",
   "createdAt": "2026-09-07T03:17:59Z",
-  "updatedAt": "2026-09-07T03:51:33Z"
+  "updatedAt": "2026-09-07T05:21:39Z"
 }

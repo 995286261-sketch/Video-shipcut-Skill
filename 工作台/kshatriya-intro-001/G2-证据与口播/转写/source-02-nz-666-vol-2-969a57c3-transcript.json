@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-nz-666-vol-2-969a57c3",
+    "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/kshatriya-intro-001/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 281650,
+      "endMs": 283470,
+      "text": "六六六クシャトリア",
+      "words": [
+        {
+          "startMs": 281650,
+          "endMs": 281950,
+          "text": "六",
+          "probability": 0.029761850833892822
+        },
+        {
+          "startMs": 281950,
+          "endMs": 282310,
+          "text": "六",
+          "probability": 0.8635967373847961
+        },
+        {
+          "startMs": 282310,
+          "endMs": 282550,
+          "text": "六",
+          "probability": 0.9595449566841125
+        },
+        {
+          "startMs": 282550,
+          "endMs": 282830,
+          "text": "ク",
+          "probability": 0.018626619130373
+        },
+        {
+          "startMs": 282830,
+          "endMs": 282950,
+          "text": "シ",
+          "probability": 0.724561333656311
+        },
+        {
+          "startMs": 282950,
+          "endMs": 283050,
+          "text": "ャ",
+          "probability": 0.9799022674560547
+        },
+        {
+          "startMs": 283050,
+          "endMs": 283190,
+          "text": "ト",
+          "probability": 0.9704069495201111
+        },
+        {
+          "startMs": 283190,
+          "endMs": 283310,
+          "text": "リ",
+          "probability": 0.9961907863616943
+        },
+        {
+          "startMs": 283310,
+          "endMs": 283470,
+          "text": "ア",
+          "probability": 0.9794602394104004
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0002",
+      "startMs": 283870,
+      "endMs": 285030,
+      "text": "形式番号からして",
+      "words": [
+        {
+          "startMs": 283870,
+          "endMs": 284170,
+          "text": "形",
+          "probability": 0.3772200644016266
+        },
+        {
+          "startMs": 284170,
+          "endMs": 284350,
+          "text": "式",
+          "probability": 0.9974853992462158
+        },
+        {
+          "startMs": 284350,
+          "endMs": 284530,
+          "text": "番",
+          "probability": 0.39971327781677246
+        },
+        {
+          "startMs": 284530,
+          "endMs": 284670,
+          "text": "号",
+          "probability": 0.9909672141075134
+        },
+        {
+          "startMs": 284670,
+          "endMs": 284850,
+          "text": "から",
+          "probability": 0.10908837616443634
+        },
+        {
+          "startMs": 284850,
+          "endMs": 285030,
+          "text": "して",
+          "probability": 0.8283464312553406
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0003",
+      "startMs": 285030,
+      "endMs": 286610,
+      "text": "ネオジオン原算でしょ",
+      "words": [
+        {
+          "startMs": 285030,
+          "endMs": 285610,
+          "text": "ネ",
+          "probability": 0.8027023375034332
+        },
+        {
+          "startMs": 285610,
+          "endMs": 285750,
+          "text": "オ",
+          "probability": 0.9765986204147339
+        },
+        {
+          "startMs": 285750,
+          "endMs": 285890,
+          "text": "ジ",
+          "probability": 0.9870818853378296
+        },
+        {
+          "startMs": 285890,
+          "endMs": 286010,
+          "text": "オ",
+          "probability": 0.961707353591919
+        },
+        {
+          "startMs": 286010,
+          "endMs": 286070,
+          "text": "ン",
+          "probability": 0.9782727956771851
+        },
+        {
+          "startMs": 286070,
+          "endMs": 286210,
+          "text": "原",
+          "probability": 0.14595496654510498
+        },
+        {
+          "startMs": 286210,
+          "endMs": 286370,
+          "text": "算",
+          "probability": 0.5767162442207336
+        },
+        {
+          "startMs": 286370,
+          "endMs": 286510,
+          "text": "で",
+          "probability": 0.3734491169452667
+        },
+        {
+          "startMs": 286510,
+          "endMs": 286610,
+          "text": "しょ",
+          "probability": 0.9698470830917358
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-07T04:04:16.091158Z"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-001",
+  "node": "G2",
+  "status": "approved",
+  "decidedAt": "2026-09-07T13:20:00+08:00",
+  "userApprovalUtterance": "那就用婷婷好了……可以确定 G2 了（草案无改动）",
+  "judgementNote": "语义级批准（节点+动作明确），同 G1 口径；字符级严格校验待 harness 化（观察点③）",
+  "factDecision": {
+    "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.1.json#factDecision",
+    "mode": "conservative",
+    "statement": "保守创作：仅使用已登记且可追溯的资料。网络检索快照（素材包 v1.1，URL+检索时间留档）为唯一事实来源，且按'仅本项目确认'口径引用；C-01..C-12 获准进入口播；C-13（原始形态精确参数）、C-14（命名种姓由来）无来源，成片不得出现。",
+    "excluded": ["转写文本（机器草稿、低置信、原片音频）不得作为事实来源", "官方一手事实声明（不得把百科快照升级为官方口径）"]
+  },
+  "approvedNarration": {
+    "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+    "version": "v0.1",
+    "sentences": 16,
+    "estimatedDurationSec": [110, 140],
+    "durationConflictFlaggedForG3": true
+  },
+  "voiceDecision": {
+    "ref": "工作台/kshatriya-intro-001/G2-证据与口播/配音试听/voice-audition-tingting.mp3",
+    "language": "zh",
+    "accent": "标准普通话（中国大陆）",
+    "voiceType": "女声（macOS 系统语音 Tingting/婷婷）",
+    "rate": "默认（say 标准语速，试听 5.7s 整句清晰）",
+    "sourceStatus": "本机离线系统语音，已安装可用",
+    "usageScope": "内部演示口径（README：系统 TTS 不代表真人配音，正式对外须换已授权专业配音）",
+    "rejectedOptions": [
+      {"voice": "Eddy/Grandpa (zh_CN)", "reason": "ASR 回环验证仅读出'666'，中文整句被静默跳过——英文默认音回退，不可用", "evidence": "发现⑪：配音试听应机器化 ASR 回环自检"}
+    ]
+  },
+  "audioPolicyInherited": {
+    "bgm": "工作台/kshatriya-intro-001/G0-素材包/07_授权音频/Lonely Lies,GOLDKID$ - Interlinked.mp3",
+    "bgmDecision": "provided",
+    "sourceAudio": "excluded",
+    "distribution": "not_for_distribution"
+  }
+}

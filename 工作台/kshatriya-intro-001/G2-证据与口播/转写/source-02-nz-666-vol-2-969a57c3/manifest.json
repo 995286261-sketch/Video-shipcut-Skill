@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1",
+  "status": "completed",
+  "input": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/source-02-nz-666-vol-2-969a57c3-transcript.json",
+  "artifacts": {
+    "srt": "transcript.srt",
+    "txt": "transcript.txt"
+  },
+  "segments": 3,
+  "validation": {
+    "passed": true,
+    "timestampsMonotonic": true,
+    "timestampsNonOverlapping": true,
+    "txtMatchesSrt": true,
+    "lastTimestampMs": 286610
+  },
+  "warning": "Machine transcription draft. Verify names, specialist terms, and factual claims before use."
+}
