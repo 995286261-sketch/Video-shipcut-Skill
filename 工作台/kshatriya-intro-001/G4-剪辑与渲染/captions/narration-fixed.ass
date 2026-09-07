@@ -1,0 +1,28 @@
+[Script Info]
+Title: kshatriya-intro-001 G3 narration captions
+ScriptType: v4.00+
+PlayResX: 640
+PlayResY: 360
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: NarrMain,PingFang SC,20,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,1,0,2,20,20,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:09.69,NarrMain,,0,0,0,,U.C.0096，新吉翁残党"带袖的"的战场上，出现了一台顶着四片肩甲重翼的巨大机体。
+Dialogue: 0,0:00:10.09,0:00:15.42,NarrMain,,0,0,0,,它的编号是 NZ-666，名字叫做——刹帝利。
+Dialogue: 0,0:00:15.82,0:00:30.59,NarrMain,,0,0,0,,从 NZ 开头的番号就能看出它的血脉：它是在第一次新吉翁战争时期投入实战的 NZ-000 昆曼沙的基础上发展而来的 NT 用机体。
+Dialogue: 0,0:00:30.99,0:00:39.80,NarrMain,,0,0,0,,设计之初，工程师定下了一个明确的目标：保持同等规格的武装和性能，把机体做得更小。
+Dialogue: 0,0:00:40.20,0:00:52.16,NarrMain,,0,0,0,,塞可缪骨架与纳米技术的结合，让驾驶舱被直接安置在躯干的核心位置——离驾驶者更近，就能以更低耗量接收并传输脑电波。
+Dialogue: 0,0:00:52.56,0:01:10.56,NarrMain,,0,0,0,,它的部分核心元件，包括精神感应框架，源自 0094 年"带袖的"从阿纳海姆电子公司手中夺走的试作机体；最终，这台 NT 专用重 MS 的全高被控制在了二十米左右。
+Dialogue: 0,0:01:10.96,0:01:28.32,NarrMain,,0,0,0,,最醒目的是四片多用途夹舱肩甲：内藏六枚新型浮游炮与可正反向射击的 MEGA 粒子炮，翼段藏着内藏光束剑的机械臂，还搭载着 I 力场发生器——肩甲本身就是挡实弹的盾牌。
+Dialogue: 0,0:01:28.72,0:01:42.69,NarrMain,,0,0,0,,胸口是四门可集束射击的 MEGA 粒子炮与用于牵制的二连装实弹连射炮，双手装备专用光束加特林，腕内光束剑收拢时也能充作光束发射器。
+Dialogue: 0,0:01:43.09,0:01:49.72,NarrMain,,0,0,0,,作为阿纳海姆的产品，通用接口甚至让它可以使用一部分联邦军的武器。
+Dialogue: 0,0:01:50.12,0:02:01.84,NarrMain,,0,0,0,,驾驶它的是强化人玛莉妲·库鲁斯——普露十二号，"带袖的"葛兰雪队的王牌；她几乎面无表情，却称呼队长辛尼曼为"主人"。
+Dialogue: 0,0:02:02.24,0:02:10.87,NarrMain,,0,0,0,,投入实战后，这台"四片翅膀的家伙"给联邦军造成了极大的损失——连对手都记住了它的外形。
+Dialogue: 0,0:02:11.27,0:02:22.59,NarrMain,,0,0,0,,转折发生在与巴纳吉·林克斯驾驶的 RX-0 独角兽高达的交战之后：刹帝利遭到重创，最终被联邦军回收。
+Dialogue: 0,0:02:22.99,0:02:30.65,NarrMain,,0,0,0,,在拟·亚加玛上，它被修复重生：四翼只剩其一，推进器与武装全面换装。
+Dialogue: 0,0:02:31.05,0:02:45.57,NarrMain,,0,0,0,,拉普拉斯之争的最后阶段，为了掩护全装甲独角兽，玛莉妲驾驶残破的修复型再次出击，在与报丧女妖·命运女神的缠斗中被击破，玛莉妲阵亡。
+Dialogue: 0,0:02:45.97,0:02:49.83,NarrMain,,0,0,0,,刹帝利的存在，像是一个时代终幕的注脚。

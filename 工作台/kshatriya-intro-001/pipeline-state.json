@@ -5,7 +5,7 @@
   "authorization": "internal_test",
   "distribution": "not_for_distribution",
   "currentNode": "G4",
-  "status": "in_progress",
+  "status": "review_required",
   "nodes": {
     "G0": {
       "status": "completed",
@@ -69,10 +69,26 @@
       }
     },
     "G4": {
-      "status": "in_progress",
-      "inputRefs": [],
-      "artifactRefs": [],
-      "humanReviewPoints": [],
+      "status": "review_required",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5b8c\u6574\u53e3\u64ad-tingting-v0.2.wav",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/Lonely Lies; GOLDKID$ - Interlinked.mp3"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.2.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/clean-segments",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/work/clean-master.mp4",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/narration",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/audio",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/captions",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/cover-final.png",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-intro-001-candidate-v0.1.mp4",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa"
+      ],
+      "humanReviewPoints": [
+        "G4 \u5019\u9009\u6210\u7247\u9884\u89c8\u786e\u8ba4\uff08\u672c\u5730\u76f4\u63a5\u6210\u7247\uff0c\u9009\u98791\uff09"
+      ],
       "approval": null
     },
     "G5": {
@@ -84,7 +100,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Build and validate local candidate; use ChatCut only if micro-adjustment is requested.",
+  "nextAction": "Resolve the listed review or blocker items.",
   "createdAt": "2026-09-07T03:17:59Z",
-  "updatedAt": "2026-09-07T06:18:18Z"
+  "updatedAt": "2026-09-07T06:55:40Z"
 }
