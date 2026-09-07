@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "candidates": [
+    {
+      "frameRef": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-005-0000060000ms.jpg",
+      "why": "四翼X展开+光束剑，最标志性"
+    },
+    {
+      "frameRef": "G3-剪辑计划/加密关键帧/关键帧/dense-0000005000ms.jpg",
+      "why": "KSHATRIYA 屏显点名画面"
+    },
+    {
+      "frameRef": "G3-剪辑计划/全片粗扫/probe-283000.jpg",
+      "why": "修复形态格纳库正面"
+    }
+  ],
+  "constraints": "无源字幕/台标；640×360 低清警示已登记"
+}

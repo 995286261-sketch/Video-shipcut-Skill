@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "kshatriya-intro-001",
+  "derivedFromLedger": "G3-视觉观察账本-v0.1.json",
+  "reusedVisionCalls": 0,
+  "entries": [
+    {
+      "slotId": "slot-B01",
+      "candidateId": "cand-01",
+      "sourceRange": "70000–79694",
+      "observedVisuals": "vf-006@75s 四翼飞行全身+光束剑",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B02",
+      "candidateId": "cand-02",
+      "sourceRange": "2500–7832",
+      "observedVisuals": "dense-5000 KSHATRIYA屏显+登录画面",
+      "semanticConclusion": "direct_match",
+      "risk": "屏显英文为原片内容"
+    },
+    {
+      "slotId": "slot-B03",
+      "candidateId": "cand-03",
+      "sourceRange": "8000–22764",
+      "observedVisuals": "dense-10000/13000 格纳库全身站姿+vf-002 正面",
+      "semanticConclusion": "direct_match(谱系用字卡替代)",
+      "risk": "布景文字"
+    },
+    {
+      "slotId": "slot-B04",
+      "candidateId": "cand-04",
+      "sourceRange": "40000–48813",
+      "observedVisuals": "vf-004@45s MEGA粒子环+开火全身",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B05",
+      "candidateId": "cand-05",
+      "sourceRange": "99000–110960",
+      "observedVisuals": "vf-008@105s 躯干粉色精神感应骨架光",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B06",
+      "candidateId": "cand-06",
+      "sourceRange": "115000–132998",
+      "observedVisuals": "vf-009@120s 远景四翼全身",
+      "semanticConclusion": "partial(全高20米用参照字卡)",
+      "risk": "低分辨率"
+    },
+    {
+      "slotId": "slot-B07",
+      "candidateId": "cand-07",
+      "sourceRange": "85000–102362",
+      "observedVisuals": "vf-007@90s 肩甲炮口特写",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B08",
+      "candidateId": "cand-08",
+      "sourceRange": "55500–69469",
+      "observedVisuals": "probe-57000 光束加特林特写+vf-005@60s X翼",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B09",
+      "candidateId": "cand-09",
+      "sourceRange": "175000–181634",
+      "observedVisuals": "vf-013@180s 肩甲MEGA开火",
+      "semanticConclusion": "direct_match(通用接口用字卡替代)",
+      "risk": "混合主体"
+    },
+    {
+      "slotId": "slot-B10",
+      "candidateId": "cand-10a",
+      "sourceRange": "0–2500",
+      "observedVisuals": "probe-1500 玛莉妲正面特写(驾驶舱)",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B10",
+      "candidateId": "cand-10b",
+      "sourceRange": "111000–120220",
+      "observedVisuals": "probe-112000/116000 吉姆被斩/被贯穿",
+      "semanticConclusion": "direct_match(王牌战绩)",
+      "risk": "混合主体"
+    },
+    {
+      "slotId": "slot-B11",
+      "candidateId": "cand-11",
+      "sourceRange": "122000–130629",
+      "observedVisuals": "vf-009 段 光束网压制",
+      "semanticConclusion": "direct_match",
+      "risk": "无"
+    },
+    {
+      "slotId": "slot-B12",
+      "candidateId": "cand-12",
+      "sourceRange": "160000–171318",
+      "observedVisuals": "vf-012@165s 独角兽毁灭模式+刹帝利翼段",
+      "semanticConclusion": "direct_match",
+      "risk": "混合主体"
+    },
+    {
+      "slotId": "slot-B13",
+      "candidateId": "cand-13",
+      "sourceRange": "274000–286812",
+      "observedVisuals": "probe-277000 拟·亚加玛+格纳库修复形态特写",
+      "semanticConclusion": "缺口：需14150ms仅12812ms",
+      "risk": "低分辨率"
+    },
+    {
+      "slotId": "slot-B14",
+      "candidateId": "cand-14",
+      "sourceRange": "—",
+      "observedVisuals": "修复型武器（光束戟/浮游导弹/腿部加特林）无画面",
+      "semanticConclusion": "semantic_mismatch：无直接证据",
+      "risk": "缺口"
+    },
+    {
+      "slotId": "slot-B15",
+      "candidateId": "cand-15a",
+      "sourceRange": "255000–269526",
+      "observedVisuals": "vf-018@255s 独角兽突入+264–269 近身缠斗",
+      "semanticConclusion": "direct_match",
+      "risk": "混合主体"
+    },
+    {
+      "slotId": "slot-B15",
+      "candidateId": "cand-15b",
+      "sourceRange": "270000–272662",
+      "observedVisuals": "probe-271000 远景绿色机体红色爆光(被击破)",
+      "semanticConclusion": "direct_match",
+      "risk": "低分辨率"
+    },
+    {
+      "slotId": "slot-B16",
+      "candidateId": "cand-16",
+      "sourceRange": "—",
+      "observedVisuals": "结语需11014ms留白镜头，尾部素材已被B13占用",
+      "semanticConclusion": "缺口",
+      "risk": "缺口"
+    }
+  ]
+}

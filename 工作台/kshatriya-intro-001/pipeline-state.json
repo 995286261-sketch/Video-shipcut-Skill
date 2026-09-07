@@ -4,7 +4,7 @@
   "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
   "authorization": "internal_test",
   "distribution": "not_for_distribution",
-  "currentNode": "G3",
+  "currentNode": "G4",
   "status": "in_progress",
   "nodes": {
     "G0": {
@@ -57,14 +57,19 @@
       }
     },
     "G3": {
-      "status": "in_progress",
+      "status": "completed",
       "inputRefs": [],
       "artifactRefs": [],
       "humanReviewPoints": [],
-      "approval": null
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6838\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+        "approvedAt": "2026-09-07T06:18:18Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.2-final.json"
+      }
     },
     "G4": {
-      "status": "pending",
+      "status": "in_progress",
       "inputRefs": [],
       "artifactRefs": [],
       "humanReviewPoints": [],
@@ -79,7 +84,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Prepare timecoded edit plan and request user review.",
+  "nextAction": "Build and validate local candidate; use ChatCut only if micro-adjustment is requested.",
   "createdAt": "2026-09-07T03:17:59Z",
-  "updatedAt": "2026-09-07T05:21:39Z"
+  "updatedAt": "2026-09-07T06:18:18Z"
 }

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "kshatriya-intro-001",
+  "derivedFromLedger": "G3-视觉观察账本-v0.1.json",
+  "reusedVisionCalls": 0,
+  "entries": [
+    {
+      "frameId": "vf-002",
+      "sourceMs": 15000,
+      "text": "…ia Ca…（背景布景拉丁字母，不完整）",
+      "kind": "background_prop_text",
+      "usableAsCaption": false,
+      "note": "场景布景文字，不得作为成片字幕素材"
+    },
+    {
+      "frameId": "dense-5000",
+      "sourceMs": 5000,
+      "text": "KSHATRIYA（驾驶舱屏显机体登录名）+ 袖章徽记",
+      "kind": "diegetic_screen_text",
+      "usableAsCaption": false,
+      "note": "原片自带点名画面，可用于 S02 命名节拍，保留原样不叠加中文字幕遮挡"
+    },
+    {
+      "frameId": "dense-13000",
+      "sourceMs": 13000,
+      "text": "…aco Ca…（布景拉丁文字）",
+      "kind": "background_prop_text",
+      "usableAsCaption": false,
+      "note": "布景文字"
+    },
+    {
+      "frameId": "dense-282000",
+      "sourceMs": 282000,
+      "text": "左肩甲白色袖章徽记",
+      "kind": "diegetic_emblem",
+      "usableAsCaption": false,
+      "note": "阵营标识，保留"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "status": "draft",
+  "projectId": "kshatriya-intro-001",
+  "narrationDraft": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+  "narrationDecisionRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.1.json",
+  "timingBasis": "derive_from_rendered_audio：G2-完整口播-tingting-v0.2.wav（ffprobe 169.834739s），句间停顿400ms，ASR 对齐验证 G3-旁白时间码-v0.2.json 边界一致",
+  "interSentenceGapMs": 400,
+  "beats": [
+    {
+      "beatId": "B01",
+      "sourceSentenceId": "S01",
+      "outputStartMs": 0,
+      "outputEndMs": 9694,
+      "narrationText": "U.C.0096，新吉翁残党\"带袖的\"的战场上，出现了一台顶着四片肩甲重翼的巨大机体。",
+      "claim": {
+        "type": "object",
+        "subject": "四肩甲重翼的巨大机体在战场出现",
+        "minimumVisibleEvidence": [
+          "刹帝利四翼全身外形可见",
+          "战场/宇宙空间背景"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "昆曼沙对比画面若存在可替代首镜"
+      ]
+    },
+    {
+      "beatId": "B02",
+      "sourceSentenceId": "S02",
+      "outputStartMs": 10094,
+      "outputEndMs": 15426,
+      "narrationText": "它的编号是 NZ-666，名字叫做——刹帝利。",
+      "claim": {
+        "type": "object",
+        "subject": "点名 NZ-666 刹帝利",
+        "minimumVisibleEvidence": [
+          "刹帝利正面或侧面全身"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "标题字卡叠加于机体画面上"
+      ]
+    },
+    {
+      "beatId": "B03",
+      "sourceSentenceId": "S03",
+      "outputStartMs": 15826,
+      "outputEndMs": 30590,
+      "narrationText": "从 NZ 开头的番号就能看出它的血脉：它是在第一次新吉翁战争时期投入实战的 NZ-000 昆曼沙的基础上发展而来的 NT 用机体。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "由 NZ 番号推出昆曼沙血统（编辑推论+事实C-03）",
+        "minimumVisibleEvidence": [
+          "刹帝利全身；如素材含昆曼沙画面则更佳"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "档案式字卡呈现 NZ-000→NZ-666 谱系"
+      ]
+    },
+    {
+      "beatId": "B04",
+      "sourceSentenceId": "S04",
+      "outputStartMs": 30990,
+      "outputEndMs": 39803,
+      "narrationText": "设计之初，工程师定下了一个明确的目标：保持同等规格的武装和性能，把机体做得更小。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "设计目标：同武装性能下缩小体积（事实C-04）",
+        "minimumVisibleEvidence": [
+          "机体紧凑体型的全景"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "蓝图/设定稿风格字卡"
+      ]
+    },
+    {
+      "beatId": "B05",
+      "sourceSentenceId": "S05",
+      "outputStartMs": 40203,
+      "outputEndMs": 52163,
+      "narrationText": "塞可缪骨架与纳米技术的结合，让驾驶舱被直接安置在躯干的核心位置——离驾驶者更近，就能以更低耗量接收并传输脑电波。",
+      "claim": {
+        "type": "appearance",
+        "subject": "塞可缪骨架与驾驶舱置于躯干核心（事实C-05）",
+        "minimumVisibleEvidence": [
+          "躯干/驾驶舱部位特写或内部结构画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "骨架发光的特写镜头"
+      ]
+    },
+    {
+      "beatId": "B06",
+      "sourceSentenceId": "S06",
+      "outputStartMs": 52563,
+      "outputEndMs": 70561,
+      "narrationText": "它的部分核心元件，包括精神感应框架，源自 0094 年\"带袖的\"从阿纳海姆电子公司手中夺走的试作机体；最终，这台 NT 专用重 MS 的全高被控制在了二十米左右。",
+      "claim": {
+        "type": "appearance",
+        "subject": "核心元件源自被夺试作机；全高约20米（事实C-06/C-07）",
+        "minimumVisibleEvidence": [
+          "机体全身立姿或比例参照画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "浮游炮/精神感应框架元件特写"
+      ]
+    },
+    {
+      "beatId": "B07",
+      "sourceSentenceId": "S07",
+      "outputStartMs": 70961,
+      "outputEndMs": 88323,
+      "narrationText": "最醒目的是四片多用途夹舱肩甲：内藏六枚新型浮游炮与可正反向射击的 MEGA 粒子炮，翼段藏着内藏光束剑的机械臂，还搭载着 I 力场发生器——肩甲本身就是挡实弹的盾牌。",
+      "claim": {
+        "type": "weapon",
+        "subject": "四片多用途夹舱肩甲：浮游炮、MEGA粒子炮、内藏机械臂光束剑、I力场（事实C-08）",
+        "minimumVisibleEvidence": [
+          "肩甲展开特写",
+          "翼段机械臂或光束剑可见"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "肩甲各部件分镜快切"
+      ]
+    },
+    {
+      "beatId": "B08",
+      "sourceSentenceId": "S08",
+      "outputStartMs": 88723,
+      "outputEndMs": 102692,
+      "narrationText": "胸口是四门可集束射击的 MEGA 粒子炮与用于牵制的二连装实弹连射炮，双手装备专用光束加特林，腕内光束剑收拢时也能充作光束发射器。",
+      "claim": {
+        "type": "weapon",
+        "subject": "胸部四门MEGA粒子炮+二连装实弹炮、光束加特林、腕内光束剑（事实C-09）",
+        "minimumVisibleEvidence": [
+          "胸部正面火力全开或炮口特写",
+          "手持加特林射击画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "双臂武器逐一特写"
+      ]
+    },
+    {
+      "beatId": "B09",
+      "sourceSentenceId": "S09",
+      "outputStartMs": 103092,
+      "outputEndMs": 109726,
+      "narrationText": "作为阿纳海姆的产品，通用接口甚至让它可以使用一部分联邦军的武器。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "阿纳海姆通用接口可再用联邦军武器（事实C-10）",
+        "minimumVisibleEvidence": [
+          "机体持有非专属武器的画面若存在"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "通用接口概念字卡"
+      ]
+    },
+    {
+      "beatId": "B10",
+      "sourceSentenceId": "S10",
+      "outputStartMs": 110126,
+      "outputEndMs": 121846,
+      "narrationText": "驾驶它的是强化人玛莉妲·库鲁斯——普露十二号，\"带袖的\"葛兰雪队的王牌；她几乎面无表情，却称呼队长辛尼曼为\"主人\"。",
+      "claim": {
+        "type": "object",
+        "subject": "驾驶员玛莉妲·库鲁斯（普露十二号）、葛兰雪队王牌、称呼辛尼曼为主人（事实C-11/C-12）",
+        "minimumVisibleEvidence": [
+          "驾驶舱内或玛莉妲人物画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "辛尼曼/葛兰雪队同框画面"
+      ]
+    },
+    {
+      "beatId": "B11",
+      "sourceSentenceId": "S11",
+      "outputStartMs": 122246,
+      "outputEndMs": 130875,
+      "narrationText": "投入实战后，这台\"四片翅膀的家伙\"给联邦军造成了极大的损失——连对手都记住了它的外形。",
+      "claim": {
+        "type": "action",
+        "subject": "实战中对联邦军造成极大损失（事实C-13，口径保守）",
+        "minimumVisibleEvidence": [
+          "刹帝利战斗、开火、敌机被击破画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "爆炸与战场混乱镜头组"
+      ]
+    },
+    {
+      "beatId": "B12",
+      "sourceSentenceId": "S12",
+      "outputStartMs": 131275,
+      "outputEndMs": 142593,
+      "narrationText": "转折发生在与巴纳吉·林克斯驾驶的 RX-0 独角兽高达的交战之后：刹帝利遭到重创，最终被联邦军回收。",
+      "claim": {
+        "type": "state_change",
+        "subject": "与独角兽交战后重创、被联邦军回收（事实C-14）",
+        "minimumVisibleEvidence": [
+          "受损机体画面",
+          "独角兽同框（如素材含）"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "破损特写→回收场景"
+      ]
+    },
+    {
+      "beatId": "B13",
+      "sourceSentenceId": "S13",
+      "outputStartMs": 142993,
+      "outputEndMs": 150653,
+      "narrationText": "在拟·亚加玛上，它被修复重生：四翼只剩其一，推进器与武装全面换装。",
+      "claim": {
+        "type": "state_change",
+        "subject": "修复重生：四翼存一+推进与武装换装（事实C-15，C-16并入）",
+        "minimumVisibleEvidence": [
+          "拟·亚加玛/格纳库场景",
+          "修复形态机体可见"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "战舰与机体同框",
+        "格纳库整备仰视"
+      ],
+      "note": "短版合并：原S14武器枚举不再口播"
+    },
+    {
+      "beatId": "B14",
+      "sourceSentenceId": "S14",
+      "outputStartMs": 151053,
+      "outputEndMs": 165579,
+      "narrationText": "拉普拉斯之争的最后阶段，为了掩护全装甲独角兽，玛莉妲驾驶残破的修复型再次出击，在与报丧女妖·命运女神的缠斗中被击破，玛莉妲阵亡。",
+      "claim": {
+        "type": "action",
+        "subject": "最终战缠斗被击破、玛莉妲阵亡（事实C-17/C-18）",
+        "minimumVisibleEvidence": [
+          "最终战缠斗、机体被击破画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "爆光定格+静场处理"
+      ]
+    },
+    {
+      "beatId": "B15",
+      "sourceSentenceId": "S15",
+      "outputStartMs": 165979,
+      "outputEndMs": 169835,
+      "narrationText": "刹帝利的存在，像是一个时代终幕的注脚。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "结语：时代终幕的注脚（编辑表达）",
+        "minimumVisibleEvidence": [
+          "刹帝利剪影/格纳库留白镜头"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "慢放留白+封面式定格"
+      ]
+    }
+  ]
+}

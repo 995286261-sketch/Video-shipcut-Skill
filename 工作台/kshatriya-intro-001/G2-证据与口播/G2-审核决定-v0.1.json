@@ -2,7 +2,7 @@
   "schemaVersion": "0.1",
   "projectId": "kshatriya-intro-001",
   "node": "G2",
-  "status": "approved",
+  "status": "approved_for_g3",
   "decidedAt": "2026-09-07T13:20:00+08:00",
   "userApprovalUtterance": "那就用婷婷好了……可以确定 G2 了（草案无改动）",
   "judgementNote": "语义级批准（节点+动作明确），同 G1 口径；字符级严格校验待 harness 化（观察点③）",
@@ -10,13 +10,19 @@
     "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-审核决定-v0.1.json#factDecision",
     "mode": "conservative",
     "statement": "保守创作：仅使用已登记且可追溯的资料。网络检索快照（素材包 v1.1，URL+检索时间留档）为唯一事实来源，且按'仅本项目确认'口径引用；C-01..C-12 获准进入口播；C-13（原始形态精确参数）、C-14（命名种姓由来）无来源，成片不得出现。",
-    "excluded": ["转写文本（机器草稿、低置信、原片音频）不得作为事实来源", "官方一手事实声明（不得把百科快照升级为官方口径）"]
+    "excluded": [
+      "转写文本（机器草稿、低置信、原片音频）不得作为事实来源",
+      "官方一手事实声明（不得把百科快照升级为官方口径）"
+    ]
   },
   "approvedNarration": {
     "ref": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
     "version": "v0.1",
     "sentences": 16,
-    "estimatedDurationSec": [110, 140],
+    "estimatedDurationSec": [
+      110,
+      140
+    ],
     "durationConflictFlaggedForG3": true
   },
   "voiceDecision": {
@@ -28,7 +34,11 @@
     "sourceStatus": "本机离线系统语音，已安装可用",
     "usageScope": "内部演示口径（README：系统 TTS 不代表真人配音，正式对外须换已授权专业配音）",
     "rejectedOptions": [
-      {"voice": "Eddy/Grandpa (zh_CN)", "reason": "ASR 回环验证仅读出'666'，中文整句被静默跳过——英文默认音回退，不可用", "evidence": "发现⑪：配音试听应机器化 ASR 回环自检"}
+      {
+        "voice": "Eddy/Grandpa (zh_CN)",
+        "reason": "ASR 回环验证仅读出'666'，中文整句被静默跳过——英文默认音回退，不可用",
+        "evidence": "发现⑪：配音试听应机器化 ASR 回环自检"
+      }
     ]
   },
   "audioPolicyInherited": {
@@ -36,5 +46,42 @@
     "bgmDecision": "provided",
     "sourceAudio": "excluded",
     "distribution": "not_for_distribution"
-  }
+  },
+  "approvedNarrationRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+  "factCitationRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "voiceBriefRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-tingting-v0.2.wav",
+  "permittedFactIds": [
+    "C-01",
+    "C-02",
+    "C-03",
+    "C-04",
+    "C-05",
+    "C-06",
+    "C-07",
+    "C-08",
+    "C-09",
+    "C-10",
+    "C-11",
+    "C-12"
+  ],
+  "prohibitedTopics": [
+    "现实政治映射",
+    "未证实设定",
+    "机体性能数字未经核实的来源"
+  ],
+  "userManuallyVerifiedClaims": [],
+  "provenanceRule": "permitted facts are second-party web snapshots, not first-party official verification",
+  "fieldExtensionNote": "2026-09-04 补齐 validate_g3_plan 所需顶层字段；G2 模板与 G3 校验器字段漂移 → 发现㉑",
+  "supersededDraftRefs": [
+    "工作台/kshatriya-intro-001/G2-证据与口播/G2-口播草案-v0.1.md"
+  ],
+  "shortVersionDecision": {
+    "trigger": "G3.3 素材充分性分流（修复型画面仅12.8s）",
+    "userChoice": "选项2 缩短口播",
+    "userUtterance": "2",
+    "date": "2026-09-04",
+    "changes": "S13+S14合并为新S13；S16回调枚举删除保留注脚为新S15；S01–S12与原S15逐字保留"
+  },
+  "approvedNarrationAudioRef": "工作台/kshatriya-intro-001/G2-证据与口播/G2-完整口播-tingting-v0.2.wav",
+  "narrationTimecodeRef": "工作台/kshatriya-intro-001/G3-剪辑计划/G3-旁白时间码-v0.2.json"
 }

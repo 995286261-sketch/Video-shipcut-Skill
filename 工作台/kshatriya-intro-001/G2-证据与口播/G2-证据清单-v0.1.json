@@ -13,8 +13,17 @@
       "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
       "sourceProbe": {
         "durationMs": 286812,
-        "video": { "codec": "h264", "width": 640, "height": 360, "fps": 23.976 },
-        "audio": { "codec": "aac", "sampleRate": 44100, "channels": 2 }
+        "video": {
+          "codec": "h264",
+          "width": 640,
+          "height": 360,
+          "fps": 23.976
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
       },
       "contactSheetRef": "工作台/kshatriya-intro-001/G2-证据与口播/联系表/source-02-nz-666-vol-2-969a57c3-contact-sheet.jpg",
       "transcriptRef": "工作台/kshatriya-intro-001/G2-证据与口播/转写/source-02-nz-666-vol-2-969a57c3-transcript.json",
@@ -24,7 +33,9 @@
         "possible_burned_in_text: 怀旧向机体合集通常含烧录机名/解说字幕，G3 须逐段声明源字幕处理（crop/mask/replace_clip）",
         "transcript_low_confidence_terms: 仅 281.6s–286.6s 存在日语音声（3段），词级置信度含 0.03–0.6 低分项（如'六'(0.03)/'原算'(0.15-0.58)，疑似'NZ666 クシャトリヤ/新吉翁'），按机器草稿处理，不得作为口播事实来源",
         "source_audio_excluded_planned: 最终成片计划移除原声，仅用登记 BGM 与新口播"
-      ]
+      ],
+      "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "relativePathNote": "2026-09-04 由 material-pack.json 同步补齐（G2 契约未要求该字段，G3 抽取脚本必需 → 发现⑱）"
     }
   ],
   "factEvidenceRefs": [
@@ -33,7 +44,23 @@
   ],
   "handoff": {
     "toG3": "保留 assetId、SHA-256、原始时间码引用；联系表仅用于画面类别定位，G3 视觉验证仍需逐段起/中/终帧 manifest；风格规则读取 G1 缓存复用的参考分析产物",
-    "pendingClaims": ["C-13 原始形态精确尺寸/重量", "C-14 命名与印度种姓关联"],
-    "supportedClaimsEligible": ["C-01","C-02","C-03","C-04","C-05","C-06","C-07","C-08","C-09","C-10","C-11","C-12"]
+    "pendingClaims": [
+      "C-13 原始形态精确尺寸/重量",
+      "C-14 命名与印度种姓关联"
+    ],
+    "supportedClaimsEligible": [
+      "C-01",
+      "C-02",
+      "C-03",
+      "C-04",
+      "C-05",
+      "C-06",
+      "C-07",
+      "C-08",
+      "C-09",
+      "C-10",
+      "C-11",
+      "C-12"
+    ]
   }
 }

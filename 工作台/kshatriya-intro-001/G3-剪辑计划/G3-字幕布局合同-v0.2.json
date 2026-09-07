@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "kshatriya-intro-001",
+  "lanes": {
+    "titleChapter": {
+      "zone": "top 8-22%"
+    },
+    "infoCard": {
+      "zone": "mid 30-55%"
+    },
+    "narration": {
+      "zone": "70-84% height, MarginV=58px on 360p",
+      "maxLines": 2
+    },
+    "sourceCaptionExclusion": {
+      "zone": "84-100%"
+    }
+  },
+  "assFile": "G3-字幕时间轴-v0.2.ass",
+  "srtFile": "G3-字幕时间轴-v0.2.srt",
+  "note": "源无烧录字幕；背景布景文字（vf-002/dense-13000）非字幕不处理；标题卡与口播错开0.5-1s"
+}

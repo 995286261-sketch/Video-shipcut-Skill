@@ -1,0 +1,434 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "visual-verification-frames",
+  "planRef": "G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 70000,
+        "endMs": 80094
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 70000,
+          "path": "G3-剪辑计划/画面验证帧/seg-01/start-0000070000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 75047,
+          "path": "G3-剪辑计划/画面验证帧/seg-01/middle-0000075047ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 80093,
+          "path": "G3-剪辑计划/画面验证帧/seg-01/end-0000080093ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 2500,
+        "endMs": 8232
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 2500,
+          "path": "G3-剪辑计划/画面验证帧/seg-02/start-0000002500ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 5366,
+          "path": "G3-剪辑计划/画面验证帧/seg-02/middle-0000005366ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 8231,
+          "path": "G3-剪辑计划/画面验证帧/seg-02/end-0000008231ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 8232,
+        "endMs": 23396
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 8232,
+          "path": "G3-剪辑计划/画面验证帧/seg-03/start-0000008232ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 15814,
+          "path": "G3-剪辑计划/画面验证帧/seg-03/middle-0000015814ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 23395,
+          "path": "G3-剪辑计划/画面验证帧/seg-03/end-0000023395ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 40000,
+        "endMs": 49213
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 40000,
+          "path": "G3-剪辑计划/画面验证帧/seg-04/start-0000040000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 44606,
+          "path": "G3-剪辑计划/画面验证帧/seg-04/middle-0000044606ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 49212,
+          "path": "G3-剪辑计划/画面验证帧/seg-04/end-0000049212ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 99000,
+        "endMs": 111360
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 99000,
+          "path": "G3-剪辑计划/画面验证帧/seg-05/start-0000099000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 105180,
+          "path": "G3-剪辑计划/画面验证帧/seg-05/middle-0000105180ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 111359,
+          "path": "G3-剪辑计划/画面验证帧/seg-05/end-0000111359ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 120980,
+        "endMs": 139378
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 120980,
+          "path": "G3-剪辑计划/画面验证帧/seg-06/start-0000120980ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 130179,
+          "path": "G3-剪辑计划/画面验证帧/seg-06/middle-0000130179ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 139377,
+          "path": "G3-剪辑计划/画面验证帧/seg-06/end-0000139377ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 81238,
+        "endMs": 99000
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 81238,
+          "path": "G3-剪辑计划/画面验证帧/seg-07/start-0000081238ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 90119,
+          "path": "G3-剪辑计划/画面验证帧/seg-07/middle-0000090119ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 98999,
+          "path": "G3-剪辑计划/画面验证帧/seg-07/end-0000098999ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-08a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 56000,
+        "endMs": 58500
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 56000,
+          "path": "G3-剪辑计划/画面验证帧/seg-08a/start-0000056000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 57250,
+          "path": "G3-剪辑计划/画面验证帧/seg-08a/middle-0000057250ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 58499,
+          "path": "G3-剪辑计划/画面验证帧/seg-08a/end-0000058499ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-08b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 205000,
+        "endMs": 216869
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 205000,
+          "path": "G3-剪辑计划/画面验证帧/seg-08b/start-0000205000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 210934,
+          "path": "G3-剪辑计划/画面验证帧/seg-08b/middle-0000210934ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 216868,
+          "path": "G3-剪辑计划/画面验证帧/seg-08b/end-0000216868ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 175000,
+        "endMs": 182034
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 175000,
+          "path": "G3-剪辑计划/画面验证帧/seg-09/start-0000175000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 178517,
+          "path": "G3-剪辑计划/画面验证帧/seg-09/middle-0000178517ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 182033,
+          "path": "G3-剪辑计划/画面验证帧/seg-09/end-0000182033ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-10a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 2500
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 0,
+          "path": "G3-剪辑计划/画面验证帧/seg-10a/start-0000000000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 1250,
+          "path": "G3-剪辑计划/画面验证帧/seg-10a/middle-0000001250ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 2499,
+          "path": "G3-剪辑计划/画面验证帧/seg-10a/end-0000002499ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-10b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 111360,
+        "endMs": 120980
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 111360,
+          "path": "G3-剪辑计划/画面验证帧/seg-10b/start-0000111360ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 116170,
+          "path": "G3-剪辑计划/画面验证帧/seg-10b/middle-0000116170ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 120979,
+          "path": "G3-剪辑计划/画面验证帧/seg-10b/end-0000120979ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 139378,
+        "endMs": 148407
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 139378,
+          "path": "G3-剪辑计划/画面验证帧/seg-11/start-0000139378ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 143892,
+          "path": "G3-剪辑计划/画面验证帧/seg-11/middle-0000143892ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 148406,
+          "path": "G3-剪辑计划/画面验证帧/seg-11/end-0000148406ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 160000,
+        "endMs": 171718
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 160000,
+          "path": "G3-剪辑计划/画面验证帧/seg-12/start-0000160000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 165859,
+          "path": "G3-剪辑计划/画面验证帧/seg-12/middle-0000165859ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 171717,
+          "path": "G3-剪辑计划/画面验证帧/seg-12/end-0000171717ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 274000,
+        "endMs": 282060
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 274000,
+          "path": "G3-剪辑计划/画面验证帧/seg-13/start-0000274000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 278030,
+          "path": "G3-剪辑计划/画面验证帧/seg-13/middle-0000278030ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 282059,
+          "path": "G3-剪辑计划/画面验证帧/seg-13/end-0000282059ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-14",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 255000,
+        "endMs": 269926
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 255000,
+          "path": "G3-剪辑计划/画面验证帧/seg-14/start-0000255000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 262463,
+          "path": "G3-剪辑计划/画面验证帧/seg-14/middle-0000262463ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 269925,
+          "path": "G3-剪辑计划/画面验证帧/seg-14/end-0000269925ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-15",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 282060,
+        "endMs": 286812
+      },
+      "frames": [
+        {
+          "label": "start",
+          "sourceMs": 282060,
+          "path": "G3-剪辑计划/画面验证帧/seg-15/start-0000282060ms.jpg"
+        },
+        {
+          "label": "middle",
+          "sourceMs": 284436,
+          "path": "G3-剪辑计划/画面验证帧/seg-15/middle-0000284436ms.jpg"
+        },
+        {
+          "label": "end",
+          "sourceMs": 286311,
+          "path": "G3-剪辑计划/画面验证帧/seg-15/end-0000286311ms.jpg",
+          "note": "可解码边界回退（发现㉒）"
+        }
+      ]
+    }
+  ]
+}
