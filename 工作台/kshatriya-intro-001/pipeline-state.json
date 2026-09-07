@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "currentNode": "G2",
+  "status": "in_progress",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json"
+      ],
+      "humanReviewPoints": [
+        "G1 \u65b9\u5411\u5361\u56de\u663e\u5df2\u5c55\u793a\uff08\u6807\u9898B/\u89d2\u5ea61/14\u6761claims\u5168\u90e8pending/\u8868\u8fbe\u8fb9\u754c\uff09\uff0c\u7b49\u5f85\u7528\u6237\u660e\u786e\u786e\u8ba4"
+      ],
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55-v0.1.md",
+        "approvedAt": "2026-09-07T03:51:33Z"
+      }
+    },
+    "G2": {
+      "status": "in_progress",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G3": {
+      "status": "pending",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G4": {
+      "status": "pending",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G5": {
+      "status": "pending",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    }
+  },
+  "acceptedWarnings": [],
+  "nextAction": "Prepare evidence, narration, and fact review.",
+  "createdAt": "2026-09-07T03:17:59Z",
+  "updatedAt": "2026-09-07T03:51:33Z"
+}

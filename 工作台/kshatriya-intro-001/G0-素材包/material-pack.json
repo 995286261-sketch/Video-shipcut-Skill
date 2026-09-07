@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceKind": "local-file",
+      "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "byteSize": 15154789,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-lonely-lies-goldkid-interlinked-f069e304",
+      "relativePath": "07_授权音频/Lonely Lies,GOLDKID$ - Interlinked.mp3",
+      "sha256": "82DE220E2D2801E5CDD23880D152F89B66A6F106D9374E2E2C2FD8D23E7977F0",
+      "byteSize": 8277733,
+      "fileExtension": ".mp3"
+    }
+  ],
+  "packStatus": "complete",
+  "registeredAt": "2026-09-07T03:17:24.293987Z"
+}
