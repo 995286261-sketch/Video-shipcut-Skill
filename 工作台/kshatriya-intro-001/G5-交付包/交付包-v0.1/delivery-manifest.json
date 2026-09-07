@@ -355,8 +355,16 @@
   },
   "qaReport": "metadata-validation-report.json",
   "humanReviewPoints": [
-    "G3.3 素材充分性分流（已裁决：选项2 短版）",
-    "G3.6 最终八列回显整体批准（待）"
+    "full_playback",
+    "burned_source_subtitle_residue",
+    "subtitle_safe_area",
+    "narration_picture_sync",
+    "key_shots",
+    "opening",
+    "outro",
+    "audio_mix",
+    "voice_profile",
+    "authorization_boundary"
   ],
   "humanReviewDecision": "human-review-decision.json",
   "evidenceRefs": [
@@ -364,13 +372,15 @@
     "工作台/kshatriya-intro-001/G3-剪辑计划/G3-回显数据-v0.3-final.json"
   ],
   "warnings": [
+    "duration_delta: actual 155458ms vs timeline 155390ms (+68ms frame rounding)",
     "low_resolution_source: 640x360",
-    "not_for_distribution: personal-subscription BGM and internal-test authorization"
+    "not_for_distribution: internal_test and personal-subscription BGM",
+    "detector_limitations: blackFrames/silence/duplicateSegments were not promoted to automatic pass"
   ],
   "authorization": "internal_test",
   "distribution": "not_for_distribution",
-  "status": "g5_pending_human_review",
-  "finishedAt": "pending-human-review",
+  "status": "completed_with_accepted_warnings",
+  "finishedAt": "2026-09-07T08:13:38+00:00",
   "componentRefs": {
     "traceability": "source-timecode-list.json",
     "editPlan": "edit-plan.json",

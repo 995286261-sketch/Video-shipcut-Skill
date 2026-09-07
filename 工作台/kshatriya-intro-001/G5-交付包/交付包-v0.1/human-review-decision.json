@@ -1,9 +1,16 @@
 {
   "projectId": "kshatriya-intro-001",
-  "status": "pending",
-  "decision": "pending",
-  "acceptedWarnings": [],
-  "requiredChecks": [
+  "status": "approved",
+  "decision": "accepted",
+  "acceptedWarnings": [
+    "duration_delta: actual 155458ms vs timeline 155390ms (+68ms frame rounding)",
+    "low_resolution_source: 640x360",
+    "not_for_distribution: internal_test and personal-subscription BGM",
+    "detector_limitations: blackFrames/silence/duplicateSegments were not promoted to automatic pass"
+  ],
+  "approvedAt": "2026-09-07T08:13:38+00:00",
+  "userUtterance": "我确认了，效果蛮好了（G5 完整播放确认通过；接受已列警告，保持内部测试/不得外发商用）",
+  "reviewedItems": [
     "full_playback",
     "burned_source_subtitle_residue",
     "subtitle_safe_area",

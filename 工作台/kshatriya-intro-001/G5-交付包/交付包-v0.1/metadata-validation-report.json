@@ -1,8 +1,8 @@
 {
   "projectId": "kshatriya-intro-001",
   "schemaVersion": "0.1",
-  "status": "g5_pending_human_review",
-  "finishedAt": null,
+  "status": "completed_with_accepted_warnings",
+  "finishedAt": "2026-09-07T08:13:38+00:00",
   "checks": {
     "decode": {
       "status": "pass"
@@ -125,6 +125,6 @@
     "not_for_distribution: internal_test and personal-subscription BGM",
     "detector_limitations: blackFrames/silence/duplicateSegments were not promoted to automatic pass"
   ],
-  "manualReviewStatus": "pending",
+  "manualReviewStatus": "approved",
   "humanReviewRef": "human-review-decision.json"
 }
