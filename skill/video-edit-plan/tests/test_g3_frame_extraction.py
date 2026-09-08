@@ -88,6 +88,46 @@ class FrameExtractionTests(unittest.TestCase):
             path = Path(frame["path"])
             self.assertTrue(path.is_file() and path.stat().st_size > 0, frame["path"])
 
+    def keyframe_summary(self, result):
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        return json.loads(result.stdout)
+
+    def test_keyframe_cache_hit_skips_reextraction(self):
+        out = self.root / "keyframes-cache"
+        first = self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        second = self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        self.assertEqual("keyframes_ready", first["status"])
+        self.assertEqual("cache_hit", second["status"])
+        self.assertEqual(first["manifest"], second["manifest"])
+        self.assertEqual(first["frames"], second["frames"])
+
+    def test_interval_change_is_a_cache_miss_and_keeps_old_manifest(self):
+        out = self.root / "keyframes-interval"
+        self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        changed = self.keyframe_args(out)
+        changed[changed.index("--interval-ms") + 1] = "2000"
+        second = self.keyframe_summary(self.run_args(changed))
+        self.assertEqual("keyframes_ready", second["status"])
+        self.assertTrue((out / "G3-目标素材视觉分析-v0.1.json").is_file())
+        self.assertTrue((out / "G3-目标素材视觉分析-v0.2.json").is_file())
+        self.assertNotIn("v0.1", second["manifest"])
+        # The original interval still hits its own cached manifest afterwards.
+        third = self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        self.assertEqual("cache_hit", third["status"])
+
+    def test_incomplete_frame_cache_is_regenerated_in_place(self):
+        out = self.root / "keyframes-broken-cache"
+        first = self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        manifest = json.loads(Path(first["manifest"]).read_text(encoding="utf-8"))
+        Path(manifest["targetAssets"][0]["keyframes"][0]["path"]).unlink()
+        second = self.keyframe_summary(self.run_args(self.keyframe_args(out)))
+        self.assertEqual("keyframes_ready", second["status"])
+        self.assertEqual(first["manifest"], second["manifest"])
+        self.assertEqual(1, len(list(out.glob("G3-目标素材视觉分析-v*.json"))))
+        regenerated = json.loads(Path(second["manifest"]).read_text(encoding="utf-8"))
+        for frame in regenerated["targetAssets"][0]["keyframes"]:
+            self.assertTrue(Path(frame["path"]).is_file(), frame["path"])
+
     def test_verification_silent_ffmpeg_is_rejected(self):
         out = self.root / "verify-silent"
         result = self.run_args(self.verify_args(out), env=self.silent_ffmpeg_env())

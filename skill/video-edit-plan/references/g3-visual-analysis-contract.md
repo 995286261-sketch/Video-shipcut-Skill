@@ -21,7 +21,7 @@ G3 的目标主体筛选必须先完成“关键帧 → 多模态识图 → 结�
 
 ## 缓存与文字索引
 
-一次完成的视觉分析必须可复用，不能因为 G3 修改时间线、G4 接手或 G5 审计而重新识别相同图片。manifest 顶层必须记录 `cacheKey`，至少含：`assetId`、源文件 `sha256`、`sourceRange`、抽帧间隔、provider、model 和 promptVersion。
+一次完成的视觉分析必须可复用，不能因为 G3 修改时间线、G4 接手或 G5 审计而重新识别相同图片。manifest 顶层必须记录 `cacheKey`，至少含：`assetId`、源文件 `sha256`、`sourceRange`、抽帧间隔、provider、model 和 promptVersion。抽帧脚本 `g3_extract_visual_analysis_keyframes.py` 在抽取前必须先扫描输出目录与 `--cache-root`：同 `assetId`+SHA-256+范围+间隔且帧图全部真实存在的 manifest 直接返回 `cache_hit`，不得重新抽帧；键不一致时写入新版本文件，不覆盖旧 manifest；帧图缺失时同键原地重建。缓存复用是脚本级强制，不依赖 Agent 自觉。
 
 同时写入 `工作台/<projectId>/G3-剪辑计划/G3-视觉文字索引-v<version>.json`。索引从 manifest 派生，不得重新调用视觉模型；每个条目按源时间范围记录：
 

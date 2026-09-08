@@ -42,12 +42,39 @@ def extract_frame(source: Path, requested_ms: int, floor_ms: int, output: Path) 
     fail(f"ffmpeg exited without producing keyframe file for {output.name} (probed {requested_ms}ms back to {max(floor_ms, requested_ms - 500)}ms)")
 
 
+def frames_reusable(manifest: dict, asset_id: str, project_id) -> bool:
+    """A cached manifest only counts when every listed frame file is actually on disk."""
+    if manifest.get("projectId") != project_id:
+        return False
+    targets = manifest.get("targetAssets")
+    if not isinstance(targets, list) or len(targets) != 1 or targets[0].get("assetId") != asset_id:
+        return False
+    frames = targets[0].get("keyframes")
+    if not isinstance(frames, list) or not frames:
+        return False
+    for frame in frames:
+        path = Path(str(frame.get("path", "")))
+        if not path.is_file() or path.stat().st_size == 0:
+            return False
+    return True
+
+
+def next_version(directory: Path) -> str:
+    index = 1
+    while (directory / f"G3-目标素材视觉分析-v0.{index}.json").exists():
+        index += 1
+        if index > 99:
+            fail("too many visual analysis manifest versions in the output directory")
+    return f"v0.{index}"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--evidence", required=True, type=Path)
     parser.add_argument("--asset-id", required=True)
     parser.add_argument("--source-pack", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
+    parser.add_argument("--cache-root", type=Path, help="Additional project directory to scan for completed keyframe manifests")
     parser.add_argument("--interval-ms", type=int, default=15_000)
     args = parser.parse_args()
     if args.interval_ms <= 0:
@@ -69,6 +96,31 @@ def main() -> int:
     duration_ms = int(entry.get("sourceProbe", {}).get("durationMs", 0))
     if duration_ms <= 0:
         fail("source evidence requires positive durationMs")
+    cache_key = {
+        "node": "G3",
+        "purpose": "keyframe-extraction",
+        "assetId": args.asset_id,
+        "sha256": actual_hash,
+        "sourceRange": {"startMs": 0, "endMs": duration_ms},
+        "intervalMs": args.interval_ms,
+    }
+    # Issue 031: re-extracting the same frames burns tokens downstream; a complete cached
+    # manifest for this exact key must be reused instead of re-running extraction.
+    regenerate_target: Path | None = None
+    for root in [args.output_dir] + ([args.cache_root] if args.cache_root else []):
+        if not root.is_dir():
+            continue
+        for candidate in sorted(root.glob("G3-目标素材视觉分析-v*.json")):
+            try:
+                existing = json.loads(candidate.read_text(encoding="utf-8-sig"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if existing.get("cacheKey") == cache_key:
+                if frames_reusable(existing, args.asset_id, evidence.get("projectId")):
+                    frames = existing["targetAssets"][0]["keyframes"]
+                    print(json.dumps({"status": "cache_hit", "manifest": str(candidate), "frames": len(frames)}, ensure_ascii=True))
+                    return 0
+                regenerate_target = candidate
     args.output_dir.mkdir(parents=True, exist_ok=True)
     frames_dir = args.output_dir / "关键帧"
     frames_dir.mkdir(parents=True, exist_ok=True)
@@ -93,7 +145,8 @@ def main() -> int:
         "projectId": evidence.get("projectId"),
         "node": "G3",
         "status": "keyframes_ready",
-        "analysisScope": "full_source_interval_15000ms",
+        "analysisScope": f"full_source_interval_{args.interval_ms}ms",
+        "cacheKey": cache_key,
         "sourcePackRef": str(source_pack / "material-pack.json"),
         "provider": None,
         "model": None,
@@ -106,7 +159,7 @@ def main() -> int:
         }],
         "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed",
     }
-    output = args.output_dir / "G3-目标素材视觉分析-v0.1.json"
+    output = regenerate_target or (args.output_dir / f"G3-目标素材视觉分析-{next_version(args.output_dir)}.json")
     output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": "keyframes_ready", "manifest": str(output), "frames": len(frames)}, ensure_ascii=True))
     return 0

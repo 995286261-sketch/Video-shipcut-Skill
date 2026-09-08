@@ -106,7 +106,7 @@ Agent 必须查看这些实际帧，再为每段填写 `visualVerification`：`s
 
 节拍表写为 `G3-口播语义节拍-v<version>.json`，使用 `scripts/validate_g3_semantic_beats.py --beats <file>` 校验。它是 G3.1 的唯一口播映射输入：每个条目具有 `beatId`、输出时间、逐字口播、主张类型、最低可见证据和可接受的视觉替代。最终计划的每段必须以 `semanticBeatIds` 引用该表；回显从同一数据源读取，不得手工改写口播或匹配结论。
 
-已有获准配音时，先用 `scripts/g3_align_narration_audio.py --audio <approved-audio> --output <alignment.json> --initial-prompt <approved-narration>` 生成本地时间码，再将节拍范围对齐到该产物。脚本默认只读取本地模型，若模型未安装则记录阻塞，不得下载或以阅读速度估计冒充实际时间码。
+已有获准配音时，先用 `scripts/g3_align_narration_audio.py --audio <approved-audio> --output <alignment.json> --model-dir <本地模型缓存目录> --language zh --initial-prompt <专名词表>` 生成本地时间码，再将节拍范围对齐到该产物。`--model-dir` 缺省时读取 `P0C_FASTER_WHISPER_MODEL_HOME`；运行时包从 `P0C_FASTER_WHISPER_HOME` 加载。脚本只使用本地缓存快照，缺目录、缺快照或缺依赖均返回结构化 `blocked`（不 traceback、不下载），同一音频+模型+语言的既有对齐结果按 `cacheKey` 直接复用；不得以阅读速度估计冒充实际时间码。
 
 使用 `scripts/validate_g3_plan.py --plan <plan> --evidence <g2-evidence> --g2-decision <decision>` 校验结构。验证通过不代表内容审核通过；人工批准后才能交给渲染器。
 
