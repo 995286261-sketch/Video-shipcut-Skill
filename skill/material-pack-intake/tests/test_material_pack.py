@@ -57,6 +57,51 @@ class MaterialPackTest(unittest.TestCase):
             self.assertEqual(2, code)
             self.assertTrue(any("BGM decision" in item for item in result["incompleteRequiredEntries"]))
 
+    def test_initialized_template_registers_when_machine_fields_are_filled(self):
+        temporary, pack = self.create_pack()
+        with temporary:
+            requirements = pack / "01_需求说明.md"
+            text = requirements.read_text(encoding="utf-8")
+            replacements = {
+                "想讲什么：": "想讲什么：测试主题",
+                "给谁看：": "给谁看：测试观众",
+                "目标时长：": "目标时长：30 秒",
+                "输出：": "输出：横版 16:9",
+                "希望的感觉：": "希望的感觉：清晰",
+                "不能说什么：": "不能说什么：无",
+            }
+            for placeholder, value in replacements.items():
+                self.assertIn(placeholder, text)
+                text = text.replace(placeholder, value, 1)
+            self.assertIn("\nBGM decision:\n", text)
+            text = text.replace("\nBGM decision:\n", "\nBGM decision: no_bgm\n", 1)
+            requirements.write_text(text, encoding="utf-8")
+            (pack / "04_授权说明.md").write_text("""| 文件名 | 用途 | 是否可用于最终成片 | 来源或授权说明 |
+| --- | --- | --- | --- |
+| clip.mp4 | 测试 | 待确认 | 测试输入 |
+""", encoding="utf-8")
+            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code)
+            self.assertEqual("completed", result["status"])
+
+            code, result = self.run_cli("validate", "--pack", str(pack))
+            self.assertEqual(0, code)
+            self.assertEqual("complete", result["status"])
+
+    def test_invalid_bgm_decision_is_rejected(self):
+        temporary, pack = self.create_pack()
+        with temporary:
+            self.fill_required_documents(pack)
+            with next(pack.glob("01_*.md")).open("a", encoding="utf-8") as handle:
+                handle.write("\nBGM decision: choose_later\n")
+            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(2, code)
+            self.assertEqual("incomplete", result["status"])
+            self.assertTrue(any("BGM decision" in item for item in result["incompleteRequiredEntries"]))
+
     def test_duplicate_file_names_get_unique_asset_ids(self):
         temporary, pack = self.create_pack()
         with temporary:

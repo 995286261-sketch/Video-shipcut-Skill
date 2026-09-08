@@ -34,7 +34,7 @@
 ### 编号发现
 
 - **⑤**：G1 参考视频分析复用只有合同约束，没有脚本强制；项目级缓存不能自动验证跨项目复用。
-- **⑥**：G0 模板字段与 `material_pack.py` 标签不一致，按模板填写会使 register 必失败。高优先级真 bug。
+- **⑥**：G0 模板字段与 `material_pack.py` 标签不一致，按模板填写会使 register 必失败。高优先级真 bug。**状态：已验证（2026-09-08）**；已将初始化模板统一为六个机器字段与唯一的 `BGM decision` 行，未放宽解析器。验证：`~/.local/bin/python3 skill/material-pack-intake/tests/test_material_pack.py`（8/8 通过）；模板驱动的 `init → register → validate` 正向 CLI 回归通过；非法 `BGM decision` 负向 CLI 回归继续返回 `incomplete`。修复提交：`ada78cd`（Fix G0 template field contract）。
 - **⑦**：风格参考未纳入 material-pack 哈希清单，跨项目缓存命中需要手工 SHA-256 比对。观察/待决策。
 - **⑧**：固定回显卡与批准串没有机器强制，Agent 漏弹回显时用户无法按合同复核。
 - **⑨**：`g1_direction.py write` 写入旧路径，违反项目布局合同。
