@@ -70,7 +70,7 @@ G3 先检查同一源文件的已完成视觉分析 manifest：缓存键中的 `
 候选时间码只是定位假设，绝不是镜头事实。G3 必须在每个候选源区间实际提取起点、中点、终点帧：
 
 ```powershell
-python scripts/g3_extract_verification_frames.py --plan <G3计划.json> --evidence <G2证据清单.json> --source-pack <素材包> --output-dir <工作区/剪辑方案/<projectId>/G3-画面验证帧>
+python scripts/g3_extract_verification_frames.py --plan <G3计划.json> --evidence <G2证据清单.json> --source-pack <素材包> --output-dir <工作台/<projectId>/G3-剪辑计划/G3-画面验证帧>
 ```
 
 抽帧脚本会核验每张帧图真实落盘且非空。ffmpeg 在源末尾时间码可能退出 0 却不写文件；此时脚本以 100ms 为步长最多回退 500ms 重试，清单中同时记录 `requestedSourceMs` 与实际 `sourceMs`。回退窗口内仍无产物即结构化失败，不得以缺失帧冒充验证证据。

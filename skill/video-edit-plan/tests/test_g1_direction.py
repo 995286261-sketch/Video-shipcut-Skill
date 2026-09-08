@@ -86,6 +86,22 @@ class G1DirectionTest(unittest.TestCase):
             self.assertEqual("blocked", result["status"])
             self.assertFalse((workspace / "创作方向").exists())
 
+    def test_confirmed_write_lands_in_workbench_layout(self):
+        """Issue 009: formal G1 artifacts must live under 工作台/<projectId>/G1-创作方向/."""
+        temporary, pack = self.create_pack()
+        with temporary:
+            input_path = self.write_input(temporary.name, self.valid_direction())
+            workspace = Path(temporary.name) / "workspace"
+            code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(workspace), "--input", str(input_path), "--confirmed")
+            self.assertEqual(0, code, result)
+            destination = workspace / "工作台" / "demo-001" / "G1-创作方向"
+            self.assertTrue((destination / "G1-方向简报.json").is_file())
+            self.assertTrue((destination / "G1-方向简报.md").is_file())
+            self.assertFalse((workspace / "创作方向").exists())
+            code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(workspace), "--input", str(input_path), "--confirmed", "--on-conflict", "version")
+            self.assertEqual(0, code, result)
+            self.assertTrue((workspace / "工作台" / "demo-001" / "G1-创作方向-v2" / "G1-方向简报.md").is_file())
+
     def test_title_must_declare_expression_type(self):
         temporary, pack = self.create_pack()
         with temporary:

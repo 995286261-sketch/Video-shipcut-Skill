@@ -44,12 +44,12 @@ Agent 在看到素材或收到回答后，按需追问：
 
 ✅ 已收到：
 - 原始素材：
-  - [uc-p1.mp4](工作区/素材包/<projectId>/02_原始素材/uc-p1.mp4)
-  - [uc-p2.mp4](工作区/素材包/<projectId>/02_原始素材/uc-p2.mp4)
-- 事实依据：[产品说明书.pdf](工作区/素材包/<projectId>/03_事实依据/产品说明书.pdf)
-- 风格参考：[apple-keynote-2024.mp4](工作区/素材包/<projectId>/05_风格参考/apple-keynote-2024.mp4)
-- 品牌资产：[logo.png](工作区/素材包/<projectId>/06_品牌资产/logo.png)、色值 #007AFF
-- BGM：[background-music.mp3](工作区/素材包/<projectId>/07_授权音频/background-music.mp3)（授权：本项目可用）
+  - [uc-p1.mp4](工作台/<projectId>/G0-素材包/02_原始素材/uc-p1.mp4)
+  - [uc-p2.mp4](工作台/<projectId>/G0-素材包/02_原始素材/uc-p2.mp4)
+- 事实依据：[产品说明书.pdf](工作台/<projectId>/G0-素材包/03_事实依据/产品说明书.pdf)
+- 风格参考：[apple-keynote-2024.mp4](工作台/<projectId>/G0-素材包/05_风格参考/apple-keynote-2024.mp4)
+- 品牌资产：[logo.png](工作台/<projectId>/G0-素材包/06_品牌资产/logo.png)、色值 #007AFF
+- BGM：[background-music.mp3](工作台/<projectId>/G0-素材包/07_授权音频/background-music.mp3)（授权：本项目可用）
 
 ❓ 待确认：
 - 授权范围：你说是"给客户看"，具体是仅内部演示还是可以对外的宣传片？
@@ -57,7 +57,7 @@ Agent 在看到素材或收到回答后，按需追问：
 
 📋 项目信息：
 - 平台：抖音（竖版 9:16，建议 30-60 秒）
-- 风格：科技感、简洁（参考 [apple-keynote-2024.mp4](工作区/素材包/<projectId>/05_风格参考/apple-keynote-2024.mp4)）
+- 风格：科技感、简洁（参考 [apple-keynote-2024.mp4](工作台/<projectId>/G0-素材包/05_风格参考/apple-keynote-2024.mp4)）
 - BGM：已提供
 
 请确认以上信息，或告诉我要补充/修改什么。

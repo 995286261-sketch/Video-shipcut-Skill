@@ -67,7 +67,7 @@ G0 中的语言、口音、声线、语气和语速是偏好记录，不等于�
   - `工作台/<projectId>/G2-证据与口播/配音试听/voice-audition-yunyang.mp3` - YunyangNeural
 
 🎵 音频策略（继承自 G0/G1）：
-- BGM：[aji-yema-3only-indulgence.mp3](工作区/素材包/<projectId>/07_授权音频/aji-yema-3only-indulgence.mp3)
+- BGM：[aji-yema-3only-indulgence.mp3](工作台/<projectId>/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3)
 - 原声：排除
 - 分发：仅内部测试
 ```

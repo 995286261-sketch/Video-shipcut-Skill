@@ -18,9 +18,9 @@ CARD_TYPES = {
 CHECKLISTS = {
     "G1": ("direction_brief", "claims_and_boundaries", "direction_card"),
     "G2": ("fact_citation", "approved_narration", "voice_brief", "g2_card"),
-    "G3": ("approved_edit_plan", "final_timeline_review", "subtitle_timeline", "bgm_decision", "g3_card"),
+    "G3": ("approved_edit_plan", "final_timeline_review", "subtitle_timeline", "bgm_decision", "packaging_decisions", "g3_card"),
     "G4": ("candidate_or_export", "render_validation", "playback_review_card"),
-    "G5": ("delivery_manifest", "qa_validation", "playback_review", "distribution_boundary"),
+    "G5": ("delivery_manifest", "qa_validation", "playback_review", "check_frames", "distribution_boundary"),
 }
 
 

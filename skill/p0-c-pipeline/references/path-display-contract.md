@@ -49,16 +49,16 @@
 正确：
 
 ```markdown
-- [G0 素材包](工作区/unicorn-gundam-intro-001/G0-素材包/material-pack.json)
-- [G2 批准口播稿](工作区/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md)
+- [G0 素材包](工作台/unicorn-gundam-intro-001/G0-素材包/material-pack.json)
+- [G2 批准口播稿](工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.1.md)
 ```
 
 错误：
 
 ```text
-`工作区/unicorn-gundam-intro-001/G0-素材包/material-pack.json`
-D:\P0-C\工作区\unicorn-gundam-intro-001\G2-证据与口播\G2-口播草案-v0.1.md
-[G2 批准口播稿](工作区/unicorn-gundam-intro-001/G2-证据与口播/猜测的文件.md)
+`工作台/unicorn-gundam-intro-001/G0-素材包/material-pack.json`
+D:\P0-C\工作台\unicorn-gundam-intro-001\G2-证据与口播\G2-口播草案-v0.1.md
+[G2 批准口播稿](工作台/unicorn-gundam-intro-001/G2-证据与口播/猜测的文件.md)
 ```
 
 最后一项指向未经确认的文件，不能作为回显链接。

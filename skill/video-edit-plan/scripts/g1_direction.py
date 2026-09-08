@@ -187,13 +187,14 @@ def markdown(data, pack):
 
 
 def target_directory(workspace, project_id, on_conflict):
-    base = Path(workspace).resolve() / "创作方向" / project_id
+    # Project layout contract: formal artifacts live under 工作台/<projectId>/G1-创作方向/.
+    base = Path(workspace).resolve() / "工作台" / project_id / "G1-创作方向"
     if not base.exists() or on_conflict == "stop":
         return base
     version = 2
-    while (base.parent / f"{project_id}-v{version}").exists():
+    while (base.parent / f"G1-创作方向-v{version}").exists():
         version += 1
-    return base.parent / f"{project_id}-v{version}"
+    return base.parent / f"G1-创作方向-v{version}"
 
 
 def main():

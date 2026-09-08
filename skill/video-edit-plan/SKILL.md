@@ -32,7 +32,7 @@ python skill/video-edit-plan/scripts/g1_direction.py validate --pack <素材包�
 python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路径> --workspace <调用方工作区> --input <方向输入.json> --confirmed
 ```
 
-输出只写入调用方工作区的 `创作方向/<projectId>/`，绝不回写素材包或修改原始媒体。`新工作区/` 是待验证提案，未明确启用前不得写入。输入 JSON、字段约束和简报格式见 [G1 引导规则](references/g1-direction-guide.md)。后续计划合同见 [计划合同](references/plan-contract.md)。
+输出只写入调用方工作区的 `工作台/<projectId>/G1-创作方向/`，绝不回写素材包或修改原始媒体。`新工作区/` 是待验证提案，未明确启用前不得写入。输入 JSON、字段约束和简报格式见 [G1 引导规则](references/g1-direction-guide.md)。后续计划合同见 [计划合同](references/plan-contract.md)。
 
 ## Pipeline Integration
 

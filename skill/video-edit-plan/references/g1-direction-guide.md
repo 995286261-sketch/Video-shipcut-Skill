@@ -4,7 +4,7 @@
 
 必须先取得素材包根路径并运行 `g1_direction.py check-pack --pack <路径>`。只有 `status: complete` 才能继续。任何其他结果都只报告 `blockers`，不提问、不生成候选、不写文件。
 
-`projectId` 优先使用调用方提供的受控 ID；缺失时单独询问。只允许 `[A-Za-z0-9][A-Za-z0-9._-]{0,63}`。默认禁止覆盖现有 `创作方向/<projectId>/`；需要新版本时，经用户确认使用 `write --on-conflict version`。
+`projectId` 优先使用调用方提供的受控 ID；缺失时单独询问。只允许 `[A-Za-z0-9][A-Za-z0-9._-]{0,63}`。默认禁止覆盖现有 `工作台/<projectId>/G1-创作方向/`；需要新版本时，经用户确认使用 `write --on-conflict version`。
 
 ## 对话顺序
 
@@ -94,7 +94,7 @@ G1 继承 G0 已收集的信息（受众、平台、风格、BGM），只补充 
 
 先运行 `validate`，再向用户回显摘要。只有获得明确确认后才运行 `write --confirmed`。产物为：
 
-- `创作方向/<projectId>/G1-方向简报.md`
-- `创作方向/<projectId>/G1-方向简报.json`
+- `工作台/<projectId>/G1-创作方向/G1-方向简报.md`
+- `工作台/<projectId>/G1-创作方向/G1-方向简报.json`
 
 简报必须含有"事实主张与证据引用"表，逐条记录 `claimId`、文本、状态、素材包相对路径和页码/时间码等定位信息。

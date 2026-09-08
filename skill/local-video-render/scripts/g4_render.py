@@ -69,10 +69,15 @@ def main():
             fail(f"missing source {first_source}")
         target_width, target_height = probe_canvas(first_source)
     args.output_dir.mkdir(parents=True,exist_ok=True)
+    # Issue 030: contract layout is <output-dir>/clean-segments/; never flatten segments
+    # into the output root where different invocations drift the project structure.
+    segments_out = args.output_dir / "clean-segments"
+    segments_out.mkdir(parents=True,exist_ok=True)
     commands=[]
+    outputs=[]
     for segment in data.get("segments",[]):
         source=args.source_pack/segment["source"]["relativePath"]
-        output=args.output_dir/segment["output"]["filename"]
+        output=segments_out/segment["output"]["filename"]
         if not source.is_file(): fail(f"missing source {source}")
         duration=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"])/1000
         source_duration=(segment["source"]["endMs"]-segment["source"]["startMs"])/1000
@@ -87,14 +92,18 @@ def main():
         else:
             cmd += ["-ss",str(segment["source"]["startMs"]/1000),"-i",str(source)]
         cmd += ["-t",str(duration),"-map","0:v:0","-vf",vf,"-c:v","libx264","-preset","veryfast","-crf","20","-an","-movflags","+faststart",str(output)]
-        commands.append(cmd)
+        commands.append(cmd); outputs.append(output)
     if args.dry_run:
         print(json.dumps({"status":"planned","commands":commands},ensure_ascii=True)); return 0
-    for cmd in commands: subprocess.run(cmd,check=True)
+    for cmd, output in zip(commands, outputs):
+        subprocess.run(cmd,check=True)
+        if not output.is_file() or output.stat().st_size == 0:
+            fail(f"ffmpeg exited without producing {output.name}")
     print(json.dumps({
         "status":"rendered",
         "segments":len(commands),
         "outputDir":str(args.output_dir),
+        "segmentsDir":str(segments_out),
         "aspectRatioPolicy": args.aspect_ratio_policy,
         "canvas": {"width": target_width, "height": target_height},
     },ensure_ascii=True)); return 0
