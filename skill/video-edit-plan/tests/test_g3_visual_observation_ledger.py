@@ -37,6 +37,42 @@ class VisualObservationLedgerTests(unittest.TestCase):
             args.append(str(self.write(option[2:] + ".json", payload)))
         return subprocess.run(args, capture_output=True, text=True, encoding="utf-8")
 
+    def test_supersede_retires_active_record_and_returns_lineage(self):
+        original = self.record()
+        self.assertEqual(0, self.command("--append", original).returncode)
+        replacement = self.record("obs-002")
+        replacement.update({"correctionSource": "用户指认画面为驾驶员而非目标机体", "observedVisuals": "人物可见，目标主体未确认", "identityStatus": "person_only"})
+        payload = {"supersedesRecordId": "obs-001", "newRecord": replacement}
+        result = self.command("--supersede", payload)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        ledger = json.loads(self.ledger.read_text(encoding="utf-8"))
+        self.assertEqual("superseded", ledger["records"][0]["analysisStatus"])
+        self.assertEqual("obs-002", ledger["records"][0]["supersededBy"])
+        self.assertEqual("obs-001", ledger["records"][1]["supersedesRecordId"])
+        lookup = self.command("--lookup", original)
+        self.assertIn("obs-002", lookup.stdout)
+        self.assertNotIn('"recordId": "obs-001"', lookup.stdout)
+        history = subprocess.run([PYTHON, str(SCRIPT), "--ledger", str(self.ledger), "--lookup", str(self.write("history-query.json", original)), "--history"], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, history.returncode, history.stdout + history.stderr)
+        self.assertIn("obs-001", history.stdout)
+        self.assertIn("obs-002", history.stdout)
+
+    def test_supersede_rejects_invalid_transitions(self):
+        original = self.record()
+        self.assertEqual(0, self.command("--append", original).returncode)
+        replacement = self.record("obs-002")
+        replacement.pop("correctionSource", None)
+        bad = self.command("--supersede", {"supersedesRecordId": "obs-001", "newRecord": replacement})
+        self.assertNotEqual(0, bad.returncode)
+        self.assertIn("correctionSource", bad.stdout)
+        bad = self.command("--supersede", {"supersedesRecordId": "missing", "newRecord": {**replacement, "correctionSource": "用户指认"}})
+        self.assertNotEqual(0, bad.returncode)
+        self.assertIn("not an active record", bad.stdout)
+        wrong_key = {**replacement, "correctionSource": "用户指认", "sourceMs": 80000}
+        bad = self.command("--supersede", {"supersedesRecordId": "obs-001", "newRecord": wrong_key})
+        self.assertNotEqual(0, bad.returncode)
+        self.assertIn("exact reuse key", bad.stdout)
+
     def test_append_then_lookup_reuses_same_exact_key(self):
         self.assertEqual(0, self.command("--append", self.record()).returncode)
         result = self.command("--lookup", self.record())
