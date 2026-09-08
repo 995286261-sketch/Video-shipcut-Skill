@@ -1,0 +1,192 @@
+#!/usr/bin/env python3
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+SKILL = Path(__file__).resolve().parents[1]
+REGISTER = SKILL / "scripts" / "music_register_candidate.py"
+SEARCH = SKILL / "scripts" / "music_search_freesound.py"
+RECOMMEND = SKILL / "scripts" / "music_recommend.py"
+PYTHON = os.environ.get("P0C_PYTHON_BIN") or sys.executable
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest().upper()
+
+
+class RegisterCandidateTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+
+    def run_script(self, script, args, env=None):
+        full_env = dict(os.environ)
+        if env is not None:
+            full_env.update(env)
+        return subprocess.run([PYTHON, str(script), *args], capture_output=True, text=True,
+                              encoding="utf-8", env=full_env)
+
+    def real_wav(self):
+        wav = self.root / "tone.wav"
+        if shutil.which("ffmpeg"):
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=frequency=440:d=1",
+                            str(wav)], check=True, capture_output=True, text=True)
+        else:
+            self.skipTest("ffmpeg required to synthesize a decodable fixture")
+        return wav
+
+    def test_register_valid_candidate(self):
+        wav = self.real_wav()
+        result = self.run_script(REGISTER, ["--audio", str(wav), "--title", "测试候选",
+                                            "--license-type", "cc0", "--license-evidence", "https://example.org/cc0",
+                                            "--output-dir", str(self.root / "pool")])
+        payload = json.loads(result.stdout)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        self.assertEqual("completed", payload["status"])
+        self.assertEqual("passed", payload["decodeProbe"])
+        manifest = Path(payload["candidate"])
+        self.assertTrue(manifest.is_file())
+        record = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(sha256(wav), record["sha256"])
+        self.assertEqual("internal_test", record["distributionBoundary"])
+
+    def test_register_undecodable_is_blocked(self):
+        if not shutil.which("ffmpeg"):
+            self.skipTest("ffmpeg required to attempt decode probe")
+        fake = self.root / "fake.mp3"
+        fake.write_bytes(b"CTENFDAM" + bytes(64))  # issue 023 root cause: renamed stream-encrypted cache
+        result = self.run_script(REGISTER, ["--audio", str(fake), "--title", "假文件",
+                                            "--license-type", "cc0", "--license-evidence", "https://example.org/x",
+                                            "--output-dir", str(self.root / "pool")])
+        payload = json.loads(result.stdout)
+        self.assertEqual(2, result.returncode)
+        self.assertEqual("blocked", payload["status"])
+        self.assertEqual("audio_decode_probe_failed", payload["blockers"][0]["type"])
+
+    def test_register_missing_evidence_is_invalid(self):
+        wav = self.real_wav()
+        result = self.run_script(REGISTER, ["--audio", str(wav), "--title", "无证据",
+                                            "--license-type", "cc-by", "--license-evidence", "   ",
+                                            "--output-dir", str(self.root / "pool")])
+        self.assertEqual(2, result.returncode)
+        self.assertEqual("invalid", json.loads(result.stdout)["status"])
+
+
+class SearchBlockedTest(unittest.TestCase):
+    def test_missing_token_is_structured_block(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = dict(os.environ)
+        env["P0C_FREESOUND_TOKEN"] = ""
+        result = subprocess.run([PYTHON, str(SEARCH), "--query", "ambient", "--output-dir", tmp.name],
+                                capture_output=True, text=True, encoding="utf-8", env=env)
+        payload = json.loads(result.stdout)
+        self.assertEqual(2, result.returncode)
+        self.assertEqual("blocked", payload["status"])
+        self.assertEqual("missing_token", payload["blockers"][0]["type"])
+
+    def test_no_query_criteria_is_invalid(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = dict(os.environ)
+        env["P0C_FREESOUND_TOKEN"] = "dummy"
+        result = subprocess.run([PYTHON, str(SEARCH), "--output-dir", tmp.name],
+                                capture_output=True, text=True, encoding="utf-8", env=env)
+        self.assertEqual(2, result.returncode)
+        self.assertEqual("invalid", json.loads(result.stdout)["status"])
+
+
+class RecommendTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.reports = self.root / "reports"
+        self.reports.mkdir()
+
+    def run_script(self, args):
+        return subprocess.run([PYTHON, str(RECOMMEND), *args], capture_output=True, text=True,
+                              encoding="utf-8")
+
+    def write_report(self, sha, tempo, duration_ms, lufs=-18.0, segments=4):
+        report = {
+            "schemaVersion": "0.1", "skill": "music-expert",
+            "cacheKey": {"sha256": sha},
+            "source": {"sha256": sha, "decodedDurationMs": duration_ms},
+            "tempoBpm": tempo, "beatsMs": [], "onsetsMs": [], "hitPoints": [{"tMs": 0, "kind": "beat"}],
+            "energySegments": [{"startMs": i * 1000, "endMs": (i + 1) * 1000, "energyMean": 0.1} for i in range(segments)],
+            "energyCurve": [], "loudness": {"integratedLufs": lufs},
+        }
+        (self.reports / f"BGM-分析报告-{sha[:8]}.json").write_text(json.dumps(report), encoding="utf-8")
+
+    def write_candidates(self, entries):
+        (self.root / "pool.json").write_text(json.dumps({"candidates": entries}), encoding="utf-8")
+
+    def candidate(self, title, sha, license_type="cc0"):
+        return {"title": title, "sha256": sha, "provenance": "freesound_api",
+                "licenseType": license_type, "distributionBoundary": "internal_test",
+                "decodeProbe": {"status": "passed", "engine": "ffmpeg"}}
+
+    def test_ranks_and_passes(self):
+        self.write_report("AA" * 32, 120.0, 60_000)
+        self.write_report("BB" * 32, 80.0, 5_000)
+        self.write_candidates([self.candidate("good", "AA" * 32), self.candidate("off", "BB" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "bpmRange": [110, 130], "minSegments": 2, "maxIntegratedLufs": -14}), encoding="utf-8")
+        out = self.root / "rec.json"
+        result = self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                                  "--reports-dir", str(self.reports), "--min-score", "0.9", "--min-pass", "1",
+                                  "--output", str(out)])
+        payload = json.loads(result.stdout)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        data = json.loads(out.read_text(encoding="utf-8"))
+        self.assertEqual("good", data["ranked"][0]["title"])
+        self.assertEqual(1, len(data["passing"]))
+        self.assertTrue(data["sufficiency"]["enough"])
+        self.assertEqual("1:00.000", data["ranked"][0]["durationDisplay"])
+
+    def test_short_candidate_is_penalized_not_passed(self):
+        self.write_report("CC" * 32, 120.0, 3_000)
+        self.write_candidates([self.candidate("short", "CC" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 60, "bpmRange": [110, 130]}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--min-score", "0.9", "--min-pass", "3", "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        self.assertFalse(data["sufficiency"]["enough"])
+        self.assertTrue(data["sufficiency"]["gapAction"])
+
+    def test_unanalyzed_candidate_is_quarantined(self):
+        self.write_candidates([self.candidate("no-report", "DD" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        self.assertEqual(1, len(data["unanalyzed"]))
+        self.assertEqual(0, len(data["ranked"]))
+
+    def test_no_candidates_is_blocked(self):
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30}), encoding="utf-8")
+        result = self.run_script(["--profile", str(profile), "--candidates", str(self.root / "missing.json"),
+                                  "--reports-dir", str(self.reports), "--output", str(self.root / "rec.json")])
+        self.assertEqual(2, result.returncode)
+        self.assertEqual("no_candidates", json.loads(result.stdout)["blockers"][0]["type"])
+
+
+if __name__ == "__main__":
+    unittest.main()
