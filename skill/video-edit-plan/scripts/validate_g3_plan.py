@@ -2,8 +2,17 @@
 """Validate traceability and G2 approval gates for a G3 edit-plan draft."""
 
 import argparse
+import importlib.util
 import json
 from pathlib import Path
+
+
+G2_DECISION_VALIDATOR = Path(__file__).resolve().parents[2] / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
+spec = importlib.util.spec_from_file_location("validate_g2_decision", G2_DECISION_VALIDATOR)
+if spec is None or spec.loader is None:
+    raise RuntimeError("could not load validate_g2_decision.py")
+g2_decision_validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(g2_decision_validator)
 
 
 def fail(message: str) -> None:
@@ -16,38 +25,14 @@ def normalized_ref(value: str) -> str:
 
 
 def validate_g2_decision(decision: dict, project_id: str, decision_path: Path) -> str:
-    if decision.get("schemaVersion") != "0.1":
-        fail("G2 decision schemaVersion must be 0.1")
+    project_root = Path.cwd()
     if decision.get("projectId") != project_id:
         fail("G2 decision projectId must match plan projectId")
-    if decision.get("node") != "G2":
-        fail("decision must belong to G2")
-    if decision.get("status") != "approved_for_g3":
-        fail("G2 decision is not approved_for_g3")
+    try:
+        g2_decision_validator.validate(decision, project_root)
+    except ValueError as error:
+        fail(str(error))
     approved = decision.get("approvedNarrationRef")
-    if not isinstance(approved, str) or not approved.strip():
-        fail("G2 decision requires approvedNarrationRef")
-    for field in ("factCitationRef", "voiceBriefRef"):
-        if not isinstance(decision.get(field), str) or not decision[field].strip():
-            fail(f"G2 decision requires {field}")
-    if not isinstance(decision.get("permittedFactIds"), list):
-        fail("G2 decision requires permittedFactIds")
-    if not isinstance(decision.get("prohibitedTopics"), list):
-        fail("G2 decision requires prohibitedTopics")
-    manually_verified = decision.get("userManuallyVerifiedClaims", [])
-    if not isinstance(manually_verified, list) or not all(isinstance(item, str) and item.strip() for item in manually_verified):
-        fail("userManuallyVerifiedClaims must be a list of non-empty strings")
-    if manually_verified:
-        provenance_rule = decision.get("provenanceRule")
-        if not isinstance(provenance_rule, str) or "not" not in provenance_rule.lower() or "first" not in provenance_rule.lower():
-            fail("manually verified claims require a provenanceRule stating they are not first-party verified")
-    project_root = Path.cwd()
-    approved_path = project_root / approved
-    if not approved_path.is_file():
-        fail(f"G2 approved narration does not exist: {approved}")
-    for field in ("factCitationRef", "voiceBriefRef"):
-        if not (project_root / decision[field]).is_file():
-            fail(f"G2 decision reference does not exist: {decision[field]}")
     return normalized_ref(approved)
 
 

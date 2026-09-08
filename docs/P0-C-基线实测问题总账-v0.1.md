@@ -46,10 +46,10 @@
 - **⑮**：macOS `say` 直接输出 wav 的格式兼容问题，需要 CAF→FFmpeg 转换 workaround。
 - **⑯**：BGM onset/卡点产物没有可运行生成脚本，无法机器复现。
 - **⑰**：G2 文本估时与实际 TTS 时长偏差约 40%，应先合成再估时。
-- **⑱**：脚本要求 `sourceEvidence[].relativePath`，evidence contract 未声明该字段。
+- **⑱**：脚本要求 `sourceEvidence[].relativePath`，evidence contract 未声明该字段。**状态：已验证（2026-09-08）**；`relativePath` 已成为 G2 evidence contract 的必填字段，G3 抽帧脚本会拒绝缺失或越出素材包的路径。验证：`~/.local/bin/python3 skill/video-edit-plan/tests/test_validate_g3_plan.py`（26/26 通过）；黑盒 `missing`、`escape` 路径均被结构化拒绝，合法路径可进入 G3 消费。修复提交：待本批次验收后创建。
 - **⑲**：目标主体人工确认门与项目所有者裁决冲突；应改为 Agent 自动闭环 + 充分性分流，人工只看最终 G3 回显。
 - **⑳**：视觉账本没有正式 supersede/作废通道，只能升 promptVersion 变通。
-- **㉑**：G2 决定 schema 与 G3 validator 漂移，顶层字段与 FILE ref 要求未对齐。
+- **㉑**：G2 决定 schema 与 G3 validator 漂移，顶层字段与 FILE ref 要求未对齐。**状态：已验证（2026-09-08）**；G2 与 G3 统一使用 `approvedNarrationRef`、`factCitationRef`、`voiceBriefRef`，且引用必须为项目内真实文件而非目录；G3 直接复用 G2 decision validator。验证：`~/.local/bin/python3 skill/video-edit-plan/tests/test_validate_g3_plan.py`（26/26 通过，含合法 G2→G3 闭环、旧字段拒绝和目录引用拒绝）；`~/.local/bin/python3 skill/p0-c-pipeline/tests/test_pipeline_state.py`（7/7 通过，G2 审批字段与门禁同步）。修复提交：待本批次验收后创建。
 - **㉒**：末尾抽帧 ffmpeg 退出 0 但不落盘，脚本不检查文件存在。
 - **㉓**：G0 音频 register 只哈希不解码探针，损坏网易云加密文件一路流到 G3 才暴露。
 - **㉔**：用户回显没有规定人类可读时间码，首版裸毫秒不可读。**状态：已验证（2026-09-08）**；G3 最终回显保留整数毫秒为唯一机器真相，并强制由切点派生 `outputTimecode`、`sourceTimecode`（`mm:ss.mmm`）后生成固定八列 Markdown 卡。validator 会拒绝缺失或与毫秒不一致的展示时间码。验证：`~/.local/bin/python3 skill/video-edit-plan/tests/test_validate_g3_callback.py`（9/9 通过，含格式化边界、缺失/漂移阻断和渲染器）。修复提交：`339da03`（Enforce node review gates and readable timecodes）。

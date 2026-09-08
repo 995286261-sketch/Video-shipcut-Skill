@@ -21,9 +21,13 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.voice = self.root / "voice.md"
         for path in (self.narration, self.facts, self.voice):
             path.write_text("fixture", encoding="utf-8")
+        self.source_pack = self.root / "G0-素材包"
+        self.source = self.source_pack / "clip.mp4"
+        self.source.parent.mkdir()
+        self.source.write_bytes(b"fixture")
         self.evidence_path = self.write_json("evidence.json", {
             "projectId": "demo-001",
-            "sourceEvidence": [{"assetId": "clip-1", "sha256": "fixture-sha", "sourceProbe": {"durationMs": 10_000}}],
+            "sourceEvidence": [{"assetId": "clip-1", "relativePath": "clip.mp4", "sha256": "fixture-sha", "sourceProbe": {"durationMs": 10_000}}],
         })
         self.visual_analysis_path = self.write_json("visual-analysis.json", {
             "schemaVersion": "0.1", "projectId": "demo-001", "node": "G3", "status": "completed", "analysisScope": "fixture",
@@ -69,6 +73,42 @@ class ValidateG3PlanTest(unittest.TestCase):
         )
         return result.returncode, result.stdout + result.stderr
 
+    def test_valid_g2_decision_is_consumable_by_g3(self):
+        decision = self.decision()
+        validator = ROOT / "skill" / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
+        result = subprocess.run([str(PYTHON), str(validator), "--decision", str(decision), "--project-root", str(self.root)], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
+
+    def test_legacy_approval_field_names_are_rejected(self):
+        value = {
+            "schemaVersion": "0.1", "projectId": "demo-001", "node": "G2", "status": "approved_for_g3",
+            "approvedNarrationRef": str(self.narration), "factDecisionRef": str(self.facts),
+            "voiceDecisionRef": str(self.voice), "permittedFactIds": ["f1"], "prohibitedTopics": [],
+        }
+        decision = self.write_json("legacy-decision.json", value)
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("factCitationRef", output)
+
+    def test_directory_approval_reference_is_rejected(self):
+        decision = self.decision(factCitationRef=str(self.root))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("existing project file", output)
+
+    def test_evidence_must_expose_relative_path_for_g3_consumers(self):
+        value = json.loads(self.evidence_path.read_text(encoding="utf-8"))
+        del value["sourceEvidence"][0]["relativePath"]
+        self.evidence_path.write_text(json.dumps(value), encoding="utf-8")
+        decision = self.decision()
+        verification_plan = self.plan(decision)
+        for script, extra in ((ROOT / "skill/video-edit-plan/scripts/g3_extract_verification_frames.py", ("--plan", str(verification_plan))), (ROOT / "skill/video-edit-plan/scripts/g3_extract_visual_analysis_keyframes.py", ("--asset-id", "clip-1"))):
+            result = subprocess.run([str(PYTHON), str(script), "--evidence", str(self.evidence_path), "--source-pack", str(self.source_pack), "--output-dir", str(self.root / "frames"), *extra], capture_output=True, text=True, encoding="utf-8")
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn("relativePath", result.stdout)
+
     def test_approved_g2_narration_can_enter_g3(self):
         decision = self.decision()
         code, output = self.run_cli(self.plan(decision), decision)
@@ -100,7 +140,7 @@ class ValidateG3PlanTest(unittest.TestCase):
         decision = self.decision(approvedNarrationRef=str(self.root / "missing.md"))
         code, output = self.run_cli(self.plan(decision), decision)
         self.assertNotEqual(0, code)
-        self.assertIn("does not exist", output)
+        self.assertIn("must be an existing project file", output)
 
     def test_missing_g2_decision_argument_is_rejected(self):
         result = subprocess.run([str(PYTHON), str(SCRIPT), "--plan", "x", "--evidence", "y"], capture_output=True, text=True, encoding="utf-8", errors="replace")

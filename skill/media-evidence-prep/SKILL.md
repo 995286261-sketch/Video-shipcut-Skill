@@ -32,7 +32,7 @@ metadata:
 
 ## Pipeline Integration
 
-Read `工作台/<projectId>/pipeline-state.json` and accept only state-registered inputs; archived files are never inputs. Record only G2 output references, warnings, and review points through `$p0-c-pipeline`; do not advance G3. Read `references/g2-choice-cards.md` before presenting G2 decisions. Before G2 approval, generate a short local voice audition and explicitly confirm language, accent, voice type, and speaking rate; record its reference as `voiceDecisionRef`. A narration is invalid for G3 until G2 approval registers `approvedNarrationRef`, `factDecisionRef`, and `voiceDecisionRef`.
+Read `工作台/<projectId>/pipeline-state.json` and accept only state-registered inputs; archived files are never inputs. Record only G2 output references, warnings, and review points through `$p0-c-pipeline`; do not advance G3. Read `references/g2-choice-cards.md` before presenting G2 decisions. Before G2 approval, generate a short local voice audition and explicitly confirm language, accent, voice type, and speaking rate; record its reference as `voiceBriefRef`. A narration is invalid for G3 until `scripts/validate_g2_decision.py` accepts an `approved_for_g3` decision whose `approvedNarrationRef`, `factCitationRef`, and `voiceBriefRef` are existing project files.
 
 ## 标准产物
 

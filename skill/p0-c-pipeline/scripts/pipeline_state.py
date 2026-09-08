@@ -223,15 +223,15 @@ def command_approve(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": str(error)}, 2)
     approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response, "approvedAt": now()}
     if node == "G2":
-        if not args.approved_narration_ref or not args.fact_decision_ref or not args.voice_decision_ref:
-            emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factDecisionRef, and voiceDecisionRef"}, 2)
+        if not args.approved_narration_ref or not args.fact_citation_ref or not args.voice_brief_ref:
+            emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factCitationRef, and voiceBriefRef"}, 2)
         try:
-            for label, reference in (("G2 approvedNarrationRef", args.approved_narration_ref), ("G2 factDecisionRef", args.fact_decision_ref), ("G2 voiceDecisionRef", args.voice_decision_ref)):
+            for label, reference in (("G2 approvedNarrationRef", args.approved_narration_ref), ("G2 factCitationRef", args.fact_citation_ref), ("G2 voiceBriefRef", args.voice_brief_ref)):
                 require_project_file(state_path, reference, label)
-            require_basis_references(record["reviewGate"], [args.approved_narration_ref, args.fact_decision_ref, args.voice_decision_ref])
+            require_basis_references(record["reviewGate"], [args.approved_narration_ref, args.fact_citation_ref, args.voice_brief_ref])
         except ValueError as error:
             emit({"status": "blocked", "error": str(error)}, 2)
-        approval.update({"approvedNarrationRef": args.approved_narration_ref, "factDecisionRef": args.fact_decision_ref, "voiceDecisionRef": args.voice_decision_ref})
+        approval.update({"approvedNarrationRef": args.approved_narration_ref, "factCitationRef": args.fact_citation_ref, "voiceBriefRef": args.voice_brief_ref})
     if node == "G3":
         if not args.edit_plan_ref:
             emit({"status": "blocked", "error": "G3 approval requires editPlanRef"}, 2)
@@ -330,7 +330,7 @@ def parser() -> argparse.ArgumentParser:
     record.add_argument("--node-status", choices=sorted(STATES), required=True); record.add_argument("--input-ref", action="append"); record.add_argument("--artifact-ref", action="append"); record.add_argument("--review-point", action="append"); record.set_defaults(func=command_record)
     review = sub.add_parser("record-review"); review.add_argument("--state", required=True); review.add_argument("--node", choices=NODES[1:], required=True); review.add_argument("--review-gate-ref", required=True); review.set_defaults(func=command_record_review)
     approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True); approve.add_argument("--approval-token", required=True); approve.add_argument("--approval-response", required=True)
-    approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-decision-ref"); approve.add_argument("--voice-decision-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
+    approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)
     reopen_g3 = sub.add_parser("reopen-g3"); reopen_g3.add_argument("--state", required=True); reopen_g3.add_argument("--reason", required=True); reopen_g3.add_argument("--rework-ref", required=True); reopen_g3.set_defaults(func=command_reopen_g3)
     return result

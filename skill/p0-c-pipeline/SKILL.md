@@ -44,7 +44,7 @@ Record a node's artifact references and review items, set it to `review_required
 
 ## Hard gates
 
-- G2 approval requires `approvedNarrationRef` and `factDecisionRef`.
+- G2 approval requires `approvedNarrationRef` and `factCitationRef`.
 - G3 approval requires an explicit approval record and cannot use a superseded narration draft.
 - G4 local-direct branch can advance with a validated local candidate and explicit user review. When ChatCut is selected, G4 cannot advance without a real ChatCut export reference; a flattened preview is not an editable handoff.
 - G5 cannot complete until human QA is recorded. Accepted warnings remain visible.

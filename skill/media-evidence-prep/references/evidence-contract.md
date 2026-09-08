@@ -27,6 +27,7 @@ For new projects, G2 writes project-level artifacts under `工作台/<projectSlu
 Each `sourceEvidence[]` item must include:
 
 - `assetId`
+- `relativePath`: a non-empty path relative to the material-pack root. It must resolve to a registered file, remain inside the material pack, and match the `assetId` / `sha256` provenance consumed by G3.
 - `sha256`
 - `sourceProbe.durationMs`
 - `sourceProbe.video`

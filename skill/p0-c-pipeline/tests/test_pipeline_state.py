@@ -17,7 +17,7 @@ CARD_TYPES = {
 }
 CHECKLISTS = {
     "G1": ("direction_brief", "claims_and_boundaries", "direction_card"),
-    "G2": ("fact_decision", "approved_narration", "voice_decision", "g2_card"),
+    "G2": ("fact_citation", "approved_narration", "voice_brief", "g2_card"),
     "G3": ("approved_edit_plan", "final_timeline_review", "subtitle_timeline", "bgm_decision", "g3_card"),
     "G4": ("candidate_or_export", "render_validation", "playback_review_card"),
     "G5": ("delivery_manifest", "qa_validation", "playback_review", "distribution_boundary"),
@@ -102,7 +102,7 @@ class PipelineStateTest(unittest.TestCase):
     def approve(self, node, *, token=None, response=None, code=0, g4_mode="local_direct"):
         args = ["approve", "--state", self.state, "--node", node, "--approval-ref", self.files[node]["approval"], "--approval-token", token or f"确认 {node}", "--approval-response", response if response is not None else token or f"确认 {node}"]
         if node == "G2":
-            args += ["--approved-narration-ref", self.narration, "--fact-decision-ref", self.facts, "--voice-decision-ref", self.voice]
+            args += ["--approved-narration-ref", self.narration, "--fact-citation-ref", self.facts, "--voice-brief-ref", self.voice]
         elif node == "G3":
             args += ["--edit-plan-ref", self.plan, "--timeline-review-ref", self.timeline]
         elif node == "G4" and g4_mode == "chatcut":
@@ -180,7 +180,7 @@ class PipelineStateTest(unittest.TestCase):
         self.prepare_node("G2", basis_refs=[self.narration, self.facts, self.voice])
         self.facts.unlink()
         blocked = self.approve("G2", code=2)
-        self.assertIn("G2 factDecisionRef", blocked["error"])
+        self.assertIn("G2 factCitationRef", blocked["error"])
 
     def test_reopen_invalidates_review_gate_and_approval(self):
         self.init()

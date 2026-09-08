@@ -31,7 +31,9 @@ def main() -> int:
         if not asset:
             fail(f"unknown assetId: {segment.get('assetId')}")
         relative = asset.get("relativePath")
-        source = (args.source_pack / str(relative)).resolve()
+        if not isinstance(relative, str) or not relative.strip():
+            fail(f"source evidence for {segment.get('assetId')} requires relativePath")
+        source = (args.source_pack / relative).resolve()
         if not source.is_file() or args.source_pack.resolve() not in source.parents:
             fail(f"registered source missing: {relative}")
         start, end = segment.get("startMs"), segment.get("endMs")

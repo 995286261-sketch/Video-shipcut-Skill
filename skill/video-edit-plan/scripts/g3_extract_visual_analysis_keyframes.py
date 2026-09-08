@@ -40,6 +40,8 @@ def main() -> int:
     if not entry:
         fail(f"unknown assetId: {args.asset_id}")
     relative = entry.get("relativePath")
+    if not isinstance(relative, str) or not relative.strip():
+        fail(f"source evidence for {args.asset_id} requires relativePath")
     source_pack = args.source_pack.resolve()
     source = (source_pack / str(relative)).resolve()
     if not source.is_file() or source_pack not in source.parents:
