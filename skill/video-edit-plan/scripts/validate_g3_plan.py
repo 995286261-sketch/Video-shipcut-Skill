@@ -2,8 +2,17 @@
 """Validate traceability and G2 approval gates for a G3 edit-plan draft."""
 
 import argparse
+import importlib.util
 import json
 from pathlib import Path
+
+
+G2_DECISION_VALIDATOR = Path(__file__).resolve().parents[2] / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
+spec = importlib.util.spec_from_file_location("validate_g2_decision", G2_DECISION_VALIDATOR)
+if spec is None or spec.loader is None:
+    raise RuntimeError("could not load validate_g2_decision.py")
+g2_decision_validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(g2_decision_validator)
 
 
 def fail(message: str) -> None:
@@ -16,38 +25,14 @@ def normalized_ref(value: str) -> str:
 
 
 def validate_g2_decision(decision: dict, project_id: str, decision_path: Path) -> str:
-    if decision.get("schemaVersion") != "0.1":
-        fail("G2 decision schemaVersion must be 0.1")
+    project_root = Path.cwd()
     if decision.get("projectId") != project_id:
         fail("G2 decision projectId must match plan projectId")
-    if decision.get("node") != "G2":
-        fail("decision must belong to G2")
-    if decision.get("status") != "approved_for_g3":
-        fail("G2 decision is not approved_for_g3")
+    try:
+        g2_decision_validator.validate(decision, project_root)
+    except ValueError as error:
+        fail(str(error))
     approved = decision.get("approvedNarrationRef")
-    if not isinstance(approved, str) or not approved.strip():
-        fail("G2 decision requires approvedNarrationRef")
-    for field in ("factCitationRef", "voiceBriefRef"):
-        if not isinstance(decision.get(field), str) or not decision[field].strip():
-            fail(f"G2 decision requires {field}")
-    if not isinstance(decision.get("permittedFactIds"), list):
-        fail("G2 decision requires permittedFactIds")
-    if not isinstance(decision.get("prohibitedTopics"), list):
-        fail("G2 decision requires prohibitedTopics")
-    manually_verified = decision.get("userManuallyVerifiedClaims", [])
-    if not isinstance(manually_verified, list) or not all(isinstance(item, str) and item.strip() for item in manually_verified):
-        fail("userManuallyVerifiedClaims must be a list of non-empty strings")
-    if manually_verified:
-        provenance_rule = decision.get("provenanceRule")
-        if not isinstance(provenance_rule, str) or "not" not in provenance_rule.lower() or "first" not in provenance_rule.lower():
-            fail("manually verified claims require a provenanceRule stating they are not first-party verified")
-    project_root = Path.cwd()
-    approved_path = project_root / approved
-    if not approved_path.is_file():
-        fail(f"G2 approved narration does not exist: {approved}")
-    for field in ("factCitationRef", "voiceBriefRef"):
-        if not (project_root / decision[field]).is_file():
-            fail(f"G2 decision reference does not exist: {decision[field]}")
     return normalized_ref(approved)
 
 
@@ -83,7 +68,7 @@ def validate_visual_analysis(manifest: dict, project_id: str, evidence: dict) ->
             if frame["analysisStatus"] == "completed":
                 if not isinstance(frame.get("observedVisuals"), str) or not frame["observedVisuals"].strip():
                     fail("completed visual analysis frame requires observedVisuals")
-                if frame.get("identityStatus") not in {"confirmed", "uncertain", "not_present", "mixed"}:
+                if frame.get("identityStatus") not in {"confirmed", "uncertain", "not_present", "mixed", "person_only"}:
                     fail("completed visual analysis frame requires valid identityStatus")
 
 
@@ -111,6 +96,57 @@ def validate_semantic_beats(beats_payload: dict, project_id: str, plan: dict, be
             fail(f"semantic beat {beat['beatId']} has invalid output time range")
         result[beat["beatId"]] = beat
     return result
+
+
+def validate_nonempty_strings(value: object, label: str) -> list[str]:
+    if not isinstance(value, list) or not value or not all(isinstance(item, str) and item.strip() for item in value):
+        fail(f"{label} must be a non-empty list of non-empty strings")
+    return value
+
+
+def validate_subject_confirmation(confirmation: dict, project_id: str, confirmation_path: Path) -> None:
+    if confirmation.get("schemaVersion") != "0.1" or confirmation.get("node") != "G3":
+        fail("subject confirmation must be a G3 schemaVersion 0.1 artifact")
+    if confirmation.get("projectId") != project_id:
+        fail("subject confirmation projectId must match plan projectId")
+    subject = confirmation.get("targetSubject")
+    if not isinstance(subject, dict):
+        fail("subject confirmation requires targetSubject")
+    if subject.get("userConfirmed") is not True:
+        fail("subject confirmation requires targetSubject.userConfirmed=true")
+    validate_nonempty_strings(subject.get("identificationRules"), "subject identificationRules")
+    validate_nonempty_strings(subject.get("exclusionRules"), "subject exclusionRules")
+    if not isinstance(confirmation.get("candidateVerificationRule"), str) or not confirmation["candidateVerificationRule"].strip():
+        fail("subject confirmation requires candidateVerificationRule")
+    fallback = confirmation.get("sufficiencyFallback")
+    if fallback is not None:
+        if not isinstance(fallback, dict) or fallback.get("preApproved") != "shorten_output":
+            fail("subject sufficiencyFallback only permits preApproved=shorten_output")
+        for field in ("approvedBy", "approvedAt"):
+            if not isinstance(fallback.get(field), str) or not fallback[field].strip():
+                fail(f"subject sufficiencyFallback requires {field}")
+
+
+def validate_observation_ledger(plan: dict, ledger: dict) -> None:
+    if ledger.get("schemaVersion") != "0.1" or ledger.get("node") != "G3":
+        fail("observation ledger must be a G3 schemaVersion 0.1 artifact")
+    if ledger.get("projectId") != plan["projectId"]:
+        fail("observation ledger projectId must match plan projectId")
+    records = ledger.get("records")
+    if not isinstance(records, list):
+        fail("observation ledger requires records")
+    by_id = {record.get("recordId"): record for record in records if isinstance(record, dict)}
+    for segment in plan.get("segments", []):
+        verification = segment.get("visualVerification", {})
+        if not isinstance(verification, dict):
+            continue
+        observation_ids = validate_nonempty_strings(verification.get("derivedFromObservationIds"), f"segment {segment.get('segmentId')} derivedFromObservationIds")
+        for observation_id in observation_ids:
+            record = by_id.get(observation_id)
+            if record is None:
+                fail(f"segment {segment.get('segmentId')} references unknown observation {observation_id}")
+            if record.get("analysisStatus") != "completed":
+                fail(f"segment {segment.get('segmentId')} cannot use non-active observation {observation_id}")
 
 
 def validate_duration_decision(plan: dict) -> None:
@@ -151,6 +187,8 @@ def main() -> int:
     parser.add_argument("--g2-decision", required=True, type=Path)
     parser.add_argument("--visual-analysis", required=True, type=Path)
     parser.add_argument("--semantic-beats", required=True, type=Path)
+    parser.add_argument("--subject-confirmation", type=Path)
+    parser.add_argument("--ledger", type=Path)
     args = parser.parse_args()
     # Windows editors commonly write UTF-8 with a BOM. Accept it at every JSON boundary.
     plan = json.loads(args.plan.read_text(encoding="utf-8-sig"))
@@ -158,6 +196,8 @@ def main() -> int:
     decision = json.loads(args.g2_decision.read_text(encoding="utf-8-sig"))
     visual_analysis = json.loads(args.visual_analysis.read_text(encoding="utf-8-sig"))
     semantic_beats = json.loads(args.semantic_beats.read_text(encoding="utf-8-sig"))
+    subject_confirmation = json.loads(args.subject_confirmation.read_text(encoding="utf-8-sig")) if args.subject_confirmation else None
+    ledger = json.loads(args.ledger.read_text(encoding="utf-8-sig")) if args.ledger else None
     if plan.get("schemaVersion") != "0.1":
         fail("plan schemaVersion must be 0.1")
     if plan.get("projectId") != evidence.get("projectId"):
@@ -170,6 +210,10 @@ def main() -> int:
     validate_duration_decision(plan)
     validate_visual_analysis(visual_analysis, plan["projectId"], evidence)
     beat_index = validate_semantic_beats(semantic_beats, plan["projectId"], plan, args.semantic_beats)
+    if subject_confirmation is not None:
+        validate_subject_confirmation(subject_confirmation, plan["projectId"], args.subject_confirmation)
+    if ledger is not None:
+        validate_observation_ledger(plan, ledger)
     approved_narration_ref = validate_g2_decision(decision, plan["projectId"], args.g2_decision)
     narration_draft = plan.get("narrationDraft")
     if not isinstance(narration_draft, str) or normalized_ref(narration_draft) != approved_narration_ref:
@@ -281,6 +325,10 @@ def main() -> int:
                 fail(f"approved_for_g4 plan requires timelineReview.{field}")
         if not isinstance(review["basisRefs"], list) or not all(isinstance(ref, str) and ref.strip() for ref in review["basisRefs"]):
             fail("timelineReview.basisRefs must be a non-empty list of references")
+        if subject_confirmation is not None and normalized_ref(str(args.subject_confirmation)) not in {normalized_ref(ref) for ref in review["basisRefs"]}:
+            fail("approved_for_g4 timelineReview.basisRefs must include the subject confirmation")
+        if ledger is not None and normalized_ref(str(args.ledger)) not in {normalized_ref(ref) for ref in review["basisRefs"]}:
+            fail("approved_for_g4 timelineReview.basisRefs must include the observation ledger")
         if any(segment.get("status") in {"pending", "verified_candidate"} or segment.get("visualVerification", {}).get("status") != "verified" for segment in segments):
             fail("approved_for_g4 plan cannot contain pending or verified_candidate segments")
         approval = plan.get("g3Approval")

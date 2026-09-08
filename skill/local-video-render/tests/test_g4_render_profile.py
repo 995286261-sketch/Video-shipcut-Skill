@@ -47,6 +47,10 @@ class G4RenderProfileTest(unittest.TestCase):
             payload = json.loads(result.stdout)
             self.assertEqual("preserve_source", payload["aspectRatioPolicy"])
             self.assertEqual({"width": 360, "height": 640}, payload["canvas"])
+            # Issue 030: segments land in the contracted clean-segments/ subdirectory.
+            self.assertEqual(str(root / "out" / "clean-segments"), payload["segmentsDir"])
+            self.assertTrue((root / "out" / "clean-segments" / "seg-001.mp4").is_file())
+            self.assertFalse((root / "out" / "seg-001.mp4").exists())
 
     def test_explicit_profile_requires_both_dimensions(self):
         with tempfile.TemporaryDirectory() as temporary:

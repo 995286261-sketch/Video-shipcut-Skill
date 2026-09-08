@@ -2,13 +2,18 @@ import json
 import subprocess
 import sys
 import tempfile
+import importlib.util
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "validate_g3_callback.py"
+RENDERER = ROOT / "scripts" / "render_g3_review_card.py"
 PYTHON = sys.executable
+spec = importlib.util.spec_from_file_location("validate_g3_callback", SCRIPT)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
 
 
 class G3CallbackValidatorTests(unittest.TestCase):
@@ -36,7 +41,9 @@ class G3CallbackValidatorTests(unittest.TestCase):
         rows = []
         for number, start in enumerate((0, 1000), 1):
             rows.append({"segmentId": f"seg-{number:03}", "outputStartMs": start, "outputEndMs": start + 1000,
+                "outputTimecode": validator.format_review_range(start, start + 1000),
                 "narrationText": "口播原文", "sourceStartMs": start + 10000, "sourceEndMs": start + 11000,
+                "sourceTimecode": validator.format_review_range(start + 10000, start + 11000),
                 "observedVisuals": "实际可见的目标主体", "semanticStatus": "direct_match", "subjectStatus": "target_confirmed",
                 "riskSummary": "左上角水印需裁切", "bgmPhrase": "phrase-01", "transitionInstruction": "硬切"})
         return {"schemaVersion": "0.1", "node": "G3", "projectId": "p", "callbackType": "final_review",
@@ -59,6 +66,35 @@ class G3CallbackValidatorTests(unittest.TestCase):
         result = self.run_cli(value, self.plan())
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("outputStartMs", result.stdout)
+
+    def test_missing_or_mismatched_display_timecode_is_blocked(self):
+        value = self.callback()
+        del value["rows"][0]["outputTimecode"]
+        result = self.run_cli(value, self.plan())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("outputTimecode", result.stdout)
+        value = self.callback()
+        value["rows"][0]["sourceTimecode"] = "00:00.000–00:01.000"
+        result = self.run_cli(value, self.plan())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("sourceTimecode", result.stdout)
+
+    def test_review_timecode_formatting(self):
+        self.assertEqual("00:00.000", validator.format_review_timecode(0))
+        self.assertEqual("00:00.001", validator.format_review_timecode(1))
+        self.assertEqual("01:01.234", validator.format_review_timecode(61_234))
+        self.assertEqual("61:01.234", validator.format_review_timecode(3_661_234))
+
+    def test_renderer_emits_human_readable_ranges(self):
+        callback_path = self.write("callback.json", self.callback())
+        plan_path = self.plan()
+        output = self.root / "G3-回显卡.md"
+        result = subprocess.run([PYTHON, str(RENDERER), "--callback", str(callback_path), "--plan", str(plan_path), "--output", str(output)], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        card = output.read_text(encoding="utf-8")
+        self.assertIn("00:00.000–00:01.000", card)
+        self.assertIn("00:10.000–00:11.000", card)
+        self.assertIn("确认 G3", card)
 
     def test_wrong_column_order_is_blocked(self):
         value = self.callback()

@@ -8,7 +8,7 @@ G3 编辑计划已实现为人工审核规划，输入为已校验素材包、G2
 
 ## G3 时长决定
 
-每份 G3 计划必须含有 `durationDecision`，将 G1 的目标时长、G2 已批准口播的自然估计时长和用户明确决定连在一起：
+每份 G3 计划必须含有 `durationDecision`，将 G1 的目标时长、G2 已批准口播的时长和用户明确决定连在一起。`narrationEstimatedDurationSec` 在旁白已合成时必须取 `G2-配音清单-v0.1.json` 的 `measuredTotalDurationMs/1000` 实测值；只有尚未合成才能用文本估计并标记待合成——基线实测文本估时与真实 TTS 偏差约 40%，估时不得冒充实测。
 
 ```json
 {

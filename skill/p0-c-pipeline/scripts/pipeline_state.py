@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from project_layout import CHATCUT_DIRECTORY, require_g4_file, require_g5_file, require_project_file
+from review_gate import load_review_gate, require_basis_references
 
 NODES = ("G0", "G1", "G2", "G3", "G4", "G5")
 STATES = {"pending", "in_progress", "review_required", "blocked", "completed", "completed_with_accepted_warnings"}
@@ -56,7 +57,20 @@ def write_state(path: Path, state: dict) -> None:
 
 
 def node_record(status: str = "pending") -> dict:
-    return {"status": status, "inputRefs": [], "artifactRefs": [], "humanReviewPoints": [], "approval": None}
+    return {"status": status, "inputRefs": [], "artifactRefs": [], "humanReviewPoints": [], "reviewGate": None, "approval": None}
+
+
+def clear_review_gate(record: dict) -> None:
+    record["reviewGate"] = None
+
+
+def require_approval_token(node: str, token: str | None, response: str | None) -> tuple[str, str]:
+    expected = f"确认 {node}"
+    if token != expected:
+        raise ValueError(f"{node} approvalToken must exactly be {expected}")
+    if not isinstance(response, str) or response.strip() != expected:
+        raise ValueError(f"{node} approvalResponse must exactly be {expected}")
+    return expected, response.strip()
 
 
 def next_action(node: str) -> str:
@@ -100,7 +114,8 @@ def command_status(args: argparse.Namespace) -> None:
     state = read_state(Path(args.state))
     node = state["currentNode"]
     record = state["nodes"].get(node, {})
-    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "acceptedWarnings": state.get("acceptedWarnings", []), "nextAction": state["nextAction"]})
+    review_gate = record.get("reviewGate")
+    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "nextAction": state["nextAction"]})
 
 
 def command_record(args: argparse.Namespace) -> None:
@@ -109,6 +124,8 @@ def command_record(args: argparse.Namespace) -> None:
     if args.node != state["currentNode"]:
         emit({"status": "blocked", "error": "can only record the current node", "currentNode": state["currentNode"]}, 2)
     record = state["nodes"][args.node]
+    if args.node_status != "review_required" or record.get("status") != "review_required":
+        clear_review_gate(record)
     record["status"] = args.node_status
     for field, value in (("inputRefs", args.input_ref), ("artifactRefs", args.artifact_ref), ("humanReviewPoints", args.review_point)):
         if value:
@@ -117,6 +134,22 @@ def command_record(args: argparse.Namespace) -> None:
     state["nextAction"] = "Resolve the listed review or blocker items." if args.node_status in {"review_required", "blocked"} else next_action(args.node)
     write_state(state_path, state)
     emit({"status": "recorded", "currentNode": args.node, "nodeStatus": args.node_status})
+
+
+def command_record_review(args: argparse.Namespace) -> None:
+    state_path = Path(args.state)
+    state = read_state(state_path)
+    if args.node != state["currentNode"]:
+        emit({"status": "blocked", "error": "can only record review for the current node", "currentNode": state["currentNode"]}, 2)
+    record = state["nodes"][args.node]
+    if record["status"] != "review_required":
+        emit({"status": "blocked", "error": "review gate can only be recorded while node is review_required", "nodeStatus": record["status"]}, 2)
+    try:
+        record["reviewGate"] = load_review_gate(state_path, args.review_gate_ref, args.node, state["projectId"])
+    except ValueError as error:
+        emit({"status": "blocked", "error": str(error)}, 2)
+    write_state(state_path, state)
+    emit({"status": "review_recorded", "currentNode": args.node, "reviewGate": record["reviewGate"], "nextAction": f"Present the registered card and wait for the exact response 确认 {args.node}."})
 
 
 def command_reopen(args: argparse.Namespace) -> None:
@@ -130,9 +163,11 @@ def command_reopen(args: argparse.Namespace) -> None:
     history.append({"fromNode": "G3", "toNode": "G2", "reason": args.reason, "reworkRef": args.rework_ref, "reopenedAt": now()})
     g2, g3 = state["nodes"]["G2"], state["nodes"]["G3"]
     g2["status"] = "in_progress"
+    clear_review_gate(g2)
     g2["approval"] = None
     g2["humanReviewPoints"] = list(dict.fromkeys(g2.get("humanReviewPoints", []) + ["reapprove_g2_amendment"]))
     g3["status"] = "pending"
+    clear_review_gate(g3)
     g3["humanReviewPoints"] = []
     g3["approval"] = None
     state["currentNode"] = "G2"
@@ -153,9 +188,11 @@ def command_reopen_g3(args: argparse.Namespace) -> None:
     history.append({"fromNode": "G4", "toNode": "G3", "reason": args.reason, "reworkRef": args.rework_ref, "reopenedAt": now()})
     g3, g4 = state["nodes"]["G3"], state["nodes"]["G4"]
     g3["status"] = "in_progress"
+    clear_review_gate(g3)
     g3["approval"] = None
     g3["humanReviewPoints"] = list(dict.fromkeys(g3.get("humanReviewPoints", []) + ["rebuild_semantic_alignment_and_reapprove_g3"]))
     g4["status"] = "pending"
+    clear_review_gate(g4)
     g4["inputRefs"] = []
     g4["humanReviewPoints"] = []
     state["currentNode"] = "G3"
@@ -174,15 +211,27 @@ def command_approve(args: argparse.Namespace) -> None:
     if not args.approval_ref:
         emit({"status": "invalid", "error": "approvalRef is required"}, 2)
     record = state["nodes"][node]
+    if record.get("status") != "review_required":
+        emit({"status": "blocked", "error": "approval requires the node to be review_required", "nodeStatus": record.get("status")}, 2)
+    if not record.get("reviewGate"):
+        emit({"status": "blocked", "error": "approval requires a recorded review gate"}, 2)
     try:
+        approval_token, approval_response = require_approval_token(node, args.approval_token, args.approval_response)
         require_project_file(state_path, args.approval_ref, "approvalRef")
+        require_basis_references(record["reviewGate"], [args.approval_ref])
     except ValueError as error:
         emit({"status": "blocked", "error": str(error)}, 2)
-    approval = {"approvalRef": args.approval_ref, "approvedAt": now()}
+    approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response, "approvedAt": now()}
     if node == "G2":
-        if not args.approved_narration_ref or not args.fact_decision_ref or not args.voice_decision_ref:
-            emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factDecisionRef, and voiceDecisionRef"}, 2)
-        approval.update({"approvedNarrationRef": args.approved_narration_ref, "factDecisionRef": args.fact_decision_ref, "voiceDecisionRef": args.voice_decision_ref})
+        if not args.approved_narration_ref or not args.fact_citation_ref or not args.voice_brief_ref:
+            emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factCitationRef, and voiceBriefRef"}, 2)
+        try:
+            for label, reference in (("G2 approvedNarrationRef", args.approved_narration_ref), ("G2 factCitationRef", args.fact_citation_ref), ("G2 voiceBriefRef", args.voice_brief_ref)):
+                require_project_file(state_path, reference, label)
+            require_basis_references(record["reviewGate"], [args.approved_narration_ref, args.fact_citation_ref, args.voice_brief_ref])
+        except ValueError as error:
+            emit({"status": "blocked", "error": str(error)}, 2)
+        approval.update({"approvedNarrationRef": args.approved_narration_ref, "factCitationRef": args.fact_citation_ref, "voiceBriefRef": args.voice_brief_ref})
     if node == "G3":
         if not args.edit_plan_ref:
             emit({"status": "blocked", "error": "G3 approval requires editPlanRef"}, 2)
@@ -191,6 +240,10 @@ def command_approve(args: argparse.Namespace) -> None:
         try:
             require_project_file(state_path, args.edit_plan_ref, "G3 editPlanRef")
             require_project_file(state_path, args.timeline_review_ref, "G3 timelineReviewRef")
+        except ValueError as error:
+            emit({"status": "blocked", "error": str(error)}, 2)
+        try:
+            require_basis_references(record["reviewGate"], [args.edit_plan_ref, args.timeline_review_ref])
         except ValueError as error:
             emit({"status": "blocked", "error": str(error)}, 2)
         approval["editPlanRef"] = args.edit_plan_ref
@@ -205,6 +258,10 @@ def command_approve(args: argparse.Namespace) -> None:
                     raise ValueError("G4 ChatCut export must be under ChatCut-导出")
             except ValueError as error:
                 emit({"status": "blocked", "error": str(error)}, 2)
+            try:
+                require_basis_references(record["reviewGate"], [args.chatcut_export_ref])
+            except ValueError as error:
+                emit({"status": "blocked", "error": str(error)}, 2)
             approval["chatcutExportRef"] = args.chatcut_export_ref
             record["artifactRefs"] = list(dict.fromkeys(record["artifactRefs"] + [args.chatcut_export_ref]))
         else:
@@ -213,6 +270,10 @@ def command_approve(args: argparse.Namespace) -> None:
             try:
                 require_g4_file(state_path, args.local_render_ref, "G4 localRenderRef")
                 require_g4_file(state_path, args.g4_validation_ref, "G4 g4ValidationRef")
+            except ValueError as error:
+                emit({"status": "blocked", "error": str(error)}, 2)
+            try:
+                require_basis_references(record["reviewGate"], [args.local_render_ref, args.g4_validation_ref])
             except ValueError as error:
                 emit({"status": "blocked", "error": str(error)}, 2)
             approval["localRenderRef"] = args.local_render_ref
@@ -227,6 +288,10 @@ def command_approve(args: argparse.Namespace) -> None:
             require_g5_file(state_path, args.g5_validation_ref, "G5 g5ValidationRef")
             if manifest.name != "delivery-manifest.json":
                 raise ValueError("G5 deliveryManifestRef must name delivery-manifest.json")
+        except ValueError as error:
+            emit({"status": "blocked", "error": str(error)}, 2)
+        try:
+            require_basis_references(record["reviewGate"], [args.delivery_manifest_ref, args.g5_validation_ref])
         except ValueError as error:
             emit({"status": "blocked", "error": str(error)}, 2)
         approval["deliveryManifestRef"] = args.delivery_manifest_ref
@@ -263,8 +328,9 @@ def parser() -> argparse.ArgumentParser:
     status = sub.add_parser("status"); status.add_argument("--state", required=True); status.set_defaults(func=command_status)
     record = sub.add_parser("record"); record.add_argument("--state", required=True); record.add_argument("--node", choices=NODES, required=True)
     record.add_argument("--node-status", choices=sorted(STATES), required=True); record.add_argument("--input-ref", action="append"); record.add_argument("--artifact-ref", action="append"); record.add_argument("--review-point", action="append"); record.set_defaults(func=command_record)
-    approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True)
-    approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-decision-ref"); approve.add_argument("--voice-decision-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
+    review = sub.add_parser("record-review"); review.add_argument("--state", required=True); review.add_argument("--node", choices=NODES[1:], required=True); review.add_argument("--review-gate-ref", required=True); review.set_defaults(func=command_record_review)
+    approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True); approve.add_argument("--approval-token", required=True); approve.add_argument("--approval-response", required=True)
+    approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)
     reopen_g3 = sub.add_parser("reopen-g3"); reopen_g3.add_argument("--state", required=True); reopen_g3.add_argument("--reason", required=True); reopen_g3.add_argument("--rework-ref", required=True); reopen_g3.set_defaults(func=command_reopen_g3)
     return result

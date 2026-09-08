@@ -20,12 +20,32 @@ class G4ContractTest(unittest.TestCase):
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["start.jpg","middle.jpg","end.jpg"],"observedVisuals":"已查看起点、中点、终点帧，主体清晰可见。"}
-        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","targetProfile":{"targetDurationSec":3},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
         evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
-        plan_path=self.root/"plan.json"; evidence_path=self.root/"evidence.json"; plan_path.write_text(json.dumps(plan)); evidence_path.write_text(json.dumps(evidence)); output=self.root/"out"
+        # Issue 029: the manifest version derives from the input plan filename.
+        plan_path=self.root/"G3-剪辑计划-v0.2.json"; evidence_path=self.root/"evidence.json"; plan_path.write_text(json.dumps(plan)); evidence_path.write_text(json.dumps(evidence)); output=self.root/"out"
         value=self.run_cli(PREPARE,"--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack,"--output-dir",output)
-        self.assertEqual(2,value["segments"]); manifest=output/"G4-可编辑工程-v0.2.json"; checked=self.run_cli(VALIDATE,"--manifest",manifest)
+        self.assertEqual(2,value["segments"])
+        self.assertEqual(0,value["durationDeltaMs"])
+        manifest=output/"G4-可编辑工程-v0.2.json"; checked=self.run_cli(VALIDATE,"--manifest",manifest)
         self.assertEqual("valid",checked["status"])
+        # Issue 029: rerunning must refuse to silently overwrite the previous manifest.
+        blocked=self.run_cli(PREPARE,"--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack,"--output-dir",output,code=2)
+        self.assertIn("already exists",blocked["error"])
+        forced=self.run_cli(PREPARE,"--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack,"--output-dir",output,"--force")
+        self.assertEqual("prepared",forced["status"])
+
+    def test_prepare_requires_a_positive_target_duration(self):
+        """Issue 025: no durationDecision and no targetProfile must block, not emit 0ms."""
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
+        p=self.root/"plan.json"; e=self.root/"e.json"; p.write_text(json.dumps(plan)); e.write_text(json.dumps(evidence))
+        value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out",code=2)
+        self.assertIn("durationDecision",value["error"])
 
     def test_prepare_rejects_guessed_timecode_without_visual_verification(self):
         pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")

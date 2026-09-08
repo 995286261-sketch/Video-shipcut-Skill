@@ -21,9 +21,13 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.voice = self.root / "voice.md"
         for path in (self.narration, self.facts, self.voice):
             path.write_text("fixture", encoding="utf-8")
+        self.source_pack = self.root / "G0-素材包"
+        self.source = self.source_pack / "clip.mp4"
+        self.source.parent.mkdir()
+        self.source.write_bytes(b"fixture")
         self.evidence_path = self.write_json("evidence.json", {
             "projectId": "demo-001",
-            "sourceEvidence": [{"assetId": "clip-1", "sha256": "fixture-sha", "sourceProbe": {"durationMs": 10_000}}],
+            "sourceEvidence": [{"assetId": "clip-1", "relativePath": "clip.mp4", "sha256": "fixture-sha", "sourceProbe": {"durationMs": 10_000}}],
         })
         self.visual_analysis_path = self.write_json("visual-analysis.json", {
             "schemaVersion": "0.1", "projectId": "demo-001", "node": "G3", "status": "completed", "analysisScope": "fixture",
@@ -62,12 +66,79 @@ class ValidateG3PlanTest(unittest.TestCase):
         value.update(changes)
         return self.write_json("plan.json", value)
 
-    def run_cli(self, plan, decision):
-        result = subprocess.run(
-            [str(PYTHON), str(SCRIPT), "--plan", str(plan), "--evidence", str(self.evidence_path), "--g2-decision", str(decision), "--visual-analysis", str(self.visual_analysis_path), "--semantic-beats", str(self.semantic_beats_path)],
-            capture_output=True, text=True, encoding="utf-8", errors="replace",
-        )
+    def subject_confirmation(self, **changes):
+        value = {
+            "schemaVersion": "0.1", "projectId": "demo-001", "node": "G3",
+            "targetSubject": {
+                "canonicalName": "测试主体", "userConfirmed": True,
+                "identificationRules": ["起点、中点和终点可见测试主体。"],
+                "exclusionRules": ["模糊或其他主体不得自动认定。"],
+            },
+            "candidateVerificationRule": "每个候选均须核验三帧。",
+        }
+        if "targetSubject" in changes:
+            value["targetSubject"] = changes.pop("targetSubject")
+        value.update(changes)
+        return self.write_json("subject-confirmation.json", value)
+
+    def ledger(self, records=None):
+        value = {"schemaVersion": "0.1", "node": "G3", "projectId": "demo-001", "records": records if records is not None else [
+            {"recordId": "obs-active", "sourceAssetId": "clip-1", "sourceSha256": "fixture-sha", "sourceMs": 0, "frameExtractionSpec": "fixture", "analysisPromptVersion": "v1", "provider": "local", "model": "vision", "analysisStatus": "completed", "frameRef": "start.jpg", "observedVisuals": "主体可见", "createdAt": "2026-09-08T00:00:00Z"},
+            {"recordId": "obs-001", "sourceAssetId": "clip-1", "sourceSha256": "fixture-sha", "sourceMs": 500, "frameExtractionSpec": "fixture", "analysisPromptVersion": "v1", "provider": "local", "model": "vision", "analysisStatus": "completed", "frameRef": "middle.jpg", "observedVisuals": "旧主体判断", "createdAt": "2026-09-08T00:00:00Z"},
+            {"recordId": "obs-002", "sourceAssetId": "clip-1", "sourceSha256": "fixture-sha", "sourceMs": 500, "frameExtractionSpec": "fixture", "analysisPromptVersion": "v1", "provider": "local", "model": "vision", "analysisStatus": "completed", "frameRef": "middle.jpg", "observedVisuals": "用户改判后的主体状态", "supersedesRecordId": "obs-001", "correctionSource": "用户指认", "createdAt": "2026-09-08T00:00:01Z"},
+        ]}
+        by_id = {record["recordId"]: record for record in value["records"]}
+        for record in value["records"]:
+            target = record.get("supersedesRecordId")
+            if target in by_id:
+                by_id[target]["analysisStatus"] = "superseded"
+                by_id[target]["supersededBy"] = record["recordId"]
+        return self.write_json("ledger.json", value)
+
+    def run_cli(self, plan, decision, subject=None, ledger=None):
+        command = [str(PYTHON), str(SCRIPT), "--plan", str(plan), "--evidence", str(self.evidence_path), "--g2-decision", str(decision), "--visual-analysis", str(self.visual_analysis_path), "--semantic-beats", str(self.semantic_beats_path)]
+        if subject:
+            command += ["--subject-confirmation", str(subject)]
+        if ledger:
+            command += ["--ledger", str(ledger)]
+        result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
         return result.returncode, result.stdout + result.stderr
+
+    def test_valid_g2_decision_is_consumable_by_g3(self):
+        decision = self.decision()
+        validator = ROOT / "skill" / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
+        result = subprocess.run([str(PYTHON), str(validator), "--decision", str(decision), "--project-root", str(self.root)], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
+
+    def test_legacy_approval_field_names_are_rejected(self):
+        value = {
+            "schemaVersion": "0.1", "projectId": "demo-001", "node": "G2", "status": "approved_for_g3",
+            "approvedNarrationRef": str(self.narration), "factDecisionRef": str(self.facts),
+            "voiceDecisionRef": str(self.voice), "permittedFactIds": ["f1"], "prohibitedTopics": [],
+        }
+        decision = self.write_json("legacy-decision.json", value)
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("factCitationRef", output)
+
+    def test_directory_approval_reference_is_rejected(self):
+        decision = self.decision(factCitationRef=str(self.root))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("existing project file", output)
+
+    def test_evidence_must_expose_relative_path_for_g3_consumers(self):
+        value = json.loads(self.evidence_path.read_text(encoding="utf-8"))
+        del value["sourceEvidence"][0]["relativePath"]
+        self.evidence_path.write_text(json.dumps(value), encoding="utf-8")
+        decision = self.decision()
+        verification_plan = self.plan(decision)
+        for script, extra in ((ROOT / "skill/video-edit-plan/scripts/g3_extract_verification_frames.py", ("--plan", str(verification_plan))), (ROOT / "skill/video-edit-plan/scripts/g3_extract_visual_analysis_keyframes.py", ("--asset-id", "clip-1"))):
+            result = subprocess.run([str(PYTHON), str(script), "--evidence", str(self.evidence_path), "--source-pack", str(self.source_pack), "--output-dir", str(self.root / "frames"), *extra], capture_output=True, text=True, encoding="utf-8")
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn("relativePath", result.stdout)
 
     def test_approved_g2_narration_can_enter_g3(self):
         decision = self.decision()
@@ -100,7 +171,7 @@ class ValidateG3PlanTest(unittest.TestCase):
         decision = self.decision(approvedNarrationRef=str(self.root / "missing.md"))
         code, output = self.run_cli(self.plan(decision), decision)
         self.assertNotEqual(0, code)
-        self.assertIn("does not exist", output)
+        self.assertIn("must be an existing project file", output)
 
     def test_missing_g2_decision_argument_is_rejected(self):
         result = subprocess.run([str(PYTHON), str(SCRIPT), "--plan", "x", "--evidence", "y"], capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -185,6 +256,52 @@ class ValidateG3PlanTest(unittest.TestCase):
         code, output = self.run_cli(plan, decision)
         self.assertNotEqual(0, code)
         self.assertIn("semantic_mismatch", output)
+
+    def test_subject_policy_confirmation_can_be_referenced_by_approved_plan(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger()
+        plan = self.plan(decision, status="approved_for_g4", timelineReview={
+            "status": "confirmed", "confirmedBy": "user", "confirmedAt": "2026-09-08", "feedback": "整体确认",
+            "basisRefs": [str(subject), str(ledger), "review.md"],
+        }, g3Approval={"approvedBy": "user", "approvedAt": "2026-09-08", "basisRefs": ["check.md"]})
+        content = json.loads(plan.read_text(encoding="utf-8"))
+        content["segments"][0]["visualVerification"]["derivedFromObservationIds"] = ["obs-active", "obs-002"]
+        plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertEqual(0, code, output)
+
+    def test_subject_confirmation_rejects_unconfirmed_policy(self):
+        decision = self.decision()
+        subject = self.subject_confirmation(targetSubject={
+            "canonicalName": "测试主体", "userConfirmed": False,
+            "identificationRules": ["规则"], "exclusionRules": ["排除规则"],
+        })
+        code, output = self.run_cli(self.plan(decision), decision, subject=subject)
+        self.assertNotEqual(0, code)
+        self.assertIn("userConfirmed=true", output)
+
+    def test_subject_sufficiency_fallback_requires_complete_preapproval(self):
+        decision = self.decision()
+        subject = self.subject_confirmation(sufficiencyFallback={"preApproved": "shorten_output"})
+        code, output = self.run_cli(self.plan(decision), decision, subject=subject)
+        self.assertNotEqual(0, code)
+        self.assertIn("approvedBy", output)
+
+    def test_ledger_blocks_approved_plan_from_using_superseded_observation(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger()
+        plan = self.plan(decision, status="approved_for_g4", timelineReview={
+            "status": "confirmed", "confirmedBy": "user", "confirmedAt": "2026-09-08", "feedback": "整体确认",
+            "basisRefs": [str(subject), str(ledger), "review.md"],
+        }, g3Approval={"approvedBy": "user", "approvedAt": "2026-09-08", "basisRefs": ["check.md"]})
+        content = json.loads(plan.read_text(encoding="utf-8"))
+        content["segments"][0]["visualVerification"]["derivedFromObservationIds"] = ["obs-active", "obs-001"]
+        plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertNotEqual(0, code)
+        self.assertIn("non-active observation obs-001", output)
 
     def test_missing_visual_analysis_argument_is_rejected(self):
         decision = self.decision()

@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -152,7 +153,27 @@ def register(pack: Path) -> dict:
     source_files = files_under(pack, SOURCE_DIR)
     audio_files = [path for path in files_under(pack, AUDIO_DIR) if path.suffix.lower() in AUDIO_EXTENSIONS]
     sources = [{"assetId": asset_id("source", path.relative_to(pack)), "relativePath": path.relative_to(pack).as_posix(), "sourceKind": "local-file", "sha256": digest(path), "byteSize": path.stat().st_size, "fileExtension": path.suffix.lower()} for path in source_files]
-    audio = [{"assetId": asset_id("audio", path.relative_to(pack)), "relativePath": path.relative_to(pack).as_posix(), "sha256": digest(path), "byteSize": path.stat().st_size, "fileExtension": path.suffix.lower()} for path in audio_files]
+    # Issue 023: a hash alone lets stream-encrypted or renamed files through to G3.
+    # Every authorized audio asset must fully decode before the pack registers.
+    audio = []
+    undecodable = []
+    probe_error = None
+    if audio_files and shutil.which("ffmpeg") is None:
+        probe_error = "ffmpeg is not available on PATH; audio assets cannot be registered without a decode probe"
+    for path in audio_files:
+        current_id = asset_id("audio", path.relative_to(pack))
+        entry = {"assetId": current_id, "relativePath": path.relative_to(pack).as_posix(), "sha256": digest(path), "byteSize": path.stat().st_size, "fileExtension": path.suffix.lower()}
+        if probe_error is not None:
+            undecodable.append({"assetId": current_id, "relativePath": entry["relativePath"], "error": probe_error})
+            continue
+        result = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+        if result.returncode == 0:
+            entry["decodeProbe"] = {"status": "passed", "engine": "ffmpeg"}
+            audio.append(entry)
+        else:
+            undecodable.append({"assetId": current_id, "relativePath": entry["relativePath"], "error": (result.stderr or "").strip()[:200] or "ffmpeg could not decode this file"})
+    if undecodable:
+        return {"status": "blocked", "pack": str(pack), "undecodableAudio": undecodable, "blockers": [{"type": "audio_decode_probe_failed", "detail": "音频无法完整解码（可能是流媒体加密缓存改扩展名的假文件）；请用户重新提供有效音频后再次 register"}], "finishedAt": now()}
     manifest = {**existing, "schemaVersion": "0.1", "materialPackId": existing.get("materialPackId", pack.name), "sourceAssets": sources, "audioAssets": audio, "packStatus": "complete", "registeredAt": now()}
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return {"status": "completed", "pack": str(pack), "manifest": str(manifest_path), "sourceAssetCount": len(sources), "audioAssetCount": len(audio), "finishedAt": now()}

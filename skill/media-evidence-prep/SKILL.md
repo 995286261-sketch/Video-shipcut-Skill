@@ -32,7 +32,7 @@ metadata:
 
 ## Pipeline Integration
 
-Read `工作台/<projectId>/pipeline-state.json` and accept only state-registered inputs; archived files are never inputs. Record only G2 output references, warnings, and review points through `$p0-c-pipeline`; do not advance G3. Read `references/g2-choice-cards.md` before presenting G2 decisions. Before G2 approval, generate a short local voice audition and explicitly confirm language, accent, voice type, and speaking rate; record its reference as `voiceDecisionRef`. A narration is invalid for G3 until G2 approval registers `approvedNarrationRef`, `factDecisionRef`, and `voiceDecisionRef`.
+Read `工作台/<projectId>/pipeline-state.json` and accept only state-registered inputs; archived files are never inputs. Record only G2 output references, warnings, and review points through `$p0-c-pipeline`; do not advance G3. Read `references/g2-choice-cards.md` before presenting G2 decisions. Before G2 approval, generate a short local voice audition with `scripts/local_tts.py` and explicitly confirm language, accent, voice type, speaking rate, and production tier — macOS system voices register as preview-tier with the neural-TTS/human upgrade path shown; the script pre-checks the installed voice (no silent English fallback), converts `say` CAF output to wav, and returns measured per-sentence durations that supersede any text estimate; `--verify-asr` adds an ASR read-back self-check. Record the audition files and `G2-配音清单-v0.1.json` reference as `voiceBriefRef`. A narration is invalid for G3 until `scripts/validate_g2_decision.py` accepts an `approved_for_g3` decision whose `approvedNarrationRef`, `factCitationRef`, and `voiceBriefRef` are existing project files.
 
 ## 标准产物
 
@@ -43,6 +43,7 @@ Read `工作台/<projectId>/pipeline-state.json` and accept only state-registere
 - `<asset-short-id>-contact-sheet.jpg`：每个源视频一张或多张，必须能回指 `assetId`。
 - `转写/<asset-short-id>-transcript.json`：离线转写原始 JSON。
 - `转写/<asset-short-id>/transcript.srt`、`transcript.txt`、`manifest.json`：可审阅转写产物和校验结果。
+- `配音试听/…wav` 与 `G2-配音清单-v0.1.json`：`scripts/local_tts.py` 产出，含每句实测时长、总实测时长、`voiceTier` 分级与可选 ASR 回读结果；下游估时与对齐一律以该清单为准。
 
 ## 证据规则
 

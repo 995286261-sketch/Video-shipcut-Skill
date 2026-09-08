@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 
@@ -29,6 +30,7 @@ def main() -> int:
     parser.add_argument("--source-pack", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--handle-ms", type=int, default=0)
+    parser.add_argument("--force", action="store_true", help="overwrite an existing derived manifest intentionally")
     args = parser.parse_args()
     plan, evidence, pack_manifest = load(args.plan), load(args.evidence), load(args.source_pack / "material-pack.json")
     if plan.get("status") != "approved_for_g4":
@@ -103,17 +105,31 @@ def main() -> int:
             "riskFlags": segment.get("riskFlags", []),
         })
         cursor += output_duration
-    target_ms = int(plan.get("targetProfile", {}).get("targetDurationSec", 0) * 1000)
+    # Issue 025: the authoritative target duration is the user-approved durationDecision,
+    # not an optional targetProfile; a missing decision must block instead of yielding 0ms.
+    decision_target = plan.get("durationDecision", {}).get("targetDurationSec")
+    profile_target = plan.get("targetProfile", {}).get("targetDurationSec")
+    target_seconds = decision_target if isinstance(decision_target, (int, float)) and not isinstance(decision_target, bool) and decision_target > 0 else profile_target
+    if not isinstance(target_seconds, (int, float)) or isinstance(target_seconds, bool) or target_seconds <= 0:
+        fail("plan lacks a positive durationDecision.targetDurationSec; G4 refuses to prepare with a zero target (issue 025)")
+    target_ms = int(target_seconds * 1000)
     result = {
         "schemaVersion": "0.2", "node": "G4", "projectId": plan["projectId"],
         "status": "prepared_for_render", "inputPlan": str(args.plan), "inputEvidence": str(args.evidence),
+        "durationDecisionRef": "plan.durationDecision" if decision_target else "plan.targetProfile",
         "sourceAudioPolicy": "exclude", "segmentCount": len(rendered), "timelineDurationMs": cursor,
         "targetDurationMs": target_ms, "durationDeltaMs": cursor-target_ms,
         "segments": rendered,
         "renderRequirements": {"preserveSegmentBoundaries": True, "sourceAudio": "exclude", "flattenedPreview": "qa_only_not_chatcut_timeline_source"},
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    out = args.output_dir / "G4-可编辑工程-v0.2.json"
+    # Issue 029: derive the manifest version from the input plan filename so reruns never
+    # silently overwrite the previous batch's manifest.
+    version_match = re.search(r"v(\d+(?:\.\d+)?)", args.plan.name)
+    version = f"v{version_match.group(1)}" if version_match else "v0.1"
+    out = args.output_dir / f"G4-可编辑工程-{version}.json"
+    if out.exists() and not args.force:
+        fail(f"{out.name} already exists; pass --force to overwrite intentionally (issue 029)")
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": "prepared", "manifest": str(out), "segments": len(rendered), "timelineDurationMs": cursor, "durationDeltaMs": cursor-target_ms}, ensure_ascii=True))
     return 0
