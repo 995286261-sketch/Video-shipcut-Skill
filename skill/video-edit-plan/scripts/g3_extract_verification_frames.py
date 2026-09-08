@@ -16,6 +16,20 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def extract_frame(source: Path, requested_ms: int, floor_ms: int, output: Path) -> int:
+    """Probe one frame; ffmpeg can exit 0 without writing near the container end, so step back.
+
+    Returns the actual probed ms; raises when no probe in the fallback window produced a file.
+    """
+    for step in range(0, 600, 100):
+        probe_ms = max(floor_ms, requested_ms - step)
+        subprocess.run(["ffmpeg", "-y", "-ss", f"{probe_ms / 1000:.3f}", "-i", str(source), "-frames:v", "1", "-q:v", "2", str(output)], check=True, capture_output=True)
+        if output.is_file() and output.stat().st_size > 0:
+            return probe_ms
+        output.unlink(missing_ok=True)
+    fail(f"ffmpeg exited without producing frame file for {output.name} (probed {requested_ms}ms back to {max(floor_ms, requested_ms - 500)}ms)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", required=True, type=Path)
@@ -45,8 +59,8 @@ def main() -> int:
         refs = []
         for label, ms in moments:
             output = segment_dir / f"{label}-{ms:010d}ms.jpg"
-            subprocess.run(["ffmpeg", "-y", "-ss", f"{ms / 1000:.3f}", "-i", str(source), "-frames:v", "1", "-q:v", "2", str(output)], check=True, capture_output=True)
-            refs.append({"label": label, "sourceMs": ms, "path": str(output)})
+            probed_ms = extract_frame(source, ms, start, output)
+            refs.append({"label": label, "requestedSourceMs": ms, "sourceMs": probed_ms, "path": str(output)})
         frames.append({"segmentId": segment["segmentId"], "assetId": segment["assetId"], "sourceRange": {"startMs": start, "endMs": end}, "frames": refs})
     manifest = {"schemaVersion": "0.1", "node": "G3", "purpose": "visual-verification-frames", "planRef": str(args.plan), "segments": frames}
     args.output_dir.mkdir(parents=True, exist_ok=True)

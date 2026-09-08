@@ -73,6 +73,8 @@ G3 先检查同一源文件的已完成视觉分析 manifest：缓存键中的 `
 python scripts/g3_extract_verification_frames.py --plan <G3计划.json> --evidence <G2证据清单.json> --source-pack <素材包> --output-dir <工作区/剪辑方案/<projectId>/G3-画面验证帧>
 ```
 
+抽帧脚本会核验每张帧图真实落盘且非空。ffmpeg 在源末尾时间码可能退出 0 却不写文件；此时脚本以 100ms 为步长最多回退 500ms 重试，清单中同时记录 `requestedSourceMs` 与实际 `sourceMs`。回退窗口内仍无产物即结构化失败，不得以缺失帧冒充验证证据。
+
 Agent 必须查看这些实际帧，再为每段填写 `visualVerification`：`status: verified`、`frameManifestRef`、三张 `frameRefs`、基于实际画面的 `observedVisuals`，以及 `verifiedBy`/`verifiedAt`。`observedVisuals` 只能描述已看见的主体、动作、构图或风险；不得写“希望出现”“用于表现”或从口播倒推画面。若三帧无法确认主体、包含错误角色/主体、或无法安全裁掉烧录字幕，必须标记 `rejected` 并更换时间段，不能带着“G4 可微调”警告放行。
 
 ### 分层抽帧策略
@@ -165,4 +167,12 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 3. `G3-源字幕处理表-*.md`，含最终时间码与像素处理范围；
 4. BGM 卡点表、封面候选和最终切点表。
 
-在 `approved_for_g4` 前逐项检查：G2 事实状态及来源层级、全文口播时长与目标时长（冲突已由用户明确决定）、逐帧切点、每段源字幕清除、标题/口播无冲突、封面无源字幕/Logo、用户明确放行。G4 可微调切点、裁切/遮罩坐标、字幕断句、车道和 BGM 音量；不得改变 G2 事实状态、音频排除或分发边界。G3 不创建 ChatCut 项目、不上传素材、不渲染或发布。
+字幕时间轴与布局合同必须通过行数/宽度机器校验后才能进入最终回显：
+
+```powershell
+python skill/video-edit-plan/scripts/validate_g3_subtitle_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json>
+```
+
+校验器强制 ASS 样式字号与布局合同一致，并按画面分辨率与样式边距保守估计每条 cue 的渲染行数（全角字符按 1em、半角按 0.55em，空格与任意字符处可断）；任何超过 `lanes.narration.maxLines` 的估计行数都要求重新语义断行，不得靠渲染器自动折行兜底。
+
+在 `approved_for_g4` 前逐项检查：G2 事实状态及来源层级、全文口播时长与目标时长（冲突已由用户明确决定）、逐帧切点、每段源字幕清除、字幕布局机器校验通过、标题/口播无冲突、封面无源字幕/Logo、用户明确放行。G4 可微调切点、裁切/遮罩坐标、字幕断句、车道和 BGM 音量；不得改变 G2 事实状态、音频排除或分发边界。G3 不创建 ChatCut 项目、不上传素材、不渲染或发布。

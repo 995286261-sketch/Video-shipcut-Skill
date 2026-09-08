@@ -25,6 +25,23 @@ def sha256(path: Path) -> str:
     return digest.hexdigest().upper()
 
 
+def extract_frame(source: Path, requested_ms: int, floor_ms: int, output: Path) -> int:
+    """Probe one keyframe; ffmpeg can exit 0 without writing near the container end, so step back.
+
+    Returns the actual probed ms; raises when no probe in the fallback window produced a file.
+    """
+    for step in range(0, 600, 100):
+        probe_ms = max(floor_ms, requested_ms - step)
+        subprocess.run([
+            "ffmpeg", "-y", "-ss", f"{probe_ms / 1000:.3f}", "-i", str(source),
+            "-frames:v", "1", "-q:v", "2", str(output),
+        ], check=True, capture_output=True)
+        if output.is_file() and output.stat().st_size > 0:
+            return probe_ms
+        output.unlink(missing_ok=True)
+    fail(f"ffmpeg exited without producing keyframe file for {output.name} (probed {requested_ms}ms back to {max(floor_ms, requested_ms - 500)}ms)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--evidence", required=True, type=Path)
@@ -63,13 +80,11 @@ def main() -> int:
     frames = []
     for index, source_ms in enumerate(moments, start=1):
         output = frames_dir / f"frame-{index:03d}-{source_ms:010d}ms.jpg"
-        subprocess.run([
-            "ffmpeg", "-y", "-ss", f"{source_ms / 1000:.3f}", "-i", str(source),
-            "-frames:v", "1", "-q:v", "2", str(output),
-        ], check=True, capture_output=True)
+        probed_ms = extract_frame(source, source_ms, 0, output)
         frames.append({
             "frameId": f"vf-{index:03d}",
-            "sourceMs": source_ms,
+            "requestedSourceMs": source_ms,
+            "sourceMs": probed_ms,
             "path": str(output),
             "analysisStatus": "pending",
         })
@@ -89,7 +104,7 @@ def main() -> int:
             "sourceRange": {"startMs": 0, "endMs": duration_ms},
             "keyframes": frames,
         }],
-        "failurePolicy": "pending_or_failed_frames_cannot be marked completed",
+        "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed",
     }
     output = args.output_dir / "G3-目标素材视觉分析-v0.1.json"
     output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
