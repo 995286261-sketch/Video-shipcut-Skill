@@ -36,6 +36,18 @@ def nonempty(value: object, label: str) -> str:
     return value.strip()
 
 
+def format_review_timecode(milliseconds: int) -> str:
+    if not isinstance(milliseconds, int) or milliseconds < 0:
+        fail("timecode milliseconds must be a non-negative integer")
+    minutes, remainder = divmod(milliseconds, 60_000)
+    seconds, millis = divmod(remainder, 1_000)
+    return f"{minutes:02}:{seconds:02}.{millis:03}"
+
+
+def format_review_range(start_ms: int, end_ms: int) -> str:
+    return f"{format_review_timecode(start_ms)}–{format_review_timecode(end_ms)}"
+
+
 def contains_placeholder(value: object) -> bool:
     if isinstance(value, str):
         return bool(PLACEHOLDER.search(value.strip()))
@@ -69,7 +81,7 @@ def validate_final(callback: dict, plan: dict) -> int:
     previous_end, row_ids = 0, set()
     required = {
         "segmentId", "outputStartMs", "outputEndMs", "narrationText", "sourceStartMs",
-        "sourceEndMs", "observedVisuals", "semanticStatus", "subjectStatus", "riskSummary",
+        "sourceEndMs", "outputTimecode", "sourceTimecode", "observedVisuals", "semanticStatus", "subjectStatus", "riskSummary",
         "bgmPhrase", "transitionInstruction",
     }
     for row in rows:
@@ -94,6 +106,10 @@ def validate_final(callback: dict, plan: dict) -> int:
         previous_end = row["outputEndMs"]
         if row["sourceEndMs"] <= row["sourceStartMs"]:
             fail(f"{segment_id} source range must have exact increasing cut points")
+        if row["outputTimecode"] != format_review_range(row["outputStartMs"], row["outputEndMs"]):
+            fail(f"{segment_id} outputTimecode must exactly match output millisecond cut points")
+        if row["sourceTimecode"] != format_review_range(row["sourceStartMs"], row["sourceEndMs"]):
+            fail(f"{segment_id} sourceTimecode must exactly match source millisecond cut points")
         for key in ("narrationText", "observedVisuals", "subjectStatus", "riskSummary", "bgmPhrase", "transitionInstruction"):
             nonempty(row[key], f"{segment_id} {key}")
         if row["semanticStatus"] not in {"direct_match", "not_applicable"}:

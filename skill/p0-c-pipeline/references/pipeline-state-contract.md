@@ -34,8 +34,12 @@ Legacy `run-manifest.json` is never an input to this state machine. Create a sta
 
 All references below must be existing files beneath the active `工作台/<projectId>/` root. Full path definitions are in [Project Layout Contract](project-layout-contract.md).
 
+Every G1–G5 approval first requires a registered `reviewGate`: a project-local `review-gate-receipt` JSON whose fixed `cardType`, required checklist, card reference, evidence references, and basis references pass `record-review`. The node must be `review_required`. Rework clears the affected node and downstream review gates, so a superseded card cannot approve amended inputs.
+
+`approve` then requires both `--approval-token` and `--approval-response` to exactly equal the current node's canonical confirmation string: `确认 G1`, `确认 G2`, `确认 G3`, `确认 G4`, or `确认 G5`. Vague acknowledgements, selection responses, and wrong-node confirmations do not advance state. The approval record retains the review-gate reference, raw response, canonical token, and timestamp.
+
 - G1: `approvalRef` for direction confirmation.
-- G2: `approvalRef`, `approvedNarrationRef`, `factDecisionRef`, and `voiceDecisionRef` (confirmed audition/voice setting).
-- G3: `approvalRef` plus the approved G3 plan reference. Before subject-based selection, G3 must register a completed visual-analysis manifest as an input/artifact; the manifest is not interchangeable with G1 reference analysis or a contact sheet.
-- G4 local-direct: `approvalRef`, `outputMode: local_direct`, `localRenderRef`, and `g4ValidationRef`. G4 ChatCut: `approvalRef`, `outputMode: chatcut`, plus an actual `chatcutExportRef` under `CHATCUT_EXPORT_ROOT`.
-- G5: `approvalRef`, `deliveryManifestRef`, and `g5ValidationRef`; pass accepted warnings as repeated `--accepted-warning` values (preferred) or a JSON array, resulting in `completed_with_accepted_warnings`.
+- G2: `approvalRef`, `approvedNarrationRef`, `factDecisionRef`, and `voiceDecisionRef` (confirmed audition/voice setting). All must be existing project-local files and be listed in the review gate's `basisRefs`.
+- G3: `approvalRef` plus the approved G3 plan reference and `timelineReviewRef`; both must be existing project-local files and be listed in `basisRefs`. Before subject-based selection, G3 must register a completed visual-analysis manifest as an input/artifact; the manifest is not interchangeable with G1 reference analysis or a contact sheet.
+- G4 local-direct: `approvalRef`, `outputMode: local_direct`, `localRenderRef`, and `g4ValidationRef`. G4 ChatCut: `approvalRef`, `outputMode: chatcut`, plus an actual `chatcutExportRef` under `CHATCUT_EXPORT_ROOT`. The active render/validation or export must be listed in `basisRefs`.
+- G5: `approvalRef`, `deliveryManifestRef`, and `g5ValidationRef`, both listed in `basisRefs`; pass accepted warnings as repeated `--accepted-warning` values (preferred) or a JSON array, resulting in `completed_with_accepted_warnings`.

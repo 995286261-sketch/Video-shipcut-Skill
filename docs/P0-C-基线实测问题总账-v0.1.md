@@ -36,7 +36,7 @@
 - **⑤**：G1 参考视频分析复用只有合同约束，没有脚本强制；项目级缓存不能自动验证跨项目复用。
 - **⑥**：G0 模板字段与 `material_pack.py` 标签不一致，按模板填写会使 register 必失败。高优先级真 bug。**状态：已验证（2026-09-08）**；已将初始化模板统一为六个机器字段与唯一的 `BGM decision` 行，未放宽解析器。验证：`~/.local/bin/python3 skill/material-pack-intake/tests/test_material_pack.py`（8/8 通过）；模板驱动的 `init → register → validate` 正向 CLI 回归通过；非法 `BGM decision` 负向 CLI 回归继续返回 `incomplete`。修复提交：`ada78cd`（Fix G0 template field contract）。
 - **⑦**：风格参考未纳入 material-pack 哈希清单，跨项目缓存命中需要手工 SHA-256 比对。观察/待决策。
-- **⑧**：固定回显卡与批准串没有机器强制，Agent 漏弹回显时用户无法按合同复核。
+- **⑧**：固定回显卡与批准串没有机器强制，Agent 漏弹回显时用户无法按合同复核。**状态：已验证（2026-09-08）**；G1–G5 现均要求节点处于 `review_required`、登记通过校验的固定回显门禁收据，并以当前节点精确确认串 `确认 Gx` 才能推进。收据固定检查卡片类型、完整 checklist、项目内卡片/证据/依据引用；返工会清除旧收据和审批。验证：`~/.local/bin/python3 skill/p0-c-pipeline/tests/test_pipeline_state.py`（7/7 通过，覆盖五节点无收据阻断、错误确认串阻断、收据完整性、G2 引用和返工失效）。修复提交：`ca15115`（Enforce node review gates and readable timecodes）。
 - **⑨**：`g1_direction.py write` 写入旧路径，违反项目布局合同。
 - **⑩**：源素材 640×360@23.98fps，低清 warning 正常触发，不是脚本 bug。
 - **⑪**：macOS `say` 音色缺失时静默回退英文，中文几乎不读；需 ASR 回环自检。
@@ -52,7 +52,7 @@
 - **㉑**：G2 决定 schema 与 G3 validator 漂移，顶层字段与 FILE ref 要求未对齐。
 - **㉒**：末尾抽帧 ffmpeg 退出 0 但不落盘，脚本不检查文件存在。
 - **㉓**：G0 音频 register 只哈希不解码探针，损坏网易云加密文件一路流到 G3 才暴露。
-- **㉔**：用户回显没有规定人类可读时间码，首版裸毫秒不可读。
+- **㉔**：用户回显没有规定人类可读时间码，首版裸毫秒不可读。**状态：已验证（2026-09-08）**；G3 最终回显保留整数毫秒为唯一机器真相，并强制由切点派生 `outputTimecode`、`sourceTimecode`（`mm:ss.mmm`）后生成固定八列 Markdown 卡。validator 会拒绝缺失或与毫秒不一致的展示时间码。验证：`~/.local/bin/python3 skill/video-edit-plan/tests/test_validate_g3_callback.py`（9/9 通过，含格式化边界、缺失/漂移阻断和渲染器）。修复提交：`ca15115`（Enforce node review gates and readable timecodes）。
 - **㉕**：`g4_prepare.py` 不读取 `durationDecision`，产出 `targetDurationMs:0`。
 - **㉖**：G3 ASS 字号20下长句折三行，违反自身 maxLines=2；没有行数/宽度机器校验。
 - **㉗**：G4 没有最终合成脚本入口，concat、混音、字幕烧录、封面合成依靠临场 FFmpeg。

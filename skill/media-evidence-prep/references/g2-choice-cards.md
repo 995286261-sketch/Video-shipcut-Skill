@@ -72,4 +72,4 @@ G0 中的语言、口音、声线、语气和语速是偏好记录，不等于�
 - 分发：仅内部测试
 ```
 
-自动回显只用于发现遗漏。只有用户明确回复”确认 G2”时，才记录 `approvedNarrationRef` 与 `factDecisionRef` 并放行 G3。
+自动回显只用于发现遗漏。事实裁决、已批准口播、试听/声音决定和固定 G2 卡必须先完成并登记为机器可验证的 G2 门禁收据；只有用户精确回复 `确认 G2` 时，才记录 `approvedNarrationRef`、`factDecisionRef` 与 `voiceDecisionRef` 并放行 G3。
