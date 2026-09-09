@@ -51,7 +51,7 @@ G3 计划必须为上述字段预登记，G5 必须把这些机器与人工 QA �
 ## 仓库结构
 
 ```
-skill/                  # 七个 Agent Skill（唯一编排入口 + 六个节点专家）
+skill/                  # 唯一编排入口 + 六个节点专家 + 独立 support skill（music-expert 等）
 工作台/                 # 现役项目产物（含完整示例项目）
 examples/               # G4 运行清单示例（v1.1 扩展字段）
 docs/                   # 流程图等说明资产
@@ -70,7 +70,7 @@ PRD-v0.1.md             # 产品需求基线
 
 Skill 文件本身不等于运行环境。需要 **Python ≥ 3.10（推荐 3.12）** 与可直接执行的 **FFmpeg/FFprobe**，macOS、Windows、Linux 均可；完整执行 G2–G5 另需 Faster-Whisper（离线转写）和本地 TTS 来源（均为可选，缺失时流程报 `blocked` 并给出说明，不会编造结果）。工具链目录通过 `P0C_*` 环境变量声明，未声明时从 `PATH` 解析。G1/G3 的多模态识图通过能力适配器提供。详见 [`skill/p0-c-pipeline/references/runtime-dependencies.md`](skill/p0-c-pipeline/references/runtime-dependencies.md) 与 [`references/toolchain-setup.md`](skill/p0-c-pipeline/references/toolchain-setup.md)。
 
-安装 Skill：将 `skill/` 下各目录复制到 Agent 的 Skills 目录（如 `~/.codex/skills/`），已有同名 Skill 先另存旧版，不要直接覆盖。安装后使用 `$p0-c-pipeline` 发起或续作项目；已弃用的 `$long-video-local-edit` 仅供显式历史兼容检查。
+安装 Skill：将 `skill/` 下各目录复制到 Agent 的 Skills 目录（如 `~/.codex/skills/`），已有同名 Skill 先另存旧版，不要直接覆盖。安装后使用 `$p0-c-pipeline` 发起或续作项目；`$music-expert` 是独立 BGM 分析与找乐 support skill（需 `P0C_MUSIC_RUNTIME_HOME` 分析运行时；联网找乐需 `P0C_FREESOUND_TOKEN`），不占管线节点、当前未接入 G0–G5；已弃用的 `$long-video-local-edit` 仅供显式历史兼容检查。
 
 ## 示例项目
 

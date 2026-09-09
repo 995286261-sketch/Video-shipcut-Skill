@@ -1,5 +1,12 @@
 # 变更记录
 
+## 未发布 — 新增 music-expert BGM 专家 Skill（2026-09-08）
+
+- 新增独立 support skill `skill/music-expert/`（`$music-expert`，不占 G0–G5 节点、本版不改管线）：覆盖基线总账 ⑯（BGM onset/卡点无生成脚本，已验证）与 ⑫（BGM 内容/节奏分析，部分推进）。
+- 确定性分析引擎 `music_analyze.py`：librosa 节拍/起音 + 前缀和贪心变化点能量分段 + ebur128 响度，产出《BGM 分析报告》（含卡点表）与风格简报；受控运行时 `P0C_MUSIC_RUNTIME_HOME`、`cacheKey` 复用、产物非空核验、缺依赖结构化 blocked。
+- 双轨找乐：`music_search_freesound.py`（Freesound 官方 API，仅 CC0/CC-BY，带授权证据链与解码探针，缺 token 不静默换源）、`music_register_candidate.py`（Pixabay/Mixkit 等无 API 曲库的人工许可登记）；`music_recommend.py` 按画像打分，候选不足显式上报不硬凑。
+- 选型与可达性实测固化在 `references/library-probes.md`；新增 13 项单测，全量回归 19/19。
+
 ## v1.1.0 — 2026-09-04
 
 将 leader 审阅后的 P0-C v1.1.0 交付补丁合回主仓，并统一命名。补丁内容源自 TASK-050"上能同创智能剪辑 Demo"的实际渲染与人工评审。

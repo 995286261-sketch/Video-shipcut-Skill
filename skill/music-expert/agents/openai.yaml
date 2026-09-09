@@ -1,0 +1,4 @@
+interface:
+  display_name: "BGM 专家：分析与找乐"
+  short_description: "确定性分析音乐 BPM/卡点/能量并从公开曲库带授权找候选"
+  default_prompt: "使用 $music-expert 分析这段音频或参考视频的配乐风格，并给出带授权证据的 BGM 候选推荐。"
