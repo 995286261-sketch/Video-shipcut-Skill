@@ -13,8 +13,10 @@
 报告带 `cacheKey`：
 
 ```json
-{"sha256": "<源文件字节 SHA-256>", "analysisVersion": "music-expert-analysis-v0.1", "sampleRate": 22050, "mediaKind": "audio|video-with-audio"}
+{"sha256": "<源文件字节 SHA-256>", "analysisVersion": "music-expert-analysis-v0.2", "sampleRate": 22050, "mediaKind": "audio|video-with-audio"}
 ```
+
+- `analysisVersion` 每次报告输出语义变化必须升号（v0.2 修正了 ebur128 响度误读哨兵值 -70 的问题）；旧 v0.1 报告因版本不同不会被复用，避免错值串档。
 
 - 重跑同一文件、同版本、同参数：输出目录或 `--cache-root` 中已有相同 cacheKey 的报告即 `status: cache_hit` 直接返回，不重新计算。
 - 参数或 `analysisVersion` 变化 → 生成新报告文件，旧报告保留可追溯。

@@ -23,7 +23,7 @@ import tempfile
 from pathlib import Path
 
 SCHEMA_VERSION = "0.1"
-ANALYSIS_VERSION = "music-expert-analysis-v0.1"
+ANALYSIS_VERSION = "music-expert-analysis-v0.2"
 SAMPLE_RATE = 22050
 
 
