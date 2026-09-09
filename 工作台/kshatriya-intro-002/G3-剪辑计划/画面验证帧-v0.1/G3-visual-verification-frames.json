@@ -1,0 +1,652 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "visual-verification-frames",
+  "planRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "segments": [
+    {
+      "segmentId": "seg-01a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 70000,
+        "endMs": 78370
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 70000,
+          "sourceMs": 70000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01a/start-0000070000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 74185,
+          "sourceMs": 74185,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01a/middle-0000074185ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 78369,
+          "sourceMs": 78369,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01a/end-0000078369ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-01b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 2500,
+        "endMs": 7620
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 2500,
+          "sourceMs": 2500,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01b/start-0000002500ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 5060,
+          "sourceMs": 5060,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01b/middle-0000005060ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 7619,
+          "sourceMs": 7619,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-01b/end-0000007619ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 8710,
+        "endMs": 18760
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 8710,
+          "sourceMs": 8710,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-02/start-0000008710ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 13735,
+          "sourceMs": 13735,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-02/middle-0000013735ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 18759,
+          "sourceMs": 18759,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-02/end-0000018759ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 40000,
+        "endMs": 46770
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 40000,
+          "sourceMs": 40000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-03/start-0000040000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 43385,
+          "sourceMs": 43385,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-03/middle-0000043385ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 46769,
+          "sourceMs": 46769,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-03/end-0000046769ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 99000,
+        "endMs": 107210
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 99000,
+          "sourceMs": 99000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-04/start-0000099000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 103105,
+          "sourceMs": 103105,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-04/middle-0000103105ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 107209,
+          "sourceMs": 107209,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-04/end-0000107209ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 81238,
+        "endMs": 90486
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 81238,
+          "sourceMs": 81238,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05a/start-0000081238ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 85862,
+          "sourceMs": 85862,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05a/middle-0000085862ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 90485,
+          "sourceMs": 90485,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05a/end-0000090485ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 210934,
+        "endMs": 213096
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 210934,
+          "sourceMs": 210934,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05b/start-0000210934ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 212015,
+          "sourceMs": 212015,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05b/middle-0000212015ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 213095,
+          "sourceMs": 213095,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-05b/end-0000213095ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 56000,
+        "endMs": 58500
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 56000,
+          "sourceMs": 56000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06a/start-0000056000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 57250,
+          "sourceMs": 57250,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06a/middle-0000057250ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 58499,
+          "sourceMs": 58499,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06a/end-0000058499ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 205000,
+        "endMs": 208870
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 205000,
+          "sourceMs": 205000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06b/start-0000205000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 206935,
+          "sourceMs": 206935,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06b/middle-0000206935ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 208869,
+          "sourceMs": 208869,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06b/end-0000208869ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 120980,
+        "endMs": 124420
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 120980,
+          "sourceMs": 120980,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06c/start-0000120980ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 122700,
+          "sourceMs": 122700,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06c/middle-0000122700ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 124419,
+          "sourceMs": 124419,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-06c/end-0000124419ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 2500
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 0,
+          "sourceMs": 0,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07a/start-0000000000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 1250,
+          "sourceMs": 1250,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07a/middle-0000001250ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 2499,
+          "sourceMs": 2499,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07a/end-0000002499ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 274000,
+        "endMs": 275370
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 274000,
+          "sourceMs": 274000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07b/start-0000274000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 274685,
+          "sourceMs": 274685,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07b/middle-0000274685ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 275369,
+          "sourceMs": 275369,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07b/end-0000275369ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 178265,
+        "endMs": 180765
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 178265,
+          "sourceMs": 178265,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07c/start-0000178265ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 179515,
+          "sourceMs": 179515,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07c/middle-0000179515ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 180764,
+          "sourceMs": 180764,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-07c/end-0000180764ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 111360,
+        "endMs": 119060
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 111360,
+          "sourceMs": 111360,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-08/start-0000111360ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 115210,
+          "sourceMs": 115210,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-08/middle-0000115210ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 119059,
+          "sourceMs": 119059,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-08/end-0000119059ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 139378,
+        "endMs": 141248
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 139378,
+          "sourceMs": 139378,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-09/start-0000139378ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 140313,
+          "sourceMs": 140313,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-09/middle-0000140313ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 141247,
+          "sourceMs": 141247,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-09/end-0000141247ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 275370,
+        "endMs": 282060
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 275370,
+          "sourceMs": 275370,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-10/start-0000275370ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 278715,
+          "sourceMs": 278715,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-10/middle-0000278715ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 282059,
+          "sourceMs": 282059,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-10/end-0000282059ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 282060,
+        "endMs": 285550
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 282060,
+          "sourceMs": 282060,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-11/start-0000282060ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 283805,
+          "sourceMs": 283805,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-11/middle-0000283805ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 285549,
+          "sourceMs": 285549,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-11/end-0000285549ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 255000,
+        "endMs": 263370
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 255000,
+          "sourceMs": 255000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-12/start-0000255000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 259185,
+          "sourceMs": 259185,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-12/middle-0000259185ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 263369,
+          "sourceMs": 263369,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-12/end-0000263369ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 47300,
+        "endMs": 48770
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 47300,
+          "sourceMs": 47300,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13a/start-0000047300ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 48035,
+          "sourceMs": 48035,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13a/middle-0000048035ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 48769,
+          "sourceMs": 48769,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13a/end-0000048769ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 67000,
+        "endMs": 69900
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 67000,
+          "sourceMs": 67000,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13b/start-0000067000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 68450,
+          "sourceMs": 68450,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13b/middle-0000068450ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 69899,
+          "sourceMs": 69899,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13b/end-0000069899ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 96086,
+        "endMs": 98999
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 96086,
+          "sourceMs": 96086,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13c/start-0000096086ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 97542,
+          "sourceMs": 97542,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13c/middle-0000097542ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 98998,
+          "sourceMs": 98998,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13c/end-0000098998ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13d",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 216868,
+        "endMs": 217413
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 216868,
+          "sourceMs": 216868,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13d/start-0000216868ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 217140,
+          "sourceMs": 217140,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13d/middle-0000217140ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 217412,
+          "sourceMs": 217412,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13d/end-0000217412ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13e",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourceRange": {
+        "startMs": 285550,
+        "endMs": 286812
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 285550,
+          "sourceMs": 285550,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13e/start-0000285550ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 286181,
+          "sourceMs": 286181,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13e/middle-0000286181ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 286811,
+          "sourceMs": 286711,
+          "path": "工作台/kshatriya-intro-002/G3-剪辑计划/画面验证帧-v0.1/seg-13e/end-0000286811ms.jpg"
+        }
+      ]
+    }
+  ]
+}

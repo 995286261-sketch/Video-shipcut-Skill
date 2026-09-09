@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceProbe": {
+        "durationMs": 286812,
+        "video": {
+          "codec": "h264",
+          "width": 640,
+          "height": 360,
+          "fps": 23.976
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 70000,
+      "sourceEndMs": 78370,
+      "outputStartMs": 0,
+      "outputEndMs": 8370
+    },
+    {
+      "segmentId": "seg-01b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 2500,
+      "sourceEndMs": 7620,
+      "outputStartMs": 8370,
+      "outputEndMs": 13490
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 8710,
+      "sourceEndMs": 18760,
+      "outputStartMs": 13490,
+      "outputEndMs": 23540
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 40000,
+      "sourceEndMs": 46770,
+      "outputStartMs": 23540,
+      "outputEndMs": 30310
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 99000,
+      "sourceEndMs": 107210,
+      "outputStartMs": 30310,
+      "outputEndMs": 38520
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 81238,
+      "sourceEndMs": 90486,
+      "outputStartMs": 38520,
+      "outputEndMs": 47768
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 210934,
+      "sourceEndMs": 213096,
+      "outputStartMs": 47768,
+      "outputEndMs": 49930
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 56000,
+      "sourceEndMs": 58500,
+      "outputStartMs": 49930,
+      "outputEndMs": 52430
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 205000,
+      "sourceEndMs": 208870,
+      "outputStartMs": 52430,
+      "outputEndMs": 56300
+    },
+    {
+      "segmentId": "seg-06c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 120980,
+      "sourceEndMs": 124420,
+      "outputStartMs": 56300,
+      "outputEndMs": 59740
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 0,
+      "sourceEndMs": 2500,
+      "outputStartMs": 59740,
+      "outputEndMs": 62240
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 274000,
+      "sourceEndMs": 275370,
+      "outputStartMs": 62240,
+      "outputEndMs": 63610
+    },
+    {
+      "segmentId": "seg-07c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 178265,
+      "sourceEndMs": 180765,
+      "outputStartMs": 63610,
+      "outputEndMs": 66110
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 111360,
+      "sourceEndMs": 119060,
+      "outputStartMs": 66110,
+      "outputEndMs": 73810
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 139378,
+      "sourceEndMs": 141248,
+      "outputStartMs": 73810,
+      "outputEndMs": 75680
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 275370,
+      "sourceEndMs": 282060,
+      "outputStartMs": 75680,
+      "outputEndMs": 82370
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 282060,
+      "sourceEndMs": 285550,
+      "outputStartMs": 82370,
+      "outputEndMs": 85860
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 255000,
+      "sourceEndMs": 263370,
+      "outputStartMs": 85860,
+      "outputEndMs": 94230
+    },
+    {
+      "segmentId": "seg-13a",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 47300,
+      "sourceEndMs": 48770,
+      "outputStartMs": 94230,
+      "outputEndMs": 95700
+    },
+    {
+      "segmentId": "seg-13b",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 67000,
+      "sourceEndMs": 69900,
+      "outputStartMs": 95700,
+      "outputEndMs": 98600
+    },
+    {
+      "segmentId": "seg-13c",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 96086,
+      "sourceEndMs": 98999,
+      "outputStartMs": 98600,
+      "outputEndMs": 101513
+    },
+    {
+      "segmentId": "seg-13d",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 216868,
+      "sourceEndMs": 217413,
+      "outputStartMs": 101513,
+      "outputEndMs": 102058
+    },
+    {
+      "segmentId": "seg-13e",
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sourcePath": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceSha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceStartMs": 285550,
+      "sourceEndMs": 286812,
+      "outputStartMs": 102058,
+      "outputEndMs": 103320
+    }
+  ],
+  "editPlan": {
+    "planRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "planStatus": "approved_for_g4",
+    "segments": 23,
+    "timelineDurationMs": 103320,
+    "actualDurationMs": 103333,
+    "durationDeltaMs": 13,
+    "durationResolution": "follow_narration_natural_duration",
+    "sourceAudioPolicy": "exclude",
+    "narration": "G2 v0.2 批准口播（12 句，longtian 神经 TTS，−15.2 LUFS）",
+    "bgm": "Interlinked（Lonely Lies; GOLDKID$）轨首 0–103.32s 1:1，−12dB 侧链闪避，2s 淡入/淡出",
+    "subtitles": "G3-字幕时间轴-v0.1.ass 烧录（NarrMain 14px 底部安全区，≤2 行）",
+    "cover": "源 68000ms 帧 + 标题「刹帝利：U.C.0096 最悲壮的登场与陨落」"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "39C0533695EB3E120ABA48A1D04E30BE779C2D9556CD16CA334AD3CB97BE595A"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "79F7E5BADF97EEBE736E3AE585ADB80AB763CC99B03757B1F5A931E6D8617B70"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "64EF285BC8B379893490BEE7E7AEEF14D05216C1C79BFB25ED67696A1CC644BE"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch-01.mp4",
+        "sha256": "ED0C3DE2C2EB492ACB37F9FDDA11BAAB933AC8DDCF12574EE6FF9430C4590DC2"
+      },
+      {
+        "path": "clips/ch-02.mp4",
+        "sha256": "33AE4A30D439F25FF9191732E35F13079C67491918D4559864E54E8488A63D90"
+      },
+      {
+        "path": "clips/ch-03.mp4",
+        "sha256": "E2B8663EB178AE8DEDA753ABB02CC314BE82C1062815971ED256BDB0F56DE026"
+      },
+      {
+        "path": "clips/ch-04.mp4",
+        "sha256": "48794EE61F7CBAA994D3CBC37B43611DE29D187AC3BF421E3E45FB207FCEDEE5"
+      },
+      {
+        "path": "clips/ch-05.mp4",
+        "sha256": "E9B7BE689AB90076D1F5E56579BD2C2203B5C4987CC5820650450B1E43C9DECC"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "2013DA78E5DD251C03FD5443DF0EF827127A4124AEB10A72429E6962946B4431"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "g5_delivery_review"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-回显数据-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-批准记录-v0.1.md",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1-装配记录-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/g4-validation-report-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-批准记录-v0.1.md"
+  ],
+  "warnings": [
+    "warning: 章节卡与顶部标题栏未实现（G4 播放复核卡选项 A 已由用户接受）",
+    "warning: 旁白响度 −15.2 LUFS（G3 目标 −14 LUFS，受源 TTS 峰值结构限制）；成片积分 −15.5 LUFS / 真峰 −3.5 dBFS",
+    "warning: 画面与 kshatriya-intro-001 已用源区间重叠约 96%（同一源素材+证据驱动选段，用户接受为长/短双版本定位）",
+    "warning: 重复画面检测器未运行（无可用镜头级去重工具），以人工抽帧切点检查替代",
+    "accepted_warning:{\"id\": \"no-chapter-cards-and-title-bar\", \"text\": \"\\u7ae0\\u8282\\u5361\\u4e0e\\u9876\\u90e8\\u6807\\u9898\\u680f\\u672a\\u5b9e\\u73b0\\uff08G4 \\u9009\\u9879 A \\u63a5\\u53d7\\uff09\"}",
+    "accepted_warning:{\"id\": \"narration-loudness-15p2\", \"text\": \"\\u65c1\\u767d \\u221215.2 LUFS\\uff08\\u76ee\\u6807 \\u221214\\uff09\\uff0c\\u6210\\u7247 \\u221215.5 LUFS / \\u771f\\u5cf0 \\u22123.5 dBFS\"}",
+    "accepted_warning:{\"id\": \"source-overlap-001-96\", \"text\": \"\\u753b\\u9762\\u4e0e kshatriya-intro-001 \\u5df2\\u7528\\u6e90\\u533a\\u95f4\\u91cd\\u53e0\\u7ea6 96%\\uff08\\u957f/\\u77ed\\u53cc\\u7248\\u672c\\u5b9a\\u4f4d\\uff09\"}",
+    "accepted_warning:{\"id\": \"duplicate-detector-not-run\", \"text\": \"\\u91cd\\u590d\\u753b\\u9762\\u68c0\\u6d4b\\u5668\\u672a\\u8fd0\\u884c\\uff0c\\u4ee5\\u4eba\\u5de5\\u5207\\u70b9\\u62bd\\u5e27\\u66ff\\u4ee3\"}"
+  ],
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "status": "completed_with_accepted_warnings",
+  "finishedAt": "2026-09-09T02:08:05Z",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

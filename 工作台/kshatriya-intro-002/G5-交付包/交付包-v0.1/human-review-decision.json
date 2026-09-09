@@ -1,0 +1,48 @@
+{
+  "projectId": "kshatriya-intro-002",
+  "status": "approved",
+  "decision": "accepted",
+  "requiredCheckpoints": [
+    "完整播放",
+    "源字幕残留",
+    "字幕安全区/重叠",
+    "声画同步",
+    "关键镜头",
+    "开头/结尾",
+    "音频混音",
+    "G2 语言/口音/声线/语速",
+    "授权与分发边界"
+  ],
+  "acceptedWarnings": [
+    {
+      "id": "no-chapter-cards-and-title-bar",
+      "text": "章节卡与顶部标题栏未实现（G4 选项 A 接受）"
+    },
+    {
+      "id": "narration-loudness-15p2",
+      "text": "旁白 −15.2 LUFS（目标 −14），成片 −15.5 LUFS / 真峰 −3.5 dBFS"
+    },
+    {
+      "id": "source-overlap-001-96",
+      "text": "画面与 kshatriya-intro-001 已用源区间重叠约 96%（长/短双版本定位）"
+    },
+    {
+      "id": "duplicate-detector-not-run",
+      "text": "重复画面检测器未运行，以人工切点抽帧替代"
+    }
+  ],
+  "reviewedAt": "2026-09-09T02:08:05Z",
+  "approvalVerbatim": "确认G5（归一化：确认 G5）",
+  "approvalChoice": "1 确认交付（警告 1–4 全部接受）",
+  "requiredCheckpointsConfirmed": [
+    "完整播放",
+    "源字幕残留（无：源无烧录字幕）",
+    "字幕安全区/重叠（两行内底部安全区，抽帧确认）",
+    "声画同步（抽帧确认）",
+    "关键镜头（片头/片尾/切点抽帧确认）",
+    "开头/结尾",
+    "音频混音（旁白优先+侧链闪避）",
+    "G2 语言/口音/声线/语速（中文 longtian_v3 已批准口径）",
+    "授权与分发边界（internal_test / not_for_distribution）"
+  ]
+}

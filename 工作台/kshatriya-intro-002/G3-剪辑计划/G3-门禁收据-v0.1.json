@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G3",
+  "cardType": "g3_timeline_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-08T10:25:05Z",
+  "reviewCardRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-审核卡片-v0.1.md",
+  "basisRefs": [
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-回显数据-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-口播语义节拍-v0.2.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕布局合同-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/BGM-分析报告-Lonely Lies; GOLDKID$ - Interlinked-420D489A.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-审核卡片-v0.1.md",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-批准记录-v0.1.md"
+  ],
+  "checklist": [
+    {
+      "id": "approved_edit_plan",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json"
+    },
+    {
+      "id": "final_timeline_review",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-回显数据-v0.1.json"
+    },
+    {
+      "id": "subtitle_timeline",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.ass"
+    },
+    {
+      "id": "bgm_decision",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-BGM乐句表-v0.1.md"
+    },
+    {
+      "id": "packaging_decisions",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-封面定帧-v0.1.md"
+    },
+    {
+      "id": "g3_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-审核卡片-v0.1.md"
+    }
+  ]
+}

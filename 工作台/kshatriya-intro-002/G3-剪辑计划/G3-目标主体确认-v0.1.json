@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G3",
+  "targetSubject": {
+    "canonicalName": "NZ-666 刹帝利（Kshatriya，含原始形态与修复型形态）",
+    "userConfirmed": true,
+    "confirmationBasis": "2026-09-08 G3 开工确认卡：用户回复「确认」，一次性批准主体政策（原始形态+修复型形态、识别与排除规则）；同卡锁定 时长=自然节奏（B1）、S10=改写回 G2（C1）",
+    "identificationRules": [
+      "绿色调大型 NT 用重 MS，四翼状多用途夹舱肩甲为其最强特征（原始形态）",
+      "修复型形态：翼段减少、以大型推进器组件替代、胸部四联炮口与新增枪炮位可辨",
+      "躯干/头部精神感应框架发光（蓝/粉光）出现即视为刹帝利本体画面",
+      "驾驶舱内部画面（驾驶员操作/座舱屏显 KSHATRIYA）视为该机的驾驶员语境画面，仅用于驾驶员节拍"
+    ],
+    "exclusionRules": [
+      "RX-0 独角兽（白/红精神框架发光）、报丧女妖（黑黄）、联邦蓝色系量产机、红色机体（新安洲系）一律为非目标主体",
+      "多主体同框且无法确认刹帝利关键特征时判 mixed，不得按 confirmed 入选",
+      "纯背景/舰内走廊/无机体画面判 not_present"
+    ],
+    "confirmedAt": "2026-09-08T09:27:53Z"
+  },
+  "sufficiencyFallback": null,
+  "notes": "修复型可用画面集中于源片约 274000–286812ms 与 255000–267610ms（001 已验证区间）；若 B09/B10 加总需求超出非重复可用时长，按未预授权路径停下列缺口，呈现 补素材/缩短口播/改写口播 三选项。",
+  "candidateVerificationRule": "每个入选区间按起/中/终帧实际观察判定 identityStatus；001 已做镜头层验证的窗口内取子区间时，继承该窗口观察记录（derivedFromObservationIds 回链账本），新切点边界帧必须目验后方可放行"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G5",
+  "cardType": "g5_delivery_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-09T02:07:05Z",
+  "reviewCardRef": "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/G5-交付复核卡-v0.1.md",
+  "basisRefs": [
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/delivery-manifest.json",
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/g5-validation-report-v0.1.json",
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/metadata-validation-report.json",
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/final-video.mp4",
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/G5-交付复核卡-v0.1.md",
+    "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/G5-批准记录-v0.1.md"
+  ],
+  "checklist": [
+    {
+      "id": "delivery_manifest",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/delivery-manifest.json"
+    },
+    {
+      "id": "qa_validation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/g5-validation-report-v0.1.json"
+    },
+    {
+      "id": "playback_review",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/G5-交付复核卡-v0.1.md"
+    },
+    {
+      "id": "check_frames",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/cover-check.jpg"
+    },
+    {
+      "id": "distribution_boundary",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G5-交付包/交付包-v0.1/export-config.json"
+    }
+  ]
+}

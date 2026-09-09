@@ -1,0 +1,826 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "kshatriya-intro-002",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "inputEvidence": "工作台/kshatriya-intro-002/G2-证据与口播/G2-证据清单-v0.1.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 23,
+  "timelineDurationMs": 103320,
+  "targetDurationMs": 103320,
+  "durationDeltaMs": 0,
+  "segments": [
+    {
+      "segmentId": "seg-01a",
+      "order": 1,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 70000,
+        "endMs": 78370,
+        "durationMs": 8370
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 8370,
+        "durationMs": 8370
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 70000,
+        "endMs": 78370,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-01b",
+      "order": 2,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 2500,
+        "endMs": 7620,
+        "durationMs": 5120
+      },
+      "timeline": {
+        "startMs": 8370,
+        "endMs": 13490,
+        "durationMs": 5120
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 2500,
+        "endMs": 7620,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 3,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 8710,
+        "endMs": 18760,
+        "durationMs": 10050
+      },
+      "timeline": {
+        "startMs": 13490,
+        "endMs": 23540,
+        "durationMs": 10050
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 8710,
+        "endMs": 18760,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 4,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 40000,
+        "endMs": 46770,
+        "durationMs": 6770
+      },
+      "timeline": {
+        "startMs": 23540,
+        "endMs": 30310,
+        "durationMs": 6770
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 40000,
+        "endMs": 46770,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 5,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 99000,
+        "endMs": 107210,
+        "durationMs": 8210
+      },
+      "timeline": {
+        "startMs": 30310,
+        "endMs": 38520,
+        "durationMs": 8210
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 99000,
+        "endMs": 107210,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05a",
+      "order": 6,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 81238,
+        "endMs": 90486,
+        "durationMs": 9248
+      },
+      "timeline": {
+        "startMs": 38520,
+        "endMs": 47768,
+        "durationMs": 9248
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 81238,
+        "endMs": 90486,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05b",
+      "order": 7,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 210934,
+        "endMs": 213096,
+        "durationMs": 2162
+      },
+      "timeline": {
+        "startMs": 47768,
+        "endMs": 49930,
+        "durationMs": 2162
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 210934,
+        "endMs": 213096,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06a",
+      "order": 8,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 56000,
+        "endMs": 58500,
+        "durationMs": 2500
+      },
+      "timeline": {
+        "startMs": 49930,
+        "endMs": 52430,
+        "durationMs": 2500
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 56000,
+        "endMs": 58500,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06b",
+      "order": 9,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 205000,
+        "endMs": 208870,
+        "durationMs": 3870
+      },
+      "timeline": {
+        "startMs": 52430,
+        "endMs": 56300,
+        "durationMs": 3870
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 205000,
+        "endMs": 208870,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06c",
+      "order": 10,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 120980,
+        "endMs": 124420,
+        "durationMs": 3440
+      },
+      "timeline": {
+        "startMs": 56300,
+        "endMs": 59740,
+        "durationMs": 3440
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 120980,
+        "endMs": 124420,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07a",
+      "order": 11,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 0,
+        "endMs": 2500,
+        "durationMs": 2500
+      },
+      "timeline": {
+        "startMs": 59740,
+        "endMs": 62240,
+        "durationMs": 2500
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 0,
+        "endMs": 2500,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07b",
+      "order": 12,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 274000,
+        "endMs": 275370,
+        "durationMs": 1370
+      },
+      "timeline": {
+        "startMs": 62240,
+        "endMs": 63610,
+        "durationMs": 1370
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 274000,
+        "endMs": 275370,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07c",
+      "order": 13,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 178265,
+        "endMs": 180765,
+        "durationMs": 2500
+      },
+      "timeline": {
+        "startMs": 63610,
+        "endMs": 66110,
+        "durationMs": 2500
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 178265,
+        "endMs": 180765,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 14,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 111360,
+        "endMs": 119060,
+        "durationMs": 7700
+      },
+      "timeline": {
+        "startMs": 66110,
+        "endMs": 73810,
+        "durationMs": 7700
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 111360,
+        "endMs": 119060,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-014.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-09",
+      "order": 15,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 139378,
+        "endMs": 141248,
+        "durationMs": 1870
+      },
+      "timeline": {
+        "startMs": 73810,
+        "endMs": 75680,
+        "durationMs": 1870
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 139378,
+        "endMs": 141248,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-015.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-10",
+      "order": 16,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 275370,
+        "endMs": 282060,
+        "durationMs": 6690
+      },
+      "timeline": {
+        "startMs": 75680,
+        "endMs": 82370,
+        "durationMs": 6690
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 275370,
+        "endMs": 282060,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-016.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-11",
+      "order": 17,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 282060,
+        "endMs": 285550,
+        "durationMs": 3490
+      },
+      "timeline": {
+        "startMs": 82370,
+        "endMs": 85860,
+        "durationMs": 3490
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 282060,
+        "endMs": 285550,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-017.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-12",
+      "order": 18,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 255000,
+        "endMs": 263370,
+        "durationMs": 8370
+      },
+      "timeline": {
+        "startMs": 85860,
+        "endMs": 94230,
+        "durationMs": 8370
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 255000,
+        "endMs": 263370,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-018.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-13a",
+      "order": 19,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 47300,
+        "endMs": 48770,
+        "durationMs": 1470
+      },
+      "timeline": {
+        "startMs": 94230,
+        "endMs": 95700,
+        "durationMs": 1470
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 47300,
+        "endMs": 48770,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-019.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-13b",
+      "order": 20,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 67000,
+        "endMs": 69900,
+        "durationMs": 2900
+      },
+      "timeline": {
+        "startMs": 95700,
+        "endMs": 98600,
+        "durationMs": 2900
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 67000,
+        "endMs": 69900,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-020.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-13c",
+      "order": 21,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 96086,
+        "endMs": 98999,
+        "durationMs": 2913
+      },
+      "timeline": {
+        "startMs": 98600,
+        "endMs": 101513,
+        "durationMs": 2913
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 96086,
+        "endMs": 98999,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-021.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-13d",
+      "order": 22,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 216868,
+        "endMs": 217413,
+        "durationMs": 545
+      },
+      "timeline": {
+        "startMs": 101513,
+        "endMs": 102058,
+        "durationMs": 545
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 216868,
+        "endMs": 217413,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-022.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-13e",
+      "order": 23,
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+        "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+        "startMs": 285550,
+        "endMs": 286812,
+        "durationMs": 1262
+      },
+      "timeline": {
+        "startMs": 102058,
+        "endMs": 103320,
+        "durationMs": 1262
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 285550,
+        "endMs": 286812,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-023.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    }
+  ],
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

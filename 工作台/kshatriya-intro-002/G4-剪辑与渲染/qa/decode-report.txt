@@ -1,0 +1,46 @@
+== ffprobe streams
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "24/1",
+            "duration": "103.333333"
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "duration": "103.320000"
+        }
+    ]
+}
+== full decode
+decode: OK (0 errors)
+== loudness
+  Integrated loudness:
+    I:         -15.5 LUFS
+    Threshold: -25.5 LUFS
+
+  Loudness range:
+    LRA:         2.2 LU
+    Threshold: -35.6 LUFS
+    LRA low:   -16.7 LUFS
+    LRA high:  -14.4 LUFS
+
+  True peak:
+    Peak:       -3.5 dBFS
+[out#0/null @ 0x13b8047c0] video:1066KiB audio:17800KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 2480 fps=0.0 q=-0.0 Lsize=N/A time=00:01:43.32 bitrate=N/A speed= 247x    

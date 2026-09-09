@@ -1,0 +1,36 @@
+{
+  "projectId": "kshatriya-intro-002",
+  "generatedAt": "2026-09-09T02:05:31Z",
+  "editPlan": {
+    "planRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "planStatus": "approved_for_g4",
+    "segments": 23,
+    "timelineDurationMs": 103320,
+    "actualDurationMs": 103333,
+    "durationDeltaMs": 13,
+    "durationResolution": "follow_narration_natural_duration",
+    "sourceAudioPolicy": "exclude",
+    "narration": "G2 v0.2 批准口播（12 句，longtian 神经 TTS，−15.2 LUFS）",
+    "bgm": "Interlinked（Lonely Lies; GOLDKID$）轨首 0–103.32s 1:1，−12dB 侧链闪避，2s 淡入/淡出",
+    "subtitles": "G3-字幕时间轴-v0.1.ass 烧录（NarrMain 14px 底部安全区，≤2 行）",
+    "cover": "源 68000ms 帧 + 标题「刹帝利：U.C.0096 最悲壮的登场与陨落」"
+  },
+  "warnings": [
+    "warning: 章节卡与顶部标题栏未实现（G4 播放复核卡选项 A 已由用户接受）",
+    "warning: 旁白响度 −15.2 LUFS（G3 目标 −14 LUFS，受源 TTS 峰值结构限制）；成片积分 −15.5 LUFS / 真峰 −3.5 dBFS",
+    "warning: 画面与 kshatriya-intro-001 已用源区间重叠约 96%（同一源素材+证据驱动选段，用户接受为长/短双版本定位）",
+    "warning: 重复画面检测器未运行（无可用镜头级去重工具），以人工抽帧切点检查替代"
+  ],
+  "humanReviewPoints": [
+    "g5_delivery_review"
+  ],
+  "evidenceRefs": [
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-回显数据-v0.1.json",
+    "工作台/kshatriya-intro-002/G3-剪辑计划/G3-批准记录-v0.1.md",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1-装配记录-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/g4-validation-report-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-批准记录-v0.1.md"
+  ]
+}

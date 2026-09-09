@@ -1,0 +1,26 @@
+[Script Info]
+Title: kshatriya-intro-002 G3 narration captions v0.1 (longtian)
+ScriptType: v4.00+
+PlayResX: 640
+PlayResY: 360
+WrapStyle: 1
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: NarrMain,PingFang SC,14,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,1,0,2,20,20,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:13.49,NarrMain,,0,0,0,,在 U.C.0096 的动荡中，新吉翁残党"带袖的"旗下，\N有一台被联邦士兵称为"四片翅膀的家伙"的机体——NZ-666 刹帝利。
+Dialogue: 0,0:00:13.49,0:00:23.54,NarrMain,,0,0,0,,它并非凭空出现，而是 NZ 系技术多年积累的结晶：\N从原型的昆曼沙，到 α·瓦索龙，最终小型化为刹帝利。
+Dialogue: 0,0:00:23.54,0:00:30.31,NarrMain,,0,0,0,,设计目标很明确——在保持同等武装与性能的前提下，\N把机体进一步小型化。
+Dialogue: 0,0:00:30.31,0:00:38.52,NarrMain,,0,0,0,,为此，机体采用塞可缪骨架，\N并把驾驶舱贴近躯干，以更低损耗接收驾驶者的脑电波。
+Dialogue: 0,0:00:38.52,0:00:49.93,NarrMain,,0,0,0,,它最醒目的特征，是肩部四片多用途夹舱：\N兼具平衡、推进与 AMBAC 功能，内部收纳新型浮游炮与 MEGA 粒子炮。
+Dialogue: 0,0:00:49.93,0:00:59.74,NarrMain,,0,0,0,,胸部可集束射击多门 MEGA 粒子炮，\N配合专用光束加特林与腕内光束剑，火力覆盖远近各档。
+Dialogue: 0,0:00:59.74,0:01:06.11,NarrMain,,0,0,0,,驾驶它的，是强化人玛莉妲·库鲁斯，\N也就是"普露十二号"，隶属葛兰雪队。
+Dialogue: 0,0:01:06.11,0:01:15.68,NarrMain,,0,0,0,,在实战中，刹帝利重创联邦部队，\N随后被巴纳吉·林克斯驾驶的 RX-0 独角兽重创，遭联邦回收。
+Dialogue: 0,0:01:15.68,0:01:22.37,NarrMain,,0,0,0,,被拟·亚加玛回收后，它以修复型再战：\N损失的翼段以大型推进器替代。
+Dialogue: 0,0:01:22.37,0:01:25.86,NarrMain,,0,0,0,,修复型的火力与续航得到全面强化。
+Dialogue: 0,0:01:25.86,0:01:34.23,NarrMain,,0,0,0,,而它的结局，止步于墨瓦腊泥加战役——\N玛莉妲为掩护 RX-0 全装甲独角兽出击，力战被击破。
+Dialogue: 0,0:01:34.23,0:01:43.32,NarrMain,,0,0,0,,从重创、回收、修复到陨落，\N刹帝利短暂却激烈战争轨迹，正是理解这台机体的最好线索。
