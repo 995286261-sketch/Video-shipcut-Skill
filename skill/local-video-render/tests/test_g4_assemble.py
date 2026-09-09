@@ -127,5 +127,50 @@ class G4AssembleTests(unittest.TestCase):
         self.assertEqual(str(cover_out.resolve()), record["cover"])
 
 
+    def any_font(self):
+        font = next((Path(c) for p in ("/System/Library/Fonts/Supplemental/*.ttf", "/System/Library/Fonts/*.ttf") for c in glob.glob(p)), None)
+        if not font:
+            self.skipTest("no TrueType font available for drawtext")
+        return font
+
+    def test_chapter_cards_overlay_trims_subtitle_cues(self):
+        if " subtitles " not in subprocess.run([self.ffmpeg, "-hide_banner", "-filters"], capture_output=True, text=True).stdout:
+            self.skipTest("ffmpeg build lacks the libass subtitles filter")
+        ass = self.root / "captions.ass"
+        ass.write_text(CAPTIONS_ASS, encoding="utf-8")
+        cards = self.root / "cards.json"
+        cards.write_text(json.dumps({"fontFile": str(self.any_font()), "fontsize": 20, "cards": [
+            {"chapterId": "ch-01", "title": "章节卡测试", "startMs": 500, "endMs": 1000},
+        ]}, ensure_ascii=False), encoding="utf-8")
+        result = self.run_assemble(("--subtitle-ass", str(ass), "--chapter-cards", str(cards)))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
+        self.assertEqual(1, record["chapterCards"]["cards"])
+        self.assertEqual(1, record["chapterCards"]["subtitleCuesTrimmed"])
+        derived = (self.root / "final" / "master-assemble-work" / "captions.ass").read_text(encoding="utf-8")
+        dialogues = [line for line in derived.splitlines() if line.startswith("Dialogue:")]
+        self.assertEqual(2, len(dialogues))
+        self.assertIn("0:00:00.50", dialogues[0])
+        self.assertIn("0:00:01.00", dialogues[1])
+
+    def test_chapter_card_beyond_timeline_is_rejected(self):
+        cards = self.root / "bad-cards.json"
+        cards.write_text(json.dumps({"fontFile": str(self.any_font()), "cards": [
+            {"chapterId": "ch-01", "title": "越界卡", "startMs": 1900, "endMs": 2500},
+        ]}, ensure_ascii=False), encoding="utf-8")
+        result = self.run_assemble(("--chapter-cards", str(cards)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("exceeds the timeline", result.stdout)
+
+    def test_title_bar_burned_and_recorded(self):
+        bar = self.root / "title-bar.json"
+        bar.write_text(json.dumps({"fontFile": str(self.any_font()), "text": "NZ-666 KSHATRIYA", "fontsize": 12, "marginPct": 8}, ensure_ascii=False), encoding="utf-8")
+        result = self.run_assemble(("--title-bar", str(bar)))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
+        self.assertEqual("NZ-666 KSHATRIYA", record["titleBar"]["text"])
+        self.assertTrue(record["titleBar"]["sha256"])
+
+
 if __name__ == "__main__":
     unittest.main()

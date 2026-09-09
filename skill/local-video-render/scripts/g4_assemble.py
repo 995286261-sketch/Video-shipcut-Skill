@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -89,6 +90,113 @@ def build_assemble_command(list_file: Path, inputs: list[Path], filter_complex: 
     return command
 
 
+ASS_TIME = re.compile(r"(\d+):(\d{2}):(\d{2})\.(\d{2})")
+
+
+def parse_ass_ms(value: str) -> int:
+    match = ASS_TIME.fullmatch(value.strip())
+    if not match:
+        fail(f"unparsable ASS timestamp: {value!r}")
+    hours, minutes, seconds, centis = (int(part) for part in match.groups())
+    return ((hours * 60 + minutes) * 60 + seconds) * 1000 + centis * 10
+
+
+def format_ass_ms(milliseconds: int) -> str:
+    hours, rem = divmod(milliseconds, 3_600_000)
+    minutes, rem = divmod(rem, 60_000)
+    seconds, millis = divmod(rem, 1000)
+    return f"{hours}:{minutes:02d}:{seconds:02d}.{millis // 10:02d}"
+
+
+def trim_ass_cues(text: str, card_ranges: list[tuple[int, int]]) -> tuple[str, int]:
+    """Remove chapter-card intervals from every subtitle cue so the card never
+    competes with the narration text layer (demo-quality-patch §4)."""
+    lines, fmt, trimmed = [], None, 0
+    for raw in text.splitlines():
+        line = raw.strip()
+        if line.startswith("Format:") and {"Start", "End", "Text"} <= {f.strip() for f in line[7:].split(",")}:
+            fmt = [f.strip() for f in line[7:].split(",")]
+            lines.append(raw)
+            continue
+        if fmt and line.startswith("Dialogue:"):
+            values = line[9:].split(",", len(fmt) - 1)
+            event = dict(zip(fmt, values))
+            start, end = parse_ass_ms(event["Start"]), parse_ass_ms(event["End"])
+            pieces = [[start, end]]
+            for card_start, card_end in card_ranges:
+                kept = []
+                for piece_start, piece_end in pieces:
+                    if card_end <= piece_start or card_start >= piece_end:
+                        kept.append([piece_start, piece_end])
+                        continue
+                    if card_start > piece_start:
+                        kept.append([piece_start, min(card_start, piece_end)])
+                    if card_end < piece_end:
+                        kept.append([max(card_end, piece_start), piece_end])
+                pieces = kept
+            if pieces != [[start, end]]:
+                trimmed += 1
+            for piece_start, piece_end in pieces:
+                if piece_end - piece_start < 40:
+                    continue
+                event["Start"], event["End"] = format_ass_ms(piece_start), format_ass_ms(piece_end)
+                lines.append("Dialogue: " + ",".join(event[field] for field in fmt))
+            continue
+        lines.append(raw)
+    return "\n".join(lines) + "\n", trimmed
+
+
+def drawtext_filter(font: Path, text_file: Path, fontsize: int, position: str, enable: str | None) -> str:
+    font_arg = str(font.resolve()).replace(":", "\\:")
+    text_arg = str(text_file.resolve()).replace(":", "\\:")
+    filter_text = (
+        f"drawtext=fontfile={font_arg}:textfile={text_arg}:fontsize={fontsize}:fontcolor=white"
+        ":borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18"
+        f":x=(w-text_w)/2:{position}"
+    )
+    if enable:
+        filter_text += f":enable='{enable}'"
+    return filter_text
+
+
+def build_chapter_card_filters(contract: dict, work: Path, timeline_ms: int) -> tuple[list[str], list[tuple[int, int]]]:
+    cards = contract.get("cards")
+    if not isinstance(cards, list) or not cards:
+        fail("chapter cards contract requires a non-empty cards list")
+    font = require_file(Path(str(contract.get("fontFile") or "")), "chapter cards font")
+    fontsize = int(contract.get("fontsize", 26))
+    filters, ranges, previous_end = [], [], 0
+    for index, card in enumerate(cards, 1):
+        start, end = card.get("startMs"), card.get("endMs")
+        title = str(card.get("title") or "").strip()
+        if not isinstance(start, int) or not isinstance(end, int) or end <= start:
+            fail(f"chapter card {index} needs integer startMs/endMs with end > start")
+        if not title:
+            fail(f"chapter card {index} requires a title")
+        if start < previous_end or end > timeline_ms:
+            fail(f"chapter card {index} [{start},{end}) overlaps a previous card or exceeds the timeline {timeline_ms}ms")
+        previous_end = end
+        text_file = work / f"chapter-card-{index}.txt"
+        text_file.write_text(title, encoding="utf-8")
+        filters.append(drawtext_filter(font, text_file, fontsize, "y=(h-text_h)/2", f"between(t,{start / 1000:.3f},{end / 1000:.3f})"))
+        ranges.append((start, end))
+    return filters, ranges
+
+
+def build_title_bar_filter(contract: dict, work: Path) -> str:
+    font = require_file(Path(str(contract.get("fontFile") or "")), "title bar font")
+    title = str(contract.get("text") or "").strip()
+    if not title:
+        fail("title bar contract requires text")
+    fontsize = int(contract.get("fontsize", 14))
+    margin_pct = float(contract.get("marginPct", 8))
+    if not 0 < margin_pct < 50:
+        fail("title bar marginPct must be between 0 and 50")
+    text_file = work / "title-bar.txt"
+    text_file.write_text(title, encoding="utf-8")
+    return drawtext_filter(font, text_file, fontsize, f"y=h*{margin_pct / 100:.4f}", None)
+
+
 def render_cover(contract_path: Path, work: Path) -> Path:
     contract = load(contract_path)
     image = require_file(Path(str(contract.get("imagePath") or "")), "cover image")
@@ -129,6 +237,8 @@ def main() -> int:
     parser.add_argument("--bgm-gain-db", type=float, default=-18.0)
     parser.add_argument("--bgm-duck", action="store_true", help="duck the BGM bed with the narration as sidechain")
     parser.add_argument("--cover", type=Path, help="cover contract JSON: imagePath, fontFile, title, output")
+    parser.add_argument("--chapter-cards", type=Path, help="chapter cards contract JSON: fontFile, fontsize, cards[{chapterId,title,startMs,endMs}]")
+    parser.add_argument("--title-bar", type=Path, help="title bar contract JSON: fontFile, text, fontsize, marginPct")
     parser.add_argument("--fps", type=int, default=24)
     parser.add_argument("--duration-tolerance-ms", type=int, default=400)
     args = parser.parse_args()
@@ -166,14 +276,27 @@ def main() -> int:
     inputs = [narration]
     if args.bgm_audio:
         inputs.append(require_file(args.bgm_audio, "BGM audio"))
+    card_filters: list[str] = []
+    card_ranges: list[tuple[int, int]] = []
+    if args.chapter_cards:
+        card_contract = load(require_file(args.chapter_cards, "chapter cards contract"))
+        card_filters, card_ranges = build_chapter_card_filters(card_contract, work, timeline_ms)
+    trimmed_cues = 0
+    video_layers = [f"[0:v]fps=fps={args.fps}", "format=yuv420p"]
     if args.subtitle_ass:
         require_file(args.subtitle_ass, "subtitle ASS")
         if not subtitles_filter_available():
             fail("this ffmpeg build lacks the libass subtitles filter; install full FFmpeg before burning captions")
-        shutil.copyfile(args.subtitle_ass, work / "captions.ass")
-        video_chain = f"[0:v]fps=fps={args.fps},format=yuv420p,subtitles=captions.ass[v]"
-    else:
-        video_chain = f"[0:v]fps=fps={args.fps},format=yuv420p[v]"
+        if card_ranges:
+            derived, trimmed_cues = trim_ass_cues(Path(args.subtitle_ass).read_text(encoding="utf-8-sig"), card_ranges)
+            (work / "captions.ass").write_text(derived, encoding="utf-8")
+        else:
+            shutil.copyfile(args.subtitle_ass, work / "captions.ass")
+        video_layers.append("subtitles=captions.ass")
+    title_contract = load(require_file(args.title_bar, "title bar contract")) if args.title_bar else None
+    if title_contract:
+        video_layers.append(build_title_bar_filter(title_contract, work))
+    video_chain = ",".join([*video_layers, *card_filters]) + "[v]"
     filter_complex = video_chain + ";" + audio_filter_chain(1, 2 if len(inputs) == 2 else None, args.bgm_gain_db, args.bgm_duck)
     command = build_assemble_command(list_file.resolve(), [path.resolve() for path in inputs], filter_complex, args.output.resolve(), args.fps, timeline_ms / 1000)
     run_checked(command, args.output, "assembled master", cwd=work)
@@ -207,6 +330,14 @@ def main() -> int:
         "probedDurationMs": output_ms,
         "fps": args.fps,
         "cover": str(cover_output) if cover_output else None,
+        "chapterCards": {
+            "path": str(args.chapter_cards), "sha256": sha256(args.chapter_cards),
+            "cards": len(card_ranges), "subtitleCuesTrimmed": trimmed_cues,
+        } if args.chapter_cards else None,
+        "titleBar": {
+            "path": str(args.title_bar), "sha256": sha256(args.title_bar),
+            "text": str(title_contract.get("text")),
+        } if title_contract else None,
         "filterGraph": filter_complex,
         "workDir": str(work),
     }
