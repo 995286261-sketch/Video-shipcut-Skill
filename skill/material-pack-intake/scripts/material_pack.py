@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Create and validate the input-only media material pack contract."""
 
+from __future__ import annotations
+
 import argparse
 import datetime as dt
 import hashlib

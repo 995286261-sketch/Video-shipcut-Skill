@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Deterministic local media engine for the long-video-local-edit skill."""
 
+from __future__ import annotations
+
 import argparse
 import datetime as dt
 import hashlib

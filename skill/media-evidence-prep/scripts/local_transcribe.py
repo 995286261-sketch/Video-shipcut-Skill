@@ -6,6 +6,8 @@ parse them. Exit codes: 0 success, 2 invalid input or blocked precondition,
 1 unexpected transcription failure.
 """
 
+from __future__ import annotations
+
 import argparse
 import datetime as dt
 import hashlib

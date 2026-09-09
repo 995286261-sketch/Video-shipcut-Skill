@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Validate a G5 delivery bundle without needing its raw source media."""
+from __future__ import annotations
+
 import argparse
 import hashlib
 import json
