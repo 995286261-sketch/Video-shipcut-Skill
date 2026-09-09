@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "kshatriya-intro-002",
+  "status": "assembled",
+  "manifest": "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+  "timelineDurationMs": 103320,
+  "segments": [
+    {
+      "segmentId": "seg-01a",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-001.mp4",
+      "sha256": "1A02074D555AC6AB60D9D00DA5596C9D8C159770221CD24EBF584D1E2B0AFD90"
+    },
+    {
+      "segmentId": "seg-01b",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-002.mp4",
+      "sha256": "4BDE44C51C56750DB406E952CD1F04B44B16CE1727D3F61761E7F3526453E9DF"
+    },
+    {
+      "segmentId": "seg-02",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-003.mp4",
+      "sha256": "5FD0A3783B3AA5AEDA324F48FCB43970C3D3AAFD15C0D6F13F0EAF76F852BB45"
+    },
+    {
+      "segmentId": "seg-03",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-004.mp4",
+      "sha256": "7B3F534A25F5DBCF231CFF03A0FD1E234D840639DFE4424547DB88EA0EDE130A"
+    },
+    {
+      "segmentId": "seg-04",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-005.mp4",
+      "sha256": "D24B00B28A70AA533346DC37E66AF381F6623A50A24459DC7A46768B4E25C343"
+    },
+    {
+      "segmentId": "seg-05a",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-006.mp4",
+      "sha256": "3DF3F616D275373820A3DE3209EC2569DF18DC8E0A4FAEAE0A74F3663CC7C7D5"
+    },
+    {
+      "segmentId": "seg-05b",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-007.mp4",
+      "sha256": "11979D80A4D99B472A74D3BA92FA04487F0B567B484A1B39B5A1AE8732229ECD"
+    },
+    {
+      "segmentId": "seg-06a",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-008.mp4",
+      "sha256": "391E9A68348AB3A7CE1812F93B51061EBB27B7987300F19C9EED30CA0C2B2C42"
+    },
+    {
+      "segmentId": "seg-06b",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-009.mp4",
+      "sha256": "747D91D33DB85F8FE6FDB7498AE898B9A26CF7F44845769FD9ACC3B3EAA4B80C"
+    },
+    {
+      "segmentId": "seg-06c",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-010.mp4",
+      "sha256": "F2A6151FF371118EF17216478DD6CCF284B2DFA5E8B96DD11446E48BC2B91BA8"
+    },
+    {
+      "segmentId": "seg-07a",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-011.mp4",
+      "sha256": "FF8B0AC739DA00197EB4CDC3D6DE6ECF0E6BE5E44FE32B330FDCE3822A900F34"
+    },
+    {
+      "segmentId": "seg-07b",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-012.mp4",
+      "sha256": "12E32A4864B0B8FEAE06191D69C1BB23D6BCC253396457E747AE3CFF734FDD1B"
+    },
+    {
+      "segmentId": "seg-07c",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-013.mp4",
+      "sha256": "0B5D440828F443DD9403042BDE1329A84F7E7356699CA866CB76CE797EC001D8"
+    },
+    {
+      "segmentId": "seg-08",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-014.mp4",
+      "sha256": "43958583513592EFF2404C9741FC6C8E0C5E70431A56DD411E4A1BD0D025F313"
+    },
+    {
+      "segmentId": "seg-09",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-015.mp4",
+      "sha256": "E50CB0938DEFF0D150532EA366A60F79DD1CB55F1BD9FA33E3150B465127E887"
+    },
+    {
+      "segmentId": "seg-10",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-016.mp4",
+      "sha256": "4221D4F0D86E15AE3186589492818ADC22856B0FC3B1F3DDB4CCD50746BDFAA0"
+    },
+    {
+      "segmentId": "seg-11",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-017.mp4",
+      "sha256": "9AEFA59EAFBB12A1F6D37D4167D9735D4B6F320DF3C90FE2442FB2752709005A"
+    },
+    {
+      "segmentId": "seg-12",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-018.mp4",
+      "sha256": "169BDEA3932965236C63D847492B8C6FBE06D2F7AFD0AB0CBDBDF1BEAD3AD33C"
+    },
+    {
+      "segmentId": "seg-13a",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-019.mp4",
+      "sha256": "5D8412A4E08781E37BC402D3013BF2A69B17F86056BE9F8D03DFECA58F50A839"
+    },
+    {
+      "segmentId": "seg-13b",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-020.mp4",
+      "sha256": "83197DAE45E3DE3A3726E2232D10D0299FFC87534F99FDF3BCB8DF8F9F3E7529"
+    },
+    {
+      "segmentId": "seg-13c",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-021.mp4",
+      "sha256": "7914FA9E0BD64A0F9D9F6470CB7D7F8DBEB728533CB8E18A8EF2AD9C9BA7CB5B"
+    },
+    {
+      "segmentId": "seg-13d",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-022.mp4",
+      "sha256": "8DCCE853C385709AAD2A825484D0644E1D9C49D8FBA12DC5EFCAAE1C97945E90"
+    },
+    {
+      "segmentId": "seg-13e",
+      "file": "工作台/kshatriya-intro-002/G4-剪辑与渲染/clean-segments/clean-segments/seg-023.mp4",
+      "sha256": "CB0F46D2AF3424242EC36B0D1EF96FD4FC79A51FF786469BDCFDCA9C6A79A0C0"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/kshatriya-intro-002/G4-剪辑与渲染/work/narration-loudnorm-14lufs.wav",
+    "sha256": "C840E101C41739EBAE9998870C00802C48DA17C93D3FB8DE0B00FF3AAD29F63C",
+    "durationMs": 103331
+  },
+  "bgmAudio": {
+    "path": "工作台/kshatriya-intro-002/G0-素材包/07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+    "sha256": "420D489A744049FB6037EB42E9E1A1A6535948B9B028621E9C5F5A0D048076E0",
+    "gainDb": -12.0,
+    "ducked": true
+  },
+  "subtitleAss": {
+    "path": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+    "sha256": "D44B200F00E5D8098A3D06D0D664A93A57F31D00CD37C59BB2A9CD10BDE015D8"
+  },
+  "output": "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1.mp4",
+  "outputSha256": "39C0533695EB3E120ABA48A1D04E30BE779C2D9556CD16CA334AD3CB97BE595A",
+  "probedDurationMs": 103333,
+  "fps": 24,
+  "cover": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/kshatriya-intro-002/G4-剪辑与渲染/cover/cover-final.png",
+  "filterGraph": "[0:v]fps=fps=24,format=yuv420p,subtitles=captions.ass[v];[2:a]volume=-12.0dB[bed];[1:a]asplit=2[nmain][nside];[bed][nside]sidechaincompress=threshold=0.05:ratio=8:attack=20:release=400[ducked];[ducked][nmain]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1-assemble-work"
+}

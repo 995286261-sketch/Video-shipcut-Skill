@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "purpose": "g2_narration_voice_manifest",
+  "voiceTier": "production_neural",
+  "tierNote": "㉘ 分级：百炼 CosyVoice 神经 TTS = 成品级；下游估时/对齐一律以本清单实测时长为准，不得用文本估计",
+  "engine": "bailian-cosyvoice-v3-flash",
+  "voice": "longtian_v3",
+  "voiceName": "龙天·磁性理智男",
+  "language": "zh",
+  "accent": "标准普通话（中国大陆）",
+  "sampleRate": 22050,
+  "channels": 1,
+  "revisionNote": "v0.2 修正案：S9/S10 按 G3 素材充分性缺口改写重合成，其余十句复用 v0.1 句级音频（同引擎同音色）",
+  "fullNarrationRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+  "sentenceScriptRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.2.md",
+  "measuredTotalDurationMs": 103320,
+  "sentences": [
+    {
+      "sentenceId": "S01",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S01.wav",
+      "startMs": 0,
+      "durationMs": 13490
+    },
+    {
+      "sentenceId": "S02",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S02.wav",
+      "startMs": 13490,
+      "durationMs": 10050
+    },
+    {
+      "sentenceId": "S03",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S03.wav",
+      "startMs": 23540,
+      "durationMs": 6770
+    },
+    {
+      "sentenceId": "S04",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S04.wav",
+      "startMs": 30310,
+      "durationMs": 8210
+    },
+    {
+      "sentenceId": "S05",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S05.wav",
+      "startMs": 38520,
+      "durationMs": 11410
+    },
+    {
+      "sentenceId": "S06",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S06.wav",
+      "startMs": 49930,
+      "durationMs": 9810
+    },
+    {
+      "sentenceId": "S07",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S07.wav",
+      "startMs": 59740,
+      "durationMs": 6370
+    },
+    {
+      "sentenceId": "S08",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S08.wav",
+      "startMs": 66110,
+      "durationMs": 9570
+    },
+    {
+      "sentenceId": "S09",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S09-v0.2.wav",
+      "startMs": 75680,
+      "durationMs": 6690
+    },
+    {
+      "sentenceId": "S10",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S10-v0.2.wav",
+      "startMs": 82370,
+      "durationMs": 3490
+    },
+    {
+      "sentenceId": "S11",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S11.wav",
+      "startMs": 85860,
+      "durationMs": 8370
+    },
+    {
+      "sentenceId": "S12",
+      "audioRef": "工作台/kshatriya-intro-002/G2-证据与口播/配音试听/S12.wav",
+      "startMs": 94230,
+      "durationMs": 9090
+    }
+  ]
+}

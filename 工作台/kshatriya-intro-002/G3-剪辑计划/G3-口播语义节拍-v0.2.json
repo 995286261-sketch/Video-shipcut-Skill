@@ -1,0 +1,231 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G3",
+  "status": "draft",
+  "narrationDraft": "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.2.md",
+  "narrationDecisionRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+  "timingBasis": "G2-配音清单-v0.2.json 逐句实测时长（S9/S10 重合成，其余复用 v0.1 句级音频；拼接边界为合成精确值）",
+  "interSentenceGapMs": 0,
+  "beats": [
+    {
+      "beatId": "B01",
+      "sourceSentenceId": "S01",
+      "outputStartMs": 0,
+      "outputEndMs": 13490,
+      "narrationText": "在 U.C.0096 的动荡中，新吉翁残党\"带袖的\"旗下，有一台被联邦士兵称为\"四片翅膀的家伙\"的机体——NZ-666 刹帝利。",
+      "claim": {
+        "type": "object",
+        "subject": "NZ-666 刹帝利（原始形态）",
+        "minimumVisibleEvidence": [
+          "四翼机体全身外形可见（宇宙或战场背景）"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "四翼X展开剪影+月亮背景"
+      ]
+    },
+    {
+      "beatId": "B02",
+      "sourceSentenceId": "S02",
+      "outputStartMs": 13490,
+      "outputEndMs": 23540,
+      "narrationText": "它并非凭空出现，而是 NZ 系技术多年积累的结晶：从原型的昆曼沙，到 α·瓦索龙，最终小型化为刹帝利。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "NZ 系设计谱系",
+        "minimumVisibleEvidence": [
+          "刹帝利全身画面承载叙述；谱系以档案式字卡呈现"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "格纳库龙门架全身镜头",
+        "NZ-000→NZ-333→NZ-666 谱系字卡叠加机体画面"
+      ]
+    },
+    {
+      "beatId": "B03",
+      "sourceSentenceId": "S03",
+      "outputStartMs": 23540,
+      "outputEndMs": 30310,
+      "narrationText": "设计目标很明确——在保持同等武装与性能的前提下，把机体进一步小型化。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "小型化设计目标",
+        "minimumVisibleEvidence": [
+          "机体紧凑体型全景或比例参照画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "设计目标档案字卡叠加机体全景"
+      ]
+    },
+    {
+      "beatId": "B04",
+      "sourceSentenceId": "S04",
+      "outputStartMs": 30310,
+      "outputEndMs": 38520,
+      "narrationText": "为此，机体采用塞可缪骨架，并把驾驶舱贴近躯干，以更低损耗接收驾驶者的脑电波。",
+      "claim": {
+        "type": "appearance",
+        "subject": "塞可缪骨架/躯干驾驶舱",
+        "minimumVisibleEvidence": [
+          "躯干/精神感应框架发光特写或驾驶舱位置画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "精神框架蓝光躯干特写"
+      ]
+    },
+    {
+      "beatId": "B05",
+      "sourceSentenceId": "S05",
+      "outputStartMs": 38520,
+      "outputEndMs": 49930,
+      "narrationText": "它最醒目的特征，是肩部四片多用途夹舱：兼具平衡、推进与 AMBAC 功能，内部收纳新型浮游炮与 MEGA 粒子炮。",
+      "claim": {
+        "type": "appearance",
+        "subject": "肩部四片多用途夹舱",
+        "minimumVisibleEvidence": [
+          "肩甲/翼段特写可见",
+          "炮口发光或浮游炮相关画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "绿色肩甲炮口特写",
+        "俯视四翼展开镜头"
+      ]
+    },
+    {
+      "beatId": "B06",
+      "sourceSentenceId": "S06",
+      "outputStartMs": 49930,
+      "outputEndMs": 59740,
+      "narrationText": "胸部可集束射击多门 MEGA 粒子炮，配合专用光束加特林与腕内光束剑，火力覆盖远近各档。",
+      "claim": {
+        "type": "weapon",
+        "subject": "胸部MEGA炮/光束加特林/光束剑",
+        "minimumVisibleEvidence": [
+          "胸部炮口阵列特写",
+          "多管旋转炮开火或光束剑画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "机体大枪射击烟迹特写",
+        "头部发光射口+炮管开火快切"
+      ]
+    },
+    {
+      "beatId": "B07",
+      "sourceSentenceId": "S07",
+      "outputStartMs": 59740,
+      "outputEndMs": 66110,
+      "narrationText": "驾驶它的，是强化人玛莉妲·库鲁斯，也就是\"普露十二号\"，隶属葛兰雪队。",
+      "claim": {
+        "type": "object",
+        "subject": "驾驶员玛莉妲·库鲁斯",
+        "minimumVisibleEvidence": [
+          "驾驶舱内驾驶员画面（面部/手套操作）"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "机体头部驾驶舱位特写 + 驾驶员姓名信息卡"
+      ]
+    },
+    {
+      "beatId": "B08",
+      "sourceSentenceId": "S08",
+      "outputStartMs": 66110,
+      "outputEndMs": 75680,
+      "narrationText": "在实战中，刹帝利重创联邦部队，随后被巴纳吉·林克斯驾驶的 RX-0 独角兽重创，遭联邦回收。",
+      "claim": {
+        "type": "action",
+        "subject": "重创联邦→被RX-0重创→回收",
+        "minimumVisibleEvidence": [
+          "刹帝利战斗/开火画面",
+          "与白红机体（独角兽系）缠斗或受创爆光画面"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "联邦机被斩+爆炸组",
+        "光束剑突袭+爆光残片"
+      ]
+    },
+    {
+      "beatId": "B09",
+      "sourceSentenceId": "S09",
+      "outputStartMs": 75680,
+      "outputEndMs": 82370,
+      "narrationText": "被拟·亚加玛回收后，它以修复型再战：损失的翼段以大型推进器替代。",
+      "claim": {
+        "type": "state_change",
+        "subject": "修复型形态",
+        "minimumVisibleEvidence": [
+          "修复型机体画面（翼段减少/大型推进器组件可辨）",
+          "格纳库/整备场景"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "格纳库俯视修复型立于甲板",
+        "修复型正面胸部特写"
+      ]
+    },
+    {
+      "beatId": "B10",
+      "sourceSentenceId": "S10",
+      "outputStartMs": 82370,
+      "outputEndMs": 85860,
+      "narrationText": "修复型的火力与续航得到全面强化。",
+      "claim": {
+        "type": "appearance",
+        "subject": "修复型火力与续航强化",
+        "minimumVisibleEvidence": [
+          "修复型胸部炮口特写（火力）",
+          "大型推进器舱特写（续航）"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "修复型绿装甲+炮口发光特写",
+        "整备仰视镜头延续"
+      ]
+    },
+    {
+      "beatId": "B11",
+      "sourceSentenceId": "S11",
+      "outputStartMs": 85860,
+      "outputEndMs": 94230,
+      "narrationText": "而它的结局，止步于墨瓦腊泥加战役——玛莉妲为掩护 RX-0 全装甲独角兽出击，力战被击破。",
+      "claim": {
+        "type": "action",
+        "subject": "最终战被击破",
+        "minimumVisibleEvidence": [
+          "绿色机体与大型白红重武装（全装甲独角兽）同框缠斗",
+          "机体被击破爆光"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "爆光定格+静场处理"
+      ]
+    },
+    {
+      "beatId": "B12",
+      "sourceSentenceId": "S12",
+      "outputStartMs": 94230,
+      "outputEndMs": 103320,
+      "narrationText": "从重创、回收、修复到陨落，刹帝利短暂却激烈战争轨迹，正是理解这台机体的最好线索。",
+      "claim": {
+        "type": "abstract_conclusion",
+        "subject": "档案总结",
+        "minimumVisibleEvidence": [
+          "刹帝利/修复型画面（剪影、掠过、缠斗或格纳库留白）作为轨迹蒙太奇收束"
+        ]
+      },
+      "allowedVisualAlternatives": [
+        "X剪影+爆光",
+        "四翼掠过框架网",
+        "格纳库仰视终帧定格+标题字卡"
+      ]
+    }
+  ],
+  "supersedesRef": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-口播语义节拍-v0.1.json"
+}

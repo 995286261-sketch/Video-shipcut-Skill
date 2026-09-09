@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-08T08:38:05Z",
+  "reviewCardRef": "工作台/kshatriya-intro-002/G1-创作方向/G1-方向确认记录.md",
+  "basisRefs": [
+    "工作台/kshatriya-intro-002/G1-创作方向/G1-方向简报.json",
+    "工作台/kshatriya-intro-002/G1-创作方向/G1-方向确认记录.md"
+  ],
+  "checklist": [
+    {"id": "direction_brief", "required": true, "status": "completed", "evidenceRef": "工作台/kshatriya-intro-002/G1-创作方向/G1-方向简报.md"},
+    {"id": "claims_and_boundaries", "required": true, "status": "completed", "evidenceRef": "工作台/kshatriya-intro-002/G1-创作方向/G1-方向简报.md"},
+    {"id": "direction_card", "required": true, "status": "completed", "evidenceRef": "工作台/kshatriya-intro-002/G1-创作方向/G1-方向确认记录.md"}
+  ]
+}

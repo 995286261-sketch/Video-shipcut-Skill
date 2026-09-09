@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G3",
+  "status": "completed",
+  "analysisScope": "full_source_interval_15000ms + dense_windows + tail_probes",
+  "sourcePackRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/kshatriya-intro-001/G0-素材包/material-pack.json",
+  "provider": "zcode-main-agent-native-vision",
+  "model": "qwen3.8-flash",
+  "promptVersion": "g3-target-subject-v0.1",
+  "targetAssets": [
+    {
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 286812
+      },
+      "keyframes": [
+        {
+          "frameId": "vf-001",
+          "sourceMs": 0,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-001-0000000000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "not_present",
+          "observedVisuals": "驾驶员舱内镜头（紫红驾驶服/舱盖），非机体镜头",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-001-r2",
+          "supersededRecord": "obs-vf-001"
+        },
+        {
+          "frameId": "vf-002",
+          "sourceMs": 15000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-002-0000015000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "绿色刹帝利正面半身，肩甲浮游炮舱白点可见，背景有拉丁字母布景文字（…ia Ca…）",
+          "riskFlags": [
+            "background_prop_text"
+          ],
+          "ledgerRecordId": "obs-vf-002"
+        },
+        {
+          "frameId": "vf-003",
+          "sourceMs": 30000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-003-0000030000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "not_present",
+          "observedVisuals": "宇宙中白色爆炸火球，无机体主体",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-003"
+        },
+        {
+          "frameId": "vf-004",
+          "sourceMs": 45000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-004-0000045000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "绿色机体腿部/躯干局部，背景橙色 MEGA 粒子环爆发",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-004"
+        },
+        {
+          "frameId": "vf-005",
+          "sourceMs": 60000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-005-0000060000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "刹帝利背面全身，四片肩甲展开成 X 形，蓝色精神感应骨架光，右下方绿色光束剑",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-005"
+        },
+        {
+          "frameId": "vf-006",
+          "sourceMs": 75000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-006-0000075000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "刹帝利宇宙飞行全身，四翼展开，手持绿色光束剑",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-006"
+        },
+        {
+          "frameId": "vf-007",
+          "sourceMs": 90000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-007-0000090000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "刹帝利肩甲特写，两处白色发光炮口",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-007"
+        },
+        {
+          "frameId": "vf-008",
+          "sourceMs": 105000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-008-0000105000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "绿色机体躯干腿部特写，粉红色精神感应骨架裂纹发光，蓝色光束划过",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-008"
+        },
+        {
+          "frameId": "vf-009",
+          "sourceMs": 120000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-009-0000120000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "刹帝利正面远景，四翼形态，周围蓝色光束网",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-009"
+        },
+        {
+          "frameId": "vf-010",
+          "sourceMs": 135000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-010-0000135000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "not_present",
+          "observedVisuals": "巨大白色爆炸球与光束网，无主体",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-010"
+        },
+        {
+          "frameId": "vf-011",
+          "sourceMs": 150000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-011-0000150000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "not_present",
+          "observedVisuals": "白红配色大型装甲机体（全装甲独角兽）于月球背景，非刹帝利",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-011"
+        },
+        {
+          "frameId": "vf-012",
+          "sourceMs": 165000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-012-0000165000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "mixed",
+          "observedVisuals": "独角兽高达毁灭模式居中（红色精神感应骨架发光），左上角绿色刹帝利翼段入画",
+          "riskFlags": [
+            "mixed_subject"
+          ],
+          "ledgerRecordId": "obs-vf-012"
+        },
+        {
+          "frameId": "vf-013",
+          "sourceMs": 180000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-013-0000180000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "mixed",
+          "observedVisuals": "前景绿色刹帝利肩甲发射蓝色 MEGA 粒子光束，背景白红机体局部",
+          "riskFlags": [
+            "mixed_subject"
+          ],
+          "ledgerRecordId": "obs-vf-013"
+        },
+        {
+          "frameId": "vf-014",
+          "sourceMs": 195000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-014-0000195000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "mixed",
+          "observedVisuals": "刹帝利（左，四翼+光束剑）与持盾白红机体（右）对战",
+          "riskFlags": [
+            "mixed_subject"
+          ],
+          "ledgerRecordId": "obs-vf-014"
+        },
+        {
+          "frameId": "vf-015",
+          "sourceMs": 210000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-015-0000210000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "mixed",
+          "observedVisuals": "刹帝利正面：胸部四门炮口与袖章徽记清晰，四片肩甲环绕，下方白色机体臂盾入画",
+          "riskFlags": [
+            "mixed_subject"
+          ],
+          "ledgerRecordId": "obs-vf-015"
+        },
+        {
+          "frameId": "vf-016",
+          "sourceMs": 225000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-016-0000225000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "uncertain",
+          "observedVisuals": "暗画面蓝白拖影，底部少量绿色碎片，无法确认主体",
+          "riskFlags": [
+            "overexposure_dark"
+          ],
+          "ledgerRecordId": "obs-vf-016"
+        },
+        {
+          "frameId": "vf-017",
+          "sourceMs": 240000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-017-0000240000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "confirmed",
+          "observedVisuals": "刹帝利肩甲浮游炮舱特写（橙色环状炮口），绿色光束射出",
+          "riskFlags": [],
+          "ledgerRecordId": "obs-vf-017"
+        },
+        {
+          "frameId": "vf-018",
+          "sourceMs": 255000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-018-0000255000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "mixed",
+          "observedVisuals": "独角兽毁灭模式（红色精神感应骨架）在绿色刹帝利机体前方突入/斩击",
+          "riskFlags": [
+            "mixed_subject"
+          ],
+          "ledgerRecordId": "obs-vf-018"
+        },
+        {
+          "frameId": "vf-019",
+          "sourceMs": 270000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-019-0000270000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "uncertain",
+          "observedVisuals": "远景绿色机体带红色爆光，疑似刹帝利被击破瞬间，分辨率不足",
+          "riskFlags": [
+            "low_resolution"
+          ],
+          "ledgerRecordId": "obs-vf-019"
+        },
+        {
+          "frameId": "vf-020",
+          "sourceMs": 285000,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-020-0000285000ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "uncertain",
+          "observedVisuals": "格纳库内绿色大型机体仰视，两名地勤人员对比其大小，橙色线缆；疑似刹帝利或昆曼沙",
+          "riskFlags": [
+            "low_resolution"
+          ],
+          "ledgerRecordId": "obs-vf-020"
+        },
+        {
+          "frameId": "vf-021",
+          "sourceMs": 285812,
+          "path": "G3-剪辑计划/视觉分析关键帧/关键帧/frame-021-0000285812ms.jpg",
+          "analysisStatus": "completed",
+          "identityStatus": "uncertain",
+          "observedVisuals": "同 285000ms 格纳库机位，绿色机体与地勤人员",
+          "riskFlags": [
+            "low_resolution"
+          ],
+          "ledgerRecordId": "obs-vf-021"
+        }
+      ],
+      "identitySummary": {
+        "confirmed": [
+          "vf-002",
+          "vf-004",
+          "vf-005",
+          "vf-006",
+          "vf-007",
+          "vf-008",
+          "vf-009",
+          "vf-017",
+          "dense-5000",
+          "dense-10000",
+          "dense-13000",
+          "dense-282000",
+          "dense-284000"
+        ],
+        "mixed": [
+          "vf-012",
+          "vf-013",
+          "vf-014",
+          "vf-015",
+          "vf-018",
+          "dense-269000"
+        ],
+        "uncertain": [
+          "vf-019",
+          "dense-272000"
+        ],
+        "person_only": [
+          "vf-001"
+        ],
+        "not_present": [
+          "vf-003",
+          "vf-010",
+          "vf-011",
+          "vf-016",
+          "dense-222000",
+          "dense-225000",
+          "dense-228000",
+          "dense-266000"
+        ]
+      },
+      "denseVerificationFrames": [
+        {
+          "sourceMs": 5000,
+          "identityStatus": "confirmed",
+          "ledgerRecordId": "dense-5000",
+          "frameRef": "加密关键帧/关键帧/dense-0000005000ms.jpg",
+          "observedVisuals": "驾驶舱内圆形显示屏：袖章徽记+屏显文字 KSHATRIYA（机体登录画面）",
+          "riskFlags": [
+            "burned_subtitle_screen_text"
+          ]
+        },
+        {
+          "sourceMs": 10000,
+          "identityStatus": "confirmed",
+          "ledgerRecordId": "dense-10000",
+          "frameRef": "加密关键帧/关键帧/dense-0000010000ms.jpg",
+          "observedVisuals": "刹帝利格纳库内正面站姿，四翼展开，精神感应骨架青绿发光",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 13000,
+          "identityStatus": "confirmed",
+          "ledgerRecordId": "dense-13000",
+          "frameRef": "加密关键帧/关键帧/dense-0000013000ms.jpg",
+          "observedVisuals": "刹帝利四翼俯视角，下方布景拉丁文字（…aco Ca…）",
+          "riskFlags": [
+            "background_prop_text"
+          ]
+        },
+        {
+          "sourceMs": 222000,
+          "identityStatus": "not_present",
+          "ledgerRecordId": "dense-222000",
+          "frameRef": "加密关键帧/关键帧/dense-0000222000ms.jpg",
+          "observedVisuals": "白红精神感应骨架大型装甲机体特写（全装甲独角兽），非刹帝利",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 225000,
+          "identityStatus": "not_present",
+          "ledgerRecordId": "dense-225000",
+          "frameRef": "加密关键帧/关键帧/dense-0000225000ms.jpg",
+          "observedVisuals": "暗画面蓝白拖影（高速运动镜头），无机体主体",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 228000,
+          "identityStatus": "not_present",
+          "ledgerRecordId": "dense-228000",
+          "frameRef": "加密关键帧/关键帧/dense-0000228000ms.jpg",
+          "observedVisuals": "全装甲独角兽毁灭模式红色X骨架+爆炎，非刹帝利",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 266000,
+          "identityStatus": "not_present",
+          "ledgerRecordId": "dense-266000",
+          "frameRef": "加密关键帧/关键帧/dense-0000266000ms.jpg",
+          "observedVisuals": "独角兽高达毁灭模式金色角+红色骨架开火，非刹帝利",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 269000,
+          "identityStatus": "mixed",
+          "ledgerRecordId": "dense-269000",
+          "frameRef": "加密关键帧/关键帧/dense-0000269000ms.jpg",
+          "observedVisuals": "前景绿色刹帝利肩甲与白红独角兽近身缠斗（格斗/突入）",
+          "riskFlags": [
+            "mixed_subject"
+          ]
+        },
+        {
+          "sourceMs": 272000,
+          "identityStatus": "uncertain",
+          "ledgerRecordId": "dense-272000",
+          "frameRef": "加密关键帧/关键帧/dense-0000272000ms.jpg",
+          "observedVisuals": "宇宙远景绿色机体带红色爆光拖尾，形态与刹帝利一致，分辨率不足",
+          "riskFlags": [
+            "low_resolution"
+          ]
+        },
+        {
+          "sourceMs": 282000,
+          "identityStatus": "confirmed",
+          "ledgerRecordId": "dense-282000",
+          "frameRef": "加密关键帧/关键帧/dense-0000282000ms.jpg",
+          "observedVisuals": "刹帝利正面特写：胸部四门圆形炮口、左肩甲袖章徽记、格纳库背景",
+          "riskFlags": []
+        },
+        {
+          "sourceMs": 284000,
+          "identityStatus": "confirmed",
+          "ledgerRecordId": "dense-284000",
+          "frameRef": "加密关键帧/关键帧/dense-0000284000ms.jpg",
+          "observedVisuals": "格纳库内刹帝利腹部/腿部仰视+两名地勤人员（回收/整备场景）",
+          "riskFlags": []
+        }
+      ],
+      "tailProbeFrames": [
+        {
+          "sourceMs": 271000,
+          "identityStatus": "uncertain"
+        },
+        {
+          "sourceMs": 274000,
+          "identityStatus": "uncertain"
+        },
+        {
+          "sourceMs": 277000,
+          "identityStatus": "mixed"
+        },
+        {
+          "sourceMs": 280000,
+          "identityStatus": "mixed"
+        },
+        {
+          "sourceMs": 283000,
+          "identityStatus": "confirmed"
+        },
+        {
+          "sourceMs": 285500,
+          "identityStatus": "confirmed"
+        }
+      ]
+    }
+  ],
+  "failurePolicy": "pending_or_failed_frames_cannot be marked completed",
+  "analysisIntervalMs": 15000,
+  "cacheKey": {
+    "assetId": "source-02-nz-666-vol-2-969a57c3",
+    "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+    "sourceRange": {
+      "startMs": 0,
+      "endMs": 286812
+    },
+    "frameExtractionSpec": "ffmpeg -ss MS -frames:v 1 -q:v 2 jpg interval15000ms",
+    "provider": "zcode-main-agent-native-vision",
+    "model": "qwen3.8-flash",
+    "promptVersion": "g3-target-subject-v0.1"
+  },
+  "revision": "v0.1-r3 对齐验证通过（ASR±200ms 一致）；尾部探针入账本（39 条）；manifest 状态对齐 validator 枚举",
+  "reusedFromProject": "kshatriya-intro-001",
+  "cacheReuseNote": "同一源片（assetId source-02-nz-666-vol-2-969a57c3，SHA E58F0BE5…）；缓存键 assetId+SHA+范围+间隔15000ms+provider+model+promptVersion 全一致，按合同直接复用帧图与逐帧观察，不重跑识图。reusedAt 2026-09-08T09:18:38Z"
+}

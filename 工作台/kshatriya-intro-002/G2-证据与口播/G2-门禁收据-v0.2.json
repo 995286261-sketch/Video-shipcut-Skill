@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G2",
+  "cardType": "g2_evidence_narration_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-08T09:40:44Z",
+  "reviewCardRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-批准记录-v0.2.md",
+  "basisRefs": [
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-批准记录-v0.2.md",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.2.md",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-配音清单-v0.2.json"
+  ],
+  "checklist": [
+    {
+      "id": "fact_citation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-证据清单-v0.1.json"
+    },
+    {
+      "id": "approved_narration",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.2.md"
+    },
+    {
+      "id": "voice_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-配音清单-v0.2.json"
+    },
+    {
+      "id": "g2_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-批准记录-v0.2.md"
+    }
+  ]
+}

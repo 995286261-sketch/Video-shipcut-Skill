@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G2",
+  "status": "approved_for_g3",
+  "decidedAt": "2026-09-08T17:45:00+08:00",
+  "amendmentOf": "工作台/kshatriya-intro-002/G2-证据与口播/G2-审核决定-v0.1.json",
+  "amendmentReason": "G3 素材充分性缺口（修复型已确认画面 12.81s < S9+S10 需求 18.42s）→ 用户选择 C1 改写 S10（连带精简 S9）",
+  "factDecision": {
+    "mode": "conservative",
+    "statement": "仅使用已登记且可追溯的资料；03_事实依据 网络快照（内部口径）为唯一事实来源，C-01..C-06 获准入播；命名种姓由来与原始精确参数无来源，成片不得出现；v0.2 起修复型武器枚举（光束加特林/光束戟/浮游导弹）不入播（画面无法承载）。",
+    "excluded": [
+      "转写文本（机器草稿、低置信）不作事实来源",
+      "不得把百科快照升级为官方一手事实"
+    ]
+  },
+  "approvedNarrationRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.2.md",
+  "factCitationRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-证据清单-v0.1.json",
+  "voiceBriefRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-配音清单-v0.2.json",
+  "approvedNarrationAudioRef": "工作台/kshatriya-intro-002/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+  "voiceDecision": {
+    "voice": "longtian_v3",
+    "engine": "bailian-cosyvoice-v3-flash",
+    "language": "zh",
+    "tier": "production_neural",
+    "confirmedBy": "user",
+    "confirmedUtterance": "龙天（v0.1 已确认，v0.2 沿用）"
+  },
+  "permittedFactIds": [
+    "C-01",
+    "C-02",
+    "C-03",
+    "C-04",
+    "C-05",
+    "C-06"
+  ],
+  "prohibitedTopics": [
+    "未证实设定（命名种姓由来、原始精确参数）",
+    "官方一手事实声明",
+    "现实政治映射",
+    "修复型武器枚举（光束加特林/光束戟/浮游导弹，画面不可承载）"
+  ],
+  "userManuallyVerifiedClaims": [],
+  "provenanceRule": "permitted facts are second-party web snapshots (仅本项目确认), not first-party official verification",
+  "supersededDraftRefs": [
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-口播稿-v0.1.md",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-完整口播-longtian-v0.1.wav",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-配音清单-v0.1.json",
+    "工作台/kshatriya-intro-002/G2-证据与口播/G2-审核决定-v0.1.json"
+  ],
+  "audioPolicyInherited": {
+    "bgm": "07_授权音频/Lonely Lies; GOLDKID$ - Interlinked.mp3",
+    "bgmDecision": "provided",
+    "sourceAudio": "excluded",
+    "distribution": "not_for_distribution"
+  }
+}

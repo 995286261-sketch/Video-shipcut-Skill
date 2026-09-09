@@ -1,0 +1,248 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-002/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "currentNode": "completed",
+  "status": "completed_with_accepted_warnings",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/kshatriya-intro-002/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/BGM-\u98ce\u683c\u7b80\u62a5-\u51b7\u6218\u5947\u8ff9.json"
+      ],
+      "humanReviewPoints": [
+        "\u786e\u8ba4 G1"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-09-08T08:38:05Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G1",
+        "approvalResponse": "\u786e\u8ba4 G1",
+        "approvedAt": "2026-09-08T08:41:22Z"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json"
+      ],
+      "humanReviewPoints": [
+        "\u786e\u8ba4 G2"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-08T09:40:44Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvedAt": "2026-09-08T09:43:21Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-BGM\u4e50\u53e5\u8868-v0.1.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5c01\u9762\u5b9a\u5e27-v0.1.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6e90\u5b57\u5e55\u5904\u7406\u8868-v0.1.md",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6838\u5361\u7247-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "g3_timeline_review"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.2.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/BGM-\u5206\u6790\u62a5\u544a-Lonely Lies; GOLDKID$ - Interlinked-420D489A.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6838\u5361\u7247-v0.1.md",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.1.md"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-08T10:25:05Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvedAt": "2026-09-09T01:43:59Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u6210\u7247\u5019\u9009-v0.1.mp4",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u5e72\u51c0\u4e3b\u6863-v0.1.mp4",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/g4-validation-report-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/cover-final.png"
+      ],
+      "humanReviewPoints": [
+        "g4_candidate_review"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u6210\u7247\u5019\u9009-v0.1.mp4",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u6210\u7247\u5019\u9009-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u5e72\u51c0\u4e3b\u6863-v0.1.mp4",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u5e72\u51c0\u4e3b\u6863-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/g4-validation-report-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/decode-report.txt",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/cover-final.png",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.1.md"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-09T01:56:34Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G4",
+        "approvalResponse": "\u786e\u8ba4 G4",
+        "approvedAt": "2026-09-09T02:03:43Z",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/kshatriya-\u6210\u7247\u5019\u9009-v0.1.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/g4-validation-report-v0.1.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed_with_accepted_warnings",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/g5-validation-report-v0.1.json",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+        "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u4ea4\u4ed8\u590d\u6838\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "g5_delivery_review"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/g5-validation-report-v0.1.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u4ea4\u4ed8\u590d\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-09T02:07:05Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvedAt": "2026-09-09T02:08:16Z",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/g5-validation-report-v0.1.json"
+      }
+    }
+  },
+  "acceptedWarnings": [
+    "no-chapter-cards-and-title-bar: \u7ae0\u8282\u5361\u4e0e\u9876\u90e8\u6807\u9898\u680f\u672a\u5b9e\u73b0\uff08G4 \u9009\u9879 A \u63a5\u53d7\uff09",
+    "narration-loudness-15p2: \u65c1\u767d \u221215.2 LUFS\uff08\u76ee\u6807 \u221214\uff09\uff0c\u6210\u7247 \u221215.5 LUFS",
+    "source-overlap-001-96: \u753b\u9762\u4e0e kshatriya-intro-001 \u5df2\u7528\u6e90\u533a\u95f4\u91cd\u53e0\u7ea6 96%\uff08\u957f/\u77ed\u53cc\u7248\u672c\u5b9a\u4f4d\uff09",
+    "duplicate-detector-not-run: \u91cd\u590d\u753b\u9762\u68c0\u6d4b\u5668\u672a\u8fd0\u884c\uff0c\u4ee5\u4eba\u5de5\u5207\u70b9\u62bd\u5e27\u66ff\u4ee3"
+  ],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-09-08T08:30:05Z",
+  "updatedAt": "2026-09-09T02:08:16Z",
+  "amendmentHistory": [
+    {
+      "fromNode": "G3",
+      "toNode": "G2",
+      "reason": "G3 \u7d20\u6750\u5145\u5206\u6027\u7f3a\u53e3\uff1a\u4fee\u590d\u578b\u5df2\u786e\u8ba4\u753b\u9762 12.81s < S9+S10 \u9700\u6c42 18.42s\uff1b\u7528\u6237\u4e8e G3 \u5f00\u5de5\u5361\u9009\u62e9 C1 \u6539\u5199 S10\uff08\u8fde\u5e26\u7cbe\u7b80 S9\uff09",
+      "reworkRef": "\u5de5\u4f5c\u53f0/kshatriya-intro-002/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+      "reopenedAt": "2026-09-08T09:40:22Z"
+    }
+  ]
+}

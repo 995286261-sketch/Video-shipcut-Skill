@@ -1,0 +1,25 @@
+== clean master decode
+decode: OK (0 errors)
+== streams
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 640,
+            "height": 360,
+            "duration": "103.333333"
+        },
+        {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "duration": "103.320000"
+        }
+    ]
+}

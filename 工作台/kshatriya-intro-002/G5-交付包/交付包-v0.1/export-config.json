@@ -1,0 +1,33 @@
+{
+  "projectId": "kshatriya-intro-002",
+  "platform": "not_specified",
+  "video": {
+    "codec": "h264",
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "durationTargetMs": 103320,
+    "durationActualMs": 103333,
+    "fit": "preserve_source"
+  },
+  "audio": {
+    "codec": "aac",
+    "bitrateKbps": 192,
+    "sampleRate": 48000,
+    "channels": 2,
+    "narrationLufs": -15.2,
+    "masterLufs": -15.5,
+    "truePeakDbfs": -3.5
+  },
+  "subtitles": {
+    "burnedIn": true,
+    "style": "NarrMain PingFang SC 14 bottom safe area",
+    "reference": "subtitles.srt"
+  },
+  "cover": {
+    "enabled": true,
+    "sourceFrameMs": 68000
+  },
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution"
+}

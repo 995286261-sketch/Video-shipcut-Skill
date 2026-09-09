@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "status": "completed",
+  "evidencePolicy": {
+    "mode": "user-material-limited",
+    "statement": "仅使用已登记素材与 03_事实依据 快照；快照按'仅本项目确认'口径，不得升级为官方一手事实；分发 internal_test / not_for_distribution",
+    "packVersion": "v1.1"
+  },
+  "sourceEvidence": [
+    {
+      "assetId": "source-02-nz-666-vol-2-969a57c3",
+      "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+      "relativePath": "02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+      "sourceProbe": {
+        "durationMs": 286812,
+        "video": {"codec": "h264", "width": 640, "height": 360, "fps": 23.976},
+        "audio": {"codec": "aac", "sampleRate": 44100, "channels": 2}
+      },
+      "contactSheetRef": "工作台/kshatriya-intro-002/G2-证据与口播/kshatriya-src-contact-sheet.jpg",
+      "transcriptRef": "工作台/kshatriya-intro-002/G2-证据与口播/转写/kshatriya-src-transcript.json",
+      "transcriptArtifactsRef": "工作台/kshatriya-intro-002/G2-证据与口播/转写/kshatriya-src/",
+      "warnings": [
+        "low_resolution_source: 640x360（⑩），G4 preserve_source 将输出 360p 候选；更高画质须回 G0 补高分源出新版本",
+        "possible_burned_in_text: 怀旧向机体合集可能含烧录机名/解说字幕，G3 须逐段声明源字幕处理（crop/mask/replace_clip）",
+        "transcript_draft_only: 仅 281.6s–286.5s 存在 1 段日语音声（机器草稿、低置信），不得作为口播事实来源",
+        "source_audio_excluded_planned: 最终成片移除原声，仅用登记 BGM（Interlinked，探针 passed）与 CosyVoice 新口播"
+      ]
+    }
+  ],
+  "factEvidenceRefs": [
+    "工作台/kshatriya-intro-002/G0-素材包/03_事实依据/网络检索快照-刹帝利NZ-666-2026-09-07.md"
+  ],
+  "musicAnalysisRef": "工作台/kshatriya-intro-002/G1-参考视频分析/BGM-风格简报-冷战奇迹.json",
+  "handoff": {
+    "toG3": "保留 assetId、SHA-256、原始时间码；联系表仅用于画面类别定位；G3 视觉验证仍需逐段起/中/终帧 manifest；BGM 卡点对齐引用 music-expert 卡点表（123 BPM，能量峰段 120.5–143.6s，尾段淡出）；口播以《配音清单》逐句实测时长为准",
+    "pendingClaims": [
+      "C-05 精确尺寸/重量（原始形态，快照仅叙述'约20米'）",
+      "C-name 命名与印度种姓关联（快照未获来源，本片不提）"
+    ],
+    "supportedClaimsEligible": ["C-01", "C-02", "C-03", "C-04", "C-05", "C-06"],
+    "audioPolicy": {"bgmDecision": "provided", "bgmAssetId": "audio-07-lonely-lies-goldkid-interlinked-ad2a241b", "sourceAudio": "excluded", "narrationVoice": "longtian_v3 (production_neural)"}
+  }
+}

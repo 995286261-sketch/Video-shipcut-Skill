@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "kshatriya-intro-002",
+  "node": "G4",
+  "cardType": "g4_candidate_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-09T01:56:34Z",
+  "reviewCardRef": "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-播放审核卡-v0.1.md",
+  "basisRefs": [
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1.mp4",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1-装配记录-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-干净主档-v0.1.mp4",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-干净主档-v0.1-装配记录-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/g4-validation-report-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/decode-report.txt",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/cover/cover-final.png",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-播放审核卡-v0.1.md",
+    "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-批准记录-v0.1.md"
+  ],
+  "checklist": [
+    {
+      "id": "candidate_or_export",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G4-剪辑与渲染/final/kshatriya-成片候选-v0.1.mp4"
+    },
+    {
+      "id": "render_validation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G4-剪辑与渲染/qa/g4-validation-report-v0.1.json"
+    },
+    {
+      "id": "playback_review_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/kshatriya-intro-002/G4-剪辑与渲染/G4-播放审核卡-v0.1.md"
+    }
+  ]
+}

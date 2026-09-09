@@ -1,0 +1,54 @@
+{
+  "projectId": "kshatriya-intro-002",
+  "generatedAt": "2026-09-09T02:05:31Z",
+  "status": "completed_with_accepted_warnings",
+  "finishedAt": "2026-09-09T02:08:05Z",
+  "checks": {
+    "decode": "pass (0 errors, 2480 frames)",
+    "videoCodec": "h264",
+    "dimensions": "640x360",
+    "fps": "24",
+    "audio": "aac stereo 48k, narration+BGM only, no source audio",
+    "duration": "103333ms vs timeline 103320ms (+13ms)",
+    "blackFrames": "none detected >0.15s",
+    "silence": "none detected >1.2s @-45dB",
+    "duplicateSegments": "detector not run; cut-point frame checks by human review (warning registered)",
+    "cover": "cover.jpg present, 640x360, title legible (frame-checked)"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "39C0533695EB3E120ABA48A1D04E30BE779C2D9556CD16CA334AD3CB97BE595A"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "79F7E5BADF97EEBE736E3AE585ADB80AB763CC99B03757B1F5A931E6D8617B70"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "64EF285BC8B379893490BEE7E7AEEF14D05216C1C79BFB25ED67696A1CC644BE"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch-01.mp4",
+        "sha256": "ED0C3DE2C2EB492ACB37F9FDDA11BAAB933AC8DDCF12574EE6FF9430C4590DC2"
+      },
+      {
+        "path": "clips/ch-02.mp4",
+        "sha256": "33AE4A30D439F25FF9191732E35F13079C67491918D4559864E54E8488A63D90"
+      },
+      {
+        "path": "clips/ch-03.mp4",
+        "sha256": "E2B8663EB178AE8DEDA753ABB02CC314BE82C1062815971ED256BDB0F56DE026"
+      },
+      {
+        "path": "clips/ch-04.mp4",
+        "sha256": "48794EE61F7CBAA994D3CBC37B43611DE29D187AC3BF421E3E45FB207FCEDEE5"
+      },
+      {
+        "path": "clips/ch-05.mp4",
+        "sha256": "E9B7BE689AB90076D1F5E56579BD2C2203B5C4987CC5820650450B1E43C9DECC"
+      }
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-nz-666-vol-2-969a57c3",
+    "sha256": "E58F0BE566FC3F44C1F12ADFF561283F39E948C9D276C954C4DDB47C6F6BF4FF",
+    "language": "ja",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "ja",
+  "languageProbability": 1,
+  "input": "工作台/kshatriya-intro-002/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－刹帝利（NZ-666）Vol.2.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 281650,
+      "endMs": 286570,
+      "text": "666駆車トリア形式番号からして ネオジオン減産でしょう",
+      "words": [
+        {
+          "startMs": 281650,
+          "endMs": 281950,
+          "text": "6",
+          "probability": 0.1578563004732132
+        },
+        {
+          "startMs": 281950,
+          "endMs": 282430,
+          "text": "66",
+          "probability": 0.890248715877533
+        },
+        {
+          "startMs": 282430,
+          "endMs": 282890,
+          "text": "駆",
+          "probability": 0.6796224489808083
+        },
+        {
+          "startMs": 282890,
+          "endMs": 283050,
+          "text": "車",
+          "probability": 0.5133092403411865
+        },
+        {
+          "startMs": 283050,
+          "endMs": 283190,
+          "text": "ト",
+          "probability": 0.6526778936386108
+        },
+        {
+          "startMs": 283190,
+          "endMs": 283310,
+          "text": "リ",
+          "probability": 0.9911466240882874
+        },
+        {
+          "startMs": 283310,
+          "endMs": 283470,
+          "text": "ア",
+          "probability": 0.8926570415496826
+        },
+        {
+          "startMs": 283470,
+          "endMs": 284190,
+          "text": "形",
+          "probability": 0.3921910226345062
+        },
+        {
+          "startMs": 284190,
+          "endMs": 284370,
+          "text": "式",
+          "probability": 0.9955451488494873
+        },
+        {
+          "startMs": 284370,
+          "endMs": 284530,
+          "text": "番",
+          "probability": 0.9597257971763611
+        },
+        {
+          "startMs": 284530,
+          "endMs": 284670,
+          "text": "号",
+          "probability": 0.9978398084640503
+        },
+        {
+          "startMs": 284670,
+          "endMs": 284830,
+          "text": "から",
+          "probability": 0.9348840713500977
+        },
+        {
+          "startMs": 284830,
+          "endMs": 285030,
+          "text": "して",
+          "probability": 0.9637507796287537
+        },
+        {
+          "startMs": 285030,
+          "endMs": 285590,
+          "text": " ネ",
+          "probability": 0.628969132900238
+        },
+        {
+          "startMs": 285590,
+          "endMs": 285750,
+          "text": "オ",
+          "probability": 0.9889310002326965
+        },
+        {
+          "startMs": 285750,
+          "endMs": 285890,
+          "text": "ジ",
+          "probability": 0.9876838326454163
+        },
+        {
+          "startMs": 285890,
+          "endMs": 286010,
+          "text": "オ",
+          "probability": 0.9591726064682007
+        },
+        {
+          "startMs": 286010,
+          "endMs": 286070,
+          "text": "ン",
+          "probability": 0.9897457361221313
+        },
+        {
+          "startMs": 286070,
+          "endMs": 286230,
+          "text": "減",
+          "probability": 0.832542359828949
+        },
+        {
+          "startMs": 286230,
+          "endMs": 286390,
+          "text": "産",
+          "probability": 0.718009814620018
+        },
+        {
+          "startMs": 286390,
+          "endMs": 286570,
+          "text": "でしょう",
+          "probability": 0.7619925141334534
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-08T08:42:47.215543Z"
+}

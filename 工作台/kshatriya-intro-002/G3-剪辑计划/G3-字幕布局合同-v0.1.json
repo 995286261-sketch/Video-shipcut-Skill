@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "kshatriya-intro-002",
+  "lanes": {
+    "narration": {
+      "zone": "70-84% height, MarginV=58px on 360p",
+      "maxLines": 2,
+      "fontsize": 14
+    }
+  },
+  "assFile": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+  "srtFile": "工作台/kshatriya-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.srt",
+  "titleBar": {
+    "lane": "top 6-14% height",
+    "content": "NZ-666 KSHATRIYA — 档案英文标题栏（包装层，非逐句字幕）"
+  },
+  "note": "中文逐句主字幕语义断行≤两行；英文标题栏走封面/章节卡包装层，不占口播车道；源无烧录字幕"
+}
