@@ -10,7 +10,7 @@
 
 `scripts/music_search_freesound.py`。有官方 API、每条声音带明确 license、可下载预览件。约束：
 
-- 鉴权 token 从 `P0C_FREESOUND_TOKEN` 读取；缺失即 `blocked`，**不静默换源、不降级到无授权来源**。
+- 鉴权 token 从 `MUSIC_EXPERT_FREESOUND_TOKEN` 读取（历史别名 `P0C_FREESOUND_TOKEN`）；缺失即 `blocked`，**不静默换源、不降级到无授权来源**。
 - 许可过滤：仅接受 `Creative Commons 0` 与 `Attribution`；凡名字含 `NC / NonCommercial / ND / NoDerivatives / Sampling` 一律排除并记入 `excluded`（附原因）。
 - 每条候选保留完整证据链：`sourceUrl`、`license`、`licenseType`、`attributionRequired`、`attributionText`、`author`、`retrievedAt`、下载预览件 `sha256`/`byteSize`、`decodeProbe`。
 - 下载预览件后立即 `ffmpeg` 解码探针；未通过即丢弃（假文件/加密文件不进池）。

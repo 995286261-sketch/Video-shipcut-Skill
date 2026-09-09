@@ -110,10 +110,10 @@ def main() -> int:
     if args.query is None and args.tags is None and args.similar_to is None:
         emit({"status": "invalid", "errors": [{"field": "query", "rule": "need --query, --tags or --similar-to"}]})
         return 2
-    token = os.environ.get("P0C_FREESOUND_TOKEN", "").strip()
+    token = (os.environ.get("MUSIC_EXPERT_FREESOUND_TOKEN") or os.environ.get("P0C_FREESOUND_TOKEN") or "").strip()
     if not token:
         emit({"status": "blocked", "blockers": [{"type": "missing_token",
-              "detail": "P0C_FREESOUND_TOKEN is unset; register a free Freesound API token. Silent fallback to unlicensed sources is forbidden (sourcing-contract)."}]})
+              "detail": "MUSIC_EXPERT_FREESOUND_TOKEN (or the legacy P0C_FREESOUND_TOKEN) is unset; register a free Freesound API token. Silent fallback to unlicensed sources is forbidden (sourcing-contract)."}]})
         return 2
     if not args.no_download and shutil.which("ffmpeg") is None:
         emit({"status": "blocked", "blockers": [{"type": "missing_toolchain", "detail": "ffmpeg required for the decode probe of downloads"}]})

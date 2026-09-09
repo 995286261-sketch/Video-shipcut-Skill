@@ -18,8 +18,9 @@ metadata:
 ## 前置依赖
 
 - `ffmpeg`/`ffprobe` 在 PATH。
-- 节奏/能量分析库（numpy、librosa）只能从托管运行时 `P0C_MUSIC_RUNTIME_HOME` 加载；缺失即结构化 `blocked`，禁止运行时下载或 pip 安装（与 faster-whisper 同一纪律）。
-- Freesound 自动检索需 `P0C_FREESOUND_TOKEN`；缺失即 `blocked`，不静默换到无授权来源。
+- 节奏/能量分析库（numpy、librosa）只能从托管运行时加载，路径由 `MUSIC_EXPERT_RUNTIME_HOME` 声明（`P0C_MUSIC_RUNTIME_HOME` 为历史别名）；缺失即结构化 `blocked`，禁止运行时下载或 pip 安装（与 faster-whisper 同一纪律）。
+- Freesound 自动检索需 `MUSIC_EXPERT_FREESOUND_TOKEN`（历史别名 `P0C_FREESOUND_TOKEN`）；缺失即 `blocked`，不静默换到无授权来源。
+- 本 Skill 不假设任何仓库内路径或宿主目录：输入输出全靠显式参数，依赖全靠环境变量，可整体迁移到其他仓库或平台。
 
 ## 工作流
 

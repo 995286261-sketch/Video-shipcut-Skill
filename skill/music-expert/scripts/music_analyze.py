@@ -277,10 +277,15 @@ def main() -> int:
     return 0
 
 
+def runtime_home_candidates() -> list[str]:
+    # Generic name first so the skill stays portable; P0C_* kept as a legacy alias.
+    return [value for value in (os.environ.get("MUSIC_EXPERT_RUNTIME_HOME"), os.environ.get("P0C_MUSIC_RUNTIME_HOME")) if value]
+
+
 def configure_runtime() -> None:
-    runtime_home = os.environ.get("P0C_MUSIC_RUNTIME_HOME")
-    if runtime_home and Path(runtime_home).is_dir() and runtime_home not in sys.path:
-        sys.path.insert(0, runtime_home)
+    for runtime_home in runtime_home_candidates():
+        if Path(runtime_home).is_dir() and runtime_home not in sys.path:
+            sys.path.insert(0, runtime_home)
 
 
 def runtime_block_reason() -> str | None:
@@ -288,8 +293,9 @@ def runtime_block_reason() -> str | None:
         import numpy  # noqa: F401
         import librosa  # noqa: F401
     except ImportError:
-        return ("numpy/librosa are unavailable; set P0C_MUSIC_RUNTIME_HOME to the controlled "
-                "music-expert runtime (see references/music-analysis-contract.md). Downloading packages at run time is forbidden.")
+        return ("numpy/librosa are unavailable; set MUSIC_EXPERT_RUNTIME_HOME (or the legacy "
+                "P0C_MUSIC_RUNTIME_HOME) to the controlled music-expert runtime "
+                "(see references/music-analysis-contract.md). Downloading packages at run time is forbidden.")
     return None
 
 

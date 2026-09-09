@@ -41,8 +41,10 @@ class MusicAnalyzeTest(unittest.TestCase):
         if not have("ffmpeg") or not have("ffprobe"):
             self.skipTest("ffmpeg/ffprobe required")
         wav = self.write_clicks()
+        missing = str(self.root / "no-such-runtime")
         result = self.run_script(["--input", str(wav), "--output-dir", str(self.root / "out")],
-                                 env={"P0C_MUSIC_RUNTIME_HOME": str(self.root / "no-such-runtime")})
+                                 env={"MUSIC_EXPERT_RUNTIME_HOME": missing,
+                                      "P0C_MUSIC_RUNTIME_HOME": missing})
         payload = json.loads(result.stdout)
         self.assertEqual(2, result.returncode)
         self.assertEqual("blocked", payload["status"])
@@ -71,9 +73,9 @@ class MusicAnalyzeTest(unittest.TestCase):
         for tool in ("ffmpeg", "ffprobe"):
             if not have(tool):
                 self.skipTest(f"{tool} required")
-        env_home = os.environ.get("P0C_MUSIC_RUNTIME_HOME")
+        env_home = os.environ.get("MUSIC_EXPERT_RUNTIME_HOME") or os.environ.get("P0C_MUSIC_RUNTIME_HOME")
         if not env_home:
-            self.skipTest("P0C_MUSIC_RUNTIME_HOME (music-expert runtime) not configured")
+            self.skipTest("MUSIC_EXPERT_RUNTIME_HOME (music-expert runtime) not configured")
         wav = self.write_clicks()
         out = self.root / "out"
         first = self.run_script(["--input", str(wav), "--output-dir", str(out),

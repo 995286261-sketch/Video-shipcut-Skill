@@ -5,7 +5,7 @@
 ## 唯一入口与依赖
 
 - 音频解码：`ffmpeg`/`ffprobe`（PATH）。
-- 节奏/能量分析库（numpy、librosa）：只能从托管运行时加载，路径由环境变量 `P0C_MUSIC_RUNTIME_HOME` 声明。缺失时返回结构化 `blocked`，**禁止在运行时 pip 安装或下载**。
+- 节奏/能量分析库（numpy、librosa）：只能从托管运行时加载，路径由环境变量 `MUSIC_EXPERT_RUNTIME_HOME` 声明（历史别名 `P0C_MUSIC_RUNTIME_HOME`）。缺失时返回结构化 `blocked`，**禁止在运行时 pip 安装或下载**。
 - 输入没有音频轨（例如纯画面视频）返回 `invalid`；无法解码返回 `blocked`（与 G0 ㉓ 同一根因防线：流媒体加密缓存改名的假文件在此也会被拦下）。
 
 ## cacheKey 与复用

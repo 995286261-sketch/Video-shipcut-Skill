@@ -11,7 +11,7 @@
 | madmom | ❌ | 研究向、依赖旧版、维护弱 |
 | essentia | ❌ | AGPL + 需商业授权，构建重 |
 
-托管运行时先例：仿 faster-whisper 在 `~/工作/WorkTool/music-expert/runtime` 建 uv venv(py3.12)+numpy+librosa，经 `P0C_MUSIC_RUNTIME_HOME` 注入 sys.path；缺失结构化 `blocked`。所有音频先经 `ffmpeg → pcm_s16le wav` 解码再喂 librosa，彻底绕开 libsndfile 的 mp3 支持问题。
+托管运行时先例：仿 faster-whisper 用 uv venv(py3.12)+numpy+librosa 建独立运行时（当前开发机示例位置 `~/工作/WorkTool/music-expert/runtime`，**仅为示例，非合同**），经 `MUSIC_EXPERT_RUNTIME_HOME`（历史别名 `P0C_MUSIC_RUNTIME_HOME`）注入 sys.path；缺失结构化 `blocked`。所有音频先经 `ffmpeg → pcm_s16le wav` 解码再喂 librosa，彻底绕开 libsndfile 的 mp3 支持问题。
 
 ## 找乐来源探测
 
