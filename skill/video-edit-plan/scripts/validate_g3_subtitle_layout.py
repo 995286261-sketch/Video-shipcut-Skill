@@ -18,10 +18,43 @@ from pathlib import Path
 
 NARROW_RATIO = 0.55
 OVERRIDE_TAG = re.compile(r"\{[^}]*\}")
+SRT_TIME = re.compile(r"(\d{2}):(\d{2}):(\d{2}),(\d{3}) --> (\d{2}):(\d{2}):(\d{2}),(\d{3})")
 
 
 def fail(message: str) -> None:
     raise ValueError(message)
+
+
+def srt_to_ms(hours, minutes, seconds, millis) -> int:
+    return ((int(hours) * 60 + int(minutes)) * 60 + int(seconds)) * 1000 + int(millis)
+
+
+def validate_srt_reference(path: Path, event_count: int) -> int:
+    """The SRT delivery reference must be standard-padded (HH:MM:SS,mmm), monotonic and
+    non-overlapping, and cue-for-cue with the approved ASS timeline. Guards the known
+    failure of converting ASS centiseconds to SRT milliseconds without x10 scaling."""
+    blocks = [b for b in re.split(r"\n\s*\n", path.read_text(encoding="utf-8-sig").strip()) if b.strip()]
+    if not blocks:
+        fail("srt reference has no cues")
+    if len(blocks) != event_count:
+        fail(f"srt cue count {len(blocks)} does not match ASS event count {event_count}")
+    previous_end = 0
+    for index, block in enumerate(blocks, 1):
+        lines = block.splitlines()
+        if len(lines) < 3:
+            fail(f"srt cue {index} must be an index, a timestamp line, and text")
+        match = SRT_TIME.fullmatch(lines[1].strip())
+        if not match:
+            fail(f"srt cue {index} timestamp line must be HH:MM:SS,mmm --> HH:MM:SS,mmm: {lines[1]!r}")
+        start, end = srt_to_ms(*match.groups()[:4]), srt_to_ms(*match.groups()[4:])
+        if end <= start:
+            fail(f"srt cue {index} ends before it starts")
+        if start < previous_end:
+            fail(f"srt cue {index} overlaps or precedes the previous cue")
+        if not "".join(lines[2:]).strip():
+            fail(f"srt cue {index} has empty text")
+        previous_end = end
+    return len(blocks)
 
 
 def load(path: Path) -> dict:
@@ -103,6 +136,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--ass", required=True, type=Path)
     parser.add_argument("--layout", required=True, type=Path)
+    parser.add_argument("--srt", type=Path, help="optional SRT delivery reference to format-check against the ASS timeline")
     args = parser.parse_args()
     layout = load(args.layout)
     if layout.get("schemaVersion") != "0.1" or layout.get("node") != "G3":
@@ -160,6 +194,7 @@ def main() -> int:
     if violations:
         suffix = f" (+{len(violations) - 10} more)" if len(violations) > 10 else ""
         fail("subtitle layout violations: " + "; ".join(violations[:10]) + suffix)
+    srt_cues = validate_srt_reference(args.srt, len(events)) if args.srt else None
     print(json.dumps({
         "status": "completed",
         "events": len(events),
@@ -168,6 +203,7 @@ def main() -> int:
         "maxLines": max_lines,
         "maxRenderedLinesObserved": observed,
         "playRes": [play_res_x, play_res_y],
+        "srtCues": srt_cues,
     }, ensure_ascii=True))
     return 0
 

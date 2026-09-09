@@ -316,6 +316,33 @@ def main() -> int:
             fail("slowMotion requires a documented purpose")
     if not plan.get("humanReviewPoints"):
         fail("plan requires narrationDraft and humanReviewPoints")
+    packaging = plan.get("packagingDecisions")
+    if packaging is not None:
+        if not isinstance(packaging, dict):
+            fail("packagingDecisions must be an object when present")
+        cover_ms = packaging.get("coverFrameMs")
+        if cover_ms is not None and (not isinstance(cover_ms, int) or isinstance(cover_ms, bool) or cover_ms < 0):
+            fail("packagingDecisions.coverFrameMs must be a non-negative integer")
+        cards = packaging.get("chapterCards", [])
+        if not isinstance(cards, list):
+            fail("packagingDecisions.chapterCards must be a list")
+        timeline_total = plan.get("timelineDurationMs")
+        if not isinstance(timeline_total, int) or timeline_total <= 0:
+            fail("packagingDecisions require a positive timelineDurationMs")
+        previous_end = 0
+        for index, card in enumerate(cards, 1):
+            if not isinstance(card, dict):
+                fail(f"packaging chapter card {index} must be an object")
+            start, end = card.get("startMs"), card.get("endMs")
+            if not isinstance(start, int) or not isinstance(end, int) or end <= start:
+                fail(f"packaging chapter card {index} needs integer startMs/endMs with end > start")
+            if not str(card.get("title") or "").strip():
+                fail(f"packaging chapter card {index} requires a title")
+            if start < previous_end:
+                fail(f"packaging chapter card {index} overlaps the previous card")
+            if end > timeline_total:
+                fail(f"packaging chapter card {index} [{start},{end}) exceeds timelineDurationMs {timeline_total}")
+            previous_end = end
     if plan_status == "approved_for_g4":
         review = plan.get("timelineReview")
         if not isinstance(review, dict) or review.get("status") != "confirmed":
