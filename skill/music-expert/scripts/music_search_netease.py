@@ -131,9 +131,26 @@ def decode_probe(path: Path) -> tuple[bool, str]:
     return result.returncode == 0, (result.stderr or "").strip()[:200]
 
 
+def load_terms_file(path: Path) -> tuple[list[dict], dict, list]:
+    """Read a BGM-检索词 contract; returns (terms, filters, errors)."""
+    errors: list = []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        return [], {}, [{"field": "termsFile", "error": str(error)[:200]}]
+    if payload.get("purpose") != "bgm_search_terms":
+        errors.append({"field": "termsFile", "error": "not a bgm_search_terms contract"})
+    terms = payload.get("terms") or []
+    if not terms:
+        errors.append({"field": "termsFile", "error": "contract carries no terms"})
+    return terms, payload.get("filters") or {}, errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--query", required=True, help="free-text song/genre/mood query (中文优先)")
+    parser.add_argument("--query", default=None, help="free-text song/genre/mood query (中文优先)")
+    parser.add_argument("--terms-file", default=None, type=Path,
+                        help="BGM-检索词-v0.1.json from music_search_terms.py (searches every term, merges)")
     parser.add_argument("--max-results", type=int, default=8)
     parser.add_argument("--duration-min", type=float, default=15.0, help="seconds")
     parser.add_argument("--duration-max", type=float, default=600.0, help="seconds")
@@ -141,18 +158,46 @@ def main() -> int:
     parser.add_argument("--no-preview", action="store_true", help="search only; do not download previews")
     args = parser.parse_args()
 
+    if (args.query is None) == (args.terms_file is None):
+        emit({"status": "invalid", "errors": [{"field": "query",
+              "rule": "exactly one of --query or --terms-file is required"}]})
+        return 2
+    queries, contract_filters = [args.query], {}
+    if args.terms_file is not None:
+        records, filters, errors = load_terms_file(args.terms_file)
+        if errors:
+            emit({"status": "invalid", "errors": errors})
+            return 2
+        queries = [record["term"] for record in records]
+        contract_filters = filters
+    if contract_filters.get("durationMinSec"):
+        args.duration_min = max(args.duration_min, float(contract_filters["durationMinSec"]))
+
     if not args.no_preview and shutil.which("ffmpeg") is None:
         emit({"status": "blocked", "blockers": [{"type": "missing_toolchain",
               "detail": "ffmpeg required for the decode probe of previews (or pass --no-preview)"}]})
         return 2
 
-    payload, error = search(args.query, args.max_results)
-    if payload is None:
-        emit({"status": "blocked", "blockers": [error]})
+    songs, blockers = [], []
+    for query in queries:
+        payload, error = search(query, args.max_results)
+        if payload is None:
+            blockers.append({"query": query, **error})
+            continue
+        songs.extend(payload["result"]["songs"])
+    if blockers and len(blockers) == len(queries):
+        emit({"status": "blocked", "blockers": blockers})
         return 2
+    deduped, seen_ids = [], set()
+    for song in songs:
+        song_id = (song or {}).get("id")
+        if song_id is None or song_id in seen_ids:
+            continue
+        seen_ids.add(song_id)
+        deduped.append(song)
 
     candidates, excluded = [], []
-    for song in payload["result"]["songs"]:
+    for song in deduped:
         record = candidate_record(song or {})
         duration_ms = record.get("durationMs")
         if not record.get("neteaseId") or not isinstance(duration_ms, (int, float)):
@@ -186,7 +231,8 @@ def main() -> int:
     manifest_path.write_text(json.dumps({
         "schemaVersion": "0.1", "purpose": "bgm_candidate_pool", "source": "netease_search",
         "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
-        "query": {"text": args.query}, "retrievedAt": now(),
+        "query": {"text": args.query} if args.query else {"termsFile": str(args.terms_file), "terms": queries},
+        "partialFailures": blockers, "retrievedAt": now(),
         "candidates": kept, "excluded": excluded,
         "sufficiency": {"count": len(kept), "minimumExpected": 3},
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

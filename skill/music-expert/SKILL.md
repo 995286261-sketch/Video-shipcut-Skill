@@ -9,7 +9,7 @@ metadata:
 
 覆盖基线总账 ⑫（缺 BGM 内容/节奏分析）与"AI 自动找 BGM"的确定性前置，把过去只能靠运行时临场发挥的音乐能力沉淀为可复现、可审计的本地引擎。本 Skill 是**领域专员**（`pipelineNode: support`）：音乐决策全在这里出合同，节点型专员只逐字执行（用户 2026-09-10 定调）。范围四块：确定性分析引擎、找乐三轨、需求打分推荐、对齐与混音合同。接线现状见 `references/sourcing-contract.md` 末节（G0/G1/G2/G3/G4/G5 已通，仅 G0 `use_library_later` 自动调检索未接）。
 
-合同先行：动手前读 `references/music-analysis-contract.md`、`references/sourcing-contract.md`、`references/style-brief-contract.md`；来源选型的实测证据在 `references/library-probes.md`。
+合同先行：动手前读 `references/music-analysis-contract.md`、`references/sourcing-contract.md`、`references/style-brief-contract.md`、`references/search-terms-contract.md`；来源选型的实测证据在 `references/library-probes.md`。
 
 ## 执行入口（唯一）
 
@@ -26,7 +26,8 @@ metadata:
 
 1. 要理解一段音乐或某个参考视频的配乐感觉 → `music_analyze.py --input <文件> --output-dir <目录>`，需要风格简报再加 `--style-brief-out`。每次分析自动产出《BGM-分析回显》固定表格卡（头部简述+逐段分析表，样式与剪辑 skill 的回显卡同源）；重跑同文件同版本命中 `cache_hit` 不重算，卡丢了可从报告 JSON 免费重渲，请求过的简报也会从缓存报告免费重派生。简报的 `energyShape` 是最多 16 桶的宏观曲线（滤掉解说音轨逐句 ducking 噪声），详见 style-brief-contract。
 2. 要自动找候选 → `music_search_freesound.py --query/--tags/--similar-to ... --output-dir <目录>`，得到带授权证据链的候选清单。
-2.5 要在中文全曲库里找审核者听过的歌（内测选型）→ `music_search_netease.py --query "风格词" --output-dir <目录>`（可选 `--no-preview` 只检索不下载、`--duration-min/--duration-max` 过滤时长）。候选一律 `uncleared-platform-catalog`：试听件只用于选型，整轨必须由人经官方渠道取得后走第 3 条登记，**试听件直接进成片是红线违规**；风控/网络失败结构化 `blocked`，不静默换源。
+2.5 要在中文全曲库里找审核者听过的歌（内测选型）→ 先出检索词卡（见 2.6），再 `music_search_netease.py --terms-file <检索词json>`（逐词检索合池去重；单查也可 `--query`）+ `--output-dir <目录>`（可选 `--no-preview`）。候选一律 `uncleared-platform-catalog`：试听件只用于选型，整轨必须由人经官方渠道取得后走第 3 条登记，**试听件直接进成片是红线违规**；风控/网络失败结构化 `blocked`，不静默换源。
+2.6 检索词怎么来 → 按 `references/search-terms-contract.md`：**Agent 推导（口头偏好＞主题翻译＞风格简报锚定，简报可选；口播稿不做主源），脚本不编造曲库命中** → `music_search_terms.py --term <词>… --note "词=依据"…`（可选 `--preference/--theme/--style-brief/--timeline-ms`）出《BGM-检索词-v0.1》+回显卡：逐词标来源与推导依据、时长下限由成片时长推导、bpmRange 取自简报；卡呈用户可改后重跑，**不设门禁口令**（门禁在挑曲）。
 3. 用户手动从 Pixabay/Mixkit 等无 API 站下载了音乐 → `music_register_candidate.py --audio <文件> --license-type ... --license-evidence ... --output-dir <目录>` 登记（本脚本不联网、不复制源文件）。
 4. 有需求画像（时长/BPM/能量/响度上限，可选 `styleTags` 标签粗匹配）或风格简报后 → `music_recommend.py --profile <画像.json> --candidates <候选清单...> --reports-dir <分析目录>` 打分排序；候选不足会显式报"补检索/放宽画像/缩短成品"三选一，不自行拼凑。
 5. 定了曲子和口播后要做节奏对齐 → `music_align.py --report <分析报告> --voice-brief <配音清单> --timeline-ms <成片时长> --output-dir <目录>`（可选 `--climax-sentence` 高潮句、`--snap-tolerance-ms`、`--fade-ms`、`--tier-quantiles` 档位分位数）。产物是**建议**：轨偏移、高潮锚点、句边界卡点吸附（超出容差如实报 miss）、ducking/淡入淡出区间、**机器乐句表**（音轨能量段×轨偏移映射到成片时间轴并标覆盖句）与**逐句排版档位草稿**（段能量分位数定档，词表 快切/推进/常规/留白），附节点末风格的回显卡；口播时值永远是权威，卡点只做参考，不得为踩点让口播变形；档位草稿是机械建议（§6-④），最终逐行档位由 G3 终审八列回显人工定夺，消费者想改对齐数字只能改参数重跑。
@@ -64,5 +65,5 @@ metadata:
 - `references/style-brief-contract.md`：参考视频→风格简报合同。
 - `references/tag-vocabulary.md`：主题标签受控词表（单一事实源为 `scripts/music_tags.py`）。
 - `references/library-probes.md`：曲库与引擎选型实测结论。
-- `scripts/music_analyze.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：七个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块）。
+- `scripts/music_analyze.py`、`scripts/music_search_terms.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：八个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块）。
 - `tests/test_music_analyze.py`、`tests/test_music_sourcing.py`、`tests/test_music_recommend.py`、`tests/test_music_align.py`：确定性与阻断回归。
