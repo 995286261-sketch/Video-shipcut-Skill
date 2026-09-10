@@ -14,6 +14,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import music_tags
+
 LICENSE_WEIGHT = {"cc0": 1.0, "public-domain": 1.0, "cc-by": 0.9, "cc-by-sa": 0.85,
                   "owned": 1.0, "cleared-for-project": 1.0, "unknown": 0.3}
 
@@ -120,6 +122,17 @@ def score(candidate: dict, report: dict | None, profile: dict) -> tuple[float, l
     else:
         notes.append("loudness_above_ducking_ceiling")
 
+    # coarse theme-tag matching (10% share, only when the profile asks for it;
+    # rough vocabulary overlap by design — see references/tag-vocabulary.md)
+    wanted = profile.get("styleTags")
+    if wanted:
+        wanted_slugs = [music_tags.resolve_tag(tag) for tag in wanted]
+        candidate_slugs = candidate.get("styleTags") or music_tags.normalize_tag_list(candidate.get("tags") or [])
+        hits = [slug for slug in wanted_slugs if slug and slug in candidate_slugs]
+        ratio = len(hits) / len(wanted_slugs)
+        total = round(total * 0.9 + 0.10 * ratio, 4)
+        notes.append(f"tags {len(hits)}/{len(wanted_slugs)}")
+
     # license weight modulates the total
     weight = LICENSE_WEIGHT.get(str(candidate.get("licenseType") or candidate.get("license", "")).lower(), 0.3)
     if weight < 1.0:
@@ -144,6 +157,13 @@ def main() -> int:
         profile = json.loads(args.profile.read_text(encoding="utf-8"))
     except json.JSONDecodeError as error:
         emit({"status": "invalid", "errors": [{"field": "profile", "rule": "invalid json", "detail": str(error)}]})
+        return 2
+
+    wanted = profile.get("styleTags") or []
+    unmapped = [tag for tag, slug in zip(wanted, (music_tags.resolve_tag(t) for t in wanted)) if slug is None]
+    if unmapped:
+        emit({"status": "invalid", "errors": [{"field": "profile.styleTags", "rule": "every profile tag must come from the controlled vocabulary",
+              "detail": f"unknown tags: {', '.join(str(t) for t in unmapped)}; accepted — {music_tags.accepted_tags_text()}"}]})
         return 2
 
     report_index = load_reports(list(args.reports_dir))
@@ -173,6 +193,7 @@ def main() -> int:
             "tempoBpm": report.get("tempoBpm"),
             "integratedLufs": (report.get("loudness") or {}).get("integratedLufs"),
             "hitPointCount": len(report.get("hitPoints", [])),
+            "styleTags": candidate.get("styleTags") or music_tags.normalize_tag_list(candidate.get("tags") or []),
             "sha256": sha,
             "score": total,
             "notes": notes,

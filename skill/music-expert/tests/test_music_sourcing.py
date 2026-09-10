@@ -82,6 +82,33 @@ class RegisterCandidateTest(unittest.TestCase):
         self.assertEqual(2, result.returncode)
         self.assertEqual("invalid", json.loads(result.stdout)["status"])
 
+    def test_register_controlled_tags_and_word_safe_filename(self):
+        wav = self.real_wav()
+        result = self.run_script(REGISTER, ["--audio", str(wav), "--title", "Lonely Lies; GOLDKID$ - Interlinked",
+                                            "--license-type", "cc0", "--license-evidence", "https://example.org/cc0",
+                                            "--tags", "epic,史诗,epic,cinematic",
+                                            "--output-dir", str(self.root / "pool")])
+        payload = json.loads(result.stdout)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        manifest = Path(payload["candidate"])
+        # no mid-word truncation: the full tail survives, separators collapse to '-'
+        self.assertIn("Lonely-Lies-GOLDKID-Interlinked", manifest.name)
+        self.assertNotIn(" ", manifest.name)
+        record = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(["epic"], record["styleTags"])  # dedup across slug/zh/alias spellings
+
+    def test_register_unknown_tag_is_invalid(self):
+        wav = self.real_wav()
+        result = self.run_script(REGISTER, ["--audio", str(wav), "--title", "测试",
+                                            "--license-type", "cc0", "--license-evidence", "https://example.org/cc0",
+                                            "--tags", "vibes,史诗", "--output-dir", str(self.root / "pool")])
+        self.assertEqual(2, result.returncode)
+        payload = json.loads(result.stdout)
+        self.assertEqual("invalid", payload["status"])
+        self.assertEqual("tags", payload["errors"][0]["field"])
+        self.assertIn("unknown tags: vibes", payload["errors"][0]["detail"])
+        self.assertIn("accepted", payload["errors"][0]["detail"])  # error teaches the vocabulary
+
 
 class SearchBlockedTest(unittest.TestCase):
     def test_missing_token_is_structured_block(self):
@@ -178,6 +205,41 @@ class RecommendTest(unittest.TestCase):
         data = json.loads(out.read_text(encoding="utf-8"))
         self.assertEqual(1, len(data["unanalyzed"]))
         self.assertEqual(0, len(data["ranked"]))
+
+    def test_profile_style_tags_reward_vocabulary_overlap(self):
+        self.write_report("EE" * 32, 120.0, 60_000)
+        self.write_report("FF" * 32, 120.0, 60_000)
+        matched = self.candidate("on-theme", "EE" * 32)
+        matched["styleTags"] = ["epic", "orchestral"]
+        raw = self.candidate("raw-tags", "FF" * 32)
+        raw["tags"] = ["cinematic", "drums", "totallyweird"]
+        self.write_candidates([raw, matched])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "styleTags": ["epic", "orchestral"]}), encoding="utf-8")
+        out = self.root / "rec.json"
+        result = self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                                  "--reports-dir", str(self.reports), "--output", str(out)])
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        data = json.loads(out.read_text(encoding="utf-8"))
+        ranked = {item["title"]: item for item in data["ranked"]}
+        self.assertEqual(1.0, ranked["on-theme"]["score"])
+        self.assertIn("tags 2/2", ranked["on-theme"]["notes"])
+        # foreign raw tags are normalized through the same vocabulary; "totallyweird" drops out
+        self.assertEqual(["epic", "percussive"], ranked["raw-tags"]["styleTags"])
+        self.assertAlmostEqual(0.95, ranked["raw-tags"]["score"])
+        self.assertIn("tags 1/2", ranked["raw-tags"]["notes"])
+
+    def test_unmappable_profile_tag_is_invalid(self):
+        self.write_report("EE" * 32, 120.0, 60_000)
+        self.write_candidates([self.candidate("x", "EE" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "styleTags": ["vibes"]}), encoding="utf-8")
+        result = self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                                  "--reports-dir", str(self.reports), "--output", str(self.root / "rec.json")])
+        self.assertEqual(2, result.returncode)
+        payload = json.loads(result.stdout)
+        self.assertEqual("invalid", payload["status"])
+        self.assertEqual("profile.styleTags", payload["errors"][0]["field"])
 
     def test_no_candidates_is_blocked(self):
         profile = self.root / "profile.json"

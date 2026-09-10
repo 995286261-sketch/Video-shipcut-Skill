@@ -92,10 +92,72 @@ class MusicAnalyzeTest(unittest.TestCase):
                         f"tempo {tempo} not near a 120 BPM octave")
         self.assertTrue(data["hitPoints"], "卡点表 must not be empty")
         self.assertGreaterEqual(len(data["energySegments"]), 1)
-        self.assertTrue((out / "brief.json").is_file())
+        brief = json.loads((out / "brief.json").read_text(encoding="utf-8"))
+        # G1 field test: ducking-heavy reference soundtracks must not smuggle the raw
+        # short-term curve in as "music energy shape" — the brief carries a bucket curve.
+        self.assertLessEqual(brief["shapeBuckets"], 16)
+        self.assertEqual(brief["shapeBuckets"], len(brief["energyShape"]))
+        self.assertEqual(brief["shapeBucketMs"], round(brief["durationMs"] / brief["shapeBuckets"]))
+        # the fixed-table echo card is a standard product of every fresh analysis
+        echo = Path(payload["echo"])
+        self.assertTrue(echo.is_file() and echo.stat().st_size > 0)
+        card = echo.read_text(encoding="utf-8")
+        self.assertIn("# BGM 分析回显", card)
+        self.assertIn("| 段 | 区间 | 能量 | 音乐结构 | 对剪辑的意义 |", card)
         # Issue 031: same bytes + same analysis version must reuse, never recompute.
         second = self.run_script(["--input", str(wav), "--output-dir", str(out)])
-        self.assertEqual("cache_hit", json.loads(second.stdout)["status"])
+        hit = json.loads(second.stdout)
+        self.assertEqual("cache_hit", hit["status"])
+        self.assertEqual(str(echo), hit["echo"])
+        # a deleted card is re-rendered from the cached JSON (pure stdlib, free)
+        echo.unlink()
+        third = self.run_script(["--input", str(wav), "--output-dir", str(out)])
+        self.assertEqual("cache_hit", json.loads(third.stdout)["status"])
+        self.assertTrue(echo.is_file() and echo.stat().st_size > 0)
+        # N1 rule: a cache hit from a foreign --cache-root is relocated byte-identically
+        # so the requested output directory (e.g. a 素材包 slot) stays self-contained
+        elsewhere = self.root / "slot"
+        fourth = self.run_script(["--input", str(wav), "--output-dir", str(elsewhere), "--cache-root", str(out)])
+        hit = json.loads(fourth.stdout)
+        self.assertEqual("cache_hit", hit["status"])
+        self.assertEqual(elsewhere, Path(hit["report"]).parent)
+        self.assertEqual(report.read_bytes(), Path(hit["report"]).read_bytes())
+        self.assertEqual(elsewhere, Path(hit["echo"]).parent)
+        # G1 rule: a cache hit still derives the requested brief (pure stdlib re-derivation)
+        brief_again = self.root / "brief-reuse.json"
+        fifth = self.run_script(["--input", str(wav), "--output-dir", str(elsewhere), "--cache-root", str(out),
+                                 "--style-brief-out", str(brief_again)])
+        hit5 = json.loads(fifth.stdout)
+        self.assertEqual("cache_hit", hit5["status"])
+        self.assertEqual(str(brief_again), hit5["styleBrief"])
+        self.assertEqual(brief, json.loads(brief_again.read_text(encoding="utf-8")))
+
+
+class EchoCardSourceTest(unittest.TestCase):
+    """G1 noise rule: a video soundtrack card must say its numbers are mixed-audio facts."""
+
+    def setUp(self):
+        sys.path.insert(0, str(SKILL / "scripts"))
+        import music_echo
+        self.music_echo = music_echo
+
+    def card(self, media_kind):
+        report = {
+            "source": {"path": "ref.mp4", "mediaKind": media_kind, "decodedDurationMs": 60000, "sha256": "0" * 64},
+            "analysisVersion": "test", "tempoBpm": 120.0, "beatsMs": [0, 500, 1000],
+            "hitPoints": [{"tMs": 0, "kind": "beat"}, {"tMs": 260, "kind": "accent"}],
+            "energySegments": [{"startMs": 0, "endMs": 60000, "energyMean": 0.2}],
+            "loudness": {"integratedLufs": -13.4},
+        }
+        return self.music_echo.render_card(report)
+
+    def test_video_source_card_carries_mixed_audio_warning(self):
+        card = self.card("video-with-audio")
+        self.assertIn("解说混音后的事实", card)
+        self.assertIn("音轨抽自视频", card)
+
+    def test_pure_audio_card_has_no_warning(self):
+        self.assertNotIn("解说混音后的事实", self.card("audio"))
 
 
 if __name__ == "__main__":

@@ -22,6 +22,8 @@ import sys
 import tempfile
 from pathlib import Path
 
+import music_echo
+
 SCHEMA_VERSION = "0.1"
 ANALYSIS_VERSION = "music-expert-analysis-v0.2"
 SAMPLE_RATE = 22050
@@ -196,7 +198,31 @@ def main() -> int:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     cached = find_cached_report(cache_key, [args.output_dir, *args.cache_root])
     if cached is not None:
-        emit({"status": "cache_hit", "report": str(cached), "cacheKey": cache_key["sha256"][:16], "sourceSha256": source_sha})
+        if cached.parent.resolve() != args.output_dir.resolve():
+            # A cache hit from a foreign root is relocated byte-identically so the
+            # requested output (e.g. a 素材包 slot) stays self-contained.
+            relocated = args.output_dir / cached.name
+            shutil.copy2(cached, relocated)
+            cached = relocated
+        echo = music_echo.echo_path_for(cached)
+        if not echo.is_file():
+            try:
+                music_echo.write_card_for(cached)  # pure-stdlib re-render, no analysis runtime needed
+            except OSError as write_error:
+                return fail_blocked("echo_card_write_failed", f"{echo}: {write_error}")
+        brief_out = None
+        if args.style_brief_out is not None:
+            try:
+                brief = build_style_brief(json.loads(cached.read_text(encoding="utf-8")), args.input)
+            except (OSError, json.JSONDecodeError, KeyError) as read_error:
+                return fail_blocked("style_brief_write_failed", f"cached report unreadable: {read_error}")
+            args.style_brief_out.parent.mkdir(parents=True, exist_ok=True)
+            args.style_brief_out.write_text(json.dumps(brief, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            if not args.style_brief_out.is_file() or args.style_brief_out.stat().st_size == 0:
+                return fail_blocked("style_brief_write_failed", str(args.style_brief_out))
+            brief_out = str(args.style_brief_out)
+        emit({"status": "cache_hit", "report": str(cached), "echo": str(echo), "styleBrief": brief_out,
+              "cacheKey": cache_key["sha256"][:16], "sourceSha256": source_sha})
         return 0
 
     configure_runtime()
@@ -263,6 +289,10 @@ def main() -> int:
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not report_path.is_file() or report_path.stat().st_size == 0:
         return fail_blocked("report_write_failed", f"analysis report was not written to {report_path}")
+    echo_path = music_echo.echo_path_for(report_path)
+    echo_path.write_text(music_echo.render_card(report, report_path), encoding="utf-8")
+    if not echo_path.is_file() or echo_path.stat().st_size == 0:
+        return fail_blocked("echo_card_write_failed", f"analysis echo card was not written to {echo_path}")
 
     if args.style_brief_out is not None:
         brief = build_style_brief(report, args.input)
@@ -271,7 +301,7 @@ def main() -> int:
         if not args.style_brief_out.is_file() or args.style_brief_out.stat().st_size == 0:
             return fail_blocked("style_brief_write_failed", str(args.style_brief_out))
 
-    emit({"status": "completed", "report": str(report_path), "tempoBpm": report["tempoBpm"],
+    emit({"status": "completed", "report": str(report_path), "echo": str(echo_path), "tempoBpm": report["tempoBpm"],
           "segments": len(segments), "hitPoints": len(hit_points), "durationMs": duration_ms,
           "styleBrief": str(args.style_brief_out) if args.style_brief_out else None})
     return 0
@@ -311,10 +341,27 @@ def build_hit_points(beat_times, onset_times) -> list[dict]:
     return points
 
 
+SHAPE_BUCKETS = 16
+
+
+def _shape_curve(curve: list[float]) -> list[float]:
+    """Downsample the raw short-term curve to fixed buckets (mean per bucket).
+
+    Reference-video soundtracks carry per-sentence ducking oscillation; a raw
+    frame curve would smuggle that edit noise in as "music energy shape".
+    """
+    if not curve:
+        return []
+    buckets = min(SHAPE_BUCKETS, len(curve))
+    size = len(curve) / buckets
+    return [round(sum(curve[int(i * size):int((i + 1) * size)]) / max(1, int((i + 1) * size) - int(i * size)), 4) for i in range(buckets)]
+
+
 def build_style_brief(report: dict, source: Path) -> dict:
     tempo = report["tempoBpm"]
-    curve = [point["rms"] for point in report["energyCurve"]]
+    curve = _shape_curve([point["rms"] for point in report["energyCurve"]])
     peak = max(curve) if curve else 0.0
+    duration_ms = report["source"]["decodedDurationMs"]
     return {
         "schemaVersion": SCHEMA_VERSION,
         "purpose": "reference_music_style_brief",
@@ -322,10 +369,12 @@ def build_style_brief(report: dict, source: Path) -> dict:
         "sourceReport": report["source"]["sha256"],
         "bpm": tempo,
         "bpmRange": [round(tempo * 0.9, 1), round(tempo * 1.1, 1)] if tempo > 0 else None,
-        "durationMs": report["source"]["decodedDurationMs"],
+        "durationMs": duration_ms,
         "energyShape": [round(v / peak, 3) if peak else 0.0 for v in curve],
+        "shapeBuckets": len(curve),
+        "shapeBucketMs": round(duration_ms / len(curve)) if curve else None,
         "segmentCount": len(report["energySegments"]),
-        "usage": "检索与推荐输入；suggestedQueryTerms 由 Agent 依情绪/风格补写，本文件只承载机器事实",
+        "usage": "检索与推荐输入；energyShape 为 16 桶均值曲线（消除解说音轨逐句 ducking 周期噪声，保留宏观能量形状）；suggestedQueryTerms 由 Agent 依情绪/风格补写，本文件只承载机器事实",
         "suggestedQueryTerms": [],
     }
 
