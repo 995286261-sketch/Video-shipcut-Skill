@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "timelineDurationMs": 113310,
+  "chapters": [
+    {
+      "chapterId": "chapter-01",
+      "title": "不是主角机 · 量产的传奇",
+      "cardTitles": [
+        "不是主角机",
+        "量产的传奇"
+      ],
+      "output": "clips/chapter-01.mp4",
+      "outputStartMs": 0,
+      "outputEndMs": 36890,
+      "segments": [
+        "seg-001",
+        "seg-002",
+        "seg-003",
+        "seg-004",
+        "seg-005"
+      ]
+    },
+    {
+      "chapterId": "chapter-02",
+      "title": "对手登场 · 红色彗星",
+      "cardTitles": [
+        "对手登场",
+        "红色彗星"
+      ],
+      "output": "clips/chapter-02.mp4",
+      "outputStartMs": 36890,
+      "outputEndMs": 75220,
+      "segments": [
+        "seg-006",
+        "seg-007",
+        "seg-008",
+        "seg-009a",
+        "seg-009b",
+        "seg-010a",
+        "seg-010b"
+      ]
+    },
+    {
+      "chapterId": "chapter-03",
+      "title": "互相成就 · 一个时代 · 你的扎古",
+      "cardTitles": [
+        "互相成就",
+        "一个时代",
+        "你的扎古"
+      ],
+      "output": "clips/chapter-03.mp4",
+      "outputStartMs": 75220,
+      "outputEndMs": 113310,
+      "segments": [
+        "seg-011",
+        "seg-012",
+        "seg-013",
+        "seg-014",
+        "seg-014b",
+        "seg-015"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "order": 1,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 0,
+      "sourceEndMs": 7090,
+      "outputStartMs": 0,
+      "outputEndMs": 7090,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-002",
+      "order": 2,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 7090,
+      "sourceEndMs": 15060,
+      "outputStartMs": 7090,
+      "outputEndMs": 15060,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-003",
+      "order": 3,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 15060,
+      "sourceEndMs": 21830,
+      "outputStartMs": 15060,
+      "outputEndMs": 21830,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-004",
+      "order": 4,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 28630,
+      "sourceEndMs": 35720,
+      "outputStartMs": 21830,
+      "outputEndMs": 28920,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-005",
+      "order": 5,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 58550,
+      "sourceEndMs": 66520,
+      "outputStartMs": 28920,
+      "outputEndMs": 36890,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-006",
+      "order": 6,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 36900,
+      "sourceEndMs": 44870,
+      "outputStartMs": 36890,
+      "outputEndMs": 44860,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-007",
+      "order": 7,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 49300,
+      "sourceEndMs": 58550,
+      "outputStartMs": 44860,
+      "outputEndMs": 54110,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-008",
+      "order": 8,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 44880,
+      "sourceEndMs": 49250,
+      "outputStartMs": 54110,
+      "outputEndMs": 58480,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-009a",
+      "order": 9,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 21830,
+      "sourceEndMs": 28630,
+      "outputStartMs": 58480,
+      "outputEndMs": 65280,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-009b",
+      "order": 10,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 66550,
+      "sourceEndMs": 71000,
+      "outputStartMs": 65280,
+      "outputEndMs": 69730,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-010a",
+      "order": 11,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 75100,
+      "sourceEndMs": 76820,
+      "outputStartMs": 69730,
+      "outputEndMs": 71450,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-010b",
+      "order": 12,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 103600,
+      "sourceEndMs": 107370,
+      "outputStartMs": 71450,
+      "outputEndMs": 75220,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-011",
+      "order": 13,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 89280,
+      "sourceEndMs": 95090,
+      "outputStartMs": 75220,
+      "outputEndMs": 81030,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-012",
+      "order": 14,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 78830,
+      "sourceEndMs": 89280,
+      "outputStartMs": 81030,
+      "outputEndMs": 91480,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "drawbox y875-1080 输出 01:21.030–01:27.800（G4 修正合同）"
+    },
+    {
+      "segmentId": "seg-013",
+      "order": 15,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 95100,
+      "sourceEndMs": 103470,
+      "outputStartMs": 91480,
+      "outputEndMs": 99850,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-014",
+      "order": 16,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 107600,
+      "sourceEndMs": 114150,
+      "outputStartMs": 99850,
+      "outputEndMs": 106400,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-014b",
+      "order": 17,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 71050,
+      "sourceEndMs": 74550,
+      "outputStartMs": 106400,
+      "outputEndMs": 109900,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-015",
+      "order": 18,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 114400,
+      "sourceEndMs": 117810,
+      "outputStartMs": 109900,
+      "outputEndMs": 113310,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    }
+  ]
+}

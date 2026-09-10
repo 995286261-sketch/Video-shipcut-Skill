@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "purpose": "g2_narration_voice_manifest",
+  "voiceTier": "production_neural",
+  "tierNote": "㉘ 分级：百炼 CosyVoice 神经 TTS = 成品级；下游估时/对齐一律以本清单实测时长为准，不得用文本估计",
+  "engine": "bailian-cosyvoice-v3-flash",
+  "voice": "longtian_v3",
+  "voiceName": "龙天·磁性理智男",
+  "language": "zh",
+  "sampleRate": 24000,
+  "channels": 1,
+  "fullNarrationRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.1.wav",
+  "sentenceScriptRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/口播逐句-TTS.txt",
+  "measuredTotalDurationMs": 126190,
+  "auditionRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/试听-N09-longtian_v3.wav",
+  "userVoiceApproval": "用户 2026-09-09 试听后选定（'都按照你推荐的来'），原话存 G2-批准记录.md",
+  "sentences": [
+    {
+      "sentenceId": "N01",
+      "text": "它不是主角机，也没有神级装备。但提起一年战争，你绕不开它。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N01.wav",
+      "startMs": 0,
+      "durationMs": 7090
+    },
+    {
+      "sentenceId": "N02",
+      "text": "这，就是 MS-06 扎古II——一台证明量产机也能成为传奇的机体。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N02.wav",
+      "startMs": 7090,
+      "durationMs": 7970
+    },
+    {
+      "sentenceId": "N03",
+      "text": "U.C.0078 年 1 月，吉翁军的初期量产型扎古 II C 型下线，前后总共只造了 236 架。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N03.wav",
+      "startMs": 15060,
+      "durationMs": 10050
+    },
+    {
+      "sentenceId": "N04",
+      "text": "而开战之后，这个数字一路冲到三千架以上——F 型成为公国量产最多的机动战士。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N04.wav",
+      "startMs": 25110,
+      "durationMs": 7410
+    },
+    {
+      "sentenceId": "N05",
+      "text": "头顶高 17.5 米的钢铁之躯，超高张力钢装甲，120 毫米机枪、280 毫米火箭筒加热能斧，标准三件套。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N05.wav",
+      "startMs": 32520,
+      "durationMs": 10450
+    },
+    {
+      "sentenceId": "N06",
+      "text": "它没有哪一项性能碾压时代，却也没有明显短板——能大量地造、大量地修、大量地开，这就是量产机的生存之道。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N06.wav",
+      "startMs": 42970,
+      "durationMs": 10690
+    },
+    {
+      "sentenceId": "N07",
+      "text": "开战之初，联邦军直到 0079 年 10 月才拿出自己的量产 MS，11 月才投入实战——在此之前，他们只能看着扎古大出风头。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N07.wav",
+      "startMs": 53660,
+      "durationMs": 12130
+    },
+    {
+      "sentenceId": "N08",
+      "text": "一周战争与鲁姆会战，扎古打出的是压倒性战果。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N08.wav",
+      "startMs": 65790,
+      "durationMs": 4370
+    },
+    {
+      "sentenceId": "N09",
+      "text": "最有名的驾驶者，是夏亚·阿兹纳布尔。他的红色扎古 II 单机击沉五艘联邦战舰——四艘萨拉米斯、一艘麦哲伦，\"赤色彗星\"从此得名。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N09.wav",
+      "startMs": 70160,
+      "durationMs": 13410
+    },
+    {
+      "sentenceId": "N10",
+      "text": "乔尼·莱登，用的也是量产型火箭筒，在鲁姆击沉三艘麦哲伦级。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N10.wav",
+      "startMs": 83570,
+      "durationMs": 5490
+    },
+    {
+      "sentenceId": "N11",
+      "text": "王牌没有挑选传奇机体——是机体和王牌，互相成就了彼此。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N11.wav",
+      "startMs": 89060,
+      "durationMs": 5810
+    },
+    {
+      "sentenceId": "N12",
+      "text": "直到战争末期，扎古还在进化：轻量化的 F2 型，还有高机动 R 型——后者竞标输给了大魔，只造了 4 台。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N12.wav",
+      "startMs": 94870,
+      "durationMs": 9490
+    },
+    {
+      "sentenceId": "N13",
+      "text": "战败也没终结它的故事：联邦逆向研究它造出高扎古，缴获的扎古一直服役到 0088 年。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N13.wav",
+      "startMs": 104360,
+      "durationMs": 8370
+    },
+    {
+      "sentenceId": "N14",
+      "text": "三千多架、无数驾驶者、一整个模型柜。扎古的意义从来不是无敌，而是一个时代给\"量产\"两个字刻下的名字。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N14.wav",
+      "startMs": 112730,
+      "durationMs": 10050
+    },
+    {
+      "sentenceId": "N15",
+      "text": "你的扎古时刻是哪一台？评论区聊聊。",
+      "audioRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G2-证据与口播/配音试听/N15.wav",
+      "startMs": 122780,
+      "durationMs": 3410
+    }
+  ],
+  "measuredAt": "2026-09-09T09:06:21.084646+00:00"
+}

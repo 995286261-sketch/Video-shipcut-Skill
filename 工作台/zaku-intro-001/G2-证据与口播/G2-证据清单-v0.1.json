@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "status": "completed",
+  "evidencePolicy": "转写为机器草稿证据；事实仅采用 事实资料/ 内可回指条目（百炼 WebSearch 检索，用户批准，本项目限定口径：公开设定资料，不冒充官方一手）",
+  "sourceEvidence": [
+    {
+      "assetId": "source-02-1080p-734dd167",
+      "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceProbe": {
+        "durationMs": 117909,
+        "video": {
+          "width": 1920,
+          "height": 1080,
+          "codec": "h264"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 48000,
+          "channels": 2
+        }
+      },
+      "contactSheetRef": "工作台/zaku-intro-001/G2-证据与口播/联系表/source-02-1080p-contact-sheet.jpg",
+      "transcriptRef": "工作台/zaku-intro-001/G2-证据与口播/转写/source-02-1080p-transcript.json",
+      "transcriptArtifactsRef": "工作台/zaku-intro-001/G2-证据与口播/转写/source-02-1080p/manifest.json",
+      "warnings": [
+        "源片音轨为英文流行歌曲（转写 tr-0001..0005 为歌词，含版权音乐）：成片必须排除源片原声，仅用本项目配音+BGM",
+        "源片为第三方二创混剪（粉丝 MAD），画面授权按 G0 登记 internal_test / not_for_distribution 执行"
+      ]
+    }
+  ],
+  "factEvidenceRefs": [
+    "工作台/zaku-intro-001/G2-证据与口播/事实资料/扎古公开资料摘录-v0.1.md"
+  ],
+  "handoff": {
+    "g3": "逐帧目标主体判定以 G3 视觉账本为准；本清单仅登记素材可用性与事实来源",
+    "audio": "原声策略=排除（版权歌曲）；BGM=LOW-PHONK（G0 已登记三哈希链）"
+  }
+}

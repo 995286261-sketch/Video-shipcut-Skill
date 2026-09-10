@@ -1,0 +1,8 @@
+{
+  "imagePath": "工作台/zaku-intro-001/G4-剪辑与渲染/cover/cover-source.jpg",
+  "fontFile": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+  "title": "为什么一台量产机，能成为高达系列的灵魂？",
+  "fontsize": 64,
+  "output": "工作台/zaku-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+  "note": "主标题=G1 批准文案（G1-方向确认记录.md 选项 C）；封面帧=计划 coverFrameMs 66800（批准理由：红扎古独眼特写）"
+}

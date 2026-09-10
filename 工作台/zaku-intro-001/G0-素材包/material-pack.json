@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-1080p-734dd167",
+      "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceKind": "local-file",
+      "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "byteSize": 47898887,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-low-phonk-d7d03f4a",
+      "relativePath": "07_授权音频/LOW-PHONK.mp3",
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "byteSize": 7132111,
+      "fileExtension": ".mp3",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "bgmRegistration": {
+        "relativePath": "07_授权音频/BGM-候选登记-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json",
+        "sha256": "B364D65375E0C4FCDD5E11E41E2E86E02F9EC80615B42D1B586309B5EC0BBF86",
+        "licenseType": "cleared-for-project",
+        "distributionBoundary": "internal_test"
+      },
+      "bgmAnalysis": {
+        "relativePath": "07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+        "sha256": "C3EB5BFCABAAE5D186D1CC1384F0FF78369DC13DB9DD8DB89DF1FE9AC0ECD03A"
+      }
+    }
+  ],
+  "packStatus": "complete",
+  "registeredAt": "2026-09-09T07:07:33.295719Z"
+}

@@ -1,0 +1,21 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-001",
+ "node": "G3",
+ "targetSubject": {
+  "canonicalName": "MS-06 扎古II（含夏亚/乔尼红扎古与量产型；吉姆、大魔为敌我语境机）",
+  "userConfirmed": true,
+  "confirmedBasis": "G1 方向简报标题C+角度1经「确认 G1」门禁锁定；G2 事实资料与口播 v0.2 全文以扎古II为主体；G3 沿用该已批主体策略",
+  "identificationRules": [
+   "单眼+肩部动力管尖刺+火箭筒/机枪/军刀配置判定扎古II",
+   "红色涂装扎古归入扎古II（王牌自定义型）",
+   "黄灰色MS带单眼判定扎古系"
+  ],
+  "exclusionRules": [
+   "白蓝红配色主角机高达系不计入扎古",
+   "联邦吉姆等异型机单独标注不得冒充扎古",
+   "纯人物/战舰/地形帧标记不适用"
+  ]
+ },
+ "candidateVerificationRule": "每候选段起点+中点+终点三帧抽帧，按识别规则逐帧观察入账本后方可进入终审回显"
+}

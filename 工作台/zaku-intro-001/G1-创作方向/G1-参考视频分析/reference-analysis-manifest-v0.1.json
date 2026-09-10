@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1",
+  "source": {
+    "path": "../../G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+    "sha256": "df263d11b1ae3ba576ef848e5d6bbd5aba14b96bd29aa3442e22a17588ce6992"
+  },
+  "cacheKey": {
+    "sourceSha256": "df263d11b1ae3ba576ef848e5d6bbd5aba14b96bd29aa3442e22a17588ce6992",
+    "promptVersion": "g1-ref-analysis-v1",
+    "sceneThreshold": 0.3
+  },
+  "derivedArtifacts": [
+    {
+      "relativePath": "冷战奇迹-技术分析报告.json",
+      "sha256": "e47a9ba39a8463dffb1a1dd071f94de9ad074b6d10cfa96a3bbc44313511d77c"
+    },
+    {
+      "relativePath": "BGM-分析报告-冷战奇迹-逆羽雄鹰-1080P-DF263D11.json",
+      "sha256": "3e2890ed91fb4c50dd0ac96a7f7908f4b2a6274c053024d8bb0a1fe89e5af3c4"
+    },
+    {
+      "relativePath": "BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+      "sha256": "bbd97e1e2f987e7486f59b38578a862caf757262e198ca779b41b70bf17128d0"
+    },
+    {
+      "relativePath": "BGM-风格简报-冷战奇迹-v0.1.json",
+      "sha256": "f001ccf7c82569e565838f9caba26f31e7cffc1a08fa4d4d84d227ef15253d26"
+    },
+    {
+      "relativePath": "sheets/sheet-1.jpg",
+      "sha256": "76eef52aa361a3131a053bde31e0c5670051c78ece37538f89528dbdaec20c02"
+    },
+    {
+      "relativePath": "sheets/sheet-2.jpg",
+      "sha256": "3439a1ccf8d2fb7998005ed48accebc85f0e47e103134d12cb1eee959faeb644"
+    },
+    {
+      "relativePath": "sheets/sheet-3.jpg",
+      "sha256": "bfcdbf4660c8a5f4d4369335965017814bc50a3dc65ffcb1cf079890337a5618"
+    },
+    {
+      "relativePath": "pairs/sheet-pairs.jpg",
+      "sha256": "c694015024e183cb98c8bda32650dd88ea3bd805dff0618981a9476336da9e4e"
+    }
+  ],
+  "audioAnalysis": {
+    "tool": "music-expert/music_analyze.py v0.2",
+    "crossProjectCache": "WorkSpace/N3-G1实战 (relocated byte-identical)"
+  },
+  "generatedAt": "2026-09-09T08:03:53.677654+00:00"
+}

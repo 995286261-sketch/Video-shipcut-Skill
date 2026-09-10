@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-1080p-734dd167",
+    "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/zaku-intro-001/G0-素材包/02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 3920,
+      "endMs": 6420,
+      "text": "insane inside",
+      "words": [
+        {
+          "startMs": 3920,
+          "endMs": 4480,
+          "text": "ins",
+          "probability": 0.48015761375427246
+        },
+        {
+          "startMs": 4480,
+          "endMs": 5220,
+          "text": "ane",
+          "probability": 0.991483747959137
+        },
+        {
+          "startMs": 5220,
+          "endMs": 6420,
+          "text": " inside",
+          "probability": 0.9167104959487915
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0002",
+      "startMs": 7040,
+      "endMs": 9860,
+      "text": "the danger gets me high",
+      "words": [
+        {
+          "startMs": 7040,
+          "endMs": 7600,
+          "text": "the",
+          "probability": 0.2848925292491913
+        },
+        {
+          "startMs": 7600,
+          "endMs": 8260,
+          "text": " danger",
+          "probability": 0.9683295488357544
+        },
+        {
+          "startMs": 8260,
+          "endMs": 8820,
+          "text": " gets",
+          "probability": 0.9455327987670898
+        },
+        {
+          "startMs": 8820,
+          "endMs": 9220,
+          "text": " me",
+          "probability": 0.991145670413971
+        },
+        {
+          "startMs": 9220,
+          "endMs": 9860,
+          "text": " high",
+          "probability": 0.9296178817749023
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0003",
+      "startMs": 10240,
+      "endMs": 12600,
+      "text": "can't help myself",
+      "words": [
+        {
+          "startMs": 10240,
+          "endMs": 10800,
+          "text": "can",
+          "probability": 0.6567333936691284
+        },
+        {
+          "startMs": 10800,
+          "endMs": 11160,
+          "text": "'t",
+          "probability": 0.8212767839431763
+        },
+        {
+          "startMs": 11160,
+          "endMs": 11500,
+          "text": " help",
+          "probability": 0.9938647150993347
+        },
+        {
+          "startMs": 11500,
+          "endMs": 12600,
+          "text": " myself",
+          "probability": 0.8371002078056335
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0004",
+      "startMs": 13480,
+      "endMs": 15780,
+      "text": "got secrets I can't",
+      "words": [
+        {
+          "startMs": 13480,
+          "endMs": 14040,
+          "text": "got",
+          "probability": 0.6554059982299805
+        },
+        {
+          "startMs": 14040,
+          "endMs": 14640,
+          "text": " secrets",
+          "probability": 0.982595682144165
+        },
+        {
+          "startMs": 14640,
+          "endMs": 15280,
+          "text": " I",
+          "probability": 0.37784358859062195
+        },
+        {
+          "startMs": 15280,
+          "endMs": 15580,
+          "text": " can",
+          "probability": 0.8205550312995911
+        },
+        {
+          "startMs": 15580,
+          "endMs": 15780,
+          "text": "'t",
+          "probability": 0.8766118884086609
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0005",
+      "startMs": 29120,
+      "endMs": 32140,
+      "text": "I've always liked to play with fire",
+      "words": [
+        {
+          "startMs": 29120,
+          "endMs": 29240,
+          "text": "I",
+          "probability": 0.22084367275238037
+        },
+        {
+          "startMs": 29240,
+          "endMs": 29440,
+          "text": "'ve",
+          "probability": 0.9565301537513733
+        },
+        {
+          "startMs": 29440,
+          "endMs": 30060,
+          "text": " always",
+          "probability": 0.9886555671691895
+        },
+        {
+          "startMs": 30060,
+          "endMs": 30460,
+          "text": " liked",
+          "probability": 0.7295660376548767
+        },
+        {
+          "startMs": 30460,
+          "endMs": 30800,
+          "text": " to",
+          "probability": 0.9841336011886597
+        },
+        {
+          "startMs": 30800,
+          "endMs": 31280,
+          "text": " play",
+          "probability": 0.9920493960380554
+        },
+        {
+          "startMs": 31280,
+          "endMs": 31620,
+          "text": " with",
+          "probability": 0.9714158177375793
+        },
+        {
+          "startMs": 31620,
+          "endMs": 32140,
+          "text": " fire",
+          "probability": 0.9948216676712036
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-09T08:43:50.964819Z"
+}

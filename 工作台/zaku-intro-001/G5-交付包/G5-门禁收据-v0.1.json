@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "cardType": "g5_delivery_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-10T08:06:06Z",
+  "reviewCardRef": "工作台/zaku-intro-001/G5-交付包/G5-播放审核卡-v0.1.md",
+  "basisRefs": [
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/final-video.mp4",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/delivery-manifest.json",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/metadata-validation-report.json",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/bgm-chain-audit.json",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/edit-timeline.md",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/source-timecode-list.json",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/export-config.json",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/cover.jpg",
+    "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/subtitles.srt",
+    "工作台/zaku-intro-001/G5-交付包/质检证据/封面检查帧.jpg",
+    "工作台/zaku-intro-001/G5-交付包/质检证据/字幕检查帧-05s.jpg",
+    "工作台/zaku-intro-001/G5-交付包/质检证据/字幕检查帧-88s-遮蔽后.jpg",
+    "工作台/zaku-intro-001/G5-交付包/G5-播放审核卡-v0.1.md",
+    "工作台/zaku-intro-001/G5-交付包/G5-批准记录-v0.1.md"
+  ],
+  "checklist": [
+    {
+      "id": "delivery_manifest",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/delivery-manifest.json"
+    },
+    {
+      "id": "qa_validation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/metadata-validation-report.json"
+    },
+    {
+      "id": "playback_review",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G5-交付包/G5-播放审核卡-v0.1.md"
+    },
+    {
+      "id": "check_frames",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G5-交付包/质检证据/字幕检查帧-05s.jpg"
+    },
+    {
+      "id": "distribution_boundary",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G5-交付包/交付包-v0.1/export-config.json"
+    }
+  ]
+}

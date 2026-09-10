@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G2",
+  "projectId": "zaku-intro-001",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/zaku-intro-001/G2-证据与口播/G2-口播稿-v0.2.md",
+  "factCitationRef": "工作台/zaku-intro-001/G2-证据与口播/事实资料/扎古公开资料摘录-v0.1.md",
+  "voiceBriefRef": "工作台/zaku-intro-001/G2-证据与口播/G2-配音清单-v0.2.json",
+  "permittedFactIds": [
+    "claim-001",
+    "claim-003",
+    "claim-004",
+    "claim-005"
+  ],
+  "prohibitedTopics": [
+    "UC 正剧关键剧情转折",
+    "作品间拉踩",
+    "源片原声（版权英文歌）",
+    "claim-002 以事实口径播出（仅编辑观点化表述）"
+  ],
+  "supersededDraftRefs": [
+    "工作台/zaku-intro-001/G2-证据与口播/G2-口播稿-创作候选-v0.1.md"
+  ],
+  "userManuallyVerifiedClaims": [],
+  "audioPolicy": {
+    "bgm": "LOW-PHONK（G0 三哈希链）",
+    "sourceOriginalAudio": "排除（版权歌曲）",
+    "narrationVoice": "longtian_v3 成品级"
+  }
+}

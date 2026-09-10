@@ -1,0 +1,462 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-1080p-734dd167",
+      "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceProbe": {
+        "durationMs": 117909,
+        "video": {
+          "width": 1920,
+          "height": 1080,
+          "codec": "h264"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 48000,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "order": 1,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 0,
+      "sourceEndMs": 7090,
+      "outputStartMs": 0,
+      "outputEndMs": 7090,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-002",
+      "order": 2,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 7090,
+      "sourceEndMs": 15060,
+      "outputStartMs": 7090,
+      "outputEndMs": 15060,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-003",
+      "order": 3,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 15060,
+      "sourceEndMs": 21830,
+      "outputStartMs": 15060,
+      "outputEndMs": 21830,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-004",
+      "order": 4,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 28630,
+      "sourceEndMs": 35720,
+      "outputStartMs": 21830,
+      "outputEndMs": 28920,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-005",
+      "order": 5,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 58550,
+      "sourceEndMs": 66520,
+      "outputStartMs": 28920,
+      "outputEndMs": 36890,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-006",
+      "order": 6,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 36900,
+      "sourceEndMs": 44870,
+      "outputStartMs": 36890,
+      "outputEndMs": 44860,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-007",
+      "order": 7,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 49300,
+      "sourceEndMs": 58550,
+      "outputStartMs": 44860,
+      "outputEndMs": 54110,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-008",
+      "order": 8,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 44880,
+      "sourceEndMs": 49250,
+      "outputStartMs": 54110,
+      "outputEndMs": 58480,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-009a",
+      "order": 9,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 21830,
+      "sourceEndMs": 28630,
+      "outputStartMs": 58480,
+      "outputEndMs": 65280,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-009b",
+      "order": 10,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 66550,
+      "sourceEndMs": 71000,
+      "outputStartMs": 65280,
+      "outputEndMs": 69730,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-010a",
+      "order": 11,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 75100,
+      "sourceEndMs": 76820,
+      "outputStartMs": 69730,
+      "outputEndMs": 71450,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-010b",
+      "order": 12,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 103600,
+      "sourceEndMs": 107370,
+      "outputStartMs": 71450,
+      "outputEndMs": 75220,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-011",
+      "order": 13,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 89280,
+      "sourceEndMs": 95090,
+      "outputStartMs": 75220,
+      "outputEndMs": 81030,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-012",
+      "order": 14,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 78830,
+      "sourceEndMs": 89280,
+      "outputStartMs": 81030,
+      "outputEndMs": 91480,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "drawbox y875-1080 输出 01:21.030–01:27.800（G4 修正合同）"
+    },
+    {
+      "segmentId": "seg-013",
+      "order": 15,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 95100,
+      "sourceEndMs": 103470,
+      "outputStartMs": 91480,
+      "outputEndMs": 99850,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-014",
+      "order": 16,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 107600,
+      "sourceEndMs": 114150,
+      "outputStartMs": 99850,
+      "outputEndMs": 106400,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-014b",
+      "order": 17,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 71050,
+      "sourceEndMs": 74550,
+      "outputStartMs": 106400,
+      "outputEndMs": 109900,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    },
+    {
+      "segmentId": "seg-015",
+      "order": 18,
+      "assetId": "source-02-1080p-734dd167",
+      "sourcePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceStartMs": 114400,
+      "sourceEndMs": 117810,
+      "outputStartMs": 109900,
+      "outputEndMs": 113310,
+      "motion": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0
+      },
+      "sourceAudio": "excluded",
+      "maskTreatment": "none"
+    }
+  ],
+  "editPlan": {
+    "segmentCount": 18,
+    "timelineDurationMs": 113310,
+    "durationDecision": {
+      "targetDurationSec": 115,
+      "narrationEstimatedDurationSec": 113.31,
+      "resolution": "follow_narration_natural_duration",
+      "decisionReason": "G2 v0.2 压缩方案经用户质询与追认（D14：超预算=人工决策点），实测口播 113.310s 在 G1 预算内，成片随口播自然时长；无静默填充。",
+      "antiFillRule": {
+        "disallowRepeatedSegments": true,
+        "disallowLoops": true,
+        "disallowMeaninglessSlowMotion": true,
+        "disallowUnverifiedFactPadding": true
+      },
+      "intentionalSilence": []
+    },
+    "narration": {
+      "source": "G2 配音清单 v0.2",
+      "voice": "龙天·磁性理智男",
+      "language": "zh",
+      "sentences": 15,
+      "chain": "acompressor+loudnorm I=-14:TP=-1.5:LRA=9"
+    },
+    "bgm": {
+      "track": "VodKe; HSHK; Pnan - LOW(PHONK)",
+      "license": "cleared-for-project",
+      "contract": "工作台/zaku-intro-001/G4-剪辑与渲染/BGM/BGM-混音合同-v0.1.json",
+      "bedGainDb": -8.0,
+      "duckReductionDb": 4.0,
+      "fades": {
+        "fadeInMs": 2000,
+        "fadeOutStartMs": 111310,
+        "fadeOutMs": 2000
+      },
+      "chainAudit": "bgm-chain-audit.json"
+    },
+    "subtitles": {
+      "mode": "fixed_bottom_band ASS burned",
+      "cues": 15,
+      "lane": "70–84% (y756–907)"
+    },
+    "chapterCards": {
+      "count": 7,
+      "displayMs": 1500,
+      "yRatio": 0.06
+    },
+    "mask": {
+      "segments": [
+        "seg-012"
+      ],
+      "window": "输出 81.030–87.800s",
+      "band": "y875–1080"
+    },
+    "cover": {
+      "mode": "platform_image_not_in_video",
+      "frameMs": 66800
+    },
+    "sourceAudioPolicy": "exclude"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "64A3A8CFE63BC01221C213110DB85037C8B90DF2AD2A7496EEC8872B80B261F2"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "762000A0CE62BCB84DC56F4353EAB9BE41ACAD0176770DE79F6CBE80A9823D02"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "1519502DD93026A98D85E4AF7EF88FCF1B73BAF777F986AC77A318160D9ACB54"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/chapter-01.mp4",
+        "sha256": "27D336F0F7F732D1BC4F0FCCADDEC64994B6AA2575687896E7DCF7062CD133B7"
+      },
+      {
+        "path": "clips/chapter-02.mp4",
+        "sha256": "825DA6311F1D54D63AA87C9FE8C01FCD9576909FABB318231E011E1008D9B050"
+      },
+      {
+        "path": "clips/chapter-03.mp4",
+        "sha256": "E6839119A3228C66369F571693CEBCAD772C824BD7FF70024F52C8BBEF951C1C"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "47394A880EF89342699D0B8CB4FEEA3EDF9EE0301B4DF17EEF78A32490AEC849"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "终审八列回显：逐段选镜/时码/档位/语义匹配逐行可改（D12 单一门禁）",
+    "partial_match 段（seg-004/008/009b/010a/014b）接受 or 换窗",
+    "BGM 轨偏移 0（夹取偏差 4100ms）与 2 个未吸附句边界（N13/N14 @1:39.850）确认",
+    "章节卡 7 张在 G4 无机器通道（㊋）的现实下保留或放弃",
+    "G4 四处修正追认（遮蔽带/窗口、混音深度、章节卡位置）",
+    "G5 全片播放：源字幕残留/安全区/声画同步/开头结尾/混音/授权边界"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/zaku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/zaku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.6-装配记录-v0.1.json",
+    "工作台/zaku-intro-001/G4-剪辑与渲染/BGM/BGM-混音合同-v0.1.json",
+    "工作台/zaku-intro-001/G0-素材包/04_授权说明.md"
+  ],
+  "warnings": [
+    "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+    "源片音轨为版权英文歌，成片仅用已登记 LOW-PHONK 作 BGM，原声排除",
+    "80-84s 烧录字幕需 G4 遮蔽处理",
+    "seg-009b/010a 战舰主体由前段 64s 麦哲伦分镜承接（非严格同框）",
+    "G4 遮蔽修正追认：遮蔽带顶 y875（批准表 y950 实测泄漏）、窗口扩为输出 81.030–87.800s 并纳入第三句源字幕（批准表仅两句）",
+    "G4 混音两轮重拍：§6-② 首拍 −18/12 恒定 −30dB 致 BGM 不可听（−40 LUFS），终拍 −8/4，实测在位 −22.4 vs 预估 −22.2",
+    "母带实测 −15.1 LUFS，距 −14 目标 1.1 LU——kshatriya-002 已知 TTS 高峰值因数上限模式，记复核项不重挂链",
+    "duplicateSegments 无机器检测器：以 G4 切片校验（18 段窗口互异）+ 人工全片播放覆盖",
+    "clips/chapter-0*.mp4 为 CRF18 重编码审阅条，非交付主件；交付主件是 final-video.mp4"
+  ],
+  "authorization": "画面：用户提供的第三方混剪（日升 IP 二创），仅限内部测试；BGM：LOW(PHONK) cleared-for-project（对外未清权）；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+  "distribution": "internal_test",
+  "status": "completed",
+  "finishedAt": "2026-09-10T08:04:05Z",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

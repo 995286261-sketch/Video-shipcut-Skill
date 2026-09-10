@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "VodKe; HSHK; Pnan - LOW(PHONK)",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+  "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+  "byteSize": 7132111,
+  "fileExtension": ".mp3",
+  "sourceUrl": null,
+  "license": "cleared-for-project",
+  "licenseEvidence": "04_授权说明.md + 用户 2026-09-09 开工单明示（仅内部测试）",
+  "attribution": "none",
+  "styleTags": [],
+  "retrievedAt": "2026-09-09T14:59:58+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": null
+}

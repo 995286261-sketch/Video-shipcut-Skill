@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "subject": {
+    "file": "final-video.mp4",
+    "sha256": "64A3A8CFE63BC01221C213110DB85037C8B90DF2AD2A7496EEC8872B80B261F2"
+  },
+  "checks": {
+    "decode": {
+      "status": "passed",
+      "detail": "ffmpeg 全片解码零错误",
+      "evidence": "工作台/zaku-intro-001/G5-交付包/质检证据/decode.log"
+    },
+    "videoCodec": {
+      "status": "passed",
+      "detail": "h264 与 export-config 一致"
+    },
+    "dimensions": {
+      "status": "passed",
+      "detail": "1920x1080 preserve_source"
+    },
+    "fps": {
+      "status": "passed",
+      "detail": "24/1 == 24"
+    },
+    "audio": {
+      "status": "passed",
+      "detail": "单条 aac 立体声 48kHz；母带 −15.1 LUFS / LRA 2.8（目标 −14，偏 1.1 LU 记复核项）；BGM 在位实测 −22.4 vs 预估 −22.2"
+    },
+    "duration": {
+      "status": "passed",
+      "detail": "实测 113310ms == 计划时间线 113310ms；设计目标 115000ms，差 −1690ms 由 durationDecision follow_narration_natural_duration 解释"
+    },
+    "blackFrames": {
+      "status": "passed",
+      "detail": "blackdetect d=0.3s 零命中",
+      "evidence": "工作台/zaku-intro-001/G5-交付包/质检证据/black.log"
+    },
+    "silence": {
+      "status": "passed",
+      "detail": "silencedetect −45dB/0.8s 零命中",
+      "evidence": "工作台/zaku-intro-001/G5-交付包/质检证据/silence.log"
+    },
+    "duplicateSegments": {
+      "status": "warning",
+      "detail": "无机器检测器（detector limitation，非通过）；由 G4 切片校验 18 段窗口互异 + G5 人工全片播放覆盖"
+    },
+    "cover": {
+      "status": "passed",
+      "detail": "cover.jpg 1920x1080，标题=G1 批准文案，不入正片；检查帧 工作台/zaku-intro-001/G5-交付包/质检证据/封面检查帧.jpg"
+    },
+    "bgmChainAudit": {
+      "status": "passed",
+      "detail": "14 项全绿：G0 登记→素材包→G3 计划→对齐/报告→混音合同→装配记录哈希闭环；参数逐字一致；实测电平在窗",
+      "file": "bgm-chain-audit.json"
+    }
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "64A3A8CFE63BC01221C213110DB85037C8B90DF2AD2A7496EEC8872B80B261F2"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "762000A0CE62BCB84DC56F4353EAB9BE41ACAD0176770DE79F6CBE80A9823D02"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "1519502DD93026A98D85E4AF7EF88FCF1B73BAF777F986AC77A318160D9ACB54"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/chapter-01.mp4",
+        "sha256": "27D336F0F7F732D1BC4F0FCCADDEC64994B6AA2575687896E7DCF7062CD133B7"
+      },
+      {
+        "path": "clips/chapter-02.mp4",
+        "sha256": "825DA6311F1D54D63AA87C9FE8C01FCD9576909FABB318231E011E1008D9B050"
+      },
+      {
+        "path": "clips/chapter-03.mp4",
+        "sha256": "E6839119A3228C66369F571693CEBCAD772C824BD7FF70024F52C8BBEF951C1C"
+      }
+    ]
+  },
+  "warnings": [
+    "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+    "源片音轨为版权英文歌，成片仅用已登记 LOW-PHONK 作 BGM，原声排除",
+    "80-84s 烧录字幕需 G4 遮蔽处理",
+    "seg-009b/010a 战舰主体由前段 64s 麦哲伦分镜承接（非严格同框）",
+    "G4 遮蔽修正追认：遮蔽带顶 y875（批准表 y950 实测泄漏）、窗口扩为输出 81.030–87.800s 并纳入第三句源字幕（批准表仅两句）",
+    "G4 混音两轮重拍：§6-② 首拍 −18/12 恒定 −30dB 致 BGM 不可听（−40 LUFS），终拍 −8/4，实测在位 −22.4 vs 预估 −22.2",
+    "母带实测 −15.1 LUFS，距 −14 目标 1.1 LU——kshatriya-002 已知 TTS 高峰值因数上限模式，记复核项不重挂链",
+    "duplicateSegments 无机器检测器：以 G4 切片校验（18 段窗口互异）+ 人工全片播放覆盖",
+    "clips/chapter-0*.mp4 为 CRF18 重编码审阅条，非交付主件；交付主件是 final-video.mp4"
+  ],
+  "humanReview": {
+    "status": "approved",
+    "decision": "accepted",
+    "reviewCardRef": "工作台/zaku-intro-001/G5-交付包/G5-播放审核卡-v0.1.md",
+    "approvalRef": "工作台/zaku-intro-001/G5-交付包/G5-批准记录-v0.1.md"
+  },
+  "status": "completed",
+  "finishedAt": "2026-09-10T08:04:05Z",
+  "reviewedAt": "2026-09-10T08:09:30Z"
+}

@@ -1,0 +1,40 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G3",
+ "projectId": "zaku-intro-001",
+ "resolution": {
+  "width": 1920,
+  "height": 1080
+ },
+ "lanes": {
+  "title": {
+   "zone": "0-15%",
+   "usage": "章节卡（上部，G4 无机器通道，见计划 packagingDecisions.note）"
+  },
+  "info": {
+   "zone": "15-60%",
+   "usage": "本片不使用"
+  },
+  "narration": {
+   "zone": "70-84%",
+   "fontsize": 48,
+   "maxLines": 2,
+   "marginL": 120,
+   "marginR": 120,
+   "marginV": 173,
+   "alignment": "bottom-center",
+   "font": "PingFang SC",
+   "outline": 2,
+   "shadow": 1
+  },
+  "sourceExclusion": {
+   "zone": "84-100%",
+   "usage": "源烧录字幕区，处理见 G3-源字幕处理表"
+  }
+ },
+ "rules": [
+  "一条口播=一个排版块，块内 \\N 语义断行，不拆关键词",
+  "章节卡出现时口播不进入上部车道，天然错道",
+  "先处理源字幕再放新字幕"
+ ]
+}

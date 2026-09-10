@@ -1,0 +1,29 @@
+[Script Info]
+Title: zaku-intro-001 G3 口播字幕
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,PingFang SC,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,120,120,173,1
+
+[Events]
+Format: Marked, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue:  0,0:00:01.50,0:00:07.09,Narration,,0,0,0,,它不是主角机，也没有神级装备。但提起一年战争，你绕不开它。
+Dialogue:  0,0:00:07.09,0:00:15.06,Narration,,0,0,0,,这，就是 MS-06 扎古II——一台证明量产机也能成为传奇的机体。
+Dialogue:  0,0:00:16.56,0:00:21.83,Narration,,0,0,0,,0078 年 1 月，初期量产的 C 型下线，前后只造了 236 架。
+Dialogue:  0,0:00:21.83,0:00:28.92,Narration,,0,0,0,,开战之后，这个数字冲到三千架以上——F 型是公国量产最多的机动战士。
+Dialogue:  0,0:00:28.92,0:00:36.89,Narration,,0,0,0,,17.5 米高的钢铁之躯，120 毫米机枪、280 毫米火箭筒、热能斧，标准三\N件套。
+Dialogue:  0,0:00:38.39,0:00:44.86,Narration,,0,0,0,,它没有碾压时代的性能，也没有明显短板——能大量地造、修、开，这就是量\N产机的生存之道。
+Dialogue:  0,0:00:44.86,0:00:54.11,Narration,,0,0,0,,开战之初，联邦军根本没有量产 MS——直到 0079 年 10 月，自己的吉姆才\N投入实战。
+Dialogue:  0,0:00:54.11,0:00:58.48,Narration,,0,0,0,,一周战争与鲁姆会战，扎古打出的是压倒性战果。
+Dialogue:  0,0:00:59.98,0:01:09.73,Narration,,0,0,0,,最有名的驾驶者是夏亚。他的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰\N、一艘战列舰，赤色彗星从此得名。
+Dialogue:  0,0:01:09.73,0:01:15.22,Narration,,0,0,0,,乔尼·莱登，用的也是量产型火箭筒，在鲁姆击沉三艘麦哲伦级。
+Dialogue:  0,0:01:16.72,0:01:21.03,Narration,,0,0,0,,王牌没有挑选传奇机体——是机体和王牌，互相成就了彼此。
+Dialogue:  0,0:01:21.03,0:01:31.48,Narration,,0,0,0,,直到战争末期它还在进化：轻量化的 F2 型、高机动的 R 型——后者竞标输\N给大魔，只造了 4 台。
+Dialogue:  0,0:01:32.98,0:01:39.85,Narration,,0,0,0,,战败也没终结它的故事：联邦逆向研究它造出高扎古，缴获的扎古一直服役\N到 0088 年。
+Dialogue:  0,0:01:39.85,0:01:49.90,Narration,,0,0,0,,三千多架、无数驾驶者、一整个模型柜。扎古的意义从来不是无敌，而是一\N个时代给"量产"两个字刻下的名字。
+Dialogue:  0,0:01:51.40,0:01:53.31,Narration,,0,0,0,,你的扎古时刻是哪一台？评论区聊聊。

@@ -1,0 +1,89 @@
+{
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "editPlan": {
+    "segmentCount": 18,
+    "timelineDurationMs": 113310,
+    "durationDecision": {
+      "targetDurationSec": 115,
+      "narrationEstimatedDurationSec": 113.31,
+      "resolution": "follow_narration_natural_duration",
+      "decisionReason": "G2 v0.2 压缩方案经用户质询与追认（D14：超预算=人工决策点），实测口播 113.310s 在 G1 预算内，成片随口播自然时长；无静默填充。",
+      "antiFillRule": {
+        "disallowRepeatedSegments": true,
+        "disallowLoops": true,
+        "disallowMeaninglessSlowMotion": true,
+        "disallowUnverifiedFactPadding": true
+      },
+      "intentionalSilence": []
+    },
+    "narration": {
+      "source": "G2 配音清单 v0.2",
+      "voice": "龙天·磁性理智男",
+      "language": "zh",
+      "sentences": 15,
+      "chain": "acompressor+loudnorm I=-14:TP=-1.5:LRA=9"
+    },
+    "bgm": {
+      "track": "VodKe; HSHK; Pnan - LOW(PHONK)",
+      "license": "cleared-for-project",
+      "contract": "工作台/zaku-intro-001/G4-剪辑与渲染/BGM/BGM-混音合同-v0.1.json",
+      "bedGainDb": -8.0,
+      "duckReductionDb": 4.0,
+      "fades": {
+        "fadeInMs": 2000,
+        "fadeOutStartMs": 111310,
+        "fadeOutMs": 2000
+      },
+      "chainAudit": "bgm-chain-audit.json"
+    },
+    "subtitles": {
+      "mode": "fixed_bottom_band ASS burned",
+      "cues": 15,
+      "lane": "70–84% (y756–907)"
+    },
+    "chapterCards": {
+      "count": 7,
+      "displayMs": 1500,
+      "yRatio": 0.06
+    },
+    "mask": {
+      "segments": [
+        "seg-012"
+      ],
+      "window": "输出 81.030–87.800s",
+      "band": "y875–1080"
+    },
+    "cover": {
+      "mode": "platform_image_not_in_video",
+      "frameMs": 66800
+    },
+    "sourceAudioPolicy": "exclude"
+  },
+  "warnings": [
+    "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+    "源片音轨为版权英文歌，成片仅用已登记 LOW-PHONK 作 BGM，原声排除",
+    "80-84s 烧录字幕需 G4 遮蔽处理",
+    "seg-009b/010a 战舰主体由前段 64s 麦哲伦分镜承接（非严格同框）",
+    "G4 遮蔽修正追认：遮蔽带顶 y875（批准表 y950 实测泄漏）、窗口扩为输出 81.030–87.800s 并纳入第三句源字幕（批准表仅两句）",
+    "G4 混音两轮重拍：§6-② 首拍 −18/12 恒定 −30dB 致 BGM 不可听（−40 LUFS），终拍 −8/4，实测在位 −22.4 vs 预估 −22.2",
+    "母带实测 −15.1 LUFS，距 −14 目标 1.1 LU——kshatriya-002 已知 TTS 高峰值因数上限模式，记复核项不重挂链",
+    "duplicateSegments 无机器检测器：以 G4 切片校验（18 段窗口互异）+ 人工全片播放覆盖",
+    "clips/chapter-0*.mp4 为 CRF18 重编码审阅条，非交付主件；交付主件是 final-video.mp4"
+  ],
+  "humanReviewPoints": [
+    "终审八列回显：逐段选镜/时码/档位/语义匹配逐行可改（D12 单一门禁）",
+    "partial_match 段（seg-004/008/009b/010a/014b）接受 or 换窗",
+    "BGM 轨偏移 0（夹取偏差 4100ms）与 2 个未吸附句边界（N13/N14 @1:39.850）确认",
+    "章节卡 7 张在 G4 无机器通道（㊋）的现实下保留或放弃",
+    "G4 四处修正追认（遮蔽带/窗口、混音深度、章节卡位置）",
+    "G5 全片播放：源字幕残留/安全区/声画同步/开头结尾/混音/授权边界"
+  ],
+  "evidenceRefs": [
+    "工作台/zaku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/zaku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.6-装配记录-v0.1.json",
+    "工作台/zaku-intro-001/G4-剪辑与渲染/BGM/BGM-混音合同-v0.1.json",
+    "工作台/zaku-intro-001/G0-素材包/04_授权说明.md"
+  ]
+}

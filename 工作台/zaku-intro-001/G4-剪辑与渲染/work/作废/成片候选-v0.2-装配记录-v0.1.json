@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "zaku-intro-001",
+  "status": "assembled",
+  "manifest": "工作台/zaku-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+  "timelineDurationMs": 113310,
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-001.mp4",
+      "sha256": "26745435D3086DC201A915AEE06C14C0F384B50A82D209FBE75FA11F542D5EC6"
+    },
+    {
+      "segmentId": "seg-002",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-002.mp4",
+      "sha256": "FA79E37EAB5F2EA7620B11CC51CBE5B5F62FFF0E52E277F645823B25285F2DF1"
+    },
+    {
+      "segmentId": "seg-003",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-003.mp4",
+      "sha256": "C244136748C8E2A872DF9B892E8833E04DD93B45BC9A3CFBD2BD10A9DCE6068C"
+    },
+    {
+      "segmentId": "seg-004",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-004.mp4",
+      "sha256": "7DA58563359C659618A8CEE30E6D431CDC9DBC7A24E3F43DADDC177643FAA7D2"
+    },
+    {
+      "segmentId": "seg-005",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-005.mp4",
+      "sha256": "4DEE1001123F16709D6C592ABC1FBA799F682B8C4D207246E18508861B2DA032"
+    },
+    {
+      "segmentId": "seg-006",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-006.mp4",
+      "sha256": "9778267E385B031333D6D3F16DB426210A4FC548D0D166FCA58E6D7FC4E8F5F6"
+    },
+    {
+      "segmentId": "seg-007",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-007.mp4",
+      "sha256": "4B6C7B31DF7584544281A84A616D35E0D7653AF8C32242DC3A37D4C6788830B6"
+    },
+    {
+      "segmentId": "seg-008",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-008.mp4",
+      "sha256": "D2339CABADAE9108B27C4DA0BD6E2FBAB52BE8228A7ACF2561B9CEF9C5D1C6FD"
+    },
+    {
+      "segmentId": "seg-009a",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-009.mp4",
+      "sha256": "B0E98E93B2D996C40A65684AB61C2C3F68BDF6C0EBC99AB031E96B498D8CF4B9"
+    },
+    {
+      "segmentId": "seg-009b",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-010.mp4",
+      "sha256": "A67350CD74A2BF4956F9BCCE87C24B80A131F89CA42818CE68F990481516AC9A"
+    },
+    {
+      "segmentId": "seg-010a",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-011.mp4",
+      "sha256": "519D5BEF28C0EF2949FF2D682613C6F8391E4581DFB22304592A2467A5F6EDA5"
+    },
+    {
+      "segmentId": "seg-010b",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-012.mp4",
+      "sha256": "72F2CBDA062DF0739C8308D9D64526BBC6E7FAF898594BD606DF943340FA31DE"
+    },
+    {
+      "segmentId": "seg-011",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-013.mp4",
+      "sha256": "5AD951850154DC0716CBF810D2C989F1D7C1E4E49BBF9DF1FB22D2859FEBCEB4"
+    },
+    {
+      "segmentId": "seg-012",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-014.mp4",
+      "sha256": "556BD373B0E1B6BBB4FF78AFF39E0F60BAB51646321C12922EC97C8B21107D49"
+    },
+    {
+      "segmentId": "seg-013",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-015.mp4",
+      "sha256": "AF419AFBA40902A8C87A73F4D314A9B878D170A172DC033AB9EACB931E638AF7"
+    },
+    {
+      "segmentId": "seg-014",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-016.mp4",
+      "sha256": "BF9723EF627B0A9F2B75FF05E67423DD59D8C65D9DF906CC7570DF37E3A8D515"
+    },
+    {
+      "segmentId": "seg-014b",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-017.mp4",
+      "sha256": "D52C8A4CCC4416A441424941E188C8D3A8DE848E9156C1FEBC3A6C7FA0A8376F"
+    },
+    {
+      "segmentId": "seg-015",
+      "file": "工作台/zaku-intro-001/G4-剪辑与渲染/clean-segments/seg-018.mp4",
+      "sha256": "2F5E1DFBF191C587DD1C231B954B532A283EF60257D8BD2D3DE22A9622AC07B4"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/zaku-intro-001/G2-证据与口播/G2-完整口播-longtian-v0.2.wav",
+    "sha256": "6D25A5F59C28489A39DE2330BD93862716E44477808763F6E2E4F00105338FB4",
+    "durationMs": 113310,
+    "loudness": {
+      "integratedLufs": -15.6,
+      "truePeakDbtp": -4.1,
+      "engine": "ffmpeg-ebur128",
+      "targetIntegratedLufs": -14.0,
+      "chain": "standard-narration-chain (acompressor+loudnorm, issue ㊌)",
+      "caveat": "measured on the assembled master including the BGM bed, not narration alone",
+      "note": "achieved loudness deviates from target by more than 1.5 LU — likely the source peak-to-loudness ratio ceiling (kshatriya-002: -23.9 LUFS/+0.5 TP TTS tops out near -15.2); treat as a review item, do not re-chain blindly"
+    }
+  },
+  "bgmMix": {
+    "audio": {
+      "path": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E"
+    },
+    "contract": {
+      "path": "工作台/zaku-intro-001/G4-剪辑与渲染/BGM/BGM-混音合同-v0.1.json",
+      "sha256": "4008793271B5C0D5033B4A71395D2E3C6C45F4F526ACD01DB5348E7FE65F333E"
+    },
+    "trackOffsetMs": 0,
+    "bedGainDb": -18.0,
+    "duckReductionDb": 12.0,
+    "duckSegments": [
+      {
+        "fromMs": 0,
+        "toMs": 113310,
+        "sentenceIds": [
+          "N01",
+          "N02",
+          "N03",
+          "N04",
+          "N05",
+          "N06",
+          "N07",
+          "N08",
+          "N09",
+          "N10",
+          "N11",
+          "N12",
+          "N13",
+          "N14",
+          "N15"
+        ]
+      }
+    ],
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 111310,
+      "fadeOutMs": 2000
+    }
+  },
+  "subtitleAss": {
+    "path": "工作台/zaku-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+    "sha256": "1269A99F8E84039F2D952EAF35D524DDBFDB4508B59863C97FF0BE8D06BD8EAC"
+  },
+  "output": "工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2.mp4",
+  "outputSha256": "84DF99EFF0D2C11601330ADE12B4B8BA57F593C74E74EC0A88059B782E5A1104",
+  "probedDurationMs": 113310,
+  "fps": 24,
+  "cover": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+  "chapterCards": {
+    "path": "工作台/zaku-intro-001/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+    "sha256": "B9EF6AE5E121DA668044FAD83E848F1F33B5054DF475DC3D6E6FB3C540F2F43A",
+    "cards": 7,
+    "subtitleCuesTrimmed": 7
+  },
+  "titleBar": null,
+  "filterGraph": "[0:v]fps=fps=24,format=yuv420p,subtitles=captions.ass,drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-1.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,0.000,1.500)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-2.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,15.060,16.560)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-3.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,36.890,38.390)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-4.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,58.480,59.980)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-5.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,75.220,76.720)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-6.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,91.480,92.980)',drawtext=fontfile=/System/Library/Fonts/Hiragino Sans GB.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work/chapter-card-7.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,109.900,111.400)'[v];[1:a]acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=9[narr];[2:a]volume=-18dB,volume=-12dB:enable='between(t,0.000,113.310)',afade=t=in:st=0:d=2.000,afade=t=out:st=111.310:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.2-assemble-work"
+}

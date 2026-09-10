@@ -1,0 +1,575 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-001",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "full_source_interval_2000ms",
+ "cacheKey": {
+  "node": "G3",
+  "purpose": "keyframe-extraction",
+  "assetId": "source-02-1080p-734dd167",
+  "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+  "sourceRange": {
+   "startMs": 0,
+   "endMs": 117909
+  },
+  "intervalMs": 2000
+ },
+ "sourcePackRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G0-素材包/material-pack.json",
+ "provider": "agent-multimodal",
+ "model": "zcode-vision",
+ "promptVersion": "g3-explore-v1",
+ "targetAssets": [
+  {
+   "assetId": "source-02-1080p-734dd167",
+   "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 117909
+   },
+   "keyframes": [
+    {
+     "frameId": "vf-001",
+     "requestedSourceMs": 0,
+     "sourceMs": 0,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-001-0000000000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "星空远景：红色 MS 剪影悬浮",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-002",
+     "requestedSourceMs": 2000,
+     "sourceMs": 2000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-002-0000002000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色头盔驾驶员面部特写（人物）",
+     "identityStatus": "person_only"
+    },
+    {
+     "frameId": "vf-003",
+     "requestedSourceMs": 4000,
+     "sourceMs": 4000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-003-0000004000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白蓝红配色主角机射击",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-004",
+     "requestedSourceMs": 6000,
+     "sourceMs": 6000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-004-0000006000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色扎古II头部特写，单眼冒蓝光，肩甲有吉翁标志",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-005",
+     "requestedSourceMs": 8000,
+     "sourceMs": 8000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-005-0000008000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "灰色扎古II头部特写，侧面编号31，单眼红光",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-006",
+     "requestedSourceMs": 10000,
+     "sourceMs": 10000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-006-0000010000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "武器枪口发射蓝色光焰大特写",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-007",
+     "requestedSourceMs": 12000,
+     "sourceMs": 12000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-007-0000012000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色MS头部特写，单眼紫光",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-008",
+     "requestedSourceMs": 14000,
+     "sourceMs": 14000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-008-0000014000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "云海中两机格斗，绿扎古持盾",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-009",
+     "requestedSourceMs": 16000,
+     "sourceMs": 16000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-009-0000016000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "灰色联邦系MS立于云海",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-010",
+     "requestedSourceMs": 18000,
+     "sourceMs": 18000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-010-0000018000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白灰色扎古型火箭筒齐射",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-011",
+     "requestedSourceMs": 20000,
+     "sourceMs": 20000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-011-0000020000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫红色MS被粉色爆炸吞没",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-012",
+     "requestedSourceMs": 22000,
+     "sourceMs": 22000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-012-0000022000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "闪电火光背景中红色扎古持火箭筒剪影",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-013",
+     "requestedSourceMs": 24000,
+     "sourceMs": 24000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-013-0000024000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古头部特写带吉翁标志",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-014",
+     "requestedSourceMs": 26000,
+     "sourceMs": 26000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-014-0000026000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古宇宙中发射粉色光束",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-015",
+     "requestedSourceMs": 28000,
+     "sourceMs": 28000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-015-0000028000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古举光束军刀",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-016",
+     "requestedSourceMs": 30000,
+     "sourceMs": 30000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-016-0000030000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰尾部引擎喷蓝焰被光束掠过",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-017",
+     "requestedSourceMs": 32000,
+     "sourceMs": 32000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-017-0000032000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "MS高举光束军刀过头顶",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-018",
+     "requestedSourceMs": 34000,
+     "sourceMs": 34000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-018-0000034000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "烈焰中红色机体爆炸",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-019",
+     "requestedSourceMs": 36000,
+     "sourceMs": 36000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-019-0000036000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色头盔老年驾驶员面部特写（人物）",
+     "identityStatus": "person_only"
+    },
+    {
+     "frameId": "vf-020",
+     "requestedSourceMs": 38000,
+     "sourceMs": 38000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-020-0000038000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "两机光束对撞",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-021",
+     "requestedSourceMs": 40000,
+     "sourceMs": 40000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-021-0000040000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "灰紫色MS头部伴红色弹道",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-022",
+     "requestedSourceMs": 42000,
+     "sourceMs": 42000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-022-0000042000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "大规模连环爆炸橙色火球",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-023",
+     "requestedSourceMs": 44000,
+     "sourceMs": 44000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-023-0000044000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰上层建筑中弹起火",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-024",
+     "requestedSourceMs": 46000,
+     "sourceMs": 46000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-024-0000046000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古宇宙中持火箭筒开火",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-025",
+     "requestedSourceMs": 48000,
+     "sourceMs": 48000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-025-0000048000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色联邦系MS头部特写",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-026",
+     "requestedSourceMs": 50000,
+     "sourceMs": 50000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-026-0000050000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "编号10白色MS近景火星四溅",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-027",
+     "requestedSourceMs": 52000,
+     "sourceMs": 52000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-027-0000052000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "编号03灰色吉姆机枪扫射烟轨",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-028",
+     "requestedSourceMs": 54000,
+     "sourceMs": 54000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-028-0000054000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "编号03吉姆持机枪推进橙色爆燃背景",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-029",
+     "requestedSourceMs": 56000,
+     "sourceMs": 56000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-029-0000056000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古高举热能斧",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-030",
+     "requestedSourceMs": 58000,
+     "sourceMs": 58000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-030-0000058000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色扎古II持盾经典姿态带吉翁标志",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-031",
+     "requestedSourceMs": 60000,
+     "sourceMs": 60000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-031-0000060000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "MS火箭筒发射粉色爆炸",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-032",
+     "requestedSourceMs": 62000,
+     "sourceMs": 62000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-032-0000062000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "品红大爆炸吞没机体",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-033",
+     "requestedSourceMs": 64000,
+     "sourceMs": 64000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-033-0000064000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色麦哲伦级战舰舰桥全景",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-034",
+     "requestedSourceMs": 66000,
+     "sourceMs": 66000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-034-0000066000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古独眼大特写粉色光芒",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-035",
+     "requestedSourceMs": 68000,
+     "sourceMs": 68000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-035-0000068000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古头部特写单眼发光",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-036",
+     "requestedSourceMs": 70000,
+     "sourceMs": 70000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-036-0000070000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色重装甲MS近景",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-037",
+     "requestedSourceMs": 72000,
+     "sourceMs": 72000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-037-0000072000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "地面缆线管道俯拍",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-038",
+     "requestedSourceMs": 74000,
+     "sourceMs": 74000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-038-0000074000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色多灯MS正面",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-039",
+     "requestedSourceMs": 76000,
+     "sourceMs": 76000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-039-0000076000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色MS双管火炮齐射黄焰",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-040",
+     "requestedSourceMs": 78000,
+     "sourceMs": 78000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-040-0000078000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色MS双臂炮齐射正面",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-041",
+     "requestedSourceMs": 80000,
+     "sourceMs": 80000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-041-0000080000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗夜火花场景烧录字幕「双方前进中 无异常」",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-042",
+     "requestedSourceMs": 82000,
+     "sourceMs": 82000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-042-0000082000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色重装甲MS伴光束烧录字幕「重弹状况良好」",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-043",
+     "requestedSourceMs": 84000,
+     "sourceMs": 84000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-043-0000084000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色重装甲MS同前带字幕",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-044",
+     "requestedSourceMs": 86000,
+     "sourceMs": 86000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-044-0000086000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "长跑道延伸冒烟远景",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-045",
+     "requestedSourceMs": 88000,
+     "sourceMs": 88000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-045-0000088000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗夜橙色碎片",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-046",
+     "requestedSourceMs": 90000,
+     "sourceMs": 90000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-046-0000090000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶舱内红色头盔驾驶员绿色服",
+     "identityStatus": "person_only"
+    },
+    {
+     "frameId": "vf-047",
+     "requestedSourceMs": 92000,
+     "sourceMs": 92000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-047-0000092000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色MS坠落翻滚",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-048",
+     "requestedSourceMs": 94000,
+     "sourceMs": 94000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-048-0000094000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青色舰桥双圆进气口带吉翁标志战舰",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-049",
+     "requestedSourceMs": 96000,
+     "sourceMs": 96000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-049-0000096000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙焰中白色MS燃烧",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-050",
+     "requestedSourceMs": 98000,
+     "sourceMs": 98000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-050-0000098000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色MS宇宙中发射紫色光束",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-051",
+     "requestedSourceMs": 100000,
+     "sourceMs": 100000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-051-0000100000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "灰黄色运输机型带红色单眼",
+     "identityStatus": "not_present"
+    },
+    {
+     "frameId": "vf-052",
+     "requestedSourceMs": 102000,
+     "sourceMs": 102000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-052-0000102000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色MS缠斗火花飞溅",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-053",
+     "requestedSourceMs": 104000,
+     "sourceMs": 104000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-053-0000104000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色MS烟雾中俯冲",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-054",
+     "requestedSourceMs": 106000,
+     "sourceMs": 106000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-054-0000106000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色MS持盾举军刀背景白色MS",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-055",
+     "requestedSourceMs": 108000,
+     "sourceMs": 108000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-055-0000108000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色MS巨大橙色爆炸前",
+     "identityStatus": "uncertain"
+    },
+    {
+     "frameId": "vf-056",
+     "requestedSourceMs": 110000,
+     "sourceMs": 110000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-056-0000110000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古持长火箭筒宇宙巡航",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-057",
+     "requestedSourceMs": 112000,
+     "sourceMs": 112000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-057-0000112000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古持盾与僚机粉色光束齐射",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-058",
+     "requestedSourceMs": 114000,
+     "sourceMs": 114000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-058-0000114000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古宇宙战粉色光束群",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-059",
+     "requestedSourceMs": 116000,
+     "sourceMs": 116000,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-059-0000116000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古拖曳光束轨迹残骸",
+     "identityStatus": "confirmed"
+    },
+    {
+     "frameId": "vf-060",
+     "requestedSourceMs": 116909,
+     "sourceMs": 116909,
+     "path": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/关键帧/frame-060-0000116909ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "（未观察）",
+     "identityStatus": "uncertain"
+    }
+   ]
+  }
+ ],
+ "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed"
+}
