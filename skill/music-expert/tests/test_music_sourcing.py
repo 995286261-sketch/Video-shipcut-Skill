@@ -183,6 +183,36 @@ class RecommendTest(unittest.TestCase):
         self.assertTrue(data["sufficiency"]["enough"])
         self.assertEqual("1:00.000", data["ranked"][0]["durationDisplay"])
 
+    def test_uncleared_pool_scores_acoustically_under_internal_test_profile(self):
+        self.write_report("A1" * 32, 120.0, 60_000)
+        self.write_candidates([self.candidate("netease-audition", "A1" * 32,
+                                              license_type="uncleared-platform-catalog")])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "bpmRange": [110, 130], "minSegments": 2,
+                                       "maxIntegratedLufs": -14, "distributionBoundary": "internal_test"}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--min-score", "0.9", "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        top = data["ranked"][0]
+        self.assertGreaterEqual(top["score"], 0.9)  # 内测画像内不压分，按声学原分排
+        self.assertIn("uncleared_internal_test_only", top["notes"])
+
+    def test_uncleared_pool_penalized_under_stricter_boundary(self):
+        self.write_report("A2" * 32, 120.0, 60_000)
+        self.write_candidates([self.candidate("netease-audition", "A2" * 32,
+                                              license_type="uncleared-platform-catalog")])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "bpmRange": [110, 130], "minSegments": 2,
+                                       "maxIntegratedLufs": -14, "distributionBoundary": "commercial"}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        top = data["ranked"][0]
+        self.assertLess(top["score"], 0.35)  # 商用边界：未清权重罚，不得为对外分发背书
+        self.assertIn("license_weighted_down", top["notes"])
+
     def test_short_candidate_is_penalized_not_passed(self):
         self.write_report("CC" * 32, 120.0, 3_000)
         self.write_candidates([self.candidate("short", "CC" * 32)])

@@ -36,7 +36,7 @@
 
 ## 登记产物
 
-各轨道产出的候选记录共享字段（`provenance` 区分 `freesound_api` / `manual_registration` / `netease_search`），都带 `decodeProbe`、`retrievedAt`、`license`、`distributionBoundary`。候选不是源素材，可被下游 `music_analyze.py` 进一步分析后交 `music_recommend.py` 打分；`netease_search` 候选参与打分时许可维度按未清权压低分并常驻 internal_test 标注。
+各轨道产出的候选记录共享字段（`provenance` 区分 `freesound_api` / `manual_registration` / `netease_search`），都带 `decodeProbe`、`retrievedAt`、`license`、`distributionBoundary`。候选不是源素材，可被下游 `music_analyze.py` 进一步分析后交 `music_recommend.py` 打分。打分许可语义（2026-09-10 专员自测定案）：`uncleared-platform-catalog` 候选在 **internal_test 画像内不压分**（按声学原分排，标 `uncleared_internal_test_only`——"进剪辑计划前必须登记"由链子把关，不由打分假装），在**更严边界画像下重罚排除**（×0.3，未清权音乐不得为对外分发背书）。
 
 候选另带语义层 `styleTags`：人工登记用 `--tags` 且必须命中 `tag-vocabulary.md` 受控词表，外部来源的原始 tags 走别名 best-effort 归一。标签不进分析报告——声学层与语义层严格分离。
 

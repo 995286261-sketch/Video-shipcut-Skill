@@ -134,10 +134,22 @@ def score(candidate: dict, report: dict | None, profile: dict) -> tuple[float, l
         notes.append(f"tags {len(hits)}/{len(wanted_slugs)}")
 
     # license weight modulates the total
-    weight = LICENSE_WEIGHT.get(str(candidate.get("licenseType") or candidate.get("license", "")).lower(), 0.3)
-    if weight < 1.0:
-        notes.append("license_weighted_down")
-    return round(total * weight, 4), notes
+    license_value = str(candidate.get("licenseType") or candidate.get("license", "")).lower()
+    if license_value == "uncleared-platform-catalog":
+        # sourcing-contract 轨道三（网易云试听选型）：本池存在的意义就是内测选型，
+        # internal_test 画像内不压分——"进剪辑计划前必须登记"由链子把关，不由打分假装；
+        # 更严边界（商用）下重罚排除：未清权音乐不得为对外分发背书。
+        if str(profile.get("distributionBoundary", "internal_test")).lower() == "internal_test":
+            notes.append("uncleared_internal_test_only")
+        else:
+            notes.append("license_weighted_down")
+            total = round(total * 0.3, 4)
+    else:
+        weight = LICENSE_WEIGHT.get(license_value, 0.3)
+        if weight < 1.0:
+            notes.append("license_weighted_down")
+            total = round(total * weight, 4)
+    return total, notes
 
 
 def main() -> int:
@@ -185,8 +197,10 @@ def main() -> int:
         scored.append({
             "title": candidate.get("title"),
             "freesoundId": candidate.get("freesoundId"),
+            "neteaseId": candidate.get("neteaseId"),
             "provenance": candidate.get("provenance"),
             "sourceUrl": candidate.get("sourceUrl"),
+            "previewPath": candidate.get("previewPath") or candidate.get("audioPath"),
             "licenseType": candidate.get("licenseType") or candidate.get("license"),
             "attributionRequired": candidate.get("attributionRequired", str(candidate.get("attribution", "none")).lower() != "none"),
             "durationMs": report["source"]["decodedDurationMs"],
