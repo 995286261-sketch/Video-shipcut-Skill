@@ -81,21 +81,59 @@ class G4AssembleTests(unittest.TestCase):
         self.assertTrue(record["outputSha256"])
         self.assertEqual(2000, record["timelineDurationMs"])
 
-    def test_burns_subtitles_and_mixes_ducked_bgm(self):
+    def make_bgm_and_contract(self, tamper_hash=False):
+        import hashlib
+        bgm = self.root / "bgm.wav"
+        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=220:duration=1", str(bgm)], check=True, capture_output=True)
+        sha = hashlib.sha256(bgm.read_bytes()).hexdigest().upper()
+        if tamper_hash:
+            sha = "F" * 64
+        contract = self.root / "mix-contract.json"
+        contract.write_text(json.dumps({
+            "schemaVersion": "0.1", "skill": "music-expert", "purpose": "bgm_mix_contract", "projectId": "demo-001",
+            "bgmAudio": {"path": str(bgm), "sha256": sha}, "evidence": {},
+            "timelineMs": 2000, "trackOffsetMs": 0, "bedGainDb": -6.0, "duckReductionDb": 3.0,
+            "fades": {"fadeInMs": 200, "fadeOutStartMs": 1800, "fadeOutMs": 200},
+            "ducking": [], "duckSegments": [{"fromMs": 0, "toMs": 1900, "sentenceIds": ["N01"]}],
+            "mixMode": "duck-table",
+        }, ensure_ascii=False), encoding="utf-8")
+        return bgm, contract
+
+    def test_burns_subtitles_and_mixes_contract_driven_bgm(self):
         filters = subprocess.run([self.ffmpeg, "-hide_banner", "-filters"], capture_output=True, text=True).stdout
         if " subtitles " not in filters:
             self.skipTest("ffmpeg build lacks the libass subtitles filter")
-        bgm = self.root / "bgm.wav"
-        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=220:duration=1", str(bgm)], check=True, capture_output=True)
+        bgm, contract = self.make_bgm_and_contract()
         ass = self.root / "captions.ass"
         ass.write_text(CAPTIONS_ASS, encoding="utf-8")
-        result = self.run_assemble(("--subtitle-ass", str(ass), "--bgm-audio", str(bgm), "--bgm-duck"))
+        result = self.run_assemble(("--subtitle-ass", str(ass), "--bgm-audio", str(bgm), "--bgm-mix-contract", str(contract)))
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
         self.assertEqual({"video", "audio"}, self.stream_kinds(self.output))
         summary = json.loads(result.stdout)
         record = json.loads(Path(summary["record"]).read_text(encoding="utf-8"))
         self.assertTrue(record["subtitleAss"]["sha256"])
-        self.assertTrue(record["bgmAudio"]["ducked"])
+        self.assertEqual(-6.0, record["bgmMix"]["bedGainDb"])
+        self.assertEqual(1, len(record["bgmMix"]["duckSegments"]))
+        self.assertTrue(record["bgmMix"]["contract"]["sha256"])
+        # the executed graph must carry the contract's ducking automation and fades verbatim
+        self.assertIn("volume=-3dB:enable='between(t,0.000,1.900)'", record["filterGraph"])
+        self.assertIn("afade=t=in:st=0:d=0.200", record["filterGraph"])
+        self.assertIn("afade=t=out:st=1.800:d=0.200", record["filterGraph"])
+        # in-place bed level is measured, not assumed (zaku audibility guard)
+        self.assertIsNotNone(record["bgmMix"]["measuredInPlaceLufs"])
+        self.assertGreater(record["bgmMix"]["measuredInPlaceLufs"], -33.0)
+
+    def test_bgm_without_mix_contract_is_rejected(self):
+        bgm, _ = self.make_bgm_and_contract()
+        result = self.run_assemble(("--bgm-audio", str(bgm)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("mix contract", result.stdout)
+
+    def test_bgm_hash_mismatch_with_contract_is_rejected(self):
+        bgm, contract = self.make_bgm_and_contract(tamper_hash=True)
+        result = self.run_assemble(("--bgm-audio", str(bgm), "--bgm-mix-contract", str(contract)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("does not match the mix contract", result.stdout)
 
     def test_missing_segment_is_rejected(self):
         (self.segments / "seg-002.mp4").unlink()
@@ -139,7 +177,7 @@ class G4AssembleTests(unittest.TestCase):
         ass = self.root / "captions.ass"
         ass.write_text(CAPTIONS_ASS, encoding="utf-8")
         cards = self.root / "cards.json"
-        cards.write_text(json.dumps({"fontFile": str(self.any_font()), "fontsize": 20, "cards": [
+        cards.write_text(json.dumps({"fontFile": str(self.any_font()), "fontsize": 20, "yRatio": 0.06, "cards": [
             {"chapterId": "ch-01", "title": "章节卡测试", "startMs": 500, "endMs": 1000},
         ]}, ensure_ascii=False), encoding="utf-8")
         result = self.run_assemble(("--subtitle-ass", str(ass), "--chapter-cards", str(cards)))
@@ -147,6 +185,8 @@ class G4AssembleTests(unittest.TestCase):
         record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
         self.assertEqual(1, record["chapterCards"]["cards"])
         self.assertEqual(1, record["chapterCards"]["subtitleCuesTrimmed"])
+        # yRatio pins the card to the approved layout contract's title lane instead of centre
+        self.assertIn("y=h*0.0600", record["filterGraph"])
         derived = (self.root / "final" / "master-assemble-work" / "captions.ass").read_text(encoding="utf-8")
         dialogues = [line for line in derived.splitlines() if line.startswith("Dialogue:")]
         self.assertEqual(2, len(dialogues))
@@ -170,6 +210,23 @@ class G4AssembleTests(unittest.TestCase):
         record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
         self.assertEqual("NZ-666 KSHATRIYA", record["titleBar"]["text"])
         self.assertTrue(record["titleBar"]["sha256"])
+
+
+    def test_normalize_narration_records_measured_loudness(self):
+        result = self.run_assemble(("--normalize-narration-lufs", "-16"))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
+        self.assertIn("acompressor", record["filterGraph"])
+        self.assertIn("[narr]", record["filterGraph"])
+        loudness = record["narrationAudio"]["loudness"]
+        self.assertEqual(-16.0, loudness["targetIntegratedLufs"])
+        self.assertIsNotNone(loudness["integratedLufs"])  # measured post-render, never assumed
+        self.assertIn("standard-narration-chain", loudness["chain"])
+
+    def test_normalize_narration_rejects_out_of_range_target(self):
+        result = self.run_assemble(("--normalize-narration-lufs", "-3"))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("-24 and -8", result.stdout + result.stderr)
 
 
 if __name__ == "__main__":
