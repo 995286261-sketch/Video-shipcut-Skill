@@ -29,3 +29,12 @@
 3. **不做**：爬站、音乐生成、FMA 大数据集下载。
 
 红线：任何来源默认 `internal_test`；无许可证据链不进候选池；缺 token/网络失败一律 `blocked`，绝不静默换到无授权来源。
+
+## 网易云音乐检索探测（2026-09-10 增补，N10）
+
+用户决策：内地内测阶段优先用全曲库找 BGM（审核者要听过歌），商用时再换带许可的来源。取证：
+
+- `POST music.163.com/api/search/get/web`（`s`/`type=1`/`offset`/`limit`，带 Referer+UA）：200，免登录返回歌名/歌手/专辑/`duration`(ms)/`fee`。
+- `music.163.com/api/search/pc`：风控 `-462`（要求绑定手机）——**不可用，留作反例**；适配器把 -462/verifyType 一律映射为结构化 `blocked:risk_control`。
+- `music.163.com/song/media/outer/url?id=X.mp3`：302 到真实 mp3，活体实测标准音质全长（约 2MB/125s），ffmpeg 可解码。
+- 结论：**"找+试听"可自动化**（`music_search_netease.py`），**"授权"不可**——平台曲库许可只覆盖端内播放。候选一律 `uncleared-platform-catalog` + `internal_test`，整轨进剪辑计划必须人经官方渠道取得后走 `music_register_candidate.py` 登记。不建逆向下载器、不碰 DRM。
