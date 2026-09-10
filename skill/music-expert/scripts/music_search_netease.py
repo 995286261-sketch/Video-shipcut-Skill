@@ -198,6 +198,8 @@ def main() -> int:
 
     candidates, excluded = [], []
     for song in deduped:
+        if len(candidates) >= args.max_results:
+            break  # 下载封顶：够数即停，不超量拉取（自测发现 83 件下载 vs 清单 10 条的浪费）
         record = candidate_record(song or {})
         duration_ms = record.get("durationMs")
         if not record.get("neteaseId") or not isinstance(duration_ms, (int, float)):

@@ -211,6 +211,7 @@ def main() -> int:
             "sha256": sha,
             "score": total,
             "notes": notes,
+            "infringementRisk": str(candidate.get("licenseType") or candidate.get("license", "")).lower() == "uncleared-platform-catalog",
             "distributionBoundary": candidate.get("distributionBoundary", "internal_test"),
         })
     scored.sort(key=lambda item: item["score"], reverse=True)
@@ -231,14 +232,45 @@ def main() -> int:
             "gapAction": None if len(passing) >= args.min_pass else "候选不足：向用户呈现 补检索 / 放宽画像 / 缩短成品 三项，不得自行拼凑",
         },
     }
+    uncleared = [item for item in result["ranked"] if item.get("infringementRisk")]
+    if uncleared:
+        result["licenseWarning"] = (
+            f"⚠ 侵权风险：{len(uncleared)}/{len(result['ranked'])} 条候选未清权（uncleared-platform-catalog，网易云试听选型）。"
+            "平台曲库授权仅覆盖端内播放——未登记而将其用于成片即构成侵权。"
+            "本池仅限 internal_test 选型；挑曲后整轨必须经官方渠道取得并经 music_register_candidate.py 登记真实许可后方可进剪辑计划。"
+            "对外分发项目在任何清权完成前不得使用这些曲目。")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not args.output.is_file() or args.output.stat().st_size == 0:
         emit({"status": "blocked", "blockers": [{"type": "output_write_failed", "detail": str(args.output)}]})
         return 1
-    emit({"status": "completed", "output": str(args.output), "scored": len(scored), "passing": len(passing),
-          "unanalyzed": len(unanalyzed), "enough": result["sufficiency"]["enough"]})
+    echo_path = render_echo(result, args.output.parent / "BGM-推荐回显-v0.1.md")
+    emit({"status": "completed", "output": str(args.output), "echo": str(echo_path), "scored": len(scored),
+          "passing": len(passing), "unanalyzed": len(unanalyzed),
+          "licenseWarning": bool(uncleared), "enough": result["sufficiency"]["enough"]})
     return 0
+
+
+def render_echo(result: dict, path: Path) -> Path:
+    """Human-facing recommendation card: infringement banner first, table second."""
+    lines = ["# BGM 推荐回显 v0.1", ""]
+    if result.get("licenseWarning"):
+        lines += [f"> {result['licenseWarning']}", ""]
+    profile = result["profile"]
+    sufficiency = result["sufficiency"]
+    lines += [f"- 画像：时长 ≥{profile.get('targetDurationSec', '?')}s｜BPM {profile.get('bpmRange', '不限')}"
+              f"｜通过线 {result['minScore']}｜通过 {sufficiency['passing']}/{sufficiency['minExpected']}"
+              + ("" if sufficiency["enough"] else f"｜❌不足：{sufficiency['gapAction']}"),
+              "", "| # | 曲目 | BPM | 时长 | 响度 | 分 | 侵权风险 | 注记 |", "|---|---|---|---|---|---|---|---|"]
+    for index, item in enumerate(result["ranked"], 1):
+        lines.append(f"| {index} | {item['title']} | {item['tempoBpm']} | {item['durationDisplay']} "
+                     f"| {item['integratedLufs']} | {item['score']:.3f} "
+                     f"| {'⚠ 未清权' if item.get('infringementRisk') else '—'} | {'、'.join(item['notes']) or '—'} |")
+    if result["unanalyzed"]:
+        lines += ["", f"- 未分析隔离：{len(result['unanalyzed'])} 条（先跑 music_analyze 再打分）。"]
+    lines += ["", "- 分数并列时的最终取舍在人耳：试听件路径见候选清单 `previewPath`；挑曲后必须登记，未登记不得进剪辑计划。", ""]
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
 
 
 if __name__ == "__main__":

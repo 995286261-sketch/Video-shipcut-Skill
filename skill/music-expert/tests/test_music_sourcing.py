@@ -197,6 +197,11 @@ class RecommendTest(unittest.TestCase):
         top = data["ranked"][0]
         self.assertGreaterEqual(top["score"], 0.9)  # 内测画像内不压分，按声学原分排
         self.assertIn("uncleared_internal_test_only", top["notes"])
+        self.assertTrue(top["infringementRisk"])
+        self.assertIn("侵权", data["licenseWarning"])
+        echo = out.parent / "BGM-推荐回显-v0.1.md"
+        self.assertTrue(echo.is_file())
+        self.assertIn("⚠ 未清权", echo.read_text(encoding="utf-8"))
 
     def test_uncleared_pool_penalized_under_stricter_boundary(self):
         self.write_report("A2" * 32, 120.0, 60_000)
