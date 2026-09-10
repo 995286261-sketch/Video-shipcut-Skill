@@ -1,0 +1,1140 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G3",
+  "status": "approved_for_g4",
+  "materialPackRef": "工作台/zaku-intro-001/G0-素材包/material-pack.json",
+  "g2DecisionRef": "工作台/zaku-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+  "evidenceRef": "工作台/zaku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "visualAnalysisRef": "工作台/zaku-intro-001/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.1.json",
+  "subjectConfirmationRef": "工作台/zaku-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+  "observationLedgerRef": "工作台/zaku-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+  "timelineDurationMs": 113310,
+  "durationDecision": {
+    "targetDurationSec": 115,
+    "narrationEstimatedDurationSec": 113.31,
+    "resolution": "follow_narration_natural_duration",
+    "decisionReason": "G2 v0.2 压缩方案经用户质询与追认（D14：超预算=人工决策点），实测口播 113.310s 在 G1 预算内，成片随口播自然时长；无静默填充。",
+    "antiFillRule": {
+      "disallowRepeatedSegments": true,
+      "disallowLoops": true,
+      "disallowMeaninglessSlowMotion": true,
+      "disallowUnverifiedFactPadding": true
+    },
+    "intentionalSilence": []
+  },
+  "narrationDraft": "工作台/zaku-intro-001/G2-证据与口播/G2-口播稿-v0.2.md",
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 0,
+      "endMs": 7090,
+      "mappingMode": "one_to_one",
+      "reason": "以\"主角机 vs 扎古\"对比开场，呼应首句",
+      "evidenceRefs": [
+        "claim-001",
+        "claim-005"
+      ],
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "主角机与扎古同框或扎古登场"
+      },
+      "semanticBeatIds": [
+        "beat-N01"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "4s白蓝红主角机射击+6s绿扎古II头部特写，同窗构成\"不是主角机\"的对比"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-001/start-0000000000ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-001/middle-0000003545ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-001/end-0000007089ms.jpg"
+        ],
+        "observedVisuals": "星空红MS剪影→白蓝红主角机射击→灰色扎古头编号31",
+        "derivedFromObservationIds": [
+          "vf-061",
+          "vf-062",
+          "vf-063"
+        ]
+      },
+      "layoutTier": "留白",
+      "bgmPhrase": "P1",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 0,
+      "narrationEndMs": 7090,
+      "narrationText": "它不是主角机，也没有神级装备。但提起一年战争，你绕不开它。",
+      "outputStartMs": 0,
+      "outputEndMs": 7090,
+      "outputDurationMs": 7090
+    },
+    {
+      "segmentId": "seg-002",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 7090,
+      "endMs": 15060,
+      "mappingMode": "one_to_one",
+      "reason": "主角机登场，编号细节支撑\"MS-06扎古II\"点名",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "扎古II机体清晰可见"
+      },
+      "semanticBeatIds": [
+        "beat-N02"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "8s灰扎古II头部特写侧面编号31+10s枪口发射+14s绿扎古持盾格斗"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-002/start-0000007090ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-002/middle-0000011075ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-002/end-0000015059ms.jpg"
+        ],
+        "observedVisuals": "灰扎古头31→云海持盾格斗→联邦系MS立云海",
+        "derivedFromObservationIds": [
+          "vf-064",
+          "vf-065",
+          "vf-066"
+        ]
+      },
+      "layoutTier": "留白",
+      "bgmPhrase": "P1",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 7090,
+      "narrationEndMs": 15060,
+      "narrationText": "这，就是 MS-06 扎古II——一台证明量产机也能成为传奇的机体。",
+      "outputStartMs": 7090,
+      "outputEndMs": 15060,
+      "outputDurationMs": 7970
+    },
+    {
+      "segmentId": "seg-003",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 15060,
+      "endMs": 21830,
+      "mappingMode": "one_to_one",
+      "reason": "C型下线的量产叙事配火箭筒齐射",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "action",
+        "minimumVisibleEvidence": "量产型扎古开火或行动"
+      },
+      "semanticBeatIds": [
+        "beat-N03"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "16s联邦系MS立云海+18s白灰扎古型火箭筒齐射(confirmed)+20s爆炸吞没"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-003/start-0000015060ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-003/middle-0000018445ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-003/end-0000021829ms.jpg"
+        ],
+        "observedVisuals": "白灰扎古火箭筒齐射→紫红MS被粉爆吞没→闪电背景红扎古剪影",
+        "derivedFromObservationIds": [
+          "vf-067",
+          "vf-068",
+          "vf-069"
+        ]
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P2",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 15060,
+      "narrationEndMs": 21830,
+      "narrationText": "0078 年 1 月，初期量产的 C 型下线，前后只造了 236 架。",
+      "outputStartMs": 15060,
+      "outputEndMs": 21830,
+      "outputDurationMs": 6770
+    },
+    {
+      "segmentId": "seg-004",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 28630,
+      "endMs": 35720,
+      "mappingMode": "one_to_one",
+      "reason": "数量冲三千架配量产扎古格斗火力",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "绿色或灰色量产扎古与标准武器"
+      },
+      "semanticBeatIds": [
+        "beat-N04"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "暗扎古举光束军刀(confirmed)+战舰尾部被光束掠过+黄灰扎古持盾推进(confirmed)+MS高举军刀"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-004/start-0000028630ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-004/middle-0000032175ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-004/end-0000035719ms.jpg"
+        ],
+        "observedVisuals": "暗扎古举光束军刀(confirmed)→战舰尾部被光束掠过→MS高举军刀过头顶",
+        "derivedFromObservationIds": [
+          "vf-115",
+          "vf-116",
+          "vf-117"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P2",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 21830,
+      "narrationEndMs": 28920,
+      "narrationText": "开战之后，这个数字冲到三千架以上——F 型是公国量产最多的机动战士。",
+      "outputStartMs": 21830,
+      "outputEndMs": 28920,
+      "outputDurationMs": 7090
+    },
+    {
+      "segmentId": "seg-005",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 58550,
+      "endMs": 66520,
+      "mappingMode": "one_to_one",
+      "reason": "三件套清单句：热能斧+军刀姿态+火箭筒同窗",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "weapon",
+        "minimumVisibleEvidence": "军刀或火箭筒或枪口任一发射或挥舞"
+      },
+      "semanticBeatIds": [
+        "beat-N05"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "暗扎古高举热能斧(confirmed)+绿扎古II持盾经典姿态(confirmed)+MS火箭筒发射粉色爆炸"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-005/start-0000058550ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-005/middle-0000062535ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-005/end-0000066519ms.jpg"
+        ],
+        "observedVisuals": "绿扎古持盾经典姿态(confirmed)→MS火箭筒发射粉爆→品红大爆炸吞没机体",
+        "derivedFromObservationIds": [
+          "vf-118",
+          "vf-119",
+          "vf-120"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P2",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 28920,
+      "narrationEndMs": 36890,
+      "narrationText": "17.5 米高的钢铁之躯，120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+      "outputStartMs": 28920,
+      "outputEndMs": 36890,
+      "outputDurationMs": 7970
+    },
+    {
+      "segmentId": "seg-006",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 36900,
+      "endMs": 44870,
+      "mappingMode": "one_to_one",
+      "reason": "生存之道句配受创与还击蒙太奇",
+      "evidenceRefs": [
+        "claim-001",
+        "claim-004"
+      ],
+      "narrativeClaim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": "战斗受创与还击画面"
+      },
+      "semanticBeatIds": [
+        "beat-N06"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "38s两机光束对撞+40s灰紫MS伴红色弹道+42s连环爆炸+44s战舰上层中弹起火"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-006/start-0000036900ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-006/middle-0000040885ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-006/end-0000044869ms.jpg"
+        ],
+        "observedVisuals": "两机光束对撞→灰紫MS伴红色弹道→连环爆炸与战舰中弹起火",
+        "derivedFromObservationIds": [
+          "vf-076",
+          "vf-077",
+          "vf-078"
+        ]
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P2",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 36890,
+      "narrationEndMs": 44860,
+      "narrationText": "它没有碾压时代的性能，也没有明显短板——能大量地造、修、开，这就是量产机的生存之道。",
+      "outputStartMs": 36890,
+      "outputEndMs": 44860,
+      "outputDurationMs": 7970
+    },
+    {
+      "segmentId": "seg-007",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 49300,
+      "endMs": 58550,
+      "mappingMode": "one_to_one",
+      "reason": "吉姆10月投入实战：吉姆扫射推进参战",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "appearance",
+        "minimumVisibleEvidence": "联邦系吉姆出现并参战"
+      },
+      "semanticBeatIds": [
+        "beat-N07"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "编号10白MS火星四溅+编号03灰色吉姆机枪扫射烟轨+编号03吉姆持机枪推进橙色爆燃背景"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-007/start-0000049300ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-007/middle-0000053925ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-007/end-0000058549ms.jpg"
+        ],
+        "observedVisuals": "编号10白MS火星四溅→吉姆系推进橙爆背景→编号06紫单眼白MS",
+        "derivedFromObservationIds": [
+          "vf-121",
+          "vf-122",
+          "vf-123"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P3",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 44860,
+      "narrationEndMs": 54110,
+      "narrationText": "开战之初，联邦军根本没有量产 MS——直到 0079 年 10 月，自己的吉姆才投入实战。",
+      "outputStartMs": 44860,
+      "outputEndMs": 54110,
+      "outputDurationMs": 9250
+    },
+    {
+      "segmentId": "seg-008",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 44880,
+      "endMs": 49250,
+      "mappingMode": "one_to_one",
+      "reason": "鲁姆压倒性战果：战舰中弹+扎古开火直接对应",
+      "evidenceRefs": [
+        "claim-001",
+        "claim-004"
+      ],
+      "narrativeClaim": {
+        "type": "action",
+        "minimumVisibleEvidence": "压倒性战果的火力与格斗画面"
+      },
+      "semanticBeatIds": [
+        "beat-N08"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "大规模连环爆炸橙色火球+战舰上层建筑中弹起火+暗扎古宇宙持火箭筒开火(confirmed)"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-008/start-0000044880ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-008/middle-0000047065ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-008/end-0000049249ms.jpg"
+        ],
+        "observedVisuals": "连环爆炸火球+战舰中弹起火→暗夜MS剪影→黄色重装甲MS(大魔)",
+        "derivedFromObservationIds": [
+          "vf-124",
+          "vf-125",
+          "vf-126"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "常规",
+      "bgmPhrase": "P3",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 54110,
+      "narrationEndMs": 58480,
+      "narrationText": "一周战争与鲁姆会战，扎古打出的是压倒性战果。",
+      "outputStartMs": 54110,
+      "outputEndMs": 58480,
+      "outputDurationMs": 4370
+    },
+    {
+      "segmentId": "seg-009a",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 21830,
+      "endMs": 28630,
+      "mappingMode": "one_to_one",
+      "reason": "夏亚红色扎古，剪影-头像-开火三连",
+      "evidenceRefs": [
+        "claim-003"
+      ],
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "红色扎古与爆炸或战舰同场"
+      },
+      "semanticBeatIds": [
+        "beat-N09"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "22s闪电火光背景红扎古持火箭筒剪影+24s红扎古头带吉翁标志+26s红扎古发射粉色光束"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009a/start-0000021830ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009a/middle-0000025230ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009a/end-0000028629ms.jpg"
+        ],
+        "observedVisuals": "红扎古火箭筒剪影→红扎古头部特写带吉翁标志→红扎古发射粉色光束",
+        "derivedFromObservationIds": [
+          "vf-085",
+          "vf-086",
+          "vf-087"
+        ]
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P4",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 58480,
+      "narrationEndMs": 65280,
+      "narrationText": "最有名的驾驶者是夏亚。他的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰、一艘战列舰，赤色彗星从此得名。",
+      "outputStartMs": 58480,
+      "outputEndMs": 65280,
+      "outputDurationMs": 6800
+    },
+    {
+      "segmentId": "seg-009b",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 66550,
+      "endMs": 71000,
+      "mappingMode": "one_to_one",
+      "reason": "击沉五艘战舰句：麦哲伦级舰桥→红扎古独眼同窗承接",
+      "evidenceRefs": [
+        "claim-003"
+      ],
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "红色扎古特写与战舰同场"
+      },
+      "semanticBeatIds": [
+        "beat-N09"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "白色麦哲伦级战舰舰桥全景+红扎古独眼粉色光大特写(confirmed)+红扎古头部特写单眼发光(confirmed)"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009b/start-0000066550ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009b/middle-0000068775ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-009b/end-0000070999ms.jpg"
+        ],
+        "observedVisuals": "麦哲伦级舰桥全景→红扎古独眼粉色光大特写(confirmed)→红扎古头单眼发光(confirmed)",
+        "derivedFromObservationIds": [
+          "vf-127",
+          "vf-128",
+          "vf-129"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P4",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 65280,
+      "narrationEndMs": 69730,
+      "narrationText": "最有名的驾驶者是夏亚。他的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰、一艘战列舰，赤色彗星从此得名。",
+      "outputStartMs": 65280,
+      "outputEndMs": 69730,
+      "outputDurationMs": 4450
+    },
+    {
+      "segmentId": "seg-010a",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 75100,
+      "endMs": 76820,
+      "mappingMode": "one_to_one",
+      "reason": "乔尼鲁姆击沉麦哲伦级：炮战交火语境",
+      "evidenceRefs": [
+        "claim-003"
+      ],
+      "narrativeClaim": {
+        "type": "weapon",
+        "minimumVisibleEvidence": "扎古系火力交战"
+      },
+      "semanticBeatIds": [
+        "beat-N10"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "白色MS双管火炮齐射黄焰——鲁姆炮战交火镜头"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010a/start-0000075100ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010a/middle-0000075960ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010a/end-0000076819ms.jpg"
+        ],
+        "observedVisuals": "白色MS双管火炮正面→双臂炮齐射黄焰(同镜)",
+        "derivedFromObservationIds": [
+          "vf-091",
+          "vf-092",
+          "vf-093"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P3",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 69730,
+      "narrationEndMs": 71450,
+      "narrationText": "乔尼·莱登，用的也是量产型火箭筒，在鲁姆击沉三艘麦哲伦级。",
+      "outputStartMs": 69730,
+      "outputEndMs": 71450,
+      "outputDurationMs": 1720
+    },
+    {
+      "segmentId": "seg-010b",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 103600,
+      "endMs": 107370,
+      "mappingMode": "one_to_one",
+      "reason": "鲁姆交战延续，扎古系缠斗",
+      "evidenceRefs": [
+        "claim-003"
+      ],
+      "narrativeClaim": {
+        "type": "weapon",
+        "minimumVisibleEvidence": "扎古系火力交战"
+      },
+      "semanticBeatIds": [
+        "beat-N10"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "104s黄MS烟雾中俯冲+106s黄MS持盾举军刀背景白色MS"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010b/start-0000103600ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010b/middle-0000105485ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-010b/end-0000107369ms.jpg"
+        ],
+        "observedVisuals": "黄MS烟雾俯冲→缠斗火花飞溅→黄MS持盾举军刀背景白MS",
+        "derivedFromObservationIds": [
+          "vf-094",
+          "vf-095",
+          "vf-096"
+        ]
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P4",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 71450,
+      "narrationEndMs": 75220,
+      "narrationText": "乔尼·莱登，用的也是量产型火箭筒，在鲁姆击沉三艘麦哲伦级。",
+      "outputStartMs": 71450,
+      "outputEndMs": 75220,
+      "outputDurationMs": 3770
+    },
+    {
+      "segmentId": "seg-011",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 89280,
+      "endMs": 95090,
+      "mappingMode": "one_to_one",
+      "reason": "王牌与机体互相成就：人-机-舰三连",
+      "evidenceRefs": [
+        "claim-003",
+        "claim-004"
+      ],
+      "narrativeClaim": {
+        "type": "character_reaction",
+        "minimumVisibleEvidence": "驾驶员与机体同框叙事"
+      },
+      "semanticBeatIds": [
+        "beat-N11"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "90s驾驶舱红盔驾驶员绿服+92s黄MS坠落翻滚+94s青色舰桥吉翁标志战舰"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-011/start-0000089280ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-011/middle-0000092185ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-011/end-0000095089ms.jpg"
+        ],
+        "observedVisuals": "舰桥仪表→橙色吉翁标志舰桥控制台→灰色舰桥操作员位",
+        "derivedFromObservationIds": [
+          "vf-097",
+          "vf-098",
+          "vf-099"
+        ]
+      },
+      "layoutTier": "快切",
+      "bgmPhrase": "P4",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 75220,
+      "narrationEndMs": 81030,
+      "narrationText": "王牌没有挑选传奇机体——是机体和王牌，互相成就了彼此。",
+      "outputStartMs": 75220,
+      "outputEndMs": 81030,
+      "outputDurationMs": 5810
+    },
+    {
+      "segmentId": "seg-012",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 78830,
+      "endMs": 89280,
+      "mappingMode": "one_to_one",
+      "reason": "F2/R型进化句，R型败给大魔配大魔画面",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "大魔型机体出现"
+      },
+      "semanticBeatIds": [
+        "beat-N12"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "80s暗夜火花+82/84s黄色重装甲MS伴光束(大魔)+86s跑道冒烟+88s橙色碎片"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-012/start-0000078830ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-012/middle-0000084055ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-012/end-0000089279ms.jpg"
+        ],
+        "observedVisuals": "暗夜火花烧录字幕「双方前进中 无异常」→黄色重装甲MS伴光束字幕「重弹状况良好」→长跑道冒烟远景",
+        "derivedFromObservationIds": [
+          "vf-100",
+          "vf-101",
+          "vf-102"
+        ]
+      },
+      "layoutTier": "留白",
+      "bgmPhrase": "P5",
+      "sourceCaptionTreatment": "保留源水印（internal_test）；80-84s烧录字幕需G4遮蔽或裁切",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+        "80-84s源片烧录字幕「双方前进中 无异常」「重弹状况良好」，G4字幕底栏遮蔽或裁切"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 81030,
+      "narrationEndMs": 91480,
+      "narrationText": "直到战争末期它还在进化：轻量化的 F2 型、高机动的 R 型——后者竞标输给大魔，只造了 4 台。",
+      "outputStartMs": 81030,
+      "outputEndMs": 91480,
+      "outputDurationMs": 10450
+    },
+    {
+      "segmentId": "seg-013",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 95100,
+      "endMs": 103470,
+      "mappingMode": "one_to_one",
+      "reason": "战败与逆向研究句配白MS受创",
+      "evidenceRefs": [
+        "claim-001"
+      ],
+      "narrativeClaim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": "联邦白色系机体参战延续"
+      },
+      "semanticBeatIds": [
+        "beat-N13"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "96s橙焰中白MS燃烧+98s黄MS紫光束+100s灰黄运输机红单眼+102s缠斗火花"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-013/start-0000095100ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-013/middle-0000099285ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-013/end-0000103469ms.jpg"
+        ],
+        "observedVisuals": "橙焰中白MS燃烧→黄MS紫光束→灰黄运输机红单眼",
+        "derivedFromObservationIds": [
+          "vf-103",
+          "vf-104",
+          "vf-105"
+        ]
+      },
+      "layoutTier": "常规",
+      "bgmPhrase": "P5",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 91480,
+      "narrationEndMs": 99850,
+      "narrationText": "战败也没终结它的故事：联邦逆向研究它造出高扎古，缴获的扎古一直服役到 0088 年。",
+      "outputStartMs": 91480,
+      "outputEndMs": 99850,
+      "outputDurationMs": 8370
+    },
+    {
+      "segmentId": "seg-014",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 107600,
+      "endMs": 114150,
+      "mappingMode": "one_to_one",
+      "reason": "时代总结句配全片最强混战",
+      "evidenceRefs": [
+        "claim-004",
+        "claim-005"
+      ],
+      "narrativeClaim": {
+        "type": "action",
+        "minimumVisibleEvidence": "多台机体混战蒙太奇"
+      },
+      "semanticBeatIds": [
+        "beat-N14"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "108s红MS巨大橙爆前+110s暗扎古持长火箭筒宇宙巡航+112s持盾僚机粉光束齐射"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014/start-0000107600ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014/middle-0000110875ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014/end-0000114149ms.jpg"
+        ],
+        "observedVisuals": "红MS巨大橙爆前→暗扎古持长火箭筒宇宙巡航→扎古持盾僚机粉光束齐射",
+        "derivedFromObservationIds": [
+          "vf-106",
+          "vf-107",
+          "vf-108"
+        ]
+      },
+      "layoutTier": "常规",
+      "bgmPhrase": "P5",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 99850,
+      "narrationEndMs": 106400,
+      "narrationText": "三千多架、无数驾驶者、一整个模型柜。扎古的意义从来不是无敌，而是一个时代给\"量产\"两个字刻下的名字。",
+      "outputStartMs": 99850,
+      "outputEndMs": 106400,
+      "outputDurationMs": 6550
+    },
+    {
+      "segmentId": "seg-014b",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 71050,
+      "endMs": 74550,
+      "mappingMode": "one_to_one",
+      "reason": "蒙太奇后半：转场与多灯MS串接宇宙段前过渡",
+      "evidenceRefs": [
+        "claim-004",
+        "claim-005"
+      ],
+      "narrativeClaim": {
+        "type": "action",
+        "minimumVisibleEvidence": "多台机体混战蒙太奇"
+      },
+      "semanticBeatIds": [
+        "beat-N14"
+      ],
+      "semanticAlignment": {
+        "status": "not_applicable",
+        "evidence": "地面缆线管道俯拍转场+暗色多灯MS正面"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014b/start-0000071050ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014b/middle-0000072800ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-014b/end-0000074549ms.jpg"
+        ],
+        "observedVisuals": "地面缆线管道俯拍转场→暗色多灯MS正面",
+        "derivedFromObservationIds": [
+          "vf-130",
+          "vf-131",
+          "vf-132"
+        ],
+        "verifiedBy": "zcode-agent-multimodal",
+        "verifiedAt": "2026-09-10T13:40:00Z"
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P6",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 106400,
+      "narrationEndMs": 109900,
+      "narrationText": "三千多架、无数驾驶者、一整个模型柜。扎古的意义从来不是无敌，而是一个时代给\"量产\"两个字刻下的名字。",
+      "outputStartMs": 106400,
+      "outputEndMs": 109900,
+      "outputDurationMs": 3500
+    },
+    {
+      "segmentId": "seg-015",
+      "assetId": "source-02-1080p-734dd167",
+      "status": "verified",
+      "startMs": 114400,
+      "endMs": 117810,
+      "mappingMode": "one_to_one",
+      "reason": "收尾问句配宇宙浪漫",
+      "evidenceRefs": [
+        "claim-005"
+      ],
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "扎古宇宙战画面收尾"
+      },
+      "semanticBeatIds": [
+        "beat-N15"
+      ],
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "114s扎古宇宙战粉色光束群+116s扎古拖曳光束轨迹残骸"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/zaku-intro-001/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-015/start-0000114400ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-015/middle-0000116105ms.jpg",
+          "工作台/zaku-intro-001/G3-剪辑计划/验证帧/seg-015/end-0000117809ms.jpg"
+        ],
+        "observedVisuals": "扎古宇宙战粉色光束群→拖曳光束轨迹残骸→光束群渐隐入黑场",
+        "derivedFromObservationIds": [
+          "vf-112",
+          "vf-113",
+          "vf-114"
+        ]
+      },
+      "layoutTier": "推进",
+      "bgmPhrase": "P6",
+      "sourceCaptionTreatment": "保留源水印（internal_test），不排除",
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ],
+      "transition": "hard_cut",
+      "narrationStartMs": 109900,
+      "narrationEndMs": 113310,
+      "narrationText": "你的扎古时刻是哪一台？评论区聊聊。",
+      "outputStartMs": 109900,
+      "outputEndMs": 113310,
+      "outputDurationMs": 3410
+    }
+  ],
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-001",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-002",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-003",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-004",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-005",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-006",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-007",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-008",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-009a",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-009b",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-010a",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-010b",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-011",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-012",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-013",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-014",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-014b",
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-015",
+        "transition": "hard_cut"
+      }
+    ]
+  },
+  "bgmPlan": {
+    "audioSha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+    "reportSha256": "C3EB5BFCABAAE5D186D1CC1384F0FF78369DC13DB9DD8DB89DF1FE9AC0ECD03A",
+    "alignmentRef": "工作台/zaku-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "alignmentSha256": "9EFAAF57A42ED320DE3ACF66A9046A9372C5E388054F4FA312B5649CBCD9D5E4",
+    "trackOffsetMs": 0,
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 111310,
+      "fadeOutMs": 2000
+    },
+    "duckingPolicy": "15 个句子级 ducking 区间（对齐产物 ducking[]），口播活跃段 BGM 压低；深度参数 G4 执行前按 §6-② 拍板"
+  },
+  "packagingDecisions": {
+    "coverFrameMs": 66800,
+    "coverRationale": "66.8s 输出（源 68s）红扎古独眼发光特写，主题图腾",
+    "chapterCards": [
+      {
+        "title": "不是主角机",
+        "startMs": 0,
+        "endMs": 15060
+      },
+      {
+        "title": "量产的传奇",
+        "startMs": 15060,
+        "endMs": 36890
+      },
+      {
+        "title": "对手登场",
+        "startMs": 36890,
+        "endMs": 58480
+      },
+      {
+        "title": "红色彗星",
+        "startMs": 58480,
+        "endMs": 75220
+      },
+      {
+        "title": "互相成就",
+        "startMs": 75220,
+        "endMs": 91480
+      },
+      {
+        "title": "一个时代",
+        "startMs": 91480,
+        "endMs": 109900
+      },
+      {
+        "title": "你的扎古",
+        "startMs": 109900,
+        "endMs": 113310
+      }
+    ],
+    "note": "章节卡/标题栏 G4 装配层未实现（问题总账㊋），执行时逐卡 ffmpeg 叠加或经用户同意省略"
+  },
+  "humanReviewPoints": [
+    "终审八列回显：逐段选镜/时码/档位/语义匹配逐行可改（D12 单一门禁）",
+    "partial_match 段（seg-004/008/009b/010a/014b）接受 or 换窗",
+    "BGM 轨偏移 0（夹取偏差 4100ms）与 2 个未吸附句边界（N13/N14 @1:39.850）确认",
+    "章节卡 7 张在 G4 无机器通道（㊋）的现实下保留或放弃"
+  ],
+  "warnings": [
+    "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+    "源片音轨为版权英文歌，成片仅用已登记 LOW-PHONK 作 BGM，原声排除",
+    "80-84s 烧录字幕需 G4 遮蔽处理",
+    "seg-009b/010a 战舰主体由前段 64s 麦哲伦分镜承接（非严格同框）"
+  ],
+  "sourceAudioPolicy": "exclude",
+  "audioNote": "源片音轨为版权英文歌（G2 转写确认），成片排除原声；仅口播 + 已登记 LOW-PHONK BGM",
+  "semanticBeatRef": "工作台/zaku-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+  "narrationDecisionRef": "工作台/zaku-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+  "narrationAuthority": "G2 已批准口播为唯一叙事权威层，BGM 与画面不得改动句子时值",
+  "timelineReview": {
+    "status": "confirmed",
+    "confirmedBy": "用户",
+    "confirmedAt": "2026-09-10T05:41:47Z",
+    "feedback": "逐行核对终审卡 18 段后批准；章节卡 7 个按默认全保留；N13→N14 -213ms miss 接受原时值，不拉伸音频",
+    "basisRefs": [
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-终审回显-v0.2.md",
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+      "工作台/zaku-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass"
+    ]
+  },
+  "g3Approval": {
+    "approvedBy": "用户",
+    "approvedAt": "2026-09-10T05:41:47Z",
+    "approvalTokenVerbatim": "确认G3",
+    "normalizedToken": "确认 G3",
+    "basisRefs": [
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-批准记录.md",
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-终审回显-v0.2.md",
+      "工作台/zaku-intro-001/G3-剪辑计划/G3-门禁收据.json"
+    ]
+  }
+}

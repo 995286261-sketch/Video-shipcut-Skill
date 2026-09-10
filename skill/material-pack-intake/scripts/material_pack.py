@@ -53,6 +53,38 @@ def files_under(pack: Path, entry: str) -> list[Path]:
     return sorted(path for path in root.rglob("*") if path.is_file() and path.name != ".gitkeep")
 
 
+def slot_documents(pack: Path) -> tuple[dict, dict]:
+    """Index music-expert documents placed inside 07_授权音频 by the audio sha256
+    they describe. Returns (registrations: sha -> (doc path, candidate record),
+    analyses: sha -> report doc path). Candidate pools (``candidates`` lists, e.g.
+    Freesound manifests) are indexed the same way as single registrations."""
+    registrations: dict = {}
+    analyses: dict = {}
+    slot = pack / AUDIO_DIR
+    if not slot.is_dir():
+        return registrations, analyses
+    for doc in sorted(slot.rglob("*.json")):
+        try:
+            data = json.loads(doc.read_text(encoding="utf-8-sig"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        if doc.name.startswith("BGM-分析报告-"):
+            source_sha = str((data.get("source") or {}).get("sha256") or "").upper()
+            if source_sha:
+                analyses.setdefault(source_sha, doc)
+            continue
+        items = [data] + [item for item in (data.get("candidates") or []) if isinstance(item, dict)]
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            sha = str(item.get("sha256") or "").upper()
+            if sha and (item.get("license") or item.get("licenseType")):
+                registrations.setdefault(sha, (doc, item))
+    return registrations, analyses
+
+
 def requirement_field_has_value(text: str, field: str) -> bool:
     lines = text.splitlines()
     field_pattern = re.compile(rf"^\s*{re.escape(field)}\s*[：:]\s*(.*)$")
@@ -130,6 +162,16 @@ def validate_manifest(pack: Path, manifest: dict) -> list[dict]:
                 failures.append({"assetId": asset.get("assetId"), "type": "missing_or_escaping_path"})
             elif asset.get("sha256") and digest(path) != asset["sha256"].upper():
                 failures.append({"assetId": asset.get("assetId"), "type": "sha256_mismatch"})
+            for document_key in ("bgmRegistration", "bgmAnalysis"):
+                document = asset.get(document_key)
+                if not document:
+                    continue
+                document_path = (pack / document.get("relativePath", "")).resolve()
+                if pack.resolve() not in document_path.parents or not document_path.is_file():
+                    failures.append({"assetId": asset.get("assetId"), "type": f"{document_key}_missing_or_escaping_path"})
+                elif digest(document_path) != document.get("sha256", "").upper():
+                    # editing the license evidence after registration is a tamper failure
+                    failures.append({"assetId": asset.get("assetId"), "type": f"{document_key}_tampered"})
     return failures
 
 
@@ -157,8 +199,15 @@ def register(pack: Path) -> dict:
     sources = [{"assetId": asset_id("source", path.relative_to(pack)), "relativePath": path.relative_to(pack).as_posix(), "sourceKind": "local-file", "sha256": digest(path), "byteSize": path.stat().st_size, "fileExtension": path.suffix.lower()} for path in source_files]
     # Issue 023: a hash alone lets stream-encrypted or renamed files through to G3.
     # Every authorized audio asset must fully decode before the pack registers.
+    # N1 (BGM 接线): decodable bytes are necessary but not sufficient — a user-provided
+    # BGM must carry its music-expert registration document (license evidence chain) in
+    # the same slot, matched by audio sha256. Analysis reports are recorded when present
+    # and only soft-prompted when missing (G0 must not hard-depend on the DSP runtime).
+    registrations, analyses = slot_documents(pack)
     audio = []
     undecodable = []
+    unregistered = []
+    analysis_pending = []
     probe_error = None
     if audio_files and shutil.which("ffmpeg") is None:
         probe_error = "ffmpeg is not available on PATH; audio assets cannot be registered without a decode probe"
@@ -171,14 +220,34 @@ def register(pack: Path) -> dict:
         result = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
         if result.returncode == 0:
             entry["decodeProbe"] = {"status": "passed", "engine": "ffmpeg"}
+            registration = registrations.get(entry["sha256"])
+            if registration is None:
+                unregistered.append(entry["relativePath"])
+            else:
+                document, record = registration
+                entry["bgmRegistration"] = {"relativePath": document.relative_to(pack).as_posix(), "sha256": digest(document),
+                                            "licenseType": record.get("licenseType") or record.get("license"),
+                                            "distributionBoundary": record.get("distributionBoundary", "internal_test")}
+                analysis = analyses.get(entry["sha256"])
+                if analysis is not None:
+                    entry["bgmAnalysis"] = {"relativePath": analysis.relative_to(pack).as_posix(), "sha256": digest(analysis)}
+                else:
+                    analysis_pending.append(entry["relativePath"])
             audio.append(entry)
         else:
             undecodable.append({"assetId": current_id, "relativePath": entry["relativePath"], "error": (result.stderr or "").strip()[:200] or "ffmpeg could not decode this file"})
     if undecodable:
         return {"status": "blocked", "pack": str(pack), "undecodableAudio": undecodable, "blockers": [{"type": "audio_decode_probe_failed", "detail": "音频无法完整解码（可能是流媒体加密缓存改扩展名的假文件）；请用户重新提供有效音频后再次 register"}], "finishedAt": now()}
+    if unregistered:
+        return {"status": "incomplete", "pack": str(pack), "unregisteredAudio": unregistered, "missingEntries": [], "emptyRequiredEntries": [],
+                "incompleteRequiredEntries": [f"{relative}: 缺少 music-expert 登记记录（先跑 music_register_candidate.py --output-dir 07_授权音频/，许可证据链必须与音频 sha256 对应）" for relative in unregistered],
+                "finishedAt": now()}
     manifest = {**existing, "schemaVersion": "0.1", "materialPackId": existing.get("materialPackId", pack.name), "sourceAssets": sources, "audioAssets": audio, "packStatus": "complete", "registeredAt": now()}
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return {"status": "completed", "pack": str(pack), "manifest": str(manifest_path), "sourceAssetCount": len(sources), "audioAssetCount": len(audio), "finishedAt": now()}
+    result_payload = {"status": "completed", "pack": str(pack), "manifest": str(manifest_path), "sourceAssetCount": len(sources), "audioAssetCount": len(audio), "finishedAt": now()}
+    if analysis_pending:
+        result_payload["bgmAnalysisPending"] = analysis_pending
+    return result_payload
 
 
 def validate(pack: Path) -> dict:

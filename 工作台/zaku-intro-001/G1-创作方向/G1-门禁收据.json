@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-09T08:21:13Z",
+  "reviewCardRef": "工作台/zaku-intro-001/G1-创作方向/G1-方向确认记录.md",
+  "basisRefs": [
+    "工作台/zaku-intro-001/G1-创作方向/G1-方向简报.json",
+    "工作台/zaku-intro-001/G1-创作方向/G1-方向确认记录.md",
+    "工作台/zaku-intro-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "工作台/zaku-intro-001/G1-创作方向/G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md"
+  ],
+  "checklist": [
+    {
+      "id": "direction_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "claims_and_boundaries",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "direction_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-001/G1-创作方向/G1-方向确认记录.md"
+    }
+  ]
+}

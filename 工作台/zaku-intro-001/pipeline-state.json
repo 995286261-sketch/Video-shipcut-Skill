@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/zaku-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "currentNode": "completed",
+  "status": "completed",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/zaku-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "\u6807\u9898/\u53d9\u4e8b\u89d2\u5ea6/\u4e8b\u5b9e\u4e3b\u5f20(5\u6761pending)/\u8868\u8fbe\u8fb9\u754c \u7ec8\u5ba1\u56de\u663e\u5df2\u5c55\u793a"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/BGM-\u5206\u6790\u56de\u663e-\u51b7\u6218\u5947\u8ff9-\u9006\u7fbd\u96c4\u9e70-1080P-DF263D11.md"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-09-09T08:21:13Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G1",
+        "approvalResponse": "\u786e\u8ba4 G1",
+        "approvalTokenVerbatim": "\u786e\u8ba4 G1",
+        "approvalResponseVerbatim": "\u786e\u8ba4G1",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-09T08:21:48Z"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json"
+      ],
+      "humanReviewPoints": [
+        "v0.2 \u5b9e\u6d4b113.3s\uff1b\u6279\u51c6\u94fe\u6761\u542b\u8d85\u9884\u7b97\u8d28\u8be2\u4e0e\u8ffd\u8ba4\uff08\u89c1\u6279\u51c6\u8bb0\u5f55\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u8d44\u6599/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-09T09:28:36Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvalTokenVerbatim": "\u786e\u8ba4 G2",
+        "approvalResponseVerbatim": "\u786e\u8ba4 G2",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-09-09T09:28:36Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.2.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u8d44\u6599/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.2.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u7ec8\u5ba1\u56de\u663e-v0.2.md"
+      ],
+      "humanReviewPoints": [
+        "\u7ec8\u5ba1\u516b\u5217\u56de\u663e\u9010\u884c\u53ef\u6539\uff08D12 \u5355\u4e00\u95e8\u7981\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u7ec8\u5ba1\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-10T03:47:28Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvalTokenVerbatim": "\u786e\u8ba4G3",
+        "approvalResponseVerbatim": "\u786e\u8ba4G3",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-10T05:42:10Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u7ec8\u5ba1\u56de\u663e-v0.2.md"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.3.mp4",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.6.mp4"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.6.mp4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.6-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/g4-validation-report-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/decode-report.txt",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/\u5c01\u9762\u5408\u6210-v0.1.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u853d\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.1.md"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-10T07:34:39Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G4",
+        "approvalResponse": "\u786e\u8ba4 G4",
+        "approvalTokenVerbatim": "\u786e\u8ba4 G4",
+        "approvalResponseVerbatim": "\u786e\u8ba4 G4",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-09-10T07:53:39Z",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.6.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/qa/g4-validation-report-v0.1.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/final/\u6210\u7247\u5019\u9009-v0.6.mp4"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json"
+      ],
+      "humanReviewPoints": [
+        "\u5168\u7247\u64ad\u653e\uff1a\u6e90\u5b57\u5e55\u6b8b\u7559/\u5b89\u5168\u533a/\u58f0\u753b\u540c\u6b65/\u5f00\u5934\u7ed3\u5c3e/\u6df7\u97f3/\u6388\u6743\u8fb9\u754c"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/edit-timeline.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/export-config.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/cover.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitles.srt",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/\u5c01\u9762\u68c0\u67e5\u5e27.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/\u5b57\u5e55\u68c0\u67e5\u5e27-05s.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/\u5b57\u5e55\u68c0\u67e5\u5e27-88s-\u906e\u853d\u540e.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-10T08:06:06Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvalTokenVerbatim": "\u786e\u8ba4G5",
+        "approvalResponseVerbatim": "\u786e\u8ba4G5",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-10T08:09:50Z",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/zaku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-09-09T07:07:45Z",
+  "updatedAt": "2026-09-10T08:09:50Z"
+}

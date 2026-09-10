@@ -2,9 +2,15 @@
 """Validate traceability and G2 approval gates for a G3 edit-plan draft."""
 
 import argparse
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
+
+# Controlled vocabulary shared with music-expert's music_align v0.2 layout
+# drafts (see video-edit-plan/references/plan-contract.md). Duplicated by
+# design: skills never import each other's code, the contract file is truth.
+LAYOUT_TIERS = {"快切", "推进", "常规", "留白"}
 
 
 G2_DECISION_VALIDATOR = Path(__file__).resolve().parents[2] / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
@@ -22,6 +28,86 @@ def fail(message: str) -> None:
 def normalized_ref(value: str) -> str:
     """Compare project-relative references consistently across Windows separators."""
     return value.replace("\\", "/").lstrip("./")
+
+
+def sha256_of(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
+
+
+def validate_bgm_plan(plan: dict, segments: list, material_pack: Path, alignment_path) -> None:
+    """N5 thick checks: the plan's BGM numbers are only trusted when the whole
+    machine chain (audio → analysis report → alignment → plan) hash-verifies,
+    every segment narration interval tiles a G2 voice-brief sentence exactly,
+    and every segment carries a controlled-vocabulary layoutTier."""
+    pack = json.loads(material_pack.read_text(encoding="utf-8-sig"))
+    bgm = plan.get("bgmPlan")
+    if bgm is None:
+        if any(isinstance(asset.get("bgmRegistration"), dict) for asset in pack.get("audioAssets", [])):
+            fail("material pack has a registered BGM asset; the plan must carry bgmPlan (hash-referenced machine alignment)")
+        return
+    if alignment_path is None:
+        fail("plan with bgmPlan must be validated with --bgm-alignment")
+    alignment = json.loads(alignment_path.read_text(encoding="utf-8-sig"))
+    if alignment.get("purpose") != "bgm_alignment" or alignment.get("schemaVersion") != "0.2" \
+            or not isinstance(alignment.get("layout"), dict):
+        fail("alignment artifact must be music-expert bgm_alignment schemaVersion 0.2 carrying the layout section (phrase table + tier drafts)")
+    audio_sha = str(bgm.get("audioSha256") or "").upper()
+    matched = [asset for asset in pack.get("audioAssets", []) if str(asset.get("sha256", "")).upper() == audio_sha]
+    if not audio_sha or len(matched) != 1:
+        fail("bgmPlan.audioSha256 must match exactly one audio asset registered in the material pack")
+    asset = matched[0]
+    if not isinstance(asset.get("bgmRegistration"), dict):
+        fail("bgmPlan references an audio asset without a BGM license registration")
+    analysis = asset.get("bgmAnalysis")
+    if not isinstance(analysis, dict):
+        fail("bgmPlan references an audio asset without a BGM analysis report registered in the material pack")
+    report_path = material_pack.resolve().parent / analysis["relativePath"]
+    if not report_path.is_file():
+        fail(f"registered BGM analysis report is missing from the pack: {analysis['relativePath']}")
+    if sha256_of(report_path) != str(analysis.get("sha256", "")).upper():
+        fail("BGM analysis report on disk does not match the material pack registration (tampered after G0)")
+    if str(bgm.get("reportSha256") or "").upper() != str(analysis.get("sha256", "")).upper():
+        fail("bgmPlan.reportSha256 must equal the material-pack registered analysis report hash")
+    report = json.loads(report_path.read_text(encoding="utf-8-sig"))
+    if str(((report.get("cacheKey") or {}).get("sha256")) or "").upper() != audio_sha:
+        fail("the BGM analysis report was not produced from the registered audio asset")
+    if sha256_of(alignment_path) != str(bgm.get("alignmentSha256") or "").upper():
+        fail("bgmPlan.alignmentSha256 must equal the alignment artifact on disk — never hand-edit numbers, rerun music_align with new parameters")
+    if str((((alignment.get("inputs") or {}).get("reportCacheKey") or {}).get("sha256")) or "").upper() != audio_sha:
+        fail("the alignment artifact references a different audio asset than bgmPlan")
+    inner = alignment.get("alignment", {})
+    if bgm.get("trackOffsetMs") != inner.get("offsetMs"):
+        fail("bgmPlan.trackOffsetMs must equal the alignment artifact (change tool parameters, not plan numbers)")
+    if plan.get("timelineDurationMs") != inner.get("timelineMs"):
+        fail("plan timelineDurationMs must equal the alignment artifact timelineMs")
+    if bgm.get("fades") != alignment.get("fades"):
+        fail("bgmPlan.fades must equal the alignment artifact fades")
+    if not isinstance(bgm.get("duckingPolicy"), str) or not bgm["duckingPolicy"].strip():
+        fail("bgmPlan requires a duckingPolicy description")
+    boundaries = alignment.get("boundaries", [])
+    if not boundaries:
+        fail("alignment artifact carries no narration boundaries")
+    per_sentence: dict[str, list] = {}
+    for segment in segments:
+        if segment.get("layoutTier") not in LAYOUT_TIERS:
+            fail(f"segment {segment.get('segmentId')} layoutTier must be one of 快切/推进/常规/留白")
+        start, end = segment.get("narrationStartMs"), segment.get("narrationEndMs")
+        owners = [b for b in boundaries if b["startMs"] <= start and end <= b["endMs"]]
+        if len(owners) != 1:
+            fail(f"segment {segment.get('segmentId')} narration interval must sit inside exactly one G2 voice-brief sentence (sentence durations are frozen; splitting within a sentence is allowed)")
+        per_sentence.setdefault(owners[0]["sentenceId"], []).append((start, end, segment.get("segmentId")))
+    for sentence in boundaries:
+        pieces = sorted(per_sentence.get(sentence["sentenceId"], []))
+        if not pieces:
+            fail(f"G2 voice-brief sentence {sentence['sentenceId']} is not covered by any segment's narration mapping")
+        cursor = sentence["startMs"]
+        for start, end, segment_id in pieces:
+            if start != cursor:
+                kind = "overlap" if start < cursor else "gap"
+                fail(f"segment {segment_id} narration has an {kind} at {cursor}ms inside sentence {sentence['sentenceId']}")
+            cursor = end
+        if cursor != sentence["endMs"]:
+            fail(f"segment narration ends at {cursor}ms but sentence {sentence['sentenceId']} ends at {sentence['endMs']}ms")
 
 
 def validate_g2_decision(decision: dict, project_id: str, decision_path: Path) -> str:
@@ -189,6 +275,8 @@ def main() -> int:
     parser.add_argument("--semantic-beats", required=True, type=Path)
     parser.add_argument("--subject-confirmation", type=Path)
     parser.add_argument("--ledger", type=Path)
+    parser.add_argument("--material-pack", type=Path, help="G0 material-pack.json; enables the BGM hash-chain checks")
+    parser.add_argument("--bgm-alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json consumed by the plan")
     args = parser.parse_args()
     # Windows editors commonly write UTF-8 with a BOM. Accept it at every JSON boundary.
     plan = json.loads(args.plan.read_text(encoding="utf-8-sig"))
@@ -316,6 +404,10 @@ def main() -> int:
             fail("slowMotion requires a documented purpose")
     if not plan.get("humanReviewPoints"):
         fail("plan requires narrationDraft and humanReviewPoints")
+    if args.material_pack is not None or args.bgm_alignment is not None or plan.get("bgmPlan") is not None:
+        if args.material_pack is None:
+            fail("plan with bgmPlan must be validated with --material-pack")
+        validate_bgm_plan(plan, segments, args.material_pack, args.bgm_alignment)
     packaging = plan.get("packagingDecisions")
     if packaging is not None:
         if not isinstance(packaging, dict):

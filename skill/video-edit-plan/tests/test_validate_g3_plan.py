@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -9,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 SCRIPT = ROOT / "skill" / "video-edit-plan" / "scripts" / "validate_g3_plan.py"
 PYTHON = Path(sys.executable)
+AUDIO_SHA = "A" * 64
 
 
 class ValidateG3PlanTest(unittest.TestCase):
@@ -95,14 +97,56 @@ class ValidateG3PlanTest(unittest.TestCase):
                 by_id[target]["supersededBy"] = record["recordId"]
         return self.write_json("ledger.json", value)
 
-    def run_cli(self, plan, decision, subject=None, ledger=None):
+    def run_cli(self, plan, decision, subject=None, ledger=None, bgm=None):
         command = [str(PYTHON), str(SCRIPT), "--plan", str(plan), "--evidence", str(self.evidence_path), "--g2-decision", str(decision), "--visual-analysis", str(self.visual_analysis_path), "--semantic-beats", str(self.semantic_beats_path)]
         if subject:
             command += ["--subject-confirmation", str(subject)]
         if ledger:
             command += ["--ledger", str(ledger)]
+        if bgm:
+            pack_path, alignment_path = bgm
+            if pack_path:
+                command += ["--material-pack", str(pack_path)]
+            if alignment_path:
+                command += ["--bgm-alignment", str(alignment_path)]
         result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
         return result.returncode, result.stdout + result.stderr
+
+    def enable_bgm_chain(self, plan_path):
+        """Build a G0-style audio→report→alignment machine chain and wire the
+        plan's bgmPlan to it; returns (bgm plan path, pack manifest, alignment)."""
+        report_dir = self.source_pack / "07_授权音频"
+        report_dir.mkdir(exist_ok=True)
+        report_path = report_dir / "BGM-分析报告-test.json"
+        report_path.write_text(json.dumps({"cacheKey": {"sha256": AUDIO_SHA, "analysisVersion": "music-expert-analysis-v0.2"}}), encoding="utf-8")
+        report_sha = hashlib.sha256(report_path.read_bytes()).hexdigest().upper()
+        pack = self.source_pack / "material-pack.json"
+        pack.write_text(json.dumps({"audioAssets": [{
+            "sha256": AUDIO_SHA,
+            "bgmRegistration": {"licenseType": "cleared-for-project", "relativePath": "07_授权音频/登记.json"},
+            "bgmAnalysis": {"relativePath": "07_授权音频/BGM-分析报告-test.json", "sha256": report_sha},
+        }]}), encoding="utf-8")
+        fades = {"fadeInMs": 500, "fadeOutStartMs": 500, "fadeOutMs": 500}
+        alignment = self.root / "BGM-对齐建议-v0.2.json"
+        alignment.write_text(json.dumps({
+            "schemaVersion": "0.2", "purpose": "bgm_alignment", "skill": "music-expert",
+            "inputs": {"reportCacheKey": {"sha256": AUDIO_SHA}},
+            "alignment": {"offsetMs": 60_000, "timelineMs": 1_000},
+            "boundaries": [{"sentenceId": "N01", "startMs": 0, "endMs": 1_000}],
+            "layout": {"tierVocabulary": ["快切", "推进", "常规", "留白"], "phrasesOnTimeline": []},
+            "snapped": [{}, {}], "missed": [{}],
+            "ducking": [{"sentenceId": "N01"}], "fades": fades,
+        }), encoding="utf-8")
+        alignment_sha = hashlib.sha256(alignment.read_bytes()).hexdigest().upper()
+        content = json.loads(plan_path.read_text(encoding="utf-8"))
+        content["timelineDurationMs"] = 1_000
+        content["segments"][0]["layoutTier"] = "推进"
+        content["bgmPlan"] = {
+            "audioSha256": AUDIO_SHA, "reportSha256": report_sha, "alignmentSha256": alignment_sha,
+            "alignmentRef": str(alignment), "trackOffsetMs": 60_000, "fades": fades,
+            "duckingPolicy": "旁白优先，句内 BGM 压低（深度参数待 §6-② 拍板）",
+        }
+        return self.write_json("plan-bgm.json", content), pack, alignment
 
     def test_valid_g2_decision_is_consumable_by_g3(self):
         decision = self.decision()
@@ -373,6 +417,90 @@ class ValidateG3PlanTest(unittest.TestCase):
         code, output = self.run_cli(plan, decision)
         self.assertNotEqual(0, code)
         self.assertIn("intentionalSilence requires purpose", output)
+
+    def test_bgm_plan_full_hash_chain_passes(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertEqual(0, code, output)
+
+    def test_registered_bgm_without_plan_section_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        plain = self.plan(decision)
+        code, output = self.run_cli(plain, decision, bgm=(pack, None))
+        self.assertNotEqual(0, code)
+        self.assertIn("must carry bgmPlan", output)
+
+    def test_bgm_plan_without_arguments_cannot_escape_validation(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        code, output = self.run_cli(bgm_plan, decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("--material-pack", output)
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, None))
+        self.assertNotEqual(0, code)
+        self.assertIn("--bgm-alignment", output)
+
+    def test_report_tampered_after_g0_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        report = self.source_pack / "07_授权音频" / "BGM-分析报告-test.json"
+        report.write_text(report.read_text(encoding="utf-8") + " ", encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("tampered after G0", output)
+
+    def test_hand_edited_offset_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        content = json.loads(bgm_plan.read_text(encoding="utf-8"))
+        content["bgmPlan"]["trackOffsetMs"] = 60_001
+        bgm_plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("change tool parameters", output)
+
+    def test_alignment_v01_without_layout_is_rejected(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        value = json.loads(alignment.read_text(encoding="utf-8"))
+        value["schemaVersion"] = "0.1"
+        del value["layout"]
+        alignment.write_text(json.dumps(value), encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("schemaVersion 0.2", output)
+
+    def test_tampered_alignment_artifact_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        value = json.loads(alignment.read_text(encoding="utf-8"))
+        value["alignment"]["offsetMs"] = 61_000
+        alignment.write_text(json.dumps(value), encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("alignmentSha256", output)
+
+    def test_narration_time_drift_beyond_voice_brief_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        content = json.loads(bgm_plan.read_text(encoding="utf-8"))
+        content["segments"][0]["narrationEndMs"] = 1_200  # sentence N01 ends at 1000ms
+        bgm_plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("frozen", output)
+
+    def test_segment_missing_layout_tier_is_blocked(self):
+        decision = self.decision()
+        bgm_plan, pack, alignment = self.enable_bgm_chain(self.plan(decision))
+        content = json.loads(bgm_plan.read_text(encoding="utf-8"))
+        content["segments"][0]["layoutTier"] = "炸裂"
+        bgm_plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
+        self.assertNotEqual(0, code)
+        self.assertIn("layoutTier", output)
 
 
 if __name__ == "__main__":

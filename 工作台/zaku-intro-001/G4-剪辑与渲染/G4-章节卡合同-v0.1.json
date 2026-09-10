@@ -1,0 +1,50 @@
+{
+  "fontFile": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+  "fontsize": 60,
+  "cards": [
+    {
+      "chapterId": "ch-01",
+      "title": "不是主角机",
+      "startMs": 0,
+      "endMs": 1500
+    },
+    {
+      "chapterId": "ch-02",
+      "title": "量产的传奇",
+      "startMs": 15060,
+      "endMs": 16560
+    },
+    {
+      "chapterId": "ch-03",
+      "title": "对手登场",
+      "startMs": 36890,
+      "endMs": 38390
+    },
+    {
+      "chapterId": "ch-04",
+      "title": "红色彗星",
+      "startMs": 58480,
+      "endMs": 59980
+    },
+    {
+      "chapterId": "ch-05",
+      "title": "互相成就",
+      "startMs": 75220,
+      "endMs": 76720
+    },
+    {
+      "chapterId": "ch-06",
+      "title": "一个时代",
+      "startMs": 91480,
+      "endMs": 92980
+    },
+    {
+      "chapterId": "ch-07",
+      "title": "你的扎古",
+      "startMs": 109900,
+      "endMs": 111400
+    }
+  ],
+  "note": "卡起点=G3 批准章节边界；显示时长按质量补丁§4 取 1.5s（批准区间子集，全区间烧录 15s 大字牌不是批准设计）；平台章节时间戳以计划 packagingDecisions 原区间交付 G5；v0.5 修正：卡位从默认居中改为上部标题道（G3 字幕布局合同 title 道 0-15%，此前 g4_assemble 硬编码居中违反批准合同，用户观感发现）",
+  "yRatio": 0.06
+}

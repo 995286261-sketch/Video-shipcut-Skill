@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "purpose": "bgm_chain_audit",
+  "projectId": "zaku-intro-001",
+  "status": "passed",
+  "checks": [
+    {
+      "id": "bgmMixPresent",
+      "status": "passed",
+      "detail": "assembly record bgmMix found"
+    },
+    {
+      "id": "contractFileHash",
+      "status": "passed",
+      "detail": "contract sha 8B55A05609C2… vs assembly record 8B55A05609C2…"
+    },
+    {
+      "id": "contractPurpose",
+      "status": "passed",
+      "detail": "music-expert bgm_mix_contract v0.1"
+    },
+    {
+      "id": "bgmFileHash",
+      "status": "passed",
+      "detail": "delivered BGM bytes 0B2F301892EE… == contract == assembly record"
+    },
+    {
+      "id": "bgmPlanHash",
+      "status": "passed",
+      "detail": "contract BGM hash == approved G3 plan bgmPlan.audioSha256"
+    },
+    {
+      "id": "planFileHash",
+      "status": "passed",
+      "detail": "contract references the exact plan file presented to it"
+    },
+    {
+      "id": "alignmentFileHash",
+      "status": "passed",
+      "detail": "alignment file sha == contract == plan bgmPlan.alignmentSha256"
+    },
+    {
+      "id": "reportCacheKey",
+      "status": "passed",
+      "detail": "analysis report cacheKey == delivered BGM hash"
+    },
+    {
+      "id": "audibilityRecheck",
+      "status": "passed",
+      "detail": "report -10.2 + bed -8.0 - duck 4.0 = -22.2 LUFS (contract -22.2, window [-32.0, -20.0])"
+    },
+    {
+      "id": "executionFidelity",
+      "status": "passed",
+      "detail": "assembly bgmMix offset/bed/duck/fades/duckSegments == contract fields"
+    },
+    {
+      "id": "measuredInPlace",
+      "status": "passed",
+      "detail": "measured -22.4 vs predicted -22.2 LUFS — within drift"
+    },
+    {
+      "id": "registrationChain",
+      "status": "passed",
+      "detail": "candidate registration covers the delivered bytes (registration file hash == material-pack record)"
+    },
+    {
+      "id": "licenseCleared",
+      "status": "passed",
+      "detail": "license=cleared-for-project evidence=04_授权说明.md + 用户 2026-09-09 开工单明示（仅内部测试）"
+    },
+    {
+      "id": "distributionBoundary",
+      "status": "passed",
+      "detail": "boundary=internal_test matches material-pack registration"
+    },
+    {
+      "id": "sourceAudioExcluded",
+      "status": "passed",
+      "detail": "plan source-audio policy recorded: \"exclude\""
+    }
+  ],
+  "bgm": {
+    "audio": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+    "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+    "license": "cleared-for-project",
+    "licenseEvidence": "04_授权说明.md + 用户 2026-09-09 开工单明示（仅内部测试）",
+    "distributionBoundary": "internal_test",
+    "measuredInPlaceLufs": -22.4
+  },
+  "inputs": {
+    "assemblyRecord": "工作台/zaku-intro-001/G4-剪辑与渲染/final/成片候选-v0.6-装配记录-v0.1.json",
+    "plan": "工作台/zaku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "registration": "工作台/zaku-intro-001/G0-素材包/07_授权音频/BGM-候选登记-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json",
+    "materialPack": "工作台/zaku-intro-001/G0-素材包/material-pack.json"
+  }
+}

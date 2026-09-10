@@ -1,11 +1,35 @@
 # 变更记录
 
-## 未发布 — 新增 music-expert BGM 专家 Skill（2026-09-08）
+## v1.2.0 — 2026-09-10 — music-expert 落地与 BGM 全链接线
 
-- 新增独立 support skill `skill/music-expert/`（`$music-expert`，不占 G0–G5 节点、本版不改管线）：覆盖基线总账 ⑯（BGM onset/卡点无生成脚本，已验证）与 ⑫（BGM 内容/节奏分析，部分推进）。
-- 确定性分析引擎 `music_analyze.py`：librosa 节拍/起音 + 前缀和贪心变化点能量分段 + ebur128 响度，产出《BGM 分析报告》（含卡点表）与风格简报；受控运行时 `P0C_MUSIC_RUNTIME_HOME`、`cacheKey` 复用、产物非空核验、缺依赖结构化 blocked。
-- 双轨找乐：`music_search_freesound.py`（Freesound 官方 API，仅 CC0/CC-BY，带授权证据链与解码探针，缺 token 不静默换源）、`music_register_candidate.py`（Pixabay/Mixkit 等无 API 曲库的人工许可登记）；`music_recommend.py` 按画像打分，候选不足显式上报不硬凑。
-- 选型与可达性实测固化在 `references/library-probes.md`；新增 13 项单测，全量回归 19/19。
+首个走完 G0–G5 全流程闭环的真项目（zaku-intro-001）在本版诞生；BGM 专员完成从"做好"到"接上"的三段接线（N5/N6/N7），确立"领域能力归专员、节点型专员只管编排"的架构方向（总账㉜、接线方案 §6）。
+
+### music-expert support skill（2026-09-08 建，本版发布）
+
+- 新增独立 support skill `skill/music-expert/`（`$music-expert`）：覆盖基线总账 ⑯（已验证）与 ⑫（部分推进，找乐自动轨道待 `P0C_FREESOUND_TOKEN` 真实取证）。
+- 确定性分析引擎 `music_analyze.py`：librosa 节拍/起音 + 能量分段 + ebur128 响度，产出《BGM 分析报告》（含卡点表）与风格简报；受控运行时 `P0C_MUSIC_RUNTIME_HOME`、`cacheKey` 复用、缺依赖结构化 blocked。
+- 双轨找乐：`music_search_freesound.py`（仅 CC0/CC-BY、授权证据链、解码探针，缺 token 不静默换源）、`music_register_candidate.py`（人工许可登记）；`music_recommend.py` 画像打分、候选不足显式上报不硬凑；标签粗匹配（`music_tags.py`，3 维 18 标签受控词表）。选型与可达性实测固化在 `references/library-probes.md`。
+
+### BGM 三段接线（N5/N6/N7）与 G2 蓝图（N9）
+
+- **N5/N9**：`music_align.py` 对齐/蓝图双模式（轨偏移/高潮锚点/卡点吸附/逐句 ducking 区间）；G2 门禁 3.5 节蓝图循环（BGM 先行节拍蓝图，时间码三层身份：蓝图窗口=参考、目标码=意图、实测码=事实）；`music_echo.py` 分析回显卡固化。
+- **N6（G4 混音合同链）**：`music_mix_plan.py` 出《BGM-混音合同》——三重哈希对账（BGM 文件↔计划 bgmPlan↔分析报告缓存键↔对齐产物）+ **可听窗守卫**（在位预估电平出 [人声目标−18, 目标−6] LUFS 拒绝出合同）；`g4_assemble.py` 无合同拒混 BGM、逐字执行合同、装配后**实测在位电平**与预估对账（>3 LU 或 <−33 拒绝交付）。§6-② 拍板固定衰减 dB，zaku 终值垫底 −8/压低 4。
+- **N7（G5 链审计）**：`g5_audit_bgm_chain.py` 从装配记录 `bgmMix` 反向重放 G0 登记→素材包→G3 计划→对齐/报告→混音合同→装配记录，14 项检查（逐文件重算 SHA-256、参数逐字比对、可听窗算术复核、实测漂移、许可与分发边界一致性）。
+
+### G4 实跑设防（zaku 教训，总账㉜）
+
+- 源字幕遮蔽合同（`g4_render.py --source-mask`，比例带 + 切片内窗口 enable）；章节卡合同 `yRatio` 通道（默认居中向后兼容，修复硬编码正中违反布局合同）；旁白标准压限归一链（`--normalize-narration-lufs`，渲染后 ebur128 实测入装配记录，发现㊌）；在位电平测量防挂死（输入侧 `-t` 封顶 + 超时）。
+- 纪律沉淀：遮蔽类处理表必须带实测像素/时间出处；门禁呈报必须全文内联。
+
+### 管线与回显
+
+- G2 回显格式定稿（四卡+自动回显+排版稿卡，标准样例 `skill/media-evidence-prep/references/examples/G2-完整回显样例-zaku.md`）。
+- 批准口令脚本级归一（`确认G5`/`确定 G4` 等变体自动规范化、逐字原话留痕；带前缀整句拒收）。
+- G5 交付包合同不变；`human-review-decision.json` 显式区分"确认交付"与"逐条接受警告"两种语义（本版为记录惯例，卡片拆问待后续）。
+
+### 验收
+
+- 全量回归 23/23（新增 test_music_align 24 例、test_music_mix_plan 10 例、test_g5_audit_bgm_chain 6 例等）；zaku-intro-001 全流程闭环（六节点全 approved，`g5_validate_delivery.py --media` valid 0 错误，BGM 链审计 14/14）作为本版活体证据入库。
 
 ## v1.1.0 — 2026-09-04
 

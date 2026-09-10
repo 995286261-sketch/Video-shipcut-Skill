@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_mix_contract",
+  "projectId": "zaku-intro-001",
+  "bgmAudio": {
+    "path": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+    "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E"
+  },
+  "evidence": {
+    "planRef": "工作台/zaku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "planSha256": "02522E23DFF2B1181FEA7BDDD36AF7011C8BE9E0DAC0FD8B10957AF2F6989A9A",
+    "alignmentRef": "工作台/zaku-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "alignmentSha256": "9EFAAF57A42ED320DE3ACF66A9046A9372C5E388054F4FA312B5649CBCD9D5E4"
+  },
+  "timelineMs": 113310,
+  "trackOffsetMs": 0,
+  "bedGainDb": -12.0,
+  "duckReductionDb": 6.0,
+  "fades": {
+    "fadeInMs": 2000,
+    "fadeOutStartMs": 111310,
+    "fadeOutMs": 2000
+  },
+  "ducking": [
+    {
+      "sentenceId": "N01",
+      "fromMs": 0,
+      "toMs": 7090
+    },
+    {
+      "sentenceId": "N02",
+      "fromMs": 7090,
+      "toMs": 15060
+    },
+    {
+      "sentenceId": "N03",
+      "fromMs": 15060,
+      "toMs": 21830
+    },
+    {
+      "sentenceId": "N04",
+      "fromMs": 21830,
+      "toMs": 28920
+    },
+    {
+      "sentenceId": "N05",
+      "fromMs": 28920,
+      "toMs": 36890
+    },
+    {
+      "sentenceId": "N06",
+      "fromMs": 36890,
+      "toMs": 44860
+    },
+    {
+      "sentenceId": "N07",
+      "fromMs": 44860,
+      "toMs": 54110
+    },
+    {
+      "sentenceId": "N08",
+      "fromMs": 54110,
+      "toMs": 58480
+    },
+    {
+      "sentenceId": "N09",
+      "fromMs": 58480,
+      "toMs": 69730
+    },
+    {
+      "sentenceId": "N10",
+      "fromMs": 69730,
+      "toMs": 75220
+    },
+    {
+      "sentenceId": "N11",
+      "fromMs": 75220,
+      "toMs": 81030
+    },
+    {
+      "sentenceId": "N12",
+      "fromMs": 81030,
+      "toMs": 91480
+    },
+    {
+      "sentenceId": "N13",
+      "fromMs": 91480,
+      "toMs": 99850
+    },
+    {
+      "sentenceId": "N14",
+      "fromMs": 99850,
+      "toMs": 109900
+    },
+    {
+      "sentenceId": "N15",
+      "fromMs": 109900,
+      "toMs": 113310
+    }
+  ],
+  "duckSegments": [
+    {
+      "fromMs": 0,
+      "toMs": 113310,
+      "sentenceIds": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10",
+        "N11",
+        "N12",
+        "N13",
+        "N14",
+        "N15"
+      ]
+    }
+  ],
+  "mixMode": "duck-table",
+  "predictedLufs": {
+    "trackIntegratedLufs": -10.2,
+    "bedFullLufs": -22.2,
+    "bedDuckedLufs": -28.2,
+    "narrationTargetLufs": -14.0,
+    "windowLufs": [
+      -32.0,
+      -20.0
+    ]
+  }
+}

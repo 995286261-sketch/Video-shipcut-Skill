@@ -1,0 +1,644 @@
+{
+  "schemaVersion": "0.2",
+  "purpose": "bgm_alignment",
+  "skill": "music-expert",
+  "inputs": {
+    "report": "工作台/zaku-intro-001/G0-素材包/07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+    "voiceBrief": "工作台/zaku-intro-001/G2-证据与口播/G2-配音清单-v0.2.json",
+    "reportCacheKey": {
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "analysisVersion": "music-expert-analysis-v0.2",
+      "sampleRate": 22050,
+      "mediaKind": "video-with-audio"
+    },
+    "briefProjectId": "zaku-intro-001"
+  },
+  "alignment": {
+    "offsetMs": 0,
+    "rawOffsetMs": -4100,
+    "clampedDeviationMs": 4100,
+    "basis": "climax sentence N11 center 1:18.125 ← top-energy segment center 1:14.025",
+    "topEnergySegment": {
+      "startMs": 61115,
+      "endMs": 86936,
+      "energyMean": 0.315979
+    },
+    "topSegmentOnTimeline": [
+      61115,
+      86936
+    ],
+    "climaxAnchorSentence": "N09",
+    "coveredSentences": [
+      {
+        "sentenceId": "N09",
+        "overlapMs": 8615
+      },
+      {
+        "sentenceId": "N10",
+        "overlapMs": 5490
+      },
+      {
+        "sentenceId": "N11",
+        "overlapMs": 5810
+      },
+      {
+        "sentenceId": "N12",
+        "overlapMs": 5906
+      }
+    ],
+    "trackMs": 177875,
+    "timelineMs": 113310,
+    "tempoBpm": 112.35,
+    "trackTitle": "LOW-PHONK.mp3"
+  },
+  "boundaries": [
+    {
+      "sentenceId": "N01",
+      "startMs": 0,
+      "endMs": 7090
+    },
+    {
+      "sentenceId": "N02",
+      "startMs": 7090,
+      "endMs": 15060
+    },
+    {
+      "sentenceId": "N03",
+      "startMs": 15060,
+      "endMs": 21830
+    },
+    {
+      "sentenceId": "N04",
+      "startMs": 21830,
+      "endMs": 28920
+    },
+    {
+      "sentenceId": "N05",
+      "startMs": 28920,
+      "endMs": 36890
+    },
+    {
+      "sentenceId": "N06",
+      "startMs": 36890,
+      "endMs": 44860
+    },
+    {
+      "sentenceId": "N07",
+      "startMs": 44860,
+      "endMs": 54110
+    },
+    {
+      "sentenceId": "N08",
+      "startMs": 54110,
+      "endMs": 58480
+    },
+    {
+      "sentenceId": "N09",
+      "startMs": 58480,
+      "endMs": 69730
+    },
+    {
+      "sentenceId": "N10",
+      "startMs": 69730,
+      "endMs": 75220
+    },
+    {
+      "sentenceId": "N11",
+      "startMs": 75220,
+      "endMs": 81030
+    },
+    {
+      "sentenceId": "N12",
+      "startMs": 81030,
+      "endMs": 91480
+    },
+    {
+      "sentenceId": "N13",
+      "startMs": 91480,
+      "endMs": 99850
+    },
+    {
+      "sentenceId": "N14",
+      "startMs": 99850,
+      "endMs": 109900
+    },
+    {
+      "sentenceId": "N15",
+      "startMs": 109900,
+      "endMs": 113310
+    }
+  ],
+  "snapped": [
+    {
+      "sentenceId": "N01",
+      "boundary": "start",
+      "boundaryMs": 0,
+      "hitPointTrackMs": 70,
+      "hitPointTimelineMs": 70,
+      "deltaMs": 70
+    },
+    {
+      "sentenceId": "N01",
+      "boundary": "end",
+      "boundaryMs": 7090,
+      "hitPointTrackMs": 7152,
+      "hitPointTimelineMs": 7152,
+      "deltaMs": 62
+    },
+    {
+      "sentenceId": "N02",
+      "boundary": "start",
+      "boundaryMs": 7090,
+      "hitPointTrackMs": 7152,
+      "hitPointTimelineMs": 7152,
+      "deltaMs": 62
+    },
+    {
+      "sentenceId": "N02",
+      "boundary": "end",
+      "boundaryMs": 15060,
+      "hitPointTrackMs": 15047,
+      "hitPointTimelineMs": 15047,
+      "deltaMs": -13
+    },
+    {
+      "sentenceId": "N03",
+      "boundary": "start",
+      "boundaryMs": 15060,
+      "hitPointTrackMs": 15047,
+      "hitPointTimelineMs": 15047,
+      "deltaMs": -13
+    },
+    {
+      "sentenceId": "N03",
+      "boundary": "end",
+      "boundaryMs": 21830,
+      "hitPointTrackMs": 21850,
+      "hitPointTimelineMs": 21850,
+      "deltaMs": 20
+    },
+    {
+      "sentenceId": "N04",
+      "boundary": "start",
+      "boundaryMs": 21830,
+      "hitPointTrackMs": 21850,
+      "hitPointTimelineMs": 21850,
+      "deltaMs": 20
+    },
+    {
+      "sentenceId": "N04",
+      "boundary": "end",
+      "boundaryMs": 28920,
+      "hitPointTrackMs": 28955,
+      "hitPointTimelineMs": 28955,
+      "deltaMs": 35
+    },
+    {
+      "sentenceId": "N05",
+      "boundary": "start",
+      "boundaryMs": 28920,
+      "hitPointTrackMs": 28955,
+      "hitPointTimelineMs": 28955,
+      "deltaMs": 35
+    },
+    {
+      "sentenceId": "N05",
+      "boundary": "end",
+      "boundaryMs": 36890,
+      "hitPointTrackMs": 36850,
+      "hitPointTimelineMs": 36850,
+      "deltaMs": -40
+    },
+    {
+      "sentenceId": "N06",
+      "boundary": "start",
+      "boundaryMs": 36890,
+      "hitPointTrackMs": 36850,
+      "hitPointTimelineMs": 36850,
+      "deltaMs": -40
+    },
+    {
+      "sentenceId": "N06",
+      "boundary": "end",
+      "boundaryMs": 44860,
+      "hitPointTrackMs": 44768,
+      "hitPointTimelineMs": 44768,
+      "deltaMs": -92
+    },
+    {
+      "sentenceId": "N07",
+      "boundary": "start",
+      "boundaryMs": 44860,
+      "hitPointTrackMs": 44768,
+      "hitPointTimelineMs": 44768,
+      "deltaMs": -92
+    },
+    {
+      "sentenceId": "N07",
+      "boundary": "end",
+      "boundaryMs": 54110,
+      "hitPointTrackMs": 54079,
+      "hitPointTimelineMs": 54079,
+      "deltaMs": -31
+    },
+    {
+      "sentenceId": "N08",
+      "boundary": "start",
+      "boundaryMs": 54110,
+      "hitPointTrackMs": 54079,
+      "hitPointTimelineMs": 54079,
+      "deltaMs": -31
+    },
+    {
+      "sentenceId": "N08",
+      "boundary": "end",
+      "boundaryMs": 58480,
+      "hitPointTrackMs": 58445,
+      "hitPointTimelineMs": 58445,
+      "deltaMs": -35
+    },
+    {
+      "sentenceId": "N09",
+      "boundary": "start",
+      "boundaryMs": 58480,
+      "hitPointTrackMs": 58445,
+      "hitPointTimelineMs": 58445,
+      "deltaMs": -35
+    },
+    {
+      "sentenceId": "N09",
+      "boundary": "end",
+      "boundaryMs": 69730,
+      "hitPointTrackMs": 69869,
+      "hitPointTimelineMs": 69869,
+      "deltaMs": 139
+    },
+    {
+      "sentenceId": "N10",
+      "boundary": "start",
+      "boundaryMs": 69730,
+      "hitPointTrackMs": 69869,
+      "hitPointTimelineMs": 69869,
+      "deltaMs": 139
+    },
+    {
+      "sentenceId": "N10",
+      "boundary": "end",
+      "boundaryMs": 75220,
+      "hitPointTrackMs": 75302,
+      "hitPointTimelineMs": 75302,
+      "deltaMs": 82
+    },
+    {
+      "sentenceId": "N11",
+      "boundary": "start",
+      "boundaryMs": 75220,
+      "hitPointTrackMs": 75302,
+      "hitPointTimelineMs": 75302,
+      "deltaMs": 82
+    },
+    {
+      "sentenceId": "N11",
+      "boundary": "end",
+      "boundaryMs": 81030,
+      "hitPointTrackMs": 81038,
+      "hitPointTimelineMs": 81038,
+      "deltaMs": 8
+    },
+    {
+      "sentenceId": "N12",
+      "boundary": "start",
+      "boundaryMs": 81030,
+      "hitPointTrackMs": 81038,
+      "hitPointTimelineMs": 81038,
+      "deltaMs": 8
+    },
+    {
+      "sentenceId": "N12",
+      "boundary": "end",
+      "boundaryMs": 91480,
+      "hitPointTrackMs": 91463,
+      "hitPointTimelineMs": 91463,
+      "deltaMs": -17
+    },
+    {
+      "sentenceId": "N13",
+      "boundary": "start",
+      "boundaryMs": 91480,
+      "hitPointTrackMs": 91463,
+      "hitPointTimelineMs": 91463,
+      "deltaMs": -17
+    },
+    {
+      "sentenceId": "N14",
+      "boundary": "end",
+      "boundaryMs": 109900,
+      "hitPointTrackMs": 109946,
+      "hitPointTimelineMs": 109946,
+      "deltaMs": 46
+    },
+    {
+      "sentenceId": "N15",
+      "boundary": "start",
+      "boundaryMs": 109900,
+      "hitPointTrackMs": 109946,
+      "hitPointTimelineMs": 109946,
+      "deltaMs": 46
+    }
+  ],
+  "missed": [
+    {
+      "sentenceId": "N13",
+      "boundary": "end",
+      "boundaryMs": 99850,
+      "hitPointTrackMs": 99637,
+      "hitPointTimelineMs": 99637,
+      "deltaMs": -213,
+      "nearestDistanceMs": 213
+    },
+    {
+      "sentenceId": "N14",
+      "boundary": "start",
+      "boundaryMs": 99850,
+      "hitPointTrackMs": 99637,
+      "hitPointTimelineMs": 99637,
+      "deltaMs": -213,
+      "nearestDistanceMs": 213
+    }
+  ],
+  "layout": {
+    "tierVocabulary": [
+      "快切",
+      "推进",
+      "常规",
+      "留白"
+    ],
+    "rule": {
+      "kind": "segment-energy-quantile",
+      "quantiles": [
+        0.75,
+        0.5,
+        0.25
+      ],
+      "cutoffs": [
+        0.2899,
+        0.164,
+        0.0741
+      ],
+      "flatFallback": null
+    },
+    "note": "layoutTier 是机械草稿（§6-④）：能量分位数定档，阈值由 --tier-quantiles 可调；最终档位以 G3 八列终审回显为准，用户可逐行改，改后即为计划事实",
+    "perSentence": [
+      {
+        "sentenceId": "N01",
+        "energyWeightedMean": 0.0523,
+        "layoutTierDraft": "留白"
+      },
+      {
+        "sentenceId": "N02",
+        "energyWeightedMean": 0.0523,
+        "layoutTierDraft": "留白"
+      },
+      {
+        "sentenceId": "N03",
+        "energyWeightedMean": 0.2173,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "N04",
+        "energyWeightedMean": 0.3044,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "N05",
+        "energyWeightedMean": 0.3044,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "N06",
+        "energyWeightedMean": 0.3044,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "N07",
+        "energyWeightedMean": 0.2014,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "N08",
+        "energyWeightedMean": 0.0816,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "N09",
+        "energyWeightedMean": 0.2626,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "N10",
+        "energyWeightedMean": 0.316,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "N11",
+        "energyWeightedMean": 0.316,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "N12",
+        "energyWeightedMean": 0.2109,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "N13",
+        "energyWeightedMean": 0.0716,
+        "layoutTierDraft": "留白"
+      },
+      {
+        "sentenceId": "N14",
+        "energyWeightedMean": 0.1616,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "N15",
+        "energyWeightedMean": 0.2463,
+        "layoutTierDraft": "推进"
+      }
+    ],
+    "phrasesOnTimeline": [
+      {
+        "phraseId": "P1",
+        "trackStartMs": 0,
+        "trackEndMs": 17369,
+        "timelineStartMs": 0,
+        "timelineEndMs": 17369,
+        "energyMean": 0.0523,
+        "layoutTierDraft": "留白",
+        "coversSentences": [
+          "N01",
+          "N02",
+          "N03"
+        ]
+      },
+      {
+        "phraseId": "P2",
+        "trackStartMs": 17461,
+        "trackEndMs": 49784,
+        "timelineStartMs": 17461,
+        "timelineEndMs": 49784,
+        "energyMean": 0.3044,
+        "layoutTierDraft": "快切",
+        "coversSentences": [
+          "N03",
+          "N04",
+          "N05",
+          "N06",
+          "N07"
+        ]
+      },
+      {
+        "phraseId": "P3",
+        "trackStartMs": 49876,
+        "trackEndMs": 61022,
+        "timelineStartMs": 49876,
+        "timelineEndMs": 61022,
+        "energyMean": 0.0816,
+        "layoutTierDraft": "常规",
+        "coversSentences": [
+          "N07",
+          "N08",
+          "N09"
+        ]
+      },
+      {
+        "phraseId": "P4",
+        "trackStartMs": 61115,
+        "trackEndMs": 86936,
+        "timelineStartMs": 61115,
+        "timelineEndMs": 86936,
+        "energyMean": 0.316,
+        "layoutTierDraft": "快切",
+        "coversSentences": [
+          "N09",
+          "N10",
+          "N11",
+          "N12"
+        ]
+      },
+      {
+        "phraseId": "P5",
+        "trackStartMs": 87028,
+        "trackEndMs": 104676,
+        "timelineStartMs": 87028,
+        "timelineEndMs": 104676,
+        "energyMean": 0.0716,
+        "layoutTierDraft": "留白",
+        "coversSentences": [
+          "N12",
+          "N13",
+          "N14"
+        ]
+      },
+      {
+        "phraseId": "P6",
+        "trackStartMs": 104768,
+        "trackEndMs": 122137,
+        "timelineStartMs": 104768,
+        "timelineEndMs": 113310,
+        "energyMean": 0.2463,
+        "layoutTierDraft": "推进",
+        "coversSentences": [
+          "N14",
+          "N15"
+        ]
+      }
+    ]
+  },
+  "ducking": [
+    {
+      "sentenceId": "N01",
+      "fromMs": 0,
+      "toMs": 7090
+    },
+    {
+      "sentenceId": "N02",
+      "fromMs": 7090,
+      "toMs": 15060
+    },
+    {
+      "sentenceId": "N03",
+      "fromMs": 15060,
+      "toMs": 21830
+    },
+    {
+      "sentenceId": "N04",
+      "fromMs": 21830,
+      "toMs": 28920
+    },
+    {
+      "sentenceId": "N05",
+      "fromMs": 28920,
+      "toMs": 36890
+    },
+    {
+      "sentenceId": "N06",
+      "fromMs": 36890,
+      "toMs": 44860
+    },
+    {
+      "sentenceId": "N07",
+      "fromMs": 44860,
+      "toMs": 54110
+    },
+    {
+      "sentenceId": "N08",
+      "fromMs": 54110,
+      "toMs": 58480
+    },
+    {
+      "sentenceId": "N09",
+      "fromMs": 58480,
+      "toMs": 69730
+    },
+    {
+      "sentenceId": "N10",
+      "fromMs": 69730,
+      "toMs": 75220
+    },
+    {
+      "sentenceId": "N11",
+      "fromMs": 75220,
+      "toMs": 81030
+    },
+    {
+      "sentenceId": "N12",
+      "fromMs": 81030,
+      "toMs": 91480
+    },
+    {
+      "sentenceId": "N13",
+      "fromMs": 91480,
+      "toMs": 99850
+    },
+    {
+      "sentenceId": "N14",
+      "fromMs": 99850,
+      "toMs": 109900
+    },
+    {
+      "sentenceId": "N15",
+      "fromMs": 109900,
+      "toMs": 113310
+    }
+  ],
+  "fades": {
+    "fadeInMs": 2000,
+    "fadeOutStartMs": 111310,
+    "fadeOutMs": 2000
+  },
+  "discipline": "snapping is advisory only: narration durations are authoritative, never stretch or trim speech to hit accents",
+  "files": {
+    "json": "工作台/zaku-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "echo": "工作台/zaku-intro-001/G3-剪辑计划/BGM/BGM-对齐回显-v0.2.md"
+  }
+}

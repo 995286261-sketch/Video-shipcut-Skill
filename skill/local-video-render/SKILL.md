@@ -14,7 +14,7 @@ G4 是单一节点、单一 Skill，正式项目产物写入 `G4_ROOT`。读取 
 
 当成片需要封面、章节卡、配音、背景音乐或烧录字幕时，必须读取 [客户演示成片质量补丁](references/demo-quality-patch.md)。该补丁来自 TASK-050 的实际渲染与人工评审，优先于本文件中与画幅、旁白和最终合成有关的旧默认值。
 
-执行入口：先运行 `scripts/g4_prepare.py` 生成 `G4-可编辑工程-v0.2.json`，再运行 `scripts/g4_render.py` 按该清单裁切，运行 `scripts/g4_validate.py` 验证清单、切片与交接包；需要压平预览或成片时，唯一入口是 `scripts/g4_assemble.py`（concat、旁白混音、BGM 铺底与侧链 ducking、字幕烧录、封面合成、章节卡叠加（`--chapter-cards`，卡期间自动裁开字幕 cue）、顶部标题栏（`--title-bar`），并输出装配记录）；可编辑交接包由 `scripts/g4_build_handoff.py` 生成。不要使用项目 `work/` 中的临时脚本或临场拼接的 FFmpeg 命令作为新项目执行入口。
+执行入口：先运行 `scripts/g4_prepare.py` 生成 `G4-可编辑工程-v0.2.json`，再运行 `scripts/g4_render.py` 按该清单裁切，运行 `scripts/g4_validate.py` 验证清单、切片与交接包；需要压平预览或成片时，唯一入口是 `scripts/g4_assemble.py`（concat、旁白混音、BGM 混音=逐字执行 music-expert《BGM-混音合同》（`--bgm-mix-contract`，无合同拒绝混 BGM——专员决策、节点执行，见总账㉜）、字幕烧录、封面合成、章节卡叠加（`--chapter-cards`，卡期间自动裁开字幕 cue）、顶部标题栏（`--title-bar`）、旁白响度标准化（`--normalize-narration-lufs`：套用 kshatriya 批次实测的标准压限归一链 acompressor+loudnorm，渲染后用 ebur128 实测写入装配记录——只测量不假设，偏离目标 >1.5 LU 记复核提示；高峰值因数 TTS 源有响度上限，见发现㊌），并输出装配记录）；可编辑交接包由 `scripts/g4_build_handoff.py` 生成。不要使用项目 `work/` 中的临时脚本或临场拼接的 FFmpeg 命令作为新项目执行入口。
 
 ## 前置门禁
 

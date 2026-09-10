@@ -49,12 +49,43 @@ class G3CallbackValidatorTests(unittest.TestCase):
         return {"schemaVersion": "0.1", "node": "G3", "projectId": "p", "callbackType": "final_review",
             "durationMs": 2000, "columns": ["片段 ID", "输出时间", "对应口播", "源片区间", "用途 / 实际画面观察", "语义匹配 / 主体状态 / 风险", "BGM 乐句", "转场指令"], "rows": rows}
 
-    def run_cli(self, callback, plan=None):
+    def run_cli(self, callback, plan=None, alignment=None):
         callback_path = self.write("callback.json", callback)
         command = [PYTHON, str(SCRIPT), "--callback", str(callback_path)]
         if plan:
             command += ["--plan", str(plan)]
+        if alignment:
+            command += ["--alignment", str(alignment)]
         return subprocess.run(command, capture_output=True, text=True, encoding="utf-8")
+
+    def bgm_plan(self):
+        plan = json.loads(self.plan().read_text(encoding="utf-8"))
+        plan["timelineDurationMs"] = 2000
+        for segment in plan["segments"]:
+            segment["layoutTier"] = "推进"
+        plan["bgmPlan"] = {"trackOffsetMs": 60000, "alignmentRef": "G3-剪辑计划/BGM-对齐建议-v0.2.json"}
+        return self.write("plan-bgm.json", plan)
+
+    def alignment_artifact(self, snapped=3, missed=1, ducking=2):
+        value = {
+            "schemaVersion": "0.2", "purpose": "bgm_alignment",
+            "alignment": {"offsetMs": 60000, "timelineMs": 2000},
+            "snapped": [] if snapped == 1 else [{"x": i} for i in range(snapped)],
+            "missed": [{"x": 0}] if missed else [],
+            "ducking": [{"sentenceId": f"N0{i}"} for i in range(1, ducking + 1)],
+        }
+        return self.write("alignment.json", value)
+
+    def callback_v02(self, **basis_changes):
+        value = self.callback()
+        value["schemaVersion"] = "0.2"
+        for row in value["rows"]:
+            row["layoutTier"] = "推进"
+        basis = {"alignmentRef": "G3-剪辑计划/BGM-对齐建议-v0.2.json", "trackOffsetMs": 60000,
+                 "timelineMs": 2000, "snappedCount": 3, "missedCount": 1, "duckedSentences": 2}
+        basis.update(basis_changes)
+        value["bgmBasis"] = basis
+        return value
 
     def test_valid_final_callback_passes(self):
         result = self.run_cli(self.callback(), self.plan())
@@ -124,6 +155,55 @@ class G3CallbackValidatorTests(unittest.TestCase):
         result = self.run_cli(value, self.plan())
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("semanticStatus", result.stdout)
+
+    def test_bgm_card_v02_happy_path(self):
+        result = self.run_cli(self.callback_v02(), self.bgm_plan(), self.alignment_artifact())
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+
+    def test_bgm_plan_requires_card_v02(self):
+        result = self.run_cli(self.callback(), self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("schemaVersion 0.2", result.stdout)
+
+    def test_bgm_basis_counts_must_match_alignment_artifact(self):
+        result = self.run_cli(self.callback_v02(snappedCount=9), self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("snap counts", result.stdout)
+        result = self.run_cli(self.callback_v02(duckedSentences=5), self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("duckedSentences", result.stdout)
+
+    def test_bgm_basis_offset_must_match_plan(self):
+        result = self.run_cli(self.callback_v02(trackOffsetMs=61000), self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("trackOffsetMs", result.stdout)
+
+    def test_row_layout_tier_must_match_plan_and_vocabulary(self):
+        value = self.callback_v02()
+        value["rows"][0]["layoutTier"] = "乱来"
+        result = self.run_cli(value, self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("layoutTier must be one of", result.stdout)
+        value = self.callback_v02()
+        value["rows"][0]["layoutTier"] = "留白"
+        result = self.run_cli(value, self.bgm_plan(), self.alignment_artifact())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("must equal the plan", result.stdout)
+
+    def test_renderer_shows_bgm_basis_block_and_tier(self):
+        callback_path = self.write("callback.json", self.callback_v02())
+        plan_path = self.bgm_plan()
+        alignment_path = self.alignment_artifact()
+        output = self.root / "G3-回显卡-v0.2.md"
+        result = subprocess.run([PYTHON, str(RENDERER), "--callback", str(callback_path), "--plan", str(plan_path),
+                                 "--alignment", str(alignment_path), "--output", str(output)],
+                                capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        card = output.read_text(encoding="utf-8")
+        self.assertIn("## BGM 依据区", card)
+        self.assertIn("从音轨 01:00.000 起铺", card)
+        self.assertIn("3/4", card)
+        self.assertIn("phrase-01 · 推进档", card)
 
 
 if __name__ == "__main__":

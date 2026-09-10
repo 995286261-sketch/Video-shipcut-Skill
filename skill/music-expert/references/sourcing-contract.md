@@ -29,6 +29,8 @@
 
 两条轨道产出的候选记录共享字段（`provenance` 区分 `freesound_api` / `manual_registration`），都带 `decodeProbe`、`sha256`、`retrievedAt`、`license`、`distributionBoundary`。候选不是源素材，可被下游 `music_analyze.py` 进一步分析后交 `music_recommend.py` 打分。
 
+候选另带语义层 `styleTags`：人工登记用 `--tags` 且必须命中 `tag-vocabulary.md` 受控词表，外部来源的原始 tags 走别名 best-effort 归一。标签不进分析报告——声学层与语义层严格分离。
+
 ## 与管线的未来接缝（本版不接线）
 
 - G0 的 `use_library_later` 槽位将来可直接调本 Skill 检索并把候选登记进 `07_授权音频`，沿用同一许可证据链。

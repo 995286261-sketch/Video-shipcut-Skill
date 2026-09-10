@@ -1,0 +1,40 @@
+{
+  "projectId": "zaku-intro-001",
+  "node": "G5",
+  "platform": "not_specified",
+  "distribution": "internal_test",
+  "authorization": "画面：用户提供的第三方混剪（日升 IP 二创），仅限内部测试；BGM：LOW(PHONK) cleared-for-project（对外未清权）；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "durationActualMs": 113310,
+    "durationTargetMs": 115000,
+    "durationDeltaMs": -1690,
+    "aspectRatioPolicy": "preserve_source"
+  },
+  "audio": {
+    "codec": "aac",
+    "channels": 2,
+    "sampleRate": "48000",
+    "narrationTargetLufs": -14,
+    "masterMeasuredLufs": -15.1,
+    "bgmInPlaceMeasuredLufs": -22.4
+  },
+  "subtitles": {
+    "burnedIn": true,
+    "referenceFile": "subtitles.srt",
+    "cues": 15
+  },
+  "cover": {
+    "file": "cover.jpg",
+    "inMainVideo": false
+  },
+  "music": {
+    "title": "VodKe; HSHK; Pnan - LOW(PHONK)",
+    "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+    "license": "cleared-for-project",
+    "distributionBoundary": "internal_test"
+  }
+}

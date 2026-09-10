@@ -1,0 +1,688 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "zaku-intro-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/zaku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "inputEvidence": "工作台/zaku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 18,
+  "timelineDurationMs": 113310,
+  "targetDurationMs": 115000,
+  "durationDeltaMs": -1690,
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "order": 1,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 0,
+        "endMs": 7090,
+        "durationMs": 7090
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 7090,
+        "durationMs": 7090
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 0,
+        "endMs": 7090,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-002",
+      "order": 2,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 7090,
+        "endMs": 15060,
+        "durationMs": 7970
+      },
+      "timeline": {
+        "startMs": 7090,
+        "endMs": 15060,
+        "durationMs": 7970
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 7090,
+        "endMs": 15060,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-003",
+      "order": 3,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 15060,
+        "endMs": 21830,
+        "durationMs": 6770
+      },
+      "timeline": {
+        "startMs": 15060,
+        "endMs": 21830,
+        "durationMs": 6770
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 15060,
+        "endMs": 21830,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-004",
+      "order": 4,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 28630,
+        "endMs": 35720,
+        "durationMs": 7090
+      },
+      "timeline": {
+        "startMs": 21830,
+        "endMs": 28920,
+        "durationMs": 7090
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 28630,
+        "endMs": 35720,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-005",
+      "order": 5,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 58550,
+        "endMs": 66520,
+        "durationMs": 7970
+      },
+      "timeline": {
+        "startMs": 28920,
+        "endMs": 36890,
+        "durationMs": 7970
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 58550,
+        "endMs": 66520,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-006",
+      "order": 6,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 36900,
+        "endMs": 44870,
+        "durationMs": 7970
+      },
+      "timeline": {
+        "startMs": 36890,
+        "endMs": 44860,
+        "durationMs": 7970
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 36900,
+        "endMs": 44870,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-007",
+      "order": 7,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 49300,
+        "endMs": 58550,
+        "durationMs": 9250
+      },
+      "timeline": {
+        "startMs": 44860,
+        "endMs": 54110,
+        "durationMs": 9250
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 49300,
+        "endMs": 58550,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-008",
+      "order": 8,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 44880,
+        "endMs": 49250,
+        "durationMs": 4370
+      },
+      "timeline": {
+        "startMs": 54110,
+        "endMs": 58480,
+        "durationMs": 4370
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 44880,
+        "endMs": 49250,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-009a",
+      "order": 9,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 21830,
+        "endMs": 28630,
+        "durationMs": 6800
+      },
+      "timeline": {
+        "startMs": 58480,
+        "endMs": 65280,
+        "durationMs": 6800
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 21830,
+        "endMs": 28630,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-009b",
+      "order": 10,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 66550,
+        "endMs": 71000,
+        "durationMs": 4450
+      },
+      "timeline": {
+        "startMs": 65280,
+        "endMs": 69730,
+        "durationMs": 4450
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 66550,
+        "endMs": 71000,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-010a",
+      "order": 11,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 75100,
+        "endMs": 76820,
+        "durationMs": 1720
+      },
+      "timeline": {
+        "startMs": 69730,
+        "endMs": 71450,
+        "durationMs": 1720
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 75100,
+        "endMs": 76820,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-010b",
+      "order": 12,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 103600,
+        "endMs": 107370,
+        "durationMs": 3770
+      },
+      "timeline": {
+        "startMs": 71450,
+        "endMs": 75220,
+        "durationMs": 3770
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 103600,
+        "endMs": 107370,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-011",
+      "order": 13,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 89280,
+        "endMs": 95090,
+        "durationMs": 5810
+      },
+      "timeline": {
+        "startMs": 75220,
+        "endMs": 81030,
+        "durationMs": 5810
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 89280,
+        "endMs": 95090,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-012",
+      "order": 14,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 78830,
+        "endMs": 89280,
+        "durationMs": 10450
+      },
+      "timeline": {
+        "startMs": 81030,
+        "endMs": 91480,
+        "durationMs": 10450
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 78830,
+        "endMs": 89280,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-014.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test",
+        "80-84s源片烧录字幕「双方前进中 无异常」「重弹状况良好」，G4字幕底栏遮蔽或裁切"
+      ]
+    },
+    {
+      "segmentId": "seg-013",
+      "order": 15,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 95100,
+        "endMs": 103470,
+        "durationMs": 8370
+      },
+      "timeline": {
+        "startMs": 91480,
+        "endMs": 99850,
+        "durationMs": 8370
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 95100,
+        "endMs": 103470,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-015.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-014",
+      "order": 16,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 107600,
+        "endMs": 114150,
+        "durationMs": 6550
+      },
+      "timeline": {
+        "startMs": 99850,
+        "endMs": 106400,
+        "durationMs": 6550
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 107600,
+        "endMs": 114150,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-016.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-014b",
+      "order": 17,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 71050,
+        "endMs": 74550,
+        "durationMs": 3500
+      },
+      "timeline": {
+        "startMs": 106400,
+        "endMs": 109900,
+        "durationMs": 3500
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 71050,
+        "endMs": 74550,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-017.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    },
+    {
+      "segmentId": "seg-015",
+      "order": 18,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 114400,
+        "endMs": 117810,
+        "durationMs": 3410
+      },
+      "timeline": {
+        "startMs": 109900,
+        "endMs": 113310,
+        "durationMs": 3410
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 114400,
+        "endMs": 117810,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-018.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "全片左上bilibili频道水印+部分镜头右下@sumilec署名，分发限internal_test"
+      ]
+    }
+  ],
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

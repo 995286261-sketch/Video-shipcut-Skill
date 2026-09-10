@@ -22,6 +22,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+import music_tags
+
 API_BASE = "https://freesound.org/apiv2"
 SEARCH_FIELDS = "id,name,username,license,type,duration,previews,urls.page,tags,attribution"
 ACCEPTED_LICENSES = {
@@ -156,6 +158,7 @@ def main() -> int:
             "attributionText": item.get("attribution"),
             "durationSecProbe": item.get("duration"),
             "tags": (item.get("tags") or [])[:12],
+            "styleTags": music_tags.normalize_tag_list(item.get("tags") or []),
             "retrievedAt": now(),
             "distributionBoundary": "internal_test",
             "decodeProbe": {"status": "not_run", "engine": "ffmpeg"},

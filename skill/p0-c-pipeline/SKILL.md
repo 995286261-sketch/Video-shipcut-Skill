@@ -40,7 +40,7 @@ Use `status` when the user says "project status", "continue", or "next step". It
 | G4 | `$local-video-render` | Local render is validated and user reviews the candidate; ChatCut is used only if micro-adjustment is requested. |
 | G5 | `$media-qa-delivery` | Machine QA and user playback review are both registered. |
 
-Record a node's artifact references and review items, set it to `review_required`, then create and register its machine-validated review-gate receipt before asking for approval. Use `approve` only after the exact node confirmation string (`确认 G1` through `确认 G5`) is explicitly received and recorded; a card, a selection, or a vague acknowledgement cannot advance state. Read `references/operator-dialogue.md` for the exact conversational handoffs and `references/pipeline-state-contract.md` for required fields.
+Record a node's artifact references and review items, set it to `review_required`, then create and register its machine-validated review-gate receipt before asking for approval. Use `approve` only after the user's confirmation is explicitly received and recorded; the CLI canonicalizes the typed forms users actually write (`确认G5`, bare `确认` for the current gate) and keeps the verbatim reply in state, but a card, a selection, or a vague acknowledgement still cannot advance state. Read `references/operator-dialogue.md` for the exact conversational handoffs and `references/pipeline-state-contract.md` for required fields.
 
 ## Hard gates
 

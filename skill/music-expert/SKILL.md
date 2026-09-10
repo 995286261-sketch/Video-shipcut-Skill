@@ -1,6 +1,6 @@
 ---
 name: music-expert
-description: 对音乐做确定性分析与授权化找乐：分析任意音频或参考视频音轨的 BPM、节拍、起音、卡点表、能量分段与响度，产出可复用的分析报告和风格简报；并从公开音乐库找候选，Freesound 走自动检索、Pixabay/Mixkit 走人工下载加许可证据登记，每条候选都带完整授权与解码探针链。适用于需要理解或获取背景音乐风格的场景；不负责素材包整理、剪辑决策、渲染、QA 或交付，也不接入六节点管线的门禁。
+description: 对音乐做确定性分析与授权化找乐：分析任意音频或参考视频音轨的 BPM、节拍、起音、卡点表、能量分段与响度，产出可复用的分析报告和风格简报；从公开音乐库找候选，Freesound 走自动检索、Pixabay/Mixkit 走人工下载加许可证据登记，每条候选都带完整授权与解码探针链；受控标签词表做主题粗匹配；再与口播时间轴做节奏对齐（轨偏移、高潮锚点、句边界卡点吸附、ducking 区间），产出建议 JSON 与节点回显卡。适用于需要理解或获取背景音乐风格的场景；不负责素材包整理、剪辑决策、渲染、QA 或交付，也不接入六节点管线的门禁。
 metadata:
   pipelineNode: support
 ---
@@ -13,7 +13,7 @@ metadata:
 
 ## 执行入口（唯一）
 
-- 分析：`scripts/music_analyze.py`。找乐自动轨道：`scripts/music_search_freesound.py`。找乐人工轨道：`scripts/music_register_candidate.py`。推荐排序：`scripts/music_recommend.py`。不要用临时脚本或手敲 ffmpeg 替代。
+- 分析：`scripts/music_analyze.py`。找乐自动轨道：`scripts/music_search_freesound.py`。找乐人工轨道：`scripts/music_register_candidate.py`（主题标签必须用 `references/tag-vocabulary.md` 受控词表）。推荐排序：`scripts/music_recommend.py`（画像可带 `styleTags` 做粗匹配）。节奏对齐：`scripts/music_align.py`。不要用临时脚本或手敲 ffmpeg 替代。
 
 ## 前置依赖
 
@@ -24,10 +24,14 @@ metadata:
 
 ## 工作流
 
-1. 要理解一段音乐或某个参考视频的配乐感觉 → `music_analyze.py --input <文件> --output-dir <目录>`，需要风格简报再加 `--style-brief-out`。重跑同文件同版本命中 `cache_hit` 不重算。
+1. 要理解一段音乐或某个参考视频的配乐感觉 → `music_analyze.py --input <文件> --output-dir <目录>`，需要风格简报再加 `--style-brief-out`。每次分析自动产出《BGM-分析回显》固定表格卡（头部简述+逐段分析表，样式与剪辑 skill 的回显卡同源）；重跑同文件同版本命中 `cache_hit` 不重算，卡丢了可从报告 JSON 免费重渲，请求过的简报也会从缓存报告免费重派生。简报的 `energyShape` 是最多 16 桶的宏观曲线（滤掉解说音轨逐句 ducking 噪声），详见 style-brief-contract。
 2. 要自动找候选 → `music_search_freesound.py --query/--tags/--similar-to ... --output-dir <目录>`，得到带授权证据链的候选清单。
 3. 用户手动从 Pixabay/Mixkit 等无 API 站下载了音乐 → `music_register_candidate.py --audio <文件> --license-type ... --license-evidence ... --output-dir <目录>` 登记（本脚本不联网、不复制源文件）。
-4. 有需求画像（时长/BPM/能量/响度上限）或风格简报后 → `music_recommend.py --profile <画像.json> --candidates <候选清单...> --reports-dir <分析目录>` 打分排序；候选不足会显式报"补检索/放宽画像/缩短成品"三选一，不自行拼凑。
+4. 有需求画像（时长/BPM/能量/响度上限，可选 `styleTags` 标签粗匹配）或风格简报后 → `music_recommend.py --profile <画像.json> --candidates <候选清单...> --reports-dir <分析目录>` 打分排序；候选不足会显式报"补检索/放宽画像/缩短成品"三选一，不自行拼凑。
+5. 定了曲子和口播后要做节奏对齐 → `music_align.py --report <分析报告> --voice-brief <配音清单> --timeline-ms <成片时长> --output-dir <目录>`（可选 `--climax-sentence` 高潮句、`--snap-tolerance-ms`、`--fade-ms`、`--tier-quantiles` 档位分位数）。产物是**建议**：轨偏移、高潮锚点、句边界卡点吸附（超出容差如实报 miss）、ducking/淡入淡出区间、**机器乐句表**（音轨能量段×轨偏移映射到成片时间轴并标覆盖句）与**逐句排版档位草稿**（段能量分位数定档，词表 快切/推进/常规/留白），附节点末风格的回显卡；口播时值永远是权威，卡点只做参考，不得为踩点让口播变形；档位草稿是机械建议（§6-④），最终逐行档位由 G3 终审八列回显人工定夺，消费者想改对齐数字只能改参数重跑。
+
+   5.5 **节拍蓝图模式（N9，G2 创作期用）**：口播还没定稿、要先照鼓点写稿/改版时 → `music_align.py --blueprint --report <分析报告> --timeline-ms <目标时长> --output-dir <G2 目录>`（可选 `--climax-position-ms` 能量峰要落在成片哪个位置、`--budget-map` 各档每句秒数预算，默认 快切4-6/推进5-7/常规6-8/留白8-12）。产物 `BGM-节拍蓝图-v0.1.json` + 回显卡：鼓点栅格、乐句窗口（含档位草稿）、每句时长预算建议与建议句边界。蓝图是**创作输入不是合同**：目标时间码只是设计意图，G2 人审批准的排版稿经 TTS 实测后的配音清单时间码才是事实，G3 对齐（第 5 条）负责验证意图是否落地、偏差超限回 G2 改稿。纯旁白型项目可跳过本条。
+   5.6 **混音合同（N6，G4 执行前用）**：BGM 进 G4 装配前 → `music_mix_plan.py --plan <approved_for_g4 的 G3 计划> --alignment <对齐建议-v0.2.json> --bgm-audio <BGM 文件> --output-dir <G4 目录>`（可选 `--bed-gain-db` 默认 −12、`--duck-reduction-db` 默认 6，即 §6-② 拍板参数）。**可听窗守卫**：用分析报告的轨实测响度算出口播段在位电平预估，落在 [人声目标−18, 目标−6] LUFS 窗外即拒绝出合同——zaku 教训：−18/−12 叠加=−40 LUFS"在混但听不见"，这必须是算术检查不是耳朵检查；G4 装配后还会实测在位电平与本预估对账）。产物 `BGM-混音合同-v0.1.json`+回显卡：把 G3 批准过的轨偏移/淡入淡出/逐句 ducking 翻译成 G4 可逐字执行的合同，并**三重哈希对账**（文件 sha==bgmPlan.audioSha256==分析报告 cacheKey；对齐产物 sha==bgmPlan.alignmentSha256；参数与计划逐字段相等），任何不一致即拒绝出合同。`g4_assemble.py --bgm-mix-contract` 是唯一合法消费路径——**专员决策、节点执行**（用户 2026-09-10 定调：领域能力归专员，节点型专员只排节点）。
 
 ## 边界与红线
 
@@ -41,9 +45,10 @@ metadata:
 
 ## 标准产物
 
-- `BGM-分析报告-*.json`、`BGM-风格简报-*.json`
+- `BGM-分析报告-*.json`、`BGM-分析回显-*.md`、`BGM-风格简报-*.json`
 - `BGM-候选清单-freesound-*.json`、`BGM-候选登记-*.json`
 - `BGM-推荐-*.json`
+- `BGM-对齐建议-v0.2.json`、`BGM-对齐回显-v0.2.md`（v0.2 新增 `layout` 段：`phrasesOnTimeline` 机器乐句表、`perSentence` 档位草稿、`rule` 定档参数自曝；被 `video-edit-plan` 的 `validate_g3_plan.py --bgm-alignment` 哈希消费）
 
 ## 故障处理
 
@@ -56,6 +61,7 @@ metadata:
 - `references/music-analysis-contract.md`：分析报告与 cacheKey 合同。
 - `references/sourcing-contract.md`：双轨找乐与授权证据合同。
 - `references/style-brief-contract.md`：参考视频→风格简报合同。
+- `references/tag-vocabulary.md`：主题标签受控词表（单一事实源为 `scripts/music_tags.py`）。
 - `references/library-probes.md`：曲库与引擎选型实测结论。
-- `scripts/music_analyze.py`、`scripts/music_search_freesound.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`：四个唯一入口。
-- `tests/test_music_analyze.py`、`tests/test_music_sourcing.py`：确定性与阻断回归。
+- `scripts/music_analyze.py`、`scripts/music_search_freesound.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_align.py`：五个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块）。
+- `tests/test_music_analyze.py`、`tests/test_music_sourcing.py`、`tests/test_music_recommend.py`、`tests/test_music_align.py`：确定性与阻断回归。

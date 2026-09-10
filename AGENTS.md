@@ -15,3 +15,5 @@ Do not ask the user to name a skill or prepare technical artifacts. Infer the re
 The six nodes are G0 material intake, G1 direction, G2 evidence/narration, G3 edit plan, G4 local/ChatCut editing, and G5 QA/delivery.
 
 For project status, next steps, and local environment notes (development/platform-integration work, not video production requests), read `交接文档.md` at the repository root.
+
+All skills stay flat under `skill/<name>/` — never add grouping directories. Node-specialist vs independent-expert classification lives in `metadata.pipelineNode` and the roster in `目录规范.md` ("skill/ 专员花名册"). Register every new specialist there.

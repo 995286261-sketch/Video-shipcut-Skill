@@ -1,0 +1,221 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-001",
+ "node": "G3",
+ "status": "draft",
+ "narrationDraft": "工作台/zaku-intro-001/G2-证据与口播/G2-口播稿-v0.2.md",
+ "narrationDecisionRef": "工作台/zaku-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+ "timingBasis": "G2-配音清单-v0.2.json 逐句实测时长",
+ "beats": [
+  {
+   "beatId": "beat-N01",
+   "sentenceId": "N01",
+   "outputStartMs": 0,
+   "outputEndMs": 7090,
+   "narrationText": "它不是主角机，也没有神级装备。但提起一年战争，你绕不开它。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "主角机与扎古同框或扎古登场"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N02",
+   "sentenceId": "N02",
+   "outputStartMs": 7090,
+   "outputEndMs": 15060,
+   "narrationText": "这，就是 MS-06 扎古II——一台证明量产机也能成为传奇的机体。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "扎古II机体清晰可见"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N03",
+   "sentenceId": "N03",
+   "outputStartMs": 15060,
+   "outputEndMs": 21830,
+   "narrationText": "0078 年 1 月，初期量产的 C 型下线，前后只造了 236 架。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "量产型扎古开火或行动"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N04",
+   "sentenceId": "N04",
+   "outputStartMs": 21830,
+   "outputEndMs": 28920,
+   "narrationText": "开战之后，这个数字冲到三千架以上——F 型是公国量产最多的机动战士。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "绿色或灰色量产扎古与标准武器"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N05",
+   "sentenceId": "N05",
+   "outputStartMs": 28920,
+   "outputEndMs": 36890,
+   "narrationText": "17.5 米高的钢铁之躯，120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "军刀或火箭筒或枪口任一发射或挥舞"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N06",
+   "sentenceId": "N06",
+   "outputStartMs": 36890,
+   "outputEndMs": 44860,
+   "narrationText": "它没有碾压时代的性能，也没有明显短板——能大量地造、修、开，这就是量产机的生存之道。",
+   "claim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": [
+     "战斗受创与还击画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N07",
+   "sentenceId": "N07",
+   "outputStartMs": 44860,
+   "outputEndMs": 54110,
+   "narrationText": "开战之初，联邦军根本没有量产 MS——直到 0079 年 10 月，自己的吉姆才投入实战。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "联邦系吉姆出现并参战"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N08",
+   "sentenceId": "N08",
+   "outputStartMs": 54110,
+   "outputEndMs": 58480,
+   "narrationText": "一周战争与鲁姆会战，扎古打出的是压倒性战果。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "战舰中弹或扎古火力输出"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N09",
+   "sentenceId": "N09",
+   "outputStartMs": 58480,
+   "outputEndMs": 69730,
+   "narrationText": "最有名的驾驶者是夏亚。他的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰、一艘战列舰，赤色彗星从此得名。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "红色扎古与战舰或爆炸同场"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N10",
+   "sentenceId": "N10",
+   "outputStartMs": 69730,
+   "outputEndMs": 75220,
+   "narrationText": "乔尼·莱登，用的也是量产型火箭筒，在鲁姆击沉三艘麦哲伦级。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "扎古系火力交战"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N11",
+   "sentenceId": "N11",
+   "outputStartMs": 75220,
+   "outputEndMs": 81030,
+   "narrationText": "王牌没有挑选传奇机体——是机体和王牌，互相成就了彼此。",
+   "claim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": [
+     "王牌驾驶员与机体同框叙事"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N12",
+   "sentenceId": "N12",
+   "outputStartMs": 81030,
+   "outputEndMs": 91480,
+   "narrationText": "直到战争末期它还在进化：轻量化的 F2 型、高机动的 R 型——后者竞标输给大魔，只造了 4 台。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "大魔型机体出现"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N13",
+   "sentenceId": "N13",
+   "outputStartMs": 91480,
+   "outputEndMs": 99850,
+   "narrationText": "战败也没终结它的故事：联邦逆向研究它造出高扎古，缴获的扎古一直服役到 0088 年。",
+   "claim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": [
+     "联邦白色系机体参战延续"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N14",
+   "sentenceId": "N14",
+   "outputStartMs": 99850,
+   "outputEndMs": 109900,
+   "narrationText": "三千多架、无数驾驶者、一整个模型柜。扎古的意义从来不是无敌，而是一个时代给\"量产\"两个字刻下的名字。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "多台机体混战蒙太奇"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N15",
+   "sentenceId": "N15",
+   "outputStartMs": 109900,
+   "outputEndMs": 113310,
+   "narrationText": "你的扎古时刻是哪一台？评论区聊聊。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "扎古宇宙战画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  }
+ ]
+}
