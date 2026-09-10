@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -64,13 +65,42 @@ def clear_review_gate(record: dict) -> None:
     record["reviewGate"] = None
 
 
-def require_approval_token(node: str, token: str | None, response: str | None) -> tuple[str, str]:
+APPROVAL_WITH_NODE = re.compile(r"^(?:确认|确定)\s*[Gg]?\s*(\d)$")
+APPROVAL_BARE = re.compile(r"^(?:确认|确定)\s*了?\s*[。！!]?$")
+
+
+def normalize_confirmation(node: str, raw: object) -> tuple[str, bool] | None:
+    """Map a human reply to this node's canonical approval string, or None.
+
+    Accepted: the exact canonical form, the no-space variants users actually
+    type (确认G5 / 确认g5), the 确定 synonym (zaku G1 live run: users type
+    确定G2), and bare 确认/确定 — safe because command_approve has already
+    pinned node == currentNode and a recorded review gate. Anything else
+    (好的 / OK / 确认G for another node) is refused. The canonical string is
+    what gets stored, so every downstream validator stays byte-identical."""
     expected = f"确认 {node}"
-    if token != expected:
-        raise ValueError(f"{node} approvalToken must exactly be {expected}")
-    if not isinstance(response, str) or response.strip() != expected:
-        raise ValueError(f"{node} approvalResponse must exactly be {expected}")
-    return expected, response.strip()
+    if not isinstance(raw, str):
+        return None
+    text = raw.strip()
+    if text == expected:
+        return expected, False
+    match = APPROVAL_WITH_NODE.match(text)
+    if match:
+        return (expected, True) if match.group(1) == node[-1] else None
+    if APPROVAL_BARE.match(text):
+        return expected, True
+    return None
+
+
+def require_approval_token(node: str, token: str | None, response: str | None) -> tuple[str, str, str, str, bool]:
+    expected = f"确认 {node}"
+    token_norm = normalize_confirmation(node, token)
+    if token_norm is None:
+        raise ValueError(f"{node} approvalToken must be {expected} (typed variants are auto-normalized with the verbatim reply kept)")
+    response_norm = normalize_confirmation(node, response)
+    if response_norm is None:
+        raise ValueError(f"{node} approvalResponse must be {expected} (typed variants are auto-normalized with the verbatim reply kept)")
+    return token_norm[0], response_norm[0], str(token).strip(), str(response).strip(), token_norm[1] or response_norm[1]
 
 
 def next_action(node: str) -> str:
@@ -216,12 +246,15 @@ def command_approve(args: argparse.Namespace) -> None:
     if not record.get("reviewGate"):
         emit({"status": "blocked", "error": "approval requires a recorded review gate"}, 2)
     try:
-        approval_token, approval_response = require_approval_token(node, args.approval_token, args.approval_response)
+        approval_token, approval_response, token_verbatim, response_verbatim, normalized = require_approval_token(
+            node, args.approval_token, args.approval_response)
         require_project_file(state_path, args.approval_ref, "approvalRef")
         require_basis_references(record["reviewGate"], [args.approval_ref])
     except ValueError as error:
         emit({"status": "blocked", "error": str(error)}, 2)
-    approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response, "approvedAt": now()}
+    approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response,
+                "approvalTokenVerbatim": token_verbatim, "approvalResponseVerbatim": response_verbatim,
+                "normalizedFromVariant": normalized, "approvedAt": now()}
     if node == "G2":
         if not args.approved_narration_ref or not args.fact_citation_ref or not args.voice_brief_ref:
             emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factCitationRef, and voiceBriefRef"}, 2)

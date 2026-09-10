@@ -119,26 +119,96 @@ class MaterialPackTest(unittest.TestCase):
             self.assertIn("Interlinked.mp3", result["undecodableAudio"][0]["relativePath"])
             self.assertFalse((pack / "material-pack.json").exists(), "blocked register must not write the manifest")
 
-    def test_register_records_decode_probe_for_real_audio(self):
+    @staticmethod
+    def audio_sha256(path):
+        import hashlib
+        return hashlib.sha256(path.read_bytes()).hexdigest().upper()
+
+    def write_bgm_registration(self, pack, audio_path, **overrides):
+        import hashlib
+        record = {"schemaVersion": "0.1", "skill": "music-expert", "provenance": "manual_registration",
+                  "title": audio_path.stem, "sha256": self.audio_sha256(audio_path),
+                  "license": "cc0", "licenseEvidence": "https://example.org/cc0",
+                  "distributionBoundary": "internal_test",
+                  "decodeProbe": {"status": "passed", "engine": "ffmpeg"}}
+        record.update(overrides)
+        doc = pack / "07_授权音频" / f"BGM-候选登记-{audio_path.stem}-REG.json"
+        doc.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        return doc
+
+    def write_bgm_analysis(self, pack, audio_path):
+        report = {"schemaVersion": "0.1", "skill": "music-expert", "purpose": "bgm_music_analysis",
+                  "source": {"sha256": self.audio_sha256(audio_path), "decodedDurationMs": 200},
+                  "tempoBpm": 120.0, "energySegments": [], "hitPoints": []}
+        doc = pack / "07_授权音频" / f"BGM-分析报告-{audio_path.stem}-ANA.json"
+        doc.write_text(json.dumps(report, ensure_ascii=False), encoding="utf-8")
+        return doc
+
+    def make_provided_bgm_pack(self, pack):
         import shutil
         import subprocess
         if shutil.which("ffmpeg") is None:
             self.skipTest("ffmpeg is required to synthesize a decodable wav")
+        self.fill_required_documents(pack)
+        with next(pack.glob("01_*.md")).open("a", encoding="utf-8") as handle:
+            handle.write("\nBGM decision: provided\n")
+        (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+        audio = pack / "07_授权音频" / "real.wav"
+        subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "sine=frequency=440:duration=0.2", str(audio)],
+                       check=True, capture_output=True)
+        return audio
+
+    def test_register_records_decode_probe_for_real_audio(self):
         temporary, pack = self.create_pack()
         with temporary:
-            self.fill_required_documents(pack)
-            with next(pack.glob("01_*.md")).open("a", encoding="utf-8") as handle:
-                handle.write("\nBGM decision: provided\n")
-            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
-            subprocess.run(
-                ["ffmpeg", "-y", "-f", "lavfi", "-i", "sine=frequency=440:duration=0.2", str(pack / "07_授权音频" / "real.wav")],
-                check=True, capture_output=True,
-            )
+            audio = self.make_provided_bgm_pack(pack)
+            self.write_bgm_registration(pack, audio)
             code, result = self.run_cli("register", "--pack", str(pack))
             self.assertEqual(0, code, result)
             self.assertEqual("completed", result["status"])
             manifest = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))
             self.assertEqual("passed", manifest["audioAssets"][0]["decodeProbe"]["status"])
+            self.assertIn("bgmAnalysisPending", result)  # registration present, analysis absent -> soft prompt
+
+    def test_provided_audio_without_registration_is_incomplete(self):
+        """N1: decodable bytes alone are not a license chain."""
+        temporary, pack = self.create_pack()
+        with temporary:
+            self.make_provided_bgm_pack(pack)
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(2, code)
+            self.assertEqual("incomplete", result["status"])
+            self.assertEqual(["07_授权音频/real.wav"], [p for p in result["unregisteredAudio"]])
+            self.assertTrue(any("music-expert" in item for item in result["incompleteRequiredEntries"]))
+            self.assertFalse((pack / "material-pack.json").exists())
+
+    def test_registration_and_analysis_are_hashed_into_manifest(self):
+        import hashlib
+        temporary, pack = self.create_pack()
+        with temporary:
+            audio = self.make_provided_bgm_pack(pack)
+            registration = self.write_bgm_registration(pack, audio, styleTags=["epic"])
+            analysis = self.write_bgm_analysis(pack, audio)
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code, result)
+            self.assertNotIn("bgmAnalysisPending", result)
+            asset = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))["audioAssets"][0]
+            self.assertEqual(hashlib.sha256(registration.read_bytes()).hexdigest().upper(), asset["bgmRegistration"]["sha256"])
+            self.assertEqual("cc0", asset["bgmRegistration"]["licenseType"])
+            self.assertEqual(hashlib.sha256(analysis.read_bytes()).hexdigest().upper(), asset["bgmAnalysis"]["sha256"])
+
+    def test_validate_detects_tampered_bgm_registration(self):
+        temporary, pack = self.create_pack()
+        with temporary:
+            audio = self.make_provided_bgm_pack(pack)
+            registration = self.write_bgm_registration(pack, audio)
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code, result)
+            tampered = json.loads(registration.read_text(encoding="utf-8"))
+            tampered["license"] = "owned"  # someone edits the license after registration
+            registration.write_text(json.dumps(tampered, ensure_ascii=False), encoding="utf-8")
+            code, result = self.run_cli("validate", "--pack", str(pack))
+            self.assertEqual(1, len([f for f in result["manifestFailures"] if f["type"] == "bgmRegistration_tampered"]))
 
     def test_duplicate_file_names_get_unique_asset_ids(self):
         temporary, pack = self.create_pack()

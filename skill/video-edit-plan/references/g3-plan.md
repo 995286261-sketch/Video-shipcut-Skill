@@ -4,10 +4,10 @@
 
 G3 还必须读取 G2 审核决定中的 `approvedNarrationRef`、`voiceBriefRef` 和 `factCitationRef`。`approvedNarrationRef` 是唯一口播输入；不得使用候选稿、创作稿、旧版稿或 `supersededDraftRefs` 中的稿件，也不得按文件名、时间戳或聊天上下文猜测“最新稿”。若用户在 G3 指定新稿，必须回到 G2：将该精确文件路径写入新的 `approvedNarrationRef`，记录该稿事实状态，再开始 G3，不能静默替换。
 
-运行校验时必须传入决策文件：
+运行校验时必须传入决策文件；素材包含已登记 BGM 时还必须传入 BGM 机器链两个参数（见"BGM 对齐与机器消费"一节）：
 
 ```powershell
-python skill/video-edit-plan/scripts/validate_g3_plan.py --plan <G3计划.json> --evidence <G2证据清单.json> --g2-decision <G2审核决定.json> --visual-analysis <G3视觉分析.json> --semantic-beats <G3口播语义节拍.json>
+python skill/video-edit-plan/scripts/validate_g3_plan.py --plan <G3计划.json> --evidence <G2证据清单.json> --g2-decision <G2审核决定.json> --visual-analysis <G3视觉分析.json> --semantic-beats <G3口播语义节拍.json> --material-pack <G0-素材包/material-pack.json> --bgm-alignment <G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json>
 ```
 
 G2 决策只有 `status: approved_for_g3` 才能放行；计划中的 `narrationDraft` 与 `narrationDecisionRef` 必须分别精确匹配决策的 `approvedNarrationRef` 与校验命令传入的决策路径。若用户已人肉判断某客观断言为真，可在 G2 决策的 `userManuallyVerifiedClaims` 列表中逐条登记，并标明该来源层级不是一手出处；不得把它改写成“官方已核验”。
@@ -126,6 +126,8 @@ G3 必须产出一份版本化节点回显，作为用户一次性审阅的索�
 python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回显数据.json> --plan <G3计划.json>
 ```
 
+计划含 `bgmPlan` 时回显数据升 **卡片 v0.2**（`schemaVersion: "0.2"`）：每行必须有与计划一致的 `layoutTier`，卡头必须有 `bgmBasis` 块（轨偏移、吸附 n/m、ducking 句数、对齐产物指认），且校验必须加传 `--alignment <BGM-对齐建议-v0.2.json>`——`bgmBasis` 数字与对齐产物逐项对账，卡片不可能与机器产物打架。渲染用 `render_g3_review_card.py`（同样带 `--alignment`），BGM 乐句格渲染为 `乐句 · 档位档`，`bgmBasis` 渲染为"BGM 依据区"。
+
 `final_review` 必须使用固定八列的 `columns`，并有一行且仅一行对应计划中的每个 `seg-xxx`。每行须含精确输出/源片毫秒切点、逐字口播、实际观察、语义状态、主体/风险、BGM 乐句和转场。校验器会拒绝缺列、错序、候选 ID、`未生成/无/待缩窄/候选/待定` 等占位文本、漏行、非连续输出时间、未验证画面及非 `direct_match/not_applicable` 语义。`semantic_selection_review` 使用另一份固定七列合同，不能与 `--plan` 同时使用，也不能称为最终审核。
 
 口播介绍机体外观时，画面必须有可见的对应外观；口播介绍 NT-D 的激活或形态时，画面必须有对应的变形、红色精神感应框架或毁灭模式特征。仅因画面同属独角兽/驾驶员/战斗场景而通过，一律视为 `semantic_mismatch`。带此状态的片段不得进入 G4。
@@ -150,9 +152,23 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 
 先处理源字幕，再放新字幕；不得以“基本盖住”视为通过。标题/信息卡出现时，口播应错开 0.5–1 秒或切换车道。
 
-## BGM 与参考边界
+## BGM 对齐与机器消费（G3.5，music-expert 接口）
 
-先确认一首获准 BGM，再记录章节切换的乐句、动作段重拍、口播压低区间和纯音乐片尾。讲解语义优先于逐拍卡点；G4 可在 2–6 帧内微调。
+素材包 `07_授权音频` 有登记 BGM 时，G3.5 排时间线**必须**消费 BGM 专员对齐器，禁止手抄乐句表（002 教训：数字有出处但出处不可查证）：
+
+1. 跑一次对齐（输入全是既有产物，不改素材）：
+   ```powershell
+   python skill/music-expert/scripts/music_align.py --report <G0-素材包/07_授权音频/BGM-分析报告-*.json> --voice-brief <G2 配音清单.json> --timeline-ms <成片时长> --output-dir <G3-剪辑计划/BGM/> --climax-sentence <高潮句ID>
+   ```
+   产物：`BGM-对齐建议-v0.2.json`（轨偏移、吸附表、机器乐句表 `layout.phrasesOnTimeline`、逐句档位草稿）与 `BGM-对齐回显-v0.2.md`。
+
+   **验证模式期望（N9）**：若项目已在 G2 走过节拍蓝图循环（`g2-script-review-gates.md` 3.5 节，口播是照鼓点栅格排的版），本步对齐是对账设计意图：吸附应接近全命中、锚点偏差应为 0。miss 多说明定稿后稿子又漂了——回 G2 改稿重批，**不得在 G3 硬凑或变形音频**。未走蓝图的项目（含纯旁白型）维持原样：吸附纯建议，miss 如实报告。
+2. 计划写 `bgmPlan`：只填哈希引用与对齐产物里的数字（`audioSha256`/`reportSha256`/`alignmentRef`/`alignmentSha256`/`trackOffsetMs`/`fades`），乐句表本体不复制；规格与厚检查清单见[计划合同](plan-contract.md)"G3 BGM 计划"节。
+3. 选段与时间线：每个 segment 必须带 `layoutTier`（词表 快切/推进/常规/留白）。专员草稿是机械建议：段落边界作章节卡/转场候选、高能量段的段落排快切、低能量段排慢镜留白；最终档位由终审八列回显逐行人工定夺，用户改档后以用户为准写回计划。
+4. **单一人工门禁**（2026-09-10 用户拍板）：对齐中途不设请批点，专员回显卡按 D12 原样内联在终审卡之后供核对；G3 全流程用户只在终审回显出现一次。
+5. 想改对齐数字（偏移、容差、档位阈值）只能改 music_align 参数重跑并留参数变更记录；手改产物 JSON 会被哈希对账拒绝。
+
+红线不变：讲解语义优先于逐拍卡点，G4 可在 2–6 帧内微调；BGM 不改稿、不改句时值；吸附是建议不是命令。
 
 不要为追随参考片的能量曲线，把一小段前奏循环拼接成“长前奏”。若获准 BGM 本身没有合适的低能铺垫，只能保留原版编排、换一首自带该段落的获准曲目，或在用户授权后使用成熟的重编排方案。先给用户试听/确认，再登记版本；被否决的 BGM 版本必须记录为禁用。
 
@@ -165,7 +181,7 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 1. `G3-字幕时间轴-*.ass` 与同内容 `*.srt`；
 2. `G3-字幕布局合同-*.json`；
 3. `G3-源字幕处理表-*.md`，含最终时间码与像素处理范围；
-4. BGM 卡点表、封面候选和最终切点表。
+4. BGM 对齐产物（`BGM/BGM-对齐建议-v0.2.json` + `BGM/BGM-对齐回显-v0.2.md`，含机器乐句表与档位草稿；有 BGM 时替代手工卡点表）、封面候选和最终切点表。
 
 字幕时间轴与布局合同必须通过行数/宽度机器校验后才能进入最终回显：
 

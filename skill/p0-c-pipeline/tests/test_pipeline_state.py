@@ -172,6 +172,40 @@ class PipelineStateTest(unittest.TestCase):
         state = json.loads(self.state.read_text(encoding="utf-8"))
         self.assertEqual("确认 G1", state["nodes"]["G1"]["approval"]["approvalToken"])
         self.assertEqual("确认 G1", state["nodes"]["G1"]["approval"]["approvalResponse"])
+        self.assertFalse(state["nodes"]["G1"]["approval"]["normalizedFromVariant"])
+
+    def test_typed_variants_are_normalized_with_verbatim_trace(self):
+        self.init()
+        self.prepare_node("G1")
+        result = self.approve("G1", token="确认G1")
+        self.assertEqual("G2", result["currentNode"])
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G1"]["approval"]
+        self.assertEqual("确认 G1", approval["approvalToken"])
+        self.assertEqual("确认G1", approval["approvalResponseVerbatim"])
+        self.assertTrue(approval["normalizedFromVariant"])
+        # bare 确认 attaches to the current pending gate only (node==currentNode was enforced above)
+        self.prepare_node("G2")
+        self.approve("G2", token="确认")
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G2"]["approval"]
+        self.assertEqual("确认 G2", approval["approvalResponse"])
+        self.assertEqual("确认", approval["approvalResponseVerbatim"])
+        # a variant naming another node must never approve this one
+        self.prepare_node("G3")
+        self.approve("G3", token="确认G2", code=2)
+        # 确定了 is the most natural bare completion (zaku G2: "OK,那现在已经确定了"
+        # was rejected for its prefix — bare 了-form passes, prefixed prose never does)
+        self.approve("G3", token="确定了")
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G3"]["approval"]
+        self.assertEqual("确认 G3", approval["approvalToken"])
+        self.assertEqual("确定了", approval["approvalResponseVerbatim"])
+        self.assertTrue(approval["normalizedFromVariant"])
+        # 确定 is the synonym real users type (zaku G2 live run: "确定 G2")
+        self.prepare_node("G4")
+        self.approve("G4", token="确定G4")
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G4"]["approval"]
+        self.assertEqual("确认 G4", approval["approvalToken"])
+        self.assertEqual("确定G4", approval["approvalResponseVerbatim"])
+        self.assertTrue(approval["normalizedFromVariant"])
 
     def test_g2_requires_existing_and_reviewed_references(self):
         self.init()

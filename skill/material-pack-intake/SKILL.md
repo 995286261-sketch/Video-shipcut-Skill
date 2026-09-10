@@ -33,7 +33,7 @@ python scripts/material_pack.py validate --pack <素材包目录>
 ```
 
 - `init`：将七目录模板复制到一个不存在的目标目录。
-- `register`：为 `02_原始素材/` 和 `07_授权音频/` 计算哈希，保留已声明的编辑输入，并写入 `material-pack.json`。
+- `register`：为 `02_原始素材/` 和 `07_授权音频/` 计算哈希，保留已声明的编辑输入，并写入 `material-pack.json`。`07_授权音频/` 内每段 BGM 音频必须携带与其 sha256 对应的 music-expert 登记记录，否则 `register` 返回 `incomplete`；分析报告在位则一并入册（缺失仅软提示，G0 不硬依赖 DSP 运行时）。
 - `validate`：报告必填输入、可选目录、清单路径安全和哈希不匹配，不改动源媒体。
 
 ## 边界
@@ -48,6 +48,8 @@ python scripts/material_pack.py validate --pack <素材包目录>
 ## G0 Fixed Start Form
 
 Before receiving files for every new project, present `references/g0-start-form.md` 的**核心五问**。用户可以自然语言回答，不需要写技术字段。BGM 必须明确记录为 `provided`、`use library later` 或 `no BGM`。后补音乐必须创建或更新素材包版本记录，注明使用范围，不得静默合并。
+
+**BGM=`provided` 时的登记链（music-expert 人工轨，N1 接线）**：用户音频文件放入 `07_授权音频/` 后、`register` 之前，依次执行 ① `music-expert` 的 `music_register_candidate.py --audio <文件> --license-type … --license-evidence … [--tags 词表标签] --output-dir <素材包>/07_授权音频/`（不联网、不改源文件），②（建议紧随）`music_analyze.py --input <文件> --output-dir <素材包>/07_授权音频/`。`material-pack.json` 的 `audioAssets[].bgmRegistration/bgmAnalysis` 记录两份文档的路径与哈希，`validate` 会检出登记后的篡改。
 
 整理完成后必须向用户展示**资料清单回显**，确认后才执行 register 和 validate。
 

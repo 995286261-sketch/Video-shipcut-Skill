@@ -182,6 +182,21 @@ class G1DirectionTest(unittest.TestCase):
             self.assertEqual(2, second)
             self.assertEqual("blocked", result["status"])
 
+    def test_reference_analysis_dir_written_before_brief_is_not_a_conflict(self):
+        """N3 ordering: 参考视频分析 artifacts legitimately live in G1-创作方向/ before the brief exists."""
+        temporary, pack = self.create_pack()
+        with temporary:
+            workspace = Path(temporary.name) / "workspace"
+            preexisting = workspace / "工作台" / "demo-001" / "G1-创作方向" / "G1-参考视频分析"
+            preexisting.mkdir(parents=True)
+            (preexisting / "reference-analysis-manifest-v0.1.json").write_text("{}", encoding="utf-8")
+            input_path = self.write_input(temporary.name, self.valid_direction())
+            code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(workspace), "--input", str(input_path), "--confirmed")
+            self.assertEqual(0, code, result)
+            self.assertEqual("demo-001", result["projectId"])
+            self.assertTrue((preexisting / "reference-analysis-manifest-v0.1.json").is_file())
+            self.assertTrue((preexisting.parent / "G1-方向简报.md").is_file())
+
     def test_ui_only_promises_g1(self):
         yaml = (SKILL / "agents" / "openai.yaml").read_text(encoding="utf-8")
         self.assertIn("G1", yaml)

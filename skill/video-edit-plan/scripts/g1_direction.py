@@ -228,13 +228,16 @@ def main():
         emit({"status": "blocked", "blockers": [{"type": "missing_explicit_confirmation", "detail": "未传入 --confirmed，禁止写入方向简报"}], "finishedAt": now()})
         return 2
     destination = target_directory(args.workspace, data["projectId"], args.on_conflict)
-    if destination.exists() and args.on_conflict == "stop":
+    # Conflict means "an existing direction brief would be overwritten" — not merely that
+    # the directory exists: G1-参考视频分析/ artifacts are legitimately written before it.
+    brief_exists = (destination / "G1-方向简报.json").exists() or (destination / "G1-方向简报.md").exists()
+    if brief_exists and args.on_conflict == "stop":
         emit({"status": "blocked", "blockers": [{"type": "project_id_conflict", "detail": str(destination)}], "finishedAt": now()})
         return 2
-    destination.mkdir(parents=True, exist_ok=False)
+    destination.mkdir(parents=True, exist_ok=True)
     (destination / "G1-方向简报.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (destination / "G1-方向简报.md").write_text(markdown(data, args.pack), encoding="utf-8")
-    emit({"status": "written", "projectId": destination.name, "output": str(destination), "finishedAt": now()})
+    emit({"status": "written", "projectId": data["projectId"], "output": str(destination), "finishedAt": now()})
     return 0
 
 

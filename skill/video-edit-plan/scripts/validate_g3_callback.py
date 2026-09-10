@@ -17,6 +17,13 @@ SELECTION_HEADERS = [
     "实际画面观察", "语义结论 / 风险", "下一步",
 ]
 PLACEHOLDER = re.compile(r"未生成|待缩窄|候选|待定|\bnone\b|^无$", re.IGNORECASE)
+# Shared controlled vocabulary with validate_g3_plan.py / music_align v0.2.
+LAYOUT_TIERS = {"快切", "推进", "常规", "留白"}
+BGM_BASIS_FIELDS = ("alignmentRef", "trackOffsetMs", "timelineMs", "snappedCount", "missedCount", "duckedSentences")
+
+
+def normalized_ref(value: str) -> str:
+    return value.replace("\\", "/").lstrip("./")
 
 
 def fail(message: str) -> None:
@@ -58,11 +65,46 @@ def contains_placeholder(value: object) -> bool:
     return False
 
 
-def validate_final(callback: dict, plan: dict) -> int:
+def validate_bgm_basis(callback: dict, plan: dict, alignment: dict) -> None:
+    """Card v0.2: when the plan consumes a machine BGM alignment, the callback
+    must be schemaVersion 0.2 with a bgmBasis block whose numbers equal both
+    the plan and the alignment artifact — the card cannot disagree."""
+    if callback.get("schemaVersion") != "0.2":
+        fail("plans with bgmPlan require callback schemaVersion 0.2 (BGM basis card)")
+    basis = callback.get("bgmBasis")
+    if not isinstance(basis, dict):
+        fail("schemaVersion 0.2 final_review requires a bgmBasis block")
+    missing = [field for field in BGM_BASIS_FIELDS if field not in basis]
+    if missing:
+        fail(f"bgmBasis missing fields: {', '.join(missing)}")
+    bgm_plan = plan.get("bgmPlan", {})
+    if basis["trackOffsetMs"] != bgm_plan.get("trackOffsetMs"):
+        fail("bgmBasis.trackOffsetMs must equal the plan's bgmPlan.trackOffsetMs")
+    if basis["timelineMs"] != plan.get("timelineDurationMs"):
+        fail("bgmBasis.timelineMs must equal plan timelineDurationMs")
+    if normalized_ref(str(basis["alignmentRef"])) != normalized_ref(str(bgm_plan.get("alignmentRef", ""))):
+        fail("bgmBasis.alignmentRef must identify the same alignment artifact as bgmPlan.alignmentRef")
+    inner = alignment.get("alignment", {})
+    if basis["trackOffsetMs"] != inner.get("offsetMs") or basis["timelineMs"] != inner.get("timelineMs"):
+        fail("bgmBasis offset/timeline must equal the alignment artifact numbers")
+    if basis["snappedCount"] != len(alignment.get("snapped", [])) or basis["missedCount"] != len(alignment.get("missed", [])):
+        fail("bgmBasis snap counts must equal the alignment artifact (rerun music_align instead of editing the card)")
+    if basis["duckedSentences"] != len(alignment.get("ducking", [])):
+        fail("bgmBasis.duckedSentences must equal the alignment artifact ducking count")
+
+
+def validate_final(callback: dict, plan: dict, alignment: dict | None = None) -> int:
     if callback.get("columns") != FINAL_HEADERS:
         fail("final_review columns must exactly match the fixed eight-column template and order")
     if callback.get("projectId") != plan.get("projectId"):
         fail("callback projectId must match plan projectId")
+    has_bgm = isinstance(plan.get("bgmPlan"), dict)
+    if has_bgm:
+        if alignment is None:
+            fail("schemaVersion 0.2 final_review requires --alignment to verify the BGM basis block")
+        validate_bgm_basis(callback, plan, alignment)
+    elif callback.get("schemaVersion") == "0.2" and callback.get("bgmBasis"):
+        fail("bgmBasis is only allowed when the plan carries bgmPlan")
     duration = callback.get("durationMs")
     if not isinstance(duration, int) or duration <= 0:
         fail("final_review requires positive integer durationMs")
@@ -120,6 +162,12 @@ def validate_final(callback: dict, plan: dict) -> int:
             plan_segment.get("startMs"), plan_segment.get("endMs"),
         ):
             fail(f"{segment_id} callback cut points must exactly match the plan")
+        if has_bgm:
+            tier = row.get("layoutTier")
+            if tier not in LAYOUT_TIERS:
+                fail(f"{segment_id} layoutTier must be one of 快切/推进/常规/留白")
+            if tier != plan_segment.get("layoutTier"):
+                fail(f"{segment_id} callback layoutTier must equal the plan segment's layoutTier")
         if plan_segment.get("visualVerification", {}).get("status") != "verified":
             fail(f"{segment_id} requires verified visualVerification in the plan")
         if plan_segment.get("semanticAlignment", {}).get("status") not in {"direct_match", "not_applicable"}:
@@ -144,17 +192,19 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--callback", required=True, type=Path)
     parser.add_argument("--plan", type=Path)
+    parser.add_argument("--alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json (required for card v0.2 with bgmBasis)")
     args = parser.parse_args()
     callback = load(args.callback)
-    if callback.get("schemaVersion") != "0.1" or callback.get("node") != "G3":
-        fail("callback must be a G3 schemaVersion 0.1 artifact")
+    if callback.get("schemaVersion") not in {"0.1", "0.2"} or callback.get("node") != "G3":
+        fail("callback must be a G3 schemaVersion 0.1 or 0.2 artifact")
+    alignment = load(args.alignment) if args.alignment else None
     callback_type = callback.get("callbackType")
     if callback_type == "final_review":
         if not args.plan:
             fail("final_review requires --plan for cross-checking")
-        count = validate_final(callback, load(args.plan))
+        count = validate_final(callback, load(args.plan), alignment)
     elif callback_type == "semantic_selection_review":
-        if args.plan:
+        if args.plan or alignment:
             fail("semantic_selection_review must not be presented as a final plan callback")
         count = validate_selection(callback)
     else:
