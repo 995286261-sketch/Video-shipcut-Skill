@@ -61,10 +61,12 @@
 - **㉚**：`g4_render.py --output-dir` 直接平铺切片，与合同约定的 `clean-segments/` 子目录语义不一致。**状态：已验证（2026-09-08）**；切片固定输出到 `<output-dir>/clean-segments/` 并在结果 JSON 中回显 `segmentsDir`；每段 ffmpeg 退出后按 ㉒ 规则核验产物存在且非空，"退出 0 但未落盘"即失败。验证：`~/.local/bin/python3 skill/local-video-render/tests/test_g4_render_profile.py`（2/2 通过，含 `clean-segments/seg-001.mp4` 存在与平铺路径不存在断言）。修复提交：`5e291d3`（Enforce workbench layout, audio decode probe, and G4 manifest hygiene）。
 - **㉛**（2026-09-08 复用机制复查新增）：G3 全片关键帧抽取无代码级缓存复用——`cacheKey` 只写在合同里，重跑必重新抽帧，下游再烧识图 Token；且 `analysisScope` 把间隔硬编码为 15000ms。**状态：已验证（2026-09-08）**；`g3_extract_visual_analysis_keyframes.py` 引入抽取级 `cacheKey`（`assetId`+SHA-256+范围+`intervalMs`）并在抽取前扫描输出目录与 `--cache-root`：同键且全部帧图真实存在 → `cache_hit` 直接返回；键不同 → 写新版本文件不覆盖旧 manifest；帧图缺失 → 同键原地重建；`analysisScope` 按实际间隔生成。基线实测佐证：kshatriya 账本中 18 帧曾因 ⑳ 缺改判通道被迫以 promptVersion 升版重复识图。验证：`~/.local/bin/python3 skill/video-edit-plan/tests/test_g3_frame_extraction.py`（8/8 通过，含缓存命中零重抽、间隔漂移双 manifest 共存、缺帧重建）。修复提交：`ae49915`（Script voice synthesis, whisper alignment, and keyframe cache reuse）。
 
+- **㉜**（2026-09-10 G3 闭环后用户质询发现）：BGM 专员产物在 G4/G5 断链——`g4_assemble.py` 只吃裸 `--bgm-audio`+全局 `--bgm-gain-db`+布尔 `--bgm-duck`（sidechain），G3 终审批的轨偏移/淡入淡出/逐句 ducking 区间一个都没消费；G5 对 bgm/license 零校验。后果：批的与做的不一致且无人发现。**状态：G4 侧已验证（2026-09-10，N6）**；按"共用功能做成专员能力、节点只接线"原则（用户 2026-09-10 定调）：新建 `music_mix_plan.py` 生成《BGM-混音合同-v0.1》——三重哈希对账（BGM 文件 sha == bgmPlan.audioSha256 == 对齐 reportCacheKey；对齐产物 sha == bgmPlan.alignmentSha256；偏移/fades/句区间与计划逐字段相等）+ §6-② 深度参数化 + ducking 窗口自动合并 + 回显卡；`g4_assemble.py` 改为只执行合同（`--bgm-mix-contract`，无合同拒绝、sha 不符拒绝），装配记录 `bgmMix` 落全部执行参数与合同哈希供 G5 审计（N7 接线中）。测试：music_mix_plan 8/8、g4_assemble 12/12、全量回归 22/22；zaku 真实数据冒烟（15 句 ducking 合并为 0–113.310s 一段、哈希链全通）。
+
 ## 统一修复批次建议顺序
 
 1. 先修状态、审批、schema、路径和覆盖风险：瑕疵1/2、⑥、⑧、⑨、⑱、⑲、⑳、㉑、㉒、㉓、㉙、㉚。
-2. 再修可复现质量链：⑤、⑪、⑭、⑮、⑯、⑰、㉕、㉖、㉗、㉘、㉛。
+2. 再修可复现质量链：⑤、⑪、⑭、⑮、⑯、⑰、㉕、㉖、㉗、㉘、㉛、㉜（G4 侧已完成，G5=N7 待做）。
 3. 单独立项新增能力：⑫ BGM 内容分析；⑦ 参考素材哈希登记策略；瑕疵3 作为低优先级示例清理。
 
 本文件只记录问题与修复顺序，不代表已经修改 skill。任何修复应在单独批次完成后重新跑针对性测试。
