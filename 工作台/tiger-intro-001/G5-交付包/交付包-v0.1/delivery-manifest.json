@@ -1012,7 +1012,7 @@
     "distribution": "public_bilibili_noncommercial"
   },
   "distribution": "public_bilibili",
-  "status": "g5_pending_human_review",
+  "status": "completed",
   "finishedAt": "2026-09-12T00:20:00+08:00",
   "componentRefs": {
     "traceability": "source-timecode-list.json",

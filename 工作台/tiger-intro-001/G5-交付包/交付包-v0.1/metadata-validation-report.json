@@ -4,7 +4,7 @@
  "projectId": "tiger-intro-001",
  "generatedAt": "2026-09-12",
  "bundle": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1",
- "status": "g5_pending_human_review",
+ "status": "completed",
  "checks": {
   "decode": {
    "pass": true,
@@ -105,7 +105,7 @@
   "watermark_in_video",
   "font_license_note"
  ],
- "humanReviewStatus": "pending",
+ "humanReviewStatus": "accepted",
  "artifacts": {
   "finalVideo": {
    "path": "final-video.mp4",

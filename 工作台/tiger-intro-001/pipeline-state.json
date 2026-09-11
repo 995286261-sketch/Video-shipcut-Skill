@@ -20,8 +20,8 @@
     ],
     "evidence": "\u5de5\u4f5c\u53f0/tiger-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u97f3\u4e50\u68c0\u7d22/BGM-\u5019\u9009\u767b\u8bb0-Infinity-\u9cab\u865e\u8c46\u8150\u6c64-remix-FB88461C.json"
   },
-  "currentNode": "G5",
-  "status": "review_required",
+  "currentNode": "completed",
+  "status": "completed",
   "nodes": {
     "G0": {
       "status": "completed",
@@ -231,7 +231,7 @@
       }
     },
     "G5": {
-      "status": "review_required",
+      "status": "completed",
       "inputRefs": [],
       "artifactRefs": [
         "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json"
@@ -244,7 +244,8 @@
           "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
           "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
           "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/BGM\u94fe\u8def\u5ba1\u8ba1-v0.1.json",
-          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/failure-samples/README.md"
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/failure-samples/README.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u786e\u8ba4\u8bb0\u5f55.md"
         ],
         "checklistIds": [
           "check_frames",
@@ -255,11 +256,22 @@
         ],
         "renderedAt": "2026-09-12T00:25:00+08:00"
       },
-      "approval": null
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvalTokenVerbatim": "\u786e\u8ba4G5",
+        "approvalResponseVerbatim": "\u786e\u8ba4G5",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-11T10:28:25Z",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json"
+      }
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Resolve the listed review or blocker items.",
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
   "createdAt": "2026-09-11T05:53:06Z",
-  "updatedAt": "2026-09-11T10:25:47Z"
+  "updatedAt": "2026-09-11T10:28:25Z"
 }

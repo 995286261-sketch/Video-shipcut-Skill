@@ -2,7 +2,7 @@
  "schemaVersion": "0.1",
  "projectId": "tiger-intro-001",
  "node": "G5",
- "status": "pending",
+ "status": "approved",
  "humanReviewPoints": [
   "hrp-final-timeline",
   "hrp-n02-naming",
@@ -11,15 +11,19 @@
   "hrp-packaging"
  ],
  "coverage": {
-  "fullPlayback": "pending",
-  "sourceSubtitleResidue": "pending",
-  "subtitleSafeArea": "pending",
-  "narrationSync": "pending",
-  "keyShots": "pending",
-  "openingEnding": "pending",
-  "audioMix": "pending",
-  "voiceProfile": "pending",
-  "distributionBoundary": "pending"
+  "fullPlayback": "confirmed",
+  "sourceSubtitleResidue": "confirmed",
+  "subtitleSafeArea": "confirmed",
+  "narrationSync": "confirmed",
+  "keyShots": "confirmed",
+  "openingEnding": "confirmed",
+  "audioMix": "confirmed",
+  "voiceProfile": "confirmed",
+  "distributionBoundary": "confirmed"
  },
- "acceptedWarnings": []
+ "acceptedWarnings": [],
+ "decision": "accepted",
+ "reviewedAt": "2026-09-12",
+ "reviewedBy": "用户（确认G5口令，选项1 确认交付）",
+ "note": "警告（黑帧3段=暗场景内容、重复画面检测器缺失、BGM试听件自担、水印保留、字体许可）保持可见未逐条接受；分发边界=public_bilibili_noncommercial 不升级"
 }
