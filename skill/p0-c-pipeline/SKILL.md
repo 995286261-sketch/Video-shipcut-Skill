@@ -42,6 +42,8 @@ Use `status` when the user says "project status", "continue", or "next step". It
 
 Record a node's artifact references and review items, set it to `review_required`, then create and register its machine-validated review-gate receipt before asking for approval. Use `approve` only after the user's confirmation is explicitly received and recorded; the CLI canonicalizes the typed forms users actually write (`确认G5`, bare `确认` for the current gate) and keeps the verbatim reply in state, but a card, a selection, or a vague acknowledgement still cannot advance state. Read `references/operator-dialogue.md` for the exact conversational handoffs and `references/pipeline-state-contract.md` for required fields.
 
+Per operator-dialogue's single-echo contract (用户 2026-09-11 定案): a node stops for the user exactly once — its final review echo. Mid-node preference decisions (title, angle, search terms, track pick, style parameters) carry preselected defaults rendered as 【默认=推荐｜依据】 on that card; the user's rejection re-runs only the rejected step. Gate tokens never disappear, G0 intake questions are never pre-answered, and fact/identity/acceptance decisions (G3 目标主体, G5 human QA) are never defaulted.
+
 ## Hard gates
 
 - G2 approval requires `approvedNarrationRef` and `factCitationRef`.
