@@ -21,6 +21,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import urllib.error
@@ -109,6 +110,14 @@ def search(query: str, limit: int) -> tuple[dict | None, dict | None]:
     if blocker is not None:
         return None, blocker
     return payload, None
+
+
+def title_slug(title: str | None) -> str:
+    """把曲名变成文件名安全片段（保留中日韩文字），用户必须在文件名上就听得懂是哪首。"""
+    raw = str(title or "").strip()
+    cleaned = re.sub(r'[\\/:*?"<>|\x00-\x1f]', "", raw)
+    cleaned = re.sub(r"\s+", "_", cleaned).strip("._")
+    return (cleaned[:48] or "untitled")
 
 
 def download(url: str, target: Path) -> str | None:
@@ -213,7 +222,7 @@ def main() -> int:
         if not args.no_preview:
             target_dir = args.output_dir / "candidates"
             target_dir.mkdir(parents=True, exist_ok=True)
-            target = target_dir / f"netease-{record['neteaseId']}-preview.mp3"
+            target = target_dir / f"netease-{record['neteaseId']}-{title_slug(record.get('title'))}.mp3"
             failure = download(record["previewUrl"], target)
             if failure is not None:
                 excluded.append({"neteaseId": record["neteaseId"], "name": record["title"], "reason": failure})

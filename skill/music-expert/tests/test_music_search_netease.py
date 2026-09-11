@@ -31,6 +31,14 @@ class PureFunctionTest(unittest.TestCase):
         self.assertIn("2721110890", record["previewUrl"])
         self.assertTrue(record["attributionRequired"])
 
+    def test_title_slug_keeps_files_identifiable(self):
+        self.assertEqual("Melodic_Minor（Phonk）", netease.title_slug("Melodic Minor（Phonk）"))
+        self.assertEqual("生龙", netease.title_slug(" 生龙 "))
+        self.assertEqual("ab", netease.title_slug("a/:*?\"<>|b"))  # 非法字符直接剥掉
+        self.assertEqual("a_b", netease.title_slug("a  b"))  # 空格折叠为下划线
+        self.assertEqual("untitled", netease.title_slug(None))
+        self.assertLessEqual(len(netease.title_slug("长" * 99)), 48)
+
     def test_risk_control_payload_blocks(self):
         blocker = netease.classify_block({"code": -462, "verifyType": 50, "message": "请绑定手机后再试哦~"})
         self.assertEqual("risk_control", blocker["type"])
