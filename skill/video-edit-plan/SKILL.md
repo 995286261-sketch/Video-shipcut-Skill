@@ -34,6 +34,19 @@ python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路�
 
 输出只写入调用方工作区的 `工作台/<projectId>/G1-创作方向/`，绝不回写素材包或修改原始媒体。`新工作区/` 是待验证提案，未明确启用前不得写入。输入 JSON、字段约束和简报格式见 [G1 引导规则](references/g1-direction-guide.md)。后续计划合同见 [计划合同](references/plan-contract.md)。
 
+## G1 末：找乐编排（BGM 槽 pending 时）
+
+方向简报经用户确认后，读 `pipeline-state.json` 的 `bgm` 槽：`libraryPending` 为真则由本节点把找乐链**编排**走完。G1 只做流程推进与卡片呈现；一切音乐能力经 `skill/music-expert`（合同见其 SKILL 与 references），G1 不实现、不转写、不伪造任何分析结果。步骤：
+
+1. **查经验库先行**：`music_library.py query`（G0 口头偏好里的曲名/感觉）——已建档的歌零成本带出笔记，未清权红灯照显。
+2. **检索词卡**：以 `BGM preference` 原话（在场则为第一优先输入）+ 方向简报 `coreViewpoint`/`styleRules` 推导 1–6 词，逐词标依据，跑 `music_search_terms.py`（`--timeline-ms` 取目标时长毫秒）。卡呈用户可改后重跑；**检索词卡不设门禁口令**——门禁在挑曲。
+3. **找候选**：`music_search_netease.py --terms-file <卡>`（候选自动锁 uncleared+internal_test）→ 锚在场时 `music_recommend.py --profile`（画像嵌 styleBrief）排序 → 可选 `music_listen_omni.py --reference <锚> --library experience/music` 出试听笔记（听觉能力缺失时按专员合同如实提示，不编造）。
+4. **候选歌回显卡**呈用户（侵权横幅必显）；**用户挑定一句即为其决定**，原话记入经验库 `verdicts`。
+5. **回填翻槽**：用户经官方渠道取得整轨 → `music_register_candidate.py` 登记进 `07_授权音频/` → 素材包按版本记录纪律更新 BGM 决策并重 register → `pipeline_state.py bgm-choice --decision provided --evidence <登记记录>` 留痕翻槽。
+6. **初次分析统一在本节点**：对已登记但无分析报告的 BGM 跑 `music_analyze.py` 补三哈希链，产物入 `G1-创作方向/` 并写回经验库档案。
+
+停止条件：G2/G3 的 approve 在 `libraryPending` 时被状态机硬拒（N9：音乐须在首个消费节点前在场）；用户明示不用 BGM 走 `bgm-choice --decision no_bgm`，同样留痕。`provided` 路径（G0 即有歌）跳过 1–5，只做第 6 步。
+
 ## Pipeline Integration
 
 Read `工作台/<projectId>/pipeline-state.json`. Work only when `currentNode` is G1 or G3 and use only registered inputs. Archived files are never inputs. Record only the active node's artifacts and review points through `$p0-c-pipeline`; do not advance G2 or G4.

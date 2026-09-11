@@ -1,5 +1,11 @@
 # 变更记录
 
+## Unreleased — 主线接线批次②：G1 末找乐编排 + 槽一致性后门封堵
+
+- 堵静默改主意后门：`g1_direction.py validate` 新增 G0 `bgm` 槽一致性检查——方向简报的 `bgmDecision` 与槽冲突即拒（改主意必须先走 `pipeline_state.py bgm-choice` 留痕）；G1 只能继承槽，不能覆盖槽。
+- video-edit-plan SKILL 新增"G1 末：找乐编排"节（严守节点专员=编排+卡片、音乐能力全归 music-expert 的分工）：查库先行零成本 → 检索词卡（偏好原话第一优先、不设口令）→ netease 找候选 → 锚定排序 → omni 试听笔记（可选，能力缺失如实提示）→ 候选歌卡（侵权横幅必显）→ 用户挑曲一句即决定（原话入 verdicts）→ 官方渠道整轨登记 → bgm-choice 翻槽 → **初次分析统一 G1** 补三哈希链+档案写回。停止条件与 G2/G3 硬门禁闭环。
+- 测试：g1_direction +1（不一致拒、一致继承放行）。
+
 ## Unreleased — 主线接线批次①：G0 待找乐槽（接上 music-expert 的第一步）
 
 - 兑现 g0-policy 的"下游提醒"空头支票：G0 的 BGM 声明成为机器事实全程携带——模板新增可选 `BGM preference:`（用户口头偏好**原话**，检索词推导第一优先输入）；`material_pack.py register` 把 `bgm` 段（decision/preference/libraryPending/clearCondition）写进 material-pack.json；`pipeline_state.py init` 抬进 state.bgm；`status` 在槽未清时输出 reminder。

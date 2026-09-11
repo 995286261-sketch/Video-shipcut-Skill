@@ -27,6 +27,15 @@ def g0_audio_assets(pack):
     return [{"assetId": item.get("assetId"), "relativePath": item.get("relativePath"), "sha256": item.get("sha256")} for item in manifest.get("audioAssets", []) if isinstance(item, dict)]
 
 
+def g0_bgm_slot(pack):
+    """The BGM declaration G0 landed as machine fact; G1 inherits it, never overrides it."""
+    manifest_path = Path(pack) / "material-pack.json"
+    try:
+        return json.loads(manifest_path.read_text(encoding="utf-8-sig")).get("bgm") or {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
 def emit(value):
     # Keep CLI JSON readable by any Windows code page; consumers decode escapes as Unicode.
     print(json.dumps(value, ensure_ascii=True, indent=2))
@@ -107,6 +116,9 @@ def validate_direction(pack, data):
         errors.append({"field": "bgmDecision", "rule": "必须为 provided、use_library_later 或 no_bgm"})
     elif data.get("bgmDecision") == "provided" and not g0_audio_assets(pack):
         errors.append({"field": "bgmDecision", "rule": "G0 没有已登记音频；请在 G0 补充 BGM 后再选择 provided"})
+    slot_decision = g0_bgm_slot(pack).get("decision")
+    if slot_decision in BGM_DECISIONS and data.get("bgmDecision") in BGM_DECISIONS and data["bgmDecision"] != slot_decision:
+        errors.append({"field": "bgmDecision", "rule": f"与 G0 BGM 槽（声明：{slot_decision}）冲突：改主意须先经 pipeline_state bgm-choice 留痕（翻 provided 需登记证据），方向简报与槽保持一致，不得静默覆盖"})
     direction_choice = data.get("directionChoice")
     if not isinstance(direction_choice, dict) or not isinstance(direction_choice.get("id"), str) or not direction_choice["id"].strip() or not isinstance(direction_choice.get("label"), str) or not direction_choice["label"].strip() or direction_choice.get("source") not in DIRECTION_SOURCES:
         errors.append({"field": "directionChoice", "rule": "必须记录方向卡 id、label 及 agent_recommendation 或 custom 来源"})

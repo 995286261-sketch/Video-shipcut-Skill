@@ -18,7 +18,7 @@ class G1DirectionTest(unittest.TestCase):
         result = subprocess.run([str(PYTHON), str(SCRIPT), *args], capture_output=True, text=True, encoding="utf-8")
         return result.returncode, json.loads(result.stdout)
 
-    def create_pack(self, complete=True):
+    def create_pack(self, complete=True, bgm_decision="no_bgm"):
         temporary = tempfile.TemporaryDirectory()
         pack = Path(temporary.name) / "demo-pack"
         created = subprocess.run([str(PYTHON), str(INTAKE), "init", "--pack", str(pack)], capture_output=True, text=True, encoding="utf-8")
@@ -28,7 +28,7 @@ class G1DirectionTest(unittest.TestCase):
             (pack / "04_授权说明.md").write_text("| 文件名 | 用途 | 是否可用于最终成片 | 来源或授权说明 |\n| --- | --- | --- | --- |\n| clip.mp4 | 测试 | 待确认 | 测试输入 |\n", encoding="utf-8")
             requirements = next(pack.glob("01_*.md"))
             with requirements.open("a", encoding="utf-8") as handle:
-                handle.write("\nBGM decision: no_bgm\n")
+                handle.write(f"\nBGM decision: {bgm_decision}\n")
             (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture")
             registered = subprocess.run([str(PYTHON), str(INTAKE), "register", "--pack", str(pack)], capture_output=True, text=True, encoding="utf-8")
             self.assertEqual(0, registered.returncode)
@@ -75,6 +75,20 @@ class G1DirectionTest(unittest.TestCase):
             code, result = self.run_cli("validate", "--pack", str(pack), "--input", str(input_path))
             self.assertEqual(0, code)
             self.assertEqual("valid", result["status"])
+
+    def test_bgm_slot_mismatch_is_rejected_but_inheriting_passes(self):
+        temporary, pack = self.create_pack(bgm_decision="use_library_later")
+        with temporary:
+            direction = self.valid_direction()
+            direction["bgmDecision"] = "no_bgm"  # 想在方向简报里静默改主意
+            input_path = self.write_input(temporary.name, direction)
+            code, result = self.run_cli("validate", "--pack", str(pack), "--input", str(input_path))
+            self.assertEqual(2, code)
+            self.assertTrue(any("bgm-choice" in error["rule"] for error in result["errors"]))
+            direction["bgmDecision"] = "use_library_later"  # 与槽一致地继承才放行
+            input_path = self.write_input(temporary.name, direction)
+            code, result = self.run_cli("validate", "--pack", str(pack), "--input", str(input_path))
+            self.assertEqual(0, code)
 
     def test_write_requires_explicit_confirmation(self):
         temporary, pack = self.create_pack()
