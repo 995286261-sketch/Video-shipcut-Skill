@@ -21,7 +21,7 @@
     "evidence": "\u5de5\u4f5c\u53f0/tiger-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u97f3\u4e50\u68c0\u7d22/BGM-\u5019\u9009\u767b\u8bb0-Infinity-\u9cab\u865e\u8c46\u8150\u6c64-remix-FB88461C.json"
   },
   "currentNode": "G4",
-  "status": "in_progress",
+  "status": "review_required",
   "nodes": {
     "G0": {
       "status": "completed",
@@ -189,11 +189,29 @@
       }
     },
     "G4": {
-      "status": "in_progress",
+      "status": "review_required",
       "inputRefs": [],
-      "artifactRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/G4-\u5019\u9009\u6210\u7247-v0.1.mp4"
+      ],
       "humanReviewPoints": [],
-      "reviewGate": null,
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/G4-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/G4-\u6e90\u5b57\u5e55\u906e\u853d\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G4-\u526a\u8f91\u6267\u884c/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-11T23:55:00+08:00"
+      },
       "approval": null
     },
     "G5": {
@@ -206,7 +224,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Build and validate local candidate; use ChatCut only if micro-adjustment is requested.",
+  "nextAction": "Resolve the listed review or blocker items.",
   "createdAt": "2026-09-11T05:53:06Z",
-  "updatedAt": "2026-09-11T09:57:18Z"
+  "updatedAt": "2026-09-11T10:06:31Z"
 }

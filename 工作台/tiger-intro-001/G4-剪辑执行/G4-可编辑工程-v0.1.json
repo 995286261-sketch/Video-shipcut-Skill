@@ -1,0 +1,1871 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "tiger-intro-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "inputEvidence": "工作台/tiger-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 50,
+  "timelineDurationMs": 120100,
+  "targetDurationMs": 120000,
+  "durationDeltaMs": 100,
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "order": 1,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 20296,
+        "endMs": 23503,
+        "durationMs": 3207
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 3207,
+        "durationMs": 3207
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 20296,
+        "endMs": 23503,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-002",
+      "order": 2,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 29061,
+        "endMs": 31300,
+        "durationMs": 2239
+      },
+      "timeline": {
+        "startMs": 3207,
+        "endMs": 5446,
+        "durationMs": 2239
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 29061,
+        "endMs": 31300,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-003",
+      "order": 3,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 125978,
+        "endMs": 128051,
+        "durationMs": 2073
+      },
+      "timeline": {
+        "startMs": 5446,
+        "endMs": 7519,
+        "durationMs": 2073
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 125978,
+        "endMs": 128051,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-004",
+      "order": 4,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 700463,
+        "endMs": 701500,
+        "durationMs": 1037
+      },
+      "timeline": {
+        "startMs": 7519,
+        "endMs": 8556,
+        "durationMs": 1037
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 700463,
+        "endMs": 701500,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-005",
+      "order": 5,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 783298,
+        "endMs": 784392,
+        "durationMs": 1094
+      },
+      "timeline": {
+        "startMs": 8556,
+        "endMs": 9650,
+        "durationMs": 1094
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 783298,
+        "endMs": 784392,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-006",
+      "order": 6,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 134619,
+        "endMs": 138566,
+        "durationMs": 3947
+      },
+      "timeline": {
+        "startMs": 9650,
+        "endMs": 13597,
+        "durationMs": 3947
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 134619,
+        "endMs": 138566,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-007",
+      "order": 7,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 149242,
+        "endMs": 150225,
+        "durationMs": 983
+      },
+      "timeline": {
+        "startMs": 13597,
+        "endMs": 14580,
+        "durationMs": 983
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 149242,
+        "endMs": 150225,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-008",
+      "order": 8,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 528520,
+        "endMs": 529350,
+        "durationMs": 830
+      },
+      "timeline": {
+        "startMs": 14580,
+        "endMs": 15410,
+        "durationMs": 830
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 528520,
+        "endMs": 529350,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-009",
+      "order": 9,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 439289,
+        "endMs": 442100,
+        "durationMs": 2811
+      },
+      "timeline": {
+        "startMs": 15410,
+        "endMs": 18221,
+        "durationMs": 2811
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 439289,
+        "endMs": 442100,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-010",
+      "order": 10,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 426369,
+        "endMs": 428778,
+        "durationMs": 2409
+      },
+      "timeline": {
+        "startMs": 18221,
+        "endMs": 20630,
+        "durationMs": 2409
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 426369,
+        "endMs": 428778,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-011",
+      "order": 11,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 95902,
+        "endMs": 97000,
+        "durationMs": 1098
+      },
+      "timeline": {
+        "startMs": 20630,
+        "endMs": 21728,
+        "durationMs": 1098
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 95902,
+        "endMs": 97000,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-012",
+      "order": 12,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 150225,
+        "endMs": 154400,
+        "durationMs": 4175
+      },
+      "timeline": {
+        "startMs": 21728,
+        "endMs": 25903,
+        "durationMs": 4175
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 150225,
+        "endMs": 154400,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-013",
+      "order": 13,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 770836,
+        "endMs": 772413,
+        "durationMs": 1577
+      },
+      "timeline": {
+        "startMs": 25903,
+        "endMs": 27480,
+        "durationMs": 1577
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 770836,
+        "endMs": 772413,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-014",
+      "order": 14,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 202707,
+        "endMs": 208117,
+        "durationMs": 5410
+      },
+      "timeline": {
+        "startMs": 27480,
+        "endMs": 32890,
+        "durationMs": 5410
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 202707,
+        "endMs": 208117,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-014.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-015",
+      "order": 15,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 428778,
+        "endMs": 430897,
+        "durationMs": 2119
+      },
+      "timeline": {
+        "startMs": 32890,
+        "endMs": 35009,
+        "durationMs": 2119
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 428778,
+        "endMs": 430897,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-015.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-016",
+      "order": 16,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 430897,
+        "endMs": 433597,
+        "durationMs": 2700
+      },
+      "timeline": {
+        "startMs": 35009,
+        "endMs": 37709,
+        "durationMs": 2700
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 430897,
+        "endMs": 433597,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-016.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-017",
+      "order": 17,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 355124,
+        "endMs": 357235,
+        "durationMs": 2111
+      },
+      "timeline": {
+        "startMs": 37709,
+        "endMs": 39820,
+        "durationMs": 2111
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 355124,
+        "endMs": 357235,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-017.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-018",
+      "order": 18,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 688790,
+        "endMs": 690534,
+        "durationMs": 1744
+      },
+      "timeline": {
+        "startMs": 39820,
+        "endMs": 41564,
+        "durationMs": 1744
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 688790,
+        "endMs": 690534,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-018.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-019",
+      "order": 19,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 435799,
+        "endMs": 438874,
+        "durationMs": 3075
+      },
+      "timeline": {
+        "startMs": 41564,
+        "endMs": 44639,
+        "durationMs": 3075
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 435799,
+        "endMs": 438874,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-019.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-020",
+      "order": 20,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 541357,
+        "endMs": 542508,
+        "durationMs": 1151
+      },
+      "timeline": {
+        "startMs": 44639,
+        "endMs": 45790,
+        "durationMs": 1151
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 541357,
+        "endMs": 542508,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-020.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-021",
+      "order": 21,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 523494,
+        "endMs": 528396,
+        "durationMs": 4902
+      },
+      "timeline": {
+        "startMs": 45790,
+        "endMs": 50692,
+        "durationMs": 4902
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 523494,
+        "endMs": 528396,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-021.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-022",
+      "order": 22,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 520087,
+        "endMs": 520755,
+        "durationMs": 668
+      },
+      "timeline": {
+        "startMs": 50692,
+        "endMs": 51360,
+        "durationMs": 668
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 520087,
+        "endMs": 520755,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-022.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-023",
+      "order": 23,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 529518,
+        "endMs": 534461,
+        "durationMs": 4943
+      },
+      "timeline": {
+        "startMs": 51360,
+        "endMs": 56303,
+        "durationMs": 4943
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 529518,
+        "endMs": 534461,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-023.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-024",
+      "order": 24,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 683514,
+        "endMs": 685261,
+        "durationMs": 1747
+      },
+      "timeline": {
+        "startMs": 56303,
+        "endMs": 58050,
+        "durationMs": 1747
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 683514,
+        "endMs": 685261,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-024.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-025",
+      "order": 25,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 386500,
+        "endMs": 391510,
+        "durationMs": 5010
+      },
+      "timeline": {
+        "startMs": 58050,
+        "endMs": 63060,
+        "durationMs": 5010
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 386500,
+        "endMs": 391510,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-025.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-026",
+      "order": 26,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 285957,
+        "endMs": 289729,
+        "durationMs": 3772
+      },
+      "timeline": {
+        "startMs": 63060,
+        "endMs": 66832,
+        "durationMs": 3772
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 285957,
+        "endMs": 289729,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-026.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-027",
+      "order": 27,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 357235,
+        "endMs": 359200,
+        "durationMs": 1965
+      },
+      "timeline": {
+        "startMs": 66832,
+        "endMs": 68797,
+        "durationMs": 1965
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 357235,
+        "endMs": 359200,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-027.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-028",
+      "order": 28,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 544141,
+        "endMs": 544774,
+        "durationMs": 633
+      },
+      "timeline": {
+        "startMs": 68797,
+        "endMs": 69430,
+        "durationMs": 633
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 544141,
+        "endMs": 544774,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-028.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-029",
+      "order": 29,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 539405,
+        "endMs": 541357,
+        "durationMs": 1952
+      },
+      "timeline": {
+        "startMs": 69430,
+        "endMs": 71382,
+        "durationMs": 1952
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 539405,
+        "endMs": 541357,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-029.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-030",
+      "order": 30,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 542604,
+        "endMs": 544141,
+        "durationMs": 1537
+      },
+      "timeline": {
+        "startMs": 71382,
+        "endMs": 72919,
+        "durationMs": 1537
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 542604,
+        "endMs": 544141,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-030.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-031",
+      "order": 31,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 550954,
+        "endMs": 553115,
+        "durationMs": 2161
+      },
+      "timeline": {
+        "startMs": 72919,
+        "endMs": 75080,
+        "durationMs": 2161
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 550954,
+        "endMs": 553115,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-031.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-032",
+      "order": 32,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 548378,
+        "endMs": 550787,
+        "durationMs": 2409
+      },
+      "timeline": {
+        "startMs": 75080,
+        "endMs": 77489,
+        "durationMs": 2409
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 548378,
+        "endMs": 550787,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-032.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-033",
+      "order": 33,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 703330,
+        "endMs": 706011,
+        "durationMs": 2681
+      },
+      "timeline": {
+        "startMs": 77489,
+        "endMs": 80170,
+        "durationMs": 2681
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 703330,
+        "endMs": 706011,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-033.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-034",
+      "order": 34,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 68110,
+        "endMs": 74400,
+        "durationMs": 6290
+      },
+      "timeline": {
+        "startMs": 80170,
+        "endMs": 86460,
+        "durationMs": 6290
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 68110,
+        "endMs": 74400,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-034.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-035",
+      "order": 35,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 784392,
+        "endMs": 788117,
+        "durationMs": 3725
+      },
+      "timeline": {
+        "startMs": 86460,
+        "endMs": 90185,
+        "durationMs": 3725
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 784392,
+        "endMs": 788117,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-035.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-036",
+      "order": 36,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 448802,
+        "endMs": 451847,
+        "durationMs": 3045
+      },
+      "timeline": {
+        "startMs": 90185,
+        "endMs": 93230,
+        "durationMs": 3045
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 448802,
+        "endMs": 451847,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-036.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-037",
+      "order": 37,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 772413,
+        "endMs": 777399,
+        "durationMs": 4986
+      },
+      "timeline": {
+        "startMs": 93230,
+        "endMs": 98216,
+        "durationMs": 4986
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 772413,
+        "endMs": 777399,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-037.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-038",
+      "order": 38,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 777399,
+        "endMs": 778123,
+        "durationMs": 724
+      },
+      "timeline": {
+        "startMs": 98216,
+        "endMs": 98940,
+        "durationMs": 724
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 777399,
+        "endMs": 778123,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-038.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-039",
+      "order": 39,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 823968,
+        "endMs": 826959,
+        "durationMs": 2991
+      },
+      "timeline": {
+        "startMs": 98940,
+        "endMs": 101931,
+        "durationMs": 2991
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 823968,
+        "endMs": 826959,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-039.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-040",
+      "order": 40,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 826959,
+        "endMs": 828628,
+        "durationMs": 1669
+      },
+      "timeline": {
+        "startMs": 101931,
+        "endMs": 103600,
+        "durationMs": 1669
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 826959,
+        "endMs": 828628,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-040.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-041",
+      "order": 41,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 692986,
+        "endMs": 694481,
+        "durationMs": 1495
+      },
+      "timeline": {
+        "startMs": 103600,
+        "endMs": 105095,
+        "durationMs": 1495
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 692986,
+        "endMs": 694481,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-041.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-042",
+      "order": 42,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 628720,
+        "endMs": 631420,
+        "durationMs": 2700
+      },
+      "timeline": {
+        "startMs": 105095,
+        "endMs": 107795,
+        "durationMs": 2700
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 628720,
+        "endMs": 631420,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-042.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-043",
+      "order": 43,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 407218,
+        "endMs": 409609,
+        "durationMs": 2391
+      },
+      "timeline": {
+        "startMs": 107795,
+        "endMs": 110186,
+        "durationMs": 2391
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 407218,
+        "endMs": 409609,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-043.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-044",
+      "order": 44,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 799084,
+        "endMs": 801369,
+        "durationMs": 2285
+      },
+      "timeline": {
+        "startMs": 110186,
+        "endMs": 112471,
+        "durationMs": 2285
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 799084,
+        "endMs": 801369,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-044.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-045",
+      "order": 45,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 574923,
+        "endMs": 575771,
+        "durationMs": 848
+      },
+      "timeline": {
+        "startMs": 112471,
+        "endMs": 113319,
+        "durationMs": 848
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 574923,
+        "endMs": 575771,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-045.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-046",
+      "order": 46,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 685261,
+        "endMs": 686214,
+        "durationMs": 953
+      },
+      "timeline": {
+        "startMs": 113319,
+        "endMs": 114272,
+        "durationMs": 953
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 685261,
+        "endMs": 686214,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-046.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-047",
+      "order": 47,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 522996,
+        "endMs": 523494,
+        "durationMs": 498
+      },
+      "timeline": {
+        "startMs": 114272,
+        "endMs": 114770,
+        "durationMs": 498
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 522996,
+        "endMs": 523494,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-047.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-048",
+      "order": 48,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 828628,
+        "endMs": 832289,
+        "durationMs": 3661
+      },
+      "timeline": {
+        "startMs": 114770,
+        "endMs": 118431,
+        "durationMs": 3661
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 828628,
+        "endMs": 832289,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-048.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-049",
+      "order": 49,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 796548,
+        "endMs": 797381,
+        "durationMs": 833
+      },
+      "timeline": {
+        "startMs": 118431,
+        "endMs": 119264,
+        "durationMs": 833
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 796548,
+        "endMs": 797381,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-049.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    },
+    {
+      "segmentId": "seg-050",
+      "order": 50,
+      "assetId": "source-02-08-611b3717",
+      "source": {
+        "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+        "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+        "startMs": 520755,
+        "endMs": 521591,
+        "durationMs": 836
+      },
+      "timeline": {
+        "startMs": 119264,
+        "endMs": 120100,
+        "durationMs": 836
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 520755,
+        "endMs": 521591,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-050.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "bilibili水印左上角，不可裁除（G5分发边界披露）"
+      ]
+    }
+  ],
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

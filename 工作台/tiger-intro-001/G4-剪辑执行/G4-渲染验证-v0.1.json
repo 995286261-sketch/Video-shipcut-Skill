@@ -1,0 +1,48 @@
+{
+ "status": "valid",
+ "segments": 50,
+ "timelineDurationMs": 120100,
+ "validatedAt": "2026-09-11",
+ "canvas": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 24
+ },
+ "finalMaster": {
+  "path": "工作台/tiger-intro-001/G4-剪辑执行/G4-候选成片-v0.1.mp4",
+  "sha256": "49e49c306b5b17a5eb75d590abfc1bf823094807fe3b4115dd48b3dd8159b509",
+  "durationMs": 120100,
+  "integratedLufs": -14.3
+ },
+ "checkFrames": [
+  {
+   "t": "0.5",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-0.5.jpg"
+  },
+  {
+   "t": "11.5",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-11.5.jpg"
+  },
+  {
+   "t": "31.0",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-31.0.jpg"
+  },
+  {
+   "t": "53.0",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-53.0.jpg"
+  },
+  {
+   "t": "95.0",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-95.0.jpg"
+  },
+  {
+   "t": "99.5",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-99.5.jpg"
+  },
+  {
+   "t": "119.0",
+   "file": "工作台/tiger-intro-001/G4-剪辑执行/检查帧/check-119.0.jpg"
+  }
+ ],
+ "checkFrameVerdict": "7/7 通过：水印保留、mask带生效无双字幕、口播cue与N16切分正确、结尾CTA正常"
+}

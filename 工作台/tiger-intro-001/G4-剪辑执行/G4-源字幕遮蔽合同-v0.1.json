@@ -1,0 +1,300 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G4",
+ "projectId": "tiger-intro-001",
+ "source": "G3-源字幕处理表-v0.1.md + 批准计划 sourceCaptionTreatment（权威为计划）",
+ "canvas": {
+  "width": 1920,
+  "height": 1080
+ },
+ "masks": [
+  {
+   "maskId": "mask-seg-006",
+   "segmentId": "seg-006",
+   "outputFromMs": 9650,
+   "outputToMs": 13597,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-007",
+   "segmentId": "seg-007",
+   "outputFromMs": 13597,
+   "outputToMs": 14580,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-012",
+   "segmentId": "seg-012",
+   "outputFromMs": 21728,
+   "outputToMs": 25903,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-013",
+   "segmentId": "seg-013",
+   "outputFromMs": 25903,
+   "outputToMs": 27480,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-014",
+   "segmentId": "seg-014",
+   "outputFromMs": 27480,
+   "outputToMs": 32890,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-016",
+   "segmentId": "seg-016",
+   "outputFromMs": 35009,
+   "outputToMs": 37709,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-019",
+   "segmentId": "seg-019",
+   "outputFromMs": 41564,
+   "outputToMs": 44639,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-022",
+   "segmentId": "seg-022",
+   "outputFromMs": 50692,
+   "outputToMs": 51360,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-023",
+   "segmentId": "seg-023",
+   "outputFromMs": 51360,
+   "outputToMs": 56303,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-025",
+   "segmentId": "seg-025",
+   "outputFromMs": 58050,
+   "outputToMs": 63060,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-029",
+   "segmentId": "seg-029",
+   "outputFromMs": 69430,
+   "outputToMs": 71382,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-031",
+   "segmentId": "seg-031",
+   "outputFromMs": 72919,
+   "outputToMs": 75080,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-034",
+   "segmentId": "seg-034",
+   "outputFromMs": 80170,
+   "outputToMs": 86460,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-036",
+   "segmentId": "seg-036",
+   "outputFromMs": 90185,
+   "outputToMs": 93230,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-037",
+   "segmentId": "seg-037",
+   "outputFromMs": 93230,
+   "outputToMs": 98216,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-038",
+   "segmentId": "seg-038",
+   "outputFromMs": 98216,
+   "outputToMs": 98940,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-040",
+   "segmentId": "seg-040",
+   "outputFromMs": 101931,
+   "outputToMs": 103600,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-042",
+   "segmentId": "seg-042",
+   "outputFromMs": 105095,
+   "outputToMs": 107795,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-043",
+   "segmentId": "seg-043",
+   "outputFromMs": 107795,
+   "outputToMs": 110186,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-046",
+   "segmentId": "seg-046",
+   "outputFromMs": 113319,
+   "outputToMs": 114272,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-047",
+   "segmentId": "seg-047",
+   "outputFromMs": 114272,
+   "outputToMs": 114770,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-048",
+   "segmentId": "seg-048",
+   "outputFromMs": 114770,
+   "outputToMs": 118431,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-049",
+   "segmentId": "seg-049",
+   "outputFromMs": 118431,
+   "outputToMs": 119264,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  },
+  {
+   "maskId": "mask-seg-050",
+   "segmentId": "seg-050",
+   "outputFromMs": 119264,
+   "outputToMs": 120100,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩"
+  }
+ ]
+}

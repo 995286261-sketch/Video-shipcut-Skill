@@ -1,0 +1,33 @@
+[Script Info]
+Title: tiger-intro-001 G3 口播主字幕
+ScriptType: v4.00+
+PlayResX: 1436
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,PingFang SC,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,2,60,60,173,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:09.65,Narration,,0,0,0,,U.C.0079，一年战争，吉恩尼克基于老虎改良的特制泛用机：MS-07B3老虎改。
+Dialogue: 0,0:00:09.65,0:00:14.58,Narration,,0,0,0,,而把它开到极限的，是前线一位名门出身的王牌驾驶员。
+Dialogue: 0,0:00:14.58,0:00:20.63,Narration,,0,0,0,,老虎的白刃战天下第一，远程却只有左手内藏的一门75毫米机关炮。
+Dialogue: 0,0:00:20.63,0:00:27.48,Narration,,0,0,0,,白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶员对它敬而远之。
+Dialogue: 0,0:00:27.48,0:00:32.89,Narration,,0,0,0,,B3接到的任务很简单：把这个系列丢掉的远程，成倍拿回来。
+Dialogue: 0,0:00:32.89,0:00:39.82,Narration,,0,0,0,,第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装35毫米机关炮。
+Dialogue: 0,0:00:39.82,0:00:45.79,Narration,,0,0,0,,手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按任务换装。
+Dialogue: 0,0:00:45.79,0:00:51.36,Narration,,0,0,0,,第二刀在电热鞭上：细径化、射程延长、命中精度提高。
+Dialogue: 0,0:00:51.36,0:00:58.05,Narration,,0,0,0,,射出机构还加了装甲导轨护着——这条鞭子，能从任意角度发动三维攻击。
+Dialogue: 0,0:00:58.05,0:01:03.06,Narration,,0,0,0,,第三刀在头部：高精度传感器，高处索敌堪比侦察机。
+Dialogue: 0,0:01:03.06,0:01:09.43,Narration,,0,0,0,,动力管布局优化，潮湿地形照样通过——为陆战全天候而生。
+Dialogue: 0,0:01:09.43,0:01:15.08,Narration,,0,0,0,,防御端保留经典的复合格林盾：加特林与热能军刀，随心切换。
+Dialogue: 0,0:01:15.08,0:01:20.17,Narration,,0,0,0,,超高张力钢骨架、四吨级推进，都是老虎系标配。
+Dialogue: 0,0:01:20.17,0:01:26.46,Narration,,0,0,0,,单机掩护HLV发射，把08小队和联邦军打得落花流水。
+Dialogue: 0,0:01:26.46,0:01:33.23,Narration,,0,0,0,,回看这张改装清单，思路就一句话：把原型的每一处短板，都压成改装项。
+Dialogue: 0,0:01:33.23,0:01:37.29,Narration,,0,0,0,,战争后来结束了，老虎系列成了传奇的燃料；
+Dialogue: 0,0:01:37.29,0:01:43.60,Narration,,0,0,0,,但看过那场陆战的人都知道——它从不靠主角光环，也不靠奇迹装备。
+Dialogue: 0,0:01:43.60,0:01:54.77,Narration,,0,0,0,,MS-07B3，老虎改——一个王牌驾驶员，交给一台缺陷机型的答卷。
+Dialogue: 0,0:01:54.77,0:02:00.10,Narration,,0,0,0,,你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。
