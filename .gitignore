@@ -15,3 +15,6 @@ models/
 # 超过 GitHub 单文件上限/本地待收件
 工作台/tiger-intro-001/G0-素材包/02_原始素材/*.mp4
 工作台/tiger-intro-001/收件/*
+
+# 网易云试听件缓存=未清权平台音频，永不入库（SHA 已录 manifest/经验库，凭证据可重取）
+工作台/*/G1-创作方向/G1-音乐检索/candidates*/**/*.mp3

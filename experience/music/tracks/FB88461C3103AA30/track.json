@@ -24,13 +24,24 @@
     {
       "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-1966862636-DDRKirby(ISQ)-Infinity（鲫虞豆腐汤_remix）.mp3",
       "recordedAt": "2026-09-11T06:24:01Z"
+    },
+    {
+      "path": "工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
+      "role": "cleared",
+      "recordedAt": "2026-09-11T07:03:55Z"
     }
   ],
   "roles": [
     "candidate"
   ],
-  "license": "uncleared-platform-catalog",
-  "licenseEvidence": [],
+  "license": "cleared-for-project",
+  "licenseEvidence": [
+    {
+      "evidence": "工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/BGM-候选登记-Infinity-鲫虞豆腐汤-remix-FB88461C.json + 04_授权说明.md 用户声明 2026-09-11",
+      "at": "2026-09-11T07:03:55Z",
+      "project": "tiger-intro-001"
+    }
+  ],
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-11T06:24:01Z",

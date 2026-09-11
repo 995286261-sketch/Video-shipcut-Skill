@@ -42,6 +42,26 @@ All references below must be existing files beneath the active `工作台/<proje
 
 Every G1–G5 approval first requires a registered `reviewGate`: a project-local `review-gate-receipt` JSON whose fixed `cardType`, required checklist, card reference, evidence references, and basis references pass `record-review`. The node must be `review_required`. Rework clears the affected node and downstream review gates, so a superseded card cannot approve amended inputs.
 
+Receipt document shape (verbatim machine contract enforced by `review_gate.py`; documented 2026-09-11 after N8 issue ⑳ — the `reviewGate` stored in state is a summary, not this document):
+
+```json
+{
+  "schemaVersion": "0.1",
+  "projectId": "<active projectId>",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "<non-empty string>",
+  "reviewCardRef": "<project-local presented card file>",
+  "basisRefs": ["<existing project-local files>"],
+  "checklist": [
+    {"id": "direction_brief", "required": true, "status": "completed", "evidenceRef": "<existing file>"}
+  ]
+}
+```
+
+Per node the `cardType` and checklist ids are exact sets (no extras, none missing; every item `required:true`, `status:"completed"`, `evidenceRef` resolving to an existing project file): G1 `g1_direction_review` → direction_brief, claims_and_boundaries, direction_card ｜ G2 `g2_evidence_narration_review` → fact_citation, approved_narration, voice_brief, g2_card ｜ G3 `g3_timeline_review` → approved_edit_plan, final_timeline_review, subtitle_timeline, bgm_decision, packaging_decisions, g3_card ｜ G4 `g4_candidate_review` → candidate_or_export, render_validation, playback_review_card ｜ G5 `g5_delivery_review` → delivery_manifest, qa_validation, playback_review, check_frames, distribution_boundary. `--approval-response` must be the user's standalone token message (sentences embedding the token are refused; surrounding chat stays preserved in the approval record file, not in this field).
+
 `approve` validates both `--approval-token` and `--approval-response` against the current node's canonical confirmation string (`确认 G1`…`确认 G5`). Since the A3 fix (2026-09-09) the CLI performs the normalization itself: the canonical form, the no-space typed variants users actually write (`确认G5`/`确认g5`), and a bare `确认` are accepted for the node that is currently `review_required` (wrong-node numbers like `确认G2` on G3 are rejected); anything vague (`好的`, `OK`, `确认G`) is refused. The state file always stores the canonical strings, plus `approvalTokenVerbatim`, `approvalResponseVerbatim`, and `normalizedFromVariant` so the original reply stays auditable. Agents must still paste the user's verbatim reply into the approval-record receipt.
 
 - G1: `approvalRef` for direction confirmation.

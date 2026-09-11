@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "tiger-intro-001",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-11T07:17:11.812623Z",
+  "reviewCardRef": "工作台/tiger-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/tiger-intro-001/G1-创作方向/G1-方向简报.json",
+    "工作台/tiger-intro-001/G1-创作方向/G1-方向确认记录.md",
+    "工作台/tiger-intro-001/G1-创作方向/G1-方向输入-v0.1.json",
+    "工作台/tiger-intro-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "工作台/tiger-intro-001/G1-创作方向/G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+    "工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/BGM-推荐-tiger-v0.2.json",
+    "工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/BGM-试听笔记-tiger-v0.2.json",
+    "工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/BGM-参考曲绝对笔记-v0.1.json",
+    "工作台/tiger-intro-001/G0-素材包/07_授权音频/BGM-候选登记-Infinity-鲫虞豆腐汤-remix-FB88461C.json"
+  ],
+  "checklist": [
+    {
+      "id": "direction_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/tiger-intro-001/G1-创作方向/G1-方向简报.json"
+    },
+    {
+      "id": "claims_and_boundaries",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/tiger-intro-001/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "direction_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/tiger-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md"
+    }
+  ],
+  "echoStyle": "final-echo-style-guide v1.1",
+  "notes": "单卡模式首张完整执行：四决策点同卡呈报（身份=用户定案；标题/讲法/选曲=默认已选）获精确口令批准；选曲归属=用户委托 Agent 选定（原话入经验库 verdicts）。"
+}

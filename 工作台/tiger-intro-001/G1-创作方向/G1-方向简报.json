@@ -7,7 +7,10 @@
   "coreViewpoint": "老虎改是吉翁近战思想的集大成机体，配上王牌驾驶员，构成 08 小队遭遇战里最危险的对手；本片用档案式讲法把它立起来。",
   "outputPreferences": {
     "aspectRatio": "16:9",
-    "targetDurationSec": [110, 130],
+    "targetDurationSec": [
+      110,
+      130
+    ],
     "usagePurpose": "bilibili_public_mecha_intro"
   },
   "bgmDecision": "provided",
