@@ -1,0 +1,4385 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-08-611b3717",
+    "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 0,
+      "endMs": 220,
+      "text": "你",
+      "words": [
+        {
+          "startMs": 0,
+          "endMs": 220,
+          "text": "你",
+          "probability": 0.050327833741903305
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0002",
+      "startMs": 220,
+      "endMs": 920,
+      "text": "你",
+      "words": [
+        {
+          "startMs": 220,
+          "endMs": 920,
+          "text": "你",
+          "probability": 0.0014547614846378565
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0003",
+      "startMs": 5330,
+      "endMs": 42980,
+      "text": "如果有任何事情發生",
+      "words": [
+        {
+          "startMs": 5330,
+          "endMs": 6050,
+          "text": "如果",
+          "probability": 0.007379006128758192
+        },
+        {
+          "startMs": 41380,
+          "endMs": 42100,
+          "text": "有",
+          "probability": 0.025476807728409767
+        },
+        {
+          "startMs": 42100,
+          "endMs": 42340,
+          "text": "任",
+          "probability": 0.19454339146614075
+        },
+        {
+          "startMs": 42340,
+          "endMs": 42340,
+          "text": "何",
+          "probability": 0.9968775510787964
+        },
+        {
+          "startMs": 42340,
+          "endMs": 42720,
+          "text": "事情",
+          "probability": 0.25478076934814453
+        },
+        {
+          "startMs": 42720,
+          "endMs": 42720,
+          "text": "發",
+          "probability": 0.09425392001867294
+        },
+        {
+          "startMs": 42720,
+          "endMs": 42980,
+          "text": "生",
+          "probability": 0.9451789855957031
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0004",
+      "startMs": 48670,
+      "endMs": 49850,
+      "text": "我會殺死你",
+      "words": [
+        {
+          "startMs": 48670,
+          "endMs": 49070,
+          "text": "我",
+          "probability": 0.03101469948887825
+        },
+        {
+          "startMs": 49070,
+          "endMs": 49150,
+          "text": "會",
+          "probability": 0.2263895869255066
+        },
+        {
+          "startMs": 49150,
+          "endMs": 49150,
+          "text": "殺",
+          "probability": 0.2216968983411789
+        },
+        {
+          "startMs": 49150,
+          "endMs": 49430,
+          "text": "死",
+          "probability": 0.1960003823041916
+        },
+        {
+          "startMs": 49430,
+          "endMs": 49850,
+          "text": "你",
+          "probability": 0.6063770055770874
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0005",
+      "startMs": 49850,
+      "endMs": 56920,
+      "text": "我不會讓你獨自去",
+      "words": [
+        {
+          "startMs": 49850,
+          "endMs": 50290,
+          "text": "我",
+          "probability": 0.16932809352874756
+        },
+        {
+          "startMs": 56180,
+          "endMs": 56360,
+          "text": "不會",
+          "probability": 0.06337250024080276
+        },
+        {
+          "startMs": 56360,
+          "endMs": 56360,
+          "text": "讓",
+          "probability": 0.47704601287841797
+        },
+        {
+          "startMs": 56360,
+          "endMs": 56360,
+          "text": "你",
+          "probability": 0.7103625535964966
+        },
+        {
+          "startMs": 56360,
+          "endMs": 56360,
+          "text": "獨",
+          "probability": 0.4716312289237976
+        },
+        {
+          "startMs": 56360,
+          "endMs": 56540,
+          "text": "自",
+          "probability": 0.5648759007453918
+        },
+        {
+          "startMs": 56540,
+          "endMs": 56920,
+          "text": "去",
+          "probability": 0.16271419823169708
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0006",
+      "startMs": 56920,
+      "endMs": 66040,
+      "text": "你怎麼會跟你的父親",
+      "words": [
+        {
+          "startMs": 56920,
+          "endMs": 58060,
+          "text": "你",
+          "probability": 0.06436929106712341
+        },
+        {
+          "startMs": 64140,
+          "endMs": 64960,
+          "text": "怎麼",
+          "probability": 0.0019792011007666588
+        },
+        {
+          "startMs": 64960,
+          "endMs": 65140,
+          "text": "會",
+          "probability": 0.21158970892429352
+        },
+        {
+          "startMs": 65140,
+          "endMs": 65260,
+          "text": "跟",
+          "probability": 0.17782044410705566
+        },
+        {
+          "startMs": 65260,
+          "endMs": 65720,
+          "text": "你的",
+          "probability": 0.06211188808083534
+        },
+        {
+          "startMs": 65720,
+          "endMs": 66040,
+          "text": "父",
+          "probability": 0.21951638162136078
+        },
+        {
+          "startMs": 66040,
+          "endMs": 66040,
+          "text": "親",
+          "probability": 0.7352425456047058
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0007",
+      "startMs": 66040,
+      "endMs": 77740,
+      "text": "我已經知道了",
+      "words": [
+        {
+          "startMs": 66040,
+          "endMs": 66180,
+          "text": "我",
+          "probability": 0.04281674325466156
+        },
+        {
+          "startMs": 66180,
+          "endMs": 66820,
+          "text": "已經",
+          "probability": 0.07774220407009125
+        },
+        {
+          "startMs": 76840,
+          "endMs": 77220,
+          "text": "知道",
+          "probability": 0.4584199786186218
+        },
+        {
+          "startMs": 77220,
+          "endMs": 77740,
+          "text": "了",
+          "probability": 0.3458525538444519
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0008",
+      "startMs": 77740,
+      "endMs": 85330,
+      "text": "我會等你到那裡",
+      "words": [
+        {
+          "startMs": 77740,
+          "endMs": 78020,
+          "text": "我",
+          "probability": 0.12405790388584137
+        },
+        {
+          "startMs": 84770,
+          "endMs": 84910,
+          "text": "會",
+          "probability": 0.11328408867120743
+        },
+        {
+          "startMs": 84910,
+          "endMs": 84930,
+          "text": "等",
+          "probability": 0.1681891828775406
+        },
+        {
+          "startMs": 84930,
+          "endMs": 84930,
+          "text": "你",
+          "probability": 0.6190672516822815
+        },
+        {
+          "startMs": 84930,
+          "endMs": 84930,
+          "text": "到",
+          "probability": 0.16171857714653015
+        },
+        {
+          "startMs": 84930,
+          "endMs": 85050,
+          "text": "那",
+          "probability": 0.1548657864332199
+        },
+        {
+          "startMs": 85050,
+          "endMs": 85330,
+          "text": "裡",
+          "probability": 0.2757013142108917
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0009",
+      "startMs": 85330,
+      "endMs": 86670,
+      "text": "吃飯",
+      "words": [
+        {
+          "startMs": 85330,
+          "endMs": 86310,
+          "text": "吃",
+          "probability": 0.23482194542884827
+        },
+        {
+          "startMs": 86310,
+          "endMs": 86670,
+          "text": "飯",
+          "probability": 0.5917389392852783
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0010",
+      "startMs": 87350,
+      "endMs": 87870,
+      "text": "了解",
+      "words": [
+        {
+          "startMs": 87350,
+          "endMs": 87710,
+          "text": "了",
+          "probability": 0.8294954895973206
+        },
+        {
+          "startMs": 87710,
+          "endMs": 87870,
+          "text": "解",
+          "probability": 0.07520129531621933
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0011",
+      "startMs": 88450,
+      "endMs": 89410,
+      "text": "你吃什麼?",
+      "words": [
+        {
+          "startMs": 88450,
+          "endMs": 88810,
+          "text": "你",
+          "probability": 0.03111148253083229
+        },
+        {
+          "startMs": 88810,
+          "endMs": 89170,
+          "text": "吃",
+          "probability": 0.11586789041757584
+        },
+        {
+          "startMs": 89170,
+          "endMs": 89410,
+          "text": "什麼?",
+          "probability": 0.5372680425643921
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0012",
+      "startMs": 90050,
+      "endMs": 90630,
+      "text": "吃飯",
+      "words": [
+        {
+          "startMs": 90050,
+          "endMs": 90270,
+          "text": "吃",
+          "probability": 0.3067358136177063
+        },
+        {
+          "startMs": 90270,
+          "endMs": 90630,
+          "text": "飯",
+          "probability": 0.3922244906425476
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0013",
+      "startMs": 90630,
+      "endMs": 92910,
+      "text": "你怎麼會是Eredwa",
+      "words": [
+        {
+          "startMs": 90630,
+          "endMs": 91130,
+          "text": "你",
+          "probability": 0.032456204295158386
+        },
+        {
+          "startMs": 91130,
+          "endMs": 92110,
+          "text": "怎麼",
+          "probability": 0.08533534407615662
+        },
+        {
+          "startMs": 92110,
+          "endMs": 92470,
+          "text": "會",
+          "probability": 0.5490585565567017
+        },
+        {
+          "startMs": 92470,
+          "endMs": 92470,
+          "text": "是",
+          "probability": 0.005913835950195789
+        },
+        {
+          "startMs": 92470,
+          "endMs": 92590,
+          "text": "E",
+          "probability": 0.0636027380824089
+        },
+        {
+          "startMs": 92590,
+          "endMs": 92650,
+          "text": "red",
+          "probability": 0.2664095163345337
+        },
+        {
+          "startMs": 92650,
+          "endMs": 92910,
+          "text": "wa",
+          "probability": 0.48537641763687134
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0014",
+      "startMs": 93490,
+      "endMs": 95710,
+      "text": "我聽過一句話",
+      "words": [
+        {
+          "startMs": 93490,
+          "endMs": 93870,
+          "text": "我",
+          "probability": 0.028766801580786705
+        },
+        {
+          "startMs": 93870,
+          "endMs": 94410,
+          "text": "聽",
+          "probability": 0.4753425121307373
+        },
+        {
+          "startMs": 94410,
+          "endMs": 94830,
+          "text": "過",
+          "probability": 0.4069499671459198
+        },
+        {
+          "startMs": 94830,
+          "endMs": 95150,
+          "text": "一",
+          "probability": 0.10282387584447861
+        },
+        {
+          "startMs": 95150,
+          "endMs": 95230,
+          "text": "句",
+          "probability": 0.21109971404075623
+        },
+        {
+          "startMs": 95230,
+          "endMs": 95710,
+          "text": "話",
+          "probability": 0.548202633857727
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0015",
+      "startMs": 99550,
+      "endMs": 100150,
+      "text": "大廚",
+      "words": [
+        {
+          "startMs": 99550,
+          "endMs": 99890,
+          "text": "大",
+          "probability": 0.037090178579092026
+        },
+        {
+          "startMs": 99890,
+          "endMs": 100150,
+          "text": "廚",
+          "probability": 0.5311036705970764
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0016",
+      "startMs": 100150,
+      "endMs": 102090,
+      "text": "吃飯就停了",
+      "words": [
+        {
+          "startMs": 100150,
+          "endMs": 100770,
+          "text": "吃",
+          "probability": 0.002926505170762539
+        },
+        {
+          "startMs": 100770,
+          "endMs": 101550,
+          "text": "飯",
+          "probability": 0.8166473507881165
+        },
+        {
+          "startMs": 101550,
+          "endMs": 101670,
+          "text": "就",
+          "probability": 0.1725643128156662
+        },
+        {
+          "startMs": 101670,
+          "endMs": 101830,
+          "text": "停",
+          "probability": 0.05579003319144249
+        },
+        {
+          "startMs": 101830,
+          "endMs": 102090,
+          "text": "了",
+          "probability": 0.26605355739593506
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0017",
+      "startMs": 102090,
+      "endMs": 103930,
+      "text": "什麼來的",
+      "words": [
+        {
+          "startMs": 102090,
+          "endMs": 103270,
+          "text": "什麼",
+          "probability": 0.1392013132572174
+        },
+        {
+          "startMs": 103270,
+          "endMs": 103650,
+          "text": "來",
+          "probability": 0.09669266641139984
+        },
+        {
+          "startMs": 103650,
+          "endMs": 103930,
+          "text": "的",
+          "probability": 0.8656262159347534
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0018",
+      "startMs": 103930,
+      "endMs": 107630,
+      "text": "從哪裡來的? 我的聲音在等你",
+      "words": [
+        {
+          "startMs": 103930,
+          "endMs": 104330,
+          "text": "從",
+          "probability": 0.00516669824719429
+        },
+        {
+          "startMs": 104330,
+          "endMs": 104330,
+          "text": "哪裡",
+          "probability": 0.4204038977622986
+        },
+        {
+          "startMs": 104330,
+          "endMs": 104470,
+          "text": "來",
+          "probability": 0.408128023147583
+        },
+        {
+          "startMs": 104470,
+          "endMs": 104690,
+          "text": "的?",
+          "probability": 0.6996957659721375
+        },
+        {
+          "startMs": 106390,
+          "endMs": 106610,
+          "text": " 我",
+          "probability": 0.030862603336572647
+        },
+        {
+          "startMs": 106610,
+          "endMs": 106750,
+          "text": "的",
+          "probability": 0.3992191255092621
+        },
+        {
+          "startMs": 106750,
+          "endMs": 106750,
+          "text": "聲",
+          "probability": 0.4171299338340759
+        },
+        {
+          "startMs": 106750,
+          "endMs": 106770,
+          "text": "音",
+          "probability": 0.9338309168815613
+        },
+        {
+          "startMs": 106770,
+          "endMs": 106870,
+          "text": "在",
+          "probability": 0.06669136136770248
+        },
+        {
+          "startMs": 106870,
+          "endMs": 107090,
+          "text": "等",
+          "probability": 0.10770133882761002
+        },
+        {
+          "startMs": 107090,
+          "endMs": 107630,
+          "text": "你",
+          "probability": 0.39460331201553345
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0019",
+      "startMs": 107630,
+      "endMs": 134470,
+      "text": "機械1 人形3",
+      "words": [
+        {
+          "startMs": 107630,
+          "endMs": 108290,
+          "text": "機",
+          "probability": 0.026923857629299164
+        },
+        {
+          "startMs": 132450,
+          "endMs": 132670,
+          "text": "械",
+          "probability": 0.6011957079172134
+        },
+        {
+          "startMs": 132670,
+          "endMs": 132990,
+          "text": "1",
+          "probability": 0.3403022885322571
+        },
+        {
+          "startMs": 133450,
+          "endMs": 133730,
+          "text": " 人",
+          "probability": 0.40628665685653687
+        },
+        {
+          "startMs": 133730,
+          "endMs": 133930,
+          "text": "形",
+          "probability": 0.5365426540374756
+        },
+        {
+          "startMs": 133930,
+          "endMs": 134470,
+          "text": "3",
+          "probability": 0.8855184316635132
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0020",
+      "startMs": 134470,
+      "endMs": 136330,
+      "text": "彈劇模特兒3",
+      "words": [
+        {
+          "startMs": 134470,
+          "endMs": 135350,
+          "text": "彈",
+          "probability": 0.5073354821652174
+        },
+        {
+          "startMs": 135350,
+          "endMs": 135630,
+          "text": "劇",
+          "probability": 0.39812643826007843
+        },
+        {
+          "startMs": 135630,
+          "endMs": 135710,
+          "text": "模",
+          "probability": 0.0617418996989727
+        },
+        {
+          "startMs": 135710,
+          "endMs": 135830,
+          "text": "特",
+          "probability": 0.25269484519958496
+        },
+        {
+          "startMs": 135830,
+          "endMs": 135970,
+          "text": "兒",
+          "probability": 0.627103865146637
+        },
+        {
+          "startMs": 135970,
+          "endMs": 136330,
+          "text": "3",
+          "probability": 0.9756141901016235
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0021",
+      "startMs": 136930,
+      "endMs": 138810,
+      "text": "一隻是真的嗎?",
+      "words": [
+        {
+          "startMs": 136930,
+          "endMs": 137350,
+          "text": "一",
+          "probability": 0.08844497054815292
+        },
+        {
+          "startMs": 137350,
+          "endMs": 137630,
+          "text": "隻",
+          "probability": 0.08877678215503693
+        },
+        {
+          "startMs": 137630,
+          "endMs": 137790,
+          "text": "是",
+          "probability": 0.2301550954580307
+        },
+        {
+          "startMs": 137790,
+          "endMs": 138130,
+          "text": "真的",
+          "probability": 0.3800807297229767
+        },
+        {
+          "startMs": 138130,
+          "endMs": 138810,
+          "text": "嗎?",
+          "probability": 0.87498939037323
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0022",
+      "startMs": 139170,
+      "endMs": 139910,
+      "text": "只有一隻",
+      "words": [
+        {
+          "startMs": 139170,
+          "endMs": 139330,
+          "text": "只",
+          "probability": 0.07996407151222229
+        },
+        {
+          "startMs": 139330,
+          "endMs": 139770,
+          "text": "有一",
+          "probability": 0.49091657996177673
+        },
+        {
+          "startMs": 139770,
+          "endMs": 139910,
+          "text": "隻",
+          "probability": 0.4451000392436981
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0023",
+      "startMs": 139910,
+      "endMs": 141470,
+      "text": "你真是慘了",
+      "words": [
+        {
+          "startMs": 139910,
+          "endMs": 140530,
+          "text": "你",
+          "probability": 0.0044760568998754025
+        },
+        {
+          "startMs": 140530,
+          "endMs": 140830,
+          "text": "真",
+          "probability": 0.11713455617427826
+        },
+        {
+          "startMs": 140830,
+          "endMs": 141070,
+          "text": "是",
+          "probability": 0.579531729221344
+        },
+        {
+          "startMs": 141070,
+          "endMs": 141070,
+          "text": "慘",
+          "probability": 0.4936172552406788
+        },
+        {
+          "startMs": 141070,
+          "endMs": 141470,
+          "text": "了",
+          "probability": 0.7543672919273376
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0024",
+      "startMs": 142050,
+      "endMs": 143470,
+      "text": "太近了 視角度",
+      "words": [
+        {
+          "startMs": 142050,
+          "endMs": 142330,
+          "text": "太",
+          "probability": 0.0785188376903534
+        },
+        {
+          "startMs": 142330,
+          "endMs": 142550,
+          "text": "近",
+          "probability": 0.32652974128723145
+        },
+        {
+          "startMs": 142550,
+          "endMs": 142930,
+          "text": "了",
+          "probability": 0.7166523337364197
+        },
+        {
+          "startMs": 142970,
+          "endMs": 143130,
+          "text": " 視",
+          "probability": 0.1689438372850418
+        },
+        {
+          "startMs": 143130,
+          "endMs": 143250,
+          "text": "角",
+          "probability": 0.5634040832519531
+        },
+        {
+          "startMs": 143250,
+          "endMs": 143470,
+          "text": "度",
+          "probability": 0.8754704594612122
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0025",
+      "startMs": 144070,
+      "endMs": 144490,
+      "text": "你給我",
+      "words": [
+        {
+          "startMs": 144070,
+          "endMs": 144350,
+          "text": "你",
+          "probability": 0.028955869376659393
+        },
+        {
+          "startMs": 144350,
+          "endMs": 144430,
+          "text": "給",
+          "probability": 0.04119886830449104
+        },
+        {
+          "startMs": 144430,
+          "endMs": 144490,
+          "text": "我",
+          "probability": 0.7632408142089844
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0026",
+      "startMs": 144490,
+      "endMs": 151570,
+      "text": "人形也有B兵器",
+      "words": [
+        {
+          "startMs": 144490,
+          "endMs": 145250,
+          "text": "人",
+          "probability": 0.0006592355202883482
+        },
+        {
+          "startMs": 149890,
+          "endMs": 150470,
+          "text": "形",
+          "probability": 0.8970733284950256
+        },
+        {
+          "startMs": 150470,
+          "endMs": 150750,
+          "text": "也",
+          "probability": 0.5528894066810608
+        },
+        {
+          "startMs": 150750,
+          "endMs": 150850,
+          "text": "有",
+          "probability": 0.235944464802742
+        },
+        {
+          "startMs": 150850,
+          "endMs": 150870,
+          "text": "B",
+          "probability": 0.015333352610468864
+        },
+        {
+          "startMs": 150870,
+          "endMs": 151110,
+          "text": "兵",
+          "probability": 0.6253030002117157
+        },
+        {
+          "startMs": 151110,
+          "endMs": 151570,
+          "text": "器",
+          "probability": 0.8543977737426758
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0027",
+      "startMs": 151570,
+      "endMs": 153050,
+      "text": "我會把你的腳遺下",
+      "words": [
+        {
+          "startMs": 151570,
+          "endMs": 152250,
+          "text": "我",
+          "probability": 0.1023753434419632
+        },
+        {
+          "startMs": 152250,
+          "endMs": 152250,
+          "text": "會",
+          "probability": 0.08676512539386749
+        },
+        {
+          "startMs": 152250,
+          "endMs": 152250,
+          "text": "把",
+          "probability": 0.10158917307853699
+        },
+        {
+          "startMs": 152250,
+          "endMs": 152410,
+          "text": "你的",
+          "probability": 0.09982006251811981
+        },
+        {
+          "startMs": 152410,
+          "endMs": 152450,
+          "text": "腳",
+          "probability": 0.3680584132671356
+        },
+        {
+          "startMs": 152450,
+          "endMs": 152870,
+          "text": "遺",
+          "probability": 0.2907521426677704
+        },
+        {
+          "startMs": 152870,
+          "endMs": 153050,
+          "text": "下",
+          "probability": 0.40543001890182495
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0028",
+      "startMs": 153050,
+      "endMs": 154330,
+      "text": "讓你驕傲",
+      "words": [
+        {
+          "startMs": 153050,
+          "endMs": 153230,
+          "text": "讓",
+          "probability": 0.0024629486724734306
+        },
+        {
+          "startMs": 153230,
+          "endMs": 153530,
+          "text": "你",
+          "probability": 0.1691056489944458
+        },
+        {
+          "startMs": 153530,
+          "endMs": 154130,
+          "text": "驕",
+          "probability": 0.21990112960338593
+        },
+        {
+          "startMs": 154130,
+          "endMs": 154330,
+          "text": "傲",
+          "probability": 0.9719456136226654
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0029",
+      "startMs": 158100,
+      "endMs": 158960,
+      "text": "我給你",
+      "words": [
+        {
+          "startMs": 158100,
+          "endMs": 158480,
+          "text": "我",
+          "probability": 0.2050277292728424
+        },
+        {
+          "startMs": 158480,
+          "endMs": 158660,
+          "text": "給",
+          "probability": 0.15079711377620697
+        },
+        {
+          "startMs": 158660,
+          "endMs": 158960,
+          "text": "你",
+          "probability": 0.7376356720924377
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0030",
+      "startMs": 158960,
+      "endMs": 166670,
+      "text": "我可以預測一下",
+      "words": [
+        {
+          "startMs": 158960,
+          "endMs": 159520,
+          "text": "我",
+          "probability": 0.045808374881744385
+        },
+        {
+          "startMs": 164710,
+          "endMs": 165610,
+          "text": "可以",
+          "probability": 0.09554571658372879
+        },
+        {
+          "startMs": 165610,
+          "endMs": 165890,
+          "text": "預",
+          "probability": 0.6576164960861206
+        },
+        {
+          "startMs": 165890,
+          "endMs": 166010,
+          "text": "測",
+          "probability": 0.5867072492837906
+        },
+        {
+          "startMs": 166010,
+          "endMs": 166670,
+          "text": "一下",
+          "probability": 0.10960225760936737
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0031",
+      "startMs": 166670,
+      "endMs": 178360,
+      "text": "只有一隻",
+      "words": [
+        {
+          "startMs": 166670,
+          "endMs": 167070,
+          "text": "只",
+          "probability": 0.009576098993420601
+        },
+        {
+          "startMs": 177820,
+          "endMs": 177920,
+          "text": "有一",
+          "probability": 0.5350586771965027
+        },
+        {
+          "startMs": 177920,
+          "endMs": 178360,
+          "text": "隻",
+          "probability": 0.8799523115158081
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0032",
+      "startMs": 178360,
+      "endMs": 190250,
+      "text": "一隻三隻",
+      "words": [
+        {
+          "startMs": 178360,
+          "endMs": 178620,
+          "text": "一",
+          "probability": 0.0401458777487278
+        },
+        {
+          "startMs": 189690,
+          "endMs": 189970,
+          "text": "隻",
+          "probability": 0.8115765452384949
+        },
+        {
+          "startMs": 189970,
+          "endMs": 190090,
+          "text": "三",
+          "probability": 0.12464568763971329
+        },
+        {
+          "startMs": 190090,
+          "endMs": 190250,
+          "text": "隻",
+          "probability": 0.19772884249687195
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0033",
+      "startMs": 190250,
+      "endMs": 192450,
+      "text": "被捕捉了",
+      "words": [
+        {
+          "startMs": 190250,
+          "endMs": 190690,
+          "text": "被",
+          "probability": 0.006106860935688019
+        },
+        {
+          "startMs": 190690,
+          "endMs": 191290,
+          "text": "捕",
+          "probability": 0.4580014571547508
+        },
+        {
+          "startMs": 191290,
+          "endMs": 191770,
+          "text": "捉",
+          "probability": 0.6780810654163361
+        },
+        {
+          "startMs": 191770,
+          "endMs": 192450,
+          "text": "了",
+          "probability": 0.3287722170352936
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0034",
+      "startMs": 192450,
+      "endMs": 194030,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 192450,
+          "endMs": 193390,
+          "text": "你",
+          "probability": 0.014551137574017048
+        },
+        {
+          "startMs": 193390,
+          "endMs": 193390,
+          "text": "真",
+          "probability": 0.05787920206785202
+        },
+        {
+          "startMs": 193390,
+          "endMs": 193750,
+          "text": "是",
+          "probability": 0.488700807094574
+        },
+        {
+          "startMs": 193750,
+          "endMs": 194030,
+          "text": "瘋",
+          "probability": 0.6056401561945677
+        },
+        {
+          "startMs": 194030,
+          "endMs": 194030,
+          "text": "狂",
+          "probability": 0.577550932765007
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0035",
+      "startMs": 194030,
+      "endMs": 208600,
+      "text": "我才做到一條路",
+      "words": [
+        {
+          "startMs": 194030,
+          "endMs": 194370,
+          "text": "我",
+          "probability": 0.016766296699643135
+        },
+        {
+          "startMs": 208000,
+          "endMs": 208280,
+          "text": "才",
+          "probability": 0.06371907144784927
+        },
+        {
+          "startMs": 208280,
+          "endMs": 208280,
+          "text": "做",
+          "probability": 0.06109611317515373
+        },
+        {
+          "startMs": 208280,
+          "endMs": 208280,
+          "text": "到",
+          "probability": 0.15409430861473083
+        },
+        {
+          "startMs": 208280,
+          "endMs": 208280,
+          "text": "一",
+          "probability": 0.05130818486213684
+        },
+        {
+          "startMs": 208280,
+          "endMs": 208420,
+          "text": "條",
+          "probability": 0.02780819870531559
+        },
+        {
+          "startMs": 208420,
+          "endMs": 208600,
+          "text": "路",
+          "probability": 0.6362850666046143
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0036",
+      "startMs": 208600,
+      "endMs": 211280,
+      "text": "可惡",
+      "words": [
+        {
+          "startMs": 208600,
+          "endMs": 209940,
+          "text": "可",
+          "probability": 0.0025461986660957336
+        },
+        {
+          "startMs": 209940,
+          "endMs": 211280,
+          "text": "惡",
+          "probability": 0.510724013671279
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0037",
+      "startMs": 211280,
+      "endMs": 214770,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 211280,
+          "endMs": 211780,
+          "text": "你",
+          "probability": 0.026522383093833923
+        },
+        {
+          "startMs": 213770,
+          "endMs": 214170,
+          "text": "真",
+          "probability": 0.31237101554870605
+        },
+        {
+          "startMs": 214170,
+          "endMs": 214190,
+          "text": "是",
+          "probability": 0.752959132194519
+        },
+        {
+          "startMs": 214190,
+          "endMs": 214230,
+          "text": "瘋",
+          "probability": 0.7386801938215891
+        },
+        {
+          "startMs": 214230,
+          "endMs": 214770,
+          "text": "狂",
+          "probability": 0.9963147640228271
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0038",
+      "startMs": 214770,
+      "endMs": 216090,
+      "text": "Elder",
+      "words": [
+        {
+          "startMs": 214770,
+          "endMs": 215710,
+          "text": "E",
+          "probability": 0.07960107922554016
+        },
+        {
+          "startMs": 215710,
+          "endMs": 215750,
+          "text": "ld",
+          "probability": 0.769019603729248
+        },
+        {
+          "startMs": 215750,
+          "endMs": 216090,
+          "text": "er",
+          "probability": 0.8014885187149048
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0039",
+      "startMs": 216090,
+      "endMs": 217170,
+      "text": "我來找你",
+      "words": [
+        {
+          "startMs": 216090,
+          "endMs": 216710,
+          "text": "我",
+          "probability": 0.025922704488039017
+        },
+        {
+          "startMs": 216710,
+          "endMs": 216710,
+          "text": "來",
+          "probability": 0.26635485887527466
+        },
+        {
+          "startMs": 216710,
+          "endMs": 217170,
+          "text": "找",
+          "probability": 0.15878549218177795
+        },
+        {
+          "startMs": 217170,
+          "endMs": 217170,
+          "text": "你",
+          "probability": 0.9016650319099426
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0040",
+      "startMs": 217170,
+      "endMs": 218370,
+      "text": "你去找我",
+      "words": [
+        {
+          "startMs": 217170,
+          "endMs": 217850,
+          "text": "你",
+          "probability": 0.5657004714012146
+        },
+        {
+          "startMs": 217850,
+          "endMs": 218010,
+          "text": "去",
+          "probability": 0.03280717879533768
+        },
+        {
+          "startMs": 218010,
+          "endMs": 218030,
+          "text": "找",
+          "probability": 0.44428810477256775
+        },
+        {
+          "startMs": 218030,
+          "endMs": 218370,
+          "text": "我",
+          "probability": 0.22496338188648224
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0041",
+      "startMs": 218370,
+      "endMs": 219810,
+      "text": "什麼什麼",
+      "words": [
+        {
+          "startMs": 218370,
+          "endMs": 219430,
+          "text": "什麼",
+          "probability": 0.09897361695766449
+        },
+        {
+          "startMs": 219430,
+          "endMs": 219810,
+          "text": "什麼",
+          "probability": 0.5364741683006287
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0042",
+      "startMs": 219810,
+      "endMs": 221970,
+      "text": "我從這裡開始",
+      "words": [
+        {
+          "startMs": 219810,
+          "endMs": 220590,
+          "text": "我",
+          "probability": 0.06436236202716827
+        },
+        {
+          "startMs": 220590,
+          "endMs": 221270,
+          "text": "從",
+          "probability": 0.35087937116622925
+        },
+        {
+          "startMs": 221270,
+          "endMs": 221570,
+          "text": "這裡",
+          "probability": 0.2302708774805069
+        },
+        {
+          "startMs": 221570,
+          "endMs": 221970,
+          "text": "開始",
+          "probability": 0.41518718004226685
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0043",
+      "startMs": 221970,
+      "endMs": 223290,
+      "text": "不懂他的動作",
+      "words": [
+        {
+          "startMs": 221970,
+          "endMs": 222370,
+          "text": "不",
+          "probability": 0.06725557893514633
+        },
+        {
+          "startMs": 222370,
+          "endMs": 222370,
+          "text": "懂",
+          "probability": 0.49985864758491516
+        },
+        {
+          "startMs": 222370,
+          "endMs": 222370,
+          "text": "他的",
+          "probability": 0.31275370717048645
+        },
+        {
+          "startMs": 222370,
+          "endMs": 222410,
+          "text": "動",
+          "probability": 0.8485540747642517
+        },
+        {
+          "startMs": 222410,
+          "endMs": 223290,
+          "text": "作",
+          "probability": 0.5175332427024841
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0044",
+      "startMs": 223290,
+      "endMs": 225230,
+      "text": "你的耳朵出來了",
+      "words": [
+        {
+          "startMs": 223290,
+          "endMs": 224090,
+          "text": "你的",
+          "probability": 0.22821268439292908
+        },
+        {
+          "startMs": 224090,
+          "endMs": 224410,
+          "text": "耳",
+          "probability": 0.902349203824997
+        },
+        {
+          "startMs": 224410,
+          "endMs": 224510,
+          "text": "朵",
+          "probability": 0.92323899269104
+        },
+        {
+          "startMs": 224510,
+          "endMs": 224670,
+          "text": "出",
+          "probability": 0.23983436822891235
+        },
+        {
+          "startMs": 224670,
+          "endMs": 225230,
+          "text": "來了",
+          "probability": 0.8568438291549683
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0045",
+      "startMs": 225230,
+      "endMs": 226410,
+      "text": "好",
+      "words": [
+        {
+          "startMs": 225230,
+          "endMs": 226410,
+          "text": "好",
+          "probability": 0.5608970522880554
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0046",
+      "startMs": 226410,
+      "endMs": 227470,
+      "text": "放鬆",
+      "words": [
+        {
+          "startMs": 226410,
+          "endMs": 227210,
+          "text": "放",
+          "probability": 0.0030641029588878155
+        },
+        {
+          "startMs": 227210,
+          "endMs": 227470,
+          "text": "鬆",
+          "probability": 0.672064021229744
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0047",
+      "startMs": 228070,
+      "endMs": 228870,
+      "text": "發燒",
+      "words": [
+        {
+          "startMs": 228070,
+          "endMs": 228670,
+          "text": "發",
+          "probability": 0.026364831253886223
+        },
+        {
+          "startMs": 228670,
+          "endMs": 228870,
+          "text": "燒",
+          "probability": 0.6125920563936234
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0048",
+      "startMs": 228870,
+      "endMs": 230310,
+      "text": "我去找你",
+      "words": [
+        {
+          "startMs": 228870,
+          "endMs": 229130,
+          "text": "我",
+          "probability": 0.026491966098546982
+        },
+        {
+          "startMs": 229130,
+          "endMs": 229950,
+          "text": "去",
+          "probability": 0.4779125452041626
+        },
+        {
+          "startMs": 229950,
+          "endMs": 230090,
+          "text": "找",
+          "probability": 0.735342800617218
+        },
+        {
+          "startMs": 230090,
+          "endMs": 230310,
+          "text": "你",
+          "probability": 0.4276951253414154
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0049",
+      "startMs": 230310,
+      "endMs": 232270,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 230310,
+          "endMs": 231290,
+          "text": "你",
+          "probability": 0.028503788635134697
+        },
+        {
+          "startMs": 231290,
+          "endMs": 231410,
+          "text": "真",
+          "probability": 0.04280184581875801
+        },
+        {
+          "startMs": 231410,
+          "endMs": 231610,
+          "text": "是",
+          "probability": 0.5151090025901794
+        },
+        {
+          "startMs": 231610,
+          "endMs": 231830,
+          "text": "瘋",
+          "probability": 0.7154075006643931
+        },
+        {
+          "startMs": 231830,
+          "endMs": 232270,
+          "text": "狂",
+          "probability": 0.9746716022491455
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0050",
+      "startMs": 232270,
+      "endMs": 232750,
+      "text": "什麼事",
+      "words": [
+        {
+          "startMs": 232270,
+          "endMs": 232570,
+          "text": "什麼",
+          "probability": 0.051599495112895966
+        },
+        {
+          "startMs": 232570,
+          "endMs": 232750,
+          "text": "事",
+          "probability": 0.17173729836940765
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0051",
+      "startMs": 232750,
+      "endMs": 233470,
+      "text": "沒有",
+      "words": [
+        {
+          "startMs": 232750,
+          "endMs": 233470,
+          "text": "沒有",
+          "probability": 0.033319223672151566
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0052",
+      "startMs": 234070,
+      "endMs": 234690,
+      "text": "什麼事",
+      "words": [
+        {
+          "startMs": 234070,
+          "endMs": 234430,
+          "text": "什麼",
+          "probability": 0.34853506088256836
+        },
+        {
+          "startMs": 234430,
+          "endMs": 234690,
+          "text": "事",
+          "probability": 0.4650037884712219
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0053",
+      "startMs": 235790,
+      "endMs": 236810,
+      "text": "Sundance",
+      "words": [
+        {
+          "startMs": 235790,
+          "endMs": 236470,
+          "text": "S",
+          "probability": 0.06337838619947433
+        },
+        {
+          "startMs": 236470,
+          "endMs": 236570,
+          "text": "und",
+          "probability": 0.25815334916114807
+        },
+        {
+          "startMs": 236570,
+          "endMs": 236810,
+          "text": "ance",
+          "probability": 0.4021272361278534
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0054",
+      "startMs": 236810,
+      "endMs": 237450,
+      "text": "喂",
+      "words": [
+        {
+          "startMs": 236810,
+          "endMs": 237450,
+          "text": "喂",
+          "probability": 0.01224659662693739
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0055",
+      "startMs": 237450,
+      "endMs": 238430,
+      "text": "可惡",
+      "words": [
+        {
+          "startMs": 237450,
+          "endMs": 238330,
+          "text": "可",
+          "probability": 0.0032524282578378916
+        },
+        {
+          "startMs": 238330,
+          "endMs": 238430,
+          "text": "惡",
+          "probability": 0.5003049597144127
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0056",
+      "startMs": 238430,
+      "endMs": 240470,
+      "text": "把頭剪掉",
+      "words": [
+        {
+          "startMs": 238430,
+          "endMs": 239030,
+          "text": "把",
+          "probability": 0.004090174566954374
+        },
+        {
+          "startMs": 239030,
+          "endMs": 239910,
+          "text": "頭",
+          "probability": 0.48049336671829224
+        },
+        {
+          "startMs": 239910,
+          "endMs": 240230,
+          "text": "剪",
+          "probability": 0.5563287138938904
+        },
+        {
+          "startMs": 240230,
+          "endMs": 240470,
+          "text": "掉",
+          "probability": 0.4536515176296234
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0057",
+      "startMs": 240470,
+      "endMs": 242130,
+      "text": "我死了",
+      "words": [
+        {
+          "startMs": 240470,
+          "endMs": 240770,
+          "text": "我",
+          "probability": 0.03131718933582306
+        },
+        {
+          "startMs": 240770,
+          "endMs": 241370,
+          "text": "死",
+          "probability": 0.4782858192920685
+        },
+        {
+          "startMs": 241370,
+          "endMs": 242130,
+          "text": "了",
+          "probability": 0.5915626287460327
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0058",
+      "startMs": 242130,
+      "endMs": 242450,
+      "text": "什麼",
+      "words": [
+        {
+          "startMs": 242130,
+          "endMs": 242450,
+          "text": "什麼",
+          "probability": 0.0022652787156403065
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0059",
+      "startMs": 242450,
+      "endMs": 244470,
+      "text": "他更是瘋狂",
+      "words": [
+        {
+          "startMs": 242450,
+          "endMs": 243470,
+          "text": "他",
+          "probability": 0.3666656017303467
+        },
+        {
+          "startMs": 243470,
+          "endMs": 243730,
+          "text": "更",
+          "probability": 0.03430252522230148
+        },
+        {
+          "startMs": 243730,
+          "endMs": 243930,
+          "text": "是",
+          "probability": 0.5437464118003845
+        },
+        {
+          "startMs": 243930,
+          "endMs": 244390,
+          "text": "瘋",
+          "probability": 0.4348319399481018
+        },
+        {
+          "startMs": 244390,
+          "endMs": 244470,
+          "text": "狂",
+          "probability": 0.7344180345535278
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0060",
+      "startMs": 244470,
+      "endMs": 248370,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 244470,
+          "endMs": 245170,
+          "text": "你",
+          "probability": 0.012377850711345673
+        },
+        {
+          "startMs": 245170,
+          "endMs": 245910,
+          "text": "真",
+          "probability": 0.01707642152905464
+        },
+        {
+          "startMs": 245910,
+          "endMs": 246750,
+          "text": "是",
+          "probability": 0.32711470127105713
+        },
+        {
+          "startMs": 246750,
+          "endMs": 247050,
+          "text": "瘋",
+          "probability": 0.6669426138202349
+        },
+        {
+          "startMs": 247050,
+          "endMs": 248370,
+          "text": "狂",
+          "probability": 0.9597870111465454
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0061",
+      "startMs": 248370,
+      "endMs": 255500,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 248370,
+          "endMs": 248610,
+          "text": "你",
+          "probability": 0.1044444739818573
+        },
+        {
+          "startMs": 248610,
+          "endMs": 249230,
+          "text": "真",
+          "probability": 0.13522639870643616
+        },
+        {
+          "startMs": 249230,
+          "endMs": 250330,
+          "text": "是",
+          "probability": 0.9806559085845947
+        },
+        {
+          "startMs": 254520,
+          "endMs": 255320,
+          "text": "瘋",
+          "probability": 0.9923581480979919
+        },
+        {
+          "startMs": 255320,
+          "endMs": 255500,
+          "text": "狂",
+          "probability": 0.9988402128219604
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0062",
+      "startMs": 255500,
+      "endMs": 255980,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 255500,
+          "endMs": 255980,
+          "text": "你",
+          "probability": 0.59628826379776
+        },
+        {
+          "startMs": 255980,
+          "endMs": 255980,
+          "text": "真",
+          "probability": 0.740321695804596
+        },
+        {
+          "startMs": 255980,
+          "endMs": 255980,
+          "text": "是",
+          "probability": 0.9953996539115906
+        },
+        {
+          "startMs": 255980,
+          "endMs": 255980,
+          "text": "瘋",
+          "probability": 0.9987773299217224
+        },
+        {
+          "startMs": 255980,
+          "endMs": 255980,
+          "text": "狂",
+          "probability": 0.9991083741188049
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0063",
+      "startMs": 255980,
+      "endMs": 260620,
+      "text": "我去找你",
+      "words": [
+        {
+          "startMs": 255980,
+          "endMs": 256440,
+          "text": "我",
+          "probability": 0.06797324120998383
+        },
+        {
+          "startMs": 256440,
+          "endMs": 257200,
+          "text": "去",
+          "probability": 0.03298363834619522
+        },
+        {
+          "startMs": 259760,
+          "endMs": 260300,
+          "text": "找",
+          "probability": 0.07424992322921753
+        },
+        {
+          "startMs": 260300,
+          "endMs": 260620,
+          "text": "你",
+          "probability": 0.21324945986270905
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0064",
+      "startMs": 260620,
+      "endMs": 320590,
+      "text": "最終典型的路程",
+      "words": [
+        {
+          "startMs": 260620,
+          "endMs": 261060,
+          "text": "最",
+          "probability": 0.07128677517175674
+        },
+        {
+          "startMs": 319650,
+          "endMs": 319910,
+          "text": "終",
+          "probability": 0.963345468044281
+        },
+        {
+          "startMs": 319910,
+          "endMs": 320090,
+          "text": "典",
+          "probability": 0.5802376791834831
+        },
+        {
+          "startMs": 320090,
+          "endMs": 320190,
+          "text": "型",
+          "probability": 0.9761926531791687
+        },
+        {
+          "startMs": 320190,
+          "endMs": 320310,
+          "text": "的",
+          "probability": 0.20967961847782135
+        },
+        {
+          "startMs": 320310,
+          "endMs": 320410,
+          "text": "路",
+          "probability": 0.22786729037761688
+        },
+        {
+          "startMs": 320410,
+          "endMs": 320590,
+          "text": "程",
+          "probability": 0.367820143699646
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0065",
+      "startMs": 320590,
+      "endMs": 321830,
+      "text": "在行動中",
+      "words": [
+        {
+          "startMs": 320590,
+          "endMs": 320910,
+          "text": "在",
+          "probability": 0.3390759825706482
+        },
+        {
+          "startMs": 320910,
+          "endMs": 320990,
+          "text": "行",
+          "probability": 0.2806476354598999
+        },
+        {
+          "startMs": 320990,
+          "endMs": 321190,
+          "text": "動",
+          "probability": 0.7903522849082947
+        },
+        {
+          "startMs": 321190,
+          "endMs": 321830,
+          "text": "中",
+          "probability": 0.26864221692085266
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0066",
+      "startMs": 325380,
+      "endMs": 326240,
+      "text": "All Green",
+      "words": [
+        {
+          "startMs": 325380,
+          "endMs": 325900,
+          "text": "All",
+          "probability": 0.09278523176908493
+        },
+        {
+          "startMs": 325900,
+          "endMs": 326240,
+          "text": " Green",
+          "probability": 0.5686802268028259
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0067",
+      "startMs": 326240,
+      "endMs": 327200,
+      "text": "Apzalus",
+      "words": [
+        {
+          "startMs": 326240,
+          "endMs": 326860,
+          "text": "A",
+          "probability": 0.01775222085416317
+        },
+        {
+          "startMs": 326860,
+          "endMs": 326900,
+          "text": "p",
+          "probability": 0.3076901137828827
+        },
+        {
+          "startMs": 326900,
+          "endMs": 326940,
+          "text": "z",
+          "probability": 0.7730779051780701
+        },
+        {
+          "startMs": 326940,
+          "endMs": 327040,
+          "text": "al",
+          "probability": 0.3348918557167053
+        },
+        {
+          "startMs": 327040,
+          "endMs": 327200,
+          "text": "us",
+          "probability": 0.7485074400901794
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0068",
+      "startMs": 327200,
+      "endMs": 328000,
+      "text": "完成了",
+      "words": [
+        {
+          "startMs": 327200,
+          "endMs": 327600,
+          "text": "完成",
+          "probability": 0.7412812113761902
+        },
+        {
+          "startMs": 327600,
+          "endMs": 328000,
+          "text": "了",
+          "probability": 0.9128254055976868
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0069",
+      "startMs": 330320,
+      "endMs": 331780,
+      "text": "很久很久",
+      "words": [
+        {
+          "startMs": 330320,
+          "endMs": 331120,
+          "text": "很",
+          "probability": 0.0893513411283493
+        },
+        {
+          "startMs": 331120,
+          "endMs": 331360,
+          "text": "久",
+          "probability": 0.6417822241783142
+        },
+        {
+          "startMs": 331360,
+          "endMs": 331780,
+          "text": "很",
+          "probability": 0.8560135960578918
+        },
+        {
+          "startMs": 331780,
+          "endMs": 331780,
+          "text": "久",
+          "probability": 0.7751017212867737
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0070",
+      "startMs": 331780,
+      "endMs": 333280,
+      "text": "在路上",
+      "words": [
+        {
+          "startMs": 331780,
+          "endMs": 332740,
+          "text": "在",
+          "probability": 0.074923574924469
+        },
+        {
+          "startMs": 332740,
+          "endMs": 332860,
+          "text": "路",
+          "probability": 0.7633010149002075
+        },
+        {
+          "startMs": 332860,
+          "endMs": 333280,
+          "text": "上",
+          "probability": 0.9772417545318604
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0071",
+      "startMs": 333280,
+      "endMs": 334960,
+      "text": "我對你",
+      "words": [
+        {
+          "startMs": 333280,
+          "endMs": 333300,
+          "text": "我",
+          "probability": 0.024056656286120415
+        },
+        {
+          "startMs": 333300,
+          "endMs": 333340,
+          "text": "對",
+          "probability": 0.006032619159668684
+        },
+        {
+          "startMs": 333340,
+          "endMs": 334960,
+          "text": "你",
+          "probability": 0.2849557101726532
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0072",
+      "startMs": 334960,
+      "endMs": 335320,
+      "text": "謝謝",
+      "words": [
+        {
+          "startMs": 334960,
+          "endMs": 335320,
+          "text": "謝謝",
+          "probability": 0.01428514625877142
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0073",
+      "startMs": 336360,
+      "endMs": 337260,
+      "text": "乾杯",
+      "words": [
+        {
+          "startMs": 336360,
+          "endMs": 336880,
+          "text": "乾",
+          "probability": 0.03569969907402992
+        },
+        {
+          "startMs": 336880,
+          "endMs": 337260,
+          "text": "杯",
+          "probability": 0.9570693969726562
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0074",
+      "startMs": 337260,
+      "endMs": 338240,
+      "text": "對不起",
+      "words": [
+        {
+          "startMs": 337260,
+          "endMs": 338240,
+          "text": "對不起",
+          "probability": 0.08587286621332169
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0075",
+      "startMs": 351140,
+      "endMs": 353240,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 351140,
+          "endMs": 351660,
+          "text": "你",
+          "probability": 0.07052486389875412
+        },
+        {
+          "startMs": 351660,
+          "endMs": 351920,
+          "text": "真",
+          "probability": 0.02174326218664646
+        },
+        {
+          "startMs": 351920,
+          "endMs": 352500,
+          "text": "是",
+          "probability": 0.6984348297119141
+        },
+        {
+          "startMs": 352500,
+          "endMs": 352800,
+          "text": "瘋",
+          "probability": 0.5259232406194011
+        },
+        {
+          "startMs": 352800,
+          "endMs": 353240,
+          "text": "狂",
+          "probability": 0.5307145193219185
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0076",
+      "startMs": 353240,
+      "endMs": 396950,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 353240,
+          "endMs": 353600,
+          "text": "你",
+          "probability": 0.010203748010098934
+        },
+        {
+          "startMs": 353600,
+          "endMs": 354280,
+          "text": "真",
+          "probability": 0.04644551873207092
+        },
+        {
+          "startMs": 354280,
+          "endMs": 354280,
+          "text": "是",
+          "probability": 0.8853585124015808
+        },
+        {
+          "startMs": 396490,
+          "endMs": 396730,
+          "text": "瘋",
+          "probability": 0.923349400361379
+        },
+        {
+          "startMs": 396730,
+          "endMs": 396950,
+          "text": "狂",
+          "probability": 0.9957674741744995
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0077",
+      "startMs": 397710,
+      "endMs": 398710,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 397710,
+          "endMs": 398230,
+          "text": "你",
+          "probability": 0.37286612391471863
+        },
+        {
+          "startMs": 398230,
+          "endMs": 398230,
+          "text": "真",
+          "probability": 0.6676861047744751
+        },
+        {
+          "startMs": 398230,
+          "endMs": 398570,
+          "text": "是",
+          "probability": 0.9872385263442993
+        },
+        {
+          "startMs": 398570,
+          "endMs": 398710,
+          "text": "瘋",
+          "probability": 0.9876053929328918
+        },
+        {
+          "startMs": 398710,
+          "endMs": 398710,
+          "text": "狂",
+          "probability": 0.9977830350399017
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0078",
+      "startMs": 398710,
+      "endMs": 399110,
+      "text": "我死了",
+      "words": [
+        {
+          "startMs": 398710,
+          "endMs": 398750,
+          "text": "我",
+          "probability": 0.11055953800678253
+        },
+        {
+          "startMs": 398750,
+          "endMs": 398750,
+          "text": "死",
+          "probability": 0.016497714444994926
+        },
+        {
+          "startMs": 398750,
+          "endMs": 399110,
+          "text": "了",
+          "probability": 0.5404255986213684
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0079",
+      "startMs": 399110,
+      "endMs": 400970,
+      "text": "我死了",
+      "words": [
+        {
+          "startMs": 399110,
+          "endMs": 399750,
+          "text": "我",
+          "probability": 0.21640533208847046
+        },
+        {
+          "startMs": 399750,
+          "endMs": 400970,
+          "text": "死",
+          "probability": 0.20862014591693878
+        },
+        {
+          "startMs": 400970,
+          "endMs": 400970,
+          "text": "了",
+          "probability": 0.4236213266849518
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0080",
+      "startMs": 400970,
+      "endMs": 459660,
+      "text": "我找到一個死的地方",
+      "words": [
+        {
+          "startMs": 400970,
+          "endMs": 401190,
+          "text": "我",
+          "probability": 0.33732137084007263
+        },
+        {
+          "startMs": 401190,
+          "endMs": 401190,
+          "text": "找",
+          "probability": 0.06874291598796844
+        },
+        {
+          "startMs": 401190,
+          "endMs": 401190,
+          "text": "到",
+          "probability": 0.44767341017723083
+        },
+        {
+          "startMs": 401190,
+          "endMs": 401190,
+          "text": "一個",
+          "probability": 0.21443136036396027
+        },
+        {
+          "startMs": 455680,
+          "endMs": 457200,
+          "text": "死",
+          "probability": 0.3713793456554413
+        },
+        {
+          "startMs": 459280,
+          "endMs": 459500,
+          "text": "的",
+          "probability": 0.09908480197191238
+        },
+        {
+          "startMs": 459500,
+          "endMs": 459660,
+          "text": "地方",
+          "probability": 0.6866888999938965
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0081",
+      "startMs": 460560,
+      "endMs": 471540,
+      "text": "這是我從萊斯大廈發生的訊息",
+      "words": [
+        {
+          "startMs": 460560,
+          "endMs": 461080,
+          "text": "這是",
+          "probability": 0.004799527116119862
+        },
+        {
+          "startMs": 461080,
+          "endMs": 461200,
+          "text": "我",
+          "probability": 0.08870117366313934
+        },
+        {
+          "startMs": 470040,
+          "endMs": 470040,
+          "text": "從",
+          "probability": 0.04400857165455818
+        },
+        {
+          "startMs": 470040,
+          "endMs": 470140,
+          "text": "萊",
+          "probability": 0.4613035146612674
+        },
+        {
+          "startMs": 470140,
+          "endMs": 470280,
+          "text": "斯",
+          "probability": 0.3978084325790405
+        },
+        {
+          "startMs": 470280,
+          "endMs": 470440,
+          "text": "大",
+          "probability": 0.6622898578643799
+        },
+        {
+          "startMs": 470440,
+          "endMs": 470680,
+          "text": "廈",
+          "probability": 0.78213170170784
+        },
+        {
+          "startMs": 470680,
+          "endMs": 470960,
+          "text": "發",
+          "probability": 0.2815942168235779
+        },
+        {
+          "startMs": 470960,
+          "endMs": 471200,
+          "text": "生",
+          "probability": 0.17552529275417328
+        },
+        {
+          "startMs": 471200,
+          "endMs": 471280,
+          "text": "的",
+          "probability": 0.7009541392326355
+        },
+        {
+          "startMs": 471280,
+          "endMs": 471400,
+          "text": "訊",
+          "probability": 0.6672137975692749
+        },
+        {
+          "startMs": 471400,
+          "endMs": 471540,
+          "text": "息",
+          "probability": 0.5619665384292603
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0082",
+      "startMs": 472200,
+      "endMs": 472880,
+      "text": "彩色",
+      "words": [
+        {
+          "startMs": 472200,
+          "endMs": 472720,
+          "text": "彩",
+          "probability": 0.10670139454305172
+        },
+        {
+          "startMs": 472720,
+          "endMs": 472880,
+          "text": "色",
+          "probability": 0.22274748980998993
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0083",
+      "startMs": 472880,
+      "endMs": 479860,
+      "text": "無法交流",
+      "words": [
+        {
+          "startMs": 472880,
+          "endMs": 473460,
+          "text": "無",
+          "probability": 0.024310052394866943
+        },
+        {
+          "startMs": 473460,
+          "endMs": 473520,
+          "text": "法",
+          "probability": 0.5755918622016907
+        },
+        {
+          "startMs": 479180,
+          "endMs": 479520,
+          "text": "交",
+          "probability": 0.4619942009449005
+        },
+        {
+          "startMs": 479520,
+          "endMs": 479860,
+          "text": "流",
+          "probability": 0.9940372705459595
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0084",
+      "startMs": 480920,
+      "endMs": 482380,
+      "text": "Gergeron出發",
+      "words": [
+        {
+          "startMs": 480920,
+          "endMs": 481440,
+          "text": "G",
+          "probability": 0.07332953810691833
+        },
+        {
+          "startMs": 481440,
+          "endMs": 481540,
+          "text": "er",
+          "probability": 0.24807272851467133
+        },
+        {
+          "startMs": 481540,
+          "endMs": 481720,
+          "text": "ger",
+          "probability": 0.7600189447402954
+        },
+        {
+          "startMs": 481720,
+          "endMs": 481920,
+          "text": "on",
+          "probability": 0.3409983217716217
+        },
+        {
+          "startMs": 481920,
+          "endMs": 482160,
+          "text": "出",
+          "probability": 0.707682728767395
+        },
+        {
+          "startMs": 482160,
+          "endMs": 482380,
+          "text": "發",
+          "probability": 0.4250496029853821
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0085",
+      "startMs": 482380,
+      "endMs": 483000,
+      "text": "完成",
+      "words": [
+        {
+          "startMs": 482380,
+          "endMs": 483000,
+          "text": "完成",
+          "probability": 0.020121555775403976
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0086",
+      "startMs": 487050,
+      "endMs": 488350,
+      "text": "你的動力pip",
+      "words": [
+        {
+          "startMs": 487050,
+          "endMs": 487570,
+          "text": "你的",
+          "probability": 0.022160515189170837
+        },
+        {
+          "startMs": 487570,
+          "endMs": 487910,
+          "text": "動",
+          "probability": 0.3020577132701874
+        },
+        {
+          "startMs": 487910,
+          "endMs": 488050,
+          "text": "力",
+          "probability": 0.9495347738265991
+        },
+        {
+          "startMs": 488050,
+          "endMs": 488230,
+          "text": "p",
+          "probability": 0.03994748741388321
+        },
+        {
+          "startMs": 488230,
+          "endMs": 488350,
+          "text": "ip",
+          "probability": 0.4140506982803345
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0087",
+      "startMs": 488350,
+      "endMs": 488850,
+      "text": "開始",
+      "words": [
+        {
+          "startMs": 488350,
+          "endMs": 488850,
+          "text": "開始",
+          "probability": 0.1620819866657257
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0088",
+      "startMs": 488850,
+      "endMs": 488950,
+      "text": "開始",
+      "words": [
+        {
+          "startMs": 488850,
+          "endMs": 488950,
+          "text": "開始",
+          "probability": 0.013687041588127613
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0089",
+      "startMs": 489830,
+      "endMs": 491470,
+      "text": "師兄",
+      "words": [
+        {
+          "startMs": 489830,
+          "endMs": 490670,
+          "text": "師",
+          "probability": 0.00011326598905725405
+        },
+        {
+          "startMs": 490670,
+          "endMs": 491470,
+          "text": "兄",
+          "probability": 0.46259984374046326
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0090",
+      "startMs": 492550,
+      "endMs": 495790,
+      "text": "別人是很痛苦的",
+      "words": [
+        {
+          "startMs": 492550,
+          "endMs": 492970,
+          "text": "別",
+          "probability": 0.061486877501010895
+        },
+        {
+          "startMs": 492970,
+          "endMs": 493250,
+          "text": "人",
+          "probability": 0.2974795401096344
+        },
+        {
+          "startMs": 493250,
+          "endMs": 493430,
+          "text": "是",
+          "probability": 0.41224172711372375
+        },
+        {
+          "startMs": 493430,
+          "endMs": 493670,
+          "text": "很",
+          "probability": 0.156449094414711
+        },
+        {
+          "startMs": 493670,
+          "endMs": 493670,
+          "text": "痛",
+          "probability": 0.20819635689258575
+        },
+        {
+          "startMs": 493670,
+          "endMs": 494170,
+          "text": "苦",
+          "probability": 0.6501212120056152
+        },
+        {
+          "startMs": 494170,
+          "endMs": 495790,
+          "text": "的",
+          "probability": 0.7242075204849243
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0091",
+      "startMs": 495790,
+      "endMs": 497230,
+      "text": "時機來了",
+      "words": [
+        {
+          "startMs": 495790,
+          "endMs": 495790,
+          "text": "時",
+          "probability": 0.060476817190647125
+        },
+        {
+          "startMs": 495790,
+          "endMs": 496850,
+          "text": "機",
+          "probability": 0.5522381663322449
+        },
+        {
+          "startMs": 496850,
+          "endMs": 497230,
+          "text": "來了",
+          "probability": 0.8256029486656189
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0092",
+      "startMs": 498690,
+      "endMs": 499790,
+      "text": "慢慢休息",
+      "words": [
+        {
+          "startMs": 498690,
+          "endMs": 499110,
+          "text": "慢慢",
+          "probability": 0.12088307738304138
+        },
+        {
+          "startMs": 499110,
+          "endMs": 499490,
+          "text": "休",
+          "probability": 0.813144326210022
+        },
+        {
+          "startMs": 499490,
+          "endMs": 499790,
+          "text": "息",
+          "probability": 0.9862136244773865
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0093",
+      "startMs": 499790,
+      "endMs": 508260,
+      "text": "Apzalus",
+      "words": [
+        {
+          "startMs": 499790,
+          "endMs": 500630,
+          "text": "A",
+          "probability": 0.11823578178882599
+        },
+        {
+          "startMs": 507440,
+          "endMs": 507880,
+          "text": "p",
+          "probability": 0.05941711738705635
+        },
+        {
+          "startMs": 507880,
+          "endMs": 507900,
+          "text": "z",
+          "probability": 0.029238803312182426
+        },
+        {
+          "startMs": 507900,
+          "endMs": 508060,
+          "text": "al",
+          "probability": 0.2936965227127075
+        },
+        {
+          "startMs": 508060,
+          "endMs": 508260,
+          "text": "us",
+          "probability": 0.7440227270126343
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0094",
+      "startMs": 508260,
+      "endMs": 510700,
+      "text": "我是自己的",
+      "words": [
+        {
+          "startMs": 508260,
+          "endMs": 509300,
+          "text": "我是",
+          "probability": 0.05744660273194313
+        },
+        {
+          "startMs": 509300,
+          "endMs": 509920,
+          "text": "自己",
+          "probability": 0.39822712540626526
+        },
+        {
+          "startMs": 509920,
+          "endMs": 510700,
+          "text": "的",
+          "probability": 0.6912134885787964
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0095",
+      "startMs": 510700,
+      "endMs": 514470,
+      "text": "到All Green出發",
+      "words": [
+        {
+          "startMs": 510700,
+          "endMs": 510700,
+          "text": "到",
+          "probability": 0.0007744309259578586
+        },
+        {
+          "startMs": 512910,
+          "endMs": 513610,
+          "text": "All",
+          "probability": 4.963920218870044e-05
+        },
+        {
+          "startMs": 513610,
+          "endMs": 513850,
+          "text": " Green",
+          "probability": 0.0003720054228324443
+        },
+        {
+          "startMs": 513850,
+          "endMs": 514230,
+          "text": "出",
+          "probability": 0.02070085145533085
+        },
+        {
+          "startMs": 514230,
+          "endMs": 514470,
+          "text": "發",
+          "probability": 0.28368574380874634
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0096",
+      "startMs": 514470,
+      "endMs": 515430,
+      "text": "20分鐘",
+      "words": [
+        {
+          "startMs": 514470,
+          "endMs": 515070,
+          "text": "20",
+          "probability": 0.05934716761112213
+        },
+        {
+          "startMs": 515070,
+          "endMs": 515430,
+          "text": "分鐘",
+          "probability": 0.8645400404930115
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0097",
+      "startMs": 516750,
+      "endMs": 518350,
+      "text": "稍後讓我來",
+      "words": [
+        {
+          "startMs": 516750,
+          "endMs": 517170,
+          "text": "稍",
+          "probability": 0.49989029730204493
+        },
+        {
+          "startMs": 517170,
+          "endMs": 517350,
+          "text": "後",
+          "probability": 0.5563429594039917
+        },
+        {
+          "startMs": 517350,
+          "endMs": 517710,
+          "text": "讓",
+          "probability": 0.1800815463066101
+        },
+        {
+          "startMs": 517710,
+          "endMs": 518350,
+          "text": "我",
+          "probability": 0.8034743666648865
+        },
+        {
+          "startMs": 518350,
+          "endMs": 518350,
+          "text": "來",
+          "probability": 0.049252551048994064
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0098",
+      "startMs": 518610,
+      "endMs": 557540,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 518610,
+          "endMs": 519030,
+          "text": "你",
+          "probability": 0.00514768622815609
+        },
+        {
+          "startMs": 519030,
+          "endMs": 520110,
+          "text": "真",
+          "probability": 0.004664137493818998
+        },
+        {
+          "startMs": 556720,
+          "endMs": 556720,
+          "text": "是",
+          "probability": 0.5285476446151733
+        },
+        {
+          "startMs": 556720,
+          "endMs": 556960,
+          "text": "瘋",
+          "probability": 0.5554864958394319
+        },
+        {
+          "startMs": 556960,
+          "endMs": 557540,
+          "text": "狂",
+          "probability": 0.7599854469299316
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0099",
+      "startMs": 557540,
+      "endMs": 559260,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 557540,
+          "endMs": 557960,
+          "text": "你",
+          "probability": 0.008766960352659225
+        },
+        {
+          "startMs": 557960,
+          "endMs": 557960,
+          "text": "真",
+          "probability": 0.039308302104473114
+        },
+        {
+          "startMs": 557960,
+          "endMs": 559240,
+          "text": "是",
+          "probability": 0.70783931016922
+        },
+        {
+          "startMs": 559240,
+          "endMs": 559240,
+          "text": "瘋",
+          "probability": 0.6808672721187273
+        },
+        {
+          "startMs": 559240,
+          "endMs": 559260,
+          "text": "狂",
+          "probability": 0.9903507232666016
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0100",
+      "startMs": 559260,
+      "endMs": 614960,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 559260,
+          "endMs": 559400,
+          "text": "你",
+          "probability": 0.09112042933702469
+        },
+        {
+          "startMs": 559400,
+          "endMs": 559400,
+          "text": "真",
+          "probability": 0.46576300263404846
+        },
+        {
+          "startMs": 559400,
+          "endMs": 559580,
+          "text": "是",
+          "probability": 0.9948287606239319
+        },
+        {
+          "startMs": 559580,
+          "endMs": 560040,
+          "text": "瘋",
+          "probability": 0.9932871460914612
+        },
+        {
+          "startMs": 614760,
+          "endMs": 614960,
+          "text": "狂",
+          "probability": 0.9987217783927917
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0101",
+      "startMs": 614960,
+      "endMs": 617060,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 614960,
+          "endMs": 615700,
+          "text": "你",
+          "probability": 0.6072806715965271
+        },
+        {
+          "startMs": 615700,
+          "endMs": 616620,
+          "text": "真",
+          "probability": 0.938810408115387
+        },
+        {
+          "startMs": 616620,
+          "endMs": 616620,
+          "text": "是",
+          "probability": 0.9982189536094666
+        },
+        {
+          "startMs": 616620,
+          "endMs": 616680,
+          "text": "瘋",
+          "probability": 0.9981776475906372
+        },
+        {
+          "startMs": 616680,
+          "endMs": 617060,
+          "text": "狂",
+          "probability": 0.9990703761577606
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0102",
+      "startMs": 617060,
+      "endMs": 621020,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 617060,
+          "endMs": 617460,
+          "text": "你",
+          "probability": 0.013981505297124386
+        },
+        {
+          "startMs": 617460,
+          "endMs": 620940,
+          "text": "真",
+          "probability": 0.015979275107383728
+        },
+        {
+          "startMs": 620940,
+          "endMs": 620940,
+          "text": "是",
+          "probability": 0.525307834148407
+        },
+        {
+          "startMs": 620940,
+          "endMs": 620940,
+          "text": "瘋",
+          "probability": 0.5455988883040845
+        },
+        {
+          "startMs": 620940,
+          "endMs": 621020,
+          "text": "狂",
+          "probability": 0.5520590096712112
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0103",
+      "startMs": 621480,
+      "endMs": 622340,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 621480,
+          "endMs": 621920,
+          "text": "你",
+          "probability": 0.02338254638016224
+        },
+        {
+          "startMs": 621920,
+          "endMs": 622260,
+          "text": "真",
+          "probability": 0.028141608461737633
+        },
+        {
+          "startMs": 622260,
+          "endMs": 622340,
+          "text": "是",
+          "probability": 0.8676127195358276
+        },
+        {
+          "startMs": 622340,
+          "endMs": 622340,
+          "text": "瘋",
+          "probability": 0.8350207606951395
+        },
+        {
+          "startMs": 622340,
+          "endMs": 622340,
+          "text": "狂",
+          "probability": 0.9963557720184326
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0104",
+      "startMs": 622340,
+      "endMs": 622700,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 622340,
+          "endMs": 622340,
+          "text": "你",
+          "probability": 0.5713798999786377
+        },
+        {
+          "startMs": 622340,
+          "endMs": 622360,
+          "text": "真",
+          "probability": 0.597865104675293
+        },
+        {
+          "startMs": 622360,
+          "endMs": 622360,
+          "text": "是",
+          "probability": 0.9922248125076294
+        },
+        {
+          "startMs": 622360,
+          "endMs": 622580,
+          "text": "瘋",
+          "probability": 0.9868199825286865
+        },
+        {
+          "startMs": 622580,
+          "endMs": 622700,
+          "text": "狂",
+          "probability": 0.9990785419940948
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0105",
+      "startMs": 622700,
+      "endMs": 623160,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 622700,
+          "endMs": 622920,
+          "text": "你",
+          "probability": 0.6455162167549133
+        },
+        {
+          "startMs": 622920,
+          "endMs": 623020,
+          "text": "真",
+          "probability": 0.5712697505950928
+        },
+        {
+          "startMs": 623020,
+          "endMs": 623160,
+          "text": "是",
+          "probability": 0.9952386617660522
+        },
+        {
+          "startMs": 623160,
+          "endMs": 623160,
+          "text": "瘋",
+          "probability": 0.9918132026990255
+        },
+        {
+          "startMs": 623160,
+          "endMs": 623160,
+          "text": "狂",
+          "probability": 0.9990675449371338
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0106",
+      "startMs": 624300,
+      "endMs": 624940,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 624300,
+          "endMs": 624740,
+          "text": "你",
+          "probability": 0.672078013420105
+        },
+        {
+          "startMs": 624740,
+          "endMs": 624740,
+          "text": "真",
+          "probability": 0.664548397064209
+        },
+        {
+          "startMs": 624740,
+          "endMs": 624740,
+          "text": "是",
+          "probability": 0.9961479902267456
+        },
+        {
+          "startMs": 624740,
+          "endMs": 624840,
+          "text": "瘋",
+          "probability": 0.9907389481862386
+        },
+        {
+          "startMs": 624840,
+          "endMs": 624940,
+          "text": "狂",
+          "probability": 0.9990451037883759
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0107",
+      "startMs": 624940,
+      "endMs": 626400,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 624940,
+          "endMs": 625500,
+          "text": "你",
+          "probability": 0.7130424380302429
+        },
+        {
+          "startMs": 625500,
+          "endMs": 625640,
+          "text": "真",
+          "probability": 0.7538584470748901
+        },
+        {
+          "startMs": 625640,
+          "endMs": 625640,
+          "text": "是",
+          "probability": 0.9955807328224182
+        },
+        {
+          "startMs": 625640,
+          "endMs": 626300,
+          "text": "瘋",
+          "probability": 0.9920661648114523
+        },
+        {
+          "startMs": 626300,
+          "endMs": 626400,
+          "text": "狂",
+          "probability": 0.9990639686584473
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0108",
+      "startMs": 626400,
+      "endMs": 627120,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 626400,
+          "endMs": 627120,
+          "text": "你",
+          "probability": 0.7070303559303284
+        },
+        {
+          "startMs": 627120,
+          "endMs": 627120,
+          "text": "真",
+          "probability": 0.8374211192131042
+        },
+        {
+          "startMs": 627120,
+          "endMs": 627120,
+          "text": "是",
+          "probability": 0.995790421962738
+        },
+        {
+          "startMs": 627120,
+          "endMs": 627120,
+          "text": "瘋",
+          "probability": 0.9922942916552225
+        },
+        {
+          "startMs": 627120,
+          "endMs": 627120,
+          "text": "狂",
+          "probability": 0.9993334412574768
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0109",
+      "startMs": 627120,
+      "endMs": 627400,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 627120,
+          "endMs": 627140,
+          "text": "你",
+          "probability": 0.7714347839355469
+        },
+        {
+          "startMs": 627140,
+          "endMs": 627140,
+          "text": "真",
+          "probability": 0.8758833408355713
+        },
+        {
+          "startMs": 627140,
+          "endMs": 627140,
+          "text": "是",
+          "probability": 0.9963492155075073
+        },
+        {
+          "startMs": 627140,
+          "endMs": 627220,
+          "text": "瘋",
+          "probability": 0.9930461446444193
+        },
+        {
+          "startMs": 627220,
+          "endMs": 627400,
+          "text": "狂",
+          "probability": 0.9993582963943481
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0110",
+      "startMs": 627400,
+      "endMs": 627900,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 627400,
+          "endMs": 627660,
+          "text": "你",
+          "probability": 0.7676757574081421
+        },
+        {
+          "startMs": 627660,
+          "endMs": 627660,
+          "text": "真",
+          "probability": 0.8934938311576843
+        },
+        {
+          "startMs": 627660,
+          "endMs": 627660,
+          "text": "是",
+          "probability": 0.9967254400253296
+        },
+        {
+          "startMs": 627660,
+          "endMs": 627800,
+          "text": "瘋",
+          "probability": 0.9937981963157654
+        },
+        {
+          "startMs": 627800,
+          "endMs": 627900,
+          "text": "狂",
+          "probability": 0.9995078146457672
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0111",
+      "startMs": 627900,
+      "endMs": 628760,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 627900,
+          "endMs": 628760,
+          "text": "你",
+          "probability": 0.8393326997756958
+        },
+        {
+          "startMs": 628760,
+          "endMs": 628760,
+          "text": "真",
+          "probability": 0.9177244305610657
+        },
+        {
+          "startMs": 628760,
+          "endMs": 628760,
+          "text": "是",
+          "probability": 0.996791422367096
+        },
+        {
+          "startMs": 628760,
+          "endMs": 628760,
+          "text": "瘋",
+          "probability": 0.9941548506418864
+        },
+        {
+          "startMs": 628760,
+          "endMs": 628760,
+          "text": "狂",
+          "probability": 0.9995119571685791
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0112",
+      "startMs": 631870,
+      "endMs": 632590,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 631870,
+          "endMs": 632310,
+          "text": "你",
+          "probability": 0.8182899951934814
+        },
+        {
+          "startMs": 632310,
+          "endMs": 632310,
+          "text": "真",
+          "probability": 0.9458802342414856
+        },
+        {
+          "startMs": 632310,
+          "endMs": 632570,
+          "text": "是",
+          "probability": 0.9972596168518066
+        },
+        {
+          "startMs": 632570,
+          "endMs": 632590,
+          "text": "瘋",
+          "probability": 0.9962046345074972
+        },
+        {
+          "startMs": 632590,
+          "endMs": 632590,
+          "text": "狂",
+          "probability": 0.999378114938736
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0113",
+      "startMs": 632590,
+      "endMs": 633010,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 632590,
+          "endMs": 633010,
+          "text": "你",
+          "probability": 0.8048151731491089
+        },
+        {
+          "startMs": 633010,
+          "endMs": 633010,
+          "text": "真",
+          "probability": 0.9333656430244446
+        },
+        {
+          "startMs": 633010,
+          "endMs": 633010,
+          "text": "是",
+          "probability": 0.9966630339622498
+        },
+        {
+          "startMs": 633010,
+          "endMs": 633010,
+          "text": "瘋",
+          "probability": 0.9972389141718546
+        },
+        {
+          "startMs": 633010,
+          "endMs": 633010,
+          "text": "狂",
+          "probability": 0.9993903338909149
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0114",
+      "startMs": 638860,
+      "endMs": 641140,
+      "text": "你真是瘋狂",
+      "words": [
+        {
+          "startMs": 638860,
+          "endMs": 639300,
+          "text": "你",
+          "probability": 0.7799111604690552
+        },
+        {
+          "startMs": 639300,
+          "endMs": 639740,
+          "text": "真",
+          "probability": 0.932756781578064
+        },
+        {
+          "startMs": 639740,
+          "endMs": 639740,
+          "text": "是",
+          "probability": 0.995652437210083
+        },
+        {
+          "startMs": 639740,
+          "endMs": 641140,
+          "text": "瘋",
+          "probability": 0.996707538763682
+        },
+        {
+          "startMs": 641140,
+          "endMs": 641140,
+          "text": "狂",
+          "probability": 0.9993950724601746
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0115",
+      "startMs": 642900,
+      "endMs": 644020,
+      "text": "你這真是...",
+      "words": [
+        {
+          "startMs": 642900,
+          "endMs": 643360,
+          "text": "你",
+          "probability": 0.05195915326476097
+        },
+        {
+          "startMs": 643360,
+          "endMs": 643600,
+          "text": "這",
+          "probability": 0.011168137192726135
+        },
+        {
+          "startMs": 643600,
+          "endMs": 643900,
+          "text": "真",
+          "probability": 0.024293627589941025
+        },
+        {
+          "startMs": 643900,
+          "endMs": 643900,
+          "text": "是",
+          "probability": 0.7662121057510376
+        },
+        {
+          "startMs": 643900,
+          "endMs": 644020,
+          "text": "...",
+          "probability": 0.023121848702430725
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0116",
+      "startMs": 644700,
+      "endMs": 648060,
+      "text": "我跟你們三零一一...",
+      "words": [
+        {
+          "startMs": 644700,
+          "endMs": 645280,
+          "text": "我",
+          "probability": 0.10175003111362457
+        },
+        {
+          "startMs": 645280,
+          "endMs": 645280,
+          "text": "跟",
+          "probability": 0.037761181592941284
+        },
+        {
+          "startMs": 645280,
+          "endMs": 645520,
+          "text": "你們",
+          "probability": 0.08485136926174164
+        },
+        {
+          "startMs": 645520,
+          "endMs": 646720,
+          "text": "三",
+          "probability": 0.048093028366565704
+        },
+        {
+          "startMs": 646720,
+          "endMs": 647040,
+          "text": "零",
+          "probability": 0.4834049064666033
+        },
+        {
+          "startMs": 647040,
+          "endMs": 647300,
+          "text": "一",
+          "probability": 0.917904794216156
+        },
+        {
+          "startMs": 647300,
+          "endMs": 647520,
+          "text": "一",
+          "probability": 0.03240874409675598
+        },
+        {
+          "startMs": 647520,
+          "endMs": 648060,
+          "text": "...",
+          "probability": 0.15550203621387482
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0117",
+      "startMs": 649420,
+      "endMs": 651160,
+      "text": "你們什麼都可以活著",
+      "words": [
+        {
+          "startMs": 649420,
+          "endMs": 650060,
+          "text": "你們",
+          "probability": 0.013990476727485657
+        },
+        {
+          "startMs": 650060,
+          "endMs": 650200,
+          "text": "什麼",
+          "probability": 0.04688473045825958
+        },
+        {
+          "startMs": 650200,
+          "endMs": 650460,
+          "text": "都",
+          "probability": 0.4764479100704193
+        },
+        {
+          "startMs": 650460,
+          "endMs": 650880,
+          "text": "可以",
+          "probability": 0.05423448234796524
+        },
+        {
+          "startMs": 650880,
+          "endMs": 650960,
+          "text": "活",
+          "probability": 0.10056951642036438
+        },
+        {
+          "startMs": 650960,
+          "endMs": 651160,
+          "text": "著",
+          "probability": 0.34862905740737915
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0118",
+      "startMs": 651160,
+      "endMs": 655920,
+      "text": "你們什麼都可以為我們朋友打敗",
+      "words": [
+        {
+          "startMs": 651160,
+          "endMs": 651980,
+          "text": "你們",
+          "probability": 0.00918740313500166
+        },
+        {
+          "startMs": 651980,
+          "endMs": 653700,
+          "text": "什麼",
+          "probability": 0.12517206370830536
+        },
+        {
+          "startMs": 653700,
+          "endMs": 654000,
+          "text": "都",
+          "probability": 0.7295175194740295
+        },
+        {
+          "startMs": 654000,
+          "endMs": 654240,
+          "text": "可以",
+          "probability": 0.7089411020278931
+        },
+        {
+          "startMs": 654240,
+          "endMs": 654240,
+          "text": "為",
+          "probability": 0.3205958306789398
+        },
+        {
+          "startMs": 654240,
+          "endMs": 654640,
+          "text": "我們",
+          "probability": 0.14396914839744568
+        },
+        {
+          "startMs": 654640,
+          "endMs": 654700,
+          "text": "朋友",
+          "probability": 0.0448484905064106
+        },
+        {
+          "startMs": 654700,
+          "endMs": 655320,
+          "text": "打",
+          "probability": 0.11909907311201096
+        },
+        {
+          "startMs": 655320,
+          "endMs": 655920,
+          "text": "敗",
+          "probability": 0.5391893945634365
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0119",
+      "startMs": 656220,
+      "endMs": 676350,
+      "text": "正正",
+      "words": [
+        {
+          "startMs": 656220,
+          "endMs": 656540,
+          "text": "正",
+          "probability": 0.0001617267553228885
+        },
+        {
+          "startMs": 675970,
+          "endMs": 676350,
+          "text": "正",
+          "probability": 0.048544496297836304
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0120",
+      "startMs": 676350,
+      "endMs": 711600,
+      "text": "你這個傢伙",
+      "words": [
+        {
+          "startMs": 676350,
+          "endMs": 676670,
+          "text": "你",
+          "probability": 0.02081071026623249
+        },
+        {
+          "startMs": 676670,
+          "endMs": 677030,
+          "text": "這個",
+          "probability": 0.05205201730132103
+        },
+        {
+          "startMs": 711200,
+          "endMs": 711300,
+          "text": "傢",
+          "probability": 0.3681428078562021
+        },
+        {
+          "startMs": 711300,
+          "endMs": 711600,
+          "text": "伙",
+          "probability": 0.9833734333515167
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0121",
+      "startMs": 712360,
+      "endMs": 714120,
+      "text": "你真是很厲害",
+      "words": [
+        {
+          "startMs": 712360,
+          "endMs": 713000,
+          "text": "你",
+          "probability": 0.057501647621393204
+        },
+        {
+          "startMs": 713000,
+          "endMs": 713000,
+          "text": "真",
+          "probability": 0.07863231003284454
+        },
+        {
+          "startMs": 713000,
+          "endMs": 713860,
+          "text": "是",
+          "probability": 0.7329143285751343
+        },
+        {
+          "startMs": 713860,
+          "endMs": 713860,
+          "text": "很",
+          "probability": 0.09012360870838165
+        },
+        {
+          "startMs": 713860,
+          "endMs": 714120,
+          "text": "厲害",
+          "probability": 0.2012675255537033
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0122",
+      "startMs": 714780,
+      "endMs": 716920,
+      "text": "真是復活了",
+      "words": [
+        {
+          "startMs": 714780,
+          "endMs": 715420,
+          "text": "真",
+          "probability": 0.021884411573410034
+        },
+        {
+          "startMs": 715420,
+          "endMs": 715720,
+          "text": "是",
+          "probability": 0.5916945338249207
+        },
+        {
+          "startMs": 715720,
+          "endMs": 715840,
+          "text": "復",
+          "probability": 0.6109418943524361
+        },
+        {
+          "startMs": 715840,
+          "endMs": 716180,
+          "text": "活",
+          "probability": 0.9819274544715881
+        },
+        {
+          "startMs": 716180,
+          "endMs": 716920,
+          "text": "了",
+          "probability": 0.24007610976696014
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0123",
+      "startMs": 716920,
+      "endMs": 723070,
+      "text": "你不是在耍我嗎",
+      "words": [
+        {
+          "startMs": 716920,
+          "endMs": 717100,
+          "text": "你",
+          "probability": 0.09416092932224274
+        },
+        {
+          "startMs": 717100,
+          "endMs": 717640,
+          "text": "不是",
+          "probability": 0.06140920892357826
+        },
+        {
+          "startMs": 721710,
+          "endMs": 721730,
+          "text": "在",
+          "probability": 0.22772639989852905
+        },
+        {
+          "startMs": 721730,
+          "endMs": 722690,
+          "text": "耍",
+          "probability": 0.4599022439215332
+        },
+        {
+          "startMs": 722690,
+          "endMs": 722770,
+          "text": "我",
+          "probability": 0.17812912166118622
+        },
+        {
+          "startMs": 722770,
+          "endMs": 723070,
+          "text": "嗎",
+          "probability": 0.5479663610458374
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0124",
+      "startMs": 723070,
+      "endMs": 725650,
+      "text": "阿依娜出現了",
+      "words": [
+        {
+          "startMs": 723070,
+          "endMs": 724290,
+          "text": "阿",
+          "probability": 0.0211502555757761
+        },
+        {
+          "startMs": 724290,
+          "endMs": 724350,
+          "text": "依",
+          "probability": 0.4751080460846424
+        },
+        {
+          "startMs": 724350,
+          "endMs": 724450,
+          "text": "娜",
+          "probability": 0.6049309000372887
+        },
+        {
+          "startMs": 724450,
+          "endMs": 724690,
+          "text": "出",
+          "probability": 0.04639245942234993
+        },
+        {
+          "startMs": 724690,
+          "endMs": 725070,
+          "text": "現",
+          "probability": 0.13277685642242432
+        },
+        {
+          "startMs": 725070,
+          "endMs": 725650,
+          "text": "了",
+          "probability": 0.8785826563835144
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0125",
+      "startMs": 736080,
+      "endMs": 737740,
+      "text": "我打敗了",
+      "words": [
+        {
+          "startMs": 736080,
+          "endMs": 736720,
+          "text": "我",
+          "probability": 0.32949623465538025
+        },
+        {
+          "startMs": 736720,
+          "endMs": 736920,
+          "text": "打",
+          "probability": 0.1816357970237732
+        },
+        {
+          "startMs": 736920,
+          "endMs": 737200,
+          "text": "敗",
+          "probability": 0.7657681703567505
+        },
+        {
+          "startMs": 737200,
+          "endMs": 737740,
+          "text": "了",
+          "probability": 0.27367380261421204
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0126",
+      "startMs": 737740,
+      "endMs": 738480,
+      "text": "好",
+      "words": [
+        {
+          "startMs": 737740,
+          "endMs": 738480,
+          "text": "好",
+          "probability": 0.6355758905410767
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0127",
+      "startMs": 738480,
+      "endMs": 740660,
+      "text": "好 開始吧",
+      "words": [
+        {
+          "startMs": 738480,
+          "endMs": 738520,
+          "text": "好",
+          "probability": 0.08160389959812164
+        },
+        {
+          "startMs": 739140,
+          "endMs": 740100,
+          "text": " 開始",
+          "probability": 0.5070720911026001
+        },
+        {
+          "startMs": 740100,
+          "endMs": 740660,
+          "text": "吧",
+          "probability": 0.8908081650733948
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0128",
+      "startMs": 740660,
+      "endMs": 773400,
+      "text": "我遇過愛娜的想法",
+      "words": [
+        {
+          "startMs": 740660,
+          "endMs": 740760,
+          "text": "我",
+          "probability": 0.16018740832805634
+        },
+        {
+          "startMs": 771480,
+          "endMs": 771700,
+          "text": "遇",
+          "probability": 0.5647075995802879
+        },
+        {
+          "startMs": 771700,
+          "endMs": 771700,
+          "text": "過",
+          "probability": 0.35677894949913025
+        },
+        {
+          "startMs": 771700,
+          "endMs": 771940,
+          "text": "愛",
+          "probability": 0.39320123195648193
+        },
+        {
+          "startMs": 771940,
+          "endMs": 772180,
+          "text": "娜",
+          "probability": 0.5522987172007561
+        },
+        {
+          "startMs": 772180,
+          "endMs": 772560,
+          "text": "的",
+          "probability": 0.32281675934791565
+        },
+        {
+          "startMs": 772560,
+          "endMs": 772920,
+          "text": "想",
+          "probability": 0.13025951385498047
+        },
+        {
+          "startMs": 772920,
+          "endMs": 773400,
+          "text": "法",
+          "probability": 0.5026761293411255
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0129",
+      "startMs": 773400,
+      "endMs": 776740,
+      "text": "是個很有趣的生命",
+      "words": [
+        {
+          "startMs": 773400,
+          "endMs": 773520,
+          "text": "是",
+          "probability": 0.07581915706396103
+        },
+        {
+          "startMs": 773520,
+          "endMs": 775060,
+          "text": "個",
+          "probability": 0.20326276123523712
+        },
+        {
+          "startMs": 775060,
+          "endMs": 775060,
+          "text": "很有",
+          "probability": 0.22298814356327057
+        },
+        {
+          "startMs": 775060,
+          "endMs": 775840,
+          "text": "趣",
+          "probability": 0.9706028699874878
+        },
+        {
+          "startMs": 775840,
+          "endMs": 776220,
+          "text": "的",
+          "probability": 0.7375437617301941
+        },
+        {
+          "startMs": 776220,
+          "endMs": 776340,
+          "text": "生",
+          "probability": 0.14131233096122742
+        },
+        {
+          "startMs": 776340,
+          "endMs": 776740,
+          "text": "命",
+          "probability": 0.669538140296936
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0130",
+      "startMs": 777640,
+      "endMs": 779380,
+      "text": "但我沒有敵人",
+      "words": [
+        {
+          "startMs": 777640,
+          "endMs": 778400,
+          "text": "但",
+          "probability": 0.23633013665676117
+        },
+        {
+          "startMs": 778400,
+          "endMs": 779100,
+          "text": "我",
+          "probability": 0.23811547458171844
+        },
+        {
+          "startMs": 779100,
+          "endMs": 779180,
+          "text": "沒有",
+          "probability": 0.136613667011261
+        },
+        {
+          "startMs": 779180,
+          "endMs": 779180,
+          "text": "敵",
+          "probability": 0.3566008433699608
+        },
+        {
+          "startMs": 779180,
+          "endMs": 779380,
+          "text": "人",
+          "probability": 0.5445926785469055
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-11T07:29:31.832350Z"
+}

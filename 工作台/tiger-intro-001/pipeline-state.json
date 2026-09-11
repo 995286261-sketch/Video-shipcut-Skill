@@ -20,7 +20,7 @@
     ],
     "evidence": "\u5de5\u4f5c\u53f0/tiger-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u97f3\u4e50\u68c0\u7d22/BGM-\u5019\u9009\u767b\u8bb0-Infinity-\u9cab\u865e\u8c46\u8150\u6c64-remix-FB88461C.json"
   },
-  "currentNode": "G2",
+  "currentNode": "G3",
   "status": "in_progress",
   "nodes": {
     "G0": {
@@ -83,15 +83,65 @@
       }
     },
     "G2": {
-      "status": "in_progress",
+      "status": "completed",
       "inputRefs": [],
-      "artifactRefs": [],
-      "humanReviewPoints": [],
-      "reviewGate": null,
-      "approval": null
+      "artifactRefs": [
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u8d44\u6599/\u8001\u864e\u6539\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u521b\u4f5c\u5019\u9009\u7a3f-v0.1.md",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u4e8b\u5b9e\u5ba1\u6838\u7a3f-v0.1.md",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.1.md",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe-v0.1.json",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/gt-source-transcript.json",
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/gt-source-contact-sheet.jpg"
+      ],
+      "humanReviewPoints": [
+        "G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u4e8b\u5b9e\u5ba1\u6838\u7a3f-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/gt-source-contact-sheet.jpg",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/gt-source-transcript.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u8d44\u6599/\u8001\u864e\u6539\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-11T07:44:46Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvalTokenVerbatim": "\u786e\u8ba4G2",
+        "approvalResponseVerbatim": "\u786e\u8ba4G2",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-11T07:49:28Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.1.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u8d44\u6599/\u8001\u864e\u6539\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-v0.1.json"
+      }
     },
     "G3": {
-      "status": "pending",
+      "status": "in_progress",
       "inputRefs": [],
       "artifactRefs": [],
       "humanReviewPoints": [],
@@ -116,7 +166,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Prepare evidence, narration, and fact review.",
+  "nextAction": "Prepare timecoded edit plan and request user review.",
   "createdAt": "2026-09-11T05:53:06Z",
-  "updatedAt": "2026-09-11T07:17:25Z"
+  "updatedAt": "2026-09-11T07:49:28Z"
 }

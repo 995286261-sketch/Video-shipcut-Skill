@@ -1,0 +1,256 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "purpose": "G2 voice brief: measured per-sentence durations supersede text estimates",
+ "voiceTier": "production_neural",
+ "tierNote": "cosyvoice-v3-flash neural TTS (24kHz mono wav); upgrade path: human VO at G5 if desired",
+ "engine": "bailian-cosyvoice-v3-flash",
+ "voice": "longtian_v3",
+ "voiceName": "龙天（磁性理智男）",
+ "language": "zh",
+ "sampleRate": 24000,
+ "channels": 1,
+ "fullNarrationRef": "G2-创作候选稿-v0.1.md",
+ "sentenceScriptRef": "G2-创作候选稿-v0.1.json",
+ "measuredTotalDurationMs": 120100,
+ "auditionRef": "配音试听/试听备选-龙飞-N01.wav",
+ "userVoiceApproval": true,
+ "sentences": [
+  {
+   "sentenceId": "N01",
+   "text": "U.C.0079，一年战争，吉恩尼克基于老虎改良的特制泛用机：MS-07B3老虎改。",
+   "tier": "P1",
+   "audioRef": "配音试听/N01.wav",
+   "startMs": 0,
+   "durationMs": 9650,
+   "budgetSec": [
+    6,
+    8
+   ],
+   "budgetFit": "OVER"
+  },
+  {
+   "sentenceId": "N02",
+   "text": "而把它开到极限的，是前线一位名门出身的王牌驾驶员。",
+   "tier": "P1",
+   "audioRef": "配音试听/N02.wav",
+   "startMs": 9650,
+   "durationMs": 4930,
+   "budgetSec": [
+    6,
+    8
+   ],
+   "budgetFit": "UNDER"
+  },
+  {
+   "sentenceId": "N03",
+   "text": "老虎的白刃战天下第一，远程却只有左手内藏的一门75毫米机关炮。",
+   "tier": "P2",
+   "audioRef": "配音试听/N03.wav",
+   "startMs": 14580,
+   "durationMs": 6050,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N04",
+   "text": "白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶员对它敬而远之。",
+   "tier": "P2",
+   "audioRef": "配音试听/N04.wav",
+   "startMs": 20630,
+   "durationMs": 6850,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N05",
+   "text": "B3接到的任务很简单：把这个系列丢掉的远程，成倍拿回来。",
+   "tier": "P2",
+   "audioRef": "配音试听/N05.wav",
+   "startMs": 27480,
+   "durationMs": 5410,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N06",
+   "text": "第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装35毫米机关炮。",
+   "tier": "P2",
+   "audioRef": "配音试听/N06.wav",
+   "startMs": 32890,
+   "durationMs": 6930,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N07",
+   "text": "手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按任务换装。",
+   "tier": "P2",
+   "audioRef": "配音试听/N07.wav",
+   "startMs": 39820,
+   "durationMs": 5970,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N08",
+   "text": "第二刀在电热鞭上：细径化、射程延长、命中精度提高。",
+   "tier": "P2",
+   "audioRef": "配音试听/N08.wav",
+   "startMs": 45790,
+   "durationMs": 5570,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N09",
+   "text": "射出机构还加了装甲导轨护着——这条鞭子，能从任意角度发动三维攻击。",
+   "tier": "P2",
+   "audioRef": "配音试听/N09.wav",
+   "startMs": 51360,
+   "durationMs": 6690,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N10",
+   "text": "第三刀在头部：高精度传感器，高处索敌堪比侦察机。",
+   "tier": "P2",
+   "audioRef": "配音试听/N10.wav",
+   "startMs": 58050,
+   "durationMs": 5010,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N11",
+   "text": "动力管布局优化，潮湿地形照样通过——为陆战全天候而生。",
+   "tier": "P2",
+   "audioRef": "配音试听/N11.wav",
+   "startMs": 63060,
+   "durationMs": 6370,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N12",
+   "text": "防御端保留经典的复合格林盾：加特林与热能军刀，随心切换。",
+   "tier": "P2",
+   "audioRef": "配音试听/N12.wav",
+   "startMs": 69430,
+   "durationMs": 5650,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N13",
+   "text": "超高张力钢骨架、四吨级推进，都是老虎系标配。",
+   "tier": "P2",
+   "audioRef": "配音试听/N13.wav",
+   "startMs": 75080,
+   "durationMs": 5090,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N14",
+   "text": "单机掩护HLV发射，把08小队和联邦军打得落花流水。",
+   "tier": "P2",
+   "audioRef": "配音试听/N14.wav",
+   "startMs": 80170,
+   "durationMs": 6290,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N15",
+   "text": "回看这张改装清单，思路就一句话：把原型的每一处短板，都压成改装项。",
+   "tier": "P2",
+   "audioRef": "配音试听/N15.wav",
+   "startMs": 86460,
+   "durationMs": 6770,
+   "budgetSec": [
+    5,
+    7
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N16",
+   "text": "战争后来结束了，老虎系列成了传奇的燃料；但看过那场陆战的人都知道——它从不靠主角光环，也不靠奇迹装备。",
+   "tier": "P3",
+   "audioRef": "配音试听/N16.wav",
+   "startMs": 93230,
+   "durationMs": 10370,
+   "budgetSec": [
+    8,
+    12
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N17",
+   "text": "MS-07B3，老虎改——一个王牌驾驶员，交给一台缺陷机型的答卷。",
+   "tier": "P3",
+   "audioRef": "配音试听/N17.wav",
+   "startMs": 103600,
+   "durationMs": 11170,
+   "budgetSec": [
+    8,
+    12
+   ],
+   "budgetFit": "ok"
+  },
+  {
+   "sentenceId": "N18",
+   "text": "你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。",
+   "tier": "P4",
+   "audioRef": "配音试听/N18.wav",
+   "startMs": 114770,
+   "durationMs": 5330,
+   "budgetSec": [
+    4,
+    6
+   ],
+   "budgetFit": "ok"
+  }
+ ],
+ "measuredAt": "2026-09-11",
+ "voiceApprovalBasis": "G2 最终回显卡 D3 默认项（龙天）经用户令牌「确认G2」批准；备选龙飞试听件保留在案"
+}

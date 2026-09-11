@@ -1,0 +1,50 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G2",
+ "cardType": "g2_evidence_narration_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-11T07:44:46Z",
+ "reviewCardRef": "工作台/tiger-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+ "basisRefs": [
+  "工作台/tiger-intro-001/G2-证据与口播/G2-证据准备报告-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-事实审核稿-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-排版稿-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/BGM/BGM-节拍蓝图-v0.1.json",
+  "工作台/tiger-intro-001/G2-证据与口播/gt-source-contact-sheet.jpg",
+  "工作台/tiger-intro-001/G2-证据与口播/转写/gt-source-transcript.json",
+  "工作台/tiger-intro-001/G0-素材包/material-pack.json",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-口播稿-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/事实资料/老虎改公开资料摘录-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-配音清单-v0.1.json",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-审核决定-v0.1.json",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-确认记录.md"
+ ],
+ "checklist": [
+  {
+   "id": "fact_citation",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G2-证据与口播/事实资料/老虎改公开资料摘录-v0.1.md"
+  },
+  {
+   "id": "approved_narration",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G2-证据与口播/G2-创作候选稿-v0.1.md"
+  },
+  {
+   "id": "voice_brief",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G2-证据与口播/G2-配音清单-v0.1.json"
+  },
+  {
+   "id": "g2_card",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md"
+  }
+ ]
+}

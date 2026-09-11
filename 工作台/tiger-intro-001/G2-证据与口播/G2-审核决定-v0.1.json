@@ -1,0 +1,42 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G2",
+ "projectId": "tiger-intro-001",
+ "status": "approved_for_g3",
+ "approvedNarrationRef": "工作台/tiger-intro-001/G2-证据与口播/G2-口播稿-v0.1.md",
+ "factCitationRef": "工作台/tiger-intro-001/G2-证据与口播/事实资料/老虎改公开资料摘录-v0.1.md",
+ "voiceBriefRef": "工作台/tiger-intro-001/G2-证据与口播/G2-配音清单-v0.1.json",
+ "permittedFactIds": [
+  "F-1",
+  "F-2",
+  "F-3",
+  "F-4",
+  "F-5",
+  "F-6",
+  "F-7",
+  "F-8",
+  "F-9",
+  "F-10"
+ ],
+ "prohibitedTopics": [
+  "驾驶员『诺里斯·帕卡多』点名口播（G3逐镜身份核验通过前禁止；N02维持不点名稿）",
+  "『官方数据』类夸口（资料为公开百科共识，非一手设定集）",
+  "40700KG推进/超高张力钢作为B3独有卖点（老虎系通用值，N13降级口径）",
+  "复用源片烧录字幕与源片原声（UP主译配+版权BGM，仅作画面语境）",
+  "作品间拉踩"
+ ],
+ "supersededDraftRefs": [
+  "工作台/tiger-intro-001/G2-证据与口播/G2-创作候选稿-v0.1.md"
+ ],
+ "userManuallyVerifiedClaims": [],
+ "audioPolicy": {
+  "bgm": "《Infinity（鲫虞豆腐汤remix）》试听件（用户声明自担，G5发布前复述边界）",
+  "sourceOriginalAudio": "排除（二创混剪自带BGM与译配）",
+  "narrationVoice": "longtian_v3 成品级（production_neural）"
+ },
+ "approvalBasis": {
+  "token": "确认G2",
+  "card": "工作台/tiger-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+  "at": "2026-09-11"
+ }
+}
