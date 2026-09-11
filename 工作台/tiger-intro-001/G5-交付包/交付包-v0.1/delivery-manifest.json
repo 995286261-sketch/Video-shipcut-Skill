@@ -1,0 +1,1024 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "tiger-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-08-611b3717",
+      "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+      "sourceProbe": {
+        "durationMs": 836800,
+        "width": 1436,
+        "height": 1080
+      }
+    },
+    {
+      "assetId": "audio-07-infinity-remix-e695f488",
+      "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+      "sourceProbe": {
+        "durationMs": 258368
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "sourceStartMs": 20296,
+      "sourceEndMs": 23503,
+      "outputStartMs": 0,
+      "outputEndMs": 3207,
+      "narrationSentence": "U.C.0079，一年战争，吉恩尼克基于老虎改良",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-002",
+      "sourceStartMs": 29061,
+      "sourceEndMs": 31300,
+      "outputStartMs": 3207,
+      "outputEndMs": 5446,
+      "narrationSentence": "U.C.0079，一年战争，吉恩尼克基于老虎改良",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-003",
+      "sourceStartMs": 125978,
+      "sourceEndMs": 128051,
+      "outputStartMs": 5446,
+      "outputEndMs": 7519,
+      "narrationSentence": "U.C.0079，一年战争，吉恩尼克基于老虎改良",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-004",
+      "sourceStartMs": 700463,
+      "sourceEndMs": 701500,
+      "outputStartMs": 7519,
+      "outputEndMs": 8556,
+      "narrationSentence": "U.C.0079，一年战争，吉恩尼克基于老虎改良",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-005",
+      "sourceStartMs": 783298,
+      "sourceEndMs": 784392,
+      "outputStartMs": 8556,
+      "outputEndMs": 9650,
+      "narrationSentence": "U.C.0079，一年战争，吉恩尼克基于老虎改良",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-006",
+      "sourceStartMs": 134619,
+      "sourceEndMs": 138566,
+      "outputStartMs": 9650,
+      "outputEndMs": 13597,
+      "narrationSentence": "而把它开到极限的，是前线一位名门出身的王牌驾驶员",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-007",
+      "sourceStartMs": 149242,
+      "sourceEndMs": 150225,
+      "outputStartMs": 13597,
+      "outputEndMs": 14580,
+      "narrationSentence": "而把它开到极限的，是前线一位名门出身的王牌驾驶员",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-008",
+      "sourceStartMs": 528520,
+      "sourceEndMs": 529350,
+      "outputStartMs": 14580,
+      "outputEndMs": 15410,
+      "narrationSentence": "老虎的白刃战天下第一，远程却只有左手内藏的一门7",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-009",
+      "sourceStartMs": 439289,
+      "sourceEndMs": 442100,
+      "outputStartMs": 15410,
+      "outputEndMs": 18221,
+      "narrationSentence": "老虎的白刃战天下第一，远程却只有左手内藏的一门7",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-010",
+      "sourceStartMs": 426369,
+      "sourceEndMs": 428778,
+      "outputStartMs": 18221,
+      "outputEndMs": 20630,
+      "narrationSentence": "老虎的白刃战天下第一，远程却只有左手内藏的一门7",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-011",
+      "sourceStartMs": 95902,
+      "sourceEndMs": 97000,
+      "outputStartMs": 20630,
+      "outputEndMs": 21728,
+      "narrationSentence": "白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-012",
+      "sourceStartMs": 150225,
+      "sourceEndMs": 154400,
+      "outputStartMs": 21728,
+      "outputEndMs": 25903,
+      "narrationSentence": "白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-013",
+      "sourceStartMs": 770836,
+      "sourceEndMs": 772413,
+      "outputStartMs": 25903,
+      "outputEndMs": 27480,
+      "narrationSentence": "白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-014",
+      "sourceStartMs": 202707,
+      "sourceEndMs": 208117,
+      "outputStartMs": 27480,
+      "outputEndMs": 32890,
+      "narrationSentence": "B3接到的任务很简单：把这个系列丢掉的远程，成倍",
+      "chapterId": "c1-开场档案",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-015",
+      "sourceStartMs": 428778,
+      "sourceEndMs": 430897,
+      "outputStartMs": 32890,
+      "outputEndMs": 35009,
+      "narrationSentence": "第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-016",
+      "sourceStartMs": 430897,
+      "sourceEndMs": 433597,
+      "outputStartMs": 35009,
+      "outputEndMs": 37709,
+      "narrationSentence": "第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-017",
+      "sourceStartMs": 355124,
+      "sourceEndMs": 357235,
+      "outputStartMs": 37709,
+      "outputEndMs": 39820,
+      "narrationSentence": "第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-018",
+      "sourceStartMs": 688790,
+      "sourceEndMs": 690534,
+      "outputStartMs": 39820,
+      "outputEndMs": 41564,
+      "narrationSentence": "手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-019",
+      "sourceStartMs": 435799,
+      "sourceEndMs": 438874,
+      "outputStartMs": 41564,
+      "outputEndMs": 44639,
+      "narrationSentence": "手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-020",
+      "sourceStartMs": 541357,
+      "sourceEndMs": 542508,
+      "outputStartMs": 44639,
+      "outputEndMs": 45790,
+      "narrationSentence": "手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-021",
+      "sourceStartMs": 523494,
+      "sourceEndMs": 528396,
+      "outputStartMs": 45790,
+      "outputEndMs": 50692,
+      "narrationSentence": "第二刀在电热鞭上：细径化、射程延长、命中精度提高",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-022",
+      "sourceStartMs": 520087,
+      "sourceEndMs": 520755,
+      "outputStartMs": 50692,
+      "outputEndMs": 51360,
+      "narrationSentence": "第二刀在电热鞭上：细径化、射程延长、命中精度提高",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-023",
+      "sourceStartMs": 529518,
+      "sourceEndMs": 534461,
+      "outputStartMs": 51360,
+      "outputEndMs": 56303,
+      "narrationSentence": "射出机构还加了装甲导轨护着——这条鞭子，能从任意",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-024",
+      "sourceStartMs": 683514,
+      "sourceEndMs": 685261,
+      "outputStartMs": 56303,
+      "outputEndMs": 58050,
+      "narrationSentence": "射出机构还加了装甲导轨护着——这条鞭子，能从任意",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-025",
+      "sourceStartMs": 386500,
+      "sourceEndMs": 391510,
+      "outputStartMs": 58050,
+      "outputEndMs": 63060,
+      "narrationSentence": "第三刀在头部：高精度传感器，高处索敌堪比侦察机。",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-026",
+      "sourceStartMs": 285957,
+      "sourceEndMs": 289729,
+      "outputStartMs": 63060,
+      "outputEndMs": 66832,
+      "narrationSentence": "动力管布局优化，潮湿地形照样通过——为陆战全天候",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-027",
+      "sourceStartMs": 357235,
+      "sourceEndMs": 359200,
+      "outputStartMs": 66832,
+      "outputEndMs": 68797,
+      "narrationSentence": "动力管布局优化，潮湿地形照样通过——为陆战全天候",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-028",
+      "sourceStartMs": 544141,
+      "sourceEndMs": 544774,
+      "outputStartMs": 68797,
+      "outputEndMs": 69430,
+      "narrationSentence": "动力管布局优化，潮湿地形照样通过——为陆战全天候",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-029",
+      "sourceStartMs": 539405,
+      "sourceEndMs": 541357,
+      "outputStartMs": 69430,
+      "outputEndMs": 71382,
+      "narrationSentence": "防御端保留经典的复合格林盾：加特林与热能军刀，随",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-030",
+      "sourceStartMs": 542604,
+      "sourceEndMs": 544141,
+      "outputStartMs": 71382,
+      "outputEndMs": 72919,
+      "narrationSentence": "防御端保留经典的复合格林盾：加特林与热能军刀，随",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-031",
+      "sourceStartMs": 550954,
+      "sourceEndMs": 553115,
+      "outputStartMs": 72919,
+      "outputEndMs": 75080,
+      "narrationSentence": "防御端保留经典的复合格林盾：加特林与热能军刀，随",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-032",
+      "sourceStartMs": 548378,
+      "sourceEndMs": 550787,
+      "outputStartMs": 75080,
+      "outputEndMs": 77489,
+      "narrationSentence": "超高张力钢骨架、四吨级推进，都是老虎系标配。",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-033",
+      "sourceStartMs": 703330,
+      "sourceEndMs": 706011,
+      "outputStartMs": 77489,
+      "outputEndMs": 80170,
+      "narrationSentence": "超高张力钢骨架、四吨级推进，都是老虎系标配。",
+      "chapterId": "c2-改装三刀",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-034",
+      "sourceStartMs": 68110,
+      "sourceEndMs": 74400,
+      "outputStartMs": 80170,
+      "outputEndMs": 86460,
+      "narrationSentence": "单机掩护HLV发射，把08小队和联邦军打得落花流",
+      "chapterId": "c3-性能战绩",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-035",
+      "sourceStartMs": 784392,
+      "sourceEndMs": 788117,
+      "outputStartMs": 86460,
+      "outputEndMs": 90185,
+      "narrationSentence": "回看这张改装清单，思路就一句话：把原型的每一处短",
+      "chapterId": "c3-性能战绩",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-036",
+      "sourceStartMs": 448802,
+      "sourceEndMs": 451847,
+      "outputStartMs": 90185,
+      "outputEndMs": 93230,
+      "narrationSentence": "回看这张改装清单，思路就一句话：把原型的每一处短",
+      "chapterId": "c3-性能战绩",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-037",
+      "sourceStartMs": 772413,
+      "sourceEndMs": 777399,
+      "outputStartMs": 93230,
+      "outputEndMs": 98216,
+      "narrationSentence": "战争后来结束了，老虎系列成了传奇的燃料；但看过那",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-038",
+      "sourceStartMs": 777399,
+      "sourceEndMs": 778123,
+      "outputStartMs": 98216,
+      "outputEndMs": 98940,
+      "narrationSentence": "战争后来结束了，老虎系列成了传奇的燃料；但看过那",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-039",
+      "sourceStartMs": 823968,
+      "sourceEndMs": 826959,
+      "outputStartMs": 98940,
+      "outputEndMs": 101931,
+      "narrationSentence": "战争后来结束了，老虎系列成了传奇的燃料；但看过那",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-040",
+      "sourceStartMs": 826959,
+      "sourceEndMs": 828628,
+      "outputStartMs": 101931,
+      "outputEndMs": 103600,
+      "narrationSentence": "战争后来结束了，老虎系列成了传奇的燃料；但看过那",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-041",
+      "sourceStartMs": 692986,
+      "sourceEndMs": 694481,
+      "outputStartMs": 103600,
+      "outputEndMs": 105095,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-042",
+      "sourceStartMs": 628720,
+      "sourceEndMs": 631420,
+      "outputStartMs": 105095,
+      "outputEndMs": 107795,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-043",
+      "sourceStartMs": 407218,
+      "sourceEndMs": 409609,
+      "outputStartMs": 107795,
+      "outputEndMs": 110186,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-044",
+      "sourceStartMs": 799084,
+      "sourceEndMs": 801369,
+      "outputStartMs": 110186,
+      "outputEndMs": 112471,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-045",
+      "sourceStartMs": 574923,
+      "sourceEndMs": 575771,
+      "outputStartMs": 112471,
+      "outputEndMs": 113319,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-046",
+      "sourceStartMs": 685261,
+      "sourceEndMs": 686214,
+      "outputStartMs": 113319,
+      "outputEndMs": 114272,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-047",
+      "sourceStartMs": 522996,
+      "sourceEndMs": 523494,
+      "outputStartMs": 114272,
+      "outputEndMs": 114770,
+      "narrationSentence": "MS-07B3，老虎改——一个王牌驾驶员，交给一",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-048",
+      "sourceStartMs": 828628,
+      "sourceEndMs": 832289,
+      "outputStartMs": 114770,
+      "outputEndMs": 118431,
+      "narrationSentence": "你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-049",
+      "sourceStartMs": 796548,
+      "sourceEndMs": 797381,
+      "outputStartMs": 118431,
+      "outputEndMs": 119264,
+      "narrationSentence": "你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    },
+    {
+      "segmentId": "seg-050",
+      "sourceStartMs": 520755,
+      "sourceEndMs": 521591,
+      "outputStartMs": 119264,
+      "outputEndMs": 120100,
+      "narrationSentence": "你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。",
+      "chapterId": "c4-高潮收束",
+      "assetId": "source-02-08-611b3717",
+      "sourcePath": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceSha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9"
+    }
+  ],
+  "editPlan": {
+    "engine": "local_ffmpeg",
+    "resolution": "1436x1080->1920x1080 pad/scale",
+    "fps": 30,
+    "timeline": [
+      {
+        "segmentId": "seg-001",
+        "outputStartMs": 0,
+        "outputEndMs": 3207,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-002",
+        "outputStartMs": 3207,
+        "outputEndMs": 5446,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-003",
+        "outputStartMs": 5446,
+        "outputEndMs": 7519,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-004",
+        "outputStartMs": 7519,
+        "outputEndMs": 8556,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-005",
+        "outputStartMs": 8556,
+        "outputEndMs": 9650,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-006",
+        "outputStartMs": 9650,
+        "outputEndMs": 13597,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-007",
+        "outputStartMs": 13597,
+        "outputEndMs": 14580,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-008",
+        "outputStartMs": 14580,
+        "outputEndMs": 15410,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-009",
+        "outputStartMs": 15410,
+        "outputEndMs": 18221,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-010",
+        "outputStartMs": 18221,
+        "outputEndMs": 20630,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-011",
+        "outputStartMs": 20630,
+        "outputEndMs": 21728,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-012",
+        "outputStartMs": 21728,
+        "outputEndMs": 25903,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-013",
+        "outputStartMs": 25903,
+        "outputEndMs": 27480,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-014",
+        "outputStartMs": 27480,
+        "outputEndMs": 32890,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-015",
+        "outputStartMs": 32890,
+        "outputEndMs": 35009,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-016",
+        "outputStartMs": 35009,
+        "outputEndMs": 37709,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-017",
+        "outputStartMs": 37709,
+        "outputEndMs": 39820,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-018",
+        "outputStartMs": 39820,
+        "outputEndMs": 41564,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-019",
+        "outputStartMs": 41564,
+        "outputEndMs": 44639,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-020",
+        "outputStartMs": 44639,
+        "outputEndMs": 45790,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-021",
+        "outputStartMs": 45790,
+        "outputEndMs": 50692,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-022",
+        "outputStartMs": 50692,
+        "outputEndMs": 51360,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-023",
+        "outputStartMs": 51360,
+        "outputEndMs": 56303,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-024",
+        "outputStartMs": 56303,
+        "outputEndMs": 58050,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-025",
+        "outputStartMs": 58050,
+        "outputEndMs": 63060,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-026",
+        "outputStartMs": 63060,
+        "outputEndMs": 66832,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-027",
+        "outputStartMs": 66832,
+        "outputEndMs": 68797,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-028",
+        "outputStartMs": 68797,
+        "outputEndMs": 69430,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-029",
+        "outputStartMs": 69430,
+        "outputEndMs": 71382,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-030",
+        "outputStartMs": 71382,
+        "outputEndMs": 72919,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-031",
+        "outputStartMs": 72919,
+        "outputEndMs": 75080,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-032",
+        "outputStartMs": 75080,
+        "outputEndMs": 77489,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-033",
+        "outputStartMs": 77489,
+        "outputEndMs": 80170,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-034",
+        "outputStartMs": 80170,
+        "outputEndMs": 86460,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-035",
+        "outputStartMs": 86460,
+        "outputEndMs": 90185,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-036",
+        "outputStartMs": 90185,
+        "outputEndMs": 93230,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-037",
+        "outputStartMs": 93230,
+        "outputEndMs": 98216,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-038",
+        "outputStartMs": 98216,
+        "outputEndMs": 98940,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-039",
+        "outputStartMs": 98940,
+        "outputEndMs": 101931,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-040",
+        "outputStartMs": 101931,
+        "outputEndMs": 103600,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-041",
+        "outputStartMs": 103600,
+        "outputEndMs": 105095,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-042",
+        "outputStartMs": 105095,
+        "outputEndMs": 107795,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-043",
+        "outputStartMs": 107795,
+        "outputEndMs": 110186,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-044",
+        "outputStartMs": 110186,
+        "outputEndMs": 112471,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-045",
+        "outputStartMs": 112471,
+        "outputEndMs": 113319,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-046",
+        "outputStartMs": 113319,
+        "outputEndMs": 114272,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-047",
+        "outputStartMs": 114272,
+        "outputEndMs": 114770,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-048",
+        "outputStartMs": 114770,
+        "outputEndMs": 118431,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-049",
+        "outputStartMs": 118431,
+        "outputEndMs": 119264,
+        "transition": "hard_cut"
+      },
+      {
+        "segmentId": "seg-050",
+        "outputStartMs": 119264,
+        "outputEndMs": 120100,
+        "transition": "hard_cut"
+      }
+    ]
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "49E49C306B5B17A5EB75D590ABFC1BF823094807FE3B4115DD48B3DD8159B509"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "C257B0EE9D447E70A30A679CBB98F913E047FA35F8E05A80C3591470F699A398"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "2A7AC3514995F4E3F1B2C0CD158439DB15601B57FCD5867424C1C29BA55430F5"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/c1-开场档案.mp4",
+        "sha256": "6BE4D7E2ECBF07DC19436587C4A60DB0D6647E876DC147436BD5927D73BDD53C"
+      },
+      {
+        "path": "clips/c2-改装三刀.mp4",
+        "sha256": "963AFA1B7F189F599CB21E567B2C1E7896F95CE19644B721A9BA6F1C05164313"
+      },
+      {
+        "path": "clips/c3-性能战绩.mp4",
+        "sha256": "8FEDB2D07601D19310F1463977A35412C6ED678C2C532CBB102722EC06BAA30C"
+      },
+      {
+        "path": "clips/c4-高潮收束.mp4",
+        "sha256": "FADF7110F50AE72CF02936B4771CAD8A3240CE0CBCBEA8997F6B466726137512"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "F61FA961903DE9A8082342A38A5C5851A89BA38D0F80F67DF78FCD5476458F58"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    {
+      "id": "hrp-final-timeline",
+      "point": "最终八列回显整体确认：50段连续无重叠时间线、逐段实际画面观察、精确切点",
+      "status": "awaiting_user"
+    },
+    {
+      "id": "hrp-n02-naming",
+      "point": "N02/N17王牌点名升级决定：11处驾驶舱互剪+疤脸特征构成画面证据链，但脸→名仍属推定（G2口径限制第9条），是否口播点名「诺里斯·帕卡多」由用户定夺（当前口播未点名，维持即安全）",
+      "status": "awaiting_user"
+    },
+    {
+      "id": "hrp-material-sufficiency",
+      "point": "素材充分性披露：纯目标机体镜头不足81s排他主张，N08-N13/N17等武器/动作节拍采用混合战斗镜头（虎可见）承载，已逐段标mixed",
+      "status": "awaiting_user"
+    },
+    {
+      "id": "hrp-bgm-selfrisk",
+      "point": "BGM=网易云试听件+用户声明自担（G2 audioPolicy），对齐吸附35/35全命中、轨起点53.636s、高潮锚点自动落N16",
+      "status": "awaiting_user"
+    },
+    {
+      "id": "hrp-packaging",
+      "point": "包装：标题A、封面候选（含水印需重制）、标签；源字幕24段mask、水印保留进G5披露",
+      "status": "awaiting_user"
+    }
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/tiger-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/tiger-intro-001/G2-证据与口播/G2-审核决定-v0.1.json",
+    "工作台/tiger-intro-001/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.1.json",
+    "工作台/tiger-intro-001/G4-剪辑与渲染/G4-渲染验证-v0.1.json",
+    "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/BGM链路审计-v0.1.json"
+  ],
+  "warnings": [
+    "源片全片带『嘟嘟踢被子 bilibili』水印（二创混剪）",
+    "多处烧录译配字幕：入选段逐段处理",
+    "BGM 为试听件+用户声明自担，G5 复述"
+  ],
+  "authorization": {
+    "music": "网易云试听件·用户声明自担·不得商用",
+    "source": "B站二创混剪画面·仅同规范二创分发",
+    "distribution": "public_bilibili_noncommercial"
+  },
+  "distribution": "public_bilibili",
+  "status": "g5_pending_human_review",
+  "finishedAt": "2026-09-12T00:20:00+08:00",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

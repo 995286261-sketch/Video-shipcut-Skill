@@ -21,7 +21,7 @@
     "evidence": "\u5de5\u4f5c\u53f0/tiger-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u97f3\u4e50\u68c0\u7d22/BGM-\u5019\u9009\u767b\u8bb0-Infinity-\u9cab\u865e\u8c46\u8150\u6c64-remix-FB88461C.json"
   },
   "currentNode": "G5",
-  "status": "in_progress",
+  "status": "review_required",
   "nodes": {
     "G0": {
       "status": "completed",
@@ -231,16 +231,35 @@
       }
     },
     "G5": {
-      "status": "in_progress",
+      "status": "review_required",
       "inputRefs": [],
-      "artifactRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json"
+      ],
       "humanReviewPoints": [],
-      "reviewGate": null,
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/G5-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/BGM\u94fe\u8def\u5ba1\u8ba1-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/failure-samples/README.md"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-12T00:25:00+08:00"
+      },
       "approval": null
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Run final QA and request human playback review.",
+  "nextAction": "Resolve the listed review or blocker items.",
   "createdAt": "2026-09-11T05:53:06Z",
-  "updatedAt": "2026-09-11T10:17:01Z"
+  "updatedAt": "2026-09-11T10:25:47Z"
 }

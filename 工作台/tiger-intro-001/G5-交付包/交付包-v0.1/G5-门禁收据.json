@@ -1,0 +1,47 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G5",
+ "cardType": "g5_delivery_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-12T00:25:00+08:00",
+ "reviewCardRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/G5-交付回显卡-v0.1.md",
+ "basisRefs": [
+  "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/delivery-manifest.json",
+  "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/metadata-validation-report.json",
+  "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/BGM链路审计-v0.1.json",
+  "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/failure-samples/README.md"
+ ],
+ "checklist": [
+  {
+   "id": "delivery_manifest",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/delivery-manifest.json"
+  },
+  {
+   "id": "qa_validation",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/metadata-validation-report.json"
+  },
+  {
+   "id": "playback_review",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/G5-交付回显卡-v0.1.md"
+  },
+  {
+   "id": "check_frames",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/检查帧-封面.jpg"
+  },
+  {
+   "id": "distribution_boundary",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1/README.md"
+  }
+ ]
+}

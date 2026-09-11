@@ -1,0 +1,59 @@
+{
+ "schemaVersion": "0.1",
+ "platform": "bilibili",
+ "distribution": "public_bilibili",
+ "video": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "codec": "h264",
+  "durationActualMs": 120100,
+  "targetDurationSec": [
+   110,
+   130
+  ]
+ },
+ "subtitles": {
+  "mode": "burned_ass",
+  "file": "subtitles.srt",
+  "style": "固定字号62/marginV173/中文单语"
+ },
+ "cover": {
+  "file": "cover.jpg",
+  "source": "seg-001@1.5s 裁除水印重制",
+  "title": "王牌老虎：08小队战场上最不愿遇到的对手"
+ },
+ "audio": {
+  "codec": "aac",
+  "channels": 2,
+  "narration": {
+   "engine": "cosyvoice-v3.5-plus-flash 用户音色",
+   "integratedLufs": -14.3
+  },
+  "bgm": {
+   "track": "Infinity（鲫虞豆腐汤remix）",
+   "license": "网易云试听件·用户声明自担·不得商用",
+   "bedGainDb": -12,
+   "duckReductionDb": -6,
+   "trackOffsetMs": 53636
+  },
+  "sourceAudio": "exclude"
+ },
+ "title": "王牌老虎：08小队战场上最不愿遇到的对手",
+ "tags": [
+  "高达08MS小队",
+  "MS-07B3",
+  "老虎改",
+  "Gouf Custom",
+  "机动战士",
+  "机体介绍",
+  "吉翁",
+  "军宅"
+ ],
+ "authorization": {
+  "music": "网易云试听件·用户声明自担·不得商用",
+  "source": "B站二创混剪画面·仅同规范二创分发",
+  "distribution": "public_bilibili_noncommercial"
+ },
+ "projectId": "tiger-intro-001"
+}

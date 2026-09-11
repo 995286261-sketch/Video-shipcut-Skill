@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "purpose": "bgm_chain_audit",
+  "projectId": "tiger-intro-001",
+  "status": "passed",
+  "checks": [
+    {
+      "id": "bgmMixPresent",
+      "status": "passed",
+      "detail": "assembly record bgmMix found"
+    },
+    {
+      "id": "contractFileHash",
+      "status": "passed",
+      "detail": "contract sha A7BDD11E965B… vs assembly record A7BDD11E965B…"
+    },
+    {
+      "id": "contractPurpose",
+      "status": "passed",
+      "detail": "music-expert bgm_mix_contract v0.1"
+    },
+    {
+      "id": "bgmFileHash",
+      "status": "passed",
+      "detail": "delivered BGM bytes FB88461C3103… == contract == assembly record"
+    },
+    {
+      "id": "bgmPlanHash",
+      "status": "passed",
+      "detail": "contract BGM hash == approved G3 plan bgmPlan.audioSha256"
+    },
+    {
+      "id": "planFileHash",
+      "status": "passed",
+      "detail": "contract references the exact plan file presented to it"
+    },
+    {
+      "id": "alignmentFileHash",
+      "status": "passed",
+      "detail": "alignment file sha == contract == plan bgmPlan.alignmentSha256"
+    },
+    {
+      "id": "reportCacheKey",
+      "status": "passed",
+      "detail": "analysis report cacheKey == delivered BGM hash"
+    },
+    {
+      "id": "audibilityRecheck",
+      "status": "passed",
+      "detail": "report -8.3 + bed -12.0 - duck 6.0 = -26.3 LUFS (contract -26.3, window [-32.0, -20.0])"
+    },
+    {
+      "id": "executionFidelity",
+      "status": "passed",
+      "detail": "assembly bgmMix offset/bed/duck/fades/duckSegments == contract fields"
+    },
+    {
+      "id": "measuredInPlace",
+      "status": "passed",
+      "detail": "measured -26.4 vs predicted -26.3 LUFS — within drift"
+    },
+    {
+      "id": "registrationChain",
+      "status": "passed",
+      "detail": "candidate registration covers the delivered bytes (registration file hash == material-pack record)"
+    },
+    {
+      "id": "licenseCleared",
+      "status": "passed",
+      "detail": "license=cleared-for-project evidence=工作台/tiger-intro-001/G0-素材包/04_授权说明.md（用户 2026-09-11 声明：直接用网易云试听件进片、版权风险自担）"
+    },
+    {
+      "id": "distributionBoundary",
+      "status": "passed",
+      "detail": "boundary=internal_test matches material-pack registration"
+    },
+    {
+      "id": "sourceAudioExcluded",
+      "status": "passed",
+      "detail": "plan source-audio policy recorded: \"exclude\""
+    }
+  ],
+  "bgm": {
+    "audio": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
+    "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+    "license": "cleared-for-project",
+    "licenseEvidence": "工作台/tiger-intro-001/G0-素材包/04_授权说明.md（用户 2026-09-11 声明：直接用网易云试听件进片、版权风险自担）",
+    "distributionBoundary": "internal_test",
+    "measuredInPlaceLufs": -26.4
+  },
+  "inputs": {
+    "assemblyRecord": "工作台/tiger-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json",
+    "plan": "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "registration": "工作台/tiger-intro-001/G0-素材包/07_授权音频/BGM-候选登记-Infinity-鲫虞豆腐汤-remix-FB88461C.json",
+    "materialPack": "工作台/tiger-intro-001/G0-素材包/material-pack.json"
+  }
+}

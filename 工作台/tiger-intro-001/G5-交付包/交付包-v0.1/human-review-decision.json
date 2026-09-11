@@ -1,0 +1,25 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G5",
+ "status": "pending",
+ "humanReviewPoints": [
+  "hrp-final-timeline",
+  "hrp-n02-naming",
+  "hrp-material-sufficiency",
+  "hrp-bgm-selfrisk",
+  "hrp-packaging"
+ ],
+ "coverage": {
+  "fullPlayback": "pending",
+  "sourceSubtitleResidue": "pending",
+  "subtitleSafeArea": "pending",
+  "narrationSync": "pending",
+  "keyShots": "pending",
+  "openingEnding": "pending",
+  "audioMix": "pending",
+  "voiceProfile": "pending",
+  "distributionBoundary": "pending"
+ },
+ "acceptedWarnings": []
+}

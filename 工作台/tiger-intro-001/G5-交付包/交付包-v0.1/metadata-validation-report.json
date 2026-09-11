@@ -1,0 +1,142 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G5",
+ "projectId": "tiger-intro-001",
+ "generatedAt": "2026-09-12",
+ "bundle": "工作台/tiger-intro-001/G5-交付包/交付包-v0.1",
+ "status": "g5_pending_human_review",
+ "checks": {
+  "decode": {
+   "pass": true,
+   "stderr": ""
+  },
+  "videoCodec": {
+   "pass": true,
+   "codec": "h264"
+  },
+  "dimensions": {
+   "pass": true,
+   "w": 1920,
+   "h": 1080
+  },
+  "fps": {
+   "pass": true,
+   "r": "24/1"
+  },
+  "audio": {
+   "pass": true,
+   "codec": "aac",
+   "channels": 2
+  },
+  "duration": {
+   "pass": true,
+   "ms": 120100
+  },
+  "blackFrames": {
+   "detector": "blackdetect d=0.1",
+   "intervals": [
+    [
+     "27.5",
+     "28.041667"
+    ],
+    [
+     "80.333333",
+     "80.666667"
+    ],
+    [
+     "80.916667",
+     "81.416667"
+    ]
+   ],
+   "verdict": "warn"
+  },
+  "silence": {
+   "detector": "silencedetect -45dB 0.5s",
+   "intervals": [],
+   "verdict": "none_detected"
+  },
+  "duplicateSegments": {
+   "detector": null,
+   "verdict": "not_available_warning",
+   "note": "无可用重复画面检测器，按合同记警告不得报通过"
+  },
+  "cover": {
+   "pass": true,
+   "dims": "1920,1080",
+   "readable": true,
+   "basis": "G5人工抽看：无水印、标题完整无缺字、mask带可读"
+  },
+  "subtitleParse": {
+   "pass": true,
+   "cueGroups": 18
+  },
+  "narrationSync": {
+   "pass": true,
+   "note": "19 cue 全部来自实际音频时长（G2 句级 wav 实测），字幕检查帧 7/7 人工通过（G4）"
+  },
+  "mixIntegrity": {
+   "channels": 2,
+   "note": "单配音轨拼接无重复；无二次烧录（mask+新字幕单层，G4抽帧证实）"
+  },
+  "licenses": {
+   "music": "网易云试听件·用户声明自担（G0登记 FB88461C…）",
+   "voice": "cosyvoice-v3.5-plus-flash 用户音色·G2确认",
+   "font": "PingFang SC（系统字体，烧录用于非商用视频）·警示：商用分发需自查许可",
+   "source": "B站二创混剪·分发边界披露见README"
+  },
+  "hashes": {
+   "final-video.mp4": "49e49c306b5b17a5eb75d590abfc1bf823094807fe3b4115dd48b3dd8159b509",
+   "cover.jpg": "c257b0ee9d447e70a30a679cbb98f913e047fa35f8e05a80c3591470f699a398",
+   "subtitles.srt": "2a7ac3514995f4e3f1b2c0cd158439db15601b57fcd5867424c1c29ba55430f5",
+   "edit-plan.json": "08935a9dcde8d7006f5b334f0ed77992f1d78f55683b59a5c0a681f5145d62e0",
+   "source-timecode-list.json": "02f54cac11a18f4260a5d5a370ef1714b840e5e34cf57b7a04fab83a932df07a",
+   "edit-timeline.md": "f61fa961903de9a8082342a38a5c5851a89ba38d0f80f67df78fcd5476458f58",
+   "export-config.json": "cb1e85f7721501dcd5b5c9d7e93f26a9442bb5a00c63c32747c6cfd5228f7533",
+   "c1-开场档案.mp4": "6be4d7e2ecbf07dc19436587c4a60db0d6647e876dc147436bd5927d73bdd53c",
+   "c2-改装三刀.mp4": "963afa1b7f189f599cb21e567b2c1e7896f95ce19644b721a9ba6f1c05164313",
+   "c3-性能战绩.mp4": "8fedb2d07601d19310f1463977a35412c6ed678c2c532cbb102722ec06baa30c",
+   "c4-高潮收束.mp4": "fadf7110f50ae72cf02936b4771cad8a3240ce0cbcbea8997f6b466726137512"
+  }
+ },
+ "warnings": [
+  "blackFrames",
+  "duplicateFrames",
+  "music_selfrisk",
+  "watermark_in_video",
+  "font_license_note"
+ ],
+ "humanReviewStatus": "pending",
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "49E49C306B5B17A5EB75D590ABFC1BF823094807FE3B4115DD48B3DD8159B509"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "C257B0EE9D447E70A30A679CBB98F913E047FA35F8E05A80C3591470F699A398"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "2A7AC3514995F4E3F1B2C0CD158439DB15601B57FCD5867424C1C29BA55430F5"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/c1-开场档案.mp4",
+    "sha256": "6BE4D7E2ECBF07DC19436587C4A60DB0D6647E876DC147436BD5927D73BDD53C"
+   },
+   {
+    "path": "clips/c2-改装三刀.mp4",
+    "sha256": "963AFA1B7F189F599CB21E567B2C1E7896F95CE19644B721A9BA6F1C05164313"
+   },
+   {
+    "path": "clips/c3-性能战绩.mp4",
+    "sha256": "8FEDB2D07601D19310F1463977A35412C6ED678C2C532CBB102722EC06BAA30C"
+   },
+   {
+    "path": "clips/c4-高潮收束.mp4",
+    "sha256": "FADF7110F50AE72CF02936B4771CAD8A3240CE0CBCBEA8997F6B466726137512"
+   }
+  ]
+ },
+ "finishedAt": "2026-09-12T00:20:00+08:00"
+}
