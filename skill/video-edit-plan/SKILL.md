@@ -36,7 +36,7 @@ python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路�
 
 ## G1 末：找乐编排（BGM 槽 pending 时）
 
-方向简报经用户确认后，读 `pipeline-state.json` 的 `bgm` 槽：`libraryPending` 为真则由本节点把找乐链**编排**走完。G1 只做流程推进与卡片呈现；一切音乐能力经 `skill/music-expert`（合同见其 SKILL 与 references），G1 不实现、不转写、不伪造任何分析结果。步骤：
+**时点（用户 2026-09-11 定案）：方向简报成形、通过 validate 之后，G1 最终确认回显之前。** 找乐链在本节点走完后，G1 最终回显把方向与音乐结果（选定曲目、登记、翻槽、分析产物）一并呈用户，`确认G1` 同时盖住两者；整轨登记迟迟拿不到时 G1 门禁保持未批即可，即便滑入 G2，状态机的 G2/G3 approve 硬拒兜底。本节点只做流程推进与卡片呈现；一切音乐能力经 `skill/music-expert`（合同见其 SKILL 与 references），G1 不实现、不转写、不伪造任何分析结果。步骤：
 
 1. **查经验库先行**：`music_library.py query`（G0 口头偏好里的曲名/感觉）——已建档的歌零成本带出笔记，未清权红灯照显。
 2. **检索词卡**：以 `BGM preference` 原话（在场则为第一优先输入）+ 方向简报 `coreViewpoint`/`styleRules` 推导 1–6 词，逐词标依据，跑 `music_search_terms.py`（`--timeline-ms` 取目标时长毫秒）。卡呈用户可改后重跑；**检索词卡不设门禁口令**——门禁在挑曲。
