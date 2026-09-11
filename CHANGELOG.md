@@ -1,5 +1,12 @@
 # 变更记录
 
+## Unreleased — 主线接线批次①：G0 待找乐槽（接上 music-expert 的第一步）
+
+- 兑现 g0-policy 的"下游提醒"空头支票：G0 的 BGM 声明成为机器事实全程携带——模板新增可选 `BGM preference:`（用户口头偏好**原话**，检索词推导第一优先输入）；`material_pack.py register` 把 `bgm` 段（decision/preference/libraryPending/clearCondition）写进 material-pack.json；`pipeline_state.py init` 抬进 state.bgm；`status` 在槽未清时输出 reminder。
+- 新命令 `pipeline_state.py bgm-choice`：翻槽唯一入口——翻到 `provided` 必须带登记证据（无证据拒绝），`no_bgm` 免证据；每次翻槽 append `history`，槽不得靠聊天清空。
+- 硬门禁（N9 顺序）：`libraryPending` 期间 **G2/G3 approve 直接拒绝**；`validate` 检出"use_library_later 但 07 出现文件"的矛盾。
+- 文档同步：pipeline-state-contract 增 BGM slot 节、p0-c-pipeline SKILL 增机器携带说明+硬门禁、g0-start-form/g0-policy 措辞兑现；测试 pipeline +2、material-pack +2（含模板提示行不算用户输入）。
+
 ## Unreleased — music-expert 找乐（N10）+ 锚定打分
 
 - 检索词生成合同落地（`music_search_terms.py`，专员侧 I/O 固化：时长下限由时间线毫秒向上取整，风格简报 BPM 过滤；口头偏好＞主题翻译＞简报锚定）。

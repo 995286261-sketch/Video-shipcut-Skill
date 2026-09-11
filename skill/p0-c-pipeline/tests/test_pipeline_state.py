@@ -134,6 +134,36 @@ class PipelineStateTest(unittest.TestCase):
             if node == last_node:
                 return
 
+    def test_bgm_pending_slot_blocks_g2_until_evidenced_flip(self):
+        self.pack.write_text(json.dumps({"packStatus": "complete", "bgm": {
+            "decision": "use_library_later", "preference": "想要 LOW 那种高燃 phonk 的感觉",
+            "libraryPending": True, "clearCondition": "G1 末检索词卡找乐"}}), encoding="utf-8")
+        self.init()
+        status = self.run_cli("status", "--state", self.state)
+        self.assertIn("待找乐", status["bgm"]["reminder"])
+        self.assertEqual("想要 LOW 那种高燃 phonk 的感觉", status["bgm"]["preference"])
+        self.prepare_node("G1")
+        self.approve("G1")
+        self.prepare_node("G2")
+        blocked = self.approve("G2", code=2)
+        self.assertIn("BGM 待找乐", blocked["error"])
+        self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided", code=2)  # 无证据不翻灯
+        self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided",
+                     "--evidence", "07_授权音频/BGM-候选登记-GoneBad-ABCD.json", "--note", "用户选定金曲并登记")
+        status = self.run_cli("status", "--state", self.state)
+        self.assertNotIn("reminder", status["bgm"])
+        self.approve("G2")  # 槽清后即可批
+        bgm = json.loads(self.state.read_text(encoding="utf-8"))["bgm"]
+        self.assertEqual("provided", bgm["decision"])
+        self.assertEqual(1, len(bgm["history"]))  # 翻槽历史 append-only
+
+    def test_bgm_no_bgm_clears_without_evidence(self):
+        self.pack.write_text(json.dumps({"packStatus": "complete", "bgm": {"decision": "use_library_later", "libraryPending": True}}), encoding="utf-8")
+        self.init()
+        self.run_cli("bgm-choice", "--state", self.state, "--decision", "no_bgm", "--note", "用户决定本片不用 BGM")
+        status = self.run_cli("status", "--state", self.state)
+        self.assertFalse(status["bgm"]["libraryPending"])
+
     def test_initializes_with_missing_review_gate(self):
         self.init()
         status = self.run_cli("status", "--state", self.state)

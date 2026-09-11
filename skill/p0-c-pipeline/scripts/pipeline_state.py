@@ -129,9 +129,11 @@ def command_init(args: argparse.Namespace) -> None:
     if destination.exists():
         emit({"status": "blocked", "error": "state file already exists", "path": str(destination)}, 2)
     timestamp = now()
+    bgm = pack.get("bgm") or {"decision": "unknown", "preference": None, "libraryPending": False, "clearCondition": None}
+    bgm = {**bgm, "history": []}
     state = {
         "schemaVersion": "0.1", "projectId": args.project_id, "sourcePackRef": str(source),
-        "authorization": args.authorization, "distribution": args.distribution,
+        "authorization": args.authorization, "distribution": args.distribution, "bgm": bgm,
         "currentNode": "G1", "status": "in_progress",
         "nodes": {"G0": {"status": "completed", "artifactRefs": [str(source)], "inputRefs": [], "humanReviewPoints": [], "approval": None}, **{node: node_record("in_progress" if node == "G1" else "pending") for node in NODES if node != "G0"}},
         "acceptedWarnings": [], "nextAction": next_action("G1"), "createdAt": timestamp, "updatedAt": timestamp,
@@ -145,7 +147,31 @@ def command_status(args: argparse.Namespace) -> None:
     node = state["currentNode"]
     record = state["nodes"].get(node, {})
     review_gate = record.get("reviewGate")
-    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "nextAction": state["nextAction"]})
+    bgm = state.get("bgm") or {}
+    if bgm.get("libraryPending"):
+        bgm = {**bgm, "reminder": "BGM 待找乐：G1 末出检索词卡 → 找乐 → 用户挑曲 → 官方渠道取得整轨并登记 → `bgm-choice` 翻槽；G3 批准前槽必须已清"}
+    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
+
+
+def command_bgm_choice(args: argparse.Namespace) -> None:
+    """Flip the G0 BGM slot with evidence. Pending never clears by talking; it
+    clears by a registered file (provided) or the user's deliberate no-BGM call."""
+    state_path = Path(args.state)
+    state = read_state(state_path)
+    bgm = state.get("bgm") or {"decision": "unknown", "preference": None, "libraryPending": False, "clearCondition": None}
+    if args.decision == "provided" and not (args.evidence and args.evidence.strip()):
+        emit({"status": "blocked", "error": "翻槽到 provided 必须携带登记证据（music-expert 登记记录路径 + 许可说明）"}, 2)
+    history = bgm.setdefault("history", [])
+    history.append({"at": now(), "from": bgm.get("decision"), "to": args.decision,
+                    "evidence": args.evidence, "note": args.note})
+    bgm.update({"decision": args.decision, "libraryPending": args.decision == "use_library_later",
+                "evidence": args.evidence if args.decision == "provided" else None})
+    if args.preference:
+        bgm["preference"] = args.preference
+    state["bgm"] = bgm
+    state["updatedAt"] = now()
+    write_state(state_path, state)
+    emit({"status": "recorded", "action": "bgm-choice", "decision": args.decision, "libraryPending": bgm["libraryPending"]})
 
 
 def command_record(args: argparse.Namespace) -> None:
@@ -245,6 +271,8 @@ def command_approve(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": "approval requires the node to be review_required", "nodeStatus": record.get("status")}, 2)
     if not record.get("reviewGate"):
         emit({"status": "blocked", "error": "approval requires a recorded review gate"}, 2)
+    if node in ("G2", "G3") and (state.get("bgm") or {}).get("libraryPending"):
+        emit({"status": "blocked", "error": f"{node} 批准被 BGM 待找乐槽拦住：音乐须在首个消费节点前在场（N9 顺序）。挑曲→官方渠道取得整轨→登记→bgm-choice 翻槽后再批"}, 2)
     try:
         approval_token, approval_response, token_verbatim, response_verbatim, normalized = require_approval_token(
             node, args.approval_token, args.approval_response)
@@ -362,6 +390,10 @@ def parser() -> argparse.ArgumentParser:
     record = sub.add_parser("record"); record.add_argument("--state", required=True); record.add_argument("--node", choices=NODES, required=True)
     record.add_argument("--node-status", choices=sorted(STATES), required=True); record.add_argument("--input-ref", action="append"); record.add_argument("--artifact-ref", action="append"); record.add_argument("--review-point", action="append"); record.set_defaults(func=command_record)
     review = sub.add_parser("record-review"); review.add_argument("--state", required=True); review.add_argument("--node", choices=NODES[1:], required=True); review.add_argument("--review-gate-ref", required=True); review.set_defaults(func=command_record_review)
+    bgm = sub.add_parser("bgm-choice"); bgm.add_argument("--state", required=True)
+    bgm.add_argument("--decision", required=True, choices=("provided", "use_library_later", "no_bgm"))
+    bgm.add_argument("--preference"); bgm.add_argument("--evidence"); bgm.add_argument("--note")
+    bgm.set_defaults(func=command_bgm_choice)
     approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True); approve.add_argument("--approval-token", required=True); approve.add_argument("--approval-response", required=True)
     approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)

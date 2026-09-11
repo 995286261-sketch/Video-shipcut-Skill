@@ -21,7 +21,7 @@ Read `工作台/<projectId>/pipeline-state.json` before every action. This UTF-8
 
 For every user-facing status, continuation, handoff, or approval response, follow [路径展示合同](references/path-display-contract.md) and [项目布局合同](references/project-layout-contract.md): keep machine references as plain strings in JSON, but render existing artifact and input paths as clickable Markdown links with project-relative forward-slash paths.
 
-For a new project, start G0 with `$material-pack-intake`. Before accepting files, present the fixed G0 intake form in `$material-pack-intake` and explicitly record the user's BGM choice (`provided`, `use library later`, or `no BGM`). After the pack validates, create state with:
+For a new project, start G0 with `$material-pack-intake`. Before accepting files, present the fixed G0 intake form in `$material-pack-intake` and explicitly record the user's BGM choice (`provided`, `use library later`, or `no BGM`), keeping any verbatim music preference in `BGM preference:`. The declaration is machine-carried from here: `init` lifts the pack's `bgm` slot (decision, preference, `libraryPending`) into pipeline state, `status` surfaces a pending reminder, and G2/G3 approvals are blocked until the slot is cleared — the user picks a track, registers the official-channel file, then `pipeline_state.py bgm-choice --state … --decision provided --evidence <registration record>` (or an explicit `no_bgm`). After the pack validates, create state with:
 
 ```powershell
 python skill/p0-c-pipeline/scripts/pipeline_state.py init --project-id <projectId> --source-pack <material-pack.json> --state <pipeline-state.json> --authorization <value> --distribution <value>
@@ -46,6 +46,7 @@ Record a node's artifact references and review items, set it to `review_required
 
 - G2 approval requires `approvedNarrationRef` and `factCitationRef`.
 - G3 approval requires an explicit approval record and cannot use a superseded narration draft.
+- A `use_library_later` BGM slot cannot stay pending through G2 or G3 approval: clear it with `bgm-choice` plus real registration evidence, or record an explicit `no_bgm`. Never let chat context pretend the slot is cleared.
 - G4 local-direct branch can advance with a validated local candidate and explicit user review. When ChatCut is selected, G4 cannot advance without a real ChatCut export reference; a flattened preview is not an editable handoff.
 - G5 cannot complete until human QA is recorded. Accepted warnings remain visible.
 - `not_for_distribution`, unknown authorization, or `user_manually_verified` claims cannot be silently upgraded or bypassed.

@@ -9,6 +9,8 @@ Store every active project's UTF-8 JSON state at `工作台/<projectId>/pipeline
   "sourcePackRef": "<absolute material-pack.json path>",
   "authorization": "<authorization state>",
   "distribution": "<distribution state>",
+  "bgm": { "decision": "use_library_later", "preference": "<用户口头偏好原话|null>", "libraryPending": true,
+           "clearCondition": "<清槽路径说明>", "evidence": null, "history": [] },
   "currentNode": "G1",
   "status": "in_progress",
   "nodes": {
@@ -27,6 +29,10 @@ Store every active project's UTF-8 JSON state at `工作台/<projectId>/pipeline
 ```
 
 Allowed node states are `pending`, `in_progress`, `review_required`, `blocked`, `completed`, and `completed_with_accepted_warnings`. The runtime creates state only after G0 validates; it records G0 as completed and starts G1. Subsequent `currentNode` values normally advance in this order: `G1`, `G2`, `G3`, `G4`, `G5`, `completed`. Supported rework transitions are `G3` to `G2`, using `pipeline_state.py reopen --reason <reason> --rework-ref <existing-amendment-file>` when G3 discovers missing or corrected evidence, facts, or approved narration; and `G4` to `G3`, using `pipeline_state.py reopen-g3 --reason <reason> --rework-ref <existing-amendment-file>` when a G4 execution diagnostic exposes a G3 shot-plan defect. Both commands append `amendmentHistory`, preserve earlier artifacts, clear the superseded active approval, and require renewed approval at the reopened node. Never hand-edit state to simulate a rework transition.
+
+## BGM slot（G0 声明的机器事实，待找乐不靠聊天记忆）
+
+`init` 把 material-pack.json 的 `bgm` 段抬进 state；`status` 在 `libraryPending` 时附 `reminder`（G1 末检索词卡 → 找乐 → 用户挑曲 → 官方渠道取得整轨并登记 → `bgm-choice` 翻槽）。翻槽唯一入口 `pipeline_state.py bgm-choice --decision provided|use_library_later|no_bgm [--evidence …] [--note …]`：翻到 `provided` 必须携带登记证据，每次翻槽 append 进 `history`。**G2/G3 的 approve 在 `libraryPending` 时硬拒绝**（N9 顺序：音乐必须在首个消费节点前在场）。
 
 Legacy `run-manifest.json` is never an input to this state machine. Create a state file explicitly when a historical project is resumed; do not migrate in bulk.
 

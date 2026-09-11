@@ -57,6 +57,37 @@ class MaterialPackTest(unittest.TestCase):
             self.assertEqual(2, code)
             self.assertTrue(any("BGM decision" in item for item in result["incompleteRequiredEntries"]))
 
+    def test_bgm_library_pending_slot_and_preference_land_in_manifest(self):
+        temporary, pack = self.create_pack()
+        with temporary:
+            self.fill_required_documents(pack)
+            with (pack / "01_需求说明.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nBGM decision: use_library_later\nBGM preference: 想要 LOW 那种高燃 phonk 的感觉\n")
+            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code)
+            manifest = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))
+            self.assertEqual("use_library_later", manifest["bgm"]["decision"])
+            self.assertTrue(manifest["bgm"]["libraryPending"])
+            self.assertEqual("想要 LOW 那种高燃 phonk 的感觉", manifest["bgm"]["preference"])
+            self.assertIn("检索词", manifest["bgm"]["clearCondition"])
+            # 待找乐槽与 07 出现文件相矛盾：validate 必须检出，槽不得口头清空
+            (pack / "07_授权音频" / "mystery.mp3").write_bytes(b"fixture-audio")
+            code, result = self.run_cli("validate", "--pack", str(pack))
+            self.assertTrue(any("use_library_later" in item for item in result["incompleteRequiredEntries"]))
+
+    def test_template_preference_hint_is_not_user_input(self):
+        temporary, pack = self.create_pack()
+        with temporary:
+            self.fill_required_documents(pack)
+            with (pack / "01_需求说明.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nBGM decision: use_library_later\nBGM preference:（可选，口头偏好原话，如\"想要 LOW 那种\"）\n")
+            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code)
+            manifest = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))
+            self.assertIsNone(manifest["bgm"]["preference"])  # 模板提示行不算用户输入
+
     def test_initialized_template_registers_when_machine_fields_are_filled(self):
         temporary, pack = self.create_pack()
         with temporary:

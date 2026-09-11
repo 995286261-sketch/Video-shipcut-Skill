@@ -121,6 +121,27 @@ def bgm_decision(text: str) -> str | None:
     return match.group(1).lower() if match else None
 
 
+def bgm_preference(text: str) -> str | None:
+    """Optional verbatim music preference — the first-priority search-term input for G1."""
+    match = re.search(r"^\s*BGM preference\s*[：:]\s*(.+?)\s*$", text, re.IGNORECASE | re.MULTILINE)
+    raw = match.group(1).strip() if match else ""
+    if not raw or raw.startswith(("（", "(")):  # 模板提示行不算用户输入
+        return None
+    return raw
+
+
+def bgm_slot(pack: Path) -> dict:
+    """The machine truth of the G0 BGM declaration; `use_library_later` stays a
+    pending slot in the pack (and later the pipeline state), never chat memory."""
+    requirements = pack / "01_需求说明.md"
+    text = requirements.read_text(encoding="utf-8-sig") if requirements.is_file() else ""
+    decision = bgm_decision(text) or "unknown"
+    return {"decision": decision, "preference": bgm_preference(text),
+            "libraryPending": decision == "use_library_later",
+            "clearCondition": ("G1 末出检索词卡找乐 → 用户挑曲 → 经官方渠道取得整轨并登记回填 07_授权音频/ 后改 provided"
+                               if decision == "use_library_later" else None)}
+
+
 def required_state(pack: Path) -> tuple[list[str], list[str], list[str]]:
     missing = [entry for entry in REQUIRED if not (pack / entry).exists()]
     empty = []
@@ -139,6 +160,8 @@ def required_state(pack: Path) -> tuple[list[str], list[str], list[str]]:
         elif decision == "provided" and not files_under(pack, AUDIO_DIR):
             empty.append(AUDIO_DIR)
             incomplete.append("07_授权音频: BGM decision is provided but no audio file is present")
+        elif decision == "use_library_later" and files_under(pack, AUDIO_DIR):
+            incomplete.append("07_授权音频: 决策为 use_library_later（待找乐）但目录已出现音频——须改决策为 provided 并补 music-expert 登记，或移走试听件；槽不得靠口头清空")
     authorization = pack / "04_授权说明.md"
     if authorization.is_file() and not authorization_has_entry(authorization.read_text(encoding="utf-8-sig")):
         empty.append("04_授权说明.md")
@@ -242,7 +265,7 @@ def register(pack: Path) -> dict:
         return {"status": "incomplete", "pack": str(pack), "unregisteredAudio": unregistered, "missingEntries": [], "emptyRequiredEntries": [],
                 "incompleteRequiredEntries": [f"{relative}: 缺少 music-expert 登记记录（先跑 music_register_candidate.py --output-dir 07_授权音频/，许可证据链必须与音频 sha256 对应）" for relative in unregistered],
                 "finishedAt": now()}
-    manifest = {**existing, "schemaVersion": "0.1", "materialPackId": existing.get("materialPackId", pack.name), "sourceAssets": sources, "audioAssets": audio, "packStatus": "complete", "registeredAt": now()}
+    manifest = {**existing, "schemaVersion": "0.1", "materialPackId": existing.get("materialPackId", pack.name), "sourceAssets": sources, "audioAssets": audio, "bgm": bgm_slot(pack), "packStatus": "complete", "registeredAt": now()}
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result_payload = {"status": "completed", "pack": str(pack), "manifest": str(manifest_path), "sourceAssetCount": len(sources), "audioAssetCount": len(audio), "finishedAt": now()}
     if analysis_pending:
