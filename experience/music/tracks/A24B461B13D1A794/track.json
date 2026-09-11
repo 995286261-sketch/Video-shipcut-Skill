@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+  "aliases": [
+    {
+      "title": "弥渡山歌Phonk House",
+      "neteaseId": "2744664065",
+      "sourceUrl": "https://music.163.com/song?id=2744664065",
+      "provenance": "netease_search",
+      "project": "zaku-intro-001/N10自测",
+      "seenAt": "2026-09-11T03:27:55Z"
+    },
+    {
+      "title": "弥渡山歌Phonk House",
+      "neteaseId": 2744664065,
+      "sourceUrl": "https://music.163.com/song?id=2744664065",
+      "provenance": "netease_search",
+      "seenAt": "2026-09-11T03:28:25Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2744664065-弥渡山歌Phonk_House.mp3",
+      "recordedAt": "2026-09-11T03:28:25Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T03:27:55Z",
+  "updatedAt": "2026-09-11T03:28:25Z"
+}

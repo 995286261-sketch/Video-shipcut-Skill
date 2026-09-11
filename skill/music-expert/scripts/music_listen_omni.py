@@ -25,6 +25,12 @@ PROMPT_TEMPLATE = (
     "认真听完两段后回答：1) 候选曲与参照曲在流派、乐器、气质、节奏型上的差距；"
     "2) 候选曲能否{role}；3) 贴合度0-10分并一句话理由。简体中文，150字内。"
 )
+ABSOLUTE_TEMPLATE = (
+    "你是资深音乐总监。认真听完这段音乐后回答：1) 曲风流派（精确到子流派）；2) 主要乐器与音色；"
+    "3) 情绪与气质；4) 能量结构：铺垫段与高潮段大约在几分几秒到几分几秒；"
+    "5) 适合与不适合的剪辑场景各一句。简体中文，200字内。"
+)
+PROMPT_VER = "v1"
 
 
 def emit(payload: dict) -> None:
@@ -93,10 +99,12 @@ def load_shortlist(manifests: list[Path]) -> tuple[list[dict], list[str]]:
     return tracks, skipped
 
 
-def listen(binary: str, model: str | None, reference: Path, candidate: Path,
+def listen(binary: str, model: str | None, audios: list[Path],
            message: str, timeout: int) -> tuple[str | None, str | None]:
-    cmd = [binary, "omni", "--text-only", "--audio", str(reference), "--audio", str(candidate),
-           "--message", message]
+    cmd = [binary, "omni", "--text-only"]
+    for audio in audios:
+        cmd += ["--audio", str(audio)]
+    cmd += ["--message", message]
     if model:
         cmd += ["--model", model]
     try:
@@ -127,7 +135,8 @@ def render_echo(result: dict, path: Path) -> None:
                   "> 本文件不含任何曲目描述——没有真实听过，就不会有笔记；此处不编造。",
                   "> 配好音频模型（如 `bl auth login`）后重跑本层即可补全。", ""]
     else:
-        lines += [f"- 模型：{capability['audioModel']}｜参照曲：{result['reference']}",
+        ref_part = f"｜参照曲：{result['reference']}" if result.get("reference") else "｜绝对属性模式（笔记可入库复用）"
+        lines += [f"- 模型：{capability['audioModel']}{ref_part}",
                   "- 本层只记录模型真实听到的输出；每条失败如实标注，未听曲目绝不配文字。", ""]
     for track in result["tracks"]:
         lines += [f"## {track['title']}", "", track["notes"], ""]
@@ -141,7 +150,12 @@ def render_echo(result: dict, path: Path) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--reference", required=True, type=Path, help="anchor audio the user approved")
+    parser.add_argument("--reference", type=Path, help="anchor audio the user approved (A/B mode)")
+    parser.add_argument("--absolute", action="store_true",
+                        help="listen to each track on its own (reusable absolute attributes; write-back eligible)")
+    parser.add_argument("--library", type=Path, default=None,
+                        help="experience/music root: reuse heard notes, ingest ledger, write back absolute notes")
+    parser.add_argument("--project", default=None, help="project id for ledger records")
     parser.add_argument("--manifest", action="append", required=True, type=Path,
                         help="candidate manifest or recommendation JSON (repeatable)")
     parser.add_argument("--output", required=True, type=Path)
@@ -153,10 +167,21 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=240)
     args = parser.parse_args()
 
-    if not args.reference.is_file():
-        emit({"status": "invalid", "errors": [{"field": "reference", "rule": "file not found",
+    if args.absolute:
+        args.reference = None
+    elif not args.reference or not args.reference.is_file():
+        emit({"status": "invalid", "errors": [{"field": "reference", "rule": "file not found (A/B mode needs the anchor; or run --absolute)",
                                                "detail": str(args.reference)}]})
         return 2
+    library = None
+    if args.library:
+        if not args.library.is_dir():
+            emit({"status": "invalid", "errors": [{"field": "library", "rule": "directory not found",
+                                                   "detail": str(args.library)}]})
+            return 2
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import music_library
+        library = args.library
     for manifest in args.manifest:
         if not manifest.is_file():
             emit({"status": "invalid", "errors": [{"field": "manifest", "rule": "file not found",
@@ -169,7 +194,7 @@ def main() -> int:
     if not available:
         result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes",
                   "capability": {"available": False, "audioModel": None, "detail": detail},
-                  "reference": str(args.reference), "tracks": [], "partialFailures": [],
+                  "reference": str(args.reference) if args.reference else None, "tracks": [], "partialFailures": [],
                   "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"}
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -190,33 +215,60 @@ def main() -> int:
                                                  "detail": "no candidate with an existing previewPath"}]})
         return 2
     tracks = tracks[: args.max_tracks]
-    message = PROMPT_TEMPLATE.format(role=args.project_brief)
+    mode = "absolute" if args.absolute else "ab"
+    message = ABSOLUTE_TEMPLATE if args.absolute else PROMPT_TEMPLATE.format(role=args.project_brief)
     workdir = args.output.parent / "listen-excerpts"
+    ref = None
     if args.excerpt_sec > 0:
         workdir.mkdir(parents=True, exist_ok=True)
-        ref_ms = media_duration(args.reference) or 0
-        ref = excerpt(args.reference, workdir, max(0, int(ref_ms * 0.2)), args.excerpt_sec)
-    else:
-        ref = args.reference
+        if args.reference:
+            ref_ms = media_duration(args.reference) or 0
+            ref = excerpt(args.reference, workdir, max(0, int(ref_ms * 0.2)), args.excerpt_sec)
 
-    notes, failures = [], []
+    notes, failures, writeback_failures = [], [], []
     for track in tracks:
         candidate = Path(track["previewPath"])
+        sha = str(track.get("sha256") or "").upper() or (music_library.sha256_file(candidate) if library else None)
+        entry = {"title": track.get("title"), "neteaseId": track.get("neteaseId"), "sha256": sha}
+        if library and args.absolute and sha:
+            cached = music_library.latest_listen_note(library, sha, detail, PROMPT_VER)
+            if cached:
+                entry["reused"] = True
+                entry["notes"] = f"（复用库内 {cached[0]} 笔记，零成本）\n\n{cached[1]}"
+                notes.append(entry)
+                continue
         audio_arg = candidate
         if args.excerpt_sec > 0:
             duration_ms = track.get("durationMs") or media_duration(candidate) or 0
             if duration_ms > args.excerpt_sec * 1000:
                 audio_arg = excerpt(candidate, workdir, max(0, int(duration_ms * 0.2)), args.excerpt_sec)
-        text, error = listen(audio_binary, args.model, ref, audio_arg, message, args.timeout)
+        audios = [audio_arg] if args.absolute else [ref, audio_arg]
+        text, error = listen(audio_binary, args.model, audios, message, args.timeout)
         if error is not None:
-            failures.append({"title": track.get("title"), "neteaseId": track.get("neteaseId"), "error": error})
-        else:
-            notes.append({"title": track.get("title"), "neteaseId": track.get("neteaseId"), "notes": text})
+            failures.append({**entry, "error": error})
+            continue
+        entry.update({"reused": False, "notes": text})
+        notes.append(entry)
+        if library and sha:
+            try:
+                music_library.upsert_track(library, sha, title=track.get("title"),
+                                           netease_id=track.get("neteaseId"),
+                                           source_url=track.get("sourceUrl"),
+                                           provenance=track.get("provenance") or "netease_search",
+                                           project=args.project,
+                                           license_value=track.get("license") or track.get("licenseType"),
+                                           boundary=track.get("distributionBoundary"),
+                                           audio_ref=candidate)
+                if args.absolute:
+                    music_library.put_listen(library, sha, text, detail, PROMPT_VER)
+            except Exception as error:  # 写回失败不伪装成"没听到"，也不中断笔记
+                writeback_failures.append({"title": entry.get("title"), "error": str(error)[:200]})
 
-    result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes",
+    result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes", "mode": mode,
               "capability": {"available": True, "audioModel": detail, "modelOverride": args.model},
-              "reference": str(args.reference), "projectBrief": args.project_brief,
-              "tracks": notes, "partialFailures": failures,
+              "reference": str(args.reference) if args.reference else None, "projectBrief": args.project_brief,
+              "library": str(library) if library else None,
+              "tracks": notes, "partialFailures": failures, "writebackFailures": writeback_failures,
               "skippedWithoutPreview": skipped,
               "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"}
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -17,6 +17,7 @@ case "$1" in
   --version) echo "bl 9.9.9-stub" ;;
   auth) echo "  API key (model):  config  sk-stub" ;;
   omni)
+    echo call >> "$(dirname "$0")/calls.log"
     for a in "$@"; do
       case "$a" in *boom*) echo "stub refuses DRM-ish track" >&2; exit 1 ;; esac
     done
@@ -39,7 +40,7 @@ class ListenTest(unittest.TestCase):
         entries = []
         for title, marker in (("Good Phonk", "good"), ("Boom Weird", "boom")):
             preview = self.root / f"netease-{marker}-{title}.mp3"
-            preview.write_bytes(b"ID3fake")
+            preview.write_bytes(f"audio-bytes-{marker}".encode())
             self.candidates.append(preview)
             entries.append({"title": title, "neteaseId": marker, "previewPath": str(preview), "durationMs": 30_000})
         self.manifest = self.root / "pool.json"
@@ -81,6 +82,22 @@ class ListenTest(unittest.TestCase):
         self.assertNotIn("贴合度", boom_section)  # 失败的那首没有任何虚构描述
         data = json.loads((self.root / "notes.json").read_text(encoding="utf-8"))
         self.assertEqual("Boom Weird", data["partialFailures"][0]["title"])
+
+
+    def test_absolute_library_reuse_is_free_and_only_failures_retry(self):
+        lib = self.root / "lib"
+        lib.mkdir()
+        calls = self.root / "calls.log"
+        first = self.run_script(["--bl", str(self.stub), "--absolute", "--library", str(lib)])
+        self.assertEqual(0, first.returncode, first.stdout + first.stderr)
+        data = json.loads((self.root / "notes.json").read_text(encoding="utf-8"))
+        self.assertEqual(1, len(data["tracks"]))
+        self.assertFalse(data["tracks"][0]["reused"])
+        self.assertEqual(2, calls.read_text().count("call"))  # good 与 boom 各真听一次
+        self.run_script(["--bl", str(self.stub), "--absolute", "--library", str(lib)])
+        data2 = json.loads((self.root / "notes.json").read_text(encoding="utf-8"))
+        self.assertTrue(data2["tracks"][0]["reused"])  # 听过的歌零成本复用档案
+        self.assertEqual(1, calls.read_text().count("call") - 2)  # 只有失败的那首重试
 
 
 if __name__ == "__main__":

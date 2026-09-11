@@ -13,7 +13,7 @@ metadata:
 
 ## 执行入口（唯一）
 
-- 分析：`scripts/music_analyze.py`。找乐自动轨道（真实许可）：`scripts/music_search_freesound.py`。找乐试听选型轨道（中文全曲库，候选写死未清权+internal_test）：`scripts/music_search_netease.py`。找乐人工轨道：`scripts/music_register_candidate.py`（主题标签必须用 `references/tag-vocabulary.md` 受控词表）。推荐排序：`scripts/music_recommend.py`（画像可带 `styleBrief` 锚定与 `styleTags` 粗匹配）。模型试听笔记：`scripts/music_listen_omni.py`（可选增强层，见合同；无听觉能力时结构化提示，绝不编造）。节奏对齐：`scripts/music_align.py`。混音合同：`scripts/music_mix_plan.py`。不要用临时脚本或手敲 ffmpeg 替代。
+- 分析：`scripts/music_analyze.py`。找乐自动轨道（真实许可）：`scripts/music_search_freesound.py`。找乐试听选型轨道（中文全曲库，候选写死未清权+internal_test）：`scripts/music_search_netease.py`。找乐人工轨道：`scripts/music_register_candidate.py`（主题标签必须用 `references/tag-vocabulary.md` 受控词表）。推荐排序：`scripts/music_recommend.py`（画像可带 `styleBrief` 锚定与 `styleTags` 粗匹配）。模型试听笔记：`scripts/music_listen_omni.py`（可选增强层，见合同；无听觉能力时结构化提示，绝不编造）。经验库：`scripts/music_library.py`（`experience/music/` 唯一写入口，库规见其 README——身份=音频 SHA、四层次序、三条红线）。节奏对齐：`scripts/music_align.py`。混音合同：`scripts/music_mix_plan.py`。不要用临时脚本或手敲 ffmpeg 替代。
 
 ## 前置依赖
 
@@ -29,7 +29,8 @@ metadata:
 2. 要自动找候选 → `music_search_freesound.py --query/--tags/--similar-to ... --output-dir <目录>`，得到带授权证据链的候选清单。
 2.5 要在中文全曲库里找审核者听过的歌（内测选型）→ 先出检索词卡（见 2.6），再 `music_search_netease.py --terms-file <检索词json>`（逐词检索合池去重；单查也可 `--query`）+ `--output-dir <目录>`（可选 `--no-preview`）。候选一律 `uncleared-platform-catalog`：试听件只用于选型，整轨必须由人经官方渠道取得后走第 3 条登记，**试听件直接进成片是红线违规**；风控/网络失败结构化 `blocked`，不静默换源。
 2.6 检索词怎么来 → 按 `references/search-terms-contract.md`：**Agent 推导（口头偏好＞主题翻译＞风格简报锚定，简报可选；口播稿不做主源），脚本不编造曲库命中** → `music_search_terms.py --term <词>… --note "词=依据"…`（可选 `--preference/--theme/--style-brief/--timeline-ms`）出《BGM-检索词-v0.1》+回显卡：逐词标来源与推导依据、时长下限由成片时长推导、bpmRange 取自简报；卡呈用户可改后重跑，**不设门禁口令**（门禁在挑曲）。
-2.7 锚定打分排出短名单后，可加"模型试听笔记"（可选，`references/listen-notes-contract.md`）→ `music_listen_omni.py --reference <用户确认的参照曲> --manifest <推荐或候选json>`：逐首与参照曲 A/B 听，产出情调差距与贴合度笔记卡；先探测听觉能力，**没有能力就明说并且一个字都不写**，调用失败如实进 `partialFailures`。笔记只是参考，不做门禁；只听短名单（`--max-tracks` 封顶）控制计费。
+2.3 任何引用/找乐动作前先查经验库 → `music_library.py query --root experience/music [--match <曲名/ID>|--sha|--role anchor]`：命中带出身份卡（license 红绿灯）+声学（高潮低谷时间戳）+模型绝对笔记+人类裁决；🔴 警告未解除前该曲不得进成片项目。
+2.7 锚定打分排出短名单后，可加"模型试听笔记"（可选，`references/listen-notes-contract.md`）→ A/B 贴合参考：`music_listen_omni.py --reference <用户确认的参照曲> --manifest <推荐或候选json>`；绝对属性入库：`--absolute --library experience/music`（听过的歌零成本复用库内同模型同提示词笔记，只有没听过的才调用，听完自动写回身份卡+笔记）。先探测听觉能力，**没有能力就明说并且一个字都不写**，调用失败如实进 `partialFailures`。A/B 笔记相对参照曲、不入库；绝对笔记入 `listen.md`。笔记只是参考，不做门禁；只听短名单（`--max-tracks` 封顶）控制计费。
 3. 用户手动从 Pixabay/Mixkit 等无 API 站下载了音乐 → `music_register_candidate.py --audio <文件> --license-type ... --license-evidence ... --output-dir <目录>` 登记（本脚本不联网、不复制源文件）。
 4. 有需求画像（时长/BPM/能量/响度上限，可选 `styleTags` 标签粗匹配）或风格简报后 → `music_recommend.py --profile <画像.json> --candidates <候选清单...> --reports-dir <分析目录>` 打分排序；候选不足会显式报"补检索/放宽画像/缩短成品"三选一，不自行拼凑。
 5. 定了曲子和口播后要做节奏对齐 → `music_align.py --report <分析报告> --voice-brief <配音清单> --timeline-ms <成片时长> --output-dir <目录>`（可选 `--climax-sentence` 高潮句、`--snap-tolerance-ms`、`--fade-ms`、`--tier-quantiles` 档位分位数）。产物是**建议**：轨偏移、高潮锚点、句边界卡点吸附（超出容差如实报 miss）、ducking/淡入淡出区间、**机器乐句表**（音轨能量段×轨偏移映射到成片时间轴并标覆盖句）与**逐句排版档位草稿**（段能量分位数定档，词表 快切/推进/常规/留白），附节点末风格的回显卡；口播时值永远是权威，卡点只做参考，不得为踩点让口播变形；档位草稿是机械建议（§6-④），最终逐行档位由 G3 终审八列回显人工定夺，消费者想改对齐数字只能改参数重跑。
@@ -69,5 +70,5 @@ metadata:
 - `references/library-probes.md`：曲库与引擎选型实测结论。
 - `references/search-terms-contract.md`：检索词生成合同（专员侧 I/O 固化）。
 - `references/listen-notes-contract.md`：模型试听笔记合同（能力探测、不编造纪律、成本封顶）。
-- `scripts/music_analyze.py`、`scripts/music_search_terms.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_listen_omni.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：九个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块）。
+- `scripts/music_analyze.py`、`scripts/music_search_terms.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_listen_omni.py`、`scripts/music_library.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：十个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块；经验库 `experience/music/` 只许 `music_library.py` 写）。
 - `tests/`：analyze / sourcing / recommend / align / search-terms / netease / listen-omni / mix-plan 确定性与阻断回归（含"无能力不编造"三例）。

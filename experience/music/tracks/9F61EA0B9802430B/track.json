@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+  "aliases": [
+    {
+      "title": "Devil Game (Phonk)",
+      "neteaseId": "2679274856",
+      "sourceUrl": "https://music.163.com/song?id=2679274856",
+      "provenance": "netease_search",
+      "project": "zaku-intro-001/N10自测",
+      "seenAt": "2026-09-11T03:27:55Z"
+    },
+    {
+      "title": "Devil Game (Phonk)",
+      "neteaseId": 2679274856,
+      "sourceUrl": "https://music.163.com/song?id=2679274856",
+      "provenance": "netease_search",
+      "seenAt": "2026-09-11T03:28:20Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2679274856-Devil_Game_(Phonk).mp3",
+      "recordedAt": "2026-09-11T03:28:20Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T03:27:55Z",
+  "updatedAt": "2026-09-11T03:28:20Z"
+}

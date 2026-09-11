@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+  "reportPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/reports/BGM-分析报告-netease-2679274856-preview-9F61EA0B.json",
+  "durationMs": 128036,
+  "tempoBpm": 117.45,
+  "integratedLufs": -6.3,
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 3994,
+      "energyMean": 0.049373
+    },
+    {
+      "startMs": 4087,
+      "endMs": 15418,
+      "energyMean": 0.177553
+    },
+    {
+      "startMs": 15511,
+      "endMs": 49412,
+      "energyMean": 0.430848
+    },
+    {
+      "startMs": 49505,
+      "endMs": 64087,
+      "energyMean": 0.482758
+    },
+    {
+      "startMs": 64180,
+      "endMs": 103654,
+      "energyMean": 0.442825
+    },
+    {
+      "startMs": 103747,
+      "endMs": 112106,
+      "energyMean": 0.329939
+    },
+    {
+      "startMs": 112199,
+      "endMs": 119629,
+      "energyMean": 0.195729
+    },
+    {
+      "startMs": 119722,
+      "endMs": 127988,
+      "energyMean": 0.056339
+    }
+  ],
+  "macroCurve16": [
+    0.09918212597759389,
+    0.33644038330301745,
+    0.9266147940509686,
+    0.9125281859533404,
+    0.906172983775822,
+    0.8309926126205606,
+    0.9989323502522572,
+    1.0,
+    0.9313346065124147,
+    0.9583067469883191,
+    0.9192161602060612,
+    0.9202409289182454,
+    0.8598518069715205,
+    0.6633286542601725,
+    0.34288509558789815,
+    0.0
+  ],
+  "climaxSegment": {
+    "startMs": 49505,
+    "endMs": 64087,
+    "energyMean": 0.482758
+  },
+  "recordedAt": "2026-09-11T03:27:55Z"
+}

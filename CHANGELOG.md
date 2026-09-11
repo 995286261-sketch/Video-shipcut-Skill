@@ -8,7 +8,8 @@
 - 回显侵权可见性：逐条 `infringementRisk` + 顶部 ⚠ 横幅 + 人读推荐回显卡 `BGM-推荐回显-v0.1.md`。
 - **锚定打分**（用户试听反馈"有不适配"）：画像带 `styleBrief` 时 BPM 改亲缘度（半速/倍速折叠容差）、新增能量曲线相似度（16 桶重采样+min-max 归一），段落数让权；无简报旧行为不变。zaku 复测：10 首由全部并列 1.000 拉开为 0.896–0.738 梯度，不贴合曲目（十面埋伏/生龙）降位。
 - **模型试听笔记层**（`music_listen_omni.py` + `listen-notes-contract.md`，用户定案："没有听觉分析能力不能瞎编，必须明确提示用户"）：先探测音频模型能力（CLI 存在+API key），缺失 → 结构化 `capability_missing`+回显卡明写"此处不编造"；在场 → 逐首与参照曲 A/B 听，情调差距/贴合度笔记进卡；调用失败如实进 `partialFailures`；只听短名单（`--max-tracks` 封顶）控制计费；后端可换（百炼 omni/Gemini/本地开源权重）。首跑即真实拦下一例 PATH 缺失，未编造一字。
-- 回归 26/26（sourcing 新增 3 例锚定测试；listen 层新增 3 例"无能力不编造"测试）。节点侧定案记录：BGM 初次分析统一放 G1、G0 只登记（待节点批次，见交接文档 §0）。风格锚经验库：用户指示先放着。
+- **音乐经验库落地**（`experience/music/` + 唯一写入口 `music_library.py`，用户定址定案）：一首歌一档案，身份=音频 SHA-256；四层次序（track.json 身份卡含 license 红绿灯/acoustic.json 高潮低谷时间戳/listen.md 模型绝对笔记带模型+提示词版本戳/verdicts.jsonl 人类裁决 append-only）；风格锚并入为 `roles: anchor`，不再单设锚库。三条红线入 README：音频本体永不进库（凭证据重取+SHA 验身）、license 只升不降（grant 是唯一翻灯通道）、相对评价不做库事实。试听笔记层新增 `--absolute --library`：同模型同提示词命中零成本复用、只有没听过的才调用、听完自动写回。首批入库 4 条（LOW=锚+绿灯；Devil Game/Gone Bad/弥渡山歌=未清权红灯），活体绝对属性听写 4/4 成功——并纠正了文本检索的假阳性：Devil Game 实为 Hardstyle 非 phonk（标题党，曲名命中≠风格命中）。
+- 回归 27/27（sourcing 锚定 3 例；listen"无能力不编造"3 例+复用零成本 1 例；library 身份/红绿灯/过期不冒充 6 例）。节点侧定案记录：BGM 初次分析统一放 G1、G0 只登记（待节点批次，见交接文档 §0）。
 
 ## v1.2.0 — 2026-09-10 — music-expert 落地与 BGM 全链接线
 

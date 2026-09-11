@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+  "reportPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G0-素材包/07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+  "durationMs": 177875,
+  "tempoBpm": 112.35,
+  "integratedLufs": -10.2,
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 17369,
+      "energyMean": 0.052333
+    },
+    {
+      "startMs": 17461,
+      "endMs": 49784,
+      "energyMean": 0.304419
+    },
+    {
+      "startMs": 49876,
+      "endMs": 61022,
+      "energyMean": 0.081615
+    },
+    {
+      "startMs": 61115,
+      "endMs": 86936,
+      "energyMean": 0.315979
+    },
+    {
+      "startMs": 87028,
+      "endMs": 104676,
+      "energyMean": 0.071559
+    },
+    {
+      "startMs": 104768,
+      "endMs": 122137,
+      "energyMean": 0.246315
+    },
+    {
+      "startMs": 122230,
+      "endMs": 156967,
+      "energyMean": 0.31528
+    },
+    {
+      "startMs": 157060,
+      "endMs": 177865,
+      "energyMean": 0.05274
+    }
+  ],
+  "macroCurve16": [
+    0.02290092569825684,
+    0.40089827881101425,
+    0.968498320690357,
+    0.8880977821201204,
+    0.6176118233986881,
+    0.556862197346712,
+    0.9352249230301641,
+    0.8658127487619951,
+    0.10253975051539718,
+    0.5158382852347192,
+    0.6792593028507495,
+    1.0,
+    0.9924158684894108,
+    0.9489561242984559,
+    0.1968162482395669,
+    0.0
+  ],
+  "climaxSegment": {
+    "startMs": 61115,
+    "endMs": 86936,
+    "energyMean": 0.315979
+  },
+  "recordedAt": "2026-09-11T03:27:55Z"
+}

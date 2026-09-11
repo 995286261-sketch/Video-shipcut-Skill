@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "EA2684893C898655EF018958BD61B61EB23C3C6C260AC0E689699EFC736E3E71",
+  "aliases": [
+    {
+      "title": "Gone Bad(Phonk)",
+      "neteaseId": "2627048583",
+      "sourceUrl": "https://music.163.com/song?id=2627048583",
+      "provenance": "netease_search",
+      "project": "zaku-intro-001/N10自测",
+      "seenAt": "2026-09-11T03:27:55Z"
+    },
+    {
+      "title": "Gone Bad(Phonk)",
+      "neteaseId": 2627048583,
+      "sourceUrl": "https://music.163.com/song?id=2627048583",
+      "provenance": "netease_search",
+      "seenAt": "2026-09-11T03:28:15Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2627048583-Gone_Bad(Phonk).mp3",
+      "recordedAt": "2026-09-11T03:28:15Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T03:27:55Z",
+  "updatedAt": "2026-09-11T03:28:15Z"
+}
