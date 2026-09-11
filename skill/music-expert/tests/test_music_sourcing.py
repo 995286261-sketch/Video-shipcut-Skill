@@ -146,16 +146,32 @@ class RecommendTest(unittest.TestCase):
         return subprocess.run([PYTHON, str(RECOMMEND), *args], capture_output=True, text=True,
                               encoding="utf-8")
 
-    def write_report(self, sha, tempo, duration_ms, lufs=-18.0, segments=4):
+    def write_report(self, sha, tempo, duration_ms, lufs=-18.0, segments=4, curve=None):
         report = {
             "schemaVersion": "0.1", "skill": "music-expert",
             "cacheKey": {"sha256": sha},
             "source": {"sha256": sha, "decodedDurationMs": duration_ms},
             "tempoBpm": tempo, "beatsMs": [], "onsetsMs": [], "hitPoints": [{"tMs": 0, "kind": "beat"}],
             "energySegments": [{"startMs": i * 1000, "endMs": (i + 1) * 1000, "energyMean": 0.1} for i in range(segments)],
-            "energyCurve": [], "loudness": {"integratedLufs": lufs},
+            "energyCurve": curve or [], "loudness": {"integratedLufs": lufs},
         }
         (self.reports / f"BGM-分析报告-{sha[:8]}.json").write_text(json.dumps(report), encoding="utf-8")
+
+    def test_anchored_profile_ranks_by_energy_shape_similarity(self):
+        anchor = [0.1, 0.2, 0.9, 0.2] * 4
+        self.write_report("B1" * 32, 120.0, 60_000, curve=anchor)
+        self.write_report("B2" * 32, 120.0, 60_000, curve=[0.9, 0.1, 0.2, 0.8] * 4)
+        self.write_candidates([self.candidate("off-shape", "B2" * 32), self.candidate("on-shape", "B1" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "minSegments": 2, "maxIntegratedLufs": -14,
+                                       "styleBrief": {"bpm": 120.0, "energyShape": anchor}}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        self.assertEqual("on-shape", data["ranked"][0]["title"])  # 同 BPM/时长/响度，形状近者赢
+        self.assertIn("energy_similarity=1.0", data["ranked"][0]["notes"])
+        self.assertIn("bpm_proximity=1.0", data["ranked"][0]["notes"])
 
     def write_candidates(self, entries):
         (self.root / "pool.json").write_text(json.dumps({"candidates": entries}), encoding="utf-8")
@@ -217,6 +233,24 @@ class RecommendTest(unittest.TestCase):
         top = data["ranked"][0]
         self.assertLess(top["score"], 0.35)  # 商用边界：未清权重罚，不得为对外分发背书
         self.assertIn("license_weighted_down", top["notes"])
+
+    def test_anchored_mode_demotes_out_of_shape_track(self):
+        # 半速氛围曲 vs 锚定高燃曲线：即使 BPM 区间内，能量形状差异要拉低总分（zaku 自测教训）
+        anchor = [0.2, 0.3, 0.95, 0.3] * 4
+        self.write_report("A1" * 32, 112.0, 60_000, curve=anchor)
+        self.write_report("A2" * 32, 96.0, 60_000, curve=[0.5, 0.52, 0.48, 0.51] * 4)
+        self.write_candidates([self.candidate("flat", "A2" * 32), self.candidate("match", "A1" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "bpmRange": [90, 135], "minSegments": 2,
+                                       "maxIntegratedLufs": -14, "styleBrief": {"bpm": 112.0, "energyShape": anchor}}), encoding="utf-8")
+        out = self.root / "rec.json"
+        self.run_script(["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                         "--reports-dir", str(self.reports), "--output", str(out)])
+        data = json.loads(out.read_text(encoding="utf-8"))
+        match, flat = data["ranked"][0], data["ranked"][1]
+        self.assertEqual("match", match["title"])
+        self.assertLess(flat["score"], 0.8)
+        self.assertGreater(match["score"] - flat["score"], 0.1)  # 必须有区分度，不能再并列满分
 
     def test_short_candidate_is_penalized_not_passed(self):
         self.write_report("CC" * 32, 120.0, 3_000)

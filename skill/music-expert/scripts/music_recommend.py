@@ -77,12 +77,72 @@ def candidate_sha(candidate: dict) -> str | None:
     return None
 
 
+def curve_values(curve: list | None) -> list[float]:
+    """Report energyCurve points are {"tMs","rms"} dicts; style-brief energyShape
+    is a plain numeric list. Flatten either shape to values."""
+    if not curve:
+        return []
+    values = []
+    for point in curve:
+        if isinstance(point, dict):
+            values.append(float(point.get("rms", point.get("energyMean", point.get("energy", 0.0))) or 0.0))
+        else:
+            values.append(float(point))
+    return values
+
+
+def resample_curve(curve, buckets: int = 16) -> list[float] | None:
+    curve = curve_values(curve)
+    if not curve:
+        return None
+    n = len(curve)
+    means = []
+    for i in range(buckets):
+        lo = int(i * n / buckets)
+        hi = max(lo + 1, int((i + 1) * n / buckets))
+        segment = curve[lo:hi] or [0.0]
+        means.append(sum(segment) / len(segment))
+    low, high = min(means), max(means)
+    if high - low < 0.02:
+        # 动态范围过小的曲线（近似恒定能量）没有"形状"可言，
+        # min-max 归一会把噪声放大成假形状——统一视为平坦。
+        return [0.0] * buckets
+    return [(v - low) / (high - low) for v in means]
+
+
+def energy_similarity(candidate_curve: list | None, anchor_curve: list | None) -> float | None:
+    a, b = resample_curve(candidate_curve), resample_curve(anchor_curve)
+    if not a or not b:
+        return None
+    mad = sum(abs(x - y) for x, y in zip(a, b)) / len(a)
+    return round(max(0.0, 1.0 - mad / 0.5), 4)
+
+
+def bpm_proximity(tempo: float, anchor: float) -> float | None:
+    """Half/double-time tolerant closeness: phonk at 129 vs anchor 112 is a 15%
+    miss; a 95.7 half-time feel must not score the same as a true match."""
+    if not anchor or not tempo:
+        return None
+    deviation = min(abs(tempo * factor - anchor) / anchor for factor in (0.5, 1.0, 2.0))
+    return round(max(0.0, 1.0 - deviation / 0.30), 4)
+
+
 def score(candidate: dict, report: dict | None, profile: dict) -> tuple[float, list[str]]:
     notes = []
     if report is None:
         return 0.0, ["no_analysis"]
     if (candidate.get("decodeProbe") or {}).get("status") != "passed":
         return 0.0, ["decode_probe_not_passed"]
+
+    style = profile.get("styleBrief") or {}
+    anchor_bpm, anchor_curve = style.get("bpm"), style.get("energyShape")
+    candidate_curve = report.get("energyCurve") or [s.get("energyMean", 0.0) for s in report.get("energySegments", [])]
+    shape_score = energy_similarity(candidate_curve, anchor_curve) if anchor_curve else None
+    # 锚定模式（用户已确认"感觉对了"的参照曲简报在场）：BPM 与能量形状按相似度渐变，
+    # 不再"区间内即满分"——zaku 自测教训：放宽区间让半速氛围曲与高燃曲并列满分。
+    weights = {"tempo": 0.30 if (anchor_bpm or shape_score is not None) else 0.35,
+               "shape": 0.15 if shape_score is not None else 0.0,
+               "segments": 0.05 if shape_score is not None else 0.15}
 
     total = 0.0
     # duration coverage (40%)
@@ -94,25 +154,35 @@ def score(candidate: dict, report: dict | None, profile: dict) -> tuple[float, l
         total += 0.40 * (duration_ms / need_ms)
         notes.append("shorter_than_target")
 
-    # tempo fit (35%)
+    # tempo fit
     tempo = report.get("tempoBpm") or 0.0
-    bpm_range = profile.get("bpmRange") or ([None, None])
-    low, high = (bpm_range + [None, None])[:2]
-    if low is None and high is None:
-        total += 0.35
-    elif tempo and (low is None or tempo >= low) and (high is None or tempo <= high):
-        total += 0.35
+    if anchor_bpm:
+        proximity = bpm_proximity(tempo, anchor_bpm) or 0.0
+        total += weights["tempo"] * proximity
+        notes.append(f"bpm_proximity={proximity}")
     else:
-        notes.append("bpm_out_of_range")
+        bpm_range = profile.get("bpmRange") or ([None, None])
+        low, high = (bpm_range + [None, None])[:2]
+        if low is None and high is None:
+            total += weights["tempo"]
+        elif tempo and (low is None or tempo >= low) and (high is None or tempo <= high):
+            total += weights["tempo"]
+        else:
+            notes.append("bpm_out_of_range")
 
-    # energy/segment shape (15%)
+    # energy shape similarity to the approved reference (anchored mode)
+    if shape_score is not None:
+        total += weights["shape"] * shape_score
+        notes.append(f"energy_similarity={shape_score}")
+
+    # energy/segment count (legacy 15%, folded to 5% when shape carries the load)
     if profile.get("minSegments"):
         if len(report.get("energySegments", [])) >= int(profile["minSegments"]):
-            total += 0.15
+            total += weights["segments"]
         else:
             notes.append("fewer_segments_than_requested")
     else:
-        total += 0.15
+        total += weights["segments"]
 
     # loudness headroom for narration ducking (10%)
     integrated = (report.get("loudness") or {}).get("integratedLufs")
@@ -260,15 +330,20 @@ def render_echo(result: dict, path: Path) -> Path:
     sufficiency = result["sufficiency"]
     lines += [f"- 画像：时长 ≥{profile.get('targetDurationSec', '?')}s｜BPM {profile.get('bpmRange', '不限')}"
               f"｜通过线 {result['minScore']}｜通过 {sufficiency['passing']}/{sufficiency['minExpected']}"
-              + ("" if sufficiency["enough"] else f"｜❌不足：{sufficiency['gapAction']}"),
-              "", "| # | 曲目 | BPM | 时长 | 响度 | 分 | 侵权风险 | 注记 |", "|---|---|---|---|---|---|---|---|"]
+              + ("" if sufficiency["enough"] else f"｜❌不足：{sufficiency['gapAction']}")]
+    style = profile.get("styleBrief") or {}
+    if style.get("bpm") or style.get("energyShape"):
+        lines.append(f"- 锚定：以参照曲风格简报打分（锚 BPM {style.get('bpm', '无')}"
+                     f"{'＋能量曲线相似度' if style.get('energyShape') else ''}，含半速/倍速亲缘容差）"
+                     + (f"｜来源：{style.get('source')}" if style.get("source") else ""))
+    lines += ["", "| # | 曲目 | BPM | 时长 | 响度 | 分 | 侵权风险 | 注记 |", "|---|---|---|---|---|---|---|---|"]
     for index, item in enumerate(result["ranked"], 1):
         lines.append(f"| {index} | {item['title']} | {item['tempoBpm']} | {item['durationDisplay']} "
                      f"| {item['integratedLufs']} | {item['score']:.3f} "
                      f"| {'⚠ 未清权' if item.get('infringementRisk') else '—'} | {'、'.join(item['notes']) or '—'} |")
     if result["unanalyzed"]:
         lines += ["", f"- 未分析隔离：{len(result['unanalyzed'])} 条（先跑 music_analyze 再打分）。"]
-    lines += ["", "- 分数并列时的最终取舍在人耳：试听件路径见候选清单 `previewPath`；挑曲后必须登记，未登记不得进剪辑计划。", ""]
+    lines += ["", "- 分数只是机器的适配度排序，最终取舍在人耳：试听件路径见候选清单 `previewPath`；挑曲后必须登记，未登记不得进剪辑计划。", ""]
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
 
