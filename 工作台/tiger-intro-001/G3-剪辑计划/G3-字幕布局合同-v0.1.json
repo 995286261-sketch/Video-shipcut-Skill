@@ -1,0 +1,50 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G3",
+ "resolution": [
+  1436,
+  1080
+ ],
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "标题/章节卡"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "信息卡（编号/数值）"
+  },
+  "narration": {
+   "topPct": 70,
+   "bottomPct": 84,
+   "fontsize": 62,
+   "maxLines": 2,
+   "marginV": 173,
+   "marginL": 60,
+   "marginR": 60
+  },
+  "sourceExclusion": {
+   "topPct": 84,
+   "bottomPct": 100,
+   "usage": "源烧录字幕排除区：mask带所在，新字幕不得进入"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "mask": {
+   "bandPct": [
+    84,
+    100
+   ],
+   "style": "与画面相融的窄遮罩"
+  },
+  "watermark": "左上角bilibili水印不可裁除，G5披露"
+ },
+ "rules": [
+  "一条口播一个排版块，长句按分号拆连续cue",
+  "标题/信息卡出现时口播错开0.5-1s或用车道",
+  "N16拆两条cue按字重比例分配时值"
+ ]
+}

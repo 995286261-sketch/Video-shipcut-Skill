@@ -1,25 +1,25 @@
 {
-  "schemaVersion": "0.1",
-  "skill": "music-expert",
-  "provenance": "manual_registration",
-  "title": "Infinity（鲫虞豆腐汤 remix）",
-  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
-  "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
-  "byteSize": 4134957,
-  "fileExtension": ".mp3",
-  "sourceUrl": "https://music.163.com/song?id=1966862636",
-  "license": "cleared-for-project",
-  "licenseEvidence": "工作台/tiger-intro-001/G0-素材包/04_授权说明.md（用户 2026-09-11 声明：直接用网易云试听件进片、版权风险自担）",
-  "attribution": "原曲 DDRKirby(ISQ)《Infinity》；remix：鲫虞豆腐汤",
-  "styleTags": [
-    "electronic",
-    "driving"
-  ],
-  "retrievedAt": "2026-09-11T15:04:26+08:00",
-  "distributionBoundary": "internal_test",
-  "decodeProbe": {
-    "status": "passed",
-    "engine": "ffmpeg"
-  },
-  "analysisRef": null
+ "schemaVersion": "0.1",
+ "skill": "music-expert",
+ "provenance": "manual_registration",
+ "title": "Infinity（鲫虞豆腐汤 remix）",
+ "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
+ "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+ "byteSize": 4134957,
+ "fileExtension": ".mp3",
+ "sourceUrl": "https://music.163.com/song?id=1966862636",
+ "license": "cleared-for-project",
+ "licenseEvidence": "工作台/tiger-intro-001/G0-素材包/04_授权说明.md（用户 2026-09-11 声明：直接用网易云试听件进片、版权风险自担）",
+ "attribution": "原曲 DDRKirby(ISQ)《Infinity》；remix：鲫虞豆腐汤",
+ "styleTags": [
+  "electronic",
+  "driving"
+ ],
+ "retrievedAt": "2026-09-11T15:04:26+08:00",
+ "distributionBoundary": "internal_test",
+ "decodeProbe": {
+  "status": "passed",
+  "engine": "ffmpeg"
+ },
+ "analysisRef": "工作台/tiger-intro-001/G0-素材包/07_授权音频/BGM-分析报告-Infinity（鲫虞豆腐汤remix）-FB88461C.json"
 }

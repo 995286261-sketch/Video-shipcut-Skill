@@ -1,0 +1,60 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G3",
+ "cardType": "g3_timeline_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-11T23:30:00+08:00",
+ "reviewCardRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-最终回显卡-v0.1.md",
+ "basisRefs": [
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-回显数据-v0.2.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-字幕布局合同-v0.1.json",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-源字幕处理表-v0.1.md",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-审核决定-v0.1.json",
+  "工作台/tiger-intro-001/G2-证据与口播/G2-口播稿-v0.1.md",
+  "工作台/tiger-intro-001/G3-剪辑计划/G3-确认记录.md"
+ ],
+ "checklist": [
+  {
+   "id": "approved_edit_plan",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json"
+  },
+  {
+   "id": "final_timeline_review",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-回显数据-v0.2.json"
+  },
+  {
+   "id": "subtitle_timeline",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass"
+  },
+  {
+   "id": "bgm_decision",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json"
+  },
+  {
+   "id": "packaging_decisions",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json"
+  },
+  {
+   "id": "g3_card",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-最终回显卡-v0.1.md"
+  }
+ ]
+}

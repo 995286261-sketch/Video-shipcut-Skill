@@ -1,0 +1,428 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G3",
+ "artifact": "G3-镜头分类索引",
+ "method": "ffmpeg scdet scene>0.35 → 277切点 → 252区间 → 每镜头中帧 → 5张分类表逐镜头判定 T/M/P/O/U；本索引只登记入选镜头，全量分类见 G3-剪辑计划/镜头分类表/",
+ "sourceAssetId": "source-02-08-611b3717",
+ "shots": [
+  {
+   "shotId": "shot-007",
+   "intervalMs": [
+    20296,
+    31429
+   ],
+   "durationMs": 11133,
+   "classification": "T",
+   "observation": "机库正面→红单眼（长镜头，23.5-27.5s为人物全景段未入选）",
+   "frameRef": "/tmp/shotframes/007.jpg"
+  },
+  {
+   "shotId": "shot-015",
+   "intervalMs": [
+    58431,
+    74840
+   ],
+   "durationMs": 16409,
+   "classification": "M",
+   "observation": "货舱→HLV点火升空（16.4s长镜头）",
+   "frameRef": "/tmp/shotframes/015.jpg"
+  },
+  {
+   "shotId": "shot-021",
+   "intervalMs": [
+    95902,
+    97398
+   ],
+   "durationMs": 1496,
+   "classification": "P",
+   "observation": "暗舱驾驶员",
+   "frameRef": "/tmp/shotframes/021.jpg"
+  },
+  {
+   "shotId": "shot-032",
+   "intervalMs": [
+    125978,
+    128180
+   ],
+   "durationMs": 2202,
+   "classification": "T",
+   "observation": "逆光军刀全身剪影",
+   "frameRef": "/tmp/shotframes/032.jpg"
+  },
+  {
+   "shotId": "shot-035",
+   "intervalMs": [
+    134619,
+    138566
+   ],
+   "durationMs": 3947,
+   "classification": "P",
+   "observation": "疤脸驾驶员驾驶舱（烧录字幕）",
+   "frameRef": "/tmp/shotframes/035.jpg"
+  },
+  {
+   "shotId": "shot-039",
+   "intervalMs": [
+    149242,
+    154726
+   ],
+   "durationMs": 5484,
+   "classification": "P",
+   "observation": "疤脸驾驶员驾驶舱（烧录字幕）",
+   "frameRef": "/tmp/shotframes/039.jpg"
+  },
+  {
+   "shotId": "shot-069",
+   "intervalMs": [
+    202707,
+    212178
+   ],
+   "durationMs": 9471,
+   "classification": "T",
+   "observation": "暗库老虎剪影→驾驶员检视（长镜头）",
+   "frameRef": "/tmp/shotframes/069.jpg"
+  },
+  {
+   "shotId": "shot-094",
+   "intervalMs": [
+    285957,
+    291690
+   ],
+   "durationMs": 5733,
+   "classification": "T",
+   "observation": "公路奔跑（烧录字幕）",
+   "frameRef": "/tmp/shotframes/094.jpg"
+  },
+  {
+   "shotId": "shot-116",
+   "intervalMs": [
+    355124,
+    359445
+   ],
+   "durationMs": 4321,
+   "classification": "T",
+   "observation": "躯干+盾+动力管近景",
+   "frameRef": "/tmp/shotframes/116.jpg"
+  },
+  {
+   "shotId": "shot-125",
+   "intervalMs": [
+    382667,
+    392969
+   ],
+   "durationMs": 10302,
+   "classification": "T",
+   "observation": "头部红单眼+烟尘（烧录字幕）",
+   "frameRef": "/tmp/shotframes/125.jpg"
+  },
+  {
+   "shotId": "shot-129",
+   "intervalMs": [
+    407218,
+    409711
+   ],
+   "durationMs": 2493,
+   "classification": "M",
+   "observation": "GM腿部+虎倒地",
+   "frameRef": "/tmp/shotframes/129.jpg"
+  },
+  {
+   "shotId": "shot-136",
+   "intervalMs": [
+    426369,
+    430897
+   ],
+   "durationMs": 4528,
+   "classification": "T",
+   "observation": "站立持炮",
+   "frameRef": "/tmp/shotframes/136.jpg"
+  },
+  {
+   "shotId": "shot-137",
+   "intervalMs": [
+    430897,
+    433597
+   ],
+   "durationMs": 2700,
+   "classification": "T",
+   "observation": "低角腿部+盾",
+   "frameRef": "/tmp/shotframes/137.jpg"
+  },
+  {
+   "shotId": "shot-139",
+   "intervalMs": [
+    435799,
+    439289
+   ],
+   "durationMs": 3490,
+   "classification": "T",
+   "observation": "躯干+盾近景（烧录字幕）",
+   "frameRef": "/tmp/shotframes/139.jpg"
+  },
+  {
+   "shotId": "shot-140",
+   "intervalMs": [
+    439289,
+    442238
+   ],
+   "durationMs": 2949,
+   "classification": "T",
+   "observation": "爆炸碎块+盾",
+   "frameRef": "/tmp/shotframes/140.jpg"
+  },
+  {
+   "shotId": "shot-143",
+   "intervalMs": [
+    448386,
+    452416
+   ],
+   "durationMs": 4030,
+   "classification": "T",
+   "observation": "头部+盾+烟",
+   "frameRef": "/tmp/shotframes/143.jpg"
+  },
+  {
+   "shotId": "shot-153",
+   "intervalMs": [
+    520087,
+    522830
+   ],
+   "durationMs": 2743,
+   "classification": "M",
+   "observation": "GM开火+虎背影",
+   "frameRef": "/tmp/shotframes/153.jpg"
+  },
+  {
+   "shotId": "shot-154",
+   "intervalMs": [
+    522996,
+    523494
+   ],
+   "durationMs": 498,
+   "classification": "M",
+   "observation": "GM盾+虎臂",
+   "frameRef": "/tmp/shotframes/154.jpg"
+  },
+  {
+   "shotId": "shot-155",
+   "intervalMs": [
+    523494,
+    525779
+   ],
+   "durationMs": 2285,
+   "classification": "M",
+   "observation": "GM+虎头+鞭弧",
+   "frameRef": "/tmp/shotframes/155.jpg"
+  },
+  {
+   "shotId": "shot-156",
+   "intervalMs": [
+    525779,
+    528396
+   ],
+   "durationMs": 2617,
+   "classification": "T",
+   "observation": "电热鞭+电弧",
+   "frameRef": "/tmp/shotframes/156.jpg"
+  },
+  {
+   "shotId": "shot-157",
+   "intervalMs": [
+    528396,
+    529476
+   ],
+   "durationMs": 1080,
+   "classification": "M",
+   "observation": "三连装炮舱特写",
+   "frameRef": "/tmp/shotframes/157.jpg"
+  },
+  {
+   "shotId": "shot-158",
+   "intervalMs": [
+    529476,
+    534461
+   ],
+   "durationMs": 4985,
+   "classification": "M",
+   "observation": "近身缠抱虎占上风",
+   "frameRef": "/tmp/shotframes/158.jpg"
+  },
+  {
+   "shotId": "shot-160",
+   "intervalMs": [
+    539405,
+    541357
+   ],
+   "durationMs": 1952,
+   "classification": "T",
+   "observation": "头部+肩盾",
+   "frameRef": "/tmp/shotframes/160.jpg"
+  },
+  {
+   "shotId": "shot-161",
+   "intervalMs": [
+    541357,
+    544141
+   ],
+   "durationMs": 2784,
+   "classification": "T",
+   "observation": "躯干+盾",
+   "frameRef": "/tmp/shotframes/161.jpg"
+  },
+  {
+   "shotId": "shot-164",
+   "intervalMs": [
+    548378,
+    550787
+   ],
+   "durationMs": 2409,
+   "classification": "M",
+   "observation": "热能军刀对峙",
+   "frameRef": "/tmp/shotframes/164.jpg"
+  },
+  {
+   "shotId": "shot-165",
+   "intervalMs": [
+    550787,
+    553114
+   ],
+   "durationMs": 2327,
+   "classification": "T",
+   "observation": "躯干+盾+军刀",
+   "frameRef": "/tmp/shotframes/165.jpg"
+  },
+  {
+   "shotId": "shot-194",
+   "intervalMs": [
+    628720,
+    631420
+   ],
+   "durationMs": 2700,
+   "classification": "M",
+   "observation": "GM+虎盾",
+   "frameRef": "/tmp/shotframes/194.jpg"
+  },
+  {
+   "shotId": "shot-202",
+   "intervalMs": [
+    683514,
+    686214
+   ],
+   "durationMs": 2700,
+   "classification": "M",
+   "observation": "军刀插残骸（烧录字幕）",
+   "frameRef": "/tmp/shotframes/202.jpg"
+  },
+  {
+   "shotId": "shot-205",
+   "intervalMs": [
+    688790,
+    690701
+   ],
+   "durationMs": 1911,
+   "classification": "T",
+   "observation": "盾+热能军刀全身",
+   "frameRef": "/tmp/shotframes/205.jpg"
+  },
+  {
+   "shotId": "shot-208",
+   "intervalMs": [
+    692986,
+    694481
+   ],
+   "durationMs": 1495,
+   "classification": "T",
+   "observation": "头部+盾+火花",
+   "frameRef": "/tmp/shotframes/208.jpg"
+  },
+  {
+   "shotId": "shot-213",
+   "intervalMs": [
+    700131,
+    701627
+   ],
+   "durationMs": 1496,
+   "classification": "T",
+   "observation": "头部红单眼+盾",
+   "frameRef": "/tmp/shotframes/213.jpg"
+  },
+  {
+   "shotId": "shot-215",
+   "intervalMs": [
+    703330,
+    706487
+   ],
+   "durationMs": 3157,
+   "classification": "T",
+   "observation": "背部+盾+动力管",
+   "frameRef": "/tmp/shotframes/215.jpg"
+  },
+  {
+   "shotId": "shot-230",
+   "intervalMs": [
+    770836,
+    777399
+   ],
+   "durationMs": 6563,
+   "classification": "P",
+   "observation": "疤脸驾驶员侧脸",
+   "frameRef": "/tmp/shotframes/230.jpg"
+  },
+  {
+   "shotId": "shot-231",
+   "intervalMs": [
+    777399,
+    779809
+   ],
+   "durationMs": 2410,
+   "classification": "P",
+   "observation": "舱盖+少年（烧录字幕）",
+   "frameRef": "/tmp/shotframes/231.jpg"
+  },
+  {
+   "shotId": "shot-237",
+   "intervalMs": [
+    783298,
+    786788
+   ],
+   "durationMs": 3490,
+   "classification": "T",
+   "observation": "持刀奔跑",
+   "frameRef": "/tmp/shotframes/237.jpg"
+  },
+  {
+   "shotId": "shot-245",
+   "intervalMs": [
+    799084,
+    801369
+   ],
+   "durationMs": 2285,
+   "classification": "T",
+   "observation": "烟尘+红单眼剪影",
+   "frameRef": "/tmp/shotframes/245.jpg"
+  },
+  {
+   "shotId": "shot-251",
+   "intervalMs": [
+    823968,
+    826959
+   ],
+   "durationMs": 2991,
+   "classification": "P",
+   "observation": "驾驶舱少年",
+   "frameRef": "/tmp/shotframes/251.jpg"
+  },
+  {
+   "shotId": "shot-252",
+   "intervalMs": [
+    826959,
+    836800
+   ],
+   "durationMs": 9841,
+   "classification": "P",
+   "observation": "疤脸驾驶员特写（烧录字幕）",
+   "frameRef": "/tmp/shotframes/252.jpg"
+  }
+ ]
+}

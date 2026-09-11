@@ -20,7 +20,7 @@
     ],
     "evidence": "\u5de5\u4f5c\u53f0/tiger-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u97f3\u4e50\u68c0\u7d22/BGM-\u5019\u9009\u767b\u8bb0-Infinity-\u9cab\u865e\u8c46\u8150\u6c64-remix-FB88461C.json"
   },
-  "currentNode": "G3",
+  "currentNode": "G4",
   "status": "in_progress",
   "nodes": {
     "G0": {
@@ -141,15 +141,55 @@
       }
     },
     "G3": {
-      "status": "in_progress",
+      "status": "completed",
       "inputRefs": [],
-      "artifactRefs": [],
-      "humanReviewPoints": [],
-      "reviewGate": null,
-      "approval": null
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "hrp-final-timeline"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.2.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6e90\u5b57\u5e55\u5904\u7406\u8868-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u7a3f-v0.1.md",
+          "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-11T23:30:00+08:00"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvalTokenVerbatim": "\u786e\u8ba4G3",
+        "approvalResponseVerbatim": "\u786e\u8ba4G3",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-11T09:57:18Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/tiger-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md"
+      }
     },
     "G4": {
-      "status": "pending",
+      "status": "in_progress",
       "inputRefs": [],
       "artifactRefs": [],
       "humanReviewPoints": [],
@@ -166,7 +206,7 @@
     }
   },
   "acceptedWarnings": [],
-  "nextAction": "Prepare timecoded edit plan and request user review.",
+  "nextAction": "Build and validate local candidate; use ChatCut only if micro-adjustment is requested.",
   "createdAt": "2026-09-11T05:53:06Z",
-  "updatedAt": "2026-09-11T07:49:28Z"
+  "updatedAt": "2026-09-11T09:57:18Z"
 }

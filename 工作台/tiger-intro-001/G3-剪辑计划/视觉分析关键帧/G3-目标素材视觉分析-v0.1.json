@@ -1,0 +1,1511 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "full_source_interval_4000ms",
+ "cacheKey": {
+  "node": "G3",
+  "purpose": "keyframe-extraction",
+  "assetId": "source-02-08-611b3717",
+  "sha256": "17B6A344ED",
+  "sourceRange": {
+   "startMs": 0,
+   "endMs": 836800
+  },
+  "intervalMs": 4000
+ },
+ "sourcePackRef": "工作台/tiger-intro-001/G0-素材包/material-pack.json",
+ "provider": "agent-multimodal",
+ "model": "zcode-vision",
+ "promptVersion": "g3-explore-v1",
+ "ledgerRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+ "sheets": [
+  "视觉分析关键帧/sheets/sheet-1.jpg",
+  "视觉分析关键帧/sheets/sheet-2.jpg",
+  "视觉分析关键帧/sheets/sheet-3.jpg",
+  "视觉分析关键帧/sheets/sheet-4.jpg",
+  "视觉分析关键帧/sheets/sheet-5.jpg",
+  "视觉分析关键帧/sheets/sheet-6.jpg"
+ ],
+ "frameCount": 209,
+ "identityCounts": {
+  "person_only": 109,
+  "uncertain": 11,
+  "target_present": 21,
+  "not_present": 52,
+  "mixed": 16
+ },
+ "scopeNote": "素材为老虎改王牌高光混剪，目标主体占比>30%（27 target_present+12 mixed/209），按合同正常全量分析；G1 已记录主体范围，未再向用户重复询问范围",
+ "targetAssets": [
+  {
+   "assetId": "source-02-08-611b3717",
+   "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+   "keyframes": [
+    {
+     "sourceMs": 0,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f001.jpg"
+    },
+    {
+     "sourceMs": 4000,
+     "analysisStatus": "completed",
+     "observedVisuals": "暗处teal MS不明",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f002.jpg"
+    },
+    {
+     "sourceMs": 8000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f003.jpg"
+    },
+    {
+     "sourceMs": 12000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f004.jpg"
+    },
+    {
+     "sourceMs": 16000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f005.jpg"
+    },
+    {
+     "sourceMs": 20000,
+     "analysisStatus": "completed",
+     "observedVisuals": "hangar正面老虎系全身",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f006.jpg"
+    },
+    {
+     "sourceMs": 24000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f007.jpg"
+    },
+    {
+     "sourceMs": 28000,
+     "analysisStatus": "completed",
+     "observedVisuals": "hangar老虎系红单眼正面",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f008.jpg"
+    },
+    {
+     "sourceMs": 32000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f009.jpg"
+    },
+    {
+     "sourceMs": 36000,
+     "analysisStatus": "completed",
+     "observedVisuals": "网舱条纹",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f010.jpg"
+    },
+    {
+     "sourceMs": 40000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f011.jpg"
+    },
+    {
+     "sourceMs": 44000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f012.jpg"
+    },
+    {
+     "sourceMs": 48000,
+     "analysisStatus": "completed",
+     "observedVisuals": "网后红单眼微光",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f013.jpg"
+    },
+    {
+     "sourceMs": 52000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f014.jpg"
+    },
+    {
+     "sourceMs": 56000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f015.jpg"
+    },
+    {
+     "sourceMs": 60000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f016.jpg"
+    },
+    {
+     "sourceMs": 64000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f017.jpg"
+    },
+    {
+     "sourceMs": 68000,
+     "analysisStatus": "completed",
+     "observedVisuals": "掉落货箱",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f018.jpg"
+    },
+    {
+     "sourceMs": 72000,
+     "analysisStatus": "completed",
+     "observedVisuals": "HLV发射+前景MS",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f019.jpg"
+    },
+    {
+     "sourceMs": 76000,
+     "analysisStatus": "completed",
+     "observedVisuals": "联邦基地GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f020.jpg"
+    },
+    {
+     "sourceMs": 80000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM+坦克",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f021.jpg"
+    },
+    {
+     "sourceMs": 84000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f022.jpg"
+    },
+    {
+     "sourceMs": 88000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f023.jpg"
+    },
+    {
+     "sourceMs": 92000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f024.jpg"
+    },
+    {
+     "sourceMs": 96000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f025.jpg"
+    },
+    {
+     "sourceMs": 100000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f026.jpg"
+    },
+    {
+     "sourceMs": 104000,
+     "analysisStatus": "completed",
+     "observedVisuals": "地面遗落物件",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f027.jpg"
+    },
+    {
+     "sourceMs": 108000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f028.jpg"
+    },
+    {
+     "sourceMs": 112000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f029.jpg"
+    },
+    {
+     "sourceMs": 116000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f030.jpg"
+    },
+    {
+     "sourceMs": 120000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f031.jpg"
+    },
+    {
+     "sourceMs": 124000,
+     "analysisStatus": "completed",
+     "observedVisuals": "逆光剪影持长管",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f032.jpg"
+    },
+    {
+     "sourceMs": 128000,
+     "analysisStatus": "completed",
+     "observedVisuals": "逆光扎古系头(存疑)",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f033.jpg"
+    },
+    {
+     "sourceMs": 132000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f034.jpg"
+    },
+    {
+     "sourceMs": 136000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶员特写（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f035.jpg"
+    },
+    {
+     "sourceMs": 140000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶远影",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f036.jpg"
+    },
+    {
+     "sourceMs": 144000,
+     "analysisStatus": "completed",
+     "observedVisuals": "水塔旁远影",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f037.jpg"
+    },
+    {
+     "sourceMs": 148000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶舱(字幕:人型机也有光束武器)（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f038.jpg"
+    },
+    {
+     "sourceMs": 152000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f039.jpg"
+    },
+    {
+     "sourceMs": 156000,
+     "analysisStatus": "completed",
+     "observedVisuals": "碎石中翻滚 teal MS",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f040.jpg"
+    },
+    {
+     "sourceMs": 160000,
+     "analysisStatus": "completed",
+     "observedVisuals": "白机攀爬",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f041.jpg"
+    },
+    {
+     "sourceMs": 164000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f042.jpg"
+    },
+    {
+     "sourceMs": 168000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f043.jpg"
+    },
+    {
+     "sourceMs": 172000,
+     "analysisStatus": "completed",
+     "observedVisuals": "远处楼顶MS剪影",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f044.jpg"
+    },
+    {
+     "sourceMs": 176000,
+     "analysisStatus": "completed",
+     "observedVisuals": "烟雾",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f045.jpg"
+    },
+    {
+     "sourceMs": 180000,
+     "analysisStatus": "completed",
+     "observedVisuals": "坦克光束",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f046.jpg"
+    },
+    {
+     "sourceMs": 184000,
+     "analysisStatus": "completed",
+     "observedVisuals": "大楼烟",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f047.jpg"
+    },
+    {
+     "sourceMs": 188000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f048.jpg"
+    },
+    {
+     "sourceMs": 192000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f049.jpg"
+    },
+    {
+     "sourceMs": 196000,
+     "analysisStatus": "completed",
+     "observedVisuals": "「MOBILE SUIT GOU…」标题卡(UP主制作)",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f050.jpg"
+    },
+    {
+     "sourceMs": 200000,
+     "analysisStatus": "completed",
+     "observedVisuals": "「THE 08MS TEAM」标题卡+金发人物",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f051.jpg"
+    },
+    {
+     "sourceMs": 204000,
+     "analysisStatus": "completed",
+     "observedVisuals": "暗库老虎系剪影",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f052.jpg"
+    },
+    {
+     "sourceMs": 208000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f053.jpg"
+    },
+    {
+     "sourceMs": 212000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f054.jpg"
+    },
+    {
+     "sourceMs": 216000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f055.jpg"
+    },
+    {
+     "sourceMs": 220000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f056.jpg"
+    },
+    {
+     "sourceMs": 224000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f057.jpg"
+    },
+    {
+     "sourceMs": 228000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f058.jpg"
+    },
+    {
+     "sourceMs": 232000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f059.jpg"
+    },
+    {
+     "sourceMs": 236000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶长管狙击姿态",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f060.jpg"
+    },
+    {
+     "sourceMs": 240000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f061.jpg"
+    },
+    {
+     "sourceMs": 244000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f062.jpg"
+    },
+    {
+     "sourceMs": 248000,
+     "analysisStatus": "completed",
+     "observedVisuals": "废墟中持盾站立",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f063.jpg"
+    },
+    {
+     "sourceMs": 252000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f064.jpg"
+    },
+    {
+     "sourceMs": 256000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f065.jpg"
+    },
+    {
+     "sourceMs": 260000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f066.jpg"
+    },
+    {
+     "sourceMs": 264000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f067.jpg"
+    },
+    {
+     "sourceMs": 268000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f068.jpg"
+    },
+    {
+     "sourceMs": 272000,
+     "analysisStatus": "completed",
+     "observedVisuals": "08盾GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f069.jpg"
+    },
+    {
+     "sourceMs": 276000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f070.jpg"
+    },
+    {
+     "sourceMs": 280000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f071.jpg"
+    },
+    {
+     "sourceMs": 284000,
+     "analysisStatus": "completed",
+     "observedVisuals": "肩盾与手臂特写",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f072.jpg"
+    },
+    {
+     "sourceMs": 288000,
+     "analysisStatus": "completed",
+     "observedVisuals": "左臂外挂三连装机炮特写",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f073.jpg"
+    },
+    {
+     "sourceMs": 292000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM开火",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f074.jpg"
+    },
+    {
+     "sourceMs": 296000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶远影闪光",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f075.jpg"
+    },
+    {
+     "sourceMs": 300000,
+     "analysisStatus": "completed",
+     "observedVisuals": "空公路",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f076.jpg"
+    },
+    {
+     "sourceMs": 304000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f077.jpg"
+    },
+    {
+     "sourceMs": 308000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f078.jpg"
+    },
+    {
+     "sourceMs": 312000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸侧影驾驶舱（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f079.jpg"
+    },
+    {
+     "sourceMs": 316000,
+     "analysisStatus": "completed",
+     "observedVisuals": "红烟",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f080.jpg"
+    },
+    {
+     "sourceMs": 320000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f081.jpg"
+    },
+    {
+     "sourceMs": 324000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f082.jpg"
+    },
+    {
+     "sourceMs": 328000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f083.jpg"
+    },
+    {
+     "sourceMs": 332000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f084.jpg"
+    },
+    {
+     "sourceMs": 336000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f085.jpg"
+    },
+    {
+     "sourceMs": 340000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f086.jpg"
+    },
+    {
+     "sourceMs": 344000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f087.jpg"
+    },
+    {
+     "sourceMs": 348000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f088.jpg"
+    },
+    {
+     "sourceMs": 352000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f089.jpg"
+    },
+    {
+     "sourceMs": 356000,
+     "analysisStatus": "completed",
+     "observedVisuals": "公路全身奔跑",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f090.jpg"
+    },
+    {
+     "sourceMs": 360000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f091.jpg"
+    },
+    {
+     "sourceMs": 364000,
+     "analysisStatus": "completed",
+     "observedVisuals": "高架烟",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f092.jpg"
+    },
+    {
+     "sourceMs": 368000,
+     "analysisStatus": "completed",
+     "observedVisuals": "烟+电线杆",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f093.jpg"
+    },
+    {
+     "sourceMs": 372000,
+     "analysisStatus": "completed",
+     "observedVisuals": "同",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f094.jpg"
+    },
+    {
+     "sourceMs": 376000,
+     "analysisStatus": "completed",
+     "observedVisuals": "爆尘",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f095.jpg"
+    },
+    {
+     "sourceMs": 380000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f096.jpg"
+    },
+    {
+     "sourceMs": 384000,
+     "analysisStatus": "completed",
+     "observedVisuals": "尘中GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f097.jpg"
+    },
+    {
+     "sourceMs": 388000,
+     "analysisStatus": "completed",
+     "observedVisuals": "车顶越出头部单眼近景",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f098.jpg"
+    },
+    {
+     "sourceMs": 392000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶舱嘶喊（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f099.jpg"
+    },
+    {
+     "sourceMs": 396000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶舱（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f100.jpg"
+    },
+    {
+     "sourceMs": 400000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f101.jpg"
+    },
+    {
+     "sourceMs": 404000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶GM开火",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f102.jpg"
+    },
+    {
+     "sourceMs": 408000,
+     "analysisStatus": "completed",
+     "observedVisuals": "街中GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f103.jpg"
+    },
+    {
+     "sourceMs": 412000,
+     "analysisStatus": "completed",
+     "observedVisuals": "暗MS推进焰",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f104.jpg"
+    },
+    {
+     "sourceMs": 416000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸狞笑（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f105.jpg"
+    },
+    {
+     "sourceMs": 420000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM光束",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f106.jpg"
+    },
+    {
+     "sourceMs": 424000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼宇间跃出(暗)",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f107.jpg"
+    },
+    {
+     "sourceMs": 428000,
+     "analysisStatus": "completed",
+     "observedVisuals": "高架结构上持武器站立",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f108.jpg"
+    },
+    {
+     "sourceMs": 432000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f109.jpg"
+    },
+    {
+     "sourceMs": 436000,
+     "analysisStatus": "completed",
+     "observedVisuals": "躯干单眼特写",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f110.jpg"
+    },
+    {
+     "sourceMs": 440000,
+     "analysisStatus": "completed",
+     "observedVisuals": "开火枪口焰",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f111.jpg"
+    },
+    {
+     "sourceMs": 444000,
+     "analysisStatus": "completed",
+     "observedVisuals": "坠楼GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f112.jpg"
+    },
+    {
+     "sourceMs": 448000,
+     "analysisStatus": "completed",
+     "observedVisuals": "背影角状头肩盾+烟",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f113.jpg"
+    },
+    {
+     "sourceMs": 452000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸 smirk（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f114.jpg"
+    },
+    {
+     "sourceMs": 456000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸 smirk（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f115.jpg"
+    },
+    {
+     "sourceMs": 460000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f116.jpg"
+    },
+    {
+     "sourceMs": 464000,
+     "analysisStatus": "completed",
+     "observedVisuals": "粉烟",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f117.jpg"
+    },
+    {
+     "sourceMs": 468000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f118.jpg"
+    },
+    {
+     "sourceMs": 472000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f119.jpg"
+    },
+    {
+     "sourceMs": 476000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f120.jpg"
+    },
+    {
+     "sourceMs": 480000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f121.jpg"
+    },
+    {
+     "sourceMs": 484000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f122.jpg"
+    },
+    {
+     "sourceMs": 488000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f123.jpg"
+    },
+    {
+     "sourceMs": 492000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f124.jpg"
+    },
+    {
+     "sourceMs": 496000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f125.jpg"
+    },
+    {
+     "sourceMs": 500000,
+     "analysisStatus": "completed",
+     "observedVisuals": "香槟杯",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f126.jpg"
+    },
+    {
+     "sourceMs": 504000,
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色爆",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f127.jpg"
+    },
+    {
+     "sourceMs": 508000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f128.jpg"
+    },
+    {
+     "sourceMs": 512000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶舱（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f129.jpg"
+    },
+    {
+     "sourceMs": 516000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸特写（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f130.jpg"
+    },
+    {
+     "sourceMs": 520000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶两机对峙",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f131.jpg"
+    },
+    {
+     "sourceMs": 524000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f132.jpg"
+    },
+    {
+     "sourceMs": 528000,
+     "analysisStatus": "completed",
+     "observedVisuals": "对GM甩出电热鞭",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f133.jpg"
+    },
+    {
+     "sourceMs": 532000,
+     "analysisStatus": "completed",
+     "observedVisuals": "电热鞭延伸缠斗",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f134.jpg"
+    },
+    {
+     "sourceMs": 536000,
+     "analysisStatus": "completed",
+     "observedVisuals": "08盾GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f135.jpg"
+    },
+    {
+     "sourceMs": 540000,
+     "analysisStatus": "completed",
+     "observedVisuals": "坠GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f136.jpg"
+    },
+    {
+     "sourceMs": 544000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f137.jpg"
+    },
+    {
+     "sourceMs": 548000,
+     "analysisStatus": "completed",
+     "observedVisuals": "鞭战全景两机",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f138.jpg"
+    },
+    {
+     "sourceMs": 552000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM头特写",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f139.jpg"
+    },
+    {
+     "sourceMs": 556000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸驾驶舱（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f140.jpg"
+    },
+    {
+     "sourceMs": 560000,
+     "analysisStatus": "completed",
+     "observedVisuals": "躯干肩盾近景",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f141.jpg"
+    },
+    {
+     "sourceMs": 564000,
+     "analysisStatus": "completed",
+     "observedVisuals": "天空跳跃全身",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f142.jpg"
+    },
+    {
+     "sourceMs": 568000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸嘶喊特写（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f143.jpg"
+    },
+    {
+     "sourceMs": 572000,
+     "analysisStatus": "completed",
+     "observedVisuals": "空走廊",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f144.jpg"
+    },
+    {
+     "sourceMs": 576000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM持枪",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f145.jpg"
+    },
+    {
+     "sourceMs": 580000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f146.jpg"
+    },
+    {
+     "sourceMs": 584000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f147.jpg"
+    },
+    {
+     "sourceMs": 588000,
+     "analysisStatus": "completed",
+     "observedVisuals": "暗舱蓝光",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f148.jpg"
+    },
+    {
+     "sourceMs": 592000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f149.jpg"
+    },
+    {
+     "sourceMs": 596000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f150.jpg"
+    },
+    {
+     "sourceMs": 600000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f151.jpg"
+    },
+    {
+     "sourceMs": 604000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f152.jpg"
+    },
+    {
+     "sourceMs": 608000,
+     "analysisStatus": "completed",
+     "observedVisuals": "格林盾缠抱GM",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f153.jpg"
+    },
+    {
+     "sourceMs": 612000,
+     "analysisStatus": "completed",
+     "observedVisuals": "双GM",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f154.jpg"
+    },
+    {
+     "sourceMs": 616000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f155.jpg"
+    },
+    {
+     "sourceMs": 620000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f156.jpg"
+    },
+    {
+     "sourceMs": 624000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f157.jpg"
+    },
+    {
+     "sourceMs": 628000,
+     "analysisStatus": "completed",
+     "observedVisuals": "挥臂攻击GM",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f158.jpg"
+    },
+    {
+     "sourceMs": 632000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸 grin(字幕:我终于活过来了)（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f159.jpg"
+    },
+    {
+     "sourceMs": 636000,
+     "analysisStatus": "completed",
+     "observedVisuals": "双GM前老虎介入",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f160.jpg"
+    },
+    {
+     "sourceMs": 640000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f161.jpg"
+    },
+    {
+     "sourceMs": 644000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f162.jpg"
+    },
+    {
+     "sourceMs": 648000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f163.jpg"
+    },
+    {
+     "sourceMs": 652000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f164.jpg"
+    },
+    {
+     "sourceMs": 656000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f165.jpg"
+    },
+    {
+     "sourceMs": 660000,
+     "analysisStatus": "completed",
+     "observedVisuals": "绿水",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f166.jpg"
+    },
+    {
+     "sourceMs": 664000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f167.jpg"
+    },
+    {
+     "sourceMs": 668000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM头",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f168.jpg"
+    },
+    {
+     "sourceMs": 672000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM头",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f169.jpg"
+    },
+    {
+     "sourceMs": 676000,
+     "analysisStatus": "completed",
+     "observedVisuals": "白机跃下与暗MS",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f170.jpg"
+    },
+    {
+     "sourceMs": 680000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM背包",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f171.jpg"
+    },
+    {
+     "sourceMs": 684000,
+     "analysisStatus": "completed",
+     "observedVisuals": "碎屑",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f172.jpg"
+    },
+    {
+     "sourceMs": 688000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶全身角状头",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f173.jpg"
+    },
+    {
+     "sourceMs": 692000,
+     "analysisStatus": "completed",
+     "observedVisuals": "格林盾对刀近身",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f174.jpg"
+    },
+    {
+     "sourceMs": 696000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f175.jpg"
+    },
+    {
+     "sourceMs": 700000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸笑（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f176.jpg"
+    },
+    {
+     "sourceMs": 704000,
+     "analysisStatus": "completed",
+     "observedVisuals": "空街",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f177.jpg"
+    },
+    {
+     "sourceMs": 708000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f178.jpg"
+    },
+    {
+     "sourceMs": 712000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f179.jpg"
+    },
+    {
+     "sourceMs": 716000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f180.jpg"
+    },
+    {
+     "sourceMs": 720000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f181.jpg"
+    },
+    {
+     "sourceMs": 724000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f182.jpg"
+    },
+    {
+     "sourceMs": 728000,
+     "analysisStatus": "completed",
+     "observedVisuals": "废墟天空",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f183.jpg"
+    },
+    {
+     "sourceMs": 732000,
+     "analysisStatus": "completed",
+     "observedVisuals": "暗MS与球型机",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f184.jpg"
+    },
+    {
+     "sourceMs": 736000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f185.jpg"
+    },
+    {
+     "sourceMs": 740000,
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f186.jpg"
+    },
+    {
+     "sourceMs": 744000,
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f187.jpg"
+    },
+    {
+     "sourceMs": 748000,
+     "analysisStatus": "completed",
+     "observedVisuals": "黄爆",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f188.jpg"
+    },
+    {
+     "sourceMs": 752000,
+     "analysisStatus": "completed",
+     "observedVisuals": "山谷远影",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f189.jpg"
+    },
+    {
+     "sourceMs": 756000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼宇间跳跃MS",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f190.jpg"
+    },
+    {
+     "sourceMs": 760000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f191.jpg"
+    },
+    {
+     "sourceMs": 764000,
+     "analysisStatus": "completed",
+     "observedVisuals": "空河道",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f192.jpg"
+    },
+    {
+     "sourceMs": 768000,
+     "analysisStatus": "completed",
+     "observedVisuals": "空河道",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f193.jpg"
+    },
+    {
+     "sourceMs": 772000,
+     "analysisStatus": "completed",
+     "observedVisuals": "疤脸侧影（疤脸王牌，N02身份证据链）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f194.jpg"
+    },
+    {
+     "sourceMs": 776000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶蹲伏持盾",
+     "identityStatus": "confirmed",
+     "frameRef": "关键帧/f195.jpg"
+    },
+    {
+     "sourceMs": 780000,
+     "analysisStatus": "completed",
+     "observedVisuals": "GM头红眼",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f196.jpg"
+    },
+    {
+     "sourceMs": 784000,
+     "analysisStatus": "completed",
+     "observedVisuals": "阶梯两机交战",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f197.jpg"
+    },
+    {
+     "sourceMs": 788000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f198.jpg"
+    },
+    {
+     "sourceMs": 792000,
+     "analysisStatus": "completed",
+     "observedVisuals": "缠斗枪口焰",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f199.jpg"
+    },
+    {
+     "sourceMs": 796000,
+     "analysisStatus": "completed",
+     "observedVisuals": "河道远处MS",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f200.jpg"
+    },
+    {
+     "sourceMs": 800000,
+     "analysisStatus": "completed",
+     "observedVisuals": "楼顶爆",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f201.jpg"
+    },
+    {
+     "sourceMs": 804000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f202.jpg"
+    },
+    {
+     "sourceMs": 808000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f203.jpg"
+    },
+    {
+     "sourceMs": 812000,
+     "analysisStatus": "completed",
+     "observedVisuals": "白机与teal机同框",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f204.jpg"
+    },
+    {
+     "sourceMs": 816000,
+     "analysisStatus": "completed",
+     "observedVisuals": "(人物)",
+     "identityStatus": "uncertain",
+     "frameRef": "关键帧/f205.jpg"
+    },
+    {
+     "sourceMs": 820000,
+     "analysisStatus": "completed",
+     "observedVisuals": "人物对话/驾驶舱镜头（08小队或吉翁人员）",
+     "identityStatus": "person_only",
+     "frameRef": "关键帧/f206.jpg"
+    },
+    {
+     "sourceMs": 824000,
+     "analysisStatus": "completed",
+     "observedVisuals": "黑烟",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f207.jpg"
+    },
+    {
+     "sourceMs": 828000,
+     "analysisStatus": "completed",
+     "observedVisuals": "终局倒地铁壁外驾驶舱",
+     "identityStatus": "mixed",
+     "frameRef": "关键帧/f208.jpg"
+    },
+    {
+     "sourceMs": 832000,
+     "analysisStatus": "completed",
+     "observedVisuals": "必剪片尾卡",
+     "identityStatus": "not_present",
+     "frameRef": "关键帧/f209.jpg"
+    }
+   ]
+  }
+ ]
+}

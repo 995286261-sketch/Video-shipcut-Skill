@@ -1,0 +1,1408 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "visual-verification-frames",
+  "planRef": "工作台/tiger-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 20296,
+        "endMs": 23503
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 20296,
+          "sourceMs": 20296,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-001/start-0000020296ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 21899,
+          "sourceMs": 21899,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-001/middle-0000021899ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 23502,
+          "sourceMs": 23502,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-001/end-0000023502ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-002",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 29061,
+        "endMs": 31300
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 29061,
+          "sourceMs": 29061,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-002/start-0000029061ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 30180,
+          "sourceMs": 30180,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-002/middle-0000030180ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 31299,
+          "sourceMs": 31299,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-002/end-0000031299ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-003",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 125978,
+        "endMs": 128051
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 125978,
+          "sourceMs": 125978,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-003/start-0000125978ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 127014,
+          "sourceMs": 127014,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-003/middle-0000127014ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 128050,
+          "sourceMs": 128050,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-003/end-0000128050ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-004",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 700463,
+        "endMs": 701500
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 700463,
+          "sourceMs": 700463,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-004/start-0000700463ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 700981,
+          "sourceMs": 700981,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-004/middle-0000700981ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 701499,
+          "sourceMs": 701499,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-004/end-0000701499ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-005",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 783298,
+        "endMs": 784392
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 783298,
+          "sourceMs": 783298,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-005/start-0000783298ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 783845,
+          "sourceMs": 783845,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-005/middle-0000783845ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 784391,
+          "sourceMs": 784391,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-005/end-0000784391ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-006",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 134619,
+        "endMs": 138566
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 134619,
+          "sourceMs": 134619,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-006/start-0000134619ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 136592,
+          "sourceMs": 136592,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-006/middle-0000136592ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 138565,
+          "sourceMs": 138565,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-006/end-0000138565ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-007",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 149242,
+        "endMs": 150225
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 149242,
+          "sourceMs": 149242,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-007/start-0000149242ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 149733,
+          "sourceMs": 149733,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-007/middle-0000149733ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 150224,
+          "sourceMs": 150224,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-007/end-0000150224ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-008",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 528520,
+        "endMs": 529350
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 528520,
+          "sourceMs": 528520,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-008/start-0000528520ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 528935,
+          "sourceMs": 528935,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-008/middle-0000528935ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 529349,
+          "sourceMs": 529349,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-008/end-0000529349ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-009",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 439289,
+        "endMs": 442100
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 439289,
+          "sourceMs": 439289,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-009/start-0000439289ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 440694,
+          "sourceMs": 440694,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-009/middle-0000440694ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 442099,
+          "sourceMs": 442099,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-009/end-0000442099ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-010",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 426369,
+        "endMs": 428778
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 426369,
+          "sourceMs": 426369,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-010/start-0000426369ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 427573,
+          "sourceMs": 427573,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-010/middle-0000427573ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 428777,
+          "sourceMs": 428777,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-010/end-0000428777ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-011",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 95902,
+        "endMs": 97000
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 95902,
+          "sourceMs": 95902,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-011/start-0000095902ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 96451,
+          "sourceMs": 96451,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-011/middle-0000096451ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 96999,
+          "sourceMs": 96999,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-011/end-0000096999ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-012",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 150225,
+        "endMs": 154400
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 150225,
+          "sourceMs": 150225,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-012/start-0000150225ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 152312,
+          "sourceMs": 152312,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-012/middle-0000152312ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 154399,
+          "sourceMs": 154399,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-012/end-0000154399ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-013",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 770836,
+        "endMs": 772413
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 770836,
+          "sourceMs": 770836,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-013/start-0000770836ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 771624,
+          "sourceMs": 771624,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-013/middle-0000771624ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 772412,
+          "sourceMs": 772412,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-013/end-0000772412ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-014",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 202707,
+        "endMs": 208117
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 202707,
+          "sourceMs": 202707,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-014/start-0000202707ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 205412,
+          "sourceMs": 205412,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-014/middle-0000205412ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 208116,
+          "sourceMs": 208116,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-014/end-0000208116ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-015",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 428778,
+        "endMs": 430897
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 428778,
+          "sourceMs": 428778,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-015/start-0000428778ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 429837,
+          "sourceMs": 429837,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-015/middle-0000429837ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 430896,
+          "sourceMs": 430896,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-015/end-0000430896ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-016",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 430897,
+        "endMs": 433597
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 430897,
+          "sourceMs": 430897,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-016/start-0000430897ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 432247,
+          "sourceMs": 432247,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-016/middle-0000432247ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 433596,
+          "sourceMs": 433596,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-016/end-0000433596ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-017",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 355124,
+        "endMs": 357235
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 355124,
+          "sourceMs": 355124,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-017/start-0000355124ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 356179,
+          "sourceMs": 356179,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-017/middle-0000356179ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 357234,
+          "sourceMs": 357234,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-017/end-0000357234ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-018",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 688790,
+        "endMs": 690534
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 688790,
+          "sourceMs": 688790,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-018/start-0000688790ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 689662,
+          "sourceMs": 689662,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-018/middle-0000689662ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 690533,
+          "sourceMs": 690533,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-018/end-0000690533ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-019",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 435799,
+        "endMs": 438874
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 435799,
+          "sourceMs": 435799,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-019/start-0000435799ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 437336,
+          "sourceMs": 437336,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-019/middle-0000437336ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 438873,
+          "sourceMs": 438873,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-019/end-0000438873ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-020",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 541357,
+        "endMs": 542508
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 541357,
+          "sourceMs": 541357,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-020/start-0000541357ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 541932,
+          "sourceMs": 541932,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-020/middle-0000541932ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 542507,
+          "sourceMs": 542507,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-020/end-0000542507ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-021",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 523494,
+        "endMs": 528396
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 523494,
+          "sourceMs": 523494,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-021/start-0000523494ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 525945,
+          "sourceMs": 525945,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-021/middle-0000525945ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 528395,
+          "sourceMs": 528395,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-021/end-0000528395ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-022",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 520087,
+        "endMs": 520755
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 520087,
+          "sourceMs": 520087,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-022/start-0000520087ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 520421,
+          "sourceMs": 520421,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-022/middle-0000520421ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 520754,
+          "sourceMs": 520754,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-022/end-0000520754ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-023",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 529518,
+        "endMs": 534461
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 529518,
+          "sourceMs": 529518,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-023/start-0000529518ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 531989,
+          "sourceMs": 531989,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-023/middle-0000531989ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 534460,
+          "sourceMs": 534460,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-023/end-0000534460ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-024",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 683514,
+        "endMs": 685261
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 683514,
+          "sourceMs": 683514,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-024/start-0000683514ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 684387,
+          "sourceMs": 684387,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-024/middle-0000684387ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 685260,
+          "sourceMs": 685260,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-024/end-0000685260ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-025",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 386500,
+        "endMs": 391510
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 386500,
+          "sourceMs": 386500,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-025/start-0000386500ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 389005,
+          "sourceMs": 389005,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-025/middle-0000389005ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 391509,
+          "sourceMs": 391509,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-025/end-0000391509ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-026",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 285957,
+        "endMs": 289729
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 285957,
+          "sourceMs": 285957,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-026/start-0000285957ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 287843,
+          "sourceMs": 287843,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-026/middle-0000287843ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 289728,
+          "sourceMs": 289728,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-026/end-0000289728ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-027",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 357235,
+        "endMs": 359200
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 357235,
+          "sourceMs": 357235,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-027/start-0000357235ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 358217,
+          "sourceMs": 358217,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-027/middle-0000358217ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 359199,
+          "sourceMs": 359199,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-027/end-0000359199ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-028",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 544141,
+        "endMs": 544774
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 544141,
+          "sourceMs": 544141,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-028/start-0000544141ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 544457,
+          "sourceMs": 544457,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-028/middle-0000544457ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 544773,
+          "sourceMs": 544773,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-028/end-0000544773ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-029",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 539405,
+        "endMs": 541357
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 539405,
+          "sourceMs": 539405,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-029/start-0000539405ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 540381,
+          "sourceMs": 540381,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-029/middle-0000540381ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 541356,
+          "sourceMs": 541356,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-029/end-0000541356ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-030",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 542604,
+        "endMs": 544141
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 542604,
+          "sourceMs": 542604,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-030/start-0000542604ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 543372,
+          "sourceMs": 543372,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-030/middle-0000543372ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 544140,
+          "sourceMs": 544140,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-030/end-0000544140ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-031",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 550954,
+        "endMs": 553115
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 550954,
+          "sourceMs": 550954,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-031/start-0000550954ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 552034,
+          "sourceMs": 552034,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-031/middle-0000552034ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 553114,
+          "sourceMs": 553114,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-031/end-0000553114ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-032",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 548378,
+        "endMs": 550787
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 548378,
+          "sourceMs": 548378,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-032/start-0000548378ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 549582,
+          "sourceMs": 549582,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-032/middle-0000549582ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 550786,
+          "sourceMs": 550786,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-032/end-0000550786ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-033",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 703330,
+        "endMs": 706011
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 703330,
+          "sourceMs": 703330,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-033/start-0000703330ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 704670,
+          "sourceMs": 704670,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-033/middle-0000704670ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 706010,
+          "sourceMs": 706010,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-033/end-0000706010ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-034",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 68110,
+        "endMs": 74400
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 68110,
+          "sourceMs": 68110,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-034/start-0000068110ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 71255,
+          "sourceMs": 71255,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-034/middle-0000071255ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 74399,
+          "sourceMs": 74399,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-034/end-0000074399ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-035",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 784392,
+        "endMs": 788117
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 784392,
+          "sourceMs": 784392,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-035/start-0000784392ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 786254,
+          "sourceMs": 786254,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-035/middle-0000786254ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 788116,
+          "sourceMs": 788116,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-035/end-0000788116ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-036",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 448802,
+        "endMs": 451847
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 448802,
+          "sourceMs": 448802,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-036/start-0000448802ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 450324,
+          "sourceMs": 450324,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-036/middle-0000450324ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 451846,
+          "sourceMs": 451846,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-036/end-0000451846ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-037",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 772413,
+        "endMs": 777399
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 772413,
+          "sourceMs": 772413,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-037/start-0000772413ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 774906,
+          "sourceMs": 774906,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-037/middle-0000774906ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 777398,
+          "sourceMs": 777398,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-037/end-0000777398ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-038",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 777399,
+        "endMs": 778123
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 777399,
+          "sourceMs": 777399,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-038/start-0000777399ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 777761,
+          "sourceMs": 777761,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-038/middle-0000777761ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 778122,
+          "sourceMs": 778122,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-038/end-0000778122ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-039",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 823968,
+        "endMs": 826959
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 823968,
+          "sourceMs": 823968,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-039/start-0000823968ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 825463,
+          "sourceMs": 825463,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-039/middle-0000825463ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 826958,
+          "sourceMs": 826958,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-039/end-0000826958ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-040",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 826959,
+        "endMs": 828628
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 826959,
+          "sourceMs": 826959,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-040/start-0000826959ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 827793,
+          "sourceMs": 827793,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-040/middle-0000827793ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 828627,
+          "sourceMs": 828627,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-040/end-0000828627ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-041",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 692986,
+        "endMs": 694481
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 692986,
+          "sourceMs": 692986,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-041/start-0000692986ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 693733,
+          "sourceMs": 693733,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-041/middle-0000693733ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 694480,
+          "sourceMs": 694480,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-041/end-0000694480ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-042",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 628720,
+        "endMs": 631420
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 628720,
+          "sourceMs": 628720,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-042/start-0000628720ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 630070,
+          "sourceMs": 630070,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-042/middle-0000630070ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 631419,
+          "sourceMs": 631419,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-042/end-0000631419ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-043",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 407218,
+        "endMs": 409609
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 407218,
+          "sourceMs": 407218,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-043/start-0000407218ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 408413,
+          "sourceMs": 408413,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-043/middle-0000408413ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 409608,
+          "sourceMs": 409608,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-043/end-0000409608ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-044",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 799084,
+        "endMs": 801369
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 799084,
+          "sourceMs": 799084,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-044/start-0000799084ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 800226,
+          "sourceMs": 800226,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-044/middle-0000800226ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 801368,
+          "sourceMs": 801368,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-044/end-0000801368ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-045",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 574923,
+        "endMs": 575771
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 574923,
+          "sourceMs": 574923,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-045/start-0000574923ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 575347,
+          "sourceMs": 575347,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-045/middle-0000575347ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 575770,
+          "sourceMs": 575770,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-045/end-0000575770ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-046",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 685261,
+        "endMs": 686214
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 685261,
+          "sourceMs": 685261,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-046/start-0000685261ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 685737,
+          "sourceMs": 685737,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-046/middle-0000685737ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 686213,
+          "sourceMs": 686213,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-046/end-0000686213ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-047",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 522996,
+        "endMs": 523494
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 522996,
+          "sourceMs": 522996,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-047/start-0000522996ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 523245,
+          "sourceMs": 523245,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-047/middle-0000523245ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 523493,
+          "sourceMs": 523493,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-047/end-0000523493ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-048",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 828628,
+        "endMs": 832289
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 828628,
+          "sourceMs": 828628,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-048/start-0000828628ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 830458,
+          "sourceMs": 830458,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-048/middle-0000830458ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 832288,
+          "sourceMs": 832288,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-048/end-0000832288ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-049",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 796548,
+        "endMs": 797381
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 796548,
+          "sourceMs": 796548,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-049/start-0000796548ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 796964,
+          "sourceMs": 796964,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-049/middle-0000796964ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 797380,
+          "sourceMs": 797380,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-049/end-0000797380ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-050",
+      "assetId": "source-02-08-611b3717",
+      "sourceRange": {
+        "startMs": 520755,
+        "endMs": 521591
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 520755,
+          "sourceMs": 520755,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-050/start-0000520755ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 521173,
+          "sourceMs": 521173,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-050/middle-0000521173ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 521590,
+          "sourceMs": 521590,
+          "path": "工作台/tiger-intro-001/G3-剪辑计划/验证帧/seg-050/end-0000521590ms.jpg"
+        }
+      ]
+    }
+  ]
+}

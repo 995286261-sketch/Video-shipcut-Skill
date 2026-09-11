@@ -1,68 +1,87 @@
 {
-  "schemaVersion": "0.1",
-  "projectId": "tiger-intro-001",
-  "status": "ready_for_g3",
-  "evidencePolicy": {
-    "sourceTimeline": "所有时间码为原始素材时间轴（source-02-08-611b3717），非成片时间轴",
-    "transcript": "草稿证据：低置信（平均词概率0.424，源片BGM主导），仅助画面语境理解，不得升级为事实/口播/字幕",
-    "facts": "口播事实逐条回指 事实资料/老虎改公开资料摘录-v0.1.md 条目号；机器摘录未经人审不得作可播事实",
-    "styleReference": "《冷战奇迹》为G1风格参考，其转写与分析不进入G2事实证据（合同规定）",
-    "identityHold": "驾驶员诺里斯·帕卡多与源片对应关系属推定，G3逐镜身份核验通过前口播不点名（N02按不点名稿执行）"
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "status": "ready_for_g3",
+ "evidencePolicy": {
+  "sourceTimeline": "所有时间码为原始素材时间轴（source-02-08-611b3717），非成片时间轴",
+  "transcript": "草稿证据：低置信（平均词概率0.424，源片BGM主导），仅助画面语境理解，不得升级为事实/口播/字幕",
+  "facts": "口播事实逐条回指 事实资料/老虎改公开资料摘录-v0.1.md 条目号；机器摘录未经人审不得作可播事实",
+  "styleReference": "《冷战奇迹》为G1风格参考，其转写与分析不进入G2事实证据（合同规定）",
+  "identityHold": "驾驶员诺里斯·帕卡多与源片对应关系属推定，G3逐镜身份核验通过前口播不点名（N02按不点名稿执行）"
+ },
+ "sourceEvidence": [
+  {
+   "assetId": "source-02-08-611b3717",
+   "file": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+   "sha256Verified": true,
+   "probes": {
+    "durationSec": 836.8,
+    "width": 1436,
+    "height": 1080
+   },
+   "contactSheet": "gt-source-contact-sheet.jpg",
+   "transcript": {
+    "raw": "转写/gt-source-transcript.json",
+    "srt": "转写/gt-source-transcript/transcript.srt",
+    "txt": "转写/gt-source-transcript/transcript.txt",
+    "manifest": "转写/gt-source-transcript/manifest.json",
+    "segments": 130,
+    "avgWordProbability": 0.424,
+    "engine": "faster-whisper small (offline, cached model)"
+   },
+   "warnings": [
+    "整表带『嘟嘟踢被子 bilibili』UP主水印：分发与封面构图风险，G5需可见",
+    "存在烧录中文字幕（UP主译配，如『人型机也有光束武器』『08小队，听好本大爷的指示』）：G3选段避开或G4遮幅处理；不得复用为字幕",
+    "画面含剧情剧透镜头（城镇燃烧、角色特写）：剪辑时按叙事节奏取舍，属G3决策",
+    "驾驶舱金发男性特写与诺里斯形象相符但非决定性：留待G3逐镜身份判定"
+   ],
+   "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+   "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+   "sourceProbe": {
+    "durationMs": 836800,
+    "width": 1436,
+    "height": 1080
+   }
   },
-  "sourceEvidence": [
-    {
-      "assetId": "source-02-08-611b3717",
-      "file": "工作台/tiger-intro-001/G0-素材包/02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
-      "sha256Verified": true,
-      "probes": { "durationSec": 836.8, "width": 1436, "height": 1080 },
-      "contactSheet": "gt-source-contact-sheet.jpg",
-      "transcript": {
-        "raw": "转写/gt-source-transcript.json",
-        "srt": "转写/gt-source-transcript/transcript.srt",
-        "txt": "转写/gt-source-transcript/transcript.txt",
-        "manifest": "转写/gt-source-transcript/manifest.json",
-        "segments": 130,
-        "avgWordProbability": 0.424,
-        "engine": "faster-whisper small (offline, cached model)"
-      },
-      "warnings": [
-        "整表带『嘟嘟踢被子 bilibili』UP主水印：分发与封面构图风险，G5需可见",
-        "存在烧录中文字幕（UP主译配，如『人型机也有光束武器』『08小队，听好本大爷的指示』）：G3选段避开或G4遮幅处理；不得复用为字幕",
-        "画面含剧情剧透镜头（城镇燃烧、角色特写）：剪辑时按叙事节奏取舍，属G3决策",
-        "驾驶舱金发男性特写与诺里斯形象相符但非决定性：留待G3逐镜身份判定"
-      ]
-    },
-    {
-      "assetId": "audio-07-infinity-remix-e695f488",
-      "file": "工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
-      "sha256Verified": true,
-      "role": "BGM（G1定曲，槽已关闭：provided）",
-      "beatBlueprint": "BGM/BGM-节拍蓝图-v0.1.json",
-      "warnings": [
-        "授权基础=用户声明自担（04_授权说明.md）；分发边界 G5 必须可见"
-      ]
-    }
-  ],
-  "factEvidenceRefs": [
-    "事实资料/老虎改公开资料摘录-v0.1.md"
-  ],
-  "narrationEvidence": {
-    "creativeCandidate": "G2-创作候选稿-v0.1.md",
-    "creativeCandidateJson": "G2-创作候选稿-v0.1.json",
-    "voiceBrief": "G2-配音清单-v0.1.json",
-    "layoutDraft": "G2-排版稿-v0.1.md",
-    "measuredTotalDurationMs": 120100,
-    "targetDurationSec": [110, 130]
-  },
-  "handoff": {
-    "nextNode": "G3",
-    "forG3": [
-      "镜头选择基于 sourceEvidence[0].contactSheet + 逐镜精看，时间码回指源片轴",
-      "口播句时长以 G2-配音清单-v0.1.json 实测为准（覆盖文本估算）",
-      "P1块止点比蓝图窗口晚2.7s、后续漂移≤1.2s：在段落边界消化，或整体片长取120.1s",
-      "N02点名升级仅在逐镜身份核验通过后执行，否则维持不点名稿",
-      "烧录字幕/水印镜头在G3选段时优先避开；无法避开则登记G4处理方案"
-    ],
-    "distributionBoundary": "源素材为二创混剪（用户声明风险自担）；BGM为试听件+声明自担。成片对外发布前，G5必须向用户复述这两条边界。"
+  {
+   "assetId": "audio-07-infinity-remix-e695f488",
+   "file": "工作台/tiger-intro-001/G0-素材包/07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
+   "sha256Verified": true,
+   "role": "BGM（G1定曲，槽已关闭：provided）",
+   "beatBlueprint": "BGM/BGM-节拍蓝图-v0.1.json",
+   "warnings": [
+    "授权基础=用户声明自担（04_授权说明.md）；分发边界 G5 必须可见"
+   ],
+   "relativePath": "07_授权音频/Infinity（鲫虞豆腐汤remix）.mp3",
+   "sourceProbe": {
+    "durationMs": 258368
+   },
+   "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D"
   }
+ ],
+ "factEvidenceRefs": [
+  "事实资料/老虎改公开资料摘录-v0.1.md"
+ ],
+ "narrationEvidence": {
+  "creativeCandidate": "G2-创作候选稿-v0.1.md",
+  "creativeCandidateJson": "G2-创作候选稿-v0.1.json",
+  "voiceBrief": "G2-配音清单-v0.1.json",
+  "layoutDraft": "G2-排版稿-v0.1.md",
+  "measuredTotalDurationMs": 120100,
+  "targetDurationSec": [
+   110,
+   130
+  ]
+ },
+ "handoff": {
+  "nextNode": "G3",
+  "forG3": [
+   "镜头选择基于 sourceEvidence[0].contactSheet + 逐镜精看，时间码回指源片轴",
+   "口播句时长以 G2-配音清单-v0.1.json 实测为准（覆盖文本估算）",
+   "P1块止点比蓝图窗口晚2.7s、后续漂移≤1.2s：在段落边界消化，或整体片长取120.1s",
+   "N02点名升级仅在逐镜身份核验通过后执行，否则维持不点名稿",
+   "烧录字幕/水印镜头在G3选段时优先避开；无法避开则登记G4处理方案"
+  ],
+  "distributionBoundary": "源素材为二创混剪（用户声明风险自担）；BGM为试听件+声明自担。成片对外发布前，G5必须向用户复述这两条边界。"
+ }
 }

@@ -1,0 +1,277 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "tiger-intro-001",
+ "node": "G3",
+ "status": "draft",
+ "narrationDraft": "工作台/tiger-intro-001/G2-证据与口播/G2-口播稿-v0.1.md",
+ "narrationDecisionRef": "工作台/tiger-intro-001/G2-证据与口播/G2-审核决定-v0.1.json",
+ "timingBasis": "G2-配音清单-v0.1.json 逐句实测时长",
+ "beats": [
+  {
+   "beatId": "beat-N01",
+   "sentenceId": "N01",
+   "outputStartMs": 0,
+   "outputEndMs": 9650,
+   "narrationText": "U.C.0079，一年战争，吉恩尼克基于老虎改良的特制泛用机：MS-07B3老虎改。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "老虎改全身或正面登场"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N02",
+   "sentenceId": "N02",
+   "outputStartMs": 9650,
+   "outputEndMs": 14580,
+   "narrationText": "而把它开到极限的，是前线一位名门出身的王牌驾驶员。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "疤脸驾驶员驾驶舱镜头与老虎动作互剪"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N03",
+   "sentenceId": "N03",
+   "outputStartMs": 14580,
+   "outputEndMs": 20630,
+   "narrationText": "老虎的白刃战天下第一，远程却只有左手内藏的一门75毫米机关炮。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "老虎左臂/盾牌区域可见",
+     "或远程开火画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N04",
+   "sentenceId": "N04",
+   "outputStartMs": 20630,
+   "outputEndMs": 27480,
+   "narrationText": "白刃战一旦碰到天花板，泛用短板就露了馅，不少驾驶员对它敬而远之。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "老虎系整备/待机或驾驶员镜头"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "驾驶舱人物镜头",
+    "hangar待机镜头"
+   ]
+  },
+  {
+   "beatId": "beat-N05",
+   "sentenceId": "N05",
+   "outputStartMs": 27480,
+   "outputEndMs": 32890,
+   "narrationText": "B3接到的任务很简单：把这个系列丢掉的远程，成倍拿回来。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "老虎登场或左臂改装前形态画面"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "老虎登场/整备镜头"
+   ]
+  },
+  {
+   "beatId": "beat-N06",
+   "sentenceId": "N06",
+   "outputStartMs": 32890,
+   "outputEndMs": 39820,
+   "narrationText": "第一刀：左臂拆掉五连装炮，换回遥控臂，外挂三连装35毫米机关炮。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "左臂外挂三连装机炮舱特写可见"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N07",
+   "sentenceId": "N07",
+   "outputStartMs": 39820,
+   "outputEndMs": 45790,
+   "narrationText": "手臂放弃火炮换回灵活，火力挂到外面，可以拆下、按任务换装。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "左臂机炮舱特写或持炮姿态"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N08",
+   "sentenceId": "N08",
+   "outputStartMs": 45790,
+   "outputEndMs": 51360,
+   "narrationText": "第二刀在电热鞭上：细径化、射程延长、命中精度提高。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "电热鞭本体或甩鞭动作"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N09",
+   "sentenceId": "N09",
+   "outputStartMs": 51360,
+   "outputEndMs": 58050,
+   "narrationText": "射出机构还加了装甲导轨护着——这条鞭子，能从任意角度发动三维攻击。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "电热鞭延伸/缠斗动作"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N10",
+   "sentenceId": "N10",
+   "outputStartMs": 58050,
+   "outputEndMs": 63060,
+   "narrationText": "第三刀在头部：高精度传感器，高处索敌堪比侦察机。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "头部单眼特写"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N11",
+   "sentenceId": "N11",
+   "outputStartMs": 63060,
+   "outputEndMs": 69430,
+   "narrationText": "动力管布局优化，潮湿地形照样通过——为陆战全天候而生。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "老虎奔跑/机动全身镜头"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N12",
+   "sentenceId": "N12",
+   "outputStartMs": 69430,
+   "outputEndMs": 75080,
+   "narrationText": "防御端保留经典的复合格林盾：加特林与热能军刀，随心切换。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "格林盾（盾体+炮口）可见"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N13",
+   "sentenceId": "N13",
+   "outputStartMs": 75080,
+   "outputEndMs": 80170,
+   "narrationText": "超高张力钢骨架、四吨级推进，都是老虎系标配。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "老虎全身站立镜头"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N14",
+   "sentenceId": "N14",
+   "outputStartMs": 80170,
+   "outputEndMs": 86460,
+   "narrationText": "单机掩护HLV发射，把08小队和联邦军打得落花流水。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "HLV发射画面",
+     "或战斗蒙太奇"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N15",
+   "sentenceId": "N15",
+   "outputStartMs": 86460,
+   "outputEndMs": 93230,
+   "narrationText": "回看这张改装清单，思路就一句话：把原型的每一处短板，都压成改装项。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "战斗蒙太奇（老虎动作镜头组）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "战斗蒙太奇",
+    "老虎特写组"
+   ]
+  },
+  {
+   "beatId": "beat-N16",
+   "sentenceId": "N16",
+   "outputStartMs": 93230,
+   "outputEndMs": 103600,
+   "narrationText": "战争后来结束了，老虎系列成了传奇的燃料；但看过那场陆战的人都知道——它从不靠主角光环，也不靠奇迹装备。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "老虎独立站立/离场镜头"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "老虎独立站立/离场镜头"
+   ]
+  },
+  {
+   "beatId": "beat-N17",
+   "sentenceId": "N17",
+   "outputStartMs": 103600,
+   "outputEndMs": 114770,
+   "narrationText": "MS-07B3，老虎改——一个王牌驾驶员，交给一台缺陷机型的答卷。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "老虎全身正面或标志性姿态"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N18",
+   "sentenceId": "N18",
+   "outputStartMs": 114770,
+   "outputEndMs": 120100,
+   "narrationText": "你觉得哪台吉翁机才是真正的陆战之王？评论区聊聊。",
+   "claim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": [
+     "战斗余韵或片尾画面"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "战斗余韵或片尾画面"
+   ]
+  }
+ ]
+}
