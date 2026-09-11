@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "055D6796605FE2276D5701D3A16E0C537838F495E04F3EC60753CCDA5C01459A",
+  "aliases": [
+    {
+      "title": "相对论 (工业电子版)",
+      "neteaseId": 3404986486,
+      "sourceUrl": "https://music.163.com/song?id=3404986486",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:24:11Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3404986486-相对论_(工业电子版).mp3",
+      "recordedAt": "2026-09-11T06:24:11Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T06:24:11Z",
+  "updatedAt": "2026-09-11T06:24:11Z"
+}

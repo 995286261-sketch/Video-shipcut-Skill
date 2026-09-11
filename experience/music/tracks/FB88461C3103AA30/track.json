@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+  "aliases": [
+    {
+      "title": "DDRKirby(ISQ)-Infinity（鲫虞豆腐汤 remix）",
+      "neteaseId": 1966862636,
+      "sourceUrl": "https://music.163.com/song?id=1966862636",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:24:01Z"
+    },
+    {
+      "title": "Infinity（鲫虞豆腐汤 remix）",
+      "artist": "DDRKirby(ISQ)／鲫虞豆腐汤 remix",
+      "neteaseId": "1966862636",
+      "sourceUrl": "https://music.163.com/song?id=1966862636",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:30:03Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-1966862636-DDRKirby(ISQ)-Infinity（鲫虞豆腐汤_remix）.mp3",
+      "recordedAt": "2026-09-11T06:24:01Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T06:24:01Z",
+  "updatedAt": "2026-09-11T06:30:03Z"
+}

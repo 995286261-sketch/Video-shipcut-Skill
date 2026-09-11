@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "94B874F86B661F6408EB05BC94407D301AAC207228A2C19960C306B7EA061CA9",
+  "aliases": [
+    {
+      "title": "史诗管弦",
+      "neteaseId": 3379621331,
+      "sourceUrl": "https://music.163.com/song?id=3379621331",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:20:08Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates/candidates/netease-3379621331-史诗管弦.mp3",
+      "recordedAt": "2026-09-11T06:20:08Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T06:20:08Z",
+  "updatedAt": "2026-09-11T06:20:08Z"
+}

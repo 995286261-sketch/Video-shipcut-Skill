@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "3A11DDAF7D13C975DFB8DB4967B902AD3D43C233F36BCCC929CB066EB8F918EE",
+  "aliases": [
+    {
+      "title": "史诗 管弦alluring epic",
+      "neteaseId": 2638022740,
+      "sourceUrl": "https://music.163.com/song?id=2638022740",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:20:22Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates/candidates/netease-2638022740-史诗_管弦alluring_epic.mp3",
+      "recordedAt": "2026-09-11T06:20:22Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T06:20:22Z",
+  "updatedAt": "2026-09-11T06:20:22Z"
+}

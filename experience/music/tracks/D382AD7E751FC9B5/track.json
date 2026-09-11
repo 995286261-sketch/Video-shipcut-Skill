@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "D382AD7E751FC9B55A2DE283CA6408620603B0B598A230E254CCD60C52029573",
+  "aliases": [
+    {
+      "title": "史诗 管弦amazing epic",
+      "neteaseId": 2638020006,
+      "sourceUrl": "https://music.163.com/song?id=2638020006",
+      "provenance": "netease_search",
+      "project": "tiger-intro-001",
+      "seenAt": "2026-09-11T06:20:33Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates/candidates/netease-2638020006-史诗_管弦amazing_epic.mp3",
+      "recordedAt": "2026-09-11T06:20:33Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-11T06:20:33Z",
+  "updatedAt": "2026-09-11T06:20:33Z"
+}
