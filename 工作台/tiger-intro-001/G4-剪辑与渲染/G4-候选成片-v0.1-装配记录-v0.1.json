@@ -3,262 +3,262 @@
   "node": "G4",
   "projectId": "tiger-intro-001",
   "status": "assembled",
-  "manifest": "工作台/tiger-intro-001/G4-剪辑执行/G4-可编辑工程-v0.1.json",
+  "manifest": "工作台/tiger-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
   "timelineDurationMs": 120100,
   "segments": [
     {
       "segmentId": "seg-001",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-001.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-001.mp4",
       "sha256": "2E6311193AA8FBB3566CEEF76B6D2027549DF76CB54AA1357E5BBBCCC1383DD8"
     },
     {
       "segmentId": "seg-002",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-002.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-002.mp4",
       "sha256": "6F18526DAF7F5775E8AD7AA49FBF4757ABE677B8A809EFC5D7B4BA9A11117D99"
     },
     {
       "segmentId": "seg-003",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-003.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-003.mp4",
       "sha256": "BA22BEBDD1ED2387E63E929E88122581815B28B6EEE640291DAB93F80467D1DA"
     },
     {
       "segmentId": "seg-004",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-004.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-004.mp4",
       "sha256": "0369F9E1A302DEA4ABABF6E5E4996367B3D9A27EC1322BBD206C076DB1D25969"
     },
     {
       "segmentId": "seg-005",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-005.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-005.mp4",
       "sha256": "65286C3CEA3168ACED2EF9345CE2DD11220058307F57518467A09F81BDDD255F"
     },
     {
       "segmentId": "seg-006",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-006.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-006.mp4",
       "sha256": "789C93E5F6B4A54F7C4C81B0DB693F1F0823CDB6B1B17121A2BB92E0C401E9FD"
     },
     {
       "segmentId": "seg-007",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-007.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-007.mp4",
       "sha256": "7C5809C246B01ADB82956876BDDCB8C5185C81877F918B1D7CD82CC4E0072120"
     },
     {
       "segmentId": "seg-008",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-008.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-008.mp4",
       "sha256": "6E0CDBCEF4DC7671812705C79F1203C431535C8A23FA43D45F978E5A45A748C9"
     },
     {
       "segmentId": "seg-009",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-009.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-009.mp4",
       "sha256": "7B43E69268FABA9A9943D3F96D91358AF3BD0DE8438DE0415110E284E651190B"
     },
     {
       "segmentId": "seg-010",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-010.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-010.mp4",
       "sha256": "6E55AF58C3A6B35A65B78681D382F59FDDCAD0CCEBBCE507AC39B71BA69DC3CD"
     },
     {
       "segmentId": "seg-011",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-011.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-011.mp4",
       "sha256": "D3BF1256FB4BC232C9D78F74472EF1CC0E3984EB0C54B36FE6950AEE790820E2"
     },
     {
       "segmentId": "seg-012",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-012.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-012.mp4",
       "sha256": "7924894CC264DDB9F87FC460A5F5DCD22B9753AD3F27352B5613157E03BF6275"
     },
     {
       "segmentId": "seg-013",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-013.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-013.mp4",
       "sha256": "FE32F40A78E18DB158A04EFE3939F2AD9BBF5D969E66C88645A84BAC6060AB82"
     },
     {
       "segmentId": "seg-014",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-014.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-014.mp4",
       "sha256": "ADCFE59B29BAD5ED378B84268EA4AFD4AC5CFC6BE40F1ECA4BF49438C504BD72"
     },
     {
       "segmentId": "seg-015",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-015.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-015.mp4",
       "sha256": "58CFFF0C27EB48A8B2A55C41AE6CE3DBA8D6AE6DA8238DEFE98CA63DEE443304"
     },
     {
       "segmentId": "seg-016",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-016.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-016.mp4",
       "sha256": "66A779E713FB7A15E3B2BFED513760EC46CA340040A1F65644BD3B04155BEA2B"
     },
     {
       "segmentId": "seg-017",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-017.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-017.mp4",
       "sha256": "E4E6B29F8D974ACF04170D0268EA92DEDC196E330F3F7445BC84986182611B98"
     },
     {
       "segmentId": "seg-018",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-018.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-018.mp4",
       "sha256": "D9A5B5362847A2A5A3A6CA0342FD8565A242F1F5966BDB438A20B2430AD04188"
     },
     {
       "segmentId": "seg-019",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-019.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-019.mp4",
       "sha256": "7B53E483897D9F07511C64A914F01A1711944378F3238E5C98453863C927B3EA"
     },
     {
       "segmentId": "seg-020",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-020.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-020.mp4",
       "sha256": "C8EF101699543B0921CCC5C193E460A7604880D4E3D5901E7930F1312D4A1FA0"
     },
     {
       "segmentId": "seg-021",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-021.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-021.mp4",
       "sha256": "068F2A5430FD45CBCDDBBA784261F82A245E7325A1445CAB64496E4962837BDF"
     },
     {
       "segmentId": "seg-022",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-022.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-022.mp4",
       "sha256": "FB9FB991851BF15F4C0A4D639B996353549BA66DFEFF37C91C217818FDD7A0B0"
     },
     {
       "segmentId": "seg-023",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-023.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-023.mp4",
       "sha256": "63B0DD8F4445BF856ABF17C6D1387EEB06B6467AE2ED0888E33AF862A84D43A1"
     },
     {
       "segmentId": "seg-024",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-024.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-024.mp4",
       "sha256": "8F852BAA9D0A9CFF0C45CE5D269B67A1BA0D388FF0ADFB3F235C4A8F603FFCD2"
     },
     {
       "segmentId": "seg-025",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-025.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-025.mp4",
       "sha256": "E64B9E0A67FEF1728EA9304ADD171CA78E7A269DE1BEB7BC56164100B722C9A4"
     },
     {
       "segmentId": "seg-026",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-026.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-026.mp4",
       "sha256": "7DBE2DF9F75D744BED65F3BC79A849AB59D83B4631BBDCC22ACEF647767C9182"
     },
     {
       "segmentId": "seg-027",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-027.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-027.mp4",
       "sha256": "3D07ED2A07126A6666E8E70455E3B8EDE43A45CEC6134F248A41B9FD87C413D0"
     },
     {
       "segmentId": "seg-028",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-028.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-028.mp4",
       "sha256": "64A32A4A200D4BA83CDDB7C214539C467307EACBFB5574687D2D004B32E6AB6C"
     },
     {
       "segmentId": "seg-029",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-029.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-029.mp4",
       "sha256": "88BEDA939433BB396CDE687B7772F9EA785FBDCEBEF36AF57CEEDE102E29F7D1"
     },
     {
       "segmentId": "seg-030",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-030.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-030.mp4",
       "sha256": "22B721171CD4C51548160AEE4AE7B4A140F3A974B7AD97806B28E7D1C07B5661"
     },
     {
       "segmentId": "seg-031",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-031.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-031.mp4",
       "sha256": "33E2CB329CA07E2492FD3D3DEB9158EA9F718DE349586EB4AD7972E5AB8A7490"
     },
     {
       "segmentId": "seg-032",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-032.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-032.mp4",
       "sha256": "B069A71703742EF0196F41F70E3091093D7CDC7A41BFC857E79282339805AEE7"
     },
     {
       "segmentId": "seg-033",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-033.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-033.mp4",
       "sha256": "5BD2D2CC18AC740A806A3A00D4BEB0A2305FCE83F64B459A618AC8B41C0AC48A"
     },
     {
       "segmentId": "seg-034",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-034.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-034.mp4",
       "sha256": "34A47E59685833C9AAD33CFF8F7DA2B2F55AD6302FC2E60596E275AFC433CA7E"
     },
     {
       "segmentId": "seg-035",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-035.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-035.mp4",
       "sha256": "2E3065015681146911331EAA3764FE9144A9CB76CA3A1CD24E1F94F7D35BD297"
     },
     {
       "segmentId": "seg-036",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-036.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-036.mp4",
       "sha256": "1C063450D6A41CC67CBE9FA29C6EC6FCEF6A033395FA660AF20CF8EF5E932588"
     },
     {
       "segmentId": "seg-037",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-037.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-037.mp4",
       "sha256": "898B29C2A45233BB5D6912050DB4931A23D97F53D87284A9B1E28DF93E4E822B"
     },
     {
       "segmentId": "seg-038",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-038.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-038.mp4",
       "sha256": "F01AEF442614754A8A1993B85096A00FB42516E05D481768CD103F56C8CB7901"
     },
     {
       "segmentId": "seg-039",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-039.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-039.mp4",
       "sha256": "5FFD4CCF6EBF9EA775561E46115938A61AB6B71872CD601D47DD4C44DCDEBE1D"
     },
     {
       "segmentId": "seg-040",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-040.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-040.mp4",
       "sha256": "DE5A7730B90C41B82F3C15158C13DD1DD5874FC954AA62B853E05AAD368EF07C"
     },
     {
       "segmentId": "seg-041",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-041.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-041.mp4",
       "sha256": "987C0068696B18F2989689330A190D6622C25FF3A19BD74C570566F86D2A84D3"
     },
     {
       "segmentId": "seg-042",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-042.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-042.mp4",
       "sha256": "48AEFDA076335F09D0003FAC91B1BFA83BCE32F6A19F590ECF90DD51C7FA5F24"
     },
     {
       "segmentId": "seg-043",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-043.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-043.mp4",
       "sha256": "71888CA9E89F828CCCB53BDB3EBABE9D089C0BDF6D1CF626D86E88A343F46897"
     },
     {
       "segmentId": "seg-044",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-044.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-044.mp4",
       "sha256": "63EE0120ADFAAF1A91AD5475F067BDEE5EF41EDF4FF76AEBF94BF3697E17CAEC"
     },
     {
       "segmentId": "seg-045",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-045.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-045.mp4",
       "sha256": "5DD2330542FF0EBF90C6F085D5395DF48B07C3D39F97DEB6933A19127931878E"
     },
     {
       "segmentId": "seg-046",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-046.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-046.mp4",
       "sha256": "57F2965A7684D524F82FD1D215AC7AB524E2D7E89130FB0E0390206F5D7EF986"
     },
     {
       "segmentId": "seg-047",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-047.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-047.mp4",
       "sha256": "2D2F9227062E5A66A6A222EE7C9CDF66CBBA4E5177896D8BC556AA203246CDE1"
     },
     {
       "segmentId": "seg-048",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-048.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-048.mp4",
       "sha256": "316734651BFF8FD160DB43E989E679419106CE60321F5BE54783DD23395E1D82"
     },
     {
       "segmentId": "seg-049",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-049.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-049.mp4",
       "sha256": "42DBEC2C32F1C6EC15E47C122B12B0BECFB0235AB8237D1D63FE876FAF09DD8D"
     },
     {
       "segmentId": "seg-050",
-      "file": "工作台/tiger-intro-001/G4-剪辑执行/clean-segments/seg-050.mp4",
+      "file": "工作台/tiger-intro-001/G4-剪辑与渲染/clean-segments/seg-050.mp4",
       "sha256": "37999B0665B52D04216BB5899E296AC3B4A8B8538A43AEAF4842BEC2B44790F7"
     }
   ],
   "narrationAudio": {
-    "path": "工作台/tiger-intro-001/G4-剪辑执行/G4-配音轨-v0.1.wav",
+    "path": "工作台/tiger-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
     "sha256": "F0492E3F1722E8EEC0E56638C5C1AF6250CCEF46BEC9D1C089D44C86B15AE10D",
     "durationMs": 120100,
     "loudness": {
@@ -276,7 +276,7 @@
       "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D"
     },
     "contract": {
-      "path": "工作台/tiger-intro-001/G4-剪辑执行/BGM混音/BGM-混音合同-v0.1.json",
+      "path": "工作台/tiger-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
       "sha256": "A7BDD11E965BB2FF02D8C6283C7CD6C4EE666061D799B60381D0B94F208671FB"
     },
     "trackOffsetMs": 53636,
@@ -319,7 +319,7 @@
     "path": "工作台/tiger-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
     "sha256": "3D7907F16EDF512C7207BA3830FD86612B3047D1B58742A4F94851C881D3A4A7"
   },
-  "output": "工作台/tiger-intro-001/G4-剪辑执行/G4-候选成片-v0.1.mp4",
+  "output": "工作台/tiger-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
   "outputSha256": "49E49C306B5B17A5EB75D590ABFC1BF823094807FE3B4115DD48B3DD8159B509",
   "probedDurationMs": 120100,
   "fps": 24,
@@ -327,5 +327,5 @@
   "chapterCards": null,
   "titleBar": null,
   "filterGraph": "[0:v]fps=fps=24,format=yuv420p,subtitles=captions.ass[v];[1:a]acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=9[narr];[2:a]volume=-12dB,volume=-6dB:enable='between(t,0.000,120.100)',afade=t=in:st=0:d=2.000,afade=t=out:st=118.100:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
-  "workDir": "工作台/tiger-intro-001/G4-剪辑执行/G4-候选成片-v0.1-assemble-work"
+  "workDir": "工作台/tiger-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work"
 }

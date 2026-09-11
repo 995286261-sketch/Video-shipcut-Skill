@@ -23,5 +23,5 @@
 
 ## 产物
 
-- 机器合同：`工作台/tiger-intro-001/G4-剪辑执行/BGM混音/BGM-混音合同-v0.1.json`
-- 本卡：`工作台/tiger-intro-001/G4-剪辑执行/BGM混音/BGM-混音合同回显-v0.1.md`
+- 机器合同：`工作台/tiger-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json`
+- 本卡：`工作台/tiger-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同回显-v0.1.md`
