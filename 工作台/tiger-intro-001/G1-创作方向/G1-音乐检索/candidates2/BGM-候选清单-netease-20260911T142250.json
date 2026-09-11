@@ -1,0 +1,381 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/BGM-检索词-v0.1.json",
+    "terms": [
+      "史诗 电子",
+      "工业 电子",
+      "硬核 节奏",
+      "鼓机 合成器"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-09-11T14:22:50+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3366373755,
+      "title": "史诗炸裂电子乐章",
+      "artist": "用户17326402062",
+      "album": "史诗炸裂电子乐章",
+      "durationMs": 172679,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3366373755",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3366373755.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "用户17326402062 - 史诗炸裂电子乐章",
+      "retrievedAt": "2026-09-11T14:22:28+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3366373755-史诗炸裂电子乐章.mp3",
+      "sha256": "FC5988A94D2B235624F0B6A74066276A9EB08F602F627926874A477AB237716D",
+      "byteSize": 2763693
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3366374344,
+      "title": "史诗炸裂电子乐章",
+      "artist": "用户17326402062",
+      "album": "史诗炸裂电子乐章",
+      "durationMs": 183039,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3366374344",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3366374344.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "用户17326402062 - 史诗炸裂电子乐章",
+      "retrievedAt": "2026-09-11T14:22:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3366374344-史诗炸裂电子乐章.mp3",
+      "sha256": "4A1B7C02279010AABB9D6F3D74A16852AFD7D72FD95A6693AE8FA7C323663712",
+      "byteSize": 2929581
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3344577828,
+      "title": "O`3300【FREE】地下 实验 工业 电子 炫酷 Beat",
+      "artist": "索兰SORON",
+      "album": "O`3300【FREE】地下 实验 工业 电子 炫酷 Beat",
+      "durationMs": 162000,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=3344577828",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3344577828.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "索兰SORON - O`3300【FREE】地下 实验 工业 电子 炫酷 Beat",
+      "retrievedAt": "2026-09-11T14:22:34+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3344577828-O`3300【FREE】地下_实验_工业_电子_炫酷_Beat.mp3",
+      "sha256": "165B3A08FF41C6A271D644EF674C159D574B0ED039D26A3D898B34DE318C4C89",
+      "byteSize": 2592813
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3404986486,
+      "title": "相对论 (工业电子版)",
+      "artist": "戒光",
+      "album": "戒色并不难",
+      "durationMs": 128893,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=3404986486",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3404986486.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "戒光 - 相对论 (工业电子版)",
+      "retrievedAt": "2026-09-11T14:22:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3404986486-相对论_(工业电子版).mp3",
+      "sha256": "055D6796605FE2276D5701D3A16E0C537838F495E04F3EC60753CCDA5C01459A",
+      "byteSize": 2063508
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3340764213,
+      "title": "悬空城（工业电子）",
+      "artist": "阿花先生",
+      "album": "Dungeon & Fighter",
+      "durationMs": 244959,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=3340764213",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3340764213.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "阿花先生 - 悬空城（工业电子）",
+      "retrievedAt": "2026-09-11T14:22:37+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3340764213-悬空城（工业电子）.mp3",
+      "sha256": "181826AF5947083092479EC87F935E26A5536FBF9F167E64D8D27827582E4C6F",
+      "byteSize": 3920301
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3340765796,
+      "title": "蝙蝠侠Stage-1（工业电子）",
+      "artist": "阿花先生",
+      "album": "FC/Nes",
+      "durationMs": 363159,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=3340765796",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3340765796.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "阿花先生 - 蝙蝠侠Stage-1（工业电子）",
+      "retrievedAt": "2026-09-11T14:22:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3340765796-蝙蝠侠Stage-1（工业电子）.mp3",
+      "sha256": "CCBA4DF2C39ED7A4AA478B9578C91156E38C5B1B987564EE49BA52742913DA90",
+      "byteSize": 5811501
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1966862636,
+      "title": "DDRKirby(ISQ)-Infinity（鲫虞豆腐汤 remix）",
+      "artist": "虚无缥缈",
+      "album": "燃烧的心：工业电子",
+      "durationMs": 258368,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1966862636",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1966862636.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "虚无缥缈 - DDRKirby(ISQ)-Infinity（鲫虞豆腐汤 remix）",
+      "retrievedAt": "2026-09-11T14:22:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-1966862636-DDRKirby(ISQ)-Infinity（鲫虞豆腐汤_remix）.mp3",
+      "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+      "byteSize": 4134957
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1966862799,
+      "title": "RainbowMachine（鲫虞豆腐汤 remix）",
+      "artist": "虚无缥缈",
+      "album": "燃烧的心：工业电子",
+      "durationMs": 269610,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1966862799",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1966862799.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "虚无缥缈 - RainbowMachine（鲫虞豆腐汤 remix）",
+      "retrievedAt": "2026-09-11T14:22:46+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-1966862799-RainbowMachine（鲫虞豆腐汤_remix）.mp3",
+      "sha256": "EA5D210CAA87F673CE1359F2944B11F8A4B7C384B34CD49BE18C92FB1D521D64",
+      "byteSize": 4314669
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 2089057036,
+      "name": "企业 时尚 潮流 电子4",
+      "reason": "duration 101071ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049455,
+      "name": "企业 时尚 潮流 电子1",
+      "reason": "duration 101066ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057048,
+      "name": "⁪企业 时尚 潮流 电子25",
+      "reason": "duration 99310ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049457,
+      "name": "企业 时尚 潮流 电子8",
+      "reason": "duration 101066ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049465,
+      "name": "企业 时尚 潮流 电子23",
+      "reason": "duration 95999ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057044,
+      "name": "企业 时尚 潮流 电子16",
+      "reason": "duration 100182ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057045,
+      "name": "企业 时尚 潮流 电子17",
+      "reason": "duration 96000ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057047,
+      "name": "企业 时尚 潮流 电子24",
+      "reason": "duration 95999ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057043,
+      "name": "企业 时尚 潮流 电子14",
+      "reason": "duration 94117ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057046,
+      "name": "企业 时尚 潮流 电子19",
+      "reason": "duration 94430ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057042,
+      "name": "企业 时尚 潮流 电子13",
+      "reason": "duration 102127ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057040,
+      "name": "企业 时尚 潮流 电子10",
+      "reason": "duration 93431ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057039,
+      "name": "企业 时尚 潮流 电子7",
+      "reason": "duration 100642ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057035,
+      "name": "企业 时尚 潮流 电子3",
+      "reason": "duration 102400ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049461,
+      "name": "企业 时尚 潮流 电子18",
+      "reason": "duration 94430ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049458,
+      "name": "企业 时尚 潮流 电子9",
+      "reason": "duration 101066ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049456,
+      "name": "企业 时尚 潮流 电子2",
+      "reason": "duration 96000ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057037,
+      "name": "企业 时尚 潮流 电子5",
+      "reason": "duration 101646ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057041,
+      "name": "企业 时尚 潮流 电子11",
+      "reason": "duration 99310ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089057038,
+      "name": "企业 时尚 潮流 电子6",
+      "reason": "duration 101646ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049464,
+      "name": "企业 时尚 潮流 电子22",
+      "reason": "duration 96008ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2089049463,
+      "name": "企业 时尚 潮流 电子21",
+      "reason": "duration 95999ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 1937613582,
+      "name": "Dark Techno Mix #1",
+      "reason": "duration 1256594ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 3337129669,
+      "name": "新工业电子",
+      "reason": "duration 59245ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 3413704793,
+      "name": "红灯遐想曲 (工业电子)",
+      "reason": "duration 111636ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2708650059,
+      "name": "工业与自然的电子协奏",
+      "reason": "duration 60029ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2708651014,
+      "name": "工业丛林中的电子木韵",
+      "reason": "duration 60029ms outside [120.0,600.0]s"
+    },
+    {
+      "neteaseId": 2680378522,
+      "name": "工业风电子战歌",
+      "reason": "duration 18381ms outside [120.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 8,
+    "minimumExpected": 3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-08-611b3717",
+      "relativePath": "02_原始素材/高达08小队王牌老虎的实力秀翻全场.mp4",
+      "sourceKind": "local-file",
+      "sha256": "17B6A344EDCA3578AF06178D9EA90917BA9886EE54B9D185B6D9F048E58233E9",
+      "byteSize": 300283437,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [],
+  "bgm": {
+    "decision": "use_library_later",
+    "preference": null,
+    "libraryPending": true,
+    "clearCondition": "G1 末出检索词卡找乐 → 用户挑曲 → 经官方渠道取得整轨并登记回填 07_授权音频/ 后改 provided"
+  },
+  "packStatus": "complete",
+  "registeredAt": "2026-09-11T05:53:06.331242Z"
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "absolute",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": null,
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": null,
+  "tracks": [
+    {
+      "title": "冷战奇迹-逆羽雄鹰-1080P",
+      "neteaseId": "local-reference",
+      "sha256": null,
+      "reused": false,
+      "notes": "1) 曲风：工业 techno (Industrial Techno)。\n2) 乐器：失真底鼓、金属打击乐、合成器脉冲贝斯。\n3) 情绪：冷峻、机械、充满压迫感与驱动力。\n4) 能量结构：0:00-0:34为铺垫段，0:35-结尾为高潮段。\n5) 适合剪辑：硬核科幻战争或重工业机械的快节奏混剪。不适合：温馨日常或需要情感共鸣的抒情场景。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

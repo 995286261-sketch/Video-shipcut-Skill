@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "史诗 管弦courageous epic parable of hope",
+      "neteaseId": 2638022775,
+      "sha256": "2737734391EC91E054AC832C85BAC30FB051EDB3643A4613B027C99ECB0A2145",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏电子乐，以合成器和鼓机为主，气质紧张现代；候选曲是史诗管弦乐，以铜管和弦乐为主，气质宏伟庄严。\n2) 不能。其节奏舒缓、缺乏持续律动，无法提供卡点所需的精准节拍和能量感。\n3) 贴合度2分。风格完全不符，它是为宏大场面而非快节奏剪辑而生。"
+    },
+    {
+      "title": "史诗管弦",
+      "neteaseId": 3379621331,
+      "sha256": "94B874F86B661F6408EB05BC94407D301AAC207228A2C19960C306B7EA061CA9",
+      "reused": false,
+      "notes": "1. 差距：参照曲是工业感强的硬核电子，节奏强劲、气质冷峻；候选曲是史诗管弦乐，气势恢宏、旋律抒情。\n2. 能否使用：不能。候选曲缺乏卡点所需的稳定强拍和冲击力，无法营造“高燃”效果。\n3. 贴合度：2/10。理由：风格完全不符，宏大抒情的交响乐无法替代硬核电子的机械冲击感。"
+    },
+    {
+      "title": "史诗 管弦captivating epic",
+      "neteaseId": 2638020064,
+      "sha256": "33CD01547B857D4095666316BBA213C53D6239418FFB0C65A52DD81FC837A33E",
+      "reused": false,
+      "notes": "1) 差距显著：参照曲是快节奏、强律动的电子工业风，充满机械感；候选曲则是慢速、宏大的管弦交响史诗，气质庄严神圣。\n2) 不能。候选曲缺乏高频节奏点，无法实现“卡点”效果，且情绪过于厚重，不适合表现科技与速度感。\n3) 贴合度2分。理由：风格完全错位，如同用圣战配乐去剪辑赛车视频，宏大却无用。"
+    },
+    {
+      "title": "史诗 管弦alluring epic",
+      "neteaseId": 2638022740,
+      "sha256": "3A11DDAF7D13C975DFB8DB4967B902AD3D43C233F36BCCC929CB066EB8F918EE",
+      "reused": false,
+      "notes": "1) 差距：参照曲是快节奏工业电子，冷峻机械感强；候选曲是史诗管弦乐，宏大庄严，节奏舒缓。\n2) 能否使用：不能。候选曲缺乏高速剪辑所需的密集鼓点与冲击力，无法实现“高燃卡点”效果。\n3) 贴合度：2分。理由：气质过于庄重古典，完全偏离了参照曲的硬核科技风与紧迫节奏感。"
+    },
+    {
+      "title": "史诗 管弦amazing epic",
+      "neteaseId": 2638020006,
+      "sha256": "D382AD7E751FC9B55A2DE283CA6408620603B0B598A230E254CCD60C52029573",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强驱动的工业电子，气质冷峻机械；候选曲是慢速、宏大的史诗管弦乐，气质庄严悲壮。\n2) 不能。其缓慢的节奏和绵长的旋律无法提供“卡点”所需的冲击力。\n3) 贴合度2分。这是英雄赞歌而非高速战斗配乐，风格与项目需求完全不符。"
+    },
+    {
+      "title": "史诗 管弦breathtaking epic vista of power",
+      "neteaseId": 2638020054,
+      "sha256": "A7295B83A31FBA71FBBE442363485F69F2CF2660F22893F37B69510FBA2F445F",
+      "reused": false,
+      "notes": "1) 差距：参照曲是节奏驱动的工业电子，冷峻机械；候选曲是旋律主导的史诗管弦乐，宏大辉煌。\n2) 能否使用：不能。候选曲缺乏持续强劲的节拍，无法支撑解说所需的“高燃卡点”听感。\n3) 贴合度：2/10。理由：气质过于庄严抒情，缺少项目必需的硬核节奏驱动力。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "蝙蝠侠Stage-1（工业电子）",
+      "neteaseId": 3340765796,
+      "sha256": "CCBA4DF2C39ED7A4AA478B9578C91156E38C5B1B987564EE49BA52742913DA90",
+      "reused": false,
+      "notes": "1) 差距：参照曲是节奏稳定、氛围冷峻的Techno，适合叙事；候选曲是旋律复杂、速度极快的日系Trancecore，气质热血激昂。\n2) 能否使用：不能。其过密的鼓点和旋律会严重干扰旁白，且节奏过快难以配合常规剪辑卡点。\n3) 贴合度：2/10。理由：音乐能量过载，完全压制人声，与纪录片式的叙述风格背道而驰。"
+    },
+    {
+      "title": "RainbowMachine（鲫虞豆腐汤 remix）",
+      "neteaseId": 1966862799,
+      "sha256": "EA5D210CAA87F673CE1359F2944B11F8A4B7C384B34CD49BE18C92FB1D521D64",
+      "reused": false,
+      "notes": "1. 差距：参照曲是硬核工业风，节奏硬朗、压迫感强；候选曲是主流旋律EDM，音色明亮、氛围欢快。\n2. 能否使用：不能。候选曲情绪过于高昂愉悦，缺乏项目所需的紧张史诗感，无法契合严肃的军事题材。\n3. 贴合度：3分。理由：气质完全相反，欢快的旋律会严重消解内容的严肃性。"
+    },
+    {
+      "title": "悬空城（工业电子）",
+      "neteaseId": 3340764213,
+      "sha256": "181826AF5947083092479EC87F935E26A5536FBF9F167E64D8D27827582E4C6F",
+      "reused": false,
+      "notes": "1. 差距：参照曲是复古Synthwave，气质冷酷悬疑；候选曲是现代Dubstep/Metalstep，乐器含失真电吉他，气质狂暴热血。\n2. 结论：能当高燃BGM，但风格过于激进，会盖过叙事。\n3. 评分：4/10。理由：候选曲能量过剩且风格不符，缺乏参照曲的冷峻科技感与叙事空间。"
+    },
+    {
+      "title": "DDRKirby(ISQ)-Infinity（鲫虞豆腐汤 remix）",
+      "neteaseId": 1966862636,
+      "sha256": "FB88461C3103AA307B654F4221125B5B9F42A679805AAF8536618ACA6DE1334D",
+      "reused": false,
+      "notes": "1. 差距：参照曲是工业感重的Techno，节奏沉稳；候选曲是旋律化的Happy Hardcore/J-Core，节奏极快且电子感强。\n2. 能否使用：能。其高BPM和强烈鼓点非常适合营造高燃卡点氛围。\n3. 贴合度：6分。虽同样高燃，但候选曲的二次元游戏感与参照曲的硬核军事纪实风格气质不符。"
+    },
+    {
+      "title": "相对论 (工业电子版)",
+      "neteaseId": 3404986486,
+      "sha256": "055D6796605FE2276D5701D3A16E0C537838F495E04F3EC60753CCDA5C01459A",
+      "reused": false,
+      "notes": "1) 参照曲是快节奏硬核电子，节奏强劲；候选曲是中速工业摇滚，气质沉重压抑。2)\n不能。候选曲速度太慢且缺乏爆发力，无法匹配“高燃卡点”需求。3) 贴合度3分。理由：候选曲的缓慢沉重感与项目所需的高速激昂氛围完全背道而驰。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

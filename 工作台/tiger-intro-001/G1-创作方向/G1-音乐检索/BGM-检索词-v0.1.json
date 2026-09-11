@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": "我这几个选项倾向于 史诗",
+    "themeRef": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/direction-input-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "/Users/chuanzhangbigye/工作/WorkSpace/N8-实测-tiger/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/../G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "史诗 电子",
+      "rationale": "用户偏好原词'史诗'＋参考曲模型试听笔记判定曲风为工业 techno（电子）",
+      "source": "theme"
+    },
+    {
+      "term": "工业 电子",
+      "rationale": "参考曲绝对笔记原话'工业 techno（Industrial Techno）'",
+      "source": "theme"
+    },
+    {
+      "term": "硬核 节奏",
+      "rationale": "笔记原话'冷峻、机械、充满压迫感与驱动力''适合硬核科幻战争快节奏混剪'",
+      "source": "theme"
+    },
+    {
+      "term": "鼓机 合成器",
+      "rationale": "笔记原话'失真底鼓、金属打击乐、合成器脉冲贝斯'",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 120,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-11T14:22:27+08:00"
+}

@@ -1,0 +1,50 @@
+{
+  "projectId": "tiger-intro-001",
+  "coreQuestion": "这台老虎改（MS-07B3）为什么是 08 小队战场上最难缠的对手？",
+  "audience": "B 站观众（高达/机甲爱好者）",
+  "title": "王牌老虎：08小队战场上最不愿遇到的对手",
+  "titleExpressionType": "editorial_expression",
+  "coreViewpoint": "老虎改是吉翁近战思想的集大成机体，配上王牌驾驶员，构成 08 小队遭遇战里最危险的对手；本片用档案式讲法把它立起来。",
+  "outputPreferences": {
+    "aspectRatio": "16:9",
+    "targetDurationSec": [110, 130],
+    "usagePurpose": "bilibili_public_mecha_intro"
+  },
+  "bgmDecision": "use_library_later",
+  "directionChoice": {
+    "id": "angle-1",
+    "label": "机体档案 + 性能解说（档案纪录片式讲法：档案卡→武装→性能→战绩收束）",
+    "source": "agent_recommendation"
+  },
+  "styleRules": [
+    "借鉴参考片《冷战奇迹》的档案纪录片形式：顶部固定标题栏、底部中英双语字幕（中文白色大号+英文蓝色小号）、冷色稳重语气",
+    "成片旁白用 AI 配音（用户定），素材原声与源字幕/水印全部清除，不沿用他人二创音轨",
+    "目标时长约 2 分钟；信息密度中高、按'机体档案→武装→战场表现'递进",
+    "节奏与 BGM 对齐参考片的多高潮结构（推进段铺垫、高潮段放战绩高光）"
+  ],
+  "expressionBoundaries": [
+    "未经 G2 事实核验的设定数据（编号、武装名、战绩）口播中不得作为确定事实陈述，只按简报标注的 pending 口径处理",
+    "剧透控制：只讲到源片已呈现的战斗场面，不补叙原作品其他剧情走向",
+    "身份判定：'老虎改'为驾驶员/用户口述确认，画面逐镜身份判定按 G3 目标主体确认流程执行"
+  ],
+  "claims": [
+    {
+      "claimId": "claim-001",
+      "text": "源片中的目标机体是《高达08小队》中的 MS-07B3 老虎改（Gouf Custom），由片中王牌驾驶员驾驶",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-002",
+      "text": "老虎改的关键武装与近战性能设定（肩加农炮/热能鞭等，具体口径待核）",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-003",
+      "text": "源片为 B 站 UP 主从《高达08小队》原动漫裁剪的素材再剪辑，用户下载后供本项目使用（用户 2026-09-11 声明，版权风险自担）",
+      "status": "pending",
+      "evidenceRefs": []
+    }
+  ]
+}

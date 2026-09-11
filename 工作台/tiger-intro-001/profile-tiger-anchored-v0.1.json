@@ -1,0 +1,40 @@
+{
+  "targetDurationSec": 120,
+  "bpmRange": [
+    95.0,
+    185.0
+  ],
+  "minSegments": 3,
+  "maxIntegratedLufs": -6.0,
+  "distributionBoundary": "internal_test",
+  "note": "tiger-intro-001 选型画像：锚=《冷战奇迹》音轨风格简报（bpm123.05, SHA DF263D11）；bpmRange 放宽到候选池实测分布 95–185（zaku 教训：锚窗过窄误杀近亲族）；选型阶段候选池语义=internal_test 试听，最终边界 public_bilibili 由整轨登记+清权时升级",
+  "styleBrief": {
+    "bpm": 123.05,
+    "energyShape": [
+      0.894,
+      0.795,
+      0.74,
+      0.989,
+      0.848,
+      0.925,
+      0.843,
+      0.769,
+      0.956,
+      0.815,
+      0.907,
+      0.915,
+      1.0,
+      0.968,
+      0.924,
+      0.584
+    ],
+    "segmentCount": 8,
+    "durationMs": 163029
+  },
+  "styleBriefSource": {
+    "title": "冷战奇迹-逆羽雄鹰-1080P",
+    "reportSha": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "path": "G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "userPreference": "我这几个选项倾向于 史诗"
+}
