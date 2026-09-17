@@ -110,6 +110,48 @@ class RegisterCandidateTest(unittest.TestCase):
         self.assertIn("accepted", payload["errors"][0]["detail"])  # error teaches the vocabulary
 
 
+class LicenseClassificationTest(unittest.TestCase):
+    """Live 2026-09-17: the API returns license as a CC URL, not a display name —
+    both forms must classify the same way, restricted variants fail closed."""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("music_search_freesound", SEARCH)
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def test_url_forms_accepted(self):
+        self.assertEqual("cc0", self.module.classify_license("http://creativecommons.org/publicdomain/zero/1.0/")["licenseType"])
+        self.assertEqual("cc-by", self.module.classify_license("https://creativecommons.org/licenses/by/4.0/")["licenseType"])
+        self.assertTrue(self.module.classify_license("https://creativecommons.org/licenses/by/4.0/")["attributionRequired"])
+
+    def test_display_names_still_accepted(self):
+        self.assertEqual("cc0", self.module.classify_license("Creative Commons 0")["licenseType"])
+        self.assertEqual("cc-by", self.module.classify_license("Attribution")["licenseType"])
+
+    def test_restricted_variants_fail_closed(self):
+        for raw in ("https://creativecommons.org/licenses/by-nc/4.0/",
+                    "https://creativecommons.org/licenses/by-nd/2.1/fr/",
+                    "Attribution - Non-Commercial",
+                    "Attribution - Non-NoDerivs",
+                    "Creative Commons Sampling Plus 1.0",
+                    "http://creativecommons.org/licenses/by-nc-sa/3.0/", None, ""):
+            self.assertIsNone(self.module.classify_license(raw), raw)
+
+
+class ApiDriftGuardTest(unittest.TestCase):
+    """2026-09-17 live call: Freesound renamed preview keys to hyphen form and
+    stopped returning urls.page/attribution in search results; the script must
+    keep accepting both spellings and derive the canonical short URL."""
+
+    def test_preview_key_both_spellings_and_short_url_fallback(self):
+        source = SEARCH.read_text(encoding="utf-8")
+        for marker in ('previews.get("preview_mp3")', 'previews.get("preview-hq-mp3")',
+                       'previews.get("preview-lq-mp3")', 'https://freesound.org/s/'):
+            self.assertIn(marker, source)
+
+
 class SearchBlockedTest(unittest.TestCase):
     def test_missing_token_is_structured_block(self):
         tmp = tempfile.TemporaryDirectory()

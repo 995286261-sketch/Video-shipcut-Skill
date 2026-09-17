@@ -26,12 +26,12 @@ import music_tags
 
 API_BASE = "https://freesound.org/apiv2"
 SEARCH_FIELDS = "id,name,username,license,type,duration,previews,urls.page,tags,attribution"
-ACCEPTED_LICENSES = {
-    "Creative Commons 0": {"licenseType": "cc0", "attributionRequired": False},
-    "Attribution": {"licenseType": "cc-by", "attributionRequired": True},
-    "Attribution (http://creativecommons.org/licenses/by/4.0/)": {"licenseType": "cc-by", "attributionRequired": True},
-}
-EXCLUDED_LICENSE_MARKERS = ("nc", "noncommercial", "non-commercial", "nd", "noderiv", "sampling")
+# The API's license field arrives either as a display name or as a Creative
+# Commons URL (live-verified 2026-09-17: URLs like .../publicdomain/zero/1.0/);
+# both forms must classify identically. Only CC0/CC-BY pass; NC/ND/Sampling fail closed.
+CC0_MARKERS = ("publicdomain/zero", "creative commons 0", "cc0", "cc 0")
+EXCLUDED_LICENSE_MARKERS = ("by-nc", "by-nd", "nc-sa", "nc-nd", "noncommercial", "non-commercial",
+                            "no derivatives", "no-deriv", "noderiv", "sampling", "attribution -", "attribution-")
 
 
 def emit(payload: dict) -> None:
@@ -53,13 +53,13 @@ def sha256(path: Path) -> str:
 def classify_license(raw: str | None) -> dict | None:
     if not raw:
         return None
-    normalized = raw.strip()
-    for name, verdict in ACCEPTED_LICENSES.items():
-        if normalized == name or normalized.startswith(name):
-            lowered = normalized.lower()
-            if any(marker in lowered for marker in EXCLUDED_LICENSE_MARKERS):
-                return None
-            return verdict
+    lowered = raw.strip().lower()
+    if any(marker in lowered for marker in EXCLUDED_LICENSE_MARKERS):
+        return None
+    if any(marker in lowered for marker in CC0_MARKERS):
+        return {"licenseType": "cc0", "attributionRequired": False}
+    if "licenses/by/" in lowered or lowered.startswith("attribution"):
+        return {"licenseType": "cc-by", "attributionRequired": True}
     return None
 
 
@@ -204,11 +204,15 @@ def main() -> int:
             "freesoundId": item.get("id"),
             "title": item.get("name"),
             "author": item.get("username"),
-            "sourceUrl": (item.get("urls") or {}).get("page"),
+            # Live 2026-09-17: search results no longer carry urls.page — the
+            # canonical short URL /s/<id>/ is derived instead (verified redirect target).
+            "sourceUrl": (item.get("urls") or {}).get("page") or f"https://freesound.org/s/{item.get('id')}/",
             "license": item.get("license"),
             "licenseType": verdict["licenseType"],
             "attributionRequired": verdict["attributionRequired"],
-            "attributionText": item.get("attribution"),
+            "attributionText": item.get("attribution") or (
+                f"\"{item.get('name')}\" by {item.get('username')} ({item.get('license')})"
+                if verdict["attributionRequired"] else None),
             "durationSecProbe": item.get("duration"),
             "tags": (item.get("tags") or [])[:12],
             "styleTags": music_tags.normalize_tag_list(item.get("tags") or []),
@@ -218,8 +222,11 @@ def main() -> int:
             "analysisRef": None,
         }
         if not args.no_download:
-            preview = ((item.get("previews") or {}).get("preview_mp3")
-                       or (item.get("previews") or {}).get("preview_lq_mp3"))
+            # Live 2026-09-17: the API renamed preview keys to hyphen form
+            # (preview-hq-mp3); accept both spellings so old and new responses work.
+            previews = item.get("previews") or {}
+            preview = (previews.get("preview_mp3") or previews.get("preview_lq_mp3")
+                       or previews.get("preview-hq-mp3") or previews.get("preview-lq-mp3"))
             if not preview:
                 excluded.append({"freesoundId": record["freesoundId"], "name": record["title"], "reason": "no preview url in response"})
                 continue
