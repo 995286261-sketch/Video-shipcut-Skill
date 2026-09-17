@@ -113,7 +113,10 @@ def main() -> int:
     for chapter in chapters:
         output = chapter.get("output"); target = inside(bundle, output) if isinstance(output, str) else None
         if not target or not target.is_file(): errors.append(f"missing chapter output: {output}")
-        if not chapter.get("segments") or not set(chapter["segments"]).issubset(segments): errors.append(f"chapter traceability failed: {chapter.get('chapterId')}")
+        # Issue ㉜: segments entries may be bare IDs or objects carrying segmentId;
+        # normalize before hashing, or a dict crashes the whole validator.
+        refs = [item if isinstance(item, str) else item.get("segmentId") for item in chapter.get("segments", []) if isinstance(item, (str, dict))]
+        if not refs or not set(refs).issubset(segments): errors.append(f"chapter traceability failed: {chapter.get('chapterId')}")
     for item in [qa.get("artifacts", {}).get("finalVideo", {}), qa.get("artifacts", {}).get("cover", {}), qa.get("artifacts", {}).get("subtitles", {}), manifest.get("artifacts", {}).get("editTimeline", {})] + qa.get("artifacts", {}).get("chapterClips", []): check_artifact(bundle, item, errors)
     if not set(QA_CHECKS).issubset(qa.get("checks", {})): errors.append("qa report lacks required machine checks")
     if not any(SRT_TIME.match(line.strip()) for line in (bundle / "subtitles.srt").read_text(encoding="utf-8-sig").splitlines()): errors.append("subtitles.srt has no valid timestamp")

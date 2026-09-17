@@ -72,6 +72,24 @@ class G4ContractTest(unittest.TestCase):
         value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out",code=2)
         self.assertIn("exceeds approved source range",value["error"])
 
+    def test_prepare_blocks_output_dir_outside_canonical_g4_directory(self):
+        """Issue ㉚: a plan under 工作台/<projectId>/ may only write its manifest to
+        that project's G4-剪辑与渲染 directory, the same rule approve enforces."""
+        project=self.root/"工作台"/"p-001"; g3=project/"G3-剪辑方案"; g3.mkdir(parents=True)
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["start.jpg","middle.jpg","end.jpg"],"observedVisuals":"已核验。"}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        plan_path=g3/"G3-剪辑方案-v0.1.json"; evidence_path=g3/"evidence.json"
+        plan_path.write_text(json.dumps(plan))
+        evidence_path.write_text(json.dumps({"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}))
+        base=["--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack]
+        wrong=self.run_cli(PREPARE,*base,"--output-dir",project/"G4-剪辑执行",code=2)
+        self.assertIn("G4-剪辑与渲染",wrong["error"])
+        self.assertEqual("prepared",self.run_cli(PREPARE,*base,"--output-dir",project/"G4-剪辑与渲染")["status"])
+        self.assertEqual("prepared",self.run_cli(PREPARE,*base,"--output-dir",project/"G4-剪辑与渲染"/"检查帧","--force")["status"])
+
     def test_validator_rejects_flattened_preview_in_handoff(self):
         manifest={"schemaVersion":"0.2","status":"prepared_for_render","segmentCount":1,"timelineDurationMs":1000,"segments":[{"order":1,"timeline":{"startMs":0,"endMs":1000},"source":{"relativePath":"raw/a.mp4","sha256":"a","startMs":0,"endMs":1000},"output":{"filename":"seg-001.mp4","audio":"excluded"}}]}
         mp=self.root/"manifest.json"; mp.write_text(json.dumps(manifest)); handoff=self.root/"handoff"; handoff.mkdir()

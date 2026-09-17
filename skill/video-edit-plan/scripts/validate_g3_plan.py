@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Validate traceability and G2 approval gates for a G3 edit-plan draft."""
 
+# System python is 3.9: keep PEP 604 union annotations (`str | None`) lazy.
+from __future__ import annotations
+
 import argparse
 import hashlib
 import importlib.util
@@ -21,8 +24,17 @@ g2_decision_validator = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(g2_decision_validator)
 
 
+class SoftFail(ValueError):
+    """A collected validation violation (issue ㉕): leaf checks record every
+    violation instead of stopping the whole run at the first one."""
+
+
+ERRORS: list[str] = []
+
+
 def fail(message: str) -> None:
-    raise ValueError(message)
+    ERRORS.append(message)
+    raise SoftFail(message)
 
 
 def normalized_ref(value: str) -> str:
@@ -266,6 +278,12 @@ def validate_duration_decision(plan: dict) -> None:
         fail("durationDecision.antiFillRule must prohibit repeated segments, loops, meaningless slow motion, and unverified fact padding")
 
 
+def check(condition: bool, message: str) -> None:
+    """Non-raising boolean check: record the violation and keep going (issue ㉕)."""
+    if not condition:
+        ERRORS.append(message)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", required=True, type=Path)
@@ -278,6 +296,7 @@ def main() -> int:
     parser.add_argument("--material-pack", type=Path, help="G0 material-pack.json; enables the BGM hash-chain checks")
     parser.add_argument("--bgm-alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json consumed by the plan")
     args = parser.parse_args()
+    ERRORS.clear()  # same-process repeat runs (tests) must not inherit violations
     # Windows editors commonly write UTF-8 with a BOM. Accept it at every JSON boundary.
     plan = json.loads(args.plan.read_text(encoding="utf-8-sig"))
     evidence = json.loads(args.evidence.read_text(encoding="utf-8-sig"))
@@ -286,185 +305,236 @@ def main() -> int:
     semantic_beats = json.loads(args.semantic_beats.read_text(encoding="utf-8-sig"))
     subject_confirmation = json.loads(args.subject_confirmation.read_text(encoding="utf-8-sig")) if args.subject_confirmation else None
     ledger = json.loads(args.ledger.read_text(encoding="utf-8-sig")) if args.ledger else None
-    if plan.get("schemaVersion") != "0.1":
-        fail("plan schemaVersion must be 0.1")
-    if plan.get("projectId") != evidence.get("projectId"):
-        fail("plan projectId must match evidence projectId")
+    check(plan.get("schemaVersion") == "0.1", "plan schemaVersion must be 0.1")
+    check(plan.get("projectId") == evidence.get("projectId"), "plan projectId must match evidence projectId")
     plan_status = plan.get("status")
-    if plan_status not in {"review_required", "approved_for_g4"}:
-        fail("G3 plan status must be review_required or approved_for_g4")
-    if plan.get("sourceAudioPolicy") != "exclude":
-        fail("G3 plan must exclude source audio")
-    validate_duration_decision(plan)
-    validate_visual_analysis(visual_analysis, plan["projectId"], evidence)
-    beat_index = validate_semantic_beats(semantic_beats, plan["projectId"], plan, args.semantic_beats)
-    if subject_confirmation is not None:
-        validate_subject_confirmation(subject_confirmation, plan["projectId"], args.subject_confirmation)
-    if ledger is not None:
-        validate_observation_ledger(plan, ledger)
-    approved_narration_ref = validate_g2_decision(decision, plan["projectId"], args.g2_decision)
+    check(plan_status in {"review_required", "approved_for_g4"}, "G3 plan status must be review_required or approved_for_g4")
+    check(plan.get("sourceAudioPolicy") == "exclude", "G3 plan must exclude source audio")
+    for step in (lambda: validate_duration_decision(plan),
+                 lambda: validate_visual_analysis(visual_analysis, plan["projectId"], evidence),
+                 lambda: validate_subject_confirmation(subject_confirmation, plan["projectId"], args.subject_confirmation) if subject_confirmation is not None else None,
+                 lambda: validate_observation_ledger(plan, ledger) if ledger is not None else None):
+        try:
+            step()
+        except SoftFail:
+            pass
+    try:
+        beat_index = validate_semantic_beats(semantic_beats, plan["projectId"], plan, args.semantic_beats)
+    except SoftFail:
+        beat_index = {}
+    try:
+        approved_narration_ref = validate_g2_decision(decision, plan["projectId"], args.g2_decision)
+    except SoftFail:
+        approved_narration_ref = ""
     narration_draft = plan.get("narrationDraft")
-    if not isinstance(narration_draft, str) or normalized_ref(narration_draft) != approved_narration_ref:
-        fail("plan narrationDraft must exactly match G2 approvedNarrationRef")
-    if normalized_ref(narration_draft) in {normalized_ref(ref) for ref in decision.get("supersededDraftRefs", []) if isinstance(ref, str)}:
-        fail("plan narrationDraft is superseded by the G2 decision")
+    check(isinstance(narration_draft, str) and normalized_ref(narration_draft) == approved_narration_ref,
+          "plan narrationDraft must exactly match G2 approvedNarrationRef")
+    if isinstance(narration_draft, str):
+        check(normalized_ref(narration_draft) not in {normalized_ref(ref) for ref in decision.get("supersededDraftRefs", []) if isinstance(ref, str)},
+              "plan narrationDraft is superseded by the G2 decision")
     decision_ref = plan.get("narrationDecisionRef")
-    if not isinstance(decision_ref, str) or normalized_ref(decision_ref) != normalized_ref(str(args.g2_decision)):
-        fail("plan narrationDecisionRef must exactly identify --g2-decision")
+    check(isinstance(decision_ref, str) and normalized_ref(decision_ref) == normalized_ref(str(args.g2_decision)),
+          "plan narrationDecisionRef must exactly identify --g2-decision")
     evidence_entries = evidence.get("sourceEvidence", [])
     known = {entry["assetId"]: entry["sourceProbe"]["durationMs"] for entry in evidence_entries}
     source_identity = {entry["assetId"]: str(entry.get("sha256") or entry["assetId"]).lower() for entry in evidence_entries}
     segments = plan.get("segments")
+    check(isinstance(segments, list) and bool(segments), "plan requires non-empty segments")
     if not isinstance(segments, list) or not segments:
-        fail("plan requires non-empty segments")
+        return report(plan_status, 0)
     ids = set()
     for segment in segments:
-        segment_id = segment.get("segmentId")
-        if not isinstance(segment_id, str) or segment_id in ids:
-            fail("segmentId must be unique")
-        ids.add(segment_id)
-        asset_id = segment.get("assetId")
-        if asset_id not in known:
-            fail(f"unknown assetId: {asset_id}")
-        start, end = segment.get("startMs"), segment.get("endMs")
-        if not isinstance(start, int) or not isinstance(end, int) or start < 0 or end <= start or end > known[asset_id]:
-            fail(f"invalid source timecode for {segment_id}")
-        if not segment.get("reason") or not segment.get("evidenceRefs"):
-            fail(f"segment {segment_id} requires reason and evidenceRefs")
-        visual = segment.get("visualVerification")
-        if not isinstance(visual, dict) or visual.get("status") != "verified":
-            fail(f"segment {segment_id} requires verified visualVerification; candidate timecodes cannot enter G4")
-        if not isinstance(visual.get("frameManifestRef"), str) or not visual["frameManifestRef"].strip():
-            fail(f"segment {segment_id} visualVerification requires frameManifestRef")
-        frame_refs = visual.get("frameRefs")
-        if not isinstance(frame_refs, list) or len(frame_refs) < 3 or not all(isinstance(ref, str) and ref.strip() for ref in frame_refs):
-            fail(f"segment {segment_id} visualVerification requires start/middle/end frameRefs")
-        observed = visual.get("observedVisuals")
-        if not isinstance(observed, str) or not observed.strip() or any(term in observed.lower() for term in ("希望出现", "想要", "wish", "want to show")):
-            fail(f"segment {segment_id} observedVisuals must describe actual frames, not a desired shot")
-        narration_start = segment.get("narrationStartMs")
-        narration_end = segment.get("narrationEndMs")
-        narration_text = segment.get("narrationText")
-        narrative_claim = segment.get("narrativeClaim")
-        semantic = segment.get("semanticAlignment")
-        beat_ids = segment.get("semanticBeatIds")
-        if not isinstance(beat_ids, list) or not beat_ids or not all(isinstance(beat_id, str) and beat_id in beat_index for beat_id in beat_ids):
-            fail(f"segment {segment_id} requires semanticBeatIds from the semantic beat table")
-        if not any(segment.get("outputStartMs", 0) < beat_index[beat_id]["outputEndMs"] and segment.get("outputEndMs", 0) > beat_index[beat_id]["outputStartMs"] for beat_id in beat_ids):
-            fail(f"segment {segment_id} does not overlap its semantic beat output range")
-        if not isinstance(narration_start, int) or not isinstance(narration_end, int) or narration_start < 0 or narration_end <= narration_start:
-            fail(f"segment {segment_id} requires positive narrationStartMs/narrationEndMs")
-        if not isinstance(narration_text, str) or not narration_text.strip():
-            fail(f"segment {segment_id} requires narrationText")
-        if not isinstance(narrative_claim, dict) or not isinstance(narrative_claim.get("type"), str) or not isinstance(narrative_claim.get("minimumVisibleEvidence"), str) or not narrative_claim["minimumVisibleEvidence"].strip():
-            fail(f"segment {segment_id} requires narrativeClaim type and minimumVisibleEvidence")
-        if not isinstance(semantic, dict) or semantic.get("status") not in {"direct_match", "partial_match", "semantic_mismatch", "not_applicable"}:
-            fail(f"segment {segment_id} requires a valid semanticAlignment status")
-        if not isinstance(semantic.get("evidence"), str) or not semantic["evidence"].strip():
-            fail(f"segment {segment_id} semanticAlignment requires actual visual evidence")
-        if semantic["status"] in {"partial_match", "semantic_mismatch"} and plan_status == "approved_for_g4":
-            fail(f"approved segment {segment_id} cannot have {semantic['status']}")
-        if plan_status == "approved_for_g4":
-            mapping = segment.get("mappingMode", "one_to_one")
-            source_duration = end - start
-            output_start = segment.get("outputStartMs")
-            output_end = segment.get("outputEndMs")
-            output_duration = segment.get("outputDurationMs")
-            if not isinstance(output_start, int) or not isinstance(output_end, int) or output_end <= output_start:
-                fail(f"approved segment {segment_id} requires positive outputStartMs/outputEndMs")
-            if not isinstance(output_duration, int) or output_duration != output_end - output_start:
-                fail(f"segment {segment_id} outputDurationMs must match output timeline")
-            if mapping not in {"one_to_one", "trim"}:
-                fail(f"segment {segment_id} mappingMode is not allowed")
-            if mapping == "one_to_one" and output_duration != source_duration:
-                fail(f"segment {segment_id} one_to_one output/source durations differ")
-            if mapping == "trim" and output_duration > source_duration:
-                fail(f"segment {segment_id} trim cannot extend source duration")
+        try:
+            validate_segment(segment, ids, known, beat_index, source_identity, plan_status)
+        except SoftFail:
+            pass
+        except KeyError as error:
+            ERRORS.append(f"segment {segment.get('segmentId')} references unknown data: {error}")
     ranges = {}
     for segment in segments:
-        key = source_identity[segment["assetId"]]
-        ranges.setdefault(key, []).append((segment["startMs"], segment["endMs"], segment["segmentId"]))
+        key = source_identity.get(segment.get("assetId"), segment.get("assetId"))
+        ranges.setdefault(key, []).append((segment.get("startMs", 0), segment.get("endMs", 0), segment.get("segmentId")))
     for source_key, items in ranges.items():
         items.sort()
         for previous, current in zip(items, items[1:]):
             if current[0] < previous[1]:
                 overlap = min(previous[1], current[1]) - current[0]
-                fail(f"source range overlap for {previous[2]} and {current[2]} on {source_key}: {overlap}ms")
+                ERRORS.append(f"source range overlap for {previous[2]} and {current[2]} on {source_key}: {overlap}ms")
     timeline = plan.get("editPlan", {}).get("timeline", [])
     timeline_ids = [entry.get("segmentId") for entry in timeline]
-    if not timeline_ids or any(segment_id not in ids for segment_id in timeline_ids):
-        fail("editPlan timeline must reference declared segments")
-    if len(timeline_ids) != len(set(timeline_ids)):
-        fail("editPlan timeline cannot repeat a segment to fill duration")
+    check(bool(timeline_ids) and all(segment_id in ids for segment_id in timeline_ids),
+          "editPlan timeline must reference declared segments")
+    check(len(timeline_ids) == len(set(timeline_ids)), "editPlan timeline cannot repeat a segment to fill duration")
     for entry in timeline:
-        if entry.get("loop") is True or entry.get("duplicateFill") is True:
-            fail("editPlan timeline cannot use loops or duplicate fill")
-        slow_motion = entry.get("slowMotion")
-        if slow_motion is not None and not isinstance(entry.get("purpose"), str):
-            fail("slowMotion requires a documented purpose")
-    if not plan.get("humanReviewPoints"):
-        fail("plan requires narrationDraft and humanReviewPoints")
+        check(not (entry.get("loop") is True or entry.get("duplicateFill") is True),
+              "editPlan timeline cannot use loops or duplicate fill")
+        if entry.get("slowMotion") is not None:
+            check(isinstance(entry.get("purpose"), str), "slowMotion requires a documented purpose")
+    check(bool(plan.get("humanReviewPoints")), "plan requires narrationDraft and humanReviewPoints")
     if args.material_pack is not None or args.bgm_alignment is not None or plan.get("bgmPlan") is not None:
         if args.material_pack is None:
-            fail("plan with bgmPlan must be validated with --material-pack")
-        validate_bgm_plan(plan, segments, args.material_pack, args.bgm_alignment)
-    packaging = plan.get("packagingDecisions")
-    if packaging is not None:
-        if not isinstance(packaging, dict):
-            fail("packagingDecisions must be an object when present")
-        cover_ms = packaging.get("coverFrameMs")
-        if cover_ms is not None and (not isinstance(cover_ms, int) or isinstance(cover_ms, bool) or cover_ms < 0):
-            fail("packagingDecisions.coverFrameMs must be a non-negative integer")
-        cards = packaging.get("chapterCards", [])
-        if not isinstance(cards, list):
-            fail("packagingDecisions.chapterCards must be a list")
-        timeline_total = plan.get("timelineDurationMs")
-        if not isinstance(timeline_total, int) or timeline_total <= 0:
-            fail("packagingDecisions require a positive timelineDurationMs")
-        previous_end = 0
-        for index, card in enumerate(cards, 1):
-            if not isinstance(card, dict):
-                fail(f"packaging chapter card {index} must be an object")
-            start, end = card.get("startMs"), card.get("endMs")
-            if not isinstance(start, int) or not isinstance(end, int) or end <= start:
-                fail(f"packaging chapter card {index} needs integer startMs/endMs with end > start")
-            if not str(card.get("title") or "").strip():
-                fail(f"packaging chapter card {index} requires a title")
-            if start < previous_end:
-                fail(f"packaging chapter card {index} overlaps the previous card")
-            if end > timeline_total:
-                fail(f"packaging chapter card {index} [{start},{end}) exceeds timelineDurationMs {timeline_total}")
-            previous_end = end
-    if plan_status == "approved_for_g4":
-        review = plan.get("timelineReview")
-        if not isinstance(review, dict) or review.get("status") != "confirmed":
-            fail("approved_for_g4 plan requires confirmed timelineReview")
-        for field in ("confirmedBy", "confirmedAt", "feedback", "basisRefs"):
-            if not review.get(field):
-                fail(f"approved_for_g4 plan requires timelineReview.{field}")
-        if not isinstance(review["basisRefs"], list) or not all(isinstance(ref, str) and ref.strip() for ref in review["basisRefs"]):
-            fail("timelineReview.basisRefs must be a non-empty list of references")
-        if subject_confirmation is not None and normalized_ref(str(args.subject_confirmation)) not in {normalized_ref(ref) for ref in review["basisRefs"]}:
-            fail("approved_for_g4 timelineReview.basisRefs must include the subject confirmation")
-        if ledger is not None and normalized_ref(str(args.ledger)) not in {normalized_ref(ref) for ref in review["basisRefs"]}:
-            fail("approved_for_g4 timelineReview.basisRefs must include the observation ledger")
-        if any(segment.get("status") in {"pending", "verified_candidate"} or segment.get("visualVerification", {}).get("status") != "verified" for segment in segments):
-            fail("approved_for_g4 plan cannot contain pending or verified_candidate segments")
-        approval = plan.get("g3Approval")
-        if not isinstance(approval, dict):
-            fail("approved_for_g4 plan requires g3Approval")
-        for field in ("approvedBy", "approvedAt", "basisRefs"):
-            if not approval.get(field):
-                fail(f"approved_for_g4 plan requires g3Approval.{field}")
-        if not isinstance(approval["basisRefs"], list) or not all(isinstance(ref, str) and ref.strip() for ref in approval["basisRefs"]):
-            fail("g3Approval.basisRefs must be a non-empty list of references")
-    print(json.dumps({"status": "completed", "segments": len(segments), "planStatus": plan_status, "reviewRequired": plan_status == "review_required"}))
+            ERRORS.append("plan with bgmPlan must be validated with --material-pack")
+        else:
+            try:
+                validate_bgm_plan(plan, segments, args.material_pack, args.bgm_alignment)
+            except SoftFail:
+                pass
+    validate_packaging(plan)
+    validate_review_and_approval(plan, plan_status, args, subject_confirmation, ledger, segments)
+    return report(plan_status, len(segments))
+
+
+def report(plan_status: str | None, segment_count: int) -> int:
+    if ERRORS:
+        # Keep "error" for old callers and add the full batch (issue ㉕).
+        print(json.dumps({"status": "invalid", "error": ERRORS[0], "errors": ERRORS}, ensure_ascii=True))
+        return 2
+    print(json.dumps({"status": "completed", "segments": segment_count, "planStatus": plan_status,
+                      "reviewRequired": plan_status == "review_required"}))
     return 0
+
+
+def validate_segment(segment: dict, ids: set, known: dict, beat_index: dict, source_identity: dict, plan_status: str) -> None:
+    segment_id = segment.get("segmentId")
+    check(isinstance(segment_id, str) and segment_id not in ids, "segmentId must be unique")
+    ids.add(segment_id)
+    asset_id = segment.get("assetId")
+    check(asset_id in known, f"unknown assetId: {asset_id}")
+    start, end = segment.get("startMs"), segment.get("endMs")
+    check(isinstance(start, int) and isinstance(end, int) and start >= 0 and end > start
+          and (asset_id not in known or end <= known[asset_id]), f"invalid source timecode for {segment_id}")
+    check(bool(segment.get("reason")) and bool(segment.get("evidenceRefs")), f"segment {segment_id} requires reason and evidenceRefs")
+    visual = segment.get("visualVerification")
+    check(isinstance(visual, dict) and visual.get("status") == "verified",
+          f"segment {segment_id} requires verified visualVerification; candidate timecodes cannot enter G4")
+    if not isinstance(visual, dict):
+        return
+    check(isinstance(visual.get("frameManifestRef"), str) and bool(visual["frameManifestRef"].strip()),
+          f"segment {segment_id} visualVerification requires frameManifestRef")
+    frame_refs = visual.get("frameRefs")
+    check(isinstance(frame_refs, list) and len(frame_refs) >= 3 and all(isinstance(ref, str) and ref.strip() for ref in frame_refs),
+          f"segment {segment_id} visualVerification requires start/middle/end frameRefs")
+    observed = visual.get("observedVisuals")
+    check(isinstance(observed, str) and bool(observed.strip())
+          and not any(term in observed.lower() for term in ("希望出现", "想要", "wish", "want to show")),
+          f"segment {segment_id} observedVisuals must describe actual frames, not a desired shot")
+    check(isinstance(segment.get("narrationStartMs"), int) and isinstance(segment.get("narrationEndMs"), int)
+          and segment.get("narrationStartMs", -1) >= 0 and segment.get("narrationEndMs", 0) > segment.get("narrationStartMs", 0),
+          f"segment {segment_id} requires positive narrationStartMs/narrationEndMs")
+    check(isinstance(segment.get("narrationText"), str) and bool(str(segment.get("narrationText")).strip()),
+          f"segment {segment_id} requires narrationText")
+    narrative_claim = segment.get("narrativeClaim")
+    check(isinstance(narrative_claim, dict) and isinstance(narrative_claim.get("type"), str)
+          and isinstance(narrative_claim.get("minimumVisibleEvidence"), str)
+          and bool(str(narrative_claim.get("minimumVisibleEvidence") or "").strip()),
+          f"segment {segment_id} requires narrativeClaim type and minimumVisibleEvidence")
+    semantic = segment.get("semanticAlignment")
+    check(isinstance(semantic, dict) and semantic.get("status") in {"direct_match", "partial_match", "semantic_mismatch", "not_applicable"},
+          f"segment {segment_id} requires a valid semanticAlignment status")
+    check(isinstance(semantic, dict) and isinstance(semantic.get("evidence"), str) and bool(str(semantic.get("evidence") or "").strip()),
+          f"segment {segment_id} semanticAlignment requires actual visual evidence")
+    beat_ids = segment.get("semanticBeatIds")
+    check(isinstance(beat_ids, list) and bool(beat_ids) and all(isinstance(b, str) and b in beat_index for b in beat_ids),
+          f"segment {segment_id} requires semanticBeatIds from the semantic beat table")
+    if isinstance(beat_ids, list) and all(isinstance(b, str) and b in beat_index for b in beat_ids):
+        check(any(segment.get("outputStartMs", 0) < beat_index[b]["outputEndMs"] and segment.get("outputEndMs", 0) > beat_index[b]["outputStartMs"] for b in beat_ids),
+              f"segment {segment_id} does not overlap its semantic beat output range")
+    if isinstance(semantic, dict):
+        check(not (semantic.get("status") in {"partial_match", "semantic_mismatch"} and plan_status == "approved_for_g4"),
+              f"approved segment {segment_id} cannot have {semantic.get('status')}")
+    # Issue ㉗: mappingMode vocabulary and duration consistency are checked in EVERY
+    # mode — a review-stage plan must never carry values the approval stage rejects.
+    mapping = segment.get("mappingMode", "one_to_one")
+    check(mapping in {"one_to_one", "trim"}, f"segment {segment_id} mappingMode is not allowed")
+    output_start, output_end = segment.get("outputStartMs"), segment.get("outputEndMs")
+    output_duration = segment.get("outputDurationMs")
+    if isinstance(start, int) and isinstance(end, int):
+        if isinstance(output_start, int) and isinstance(output_end, int) and isinstance(output_duration, int):
+            check(output_duration == output_end - output_start, f"segment {segment_id} outputDurationMs must match output timeline")
+            if mapping == "one_to_one":
+                check(output_duration == end - start, f"segment {segment_id} one_to_one output/source durations differ")
+            if mapping == "trim":
+                check(output_duration <= end - start, f"segment {segment_id} trim cannot extend source duration")
+    if plan_status == "approved_for_g4":
+        check(isinstance(output_start, int) and isinstance(output_end, int) and output_end > output_start,
+              f"approved segment {segment_id} requires positive outputStartMs/outputEndMs")
+
+
+def validate_packaging(plan: dict) -> None:
+    packaging = plan.get("packagingDecisions")
+    if packaging is None:
+        return
+    if not isinstance(packaging, dict):
+        ERRORS.append("packagingDecisions must be an object when present")
+        return
+    cover_ms = packaging.get("coverFrameMs")
+    check(cover_ms is None or (isinstance(cover_ms, int) and not isinstance(cover_ms, bool) and cover_ms >= 0),
+          "packagingDecisions.coverFrameMs must be a non-negative integer")
+    cards = packaging.get("chapterCards", [])
+    if not isinstance(cards, list):
+        ERRORS.append("packagingDecisions.chapterCards must be a list")
+        return
+    timeline_total = plan.get("timelineDurationMs")
+    check(isinstance(timeline_total, int) and timeline_total > 0,
+          "packagingDecisions require a positive timelineDurationMs")
+    previous_end = 0
+    for index, card in enumerate(cards, 1):
+        if not isinstance(card, dict):
+            ERRORS.append(f"packaging chapter card {index} must be an object")
+            continue
+        start, end = card.get("startMs"), card.get("endMs")
+        check(isinstance(start, int) and isinstance(end, int) and end > start,
+              f"packaging chapter card {index} needs integer startMs/endMs with end > start")
+        check(bool(str(card.get("title") or "").strip()), f"packaging chapter card {index} requires a title")
+        check(start >= previous_end, f"packaging chapter card {index} overlaps the previous card")
+        if isinstance(end, int) and isinstance(timeline_total, int):
+            check(end <= timeline_total, f"packaging chapter card {index} [{start},{end}) exceeds timelineDurationMs {timeline_total}")
+        if isinstance(end, int):
+            previous_end = end
+
+
+def validate_review_and_approval(plan: dict, plan_status: str, args, subject_confirmation, ledger, segments) -> None:
+    review = plan.get("timelineReview")
+    # Issue ㉗: the status vocabulary is enforced in every mode, not only at approval.
+    check(review is None or (isinstance(review, dict) and review.get("status") in {"pending", "confirmed"}),
+          "timelineReview.status must be pending or confirmed")
+    if plan_status != "approved_for_g4":
+        return
+    check(isinstance(review, dict) and review.get("status") == "confirmed",
+          "approved_for_g4 plan requires confirmed timelineReview")
+    if isinstance(review, dict):
+        for field in ("confirmedBy", "confirmedAt", "feedback", "basisRefs"):
+            check(bool(review.get(field)), f"approved_for_g4 plan requires timelineReview.{field}")
+        refs = review.get("basisRefs")
+        if isinstance(refs, list) and all(isinstance(ref, str) and ref.strip() for ref in refs):
+            normalized = {normalized_ref(ref) for ref in refs}
+            if subject_confirmation is not None:
+                check(normalized_ref(str(args.subject_confirmation)) in normalized,
+                      "approved_for_g4 timelineReview.basisRefs must include the subject confirmation")
+            if ledger is not None:
+                check(normalized_ref(str(args.ledger)) in normalized,
+                      "approved_for_g4 timelineReview.basisRefs must include the observation ledger")
+        else:
+            ERRORS.append("timelineReview.basisRefs must be a non-empty list of references")
+    check(not any(segment.get("status") in {"pending", "verified_candidate"}
+                  or segment.get("visualVerification", {}).get("status") != "verified" for segment in segments),
+          "approved_for_g4 plan cannot contain pending or verified_candidate segments")
+    approval = plan.get("g3Approval")
+    check(isinstance(approval, dict), "approved_for_g4 plan requires g3Approval")
+    if isinstance(approval, dict):
+        for field in ("approvedBy", "approvedAt", "basisRefs"):
+            check(bool(approval.get(field)), f"approved_for_g4 plan requires g3Approval.{field}")
+        refs = approval.get("basisRefs")
+        check(isinstance(refs, list) and bool(refs) and all(isinstance(ref, str) and ref.strip() for ref in refs),
+              "g3Approval.basisRefs must be a non-empty list of references")
 
 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
+    except SoftFail:
+        # A violation already reached the batch list; report everything collected.
+        raise SystemExit(report(None, 0))
     except (OSError, ValueError, json.JSONDecodeError) as error:
         # Keep failures machine-readable and safe for Windows console encodings.
         print(json.dumps({"status": "invalid", "error": str(error)}, ensure_ascii=True))

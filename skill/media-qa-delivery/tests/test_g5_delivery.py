@@ -73,6 +73,20 @@ class G5DeliveryTest(unittest.TestCase):
         result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
         self.assertIn("chapter clip count must be 3 to 5", result["errors"])
 
+    def test_chapter_segments_accept_ids_or_objects(self):
+        # Issue ㉜: dict segments used to crash the validator with an unhashable TypeError.
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        trace = json.loads((self.bundle / "source-timecode-list.json").read_text(encoding="utf-8"))
+        for chapter in trace["chapters"]:
+            chapter["segments"] = [{"segmentId": sid, "role": "cover"} for sid in chapter["segments"]]
+        self.json("source-timecode-list.json", trace)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle)
+        self.assertEqual(result["status"], "valid")
+        trace["chapters"][0]["segments"] = [{"chapterId": "not-a-segment"}]
+        self.json("source-timecode-list.json", trace)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("chapter traceability failed: c0", result["errors"])
+
     def test_rejects_missing_required_edit_timeline(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
         (self.bundle / "edit-timeline.md").unlink()

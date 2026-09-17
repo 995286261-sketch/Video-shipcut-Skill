@@ -502,6 +502,67 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.assertNotEqual(0, code)
         self.assertIn("layoutTier", output)
 
+    def test_batch_report_collects_every_violation(self):
+        # Issue ㉕: one run must surface ALL leaf violations, not stop at the first.
+        decision = self.decision()
+        plan = self.plan(decision, sourceAudioPolicy="keep", humanReviewPoints=[])
+        code, output = self.run_cli(plan, decision)
+        self.assertEqual(2, code)
+        payload = json.loads(output.strip().splitlines()[-1])
+        self.assertEqual("invalid", payload["status"])
+        self.assertEqual(payload["error"], payload["errors"][0])
+        self.assertGreaterEqual(len(payload["errors"]), 2)
+        joined = " ".join(payload["errors"])
+        self.assertIn("source audio", joined)
+        self.assertIn("humanReviewPoints", joined)
+
+    def test_review_mode_rejects_what_approval_mode_rejects(self):
+        # Issue ㉗: mappingMode vocabulary and duration consistency apply in EVERY mode.
+        decision = self.decision()
+        base = json.loads(self.plan(decision).read_text(encoding="utf-8"))
+        cases = []
+        forbidden = dict(base)
+        forbidden["segments"] = [dict(base["segments"][0], mappingMode="sequence")]
+        cases.append((self.write_json("plan-forbidden-mode.json", forbidden), "mappingMode"))
+        drifted = dict(base)
+        drifted["segments"] = [dict(base["segments"][0], outputDurationMs=500)]
+        cases.append((self.write_json("plan-drifted.json", drifted), "outputDurationMs"))
+        bad_review = dict(base)
+        bad_review["timelineReview"] = {"status": "confirmed_by_user"}
+        cases.append((self.write_json("plan-bad-review.json", bad_review), "timelineReview.status"))
+        for plan_path, marker in cases:
+            code, output = self.run_cli(plan_path, decision)
+            self.assertEqual(2, code, output)
+            self.assertIn(marker, output)
+
+    def test_packaging_decisions_reject_negative_cover_and_out_of_range_cards(self):
+        decision = self.decision()
+        plan = self.plan(decision, timelineDurationMs=1_000, packagingDecisions={
+            "coverFrameMs": -5,
+            "chapterCards": [{"startMs": 0, "endMs": 5_000, "title": "章节一", "segmentIds": ["s1"]}],
+        })
+        code, output = self.run_cli(plan, decision)
+        self.assertEqual(2, code)
+        payload = json.loads(output.strip().splitlines()[-1])
+        joined = " ".join(payload["errors"])
+        self.assertIn("coverFrameMs", joined)
+        self.assertIn("exceeds timelineDurationMs", joined)
+
+    def test_packaging_chapter_cards_need_valid_ranges_and_title(self):
+        decision = self.decision()
+        base = json.loads(self.plan(decision).read_text(encoding="utf-8"))
+        base["timelineDurationMs"] = 1_000
+        base["packagingDecisions"] = {"chapterCards": [
+            {"startMs": 0, "endMs": -1, "title": "错误"},
+            {"startMs": 10, "endMs": 1_000, "title": ""},
+        ]}
+        code, output = self.run_cli(self.write_json("plan-cards.json", base), decision)
+        self.assertEqual(2, code)
+        payload = json.loads(output.strip().splitlines()[-1])
+        joined = " ".join(payload["errors"])
+        self.assertIn("end > start", joined)
+        self.assertIn("requires a title", joined)
+
 
 if __name__ == "__main__":
     unittest.main()

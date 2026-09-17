@@ -23,6 +23,32 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+# Mirrors p0-c-pipeline/project_layout.py by contract (skills never import each other).
+G4_DIRECTORY = "G4-剪辑与渲染"
+WORKBENCH_DIRECTORY = "工作台"
+
+
+def enforce_g4_root(plan_path: Path, output_dir: Path) -> None:
+    """Issue ㉚: a plan that lives inside a formal project (工作台/<projectId>/...)
+    can only produce artifacts G4 approval will accept when they sit under that
+    project's canonical G4 directory. Deriving the target from --output-dir
+    alone let tiger-intro-001 land in a wrongly-named directory, which only
+    surfaced at approve time. Non-工作台 plans (temp fixtures) stay unmanaged."""
+    resolved = plan_path.resolve()
+    project_root = None
+    for parent in resolved.parents:
+        if parent.parent is not None and parent.parent.name == WORKBENCH_DIRECTORY:
+            project_root = parent
+            break
+    if project_root is None:
+        return
+    expected = project_root / G4_DIRECTORY
+    actual = output_dir.resolve()
+    if actual != expected and expected not in actual.parents:
+        fail(f"--output-dir must be the project's G4 directory ({expected} or a subdirectory), got {actual}; "
+             "G4 approval only accepts artifacts under the active G4 directory (issue ㉚)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", required=True, type=Path)
@@ -32,6 +58,7 @@ def main() -> int:
     parser.add_argument("--handle-ms", type=int, default=0)
     parser.add_argument("--force", action="store_true", help="overwrite an existing derived manifest intentionally")
     args = parser.parse_args()
+    enforce_g4_root(args.plan, args.output_dir)
     plan, evidence, pack_manifest = load(args.plan), load(args.evidence), load(args.source_pack / "material-pack.json")
     if plan.get("status") != "approved_for_g4":
         fail("G4 requires plan status approved_for_g4")
