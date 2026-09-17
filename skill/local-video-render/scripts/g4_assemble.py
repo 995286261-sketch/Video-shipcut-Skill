@@ -218,6 +218,113 @@ def trim_ass_cues(text: str, card_ranges: list[tuple[int, int]]) -> tuple[str, i
     return "\n".join(lines) + "\n", trimmed
 
 
+def _cmap_codepoints(data: bytes, off: int) -> set[int]:
+    """Codepoints of one cmap subtable (formats 0/4/6/12); stdlib-only parser
+    because drawtext silently renders tofu for missing glyphs (issue ㉛)."""
+    fmt = int.from_bytes(data[off:off + 2], "big")
+    if fmt == 0:
+        return {i for i in range(256) if data[off + 2 + i]}
+    if fmt == 4:
+        seg_count = int.from_bytes(data[off + 6:off + 8], "big") // 2
+        cursor = off + 14
+        ends = [int.from_bytes(data[cursor + 2 * i:cursor + 2 * i + 2], "big") for i in range(seg_count)]
+        cursor += 2 * seg_count + 2
+        starts = [int.from_bytes(data[cursor + 2 * i:cursor + 2 * i + 2], "big") for i in range(seg_count)]
+        cursor += 2 * seg_count
+        deltas = [int.from_bytes(data[cursor + 2 * i:cursor + 2 * i + 2], "big") for i in range(seg_count)]
+        cursor += 2 * seg_count
+        range_off_base = cursor
+        result: set[int] = set()
+        for i in range(seg_count):
+            start, end = starts[i], ends[i]
+            if start == 0xFFFF:
+                continue
+            range_offset = int.from_bytes(data[range_off_base + 2 * i:range_off_base + 2 * i + 2], "big")
+            for cp in range(start, min(end, 0xFFFF) + 1):
+                if range_offset:
+                    probe = range_off_base + 2 * i + range_offset + (cp - start) * 2
+                    gid = int.from_bytes(data[probe:probe + 2], "big")
+                    if gid:
+                        result.add(cp)
+                elif (cp + deltas[i]) & 0xFFFF:
+                    result.add(cp)
+        return result
+    if fmt == 6:
+        first = int.from_bytes(data[off + 6:off + 8], "big")
+        count = int.from_bytes(data[off + 8:off + 10], "big")
+        return {first + i for i in range(count) if data[off + 10 + i]}
+    if fmt == 12:
+        groups = int.from_bytes(data[off + 12:off + 16], "big")
+        result = set()
+        for i in range(groups):
+            base = off + 16 + 12 * i
+            start = int.from_bytes(data[base:base + 4], "big")
+            end = int.from_bytes(data[base + 4:base + 8], "big")
+            gid = int.from_bytes(data[base + 8:base + 12], "big")
+            if gid and end - start < 2_000_000:
+                result.update(range(start, end + 1))
+        return result
+    raise ValueError(f"unsupported cmap subtable format {fmt}")
+
+
+def font_face_cmaps(font: Path) -> list[set[int]]:
+    """One codepoint set per face, in file order. `ttcf` collections matter here:
+    FreeType/drawtext renders the FIRST face, which on PingFang.ttc lacks
+    several simplified-Chinese glyphs that later faces carry (issue ㉛)."""
+    data = font.read_bytes()
+    if data[:4] == b"ttcf":
+        face_count = int.from_bytes(data[8:12], "big")
+        offsets = [int.from_bytes(data[12 + 4 * i:16 + 4 * i], "big") for i in range(face_count)]
+    else:
+        offsets = [0]
+    faces = []
+    for base in offsets:
+        if len(data) < base + 12:
+            raise ValueError("truncated font header")
+        num_tables = int.from_bytes(data[base + 4:base + 6], "big")
+        cmap_off = None
+        for i in range(num_tables):
+            record = base + 12 + 16 * i
+            if data[record:record + 4] == b"cmap":
+                cmap_off = int.from_bytes(data[record + 8:record + 12], "big")
+        if cmap_off is None:
+            raise ValueError("font has no cmap table")
+        table_count = int.from_bytes(data[cmap_off + 2:cmap_off + 4], "big")
+        cps: set[int] = set()
+        for i in range(table_count):
+            entry = cmap_off + 4 + 8 * i
+            platform = int.from_bytes(data[entry:entry + 2], "big")
+            encoding = int.from_bytes(data[entry + 2:entry + 4], "big")
+            if platform == 0 or (platform == 3 and encoding in (1, 10)):
+                cps |= _cmap_codepoints(data, cmap_off + int.from_bytes(data[entry + 4:entry + 8], "big"))
+        faces.append(cps)
+    return faces
+
+
+def shown(codepoints: set[int]) -> str:
+    return "、".join(sorted({chr(cp) for cp in codepoints}))
+
+
+def require_glyph_coverage(font: Path, text: str, label: str) -> None:
+    """Fail before ffmpeg does: a missing glyph in drawtext output is a silent
+    tofu rectangle on the client's deliverable (issue ㉛)."""
+    wanted = {ord(ch) for ch in text if not ch.isspace()}
+    if not wanted:
+        return
+    try:
+        faces = font_face_cmaps(font)
+    except ValueError as error:
+        fail(f"{label} font {font.name} cannot be checked for glyph coverage: {error}; refusing to risk silent tofu (issue ㉛)")
+    covered_all = set().union(*faces)
+    hard_missing = wanted - covered_all
+    if hard_missing:
+        fail(f"{label} font {font.name} has no glyphs for 「{shown(hard_missing)}」; drawtext would render tofu (issue ㉛) — pick a covering font or burn the text in via libass")
+    if len(faces) > 1:
+        first_missing = wanted - faces[0]
+        if first_missing:
+            fail(f"{label} font {font.name} 是 TTC 字体集合，drawtext 只会渲染第一个 face，而「{shown(first_missing)}」只在其后的 face 中（㉛ 活测：PingFang.ttc 首 face 缺简体「战场队」渲成豆腐块）——改用单 face 字体文件，或走 libass 烧录路线")
+
+
 def drawtext_filter(font: Path, text_file: Path, fontsize: int, position: str, enable: str | None) -> str:
     font_arg = str(font.resolve()).replace(":", "\\:")
     text_arg = str(text_file.resolve()).replace(":", "\\:")
@@ -252,6 +359,7 @@ def build_chapter_card_filters(contract: dict, work: Path, timeline_ms: int) -> 
         if start < previous_end or end > timeline_ms:
             fail(f"chapter card {index} [{start},{end}) overlaps a previous card or exceeds the timeline {timeline_ms}ms")
         previous_end = end
+        require_glyph_coverage(font, title, f"chapter card {index}")
         text_file = work / f"chapter-card-{index}.txt"
         text_file.write_text(title, encoding="utf-8")
         filters.append(drawtext_filter(font, text_file, fontsize, position, f"between(t,{start / 1000:.3f},{end / 1000:.3f})"))
@@ -268,6 +376,7 @@ def build_title_bar_filter(contract: dict, work: Path) -> str:
     margin_pct = float(contract.get("marginPct", 8))
     if not 0 < margin_pct < 50:
         fail("title bar marginPct must be between 0 and 50")
+    require_glyph_coverage(font, title, "title bar")
     text_file = work / "title-bar.txt"
     text_file.write_text(title, encoding="utf-8")
     return drawtext_filter(font, text_file, fontsize, f"y=h*{margin_pct / 100:.4f}", None)
@@ -285,6 +394,7 @@ def render_cover(contract_path: Path, work: Path) -> Path:
         fail("cover contract requires output")
     output = Path(raw_output).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
+    require_glyph_coverage(font, title, "cover title")
     text_file = work / "cover-title.txt"
     text_file.write_text(title, encoding="utf-8")
     fontsize = int(contract.get("fontsize", 64))
