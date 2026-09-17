@@ -97,9 +97,27 @@ def decode_probe(path: Path) -> tuple[bool, str]:
     return result.returncode == 0, (result.stderr or "").strip()[:200]
 
 
+def load_terms_file(path: Path) -> tuple[list[dict], dict, list]:
+    """Read a BGM-检索词 contract; returns (terms, filters, errors). Mirrors
+    music_search_netease.py — duplicated by design, search-terms-contract.md is truth."""
+    errors: list = []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        return [], {}, [{"field": "termsFile", "error": str(error)[:200]}]
+    if payload.get("purpose") != "bgm_search_terms":
+        errors.append({"field": "termsFile", "error": "not a bgm_search_terms contract"})
+    terms = payload.get("terms") or []
+    if not terms:
+        errors.append({"field": "termsFile", "error": "contract carries no terms"})
+    return terms, payload.get("filters") or {}, errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--query", default=None, help="free-text mood/genre query")
+    parser.add_argument("--terms-file", default=None, type=Path,
+                        help="BGM-检索词-v0.1.json from music_search_terms.py (searches every term, merges)")
     parser.add_argument("--tags", default=None, help="comma-separated freesound tags")
     parser.add_argument("--similar-to", type=int, default=None, help="Freesound sound id for content-based similarity search")
     parser.add_argument("--duration-min", type=float, default=15.0)
@@ -109,8 +127,27 @@ def main() -> int:
     parser.add_argument("--no-download", action="store_true", help="search and filter only; do not fetch previews")
     args = parser.parse_args()
 
-    if args.query is None and args.tags is None and args.similar_to is None:
-        emit({"status": "invalid", "errors": [{"field": "query", "rule": "need --query, --tags or --similar-to"}]})
+    if args.query is not None and args.terms_file is not None:
+        emit({"status": "invalid", "errors": [{"field": "query",
+              "rule": "exactly one of --query or --terms-file is required"}]})
+        return 2
+    queries: list[str] = []
+    if args.terms_file is not None:
+        records, filters, errors = load_terms_file(args.terms_file)
+        if errors:
+            emit({"status": "invalid", "errors": errors})
+            return 2
+        queries = [str(record.get("term") or "").strip() for record in records]
+        queries = [query for query in queries if query]
+        if not queries:
+            emit({"status": "invalid", "errors": [{"field": "termsFile", "error": "no usable term values"}]})
+            return 2
+        if filters.get("durationMinSec"):
+            args.duration_min = max(args.duration_min, float(filters["durationMinSec"]))
+    elif args.query:
+        queries = [args.query]
+    if not queries and args.tags is None and args.similar_to is None:
+        emit({"status": "invalid", "errors": [{"field": "query", "rule": "need --query, --terms-file, --tags or --similar-to"}]})
         return 2
     token = (os.environ.get("MUSIC_EXPERT_FREESOUND_TOKEN") or os.environ.get("P0C_FREESOUND_TOKEN") or "").strip()
     if not token:
@@ -121,20 +158,36 @@ def main() -> int:
         emit({"status": "blocked", "blockers": [{"type": "missing_toolchain", "detail": "ffmpeg required for the decode probe of downloads"}]})
         return 2
 
+    results, blockers = [], []
     if args.similar_to is not None:
         payload, error = api_get(token, f"/sounds/{args.similar_to}/similar/", {"page_size": args.max_results, "fields": SEARCH_FIELDS})
+        if payload is None:
+            emit({"status": "blocked", "blockers": [error]})
+            return 2
+        results = payload.get("results", [])
     else:
-        params = {"fields": SEARCH_FIELDS, "page_size": max(args.max_results * 3, args.max_results), "min_duration": args.duration_min, "max_duration": args.duration_max}
-        if args.query:
-            params["query"] = args.query
-        if args.tags:
-            params["filter"] = " ".join(f'tag:"{tag.strip()}"' for tag in args.tags.split(",") if tag.strip())
-        payload, error = api_get(token, "/search/text/", params)
-    if payload is None:
-        emit({"status": "blocked", "blockers": [error]})
-        return 2
-
-    results = payload.get("results", [])
+        for query in queries:
+            params = {"fields": SEARCH_FIELDS, "page_size": max(args.max_results * 3, args.max_results), "min_duration": args.duration_min, "max_duration": args.duration_max}
+            if query:
+                params["query"] = query
+            if args.tags:
+                params["filter"] = " ".join(f'tag:"{tag.strip()}"' for tag in args.tags.split(",") if tag.strip())
+            payload, error = api_get(token, "/search/text/", params)
+            if payload is None:
+                blockers.append({"query": query, **error})
+                continue
+            results.extend(payload.get("results", []))
+        if blockers and len(blockers) == len(queries):
+            emit({"status": "blocked", "blockers": blockers})
+            return 2
+    seen_ids, unique = set(), []
+    for item in results:
+        sound_id = item.get("id")
+        if sound_id in seen_ids:
+            continue
+        seen_ids.add(sound_id)
+        unique.append(item)
+    results = unique
     candidates_dir = args.output_dir / "candidates"
     candidates = []
     excluded = []
@@ -190,7 +243,9 @@ def main() -> int:
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps({
         "schemaVersion": "0.1", "purpose": "bgm_candidate_pool", "source": "freesound",
-        "query": {"text": args.query, "tags": args.tags, "similarTo": args.similar_to},
+        "query": {"text": args.query, "tags": args.tags, "similarTo": args.similar_to,
+                  "termsFile": str(args.terms_file) if args.terms_file else None, "terms": queries or None},
+        "partialBlockers": blockers,
         "retrievedAt": now(), "candidates": kept, "excluded": excluded,
         "sufficiency": {"count": len(kept), "minimumExpected": 3},
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

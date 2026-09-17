@@ -30,7 +30,7 @@
 ```
 
 - `filters.durationMinSec` 由 `--timeline-ms` 推导（轨必须盖得住成片，向上取整）；`bpmRange` 取自风格简报（有则填）。
-- 消费方：`music_search_netease.py --terms-file <该 json>` 逐词检索、合池去重，出一份候选清单；Freesound 轨道接线时同样消费。
+- 消费方（两轨均已实现）：`music_search_netease.py --terms-file <该 json>` 与 `music_search_freesound.py --terms-file <该 json>` 均逐词检索、合池去重、按 `filters.durationMinSec` 抬时长下限，各出一份候选清单。通道路由按用户 2026-09-17 定案：对外项目默认 Freesound 轨，个人/内测默认网易云轨，通道在 G1 回显卡上可切换（见 sourcing-contract 接缝与 video-edit-plan SKILL《G1 末：找乐编排》第 3 步）。
 - 同时渲染《BGM-检索词回显》固定表格卡（`music_echo` 同源样式），与 JSON 一起作为证据产物并入节点最终回显卡。
 
 ## 与节点的接缝（接入主线时只做这三件事，专员侧不再动）

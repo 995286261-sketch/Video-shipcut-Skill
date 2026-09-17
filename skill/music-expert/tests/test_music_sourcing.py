@@ -133,6 +133,55 @@ class SearchBlockedTest(unittest.TestCase):
         self.assertEqual(2, result.returncode)
         self.assertEqual("invalid", json.loads(result.stdout)["status"])
 
+    def run_search(self, tmp, env, *extra):
+        result = subprocess.run([PYTHON, str(SEARCH), "--output-dir", tmp, *extra],
+                                capture_output=True, text=True, encoding="utf-8", env=env)
+        return result.returncode, json.loads(result.stdout)
+
+    def test_terms_file_valid_contract_reaches_token_gate(self):
+        # A well-formed terms card parses and only then hits the (deliberately empty)
+        # token gate — proving the search-terms contract is consumable by Freesound too.
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        card = Path(tmp.name) / "terms.json"
+        card.write_text(json.dumps({"purpose": "bgm_search_terms",
+                                    "terms": [{"term": "epic", "rationale": "r", "source": "theme"}],
+                                    "filters": {"durationMinSec": 120}}), encoding="utf-8")
+        env = dict(os.environ)
+        env["P0C_FREESOUND_TOKEN"] = ""
+        code, payload = self.run_search(tmp.name, env, "--terms-file", str(card), "--no-download")
+        self.assertEqual(2, code)
+        self.assertEqual("missing_token", payload["blockers"][0]["type"])
+
+    def test_terms_file_rejects_foreign_or_empty_contract(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = dict(os.environ)
+        env["P0C_FREESOUND_TOKEN"] = "dummy"
+        foreign = Path(tmp.name) / "foreign.json"
+        foreign.write_text(json.dumps({"purpose": "something_else", "terms": []}), encoding="utf-8")
+        code, payload = self.run_search(tmp.name, env, "--terms-file", str(foreign))
+        self.assertEqual(2, code)
+        self.assertEqual("invalid", payload["status"])
+        self.assertIn("bgm_search_terms", payload["errors"][0]["error"])
+        both = Path(tmp.name) / "empty.json"
+        both.write_text(json.dumps({"purpose": "bgm_search_terms", "terms": []}), encoding="utf-8")
+        code, payload = self.run_search(tmp.name, env, "--terms-file", str(both))
+        self.assertEqual(2, code)
+        self.assertIn("no terms", payload["errors"][0]["error"])
+
+    def test_query_and_terms_file_are_mutually_exclusive(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = dict(os.environ)
+        env["P0C_FREESOUND_TOKEN"] = "dummy"
+        card = Path(tmp.name) / "terms.json"
+        card.write_text(json.dumps({"purpose": "bgm_search_terms",
+                                    "terms": [{"term": "epic", "rationale": "r", "source": "theme"}]}), encoding="utf-8")
+        code, payload = self.run_search(tmp.name, env, "--query", "x", "--terms-file", str(card))
+        self.assertEqual(2, code)
+        self.assertIn("exactly one", payload["errors"][0]["rule"])
+
 
 class RecommendTest(unittest.TestCase):
     def setUp(self):
