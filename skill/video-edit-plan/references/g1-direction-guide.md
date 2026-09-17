@@ -98,6 +98,8 @@ G1 继承 G0 已收集的信息（受众、平台、风格、BGM），只补充 
 
 `supported` 必须至少有一条存在于素材包 `03_事实依据/` 下的证据路径和定位信息。`pending` 可没有证据，但在简报中必须明确为"待补事实"，不可被视为已确认事实。用户确认标题不等于事实核验。
 
+`styleRules` 登记后不算闭环，必须条条有着落（N8 ㉘：tiger 的"顶部标题栏/双语字幕"在 G1 写了、G3 机器合同没接、G4 只能照合同渲染，风格规则静默丢失）：每条要么落入 G3 机器合同的结构化字段（字幕布局、`packagingDecisions`、遮蔽/图形合同等），要么在 G3 门禁卡上以《未落入合同的风格规则》清单逐条列出、由用户拍板"接受省略"或重开 G3。禁止靠人肉比对方向简报，禁止默认省略。
+
 `coreQuestion`、`audience`、`coreViewpoint`、`outputPreferences`、`styleRules` 和 `expressionBoundaries` 为必填。`outputPreferences` 必须是对象，且包含非空 `aspectRatio` 与正秒数（或两个递增正秒数）`targetDurationSec`；新项目还必须带非空 `usagePurpose`。`bgmDecision` 必须为 `provided`、`use_library_later` 或 `no_bgm`。`directionChoice` 必须记录选中的方向卡；自定义方向使用 `source: custom`。`styleRules`、`expressionBoundaries` 和 `claims` 必须为数组；没有额外规则时必须显式传入 `[]`，不能省略字段。任何通过 `validate` 的输入都必须可安全写入简报。
 
 ## 写入条件与产物

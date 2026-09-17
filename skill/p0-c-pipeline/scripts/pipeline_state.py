@@ -20,8 +20,14 @@ def now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+# Issue ③: `--unicode` mirrors material_pack.py so Chinese state output stays
+# readable without a decode pipe at every node. Machine consumers keep the
+# default escaped form.
+UNICODE_OUTPUT = False
+
+
 def emit(value: dict, code: int = 0) -> None:
-    print(json.dumps(value, ensure_ascii=True, indent=2))
+    print(json.dumps(value, ensure_ascii=not UNICODE_OUTPUT, indent=2))
     raise SystemExit(code)
 
 
@@ -432,9 +438,13 @@ def parser() -> argparse.ArgumentParser:
     approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)
     reopen_g3 = sub.add_parser("reopen-g3"); reopen_g3.add_argument("--state", required=True); reopen_g3.add_argument("--reason", required=True); reopen_g3.add_argument("--rework-ref", required=True); reopen_g3.set_defaults(func=command_reopen_g3)
+    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3):
+        command.add_argument("--unicode", action="store_true", help="Emit readable Unicode JSON for UTF-8 terminals")
     return result
 
 
 if __name__ == "__main__":
     args = parser().parse_args()
+    if getattr(args, "unicode", False):
+        UNICODE_OUTPUT = True
     args.func(args)

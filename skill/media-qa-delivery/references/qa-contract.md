@@ -25,6 +25,8 @@ failure-samples/README.md
 
 Chapter count may be 3–5. The internal edit can contain more fine-grained segments; the traceability JSON must expand each chapter to those segments and then to original source timecodes.
 
+The exact JSON shape of every component above (field names, required keys, artifact hashing, `--media` re-probe rules) is fixed in [Delivery Bundle Schema](delivery-bundle-schema.md) — the single source of truth shared by `g5_build_delivery_manifest.py` and `g5_validate_delivery.py` (N8 ㉜㉝). Any field expectation change must edit that contract first.
+
 ## Contract entry point
 
 `edit-timeline.md` is mandatory. It is the approved G3 row-by-row timeline, covering the full output without gaps or overlaps. Each row must state output start/end, source asset and source time interval, crop/mask/replace treatment, motion, narration, visible text, and BGM/source-audio rule. The final delivery manifest must include it in `artifacts`.

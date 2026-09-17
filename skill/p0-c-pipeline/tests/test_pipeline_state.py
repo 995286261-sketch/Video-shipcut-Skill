@@ -66,6 +66,20 @@ class PipelineStateTest(unittest.TestCase):
     def init(self):
         return self.run_cli("init", "--project-id", "fixture", "--source-pack", self.pack, "--state", self.state, "--authorization", "authorized", "--distribution", "local_only")
 
+    def run_raw(self, *args):
+        result = subprocess.run([sys.executable, str(SCRIPT), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        return result.stdout
+
+    def test_unicode_flag_emits_readable_chinese(self):
+        # Issue ③: --unicode matches material_pack.py so agents stop piping decode.
+        self.pack.write_text(json.dumps({"packStatus": "complete", "bgm": {"decision": "use_library_later", "libraryPending": True, "preference": "高燃电子"}}, ensure_ascii=False), encoding="utf-8")
+        self.init()
+        self.assertIn("\\u9ad8\\u71c3", self.run_raw("status", "--state", self.state))  # default stays escaped
+        readable = self.run_raw("status", "--state", self.state, "--unicode")
+        self.assertIn("高燃电子", readable)
+        self.assertEqual("高燃电子", json.loads(readable)["bgm"]["preference"])  # still machine-parseable
+
     def receipt(self, node, *, project_id="fixture", card_type=None, missing_item=None, incomplete_item=None, basis_refs=None):
         evidence = self.files[node]
         checklist = []
