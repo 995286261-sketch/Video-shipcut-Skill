@@ -190,7 +190,8 @@ def main() -> int:
 
     binary = resolve_bl(args.bl)
     available, detail = probe_capability(binary)
-    echo_path = args.output.parent / "BGM-试听笔记回显-v0.1.md"
+    from versioned_output import next_versioned  # Issue ⑬: multi-run echoes never overwrite
+    echo_path, _ = next_versioned(args.output.parent, "BGM-试听笔记回显", ".md")
     if not available:
         result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes",
                   "capability": {"available": False, "audioModel": None, "detail": detail},

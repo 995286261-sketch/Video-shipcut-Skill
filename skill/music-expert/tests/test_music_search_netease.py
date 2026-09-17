@@ -50,6 +50,11 @@ class PureFunctionTest(unittest.TestCase):
     def test_ok_payload_passes(self):
         self.assertIsNone(netease.classify_block({"code": 200, "result": {"songs": [FIXTURE_SONG]}}))
 
+    def test_preview_lands_directly_in_output_dir(self):  # Issue ⑪: --output-dir 即落盘目录，不再暗藏一层
+        source = SEARCH.read_text(encoding="utf-8")
+        self.assertNotIn('output_dir / "candidates"', source)
+        self.assertIn("target_dir = args.output_dir", source)
+
 
 class CliBlockedTest(unittest.TestCase):
     def run_script(self, args, env=None):

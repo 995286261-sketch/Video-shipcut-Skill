@@ -68,6 +68,17 @@ class TermsTest(unittest.TestCase):
         self.assertEqual(2, result.returncode)
         self.assertEqual("styleBrief", json.loads(result.stdout)["errors"][0]["field"])
 
+    def test_rerun_bumps_version_and_keeps_history(self):  # Issue ⑧
+        first = self.run_terms(["--term", "phonk", "--note", "phonk=口头偏好整词命中"])
+        self.assertEqual(0, first.returncode, first.stdout + first.stderr)
+        second = self.run_terms(["--term", "phonk", "--note", "phonk=沿用",
+                                 "--term", "机战 燃", "--note", "机战 燃=主题翻译：机战科普"])
+        self.assertEqual(0, second.returncode, second.stdout + second.stderr)
+        payload = json.loads(second.stdout)
+        self.assertTrue(payload["contract"].endswith("BGM-检索词-v0.2.json"))
+        self.assertTrue((self.root / "out" / "BGM-检索词-v0.1.json").is_file())  # 旧版不被覆盖
+        self.assertIn("v0.2", (self.root / "out" / "BGM-检索词回显-v0.2.md").read_text(encoding="utf-8"))
+
 
 class NeteaseTermsFileTest(unittest.TestCase):
     def setUp(self):

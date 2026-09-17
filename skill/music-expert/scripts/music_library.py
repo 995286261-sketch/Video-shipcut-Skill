@@ -166,13 +166,22 @@ def append_verdict(root: Path, sha: str, text: str, project: str | None, who: st
 
 def warnings_for(card: dict, project_boundary: str | None) -> list[str]:
     warns = []
-    strength = LICENSE_STRENGTH.get(card.get("license", "unknown"), 0)
+    license_type = card.get("license", "unknown")
+    strength = LICENSE_STRENGTH.get(license_type, 0)
     if strength == 0:
-        warns.append("🔴 未清权（{}）：档案只能复用过选型记忆；进成片必须官方渠道取得并登记后 grant".format(card.get("license")))
-        if project_boundary and project_boundary != card.get("distributionBoundary"):
-            warns.append("🔴 项目边界 {} ≠ 档案许可边界 {}：不得使用".format(project_boundary, card.get("distributionBoundary")))
+        warns.append("🔴 未清权（{}）：档案只能复用过选型记忆；进成片必须官方渠道取得并登记后 grant".format(license_type))
     elif strength == 1 and card.get("attributionRequired"):
         warns.append("🟡 需署名：分发前核对 attribution 证据")
+    # Issue ⑤: the boundary check must fire for EVERY license level — a
+    # cleared-for-project track reused in another (esp. public) project is the
+    # exact red line "boundaries never widen", yet it used to be silent.
+    if project_boundary and project_boundary != card.get("distributionBoundary"):
+        if license_type == "cleared-for-project":
+            warns.append("🔴 cleared-for-project 仅限档案原项目：项目边界 {} ≠ 档案边界 {}，跨项目使用必须重新清权并登记".format(project_boundary, card.get("distributionBoundary")))
+        elif strength == 0:
+            warns.append("🔴 项目边界 {} ≠ 档案许可边界 {}：不得使用".format(project_boundary, card.get("distributionBoundary")))
+        else:
+            warns.append("🟡 项目边界 {} ≠ 档案边界 {}：分发前人工核对范围".format(project_boundary, card.get("distributionBoundary")))
     return warns
 
 
@@ -231,8 +240,22 @@ def main() -> int:
     p.add_argument("--role", choices=["anchor", "candidate"])
     p.add_argument("--project-boundary")
 
+    sub.add_parser("list")  # Issue ④: "browse the library first" is a first-class action
+
     args = parser.parse_args()
     root = args.root
+
+    if args.action == "list":
+        rows = []
+        for card_path in sorted((root / "tracks").glob("*/track.json")):
+            card = read_json(card_path)
+            first_alias = (card.get("aliases") or [{}])[0]
+            rows.append({"title": first_alias.get("title"), "artist": first_alias.get("artist"),
+                         "sha256": (card.get("sha256") or "")[:12], "license": card.get("license"),
+                         "distributionBoundary": card.get("distributionBoundary"),
+                         "roles": card.get("roles", [])})
+        emit({"status": "ok", "count": len(rows), "tracks": rows})
+        return 0
 
     if args.action == "ingest":
         sha = args.sha or (sha256_file(args.audio) if args.audio and args.audio.is_file() else None)

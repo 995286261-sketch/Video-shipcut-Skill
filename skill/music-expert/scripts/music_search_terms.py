@@ -120,10 +120,16 @@ def main() -> int:
         "distributionBoundary": "internal_test", "retrievedAt": now(),
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    terms_path = args.output_dir / "BGM-检索词-v0.1.json"
+    # Issue ⑧: never silently overwrite a card already presented to the user —
+    # json and echo share one next version so contract and card cannot drift.
+    from versioned_output import next_versioned
+    _, json_version = next_versioned(args.output_dir, "BGM-检索词", ".json")
+    _, echo_probe_version = next_versioned(args.output_dir, "BGM-检索词回显", ".md")
+    version = f"v0.{max(int(json_version.split('.')[-1]), int(echo_probe_version.split('.')[-1]))}"
+    terms_path = args.output_dir / f"BGM-检索词-{version}.json"
     terms_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    lines = ["# BGM 检索词卡 v0.1", "",
+    lines = [f"# BGM 检索词卡 {version}", "",
              f"- 目录：{args.catalog}｜分发边界：internal_test｜推导优先级：口头偏好 ＞ 主题翻译 ＞ 风格简报锚定",
              f"- 输入：偏好={preference or '无'}｜主题={args.theme or '无'}｜简报={str(args.style_brief) if args.style_brief else '无'}｜时间线={str(args.timeline_ms) + 'ms' if args.timeline_ms else '无'}",
              "", "| # | 检索词 | 来源 | 推导依据 |", "|---|---|---|---|"]
@@ -137,7 +143,7 @@ def main() -> int:
     lines += ["", f"- 过滤推导：{'；'.join(filter_bits) if filter_bits else '无'}",
               "- 纪律：词由 Agent 推导、脚本不编造曲库命中；改词=重跑本脚本；**检索词卡不设门禁口令**，真正的门禁是候选池上的「你挑一首」；网易云候选一律 uncleared-platform-catalog，试听件只用于选型。", "",
               f"- 机器合同：{terms_path}", f"- 消费：`music_search_netease.py --terms-file {terms_path}`"]
-    echo_path = args.output_dir / "BGM-检索词回显-v0.1.md"
+    echo_path = args.output_dir / f"BGM-检索词回显-{version}.md"
     echo_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     emit({"status": "completed", "terms": len(records), "contract": str(terms_path), "echo": str(echo_path),
           "filters": filters})

@@ -117,13 +117,15 @@ def authorization_has_entry(text: str) -> bool:
 
 def bgm_decision(text: str) -> str | None:
     """Read the explicit, user-facing G0 BGM decision from the requirement file."""
-    match = re.search(r"^\s*BGM decision\s*[：:]\s*(provided|use_library_later|no_bgm)\s*$", text, re.IGNORECASE | re.MULTILINE)
+    match = re.search(r"^[ \t]*BGM decision[ \t]*[：:][ \t]*(provided|use_library_later|no_bgm)[ \t]*$", text, re.IGNORECASE | re.MULTILINE)
     return match.group(1).lower() if match else None
 
 
 def bgm_preference(text: str) -> str | None:
-    """Optional verbatim music preference — the first-priority search-term input for G1."""
-    match = re.search(r"^\s*BGM preference\s*[：:]\s*(.+?)\s*$", text, re.IGNORECASE | re.MULTILINE)
+    """Optional verbatim music preference — the first-priority search-term input for G1.
+    The value must live on the same line as the key: a blank `BGM preference:` must
+    yield None, never swallow the following line (issue ①)."""
+    match = re.search(r"^[ \t]*BGM preference[ \t]*[：:][ \t]*(.*?)[ \t]*$", text, re.IGNORECASE | re.MULTILINE)
     raw = match.group(1).strip() if match else ""
     if not raw or raw.startswith(("（", "(")):  # 模板提示行不算用户输入
         return None
@@ -268,6 +270,10 @@ def register(pack: Path) -> dict:
     manifest = {**existing, "schemaVersion": "0.1", "materialPackId": existing.get("materialPackId", pack.name), "sourceAssets": sources, "audioAssets": audio, "bgm": bgm_slot(pack), "packStatus": "complete", "registeredAt": now()}
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result_payload = {"status": "completed", "pack": str(pack), "manifest": str(manifest_path), "sourceAssetCount": len(sources), "audioAssetCount": len(audio), "finishedAt": now()}
+    # Issue ⑲: the envelope must carry the fields callers probe for, so nobody
+    # mistakes a validate-shaped reply for the manifest and reads false empties.
+    result_payload["bgm"] = manifest["bgm"]
+    result_payload["audioAssets"] = [{"relativePath": entry.get("relativePath"), "sha256": (entry.get("sha256") or "")[:12]} for entry in audio]
     if analysis_pending:
         result_payload["bgmAnalysisPending"] = analysis_pending
     return result_payload

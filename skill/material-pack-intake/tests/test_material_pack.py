@@ -88,6 +88,19 @@ class MaterialPackTest(unittest.TestCase):
             manifest = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))
             self.assertIsNone(manifest["bgm"]["preference"])  # 模板提示行不算用户输入
 
+    def test_blank_preference_never_swallows_next_line(self):  # Issue ①
+        temporary, pack = self.create_pack()
+        with temporary:
+            self.fill_required_documents(pack)
+            with (pack / "01_需求说明.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nBGM decision: use_library_later\nBGM preference:\n素材及音乐使用范围：可对外发布（用户声明）\n")
+            (pack / "02_原始素材" / "clip.mp4").write_bytes(b"fixture-media")
+            code, result = self.run_cli("register", "--pack", str(pack))
+            self.assertEqual(0, code)
+            manifest = json.loads((pack / "material-pack.json").read_text(encoding="utf-8"))
+            self.assertIsNone(manifest["bgm"]["preference"])
+            self.assertEqual("use_library_later", manifest["bgm"]["decision"])
+
     def test_initialized_template_registers_when_machine_fields_are_filled(self):
         temporary, pack = self.create_pack()
         with temporary:

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -153,6 +154,14 @@ def command_status(args: argparse.Namespace) -> None:
     emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
 
 
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def command_bgm_choice(args: argparse.Namespace) -> None:
     """Flip the G0 BGM slot with evidence. Pending never clears by talking; it
     clears by a registered file (provided) or the user's deliberate no-BGM call."""
@@ -161,6 +170,31 @@ def command_bgm_choice(args: argparse.Namespace) -> None:
     bgm = state.get("bgm") or {"decision": "unknown", "preference": None, "libraryPending": False, "clearCondition": None}
     if args.decision == "provided" and not (args.evidence and args.evidence.strip()):
         emit({"status": "blocked", "error": "翻槽到 provided 必须携带登记证据（music-expert 登记记录路径 + 许可说明）"}, 2)
+    if args.decision == "provided":
+        # Issues ⑱/㉔: slot closure is only real when the registration record, the
+        # physical audio, the material-pack manifest and the full-track analysis all
+        # agree. Chat memory must never flip this slot.
+        evidence_path = Path(args.evidence.strip())
+        if not evidence_path.is_file():
+            emit({"status": "blocked", "error": f"bgm-choice 证据文件不存在：{evidence_path}（登记记录必须已落盘）"}, 2)
+        try:
+            registration = json.loads(evidence_path.read_text(encoding="utf-8-sig"))
+        except json.JSONDecodeError as error:
+            emit({"status": "blocked", "error": f"bgm-choice 证据不是合法登记记录 JSON：{error}"}, 2)
+            return
+        audio_path = Path(registration.get("audioPath", ""))
+        recorded_sha = (registration.get("sha256") or "").upper()
+        if not audio_path.is_file() or not recorded_sha or sha256_file(audio_path).upper() != recorded_sha:
+            emit({"status": "blocked", "error": "bgm-choice 证据未与音频配对：登记记录的 audioPath 不存在或 SHA-256 与盘上字节不符"}, 2)
+        pack = Path(state.get("sourcePackRef", ""))
+        if not pack.is_file():
+            emit({"status": "blocked", "error": f"bgm-choice 时素材包 manifest 未就位：{pack}（先完成 register 再翻槽）"}, 2)
+        pack_doc = json.loads(pack.read_text(encoding="utf-8-sig"))
+        assets = [a for a in pack_doc.get("audioAssets", []) if (a.get("sha256") or "").upper() == recorded_sha]
+        if not assets:
+            emit({"status": "blocked", "error": "bgm-choice 时 material-pack 尚无该音频登记（sha 未入册）：register 未跑或登记未回填"}, 2)
+        if not any(a.get("bgmAnalysis") for a in assets) and not (registration.get("analysisRef") or "").strip():
+            emit({"status": "blocked", "error": "槽关单必须已登记整轨分析报告（㉔）：跑 music_analyze 并回填 audioAssets[].bgmAnalysis 或登记记录 analysisRef 后再翻槽"}, 2)
     history = bgm.setdefault("history", [])
     history.append({"at": now(), "from": bgm.get("decision"), "to": args.decision,
                     "evidence": args.evidence, "note": args.note})

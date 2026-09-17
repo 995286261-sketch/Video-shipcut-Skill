@@ -314,7 +314,9 @@ def main() -> int:
     if not args.output.is_file() or args.output.stat().st_size == 0:
         emit({"status": "blocked", "blockers": [{"type": "output_write_failed", "detail": str(args.output)}]})
         return 1
-    echo_path = render_echo(result, args.output.parent / "BGM-推荐回显-v0.1.md")
+    from versioned_output import next_versioned  # Issue ⑬: multi-run echoes never overwrite
+    echo_path, _ = next_versioned(args.output.parent, "BGM-推荐回显", ".md")
+    render_echo(result, echo_path)
     emit({"status": "completed", "output": str(args.output), "echo": str(echo_path), "scored": len(scored),
           "passing": len(passing), "unanalyzed": len(unanalyzed),
           "licenseWarning": bool(uncleared), "enough": result["sufficiency"]["enough"]})
@@ -323,13 +325,17 @@ def main() -> int:
 
 def render_echo(result: dict, path: Path) -> Path:
     """Human-facing recommendation card: infringement banner first, table second."""
-    lines = ["# BGM 推荐回显 v0.1", ""]
+    import re as _re
+    match = _re.search(r"v0\.\d+", path.name)
+    version = match.group(0) if match else "v0.1"
+    lines = [f"# BGM 推荐回显 {version}", ""]
     if result.get("licenseWarning"):
         lines += [f"> {result['licenseWarning']}", ""]
     profile = result["profile"]
     sufficiency = result["sufficiency"]
+    # Issue ⑩: the denominator is the evaluated pool, not the sufficiency threshold.
     lines += [f"- 画像：时长 ≥{profile.get('targetDurationSec', '?')}s｜BPM {profile.get('bpmRange', '不限')}"
-              f"｜通过线 {result['minScore']}｜通过 {sufficiency['passing']}/{sufficiency['minExpected']}"
+              f"｜通过线 {result['minScore']}｜通过 {sufficiency['passing']}/{len(result['ranked'])}（充分性阈值 {sufficiency['minExpected']}）"
               + ("" if sufficiency["enough"] else f"｜❌不足：{sufficiency['gapAction']}")]
     style = profile.get("styleBrief") or {}
     if style.get("bpm") or style.get("energyShape"):

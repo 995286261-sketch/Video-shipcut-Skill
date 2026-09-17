@@ -111,6 +111,30 @@ class LibraryTest(unittest.TestCase):
         self.assertEqual(1, q["count"])
         self.assertIn("anchor", q["tracks"][0]["track"]["roles"])
 
+    def test_boundary_mismatch_warns_for_every_license_level(self):  # Issue ⑤
+        rc, _ = self.run_lib("ingest", "--audio", str(self.audio), "--title", "Cleared",
+                             "--license", "cleared-for-project", "--boundary", "internal_test",
+                             "--project", "zaku-intro-001")
+        self.assertEqual(0, rc)
+        _, q = self.run_lib("query", "--sha", self.sha, "--project-boundary", "public_bilibili")
+        warns = q["tracks"][0]["warnings"]
+        self.assertTrue(any(w.startswith("🔴") and "cleared-for-project" in w for w in warns),
+                        f"cleared-for-project 换对外项目必须红牌: {warns}")
+        _, q_same = self.run_lib("query", "--sha", self.sha, "--project-boundary", "internal_test")
+        self.assertEqual([], q_same["tracks"][0]["warnings"])
+
+    def test_list_browses_the_library(self):  # Issue ④
+        rc, _ = self.run_lib("ingest", "--audio", str(self.audio), "--title", "One",
+                             "--license", "uncleared-platform-catalog", "--boundary", "internal_test")
+        self.assertEqual(0, rc)
+        rc, listing = self.run_lib("list")
+        self.assertEqual(0, rc)
+        self.assertEqual(1, listing["count"])
+        row = listing["tracks"][0]
+        self.assertEqual("One", row["title"])
+        self.assertEqual(self.sha[:12], row["sha256"])
+        self.assertEqual("uncleared-platform-catalog", row["license"])
+
 
 if __name__ == "__main__":
     unittest.main()

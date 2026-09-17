@@ -220,7 +220,8 @@ def main() -> int:
                              "reason": f"duration {duration_ms}ms outside [{args.duration_min},{args.duration_max}]s"})
             continue
         if not args.no_preview:
-            target_dir = args.output_dir / "candidates"
+            # Issue ⑪: --output-dir is the landing directory itself; no hidden nesting.
+            target_dir = args.output_dir
             target_dir.mkdir(parents=True, exist_ok=True)
             target = target_dir / f"netease-{record['neteaseId']}-{title_slug(record.get('title'))}.mp3"
             failure = download(record["previewUrl"], target)

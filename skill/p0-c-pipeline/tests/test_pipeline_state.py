@@ -135,9 +135,18 @@ class PipelineStateTest(unittest.TestCase):
                 return
 
     def test_bgm_pending_slot_blocks_g2_until_evidenced_flip(self):
+        import hashlib
+        audio = self.root / "07_授权音频" / "GoneBad.mp3"
+        audio.parent.mkdir(parents=True, exist_ok=True)
+        audio.write_bytes(b"fake-audio-bytes")
+        sha = hashlib.sha256(audio.read_bytes()).hexdigest().upper()
+        registration = audio.parent / "BGM-候选登记-GoneBad-ABCD.json"
+        registration.write_text(json.dumps({"sha256": sha, "audioPath": str(audio),
+                                            "analysisRef": "BGM-分析报告-GoneBad.json"}), encoding="utf-8")
         self.pack.write_text(json.dumps({"packStatus": "complete", "bgm": {
             "decision": "use_library_later", "preference": "想要 LOW 那种高燃 phonk 的感觉",
-            "libraryPending": True, "clearCondition": "G1 末检索词卡找乐"}}), encoding="utf-8")
+            "libraryPending": True, "clearCondition": "G1 末检索词卡找乐"},
+            "audioAssets": [{"sha256": sha, "bgmAnalysis": {"relativePath": "x", "sha256": "y"}}]}), encoding="utf-8")
         self.init()
         status = self.run_cli("status", "--state", self.state)
         self.assertIn("待找乐", status["bgm"]["reminder"])
@@ -148,8 +157,20 @@ class PipelineStateTest(unittest.TestCase):
         blocked = self.approve("G2", code=2)
         self.assertIn("BGM 待找乐", blocked["error"])
         self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided", code=2)  # 无证据不翻灯
+        # Issue ⑱: evidence pointing at a not-yet-paired record must be refused.
         self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided",
-                     "--evidence", "07_授权音频/BGM-候选登记-GoneBad-ABCD.json", "--note", "用户选定金曲并登记")
+                     "--evidence", "07_授权音频/不存在.json", code=2)
+        # Issue ㉔: slot closure without a registered full-track analysis is refused.
+        no_analysis = audio.parent / "BGM-候选登记-NoAnalysis.json"
+        no_analysis.write_text(json.dumps({"sha256": sha, "audioPath": str(audio)}), encoding="utf-8")
+        self.pack.write_text(json.dumps({"packStatus": "complete", "audioAssets": [{"sha256": sha}]}), encoding="utf-8")
+        blocked_flip = self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided",
+                                    "--evidence", str(no_analysis), code=2)
+        self.assertIn("分析报告", blocked_flip["error"])
+        self.pack.write_text(json.dumps({"packStatus": "complete", "audioAssets": [
+            {"sha256": sha, "bgmAnalysis": {"relativePath": "x", "sha256": "y"}}]}), encoding="utf-8")
+        self.run_cli("bgm-choice", "--state", self.state, "--decision", "provided",
+                     "--evidence", str(registration), "--note", "用户选定金曲并登记")
         status = self.run_cli("status", "--state", self.state)
         self.assertNotIn("reminder", status["bgm"])
         self.approve("G2")  # 槽清后即可批

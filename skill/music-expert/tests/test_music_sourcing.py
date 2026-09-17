@@ -219,6 +219,23 @@ class RecommendTest(unittest.TestCase):
         self.assertTrue(echo.is_file())
         self.assertIn("⚠ 未清权", echo.read_text(encoding="utf-8"))
 
+    def test_echo_denominator_labels_and_rerun_versioning(self):  # Issues ⑩ ⑬
+        self.write_report("A3" * 32, 120.0, 60_000)
+        self.write_candidates([self.candidate("cand", "A3" * 32)])
+        profile = self.root / "profile.json"
+        profile.write_text(json.dumps({"targetDurationSec": 30, "minSegments": 2,
+                                       "maxIntegratedLufs": -14}), encoding="utf-8")
+        out = self.root / "rec.json"
+        args = ["--profile", str(profile), "--candidates", str(self.root / "pool.json"),
+                "--reports-dir", str(self.reports), "--output", str(out)]
+        self.run_script(args)
+        echo = (out.parent / "BGM-推荐回显-v0.1.md").read_text(encoding="utf-8")
+        self.assertIn("通过 1/1（充分性阈值 3）", echo)  # 分母=受评池，阈值单列，不再"通过 6/3"
+        self.run_script(args)  # 改画像重跑=必然多轮
+        self.assertTrue((out.parent / "BGM-推荐回显-v0.2.md").is_file())
+        self.assertIn("v0.2", (out.parent / "BGM-推荐回显-v0.2.md").read_text(encoding="utf-8"))
+        self.assertTrue((out.parent / "BGM-推荐回显-v0.1.md").is_file())  # 旧轮证据保留
+
     def test_uncleared_pool_penalized_under_stricter_boundary(self):
         self.write_report("A2" * 32, 120.0, 60_000)
         self.write_candidates([self.candidate("netease-audition", "A2" * 32,
