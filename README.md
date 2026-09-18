@@ -4,7 +4,7 @@
 
 它要解决的不是"AI 能不能拼出一支视频"，而是自动剪辑常见的失控点：画面与口播不对应、素材授权不清、方案只存在对话里无法交接、成片无法追溯、出问题只能推倒重来。
 
-> 本项目原名 Video-shipcut，v1.1.0 起按公司平台项目代号统一更名为 **P0-C**，编排入口 Skill 为 `p0-c-pipeline`。
+> 本项目原名 Video-shipcut，v1.1.0 起按公司平台项目代号统一更名为 **P0-C**，编排入口 Skill 为 `p0-c-pipeline`。当前版本 **v1.3.0（BGM 完善版本）**：music-expert 完成六节点接线，找乐通道路由定案（对外=Freesound 清权库自动检索，个人/内测=网易云试听选型，G1 末回显卡可切换），并通过 G0–G5 全链验收录制闭环。
 
 ## 流程
 
@@ -48,6 +48,15 @@ v1.1.0 吸收了"上能同创智能剪辑 Demo"（TASK-050）实际渲染与人�
 
 G3 计划必须为上述字段预登记，G5 必须把这些机器与人工 QA 纳入交付门禁。
 
+## BGM 与找乐通道（v1.3.0）
+
+音乐能力全部收在 `skill/music-expert` 专员里，节点只做编排与卡片呈现：
+
+- **通道路由按分发边界定默认，G1 末回显卡可切换**：对外发布的片子只从 **Freesound** 自动检索（CC0/CC-BY，逐候选带来源 URL、许可、SHA-256 与解码探针的真实证据链）；**个人/内测**项目默认从网易云检索试听件供选型——候选一律标未清权、仅限内测边界，**试听件直接进成片是红线**，选定后必须经官方渠道取得整轨并登记。
+- **确定性分析**：任意音频/参考视频音轨的 BPM、卡点表、能量分段、响度分析，同 SHA 缓存复用；对齐产物（轨偏移、卡点吸附、ducking 区间）以哈希链进 G3 计划，G5 全链审计逐段回指素材包登记。
+- **音乐经验库**（`experience/music/`）：一首歌一档案（身份=音频 SHA），许可红绿灯只升不降，换项目使用边界不符自动告警。
+- **能力诚实**：需要耳朵的环节调用听觉模型做 A/B 试听笔记；能力缺失时结构化提示并停下问用户，绝不编造听感描述。
+
 ## 仓库结构
 
 ```
@@ -70,11 +79,16 @@ PRD-v0.1.md             # 产品需求基线
 
 Skill 文件本身不等于运行环境。需要 **Python ≥ 3.10（推荐 3.12）** 与可直接执行的 **FFmpeg/FFprobe**，macOS、Windows、Linux 均可；完整执行 G2–G5 另需 Faster-Whisper（离线转写）和本地 TTS 来源（均为可选，缺失时流程报 `blocked` 并给出说明，不会编造结果）。工具链目录通过 `P0C_*` 环境变量声明，未声明时从 `PATH` 解析。G1/G3 的多模态识图通过能力适配器提供。详见 [`skill/p0-c-pipeline/references/runtime-dependencies.md`](skill/p0-c-pipeline/references/runtime-dependencies.md) 与 [`references/toolchain-setup.md`](skill/p0-c-pipeline/references/toolchain-setup.md)。
 
-安装 Skill：将 `skill/` 下各目录复制到 Agent 的 Skills 目录（如 `~/.codex/skills/`），已有同名 Skill 先另存旧版，不要直接覆盖。安装后使用 `$p0-c-pipeline` 发起或续作项目；`$music-expert` 是独立 BGM 分析与找乐 support skill（需 `P0C_MUSIC_RUNTIME_HOME` 分析运行时；联网找乐需 `P0C_FREESOUND_TOKEN`），不占管线节点、当前未接入 G0–G5；已弃用的 `$long-video-local-edit` 仅供显式历史兼容检查。
+安装 Skill：将 `skill/` 下各目录复制到 Agent 的 Skills 目录（如 `~/.codex/skills/`），已有同名 Skill 先另存旧版，不要直接覆盖。安装后使用 `$p0-c-pipeline` 发起或续作项目即可——`$music-expert` 作为 BGM 领域专员已接入六节点（G0 登记链、G1 末找乐与初次分析、G2 节拍蓝图、G3 对齐、G4 混音合同、G5 链路审计），无需手动调用；其分析运行时与联网凭据用 `MUSIC_EXPERT_*` 环境变量声明（`P0C_*` 为兼容别名，如 `MUSIC_EXPERT_FREESOUND_TOKEN`）；已弃用的 `$long-video-local-edit` 仅供显式历史兼容检查。
 
 ## 示例项目
 
-`工作台/unicorn-gundam-intro-001/` 是一个跑完 G0–G5 闭环的真实案例：输入多段已授权的动画切片与 BGM，输出 38.8 秒横版成片（1920×1080/30fps，独立口播 + BGM + 固定字幕条），附完整剪辑计划、逐段时间码、质检报告和验收记录。项目中可以看到真实的返工过程（G4 发现声画语义错配后定向回退 G3）和被保留的已接受警告，适合当作理解六节点合同的参考。
+`工作台/` 下有多个跑完 G0–G5 闭环的真实案例，按管线演进排列：
+
+- `unicorn-gundam-intro-001/`：首个闭环参考——多段已授权动画切片 + BGM，38.8 秒横版成片；含真实返工记录（G4 发现声画语义错配定向回退 G3）和被保留的已接受警告。
+- `zaku-intro-001/`：internal_test 边界下 BGM 全链（找乐→登记→对齐→混音→审计）首个完整闭环。
+- `tiger-intro-001/`：首个 `public_bilibili` 对外项目（14 分钟快切 AMV 源），毕业考产出 34 条问题清单并全部裁决修复。
+- `psycho-zaku-intro-002/`：正式验收录制项目，六门禁全过、交付包封存，"确认交付≠逐条接受警告"语义走完。
 
 > **素材版权说明**：示例项目中的视频、音频素材版权归各自权利人所有，仅作为流程演示与追溯证据保留，不随本仓库的 AGPL 许可证授权分发。请勿将未获授权的素材用于公开发布。
 
