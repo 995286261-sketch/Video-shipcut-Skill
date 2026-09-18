@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A101E"/>
+      <stop offset="1" stop-color="#0E1830"/>
+    </linearGradient>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4DA3FF"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C93BC"/>
+    </marker>
+    <marker id="arrTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2DD4BF"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="800" fill="url(#bg)" rx="0"/>
+
+  <!-- Title -->
+  <text x="40" y="58" fill="#EAF2FF" font-size="26" font-weight="700">P0-C：从长视频素材到可验收成片</text>
+  <text x="40" y="84" fill="#8FA6C8" font-size="13">v1.3.0 · 默认自动完成生产与校验，人只在内容、授权和交付边界处确认 · 每个节点一张最终回显卡，口令确认G0…确认G5 放行</text>
+
+  <!-- ===== Row 1: input -> G0 -> G1 -> G2 ===== -->
+  <!-- 项目输入 -->
+  <rect x="40" y="140" width="150" height="120" rx="14" fill="#101A30" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="115" y="172" text-anchor="middle" fill="#EAF2FF" font-size="16" font-weight="700">项目输入</text>
+  <text x="115" y="200" text-anchor="middle" fill="#9FB4D8" font-size="12">需求一句话</text>
+  <text x="115" y="220" text-anchor="middle" fill="#9FB4D8" font-size="12">+ 本地授权素材</text>
+
+  <line x1="190" y1="200" x2="204" y2="200" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- G0 -->
+  <rect x="204" y="140" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="319" y="170" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G0 素材包</text>
+  <text x="319" y="196" text-anchor="middle" fill="#9FB4D8" font-size="12">需求 · 素材 · 授权 · BGM 意向</text>
+  <text x="319" y="216" text-anchor="middle" fill="#9FB4D8" font-size="12">统一登记与哈希身份校验</text>
+  <text x="319" y="240" text-anchor="middle" fill="#5F7BA6" font-size="11.5">不改动源文件</text>
+
+  <line x1="434" y1="200" x2="448" y2="200" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+  <rect x="448" y="176" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="507" y="196" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G0</text>
+  <text x="507" y="213" text-anchor="middle" fill="#3A2E08" font-size="10.5">资料与授权</text>
+  <line x1="566" y1="200" x2="580" y2="200" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- G1 -->
+  <rect x="580" y="140" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="695" y="170" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G1 创作方向</text>
+  <text x="695" y="196" text-anchor="middle" fill="#9FB4D8" font-size="12">主题 · 受众 · 叙事角度</text>
+  <text x="695" y="216" text-anchor="middle" fill="#9FB4D8" font-size="12">风格与表达边界 · 找乐定曲</text>
+  <text x="695" y="240" text-anchor="middle" fill="#5F7BA6" font-size="11.5">参考视频只分析，不剪入</text>
+
+  <line x1="810" y1="200" x2="824" y2="200" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+  <rect x="824" y="176" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="883" y="196" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G1</text>
+  <text x="883" y="213" text-anchor="middle" fill="#3A2E08" font-size="10.5">方向与音乐</text>
+  <line x1="942" y1="200" x2="956" y2="200" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- G2 -->
+  <rect x="956" y="140" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="1071" y="170" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G2 证据与口播</text>
+  <text x="1071" y="196" text-anchor="middle" fill="#9FB4D8" font-size="12">转写 · 事实证据 · 口播 · 配音</text>
+  <text x="1071" y="216" text-anchor="middle" fill="#9FB4D8" font-size="12">字幕时间轴与事实边界</text>
+  <text x="1071" y="240" text-anchor="middle" fill="#5F7BA6" font-size="11.5">已有分析可复用 · 节拍蓝图</text>
+
+  <!-- elbow G2 -> G3 -->
+  <path d="M1186,200 L1285,200 L1285,262" fill="none" stroke="#4DA3FF" stroke-width="2.4"/>
+  <rect x="1226" y="262" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="1285" y="282" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G2</text>
+  <text x="1285" y="299" text-anchor="middle" fill="#3A2E08" font-size="10.5">事实与口播</text>
+  <path d="M1285,310 L1285,380" fill="none" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- ===== Row 2: G3 -> G4 -> G5 -> delivery (right to left) ===== -->
+  <!-- G3 -->
+  <rect x="1170" y="396" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="1285" y="426" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G3 剪辑计划</text>
+  <text x="1285" y="452" text-anchor="middle" fill="#9FB4D8" font-size="12">语义节拍 · 镜头检测优先抽帧</text>
+  <text x="1285" y="472" text-anchor="middle" fill="#9FB4D8" font-size="12">三帧验证 · 时间线 · 转场</text>
+  <text x="1285" y="496" text-anchor="middle" fill="#5F7BA6" font-size="11.5">口播必须对应已验证画面</text>
+
+  <line x1="1170" y1="456" x2="1156" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+  <rect x="1038" y="432" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="1097" y="452" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G3</text>
+  <text x="1097" y="469" text-anchor="middle" fill="#3A2E08" font-size="10.5">剪辑计划</text>
+  <line x1="1038" y1="456" x2="1024" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- G4 -->
+  <rect x="794" y="396" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="909" y="426" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G4 剪辑与渲染</text>
+  <text x="909" y="452" text-anchor="middle" fill="#9FB4D8" font-size="12">分段裁切 · 源音排除 · 遮蔽</text>
+  <text x="909" y="472" text-anchor="middle" fill="#9FB4D8" font-size="12">口播 · BGM 合同混音 · 字幕</text>
+  <text x="909" y="496" text-anchor="middle" fill="#5F7BA6" font-size="11.5">可选 ChatCut 导出 · clean master</text>
+
+  <line x1="794" y1="456" x2="780" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+  <rect x="662" y="432" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="721" y="452" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G4</text>
+  <text x="721" y="469" text-anchor="middle" fill="#3A2E08" font-size="10.5">候选成片</text>
+  <line x1="662" y1="456" x2="648" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- G5 -->
+  <rect x="418" y="396" width="230" height="120" rx="14" fill="#131F38" stroke="#2E4A7A" stroke-width="1.2"/>
+  <text x="533" y="426" text-anchor="middle" fill="#EAF2FF" font-size="17" font-weight="700">G5 质检与交付</text>
+  <text x="533" y="452" text-anchor="middle" fill="#9FB4D8" font-size="12">全解码 · 规格 · 哈希 · 追溯</text>
+  <text x="533" y="472" text-anchor="middle" fill="#9FB4D8" font-size="12">交付包 Schema · BGM 链审计</text>
+  <text x="533" y="496" text-anchor="middle" fill="#5F7BA6" font-size="11.5">警告不隐藏 · 人工验收留档</text>
+
+  <line x1="418" y1="456" x2="404" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+  <rect x="286" y="432" width="118" height="48" rx="24" fill="#F6C445"/>
+  <text x="345" y="452" text-anchor="middle" fill="#1A2338" font-size="13" font-weight="700">确认G5</text>
+  <text x="345" y="469" text-anchor="middle" fill="#3A2E08" font-size="10.5">交付</text>
+  <line x1="286" y1="456" x2="272" y2="456" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+
+  <!-- delivery -->
+  <rect x="72" y="396" width="200" height="120" rx="14" fill="#0F2A22" stroke="#34D399" stroke-width="1.4"/>
+  <text x="172" y="426" text-anchor="middle" fill="#CFF7E4" font-size="17" font-weight="700">可验收交付</text>
+  <text x="172" y="452" text-anchor="middle" fill="#7FCBAA" font-size="12">成片 · 封面 · 字幕 · 章节</text>
+  <text x="172" y="472" text-anchor="middle" fill="#7FCBAA" font-size="12">全链证据可追溯 · 可回退</text>
+  <text x="172" y="496" text-anchor="middle" fill="#4E9A78" font-size="11.5">归档只读审计，不救状态</text>
+
+  <!-- rework arcs -->
+  <path d="M860,396 C820,340 1230,340 1240,396" fill="none" stroke="#7C93BC" stroke-width="1.8" stroke-dasharray="7 6" marker-end="url(#arrGray)"/>
+  <text x="1050" y="344" text-anchor="middle" fill="#7C93BC" font-size="11.5">G4 发现口播画面不匹配 → 定向回 G3 重选镜头</text>
+  <path d="M500,396 C470,348 850,348 870,396" fill="none" stroke="#7C93BC" stroke-width="1.8" stroke-dasharray="7 6" marker-end="url(#arrGray)"/>
+  <text x="685" y="382" text-anchor="middle" fill="#7C93BC" font-size="11.5">G5 发现问题 → 回 G4，不推倒全流程</text>
+
+  <!-- ===== music-expert lane ===== -->
+  <rect x="40" y="576" width="1360" height="118" rx="14" fill="#0C1E24" stroke="#1F5A54" stroke-width="1.2"/>
+  <text x="64" y="608" fill="#2DD4BF" font-size="15" font-weight="700">music-expert 音乐专员（跨节点能力 · 产物握手接入，节点只编排不实现）</text>
+  <g font-size="12" fill="#A7E8DC">
+    <rect x="64" y="626" width="252" height="46" rx="10" fill="#12303A" stroke="#1F5A54"/>
+    <text x="190" y="645" text-anchor="middle" fill="#DFF6F0" font-size="12.5" font-weight="700">G1 末找乐 · 通道按边界默认</text>
+    <text x="190" y="663" text-anchor="middle">对外 Freesound CC 库 / 个人 网易云 · 卡片可切换</text>
+    <rect x="336" y="626" width="230" height="46" rx="10" fill="#12303A" stroke="#1F5A54"/>
+    <text x="451" y="645" text-anchor="middle" fill="#DFF6F0" font-size="12.5" font-weight="700">检索词卡 → A/B 试听笔记</text>
+    <text x="451" y="663" text-anchor="middle">经验库红绿灯 · 无耳朵不编造</text>
+    <rect x="586" y="626" width="230" height="46" rx="10" fill="#12303A" stroke="#1F5A54"/>
+    <text x="701" y="645" text-anchor="middle" fill="#DFF6F0" font-size="12.5" font-weight="700">整轨登记 + 三哈希链</text>
+    <text x="701" y="663" text-anchor="middle">bgm-choice 翻槽 · 许可只升不降</text>
+    <rect x="836" y="626" width="230" height="46" rx="10" fill="#12303A" stroke="#1F5A54"/>
+    <text x="951" y="645" text-anchor="middle" fill="#DFF6F0" font-size="12.5" font-weight="700">G3 对齐合同 · G4 混音合同</text>
+    <text x="951" y="663" text-anchor="middle">轨偏移 · 卡点吸附 · ducking</text>
+    <rect x="1086" y="626" width="230" height="46" rx="10" fill="#12303A" stroke="#1F5A54"/>
+    <text x="1201" y="645" text-anchor="middle" fill="#DFF6F0" font-size="12.5" font-weight="700">G5 全链哈希审计</text>
+    <text x="1201" y="663" text-anchor="middle">12 项检查逐段回指素材包</text>
+  </g>
+  <!-- teal connectors -->
+  <line x1="695" y1="260" x2="695" y2="576" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="3 5" marker-end="url(#arrTeal)"/>
+  <line x1="1240" y1="516" x2="1240" y2="576" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="3 5" marker-end="url(#arrTeal)"/>
+  <line x1="870" y1="516" x2="870" y2="576" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="3 5" marker-end="url(#arrTeal)"/>
+  <line x1="500" y1="516" x2="500" y2="576" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="3 5" marker-end="url(#arrTeal)"/>
+
+  <!-- ===== legend ===== -->
+  <g transform="translate(40,730)">
+    <line x1="0" y1="8" x2="34" y2="8" stroke="#4DA3FF" stroke-width="2.4" marker-end="url(#arrBlue)"/>
+    <text x="44" y="12" fill="#9FB4D8" font-size="12">默认自动生产流程</text>
+    <rect x="180" y="-4" width="52" height="24" rx="12" fill="#F6C445"/>
+    <text x="242" y="12" fill="#9FB4D8" font-size="12">人工确认点（每节点仅一张最终回显卡）</text>
+    <line x1="520" y1="8" x2="554" y2="8" stroke="#7C93BC" stroke-width="1.8" stroke-dasharray="7 6" marker-end="url(#arrGray)"/>
+    <text x="564" y="12" fill="#9FB4D8" font-size="12">问题定向返工，不推倒全流程</text>
+    <line x1="790" y1="8" x2="824" y2="8" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="3 5" marker-end="url(#arrTeal)"/>
+    <text x="834" y="12" fill="#9FB4D8" font-size="12">专员产物握手</text>
+    <text x="1360" y="12" text-anchor="end" fill="#5F7BA6" font-size="11.5">P0-C 的关键不是一次生成成功，而是每个决定可验证、可回退、可交接</text>
+  </g>
+</svg>
