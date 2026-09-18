@@ -1,0 +1,121 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G2",
+ "purpose": "narration_synthesis_measured_durations_short_version",
+ "provider": "bailian_cosyvoice",
+ "model": "cosyvoice-v3-flash",
+ "voice": "longtian_v3 (龙天, 磁性理智男)",
+ "voiceTier": "production_neural_tts",
+ "voiceSelection": "用户自选：『用那个阿里云的 longtian 吧，就用这个』（2026-09-17）",
+ "rate": 1.0,
+ "language": "zh",
+ "measuredTotalDurationMs": 94720,
+ "sentences": [
+  {
+   "sentenceId": "N01",
+   "text": "宇宙世纪0079年，一年战争的尾声。当所有人的目光都盯着那些主角机时，吉翁公国悄悄投入了一个更危险的实验。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N01.wav",
+   "durationMs": 11200,
+   "startMs": 0
+  },
+  {
+   "sentenceId": "N02",
+   "text": "它基于量产的扎古，却搭载了一套几乎不被正史记载的系统——Reuse-P装置。它的名字，叫精神力扎古。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N02.wav",
+   "durationMs": 10080,
+   "startMs": 11200
+  },
+  {
+   "sentenceId": "N03",
+   "text": "这套装置能直接读取驾驶员的神经信号，让机体的四肢像身体的延伸一样，随念头而动。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N03.wav",
+   "durationMs": 7200,
+   "startMs": 21280
+  },
+  {
+   "sentenceId": "N04",
+   "text": "驾驶它的，不是王牌，也不是少爷——而是\"假死者部队\"的达里尔·洛伦兹。一支部队，连番号都在宣告他们的牺牲。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N04.wav",
+   "durationMs": 9280,
+   "startMs": 28480
+  },
+  {
+   "sentenceId": "N05",
+   "text": "当年十二月，达里尔迅速掌握了这台机体：重创对手母舰\"蜂巢\"，击沉数艘萨拉米斯级。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N05.wav",
+   "durationMs": 8560,
+   "startMs": 37760
+  },
+  {
+   "sentenceId": "N06",
+   "text": "请注意，这是一台扎古——一个已经开始落后的骨架。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N06.wav",
+   "durationMs": 4960,
+   "startMs": 46320
+  },
+  {
+   "sentenceId": "N07",
+   "text": "它能打出越级的战绩，是因为设计重心从来不在装甲和出力，而在\"把人的大脑当作操作系统\"。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N07.wav",
+   "durationMs": 7440,
+   "startMs": 51280
+  },
+  {
+   "sentenceId": "N08",
+   "text": "代价同样残酷：这种系统要求驾驶员与机器融为一体，而越融合，人的边界越模糊。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N08.wav",
+   "durationMs": 8880,
+   "startMs": 58720
+  },
+  {
+   "sentenceId": "N09",
+   "text": "精神力扎古自始至终是试作机，从未正式量产。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N09.wav",
+   "durationMs": 4400,
+   "startMs": 67600
+  },
+  {
+   "sentenceId": "N17",
+   "text": "回到标题：为什么说它是\"凌驾于主角机之上的怪物\"？",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N17.wav",
+   "durationMs": 4400,
+   "startMs": 72000
+  },
+  {
+   "sentenceId": "N18",
+   "text": "因为它从不曾拥有主角的光环，却每一次登场，都是别人的生死劫。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N18.wav",
+   "durationMs": 6000,
+   "startMs": 76400
+  },
+  {
+   "sentenceId": "N19",
+   "text": "它是一台被神经系统逼到极限的量产机，一名老兵最后的义肢，一个不肯死去的旧时代残响。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N19.wav",
+   "durationMs": 7760,
+   "startMs": 82400
+  },
+  {
+   "sentenceId": "N20",
+   "text": "下一期，我们把精神力扎古的装备和战果，逐帧拆开看。",
+   "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/N20.wav",
+   "durationMs": 4560,
+   "startMs": 90160
+  }
+ ],
+ "asrVerification": null,
+ "supersedes": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.2.json",
+ "version": "v0.3",
+ "shortVersionOf": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.2.json",
+ "removedSentences": [
+  "N10",
+  "N11",
+  "N12",
+  "N13",
+  "N14",
+  "N15",
+  "N16"
+ ],
+ "removalReason": "G3 充分性检查：主素材为雷霆宙域专属剪辑，Mk-II/袖章/独角兽段零直接画面；用户预授权 shorten_output（「S2 A」），见 G3-剪辑计划/G3-素材充分性与短版提案-v0.1.md",
+ "audioReused": "逐句 wav 未重新合成：文本零改动、仅整句删除，沿用 配音试听-longtian/ 已合成件与实测时长"
+}

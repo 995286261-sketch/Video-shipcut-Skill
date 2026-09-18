@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "精神力扎古介绍片，B站内部测试，军武机甲科普，参考片冷战奇迹包装",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Free-Out 2019 cypher",
+      "neteaseId": 1408761974,
+      "sha256": "37E0A915ADE6C68308630C61269B858F5B38D4A88955F473F071D37419BE628D",
+      "reused": false,
+      "notes": "1) 参照曲为快节奏硬核Techno，具强烈机械感与紧迫叙事性；候选曲是Trap/Drill风格说唱，重人声Flow与低音Bass，气质偏向街头潮流。\n2) 不能。候选曲的人声说唱会严重干扰旁白，且其现代嘻哈氛围与“冷战军武”的历史厚重感及机甲科幻风完全不符。\n3) 2分。音乐风格错位，人声冲突且缺乏史诗科技感。"
+    },
+    {
+      "title": "盛放的红",
+      "neteaseId": 2632221263,
+      "sha256": "80221733D5C686CE58AE9996AD91DC669C2E0F64BEA08870F0E54AF5823E5E68",
+      "reused": false,
+      "notes": "1) 差距极大。参照曲是快节奏、高能量的工业电子/Techno，充满机械感与紧迫性；候选曲则是慢速、恢弘悲壮的交响合唱，气质庄严神圣。\n2) 不能。候选曲完全不适合机甲科普。它缺乏科技感和速度感，会把“硬核介绍”变成“悲壮史诗”，严重不符视频调性。\n3) 贴合度：2分。理由：风格南辕北辙，庄严的圣歌式合唱无法承载军武机甲的冰冷科技感。"
+    },
+    {
+      "title": "驿动的心",
+      "neteaseId": 3376296485,
+      "sha256": "2CEC8EDEBAB77A1E0E13AA88497EBB2A63B8ED8F70B80237D2B2B1F83D2AAAFC",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是硬核工业电子，节奏强劲、气质冷峻；候选曲是抒情流行，以钢琴人声为主，气质柔美浪漫。\n2) 完全不能。候选曲的柔情风格与军武机甲的力量感、科技感及紧张氛围完全相悖，会严重削弱视频的专业性和冲击力。\n3) 贴合度：1分。理由：柔美的情歌与硬核军武主题在情绪和风格上南辕北辙。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

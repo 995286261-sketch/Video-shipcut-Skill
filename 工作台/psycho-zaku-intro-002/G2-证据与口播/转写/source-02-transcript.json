@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-2071e9a7",
+    "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/psycho-zaku-intro-002/G0-素材包/02_原始素材/超越高达的怪物—精神力扎古.mp4",
+  "segments": [],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-17T07:51:32.541172Z"
+}

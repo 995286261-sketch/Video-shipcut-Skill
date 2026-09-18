@@ -1,0 +1,126 @@
+{
+ "schemaVersion": "0.2",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G2",
+ "status": "evidence_ready_narration_pending",
+ "evidencePolicy": "网络来源仅采信当日抓取快照（raw/ 内 wikitext）；机器转写为草稿证据不得升级为事实；目标主体身份由 G3 目标主体确认卡一次性由用户定夺；授权=internal_test，禁止分发。",
+ "sourceEvidence": [
+  {
+   "assetId": "source-02-2071e9a7",
+   "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+   "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+   "sourceProbe": {
+    "durationMs": 327018,
+    "video": {
+     "width": 1920,
+     "height": 1080,
+     "fps": 30,
+     "codec": "h264"
+    },
+    "audio": {
+     "codec": "aac",
+     "sampleRate": 48000,
+     "channels": 2
+    }
+   },
+   "contactSheetRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/source-02-contact-sheet.jpg",
+   "transcriptRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/转写/source-02-transcript.json",
+   "warnings": [
+    "源片为 B 站下载他人粗剪：原声（含内嵌歌曲）一律排除；全片烧录卡拉OK字幕+左上UP主水印+右下SUNRISE台标→G3 遮罩/处理工序",
+    "分发锁 internal_test / not_for_distribution"
+   ]
+  }
+ ],
+ "inputVerification": {
+  "assetId": "source-02-2071e9a7",
+  "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+  "matchesMaterialPack": true
+ },
+ "factEvidenceRefs": [
+  "事实依据/证据摘要-v0.1.md"
+ ],
+ "warnings": [
+  "源片烧录卡拉OK歌词字幕 → G3 需逐段遮蔽/裁剪方案，不可依赖自动避让",
+  "源片左上 bilibili 水印+UP名 → 内部预览可保留，任何对外场景必须先处理且重过授权关",
+  "源片音频为他人 AMV 选曲（中文人声歌）→ 边界'不用源声'已锁",
+  "G1 claim-001/003/004 与证据冲突或不足 → 口播按证据摘要'裁决建议'列改写"
+ ],
+ "handoff": {
+  "toG3": "目标主体确认卡需含三选项：雷霆宙域达里尔版（E1/E2，证据最全）/ 独角兽安杰洛版（E3，座机身份待补证）/ 多版本合讲（需补官方设定来源）",
+  "bgmSlot": "libraryPending=true；试听选型包 7 首待用户挑曲"
+ },
+ "webSourceEvidence": [
+  {
+   "evidenceId": "E1",
+   "title": "MS-06R Zaku II High Mobility Type (Reuse \"P\" Device)（别名 Psycho Zaku，雷霆宙域版）",
+   "url": "https://gundam.fandom.com/wiki/MS-06R_Zaku_II_High_Mobility_Type_(Reuse_%22P%22_Device)",
+   "fetchedAt": "2026-09-17",
+   "snapshot": "事实依据/raw/fandom-MS06R-ReuseP.txt",
+   "digest": "事实依据/证据摘要-v0.1.md#E1",
+   "keyFacts": [
+    "吉翁试作机/假死者部队",
+    "驾驶员 Daryl Lorenz",
+    "U.C.0079.12",
+    "Reuse-P 神经通信操纵四肢",
+    "重创蜂巢号、击沉数艘萨拉米斯"
+   ]
+  },
+  {
+   "evidenceId": "E2",
+   "title": "Psycho Zaku Mk-II",
+   "url": "https://gundam.fandom.com/wiki/Psycho_Zaku_Mk-II",
+   "fetchedAt": "2026-09-17",
+   "snapshot": "事实依据/raw/fandom-Psycho_Zaku_Mk_II.txt",
+   "digest": "事实依据/证据摘要-v0.1.md#E2",
+   "keyFacts": [
+    "限定生产",
+    "南洋同盟/吉翁残党",
+    "设计 太垣康夫"
+   ]
+  },
+  {
+   "evidenceId": "E3",
+   "title": "Angelo Sauper（袖章，独角兽）",
+   "url": "https://gundam.fandom.com/wiki/Angelo_Sauper",
+   "fetchedAt": "2026-09-17",
+   "snapshot": "事实依据/raw/fandom-AngeloSauper.txt",
+   "digest": "事实依据/证据摘要-v0.1.md#E3",
+   "keyFacts": [
+    "U.C.0096 Sleeves",
+    "摧毁弹射甲板 MBL",
+    "后换乘 Rozen Zulu"
+   ],
+   "limitation": "页面未出现 Psycho Zaku 字样，其前期座机身份未证实"
+  },
+  {
+   "evidenceId": "E4",
+   "title": "Mega Bazooka Launcher",
+   "url": "https://gundam.fandom.com/wiki/Mega_Bazooka_Launcher",
+   "fetchedAt": "2026-09-17",
+   "snapshot": "事实依据/raw/fandom-MegaBazookaLauncher.txt",
+   "digest": "事实依据/证据摘要-v0.1.md#E4",
+   "keyFacts": [
+    "Z/UC 系大型光束武器",
+    "E3 语境中为固定弹射装备非手持武器"
+   ]
+  },
+  {
+   "evidenceId": "S1",
+   "title": "主素材 ASR 抽测（离线 faster-whisper small，VAD）",
+   "url": null,
+   "fetchedAt": "2026-09-17",
+   "snapshot": "转写/source-02-transcript.json",
+   "digest": "两抽样段 0 段人声/幻觉碎片；源片无解说音轨，音频为中文人声歌曲（volumedetect mean -10.3dB）",
+   "status": "draft_requires_human_fact_review"
+  },
+  {
+   "evidenceId": "S2",
+   "title": "主素材联系表",
+   "url": null,
+   "fetchedAt": "2026-09-17",
+   "snapshot": "source-02-contact-sheet.jpg",
+   "digest": "红色扎古整备库/丛林战/驾驶员特写；烧录歌词字幕与 bilibili 水印在场"
+  }
+ ],
+ "revisionNote": "v0.2 结构修正（2026-09-17）：sourceEvidence 只保留媒体条目（对齐 zaku/tiger 先例与 validate_g3_plan 合同），6 条网络事实条目原样移入 webSourceEvidence；内容零改动，G2 批准引用（factCitationRef=证据摘要-v0.1.md）不受影响"
+}

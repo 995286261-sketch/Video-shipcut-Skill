@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "37E0A915ADE6C68308630C61269B858F5B38D4A88955F473F071D37419BE628D",
+  "aliases": [
+    {
+      "title": "Free-Out 2019 cypher",
+      "neteaseId": 1408761974,
+      "sourceUrl": "https://music.163.com/song?id=1408761974",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T06:59:49Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-1408761974-Free-Out_2019_cypher.mp3",
+      "recordedAt": "2026-09-17T06:59:49Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T06:59:49Z",
+  "updatedAt": "2026-09-17T07:01:47Z"
+}

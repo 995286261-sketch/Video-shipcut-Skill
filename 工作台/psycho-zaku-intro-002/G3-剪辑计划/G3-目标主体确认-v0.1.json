@@ -1,0 +1,37 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "createdAt": "2026-09-17",
+ "decisionSource": "用户自选（S 卡身份裁决，无预选默认）",
+ "userReplyVerbatim": "S2 A",
+ "targetSubject": {
+  "canonicalName": "MS-06R 高机动型扎古（Reuse \"P\" Device／精神力扎古，雷霆宙域·达里尔·洛伦兹座机）",
+  "userConfirmed": true,
+  "confirmedBy": "用户（2026-09-17 原话「S2 A」，S2=只认达里尔版）",
+  "confirmedAt": "2026-09-17",
+  "basisEvidenceRefs": [
+   "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md"
+  ]
+ },
+ "identificationRules": [
+  "判定为目标主体（identityStatus=confirmed）须同时满足：扎古系单目高机动骨架；装备精神力框/Reuse-P 特征的纤细外骨骼与背部推进器构型；画面语境为第811特混舰队/假死者部队线（达里尔座机）",
+  "来源页 E1 定义：试作机、驾驶员达里尔·洛伦兹、U.C.0079年12月首次部署（gundam.fandom.com MS-06R Reuse-P 条目）",
+  "仅能确认是『某台扎古系机体』而无 Reuse-P 构型特征的 → uncertain，不入选",
+  "仅确认出现人物（驾驶员/角色）未见机体 → person_only，不入选"
+ ],
+ "exclusionRules": [
+  "精神力扎古 Mk-II（E2，太垣康夫设计·南洋战线限定生产）= 相关机体，**不是本项目目标主体**（用户 S2 明确降级）；其画面只可作口播 N11–N13 的语境画面（non-target context），不得以目标主体身份入选主镜头",
+  "U.C.0096 袖章军红色扎古（E3，安杰洛座机）= 非目标主体且血统存疑（N16 维持存疑口径），不得作为精神力扎古本体画面",
+  "夏亚红扎古等其他扎古变体 = not_present（非目标）",
+  "联邦机/战舰/人物室内戏 = 非目标主体，仅作语境"
+ ],
+ "narrationImpact": "口播稿 N01–N20 已获 G2 批准、不因本确认改动；S2 仅改变画面身份认定：Mk-II 与袖章段落的镜头按语境画面处理（editingUse 注明），目标主体 confirmed 镜头集中于达里尔段落。",
+ "sufficiencyFallback": {
+  "preApproved": "shorten_output",
+  "approvedBy": "用户（原话「S2 A」之 A：缺口时自动缩短成片，不逐次询问）",
+  "approvedAt": "2026-09-17",
+  "limits": "缩短只允许压缩间奏/重复语境画面与口播句间留白；禁止用无关剧情、敌方主体、静帧延长、循环或无意义慢放填充；若需删改已批准口播句，仍须回 G2 走重批，预授权不覆盖文本变更。最终八列回显与 确认G3 不可免除。"
+ },
+ "downstream": "视觉分析必须按本规则输出 identityStatus；除 confirmed 外一律不自动入选，只计入不可用素材统计。"
+}

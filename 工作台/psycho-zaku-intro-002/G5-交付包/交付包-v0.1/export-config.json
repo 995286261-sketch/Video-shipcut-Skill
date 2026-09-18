@@ -1,0 +1,49 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "platform": "bilibili",
+ "distribution": "internal_test_not_for_distribution",
+ "video": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "codec": "h264",
+  "durationActualMs": 94733,
+  "targetDurationSec": [
+   180,
+   600
+  ],
+  "durationNote": "G1 目标 3-10 分钟；G3 预授权缩短成片（用户「S2 A」）后按批准时间线 94.720s 交付，目标差额如实记录"
+ },
+ "subtitles": {
+  "mode": "burned_ass",
+  "file": "subtitles.srt",
+  "style": "固定字号64/marginV173/中文单语/标点处\\N两行断行"
+ },
+ "cover": {
+  "file": "cover.jpg",
+  "source": "seg-02 主体全身揭示帧（源141143ms）+批准标题",
+  "title": "精神力扎古：凌驾于主角机之上的怪物"
+ },
+ "audio": {
+  "codec": "aac",
+  "channels": 2,
+  "narration": {
+   "engine": "cosyvoice-v3-flash/longtian_v3",
+   "tier": "production_neural_tts"
+  },
+  "sourceAudio": "excluded",
+  "bgm": {
+   "track": "The Darkest Alleys (Final Stage)-Perturbator",
+   "license": "未清权-仅内部测试",
+   "bedGainDb": -12,
+   "duckReductionDb": 6,
+   "offsetMs": 0
+  }
+ },
+ "packaging": {
+  "chapterCards": "0-3.2s 片头标题卡",
+  "clips": 4
+ },
+ "authorization": "仅内部测试（源片=B站他人二创；BGM 未清权）；对外发布前必须换清权曲并重过授权关"
+}

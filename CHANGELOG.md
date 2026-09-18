@@ -1,6 +1,16 @@
 # 变更记录
 
-## Unreleased — 单卡交互合同（用户 2026-09-11 定案，N8 活测产物）
+## v1.3.0 — 2026-09-18 — **BGM完善版本**
+
+发布范围＝以下四批（单卡交互合同、主线接线①G0/②G1、music-expert N10+锚定打分）＋发布期内追加：
+
+- **N8 测后裁决 26 条四批修复**（52c072c/27c6815/c6d5f09/19d2b9d）：validate_g3_plan 批量报错、评审/审批模式对称、g4_prepare 工作台守卫、drawtext 字形覆盖预检（TTC 首-face 陷阱红线）、《交付包组件 Schema》唯一事实源、口令归一化下沉等；回归 7 套全绿。
+- **找乐通道路由定案**（d5ae193）：对外=Freesound 默认轨、个人/内测=网易云可留，通道在 G1 末回显卡可切换；**Freesound 首次活体接通**（5709f21）：CC URL 许可分类器修复 + preview 键名/短链派生漂移修复 + 3 组回归。
+- **G0 卡 BGM 通道预告**（19c862c）：问题 5 选项 B 写明检索通道与切换点。
+- **正式验收录制闭环**（方案 A）：psycho-zaku-intro-002 G0–G5 六门禁全过（09-18 `确认G5`），交付包 v0.1 封存 valid/completed，`确认交付≠逐条接受`语义走完；`验收002-问题清单.md` 14 条落档（高危=⑧ CJK 断行布局校验器与 libass 渲染能力不一致——绿灯≠渲染正确）。
+- 已知限制：002 项目 107MiB 源素材超 GitHub 单文件上限不入库（与 tiger 同法 `.gitignore`，SHA 已录 G0 manifest/素材包，凭证据可重取）。
+
+### v1.3.0 批次 · 单卡交互合同（用户 2026-09-11 定案，N8 活测产物）
 
 - **每节点仅一次最终回显**：中途偏好类决策点（标题/角度/检索词/挑曲/风格参数）不再独立停靠提问，Agent 预选推荐项、以【默认=推荐｜依据】并入节点最终回显卡；用户否决哪条只重跑哪条。门禁口令（确认G1…确认G5）一个不减。
 - **归属如实**：默认项被确认记"用户验收推荐默认项"，不得写成"用户选择"；G0 开工单五问、G3 目标主体身份判定、G5 人工验收**永不预选**。
@@ -9,20 +19,20 @@
 - **最终回显样式指南 v1.0**（问题⑰，同日追加定案）：`p0-c-pipeline/references/final-echo-style-guide.md`——六节点门禁卡统一五段骨架（一句话结论→决策点≤两行/条→待办与事实状态→证据与产物[机器字段唯一容身处+项目绝对根路径]→操作区）+ 禁词表（机器枚举值/内部黑话/SHA 等不得上正文①–③段）；专员卡与 G3 八列硬校验不改格式、按内联原则进④区；冲突以门禁合同为准。接缝：operator-dialogue 第 1 条、p0-c-pipeline SKILL、g1-choice-cards 呈报指向。**v1.1（同日用户复审）**：决策点呈报改"问题→选项列全→【默认已选：X｜依据】"三小节，题面与选项先行、默认盖章在后。
 - 落点：`p0-c-pipeline/references/operator-dialogue.md`（单卡合同节）+ 两个 SKILL；`video-edit-plan`（g1-choice-cards、g1-direction-guide、SKILL 找乐编排 2/3/4 步）；`music-expert`（SKILL 2.6/2.7、search-terms-contract）。纯合同/文档改动，脚本零改动，回归 27/27 不变。
 
-## Unreleased — 主线接线批次②：G1 末找乐编排 + 槽一致性后门封堵
+### v1.3.0 批次 · 主线接线批次②：G1 末找乐编排 + 槽一致性后门封堵
 
 - 堵静默改主意后门：`g1_direction.py validate` 新增 G0 `bgm` 槽一致性检查——方向简报的 `bgmDecision` 与槽冲突即拒（改主意必须先走 `pipeline_state.py bgm-choice` 留痕）；G1 只能继承槽，不能覆盖槽。
 - video-edit-plan SKILL 新增"G1 末：找乐编排"节（严守节点专员=编排+卡片、音乐能力全归 music-expert 的分工）：查库先行零成本 → 检索词卡（偏好原话第一优先、不设口令）→ netease 找候选 → 锚定排序 → omni 试听笔记（可选，能力缺失如实提示）→ 候选歌卡（侵权横幅必显）→ 用户挑曲一句即决定（原话入 verdicts）→ 官方渠道整轨登记 → bgm-choice 翻槽 → **初次分析统一 G1** 补三哈希链+档案写回。停止条件与 G2/G3 硬门禁闭环。
 - 测试：g1_direction +1（不一致拒、一致继承放行）。
 
-## Unreleased — 主线接线批次①：G0 待找乐槽（接上 music-expert 的第一步）
+### v1.3.0 批次 · 主线接线批次①：G0 待找乐槽（接上 music-expert 的第一步）
 
 - 兑现 g0-policy 的"下游提醒"空头支票：G0 的 BGM 声明成为机器事实全程携带——模板新增可选 `BGM preference:`（用户口头偏好**原话**，检索词推导第一优先输入）；`material_pack.py register` 把 `bgm` 段（decision/preference/libraryPending/clearCondition）写进 material-pack.json；`pipeline_state.py init` 抬进 state.bgm；`status` 在槽未清时输出 reminder。
 - 新命令 `pipeline_state.py bgm-choice`：翻槽唯一入口——翻到 `provided` 必须带登记证据（无证据拒绝），`no_bgm` 免证据；每次翻槽 append `history`，槽不得靠聊天清空。
 - 硬门禁（N9 顺序）：`libraryPending` 期间 **G2/G3 approve 直接拒绝**；`validate` 检出"use_library_later 但 07 出现文件"的矛盾。
 - 文档同步：pipeline-state-contract 增 BGM slot 节、p0-c-pipeline SKILL 增机器携带说明+硬门禁、g0-start-form/g0-policy 措辞兑现；测试 pipeline +2、material-pack +2（含模板提示行不算用户输入）。
 
-## Unreleased — music-expert 找乐（N10）+ 锚定打分
+### v1.3.0 批次 · music-expert 找乐（N10）+ 锚定打分
 
 - 检索词生成合同落地（`music_search_terms.py`，专员侧 I/O 固化：时长下限由时间线毫秒向上取整，风格简报 BPM 过滤；口头偏好＞主题翻译＞简报锚定）。
 - 网易云搜索适配 `music_search_netease.py`（试听选型轨道三：候选写死 `uncleared-platform-catalog`/`internal_test`，风控结构化 blocked，绝不谎称许可；下载封顶=入选数）。

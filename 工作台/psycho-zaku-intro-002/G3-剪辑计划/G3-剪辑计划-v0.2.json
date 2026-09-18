@@ -1,0 +1,978 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "status": "approved_for_g4",
+ "sourceAudioPolicy": "exclude",
+ "narrationDraft": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+ "narrationDecisionRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+ "timelineDurationMs": 94720,
+ "durationDecision": {
+  "targetDurationSec": 180,
+  "narrationEstimatedDurationSec": 94.72,
+  "resolution": "follow_narration_natural_duration",
+  "decisionReason": "G1 目标 180–600s；主素材实测仅 327s 且目标主体戏份约 45s，G3 充分性检查触发用户预授权「S2 A」shorten_output（reworkRef=G3-素材充分性与短版提案-v0.1.md），短版旁白 94.720s 实测（G2-配音清单-longtian-v0.3.json），成片随旁白自然收束。",
+  "intentionalSilence": [],
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "bgmPlan": {
+  "audioSha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+  "reportSha256": "044E48B0F819D062F999441DA907AB31383AA0ECED3C23EE955699A0D891B61B",
+  "alignmentRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+  "alignmentSha256": "8BDD4BC7B79F5AC878EC195F773E5D8E2AFF9FB050D06CC60C85945A43BF3D36",
+  "trackOffsetMs": 0,
+  "fades": {
+   "fadeInMs": 2000,
+   "fadeOutStartMs": 92720,
+   "fadeOutMs": 2000
+  },
+  "duckingPolicy": "口播活跃区间 BGM 压低（对齐产物 ducking 13 句全区间）；深度参数 G4 执行前拍板"
+ },
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 100000,
+   "endMs": 111200,
+   "sourceDurationMs": 11200,
+   "outputStartMs": 0,
+   "outputEndMs": 11200,
+   "outputDurationMs": 11200,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 0,
+   "narrationEndMs": 11200,
+   "narrationText": "宇宙世纪0079年，一年战争的尾声。当所有人的目光都盯着那些主角机时，吉翁公国悄悄投入了一个更危险的实验。",
+   "semanticBeatIds": [
+    "beat-N01"
+   ],
+   "layoutTier": "推进",
+   "purpose": "战争语境开场（战舰/爆炸氛围承载旁白设问）",
+   "reason": "战争语境开场（战舰/爆炸氛围承载旁白设问）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "战舰与爆炸画面（语境，非事实主张）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/start-0000100000ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/middle-0000105600ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/end-0000111199ms.jpg"
+    ],
+    "observedVisuals": "起帧黑暗太空战舰剪影+粉星云（烧录字幕“强敌还在那里”）；中帧座舱屏幕紫光驾驶员面孔+金色徽记；终帧双光束拖尾+粉色爆炸；探针含白红头盔驾驶员震惊极特写",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-001",
+     "vv-002",
+     "vv-003",
+     "pr-011",
+     "pr-012"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 136143,
+   "endMs": 146223,
+   "sourceDurationMs": 10080,
+   "outputStartMs": 11200,
+   "outputEndMs": 21280,
+   "outputDurationMs": 10080,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 11200,
+   "narrationEndMs": 21280,
+   "narrationText": "它基于量产的扎古，却搭载了一套几乎不被正史记载的系统——Reuse-P装置。它的名字，叫精神力扎古。",
+   "semanticBeatIds": [
+    "beat-N02"
+   ],
+   "layoutTier": "推进",
+   "purpose": "点名句：目标主体近景拉远全身揭示",
+   "reason": "点名句：目标主体近景拉远全身揭示",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "目标主体机体全身/大半身可见"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/start-0000136143ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/middle-0000141183ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/end-0000146222ms.jpg"
+    ],
+    "observedVisuals": "起帧蓝白光中开火机体；中帧红色扎古持大火箭筒悬浮绿色网格表面（殖民地内部）；终帧红色机体开火+蓝推进器",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-004",
+     "vv-005",
+     "vv-006"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-03",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 0,
+   "endMs": 7200,
+   "sourceDurationMs": 7200,
+   "outputStartMs": 21280,
+   "outputEndMs": 28480,
+   "outputDurationMs": 7200,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 21280,
+   "narrationEndMs": 28480,
+   "narrationText": "这套装置能直接读取驾驶员的神经信号，让机体的四肢像身体的延伸一样，随念头而动。",
+   "semanticBeatIds": [
+    "beat-N03"
+   ],
+   "layoutTier": "常规",
+   "purpose": "神经操纵语境：达里尔舱内操作",
+   "reason": "神经操纵语境：达里尔舱内操作",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "驾驶员舱内操作画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "叠化/硬切按 G4 微调",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/start-0000000000ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/middle-0000003600ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/end-0000007199ms.jpg"
+    ],
+    "observedVisuals": "起帧驾驶员俯身入座舱（紫面罩、面部可见）；中帧绿手套握操纵杆特写；终帧座舱内握杆操作；探针为手臂操作控制台",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-007",
+     "vv-008",
+     "vv-009",
+     "pr-001"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 27210,
+   "endMs": 36490,
+   "sourceDurationMs": 9280,
+   "outputStartMs": 28480,
+   "outputEndMs": 37760,
+   "outputDurationMs": 9280,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 28480,
+   "narrationEndMs": 37760,
+   "narrationText": "驾驶它的，不是王牌，也不是少爷——而是\"假死者部队\"的达里尔·洛伦兹。一支部队，连番号都在宣告他们的牺牲。",
+   "semanticBeatIds": [
+    "beat-N04"
+   ],
+   "layoutTier": "常规",
+   "purpose": "达里尔出击段（字幕条点名 达利路·劳伦斯）",
+   "reason": "达里尔出击段（字幕条点名 达利路·劳伦斯）",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "达里尔舱内形象可见"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "叠化/硬切按 G4 微调",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/start-0000027210ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/middle-0000031850ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/end-0000036489ms.jpg"
+    ],
+    "observedVisuals": "起帧洋红紫扎古开火+蓝推进尾；中帧青色喷口群特写；终帧红冠头盔驾驶员面部极特写；探针含舰内机库与汗面驾驶员（烧录字幕“时间到了”）",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-010",
+     "vv-011",
+     "vv-012",
+     "pr-002",
+     "pr-003",
+     "pr-004",
+     "pr-005",
+     "pr-006",
+     "pr-007",
+     "pr-008"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 74226,
+   "endMs": 82786,
+   "sourceDurationMs": 8560,
+   "outputStartMs": 37760,
+   "outputEndMs": 46320,
+   "outputDurationMs": 8560,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 37760,
+   "narrationEndMs": 46320,
+   "narrationText": "当年十二月，达里尔迅速掌握了这台机体：重创对手母舰\"蜂巢\"，击沉数艘萨拉米斯级。",
+   "semanticBeatIds": [
+    "beat-N05"
+   ],
+   "layoutTier": "快切",
+   "purpose": "战绩句语境：战舰命中与爆炸",
+   "reason": "战绩句语境：战舰命中与爆炸",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "战舰被命中/爆炸画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/start-0000074226ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/middle-0000078506ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/end-0000082785ms.jpg"
+    ],
+    "observedVisuals": "起帧机库内巨大粉色爆炸；中帧暗红扎古（洋红单眼）持白色火箭筒+绿色光束军刀；终帧洋红紫扎古发射大火箭筒粉色光束；探针为绿色光束命中爆闪",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-013",
+     "vv-014",
+     "vv-015",
+     "pr-009",
+     "pr-010"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 229210,
+   "endMs": 234170,
+   "sourceDurationMs": 4960,
+   "outputStartMs": 46320,
+   "outputEndMs": 51280,
+   "outputDurationMs": 4960,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 46320,
+   "narrationEndMs": 51280,
+   "narrationText": "请注意，这是一台扎古——一个已经开始落后的骨架。",
+   "semanticBeatIds": [
+    "beat-N06"
+   ],
+   "layoutTier": "快切",
+   "purpose": "『这是一台扎古』：目标主体开火特写",
+   "reason": "『这是一台扎古』：目标主体开火特写",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "目标主体开火画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/start-0000229210ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/middle-0000231690ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/end-0000234169ms.jpg"
+    ],
+    "observedVisuals": "起帧红色扎古开火；中帧橙色爆炸火球+碎片；终帧红色扎古携盾+白烟迹；探针含巨大粉黄爆炸与机体喷射白色气体（受创泄压）",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-016",
+     "vv-017",
+     "vv-018",
+     "pr-019",
+     "pr-020"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 166176,
+   "endMs": 173616,
+   "sourceDurationMs": 7440,
+   "outputStartMs": 51280,
+   "outputEndMs": 58720,
+   "outputDurationMs": 7440,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 51280,
+   "narrationEndMs": 58720,
+   "narrationText": "它能打出越级的战绩，是因为设计重心从来不在装甲和出力，而在\"把人的大脑当作操作系统\"。",
+   "semanticBeatIds": [
+    "beat-N07"
+   ],
+   "layoutTier": "快切",
+   "purpose": "设计重心句：目标主体大型火箭筒开火",
+   "reason": "设计重心句：目标主体大型火箭筒开火",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "目标主体武器开火画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/start-0000166176ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/middle-0000169896ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/end-0000173615ms.jpg"
+    ],
+    "observedVisuals": "起/中帧含泪年轻驾驶员面部特写（黄绿头盔）；终帧红色高机动扎古发射蓝色光束于碎片场上方；探针含烧录字幕“比我失去的手脚还自如”",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-019",
+     "vv-020",
+     "vv-021",
+     "pr-013",
+     "pr-014",
+     "pr-015"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 185000,
+   "endMs": 193880,
+   "sourceDurationMs": 8880,
+   "outputStartMs": 58720,
+   "outputEndMs": 67600,
+   "outputDurationMs": 8880,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 58720,
+   "narrationEndMs": 67600,
+   "narrationText": "代价同样残酷：这种系统要求驾驶员与机器融为一体，而越融合，人的边界越模糊。",
+   "semanticBeatIds": [
+    "beat-N08"
+   ],
+   "layoutTier": "留白",
+   "purpose": "代价句：驾驶员眼部特写+敌机火力",
+   "reason": "代价句：驾驶员眼部特写+敌机火力",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "驾驶员面部情绪特写"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "叠化/硬切按 G4 微调",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/start-0000185000ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/middle-0000189440ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/end-0000193879ms.jpg"
+    ],
+    "observedVisuals": "起帧灰色烟雾+坠散碎片；中帧座舱“ROUTE SIMULATION”雷达屏；终帧疤痕驾驶员咬牙特写（绿光）；探针含废墟内红色扎古开火大口径炮口焰",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-022",
+     "vv-023",
+     "vv-024",
+     "pr-016",
+     "pr-017",
+     "pr-018"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 203310,
+   "endMs": 207710,
+   "sourceDurationMs": 4400,
+   "outputStartMs": 67600,
+   "outputEndMs": 72000,
+   "outputDurationMs": 4400,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 67600,
+   "narrationEndMs": 72000,
+   "narrationText": "精神力扎古自始至终是试作机，从未正式量产。",
+   "semanticBeatIds": [
+    "beat-N09"
+   ],
+   "layoutTier": "留白",
+   "purpose": "试作机句：目标主体暗舱静置",
+   "reason": "试作机句：目标主体暗舱静置",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "目标主体静置展示画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "叠化/硬切按 G4 微调",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/start-0000203310ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/middle-0000205510ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/end-0000207709ms.jpg"
+    ],
+    "observedVisuals": "起帧洋红紫扎古发射巨大蓝光束；中帧红色扎古携盾+火花；终帧年轻驾驶员红冠头盔面部特写",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-025",
+     "vv-026",
+     "vv-027"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 290543,
+   "endMs": 294943,
+   "sourceDurationMs": 4400,
+   "outputStartMs": 72000,
+   "outputEndMs": 76400,
+   "outputDurationMs": 4400,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 72000,
+   "narrationEndMs": 76400,
+   "narrationText": "回到标题：为什么说它是\"凌驾于主角机之上的怪物\"？",
+   "semanticBeatIds": [
+    "beat-N17"
+   ],
+   "layoutTier": "推进",
+   "purpose": "回到标题：目标主体特写连段+持盾开火",
+   "reason": "回到标题：目标主体特写连段+持盾开火",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "目标主体特写与开火画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/start-0000290543ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/middle-0000292743ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/end-0000294942ms.jpg"
+    ],
+    "observedVisuals": "起帧瞪眼震惊驾驶员特写（粉色座舱屏）；中帧扎古携盾发射洋红光束；终帧机体腿部/推进器运动极特写",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-028",
+     "vv-029",
+     "vv-030"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 276576,
+   "endMs": 282576,
+   "sourceDurationMs": 6000,
+   "outputStartMs": 76400,
+   "outputEndMs": 82400,
+   "outputDurationMs": 6000,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 76400,
+   "narrationEndMs": 82400,
+   "narrationText": "因为它从不曾拥有主角的光环，却每一次登场，都是别人的生死劫。",
+   "semanticBeatIds": [
+    "beat-N18"
+   ],
+   "layoutTier": "快切",
+   "purpose": "生死劫句：主体头部特写+敌机中弹爆闪",
+   "reason": "生死劫句：主体头部特写+敌机中弹爆闪",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "目标主体特写+敌方受击画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/start-0000276576ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/middle-0000279576ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/end-0000282575ms.jpg"
+    ],
+    "observedVisuals": "起帧暗红装甲近景（低照度）；中帧紫色眼睛大张极特写+画面边缘手指；终帧红色扎古大粒子炮开火炮口黄光+洋红单眼；探针为同炮口开火镜头",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-031",
+     "vv-032",
+     "vv-033",
+     "pr-021"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 309826,
+   "endMs": 317586,
+   "sourceDurationMs": 7760,
+   "outputStartMs": 82400,
+   "outputEndMs": 90160,
+   "outputDurationMs": 7760,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 82400,
+   "narrationEndMs": 90160,
+   "narrationText": "它是一台被神经系统逼到极限的量产机，一名老兵最后的义肢，一个不肯死去的旧时代残响。",
+   "semanticBeatIds": [
+    "beat-N19"
+   ],
+   "layoutTier": "推进",
+   "purpose": "收束三连喻：目标主体持残骸特写段",
+   "reason": "收束三连喻：目标主体持残骸特写段",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "目标主体特写（残骸意象）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "硬切（快切/推进段）；留白段允许 6-10 帧叠化",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/start-0000309826ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/middle-0000313706ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/end-0000317585ms.jpg"
+    ],
+    "observedVisuals": "起/中帧紫色眼睛极特写；终帧红紫扎古躯干损伤+绿衣驾驶员浮出舱口（烧录字幕“不可能”）；探针为橙色装甲圆形舱口损伤特写",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-034",
+     "vv-035",
+     "vv-036",
+     "pr-022"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-13",
+   "assetId": "source-02-2071e9a7",
+   "startMs": 322010,
+   "endMs": 326570,
+   "sourceDurationMs": 4560,
+   "outputStartMs": 90160,
+   "outputEndMs": 94720,
+   "outputDurationMs": 4560,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 90160,
+   "narrationEndMs": 94720,
+   "narrationText": "下一期，我们把精神力扎古的装备和战果，逐帧拆开看。",
+   "semanticBeatIds": [
+    "beat-N20"
+   ],
+   "layoutTier": "常规",
+   "purpose": "下期预告：EVA 收尾镜头",
+   "reason": "下期预告：EVA 收尾镜头",
+   "narrativeClaim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": "收尾画面（EVA/残骸）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "见 visualVerification.observedVisuals（起/中/终+子镜头探针实际画面）"
+   },
+   "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉文字索引-v0.2.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "mask",
+    "region": "底部字幕带 y=84%-100% 窄遮罩；左上UP主水印与右下SUNRISE台标按 G3-源字幕处理表逐段处理",
+    "note": "全片烧录卡拉OK字幕，口播主字幕上移 70-84% 车道避让"
+   },
+   "transition": "叠化/硬切按 G4 微调",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/start-0000322010ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/middle-0000324290ms.jpg",
+     "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/end-0000326569ms.jpg"
+    ],
+    "observedVisuals": "起/中帧暗色眼睛极特写（手指压眉）；终帧太空远景：EVA 宇航员漂浮于被毁白色机动战士与大型光束炮残骸旁",
+    "verifiedBy": "zcode-vision (agent-multimodal)",
+    "verifiedAt": "2026-09-17T10:07:58Z",
+    "derivedFromObservationIds": [
+     "vv-037",
+     "vv-038",
+     "vv-039"
+    ]
+   }
+  }
+ ],
+ "packagingDecisions": {
+  "coverFrameMs": 16000,
+  "coverSource": "seg-02 目标主体全身揭示（源 141143ms）",
+  "chapterCards": [
+   {
+    "cardId": "title-01",
+    "startMs": 0,
+    "endMs": 3200,
+    "lane": "上部标题带",
+    "title": "精神力扎古：凌驾于主角机之上的怪物"
+   }
+  ]
+ },
+ "warnings": [
+  "源片全片烧录卡拉OK字幕+左上UP主水印+右下SUNRISE台标：G4 按逐段遮罩执行，成片字幕全部为本项目新制口播字幕",
+  "BGM 未清权（Perturbator 曲目，用户委托选定）：internal_test 预览可用，对外发布前必须换清权曲（G5 分发边界兜底）",
+  "seg-01/seg-05/seg-08/seg-11/seg-13 含非目标主体语境画面（战舰/敌机/EVA），承载句均为编辑表达或语境句，不构成目标主体身份主张"
+ ],
+ "visualAnalysisRefs": [
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.2.json"
+ ],
+ "subjectConfirmationRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+ "planVersion": "0.2",
+ "semanticBeatRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+ "observationLedgerRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+ "editPlan": {
+  "engine": "local_ffmpeg",
+  "resolution": "1920x1080",
+  "fps": 30,
+  "timeline": [
+   {
+    "segmentId": "seg-01",
+    "outputStartMs": 0,
+    "outputEndMs": 11200,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-02",
+    "outputStartMs": 11200,
+    "outputEndMs": 21280,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-03",
+    "outputStartMs": 21280,
+    "outputEndMs": 28480,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-04",
+    "outputStartMs": 28480,
+    "outputEndMs": 37760,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-05",
+    "outputStartMs": 37760,
+    "outputEndMs": 46320,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-06",
+    "outputStartMs": 46320,
+    "outputEndMs": 51280,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-07",
+    "outputStartMs": 51280,
+    "outputEndMs": 58720,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-08",
+    "outputStartMs": 58720,
+    "outputEndMs": 67600,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-09",
+    "outputStartMs": 67600,
+    "outputEndMs": 72000,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-10",
+    "outputStartMs": 72000,
+    "outputEndMs": 76400,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-11",
+    "outputStartMs": 76400,
+    "outputEndMs": 82400,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-12",
+    "outputStartMs": 82400,
+    "outputEndMs": 90160,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-13",
+    "outputStartMs": 90160,
+    "outputEndMs": 94720,
+    "transition": "dissolve"
+   }
+  ]
+ },
+ "humanReviewPoints": [
+  {
+   "id": "hrp-final-timeline",
+   "point": "最终八列回显整体确认：13 段连续无重叠时间线、逐段实际画面观察与验证帧、BGM 乐句档位、字幕布局与源字幕处理",
+   "status": "approved"
+  }
+ ],
+ "timelineReview": {
+  "status": "confirmed",
+  "confirmedBy": "用户（2026-09-17 原话「确认G3」）",
+  "confirmedAt": "2026-09-17T10:28:22Z",
+  "feedback": "终审八列回显 v0.2 整体放行，未指出局部修改",
+  "basisRefs": [
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-回显数据-v0.2.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-最终回显卡-v0.2.md",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-门禁收据.json",
+   "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json"
+  ]
+ },
+ "g3Approval": {
+  "approvedBy": "用户（2026-09-17 原话「确认G3」）",
+  "approvedAt": "2026-09-17T10:28:22Z",
+  "basisRefs": [
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-回显数据-v0.2.json",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-最终回显卡-v0.2.md",
+   "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-门禁收据.json",
+   "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json"
+  ]
+ },
+ "evidenceRefs": [
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.3.json"
+ ],
+ "evidenceRefsNote": "G5 装配追溯补齐（2026-09-17）：纯引用字段，时间线/段/音频边界零改动"
+}

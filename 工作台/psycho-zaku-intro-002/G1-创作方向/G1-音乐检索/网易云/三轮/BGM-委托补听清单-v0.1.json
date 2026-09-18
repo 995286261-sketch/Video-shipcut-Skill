@@ -1,0 +1,89 @@
+{
+ "schemaVersion": "0.1",
+ "purpose": "bgm_candidate_pool",
+ "source": "netease",
+ "candidates": [
+  {
+   "schemaVersion": "0.1",
+   "skill": "music-expert",
+   "provenance": "netease_search",
+   "neteaseId": 26408416,
+   "title": "The Darkest Alleys (Final Stage)",
+   "artist": "Perturbator",
+   "album": "Terror 404",
+   "durationMs": 336014,
+   "fee": 0,
+   "sourceUrl": "https://music.163.com/song?id=26408416",
+   "previewUrl": "https://music.163.com/song/media/outer/url?id=26408416.mp3",
+   "license": "uncleared-platform-catalog",
+   "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+   "attributionRequired": true,
+   "attributionText": "Perturbator - The Darkest Alleys (Final Stage)",
+   "retrievedAt": "2026-09-17T15:03:54+08:00",
+   "distributionBoundary": "internal_test",
+   "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+   },
+   "analysisRef": null,
+   "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-26408416-The_Darkest_Alleys_(Final_Stage).mp3",
+   "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+   "byteSize": 5377506
+  },
+  {
+   "schemaVersion": "0.1",
+   "skill": "music-expert",
+   "provenance": "netease_search",
+   "neteaseId": 27112020,
+   "title": "Little Fluffy Clouds (Adam Freelands Tsunami One Remix)",
+   "artist": "The Orb",
+   "album": "Little Fluffy Clouds",
+   "durationMs": 477000,
+   "fee": 8,
+   "sourceUrl": "https://music.163.com/song?id=27112020",
+   "previewUrl": "https://music.163.com/song/media/outer/url?id=27112020.mp3",
+   "license": "uncleared-platform-catalog",
+   "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+   "attributionRequired": true,
+   "attributionText": "The Orb - Little Fluffy Clouds (Adam Freelands Tsunami One Remix)",
+   "retrievedAt": "2026-09-17T15:04:05+08:00",
+   "distributionBoundary": "internal_test",
+   "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+   },
+   "analysisRef": null,
+   "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-27112020-Little_Fluffy_Clouds_(Adam_Freelands_Tsunami_One.mp3",
+   "sha256": "907ACC3794021EFB0E4D11471B63FE88BFDB207737B17B02A46B55D5325D74A3",
+   "byteSize": 7633409
+  },
+  {
+   "schemaVersion": "0.1",
+   "skill": "music-expert",
+   "provenance": "netease_search",
+   "neteaseId": 2034842293,
+   "title": "真实的虚幻三",
+   "artist": "辐射波RadiationWave",
+   "album": "真实的虚幻(REAL UNREAL)",
+   "durationMs": 582908,
+   "fee": 8,
+   "sourceUrl": "https://music.163.com/song?id=2034842293",
+   "previewUrl": "https://music.163.com/song/media/outer/url?id=2034842293.mp3",
+   "license": "uncleared-platform-catalog",
+   "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+   "attributionRequired": true,
+   "attributionText": "辐射波RadiationWave - 真实的虚幻三",
+   "retrievedAt": "2026-09-17T14:57:56+08:00",
+   "distributionBoundary": "internal_test",
+   "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+   },
+   "analysisRef": null,
+   "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-2034842293-真实的虚幻三.mp3",
+   "sha256": "3336AF64302C8FCE6539F103E94D743B32284AD69A1838D16F6F7A732F935717",
+   "byteSize": 9327639
+  }
+ ],
+ "note": "委托选曲补听：此前未进入模型耳朵的 3 首"
+}

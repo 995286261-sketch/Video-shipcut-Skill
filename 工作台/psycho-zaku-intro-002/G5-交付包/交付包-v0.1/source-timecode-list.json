@@ -1,0 +1,263 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "generatedAt": "2026-09-17T11:10:00Z",
+ "sourceAsset": {
+  "assetId": "source-02-2071e9a7",
+  "path": "工作台/psycho-zaku-intro-002/G0-素材包/02_原始素材/超越高达的怪物—精神力扎古.mp4",
+  "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+  "durationMs": 327018
+ },
+ "chapters": [
+  {
+   "chapterId": "ch1-开场-战争语境",
+   "outputRangeMs": [
+    0,
+    21280
+   ],
+   "output": "clips/ch1-开场-战争语境.mp4",
+   "segments": [
+    "seg-01",
+    "seg-02"
+   ]
+  },
+  {
+   "chapterId": "ch2-精神力扎古与Reuse-P",
+   "outputRangeMs": [
+    21280,
+    51280
+   ],
+   "output": "clips/ch2-精神力扎古与Reuse-P.mp4",
+   "segments": [
+    "seg-03",
+    "seg-04",
+    "seg-05",
+    "seg-06"
+   ]
+  },
+  {
+   "chapterId": "ch3-达里尔与代价",
+   "outputRangeMs": [
+    51280,
+    72000
+   ],
+   "output": "clips/ch3-达里尔与代价.mp4",
+   "segments": [
+    "seg-07",
+    "seg-08",
+    "seg-09"
+   ]
+  },
+  {
+   "chapterId": "ch4-凌驾主角机的怪物",
+   "outputRangeMs": [
+    72000,
+    94720
+   ],
+   "output": "clips/ch4-凌驾主角机的怪物.mp4",
+   "segments": [
+    "seg-10",
+    "seg-11",
+    "seg-12",
+    "seg-13"
+   ]
+  }
+ ],
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    0,
+    11200
+   ],
+   "narrationStartMs": 0,
+   "narrationEndMs": 11200,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "sourceStartMs": 100000,
+   "sourceEndMs": 111200,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    11200,
+    21280
+   ],
+   "narrationStartMs": 11200,
+   "narrationEndMs": 21280,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "sourceStartMs": 136143,
+   "sourceEndMs": 146223,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-03",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    21280,
+    28480
+   ],
+   "narrationStartMs": 21280,
+   "narrationEndMs": 28480,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "sourceStartMs": 0,
+   "sourceEndMs": 7200,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    28480,
+    37760
+   ],
+   "narrationStartMs": 28480,
+   "narrationEndMs": 37760,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "sourceStartMs": 27210,
+   "sourceEndMs": 36490,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    37760,
+    46320
+   ],
+   "narrationStartMs": 37760,
+   "narrationEndMs": 46320,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "sourceStartMs": 74226,
+   "sourceEndMs": 82786,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    46320,
+    51280
+   ],
+   "narrationStartMs": 46320,
+   "narrationEndMs": 51280,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "sourceStartMs": 229210,
+   "sourceEndMs": 234170,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    51280,
+    58720
+   ],
+   "narrationStartMs": 51280,
+   "narrationEndMs": 58720,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "sourceStartMs": 166176,
+   "sourceEndMs": 173616,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    58720,
+    67600
+   ],
+   "narrationStartMs": 58720,
+   "narrationEndMs": 67600,
+   "mappingMode": "one_to_one",
+   "layoutTier": "留白",
+   "sourceStartMs": 185000,
+   "sourceEndMs": 193880,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    67600,
+    72000
+   ],
+   "narrationStartMs": 67600,
+   "narrationEndMs": 72000,
+   "mappingMode": "one_to_one",
+   "layoutTier": "留白",
+   "sourceStartMs": 203310,
+   "sourceEndMs": 207710,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    72000,
+    76400
+   ],
+   "narrationStartMs": 72000,
+   "narrationEndMs": 76400,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "sourceStartMs": 290543,
+   "sourceEndMs": 294943,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    76400,
+    82400
+   ],
+   "narrationStartMs": 76400,
+   "narrationEndMs": 82400,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "sourceStartMs": 276576,
+   "sourceEndMs": 282576,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    82400,
+    90160
+   ],
+   "narrationStartMs": 82400,
+   "narrationEndMs": 90160,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "sourceStartMs": 309826,
+   "sourceEndMs": 317586,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  },
+  {
+   "segmentId": "seg-13",
+   "assetId": "source-02-2071e9a7",
+   "outputRangeMs": [
+    90160,
+    94720
+   ],
+   "narrationStartMs": 90160,
+   "narrationEndMs": 94720,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "sourceStartMs": 322010,
+   "sourceEndMs": 326570,
+   "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+  }
+ ]
+}

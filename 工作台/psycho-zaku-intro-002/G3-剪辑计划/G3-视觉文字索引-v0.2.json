@@ -1,0 +1,1630 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "derivedFrom": [
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.2.json"
+ ],
+ "entries": [
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 1
+   },
+   "subjectStatus": "person_only",
+   "observed": "座舱内白色驾驶服人物，紫调面部，暗舱",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-001"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 5000,
+    "endMs": 5001
+   },
+   "subjectStatus": "person_only",
+   "observed": "舱内驾驶员特写，白盔红冠、吉翁胸章，字幕『才是折磨我们的真正敌人』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-002"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 10000,
+    "endMs": 10001
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶员侧脸+他人戴手套伸手",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-003"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 15000,
+    "endMs": 15001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红/紫机体躯干与盾局部+红发女性人物，字幕『能在这场战争中活下去可以说是奇迹』",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-004"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 20000,
+    "endMs": 20001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红扎古式腿部装甲特写（弹射平台）",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-005"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 25000,
+    "endMs": 25001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "格纳库悬吊洋红扎古全身：单眼、肩甲刺、背部大型光束炮与推进器组（与 E1 高机动型构型一致）",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-006"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 30000,
+    "endMs": 30001
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶员正面特写，字幕『达利路·劳伦斯 出击』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-007"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 35000,
+    "endMs": 35001
+   },
+   "subjectStatus": "not_present",
+   "observed": "弹射口外星空残骸带",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-008"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 40000,
+    "endMs": 40001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "残骸带远景，紫色尾焰小体，右下角机体碎片入画",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-009"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 45000,
+    "endMs": 45001
+   },
+   "subjectStatus": "person_only",
+   "observed": "倒置舱内驾驶员（吉翁徽背景）",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-010"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 50000,
+    "endMs": 50001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "残骸带中红色小影带蓝焰，距离远",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-011"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 55000,
+    "endMs": 55001
+   },
+   "subjectStatus": "not_present",
+   "observed": "战舰甲板大爆炸，粉紫光束",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-012"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 60000,
+    "endMs": 60001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "蓝色推进光点拖尾",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-013"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 65000,
+    "endMs": 65001
+   },
+   "subjectStatus": "not_present",
+   "observed": "灰色舰体装甲板特写",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-014"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 70000,
+    "endMs": 70001
+   },
+   "subjectStatus": "not_present",
+   "observed": "灰色战舰上层建筑开火",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-015"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 75000,
+    "endMs": 75001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "蓝光点+黄色光束弹幕+粉色爆炸",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-016"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 80000,
+    "endMs": 80001
+   },
+   "subjectStatus": "not_present",
+   "observed": "爆炸火球+绿色光束命中舰甲",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-017"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 85000,
+    "endMs": 85001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "蓝色光迹",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-018"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 90000,
+    "endMs": 90001
+   },
+   "subjectStatus": "person_only",
+   "observed": "舱内驾驶员特写（红冠盔、惊愕）",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-019"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 95000,
+    "endMs": 95001
+   },
+   "subjectStatus": "person_only",
+   "observed": "联邦白盔星徽驾驶员，字幕『战斗还没结束』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-020"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 100000,
+    "endMs": 100001
+   },
+   "subjectStatus": "not_present",
+   "observed": "黑暗巨构剪影，字幕『强敌还在那里』",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-021"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 105000,
+    "endMs": 105001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红与白色机体部件叠影（叠化过渡）",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-022"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 110000,
+    "endMs": 110001
+   },
+   "subjectStatus": "not_present",
+   "observed": "巨大爆炸火球+环形冲击波",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-023"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 115000,
+    "endMs": 115001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风橙色头盔人物嘶吼特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-024"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 120000,
+    "endMs": 120001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "漫画分镜：白色高达型对红色扎古型肉搏，顶部字幕组滚动条",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark",
+    "manga_panel",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-025"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 125000,
+    "endMs": 125001
+   },
+   "subjectStatus": "not_present",
+   "observed": "暗星空残骸",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-026"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 130000,
+    "endMs": 130001
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色联邦高达型正面（EFSF 盾）",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-027"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 135000,
+    "endMs": 135001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "红紫机体俯冲+蓝光束军刀+蜘蛛网状背景",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-028"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 140000,
+    "endMs": 140001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "红紫扎古近景：单眼、肩刺、背部大型光束炮，与 25s 同机构型",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-029"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 145000,
+    "endMs": 145001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "红紫扎古全身持大型火箭炮、单眼紫光、高机动腿部",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-030"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 150000,
+    "endMs": 150001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红机体发射大型粉色光束，躯干/背包炮与 25s/140s 同构（头部未入画）",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-031"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 155000,
+    "endMs": 155001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "俯视洋红小机+橙色爆炸环+紫色光束",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-032"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 160000,
+    "endMs": 160001
+   },
+   "subjectStatus": "person_only",
+   "observed": "舱内红冠盔驾驶员，字幕『你造的机动战士』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-033"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 165000,
+    "endMs": 165001
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶员含泪面部特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-034"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 170000,
+    "endMs": 170001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古持大型火箭筒开火（蓝色炮口焰）",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-035"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 175000,
+    "endMs": 175001
+   },
+   "subjectStatus": "not_present",
+   "observed": "白/粉高达型飞行（蓝推进器）",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-036"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 180000,
+    "endMs": 180001
+   },
+   "subjectStatus": "not_present",
+   "observed": "尘埃云中坠落残骸",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-037"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 185000,
+    "endMs": 185001
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶员眼部特写（红盔）",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-038"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 190000,
+    "endMs": 190001
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色高达头部开火特写",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-039"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 195000,
+    "endMs": 195001
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色高达头部开火特写（同镜延续）",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-040"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 200000,
+    "endMs": 200001
+   },
+   "subjectStatus": "not_present",
+   "observed": "灰蓝高达型头部特写+橙烟",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-041"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 205000,
+    "endMs": 205001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红机体暗舱静置：背负大型光束步枪、单眼可见",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-042"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 210000,
+    "endMs": 210001
+   },
+   "subjectStatus": "person_only",
+   "observed": "舱内多名白色服联邦乘员漂浮",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-043"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 215000,
+    "endMs": 215001
+   },
+   "subjectStatus": "not_present",
+   "observed": "灰白高达型头肩特写",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-044"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 220000,
+    "endMs": 220001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "红紫小影+蓝光点+白色线网",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-045"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 225000,
+    "endMs": 225001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风红盔驾驶员嘶吼特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-046"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 230000,
+    "endMs": 230001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古单眼紫光发射大型粉光束",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-047"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 235000,
+    "endMs": 235001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红机体高速机动拖白烟（运动模糊重）",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark",
+    "motion_blur"
+   ],
+   "derivedFromObservationIds": [
+    "vf-048"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 240000,
+    "endMs": 240001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风驾驶员咬牙特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-049"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 245000,
+    "endMs": 245001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "机体部件特写：灰甲+洋红散热结构+白色炮身",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-050"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 250000,
+    "endMs": 250001
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色高达型全身持 EFSF 盾+紫光束军刀",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-051"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 255000,
+    "endMs": 255001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "俯瞰废墟城市、街道中红紫小影",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-052"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 260000,
+    "endMs": 260001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风人物眼部特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-053"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 265000,
+    "endMs": 265001
+   },
+   "subjectStatus": "not_present",
+   "observed": "蓝色竖向光流转场",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-054"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 270000,
+    "endMs": 270001
+   },
+   "subjectStatus": "not_present",
+   "observed": "焦黑高达型头部残骸特写",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-055"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 275000,
+    "endMs": 275001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "白甲+蓝色电弧+仪表『125』特写",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-056"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 280000,
+    "endMs": 280001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风紫调眼睛特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-057"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 285000,
+    "endMs": 285001
+   },
+   "subjectStatus": "uncertain",
+   "observed": "机械臂持大型枪+紫光（局部）",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-058"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 290000,
+    "endMs": 290001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风舱内驾驶员握杆",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-059"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 295000,
+    "endMs": 295001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风驾驶服手臂特写，字幕『为什么』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-060"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 300000,
+    "endMs": 300001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风红冠盔驾驶员仰望，字幕『我明白了 卡拉』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-061"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 305000,
+    "endMs": 305001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风含泪面部特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "vf-062"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 310000,
+    "endMs": 310001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红机体躯干特写：橙色核心块、双联炮口、背负推进器，手持残骸（头部未入画）",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-063"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 315000,
+    "endMs": 315001
+   },
+   "subjectStatus": "confirmed",
+   "observed": "同镜拉远：单眼头部入画，洋红装甲+Zeon 徽记",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-064"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 320000,
+    "endMs": 320001
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风红冠盔驾驶员，字幕『我居然输给了这种残废吗？』",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "vf-065"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 325000,
+    "endMs": 325001
+   },
+   "subjectStatus": "not_present",
+   "observed": "EVA 宇航员漂浮+白色高达型残骸",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-066"
+   ]
+  },
+  {
+   "layer": "grid5s",
+   "sourceRange": {
+    "startMs": 326018,
+    "endMs": 326019
+   },
+   "subjectStatus": "not_present",
+   "observed": "同镜延续：EVA 宇航员+高达型残骸",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "vf-067"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 57226,
+    "endMs": 57227
+   },
+   "subjectStatus": "not_present",
+   "observed": "战舰剪影+爆炸火光",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-019"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 74226,
+    "endMs": 74227
+   },
+   "subjectStatus": "not_present",
+   "observed": "巨大粉紫爆炸云+暗色结构",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-024"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 79809,
+    "endMs": 79810
+   },
+   "subjectStatus": "not_present",
+   "observed": "粉色爆炸云+灰黑舰体装甲",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-028"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 82376,
+    "endMs": 82377
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红机体局部+黄色命中爆闪",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-029"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 93876,
+    "endMs": 93877
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古式躯干：单眼紫光、背部炮、爆炸火光背景",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-035"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 113376,
+    "endMs": 113377
+   },
+   "subjectStatus": "not_present",
+   "observed": "倒置深色高达型+品红 EFSF 盾",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-042"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 135976,
+    "endMs": 135977
+   },
+   "subjectStatus": "uncertain",
+   "observed": "红紫机体+大粉光束+蓝光束军刀",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-052"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 158126,
+    "endMs": 158127
+   },
+   "subjectStatus": "uncertain",
+   "observed": "红紫机体+双蓝光束军刀+大粉光束",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-070"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 170993,
+    "endMs": 170994
+   },
+   "subjectStatus": "not_present",
+   "observed": "白高达型+粉光束",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-075"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 171993,
+    "endMs": 171994
+   },
+   "subjectStatus": "uncertain",
+   "observed": "洋红机体+蓝光束+白网",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-077"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 188993,
+    "endMs": 188994
+   },
+   "subjectStatus": "not_present",
+   "observed": "舱内 ROUTE SIMULATION 仪表屏",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-084"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 206643,
+    "endMs": 206644
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古躯干特写：单眼头、背包炮、Zeon 徽、橙色核心块",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-094"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 210576,
+    "endMs": 210577
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风紫调眼睛特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "sd-095"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 231293,
+    "endMs": 231294
+   },
+   "subjectStatus": "not_present",
+   "observed": "深色高达型持品红 EFSF 盾",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-105"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 232593,
+    "endMs": 232594
+   },
+   "subjectStatus": "not_present",
+   "observed": "白/粉高达型发射大型粉光束",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-106"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 270576,
+    "endMs": 270577
+   },
+   "subjectStatus": "not_present",
+   "observed": "深色高达型特写发射紫光束，字幕『义肢混蛋』",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "sd-120"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 271509,
+    "endMs": 271510
+   },
+   "subjectStatus": "not_present",
+   "observed": "深色高达型开火+紫光束，字幕『义肢混蛋』",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark",
+    "burned_subtitle"
+   ],
+   "derivedFromObservationIds": [
+    "sd-121"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 276243,
+    "endMs": 276244
+   },
+   "subjectStatus": "person_only",
+   "observed": "紫色调人眼特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-123"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 276943,
+    "endMs": 276944
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红机体头部特写：单眼紫光（运动模糊）",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark",
+    "motion_blur"
+   ],
+   "derivedFromObservationIds": [
+    "sd-124"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 278126,
+    "endMs": 278127
+   },
+   "subjectStatus": "not_present",
+   "observed": "白高达型中弹爆闪+舱内 UI 前景",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-125"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 279993,
+    "endMs": 279994
+   },
+   "subjectStatus": "not_present",
+   "observed": "深色高达型装甲特写+烟雾",
+   "editingUse": "战舰/敌方机/残骸/转场——仅口播明确提及非目标内容时作语境",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-126"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 285343,
+    "endMs": 285344
+   },
+   "subjectStatus": "uncertain",
+   "observed": "白色机械臂持炮特写",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-129"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 287226,
+    "endMs": 287227
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古躯干+背包双联炮+Zeon 徽+单眼",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-130"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 287926,
+    "endMs": 287927
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红机体头部特写：单眼紫光+光束掠过",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-131"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 288543,
+    "endMs": 288544
+   },
+   "subjectStatus": "uncertain",
+   "observed": "红色机体爆炸+紫光束",
+   "editingUse": "不可用素材统计（不入选）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-132"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 289776,
+    "endMs": 289777
+   },
+   "subjectStatus": "person_only",
+   "observed": "舱内白盔蓝眼驾驶员",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-133"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 291293,
+    "endMs": 291294
+   },
+   "subjectStatus": "confirmed",
+   "observed": "红紫扎古躯干+橙色核心块+双联背包炮+单眼",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-134"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 293409,
+    "endMs": 293410
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古持盾发射大型粉光束、肩刺",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-135"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 303993,
+    "endMs": 303994
+   },
+   "subjectStatus": "person_only",
+   "observed": "漫画风含泪面部特写",
+   "editingUse": "仅可作人物/驾驶舱语境画面，不得充当目标主体",
+   "risks": [
+    "channel_watermark",
+    "manga_panel"
+   ],
+   "derivedFromObservationIds": [
+    "sd-138"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 309826,
+    "endMs": 309827
+   },
+   "subjectStatus": "confirmed",
+   "observed": "洋红扎古躯干+橙色核心块+Zeon 徽+单眼紫光",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-140"
+   ]
+  },
+  {
+   "layer": "scdet",
+   "sourceRange": {
+    "startMs": 316660,
+    "endMs": 316661
+   },
+   "subjectStatus": "confirmed",
+   "observed": "红紫扎古躯干+EVA 宇航员+橙色核心块",
+   "editingUse": "目标主体镜头候选（进时间线前仍需起/中/终验证帧）",
+   "risks": [
+    "channel_watermark"
+   ],
+   "derivedFromObservationIds": [
+    "sd-142"
+   ]
+  }
+ ],
+ "summary": {
+  "frames": 98,
+  "confirmed": 18,
+  "confirmedSourceMs": [
+   25000,
+   93876,
+   140000,
+   145000,
+   150000,
+   170000,
+   205000,
+   206643,
+   230000,
+   276943,
+   287226,
+   287926,
+   291293,
+   293409,
+   309826,
+   310000,
+   315000,
+   316660
+  ]
+ }
+}

@@ -1,0 +1,458 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "scdet_scene_0.3_subshots_ge300ms_magenta_prefilter_top31",
+ "explorationLayer": {
+  "detector": "ffmpeg select scene>0.3",
+  "cutPoints": 313,
+  "subshots_ge300ms": 144,
+  "gridLayerFrames": 67,
+  "prefilter": "magenta hue fraction on 160x90 downsample, threshold>=0.03",
+  "analyzed": 31,
+  "notAnalyzed": 113,
+  "notAnalyzedPolicy": "未过预筛的 113 个子镜头未送识图=未分析，一律不得入选（保守处置，如实登记）"
+ },
+ "cacheKey": {
+  "node": "G3",
+  "purpose": "keyframe-extraction",
+  "assetId": "source-02-2071e9a7",
+  "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+  "sourceRange": {
+   "startMs": 0,
+   "endMs": 327018
+  },
+  "strategy": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03"
+ },
+ "sourcePackRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G0-素材包/material-pack.json",
+ "provider": "agent-multimodal",
+ "model": "zcode-vision",
+ "promptVersion": "g3-subject-s2-v1",
+ "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+ "analyzedAt": "2026-09-17T11:10:00Z",
+ "promptNote": "身份规则=同 v0.1（S2：仅达里尔版 Reuse-P 为 confirmed）",
+ "subjectConfirmationRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+ "companionManifest": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/G3-目标素材视觉分析-v0.1.json",
+ "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed",
+ "targetAssets": [
+  {
+   "assetId": "source-02-2071e9a7",
+   "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 327018
+   },
+   "keyframes": [
+    {
+     "frameId": "sd-019",
+     "requestedSourceMs": 57226,
+     "sourceMs": 57226,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-019-0000057226ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "战舰剪影+爆炸火光",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-019"
+    },
+    {
+     "frameId": "sd-024",
+     "requestedSourceMs": 74226,
+     "sourceMs": 74226,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-024-0000074226ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "巨大粉紫爆炸云+暗色结构",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-024"
+    },
+    {
+     "frameId": "sd-028",
+     "requestedSourceMs": 79809,
+     "sourceMs": 79809,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-028-0000079809ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "粉色爆炸云+灰黑舰体装甲",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-028"
+    },
+    {
+     "frameId": "sd-029",
+     "requestedSourceMs": 82376,
+     "sourceMs": 82376,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-029-0000082376ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红机体局部+黄色命中爆闪",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-029"
+    },
+    {
+     "frameId": "sd-035",
+     "requestedSourceMs": 93876,
+     "sourceMs": 93876,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-035-0000093876ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古式躯干：单眼紫光、背部炮、爆炸火光背景",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-035"
+    },
+    {
+     "frameId": "sd-042",
+     "requestedSourceMs": 113376,
+     "sourceMs": 113376,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-042-0000113376ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "倒置深色高达型+品红 EFSF 盾",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-042"
+    },
+    {
+     "frameId": "sd-052",
+     "requestedSourceMs": 135976,
+     "sourceMs": 135976,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-052-0000135976ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "红紫机体+大粉光束+蓝光束军刀",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-052"
+    },
+    {
+     "frameId": "sd-070",
+     "requestedSourceMs": 158126,
+     "sourceMs": 158126,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-070-0000158126ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "红紫机体+双蓝光束军刀+大粉光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-070"
+    },
+    {
+     "frameId": "sd-075",
+     "requestedSourceMs": 170993,
+     "sourceMs": 170993,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-075-0000170993ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白高达型+粉光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-075"
+    },
+    {
+     "frameId": "sd-077",
+     "requestedSourceMs": 171993,
+     "sourceMs": 171993,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-077-0000171993ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红机体+蓝光束+白网",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-077"
+    },
+    {
+     "frameId": "sd-084",
+     "requestedSourceMs": 188993,
+     "sourceMs": 188993,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-084-0000188993ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "舱内 ROUTE SIMULATION 仪表屏",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-084"
+    },
+    {
+     "frameId": "sd-094",
+     "requestedSourceMs": 206643,
+     "sourceMs": 206643,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-094-0000206643ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古躯干特写：单眼头、背包炮、Zeon 徽、橙色核心块",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-094"
+    },
+    {
+     "frameId": "sd-095",
+     "requestedSourceMs": 210576,
+     "sourceMs": 210576,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-095-0000210576ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风紫调眼睛特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "sd-095"
+    },
+    {
+     "frameId": "sd-105",
+     "requestedSourceMs": 231293,
+     "sourceMs": 231293,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-105-0000231293ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "深色高达型持品红 EFSF 盾",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-105"
+    },
+    {
+     "frameId": "sd-106",
+     "requestedSourceMs": 232593,
+     "sourceMs": 232593,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-106-0000232593ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白/粉高达型发射大型粉光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-106"
+    },
+    {
+     "frameId": "sd-120",
+     "requestedSourceMs": 270576,
+     "sourceMs": 270576,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-120-0000270576ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "深色高达型特写发射紫光束，字幕『义肢混蛋』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "sd-120"
+    },
+    {
+     "frameId": "sd-121",
+     "requestedSourceMs": 271509,
+     "sourceMs": 271509,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-121-0000271509ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "深色高达型开火+紫光束，字幕『义肢混蛋』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "sd-121"
+    },
+    {
+     "frameId": "sd-123",
+     "requestedSourceMs": 276243,
+     "sourceMs": 276243,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-123-0000276243ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "紫色调人眼特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-123"
+    },
+    {
+     "frameId": "sd-124",
+     "requestedSourceMs": 276943,
+     "sourceMs": 276943,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-124-0000276943ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红机体头部特写：单眼紫光（运动模糊）",
+     "riskFlags": [
+      "channel_watermark",
+      "motion_blur"
+     ],
+     "ledgerRecordId": "sd-124"
+    },
+    {
+     "frameId": "sd-125",
+     "requestedSourceMs": 278126,
+     "sourceMs": 278126,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-125-0000278126ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白高达型中弹爆闪+舱内 UI 前景",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-125"
+    },
+    {
+     "frameId": "sd-126",
+     "requestedSourceMs": 279993,
+     "sourceMs": 279993,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-126-0000279993ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "深色高达型装甲特写+烟雾",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-126"
+    },
+    {
+     "frameId": "sd-129",
+     "requestedSourceMs": 285343,
+     "sourceMs": 285343,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-129-0000285343ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "白色机械臂持炮特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-129"
+    },
+    {
+     "frameId": "sd-130",
+     "requestedSourceMs": 287226,
+     "sourceMs": 287226,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-130-0000287226ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古躯干+背包双联炮+Zeon 徽+单眼",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-130"
+    },
+    {
+     "frameId": "sd-131",
+     "requestedSourceMs": 287926,
+     "sourceMs": 287926,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-131-0000287926ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红机体头部特写：单眼紫光+光束掠过",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-131"
+    },
+    {
+     "frameId": "sd-132",
+     "requestedSourceMs": 288543,
+     "sourceMs": 288543,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-132-0000288543ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "红色机体爆炸+紫光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-132"
+    },
+    {
+     "frameId": "sd-133",
+     "requestedSourceMs": 289776,
+     "sourceMs": 289776,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-133-0000289776ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "舱内白盔蓝眼驾驶员",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-133"
+    },
+    {
+     "frameId": "sd-134",
+     "requestedSourceMs": 291293,
+     "sourceMs": 291293,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-134-0000291293ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "红紫扎古躯干+橙色核心块+双联背包炮+单眼",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-134"
+    },
+    {
+     "frameId": "sd-135",
+     "requestedSourceMs": 293409,
+     "sourceMs": 293409,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-135-0000293409ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古持盾发射大型粉光束、肩刺",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-135"
+    },
+    {
+     "frameId": "sd-138",
+     "requestedSourceMs": 303993,
+     "sourceMs": 303993,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-138-0000303993ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风含泪面部特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "sd-138"
+    },
+    {
+     "frameId": "sd-140",
+     "requestedSourceMs": 309826,
+     "sourceMs": 309826,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-140-0000309826ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古躯干+橙色核心块+Zeon 徽+单眼紫光",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-140"
+    },
+    {
+     "frameId": "sd-142",
+     "requestedSourceMs": 316660,
+     "sourceMs": 316660,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/scdet-关键帧/shot-142-0000316660ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "红紫扎古躯干+EVA 宇航员+橙色核心块",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "sd-142"
+    }
+   ]
+  }
+ ]
+}

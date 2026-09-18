@@ -1,0 +1,51 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "resolution": [
+  1920,
+  1080
+ ],
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "标题/章节卡（片头标题卡 0-3.2s）"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "信息卡（本项目未启用）"
+  },
+  "narration": {
+   "topPct": 70,
+   "bottomPct": 84,
+   "fontsize": 64,
+   "maxLines": 2,
+   "marginV": 173,
+   "marginL": 60,
+   "marginR": 60
+  },
+  "sourceExclusion": {
+   "topPct": 84,
+   "bottomPct": 100,
+   "usage": "源烧录卡拉OK字幕排除区：mask带所在，新字幕不得进入"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "mask": {
+   "bandPct": [
+    84,
+    100
+   ],
+   "style": "与画面暗部相融的窄遮罩"
+  },
+  "watermark": "左上『白发金木研v bilibili』水印+右下SUNRISE台标：16:9构图不可裁除，保留并计入G5分发边界披露"
+ },
+ "rules": [
+  "一条口播一个排版块（13 cue 与 G2 批准短版逐句一一对应，逐字未改）",
+  "片头标题卡 0-3.2s 位于上部车道，与 N01 cue 不同车道、无冲突",
+  "口播主字幕永不进入 84-100% 源字幕排除区",
+  "关键动作位于下方时允许临时上移 60-72% 车道+窄底板（G4 微调项）"
+ ]
+}

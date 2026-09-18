@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "3336AF64302C8FCE6539F103E94D743B32284AD69A1838D16F6F7A732F935717",
+  "aliases": [
+    {
+      "title": "真实的虚幻三",
+      "neteaseId": 2034842293,
+      "sourceUrl": "https://music.163.com/song?id=2034842293",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T08:18:01Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-2034842293-真实的虚幻三.mp3",
+      "recordedAt": "2026-09-17T08:18:01Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T08:18:01Z",
+  "updatedAt": "2026-09-17T08:18:01Z"
+}

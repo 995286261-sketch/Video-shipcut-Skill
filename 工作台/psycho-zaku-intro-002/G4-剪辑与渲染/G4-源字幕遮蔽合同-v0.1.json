@@ -1,0 +1,168 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G4",
+ "projectId": "psycho-zaku-intro-002",
+ "source": "G3-源字幕处理表-v0.1.md + 批准计划 sourceCaptionTreatment（权威为计划）",
+ "canvas": {
+  "width": 1920,
+  "height": 1080
+ },
+ "masks": [
+  {
+   "maskId": "mask-seg-01",
+   "segmentId": "seg-01",
+   "outputFromMs": 0,
+   "outputToMs": 11200,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-02",
+   "segmentId": "seg-02",
+   "outputFromMs": 11200,
+   "outputToMs": 21280,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-03",
+   "segmentId": "seg-03",
+   "outputFromMs": 21280,
+   "outputToMs": 28480,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-04",
+   "segmentId": "seg-04",
+   "outputFromMs": 28480,
+   "outputToMs": 37760,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-05",
+   "segmentId": "seg-05",
+   "outputFromMs": 37760,
+   "outputToMs": 46320,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-06",
+   "segmentId": "seg-06",
+   "outputFromMs": 46320,
+   "outputToMs": 51280,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-07",
+   "segmentId": "seg-07",
+   "outputFromMs": 51280,
+   "outputToMs": 58720,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-08",
+   "segmentId": "seg-08",
+   "outputFromMs": 58720,
+   "outputToMs": 67600,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-09",
+   "segmentId": "seg-09",
+   "outputFromMs": 67600,
+   "outputToMs": 72000,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-10",
+   "segmentId": "seg-10",
+   "outputFromMs": 72000,
+   "outputToMs": 76400,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-11",
+   "segmentId": "seg-11",
+   "outputFromMs": 76400,
+   "outputToMs": 82400,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-12",
+   "segmentId": "seg-12",
+   "outputFromMs": 82400,
+   "outputToMs": 90160,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  },
+  {
+   "maskId": "mask-seg-13",
+   "segmentId": "seg-13",
+   "outputFromMs": 90160,
+   "outputToMs": 94720,
+   "bandYpx": [
+    907,
+    1080
+   ],
+   "color": "black",
+   "basis": "G3批准: 底部84-100%窄遮罩（全片烧录卡拉OK字幕，源字幕处理表 v0.1 逐段 mask）"
+  }
+ ]
+}

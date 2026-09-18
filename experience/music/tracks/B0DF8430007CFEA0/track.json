@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "B0DF8430007CFEA0086C1E85E48FF8FBBFB1A26C64C8D9BDDDD3FF535C1D8331",
+  "aliases": [
+    {
+      "title": "Darksynth",
+      "neteaseId": 1364585504,
+      "sourceUrl": "https://music.163.com/song?id=1364585504",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T07:05:16Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1364585504-Darksynth.mp3",
+      "recordedAt": "2026-09-17T07:05:16Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T07:05:16Z",
+  "updatedAt": "2026-09-17T07:05:16Z"
+}

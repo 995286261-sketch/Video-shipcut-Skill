@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "EFC892584B58BA8A47F863F84745BA5412C65350431C5F4AAF26048C37E1CF98",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-194812-preview.mp3",
+    "sha256": "EFC892584B58BA8A47F863F84745BA5412C65350431C5F4AAF26048C37E1CF98",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 3.030204,
+    "decodedDurationMs": 2979
+  },
+  "tempoBpm": 92.29,
+  "beatsMs": [
+    163
+  ],
+  "onsetsMs": [
+    163
+  ],
+  "hitPoints": [
+    {
+      "tMs": 163,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 2972,
+      "energyMean": 0.321563
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 1e-05
+    },
+    {
+      "tMs": 372,
+      "rms": 0.509108
+    },
+    {
+      "tMs": 743,
+      "rms": 0.496691
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.415705
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.363097
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.339862
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.400981
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.135361
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.004462
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -6.6,
+    "loudnessRangeLu": 0.0,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

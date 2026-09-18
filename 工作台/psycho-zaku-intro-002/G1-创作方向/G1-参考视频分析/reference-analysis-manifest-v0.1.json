@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "psycho-zaku-intro-002",
+  "node": "G1",
+  "status": "completed_with_warnings",
+  "analysisOnly": true,
+  "source": {
+    "assetId": "reference-cold-war-miracle",
+    "path": "工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "durationSec": 163
+  },
+  "cacheKey": {
+    "assetId": "reference-cold-war-miracle",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "analysisScope": "scene-cut-points-and-style-only",
+    "sampling": {
+      "sceneDetection": "ffmpeg-select-gt-scene-0.3",
+      "sceneFramePolicy": "scene-start-frame",
+      "fixedFramesSec": [0, 40, 80, 120, 160]
+    },
+    "provider": "legacy-recorded-unknown",
+    "model": "legacy-recorded-unknown",
+    "promptVersion": "legacy-recorded-unknown"
+  },
+  "canonical": {
+    "technicalReport": "G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+    "sceneAnalysis": "G1-参考视频分析/scene_analysis.json",
+    "sceneTimestamps": [
+      "G1-参考视频分析/scene_timestamps.txt",
+      "G1-参考视频分析/scene_timestamps_clustered.txt"
+    ],
+    "fixedKeyframes": "G1-参考视频分析/frame-{0,40,80,120,160}s.jpg",
+    "sceneKeyframes": "G1-参考视频分析/场景帧/scene-*-start.jpg",
+    "bgmAnalysisReport": "G1-参考视频分析/BGM-分析报告-冷战奇迹-逆羽雄鹰-1080P-DF263D11.json",
+    "bgmEchoCard": "G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+    "bgmStyleBrief": "G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "warnings": [
+    "scene_analysis.json and technical report contain timeout entries; those scenes are not verified",
+    "Legacy run did not record provider, model, or promptVersion; values are intentionally unknown"
+  ],
+  "reuseRule": "Matching cacheKey means read this manifest and derivatives; do not rerun full reference analysis. Invalidate only on source hash, scope, model/prompt change, or explicit user request.",
+  "provenance": {
+    "reusedFrom": "tiger-intro-001/G1-创作方向/G1-参考视频分析/（其 canonical 派生产物整目录复制入本项目；tiger 记录自身系复用自 unicorn-gundam-intro-001；源文件 SHA-256 现场复核一致 DF263D11…）",
+    "reusedAt": "2026-09-17",
+    "note": "视觉分析层跨项目复用沿用 N8 先例与缓存合同；provider/model/promptVersion 不如实补写。本分析仅作节奏/版式/风格参考，不将参考片元素带入成片。"
+  }
+}

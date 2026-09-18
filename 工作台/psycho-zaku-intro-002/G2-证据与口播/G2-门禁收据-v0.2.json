@@ -1,0 +1,31 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G2",
+ "cardType": "g2_evidence_narration_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-17T11:40:00Z",
+ "reviewCardRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-最终回显卡-v0.2.md",
+ "basisRefs": [
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-批准记录-v0.2.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播句子-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.3.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-配音确认记录.md",
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-素材充分性与短版提案-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.1.json"
+ ],
+ "checklist": [
+  {"id": "fact_citation", "required": true, "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md"},
+  {"id": "approved_narration", "required": true, "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md"},
+  {"id": "voice_brief", "required": true, "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.3.json"},
+  {"id": "g2_card", "required": true, "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-最终回显卡-v0.2.md"}
+ ],
+ "echoStyle": "final-echo-style-guide v1.1",
+ "notes": "短版重批（reopen 后第二轮）：R1/R2 默认预选获整卡批准；变更依据=用户预授权「S2 A」+G3 充分性报告。旧长版收据 G2-门禁收据.json 保留审计。"
+}

@@ -1,0 +1,47 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G2",
+ "cardType": "g2_evidence_narration_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-17T09:05:00Z",
+ "reviewCardRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-最终回显卡-v0.1.md",
+ "basisRefs": [
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-批准记录.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播句子-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-证据清单-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-配音确认记录.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-最终回显卡-v0.1.md"
+ ],
+ "checklist": [
+  {
+   "id": "fact_citation",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md"
+  },
+  {
+   "id": "approved_narration",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.1.md"
+  },
+  {
+   "id": "voice_brief",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.2.json"
+  },
+  {
+   "id": "g2_card",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-最终回显卡-v0.1.md"
+  }
+ ],
+ "echoStyle": "final-echo-style-guide v1.1",
+ "notes": "单卡模式：F1/F2/F3 默认预选获整卡批准（用户验收推荐默认项）；F4 配音为用户自选（点名 longtian，见 G2-配音确认记录）。BGM provided 但 uncleared 红灯由 04_授权说明与 G5 分发边界承接，不在本收据消解。"
+}

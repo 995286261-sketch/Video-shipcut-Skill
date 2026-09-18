@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": "背景音乐你从 freesound 里找好了（Freesound 整轨供给不足，按供给实际切网易云选型）",
+    "themeRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "冷峻 工业电子",
+      "rationale": "笔记原话：模型听判参照曲为叙事感强、节奏克制的冷峻工业电子（v0.2 三轮笔记）",
+      "source": "theme"
+    },
+    {
+      "term": "赛博朋克 纯音乐",
+      "rationale": "主题转译：机甲科幻氛围+纯器乐（无人声、不抢旁白）",
+      "source": "theme"
+    },
+    {
+      "term": "darksynth",
+      "rationale": "英文体裁词：黑暗合成器族，覆盖中速克制电子",
+      "source": "theme"
+    },
+    {
+      "term": "EBM",
+      "rationale": "英文体裁词：前工业舞曲，机械律动规整",
+      "source": "theme"
+    },
+    {
+      "term": "克制 电子 氛围",
+      "rationale": "需求原话：科普底乐要有呼吸感、不喧宾夺主",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 300,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-17T15:03:49+08:00"
+}

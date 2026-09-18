@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "The Darkest Alleys (Final Stage)",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G0-素材包/07_授权音频/The Darkest Alleys (Final Stage)-Perturbator-26408416.mp3",
+  "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+  "byteSize": 5377506,
+  "fileExtension": ".mp3",
+  "sourceUrl": "https://music.163.com/song?id=26408416",
+  "license": "unknown",
+  "licenseEvidence": "网易云平台曲库试听件（uncleared 红灯保留）；用户 2026-09-17 委托选曲原话：你随便挑选一首，然后我们继续；未声明版权自担，升级 cleared-for-project 需用户明示",
+  "attribution": "Perturbator - The Darkest Alleys (Final Stage)",
+  "styleTags": [
+    "electronic",
+    "mysterious",
+    "steady"
+  ],
+  "retrievedAt": "2026-09-17T16:21:51+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": null
+}

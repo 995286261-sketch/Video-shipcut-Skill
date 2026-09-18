@@ -1,0 +1,2027 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": null,
+    "similarTo": null,
+    "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/BGM-检索词-v0.1.json",
+    "terms": [
+      "epic",
+      "cinematic",
+      "dark",
+      "trailer",
+      "percussion"
+    ]
+  },
+  "partialBlockers": [
+    {
+      "query": "dark",
+      "type": "network_failed",
+      "detail": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    }
+  ],
+  "retrievedAt": "2026-09-17T14:54:20+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 560454,
+      "title": "Epic Trailer Background Music",
+      "author": "Migfus20",
+      "sourceUrl": "https://freesound.org/s/560454/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Trailer Background Music\" by Migfus20 (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 97.7643,
+      "tags": [
+        "background",
+        "epic",
+        "music",
+        "orchestra",
+        "trailer"
+      ],
+      "styleTags": [
+        "steady",
+        "epic",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:43:05+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-560454-preview.mp3",
+      "sha256": "E75F08F5582DDA3BC87C524DEC315A185EEC57BA44F4F4136D21351EEF010347",
+      "byteSize": 2253795
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 396968,
+      "title": "Epic intro trailer",
+      "author": "Jedo",
+      "sourceUrl": "https://freesound.org/s/396968/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic intro trailer\" by Jedo (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 48.1231,
+      "tags": [
+        "booming",
+        "cinematic",
+        "drama",
+        "dramatic",
+        "dynamic",
+        "epic",
+        "experimental",
+        "film",
+        "guitar",
+        "increasing",
+        "reverse",
+        "sountracks"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:44:00+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-396968-preview.mp3",
+      "sha256": "DB22E92B8962A3A54FE6FE4EBC54BC8F9E19A66F3B7E6BCF341EF5E693F9C804",
+      "byteSize": 1069536
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 560449,
+      "title": "Epic Orchestra Music",
+      "author": "Migfus20",
+      "sourceUrl": "https://freesound.org/s/560449/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Orchestra Music\" by Migfus20 (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 26.0843,
+      "tags": [
+        "background",
+        "battle",
+        "boss",
+        "epic",
+        "music",
+        "orchestra"
+      ],
+      "styleTags": [
+        "steady",
+        "jazz",
+        "epic",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:44:15+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-560449-preview.mp3",
+      "sha256": "80DD590205F222B71B538882125E56BCB078DFD39E93CFACBF128B01BC44F88A",
+      "byteSize": 591482
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 615752,
+      "title": "Epic Orchestra",
+      "author": "Migfus20",
+      "sourceUrl": "https://freesound.org/s/615752/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Orchestra\" by Migfus20 (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 125.245,
+      "tags": [
+        "boss",
+        "brass",
+        "epic",
+        "orchestra",
+        "percussion",
+        "string",
+        "synth",
+        "woodwinds"
+      ],
+      "styleTags": [
+        "jazz",
+        "epic",
+        "orchestral",
+        "percussive",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-17T14:44:40+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-615752-preview.mp3",
+      "sha256": "4D403F2F10FE3B54F228A5ACB9AA155DFA94447A4A6E7E3288D3BF158BC4E2EE",
+      "byteSize": 2915503
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 194812,
+      "title": "Epic angry boat/Inception Sound effect.mp3",
+      "author": "funnyman850",
+      "sourceUrl": "https://freesound.org/s/194812/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.99209,
+      "tags": [
+        "angry",
+        "boat",
+        "effect",
+        "epic",
+        "horn",
+        "inception",
+        "ship",
+        "sound"
+      ],
+      "styleTags": [
+        "epic"
+      ],
+      "retrievedAt": "2026-09-17T14:46:25+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-194812-preview.mp3",
+      "sha256": "EFC892584B58BA8A47F863F84745BA5412C65350431C5F4AAF26048C37E1CF98",
+      "byteSize": 71172
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 449935,
+      "title": "Epic Finale (loop).wav",
+      "author": "X3nus",
+      "sourceUrl": "https://freesound.org/s/449935/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Finale (loop).wav\" by X3nus (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 64.0,
+      "tags": [
+        "cinematic",
+        "dynamic",
+        "epic",
+        "finale",
+        "free",
+        "game",
+        "heroic",
+        "loop",
+        "music",
+        "orchestral",
+        "soundtrack",
+        "sountracks"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:46:31+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-449935-preview.mp3",
+      "sha256": "00D19A5E9AD06BA458E2E82BEF7B228B9F110865B410EBD59E25FAB34DCA8946",
+      "byteSize": 1521696
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 434732,
+      "title": "Alphabet Letters ABC Deep Epic Voice",
+      "author": "dersuperanton",
+      "sourceUrl": "https://freesound.org/s/434732/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Alphabet Letters ABC Deep Epic Voice\" by dersuperanton (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 37.7318,
+      "tags": [
+        "abc",
+        "alphabet",
+        "alphabetic",
+        "cinematic",
+        "deep",
+        "epic",
+        "letters",
+        "male",
+        "man",
+        "speech",
+        "spoken",
+        "text"
+      ],
+      "styleTags": [
+        "epic"
+      ],
+      "retrievedAt": "2026-09-17T14:46:53+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-434732-preview.mp3",
+      "sha256": "AF061C37BB56B08427B4E031450DBAC4E978B8FD29BF6501B74F7C98CD4AF917",
+      "byteSize": 883595
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767844,
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767844/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 184.32,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:47:05+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-767844-preview.mp3",
+      "sha256": "EDC0E4199FA06046A79BB7003B2838EFD194ECEBA5FA3F5E28C89BCE75580C5F",
+      "byteSize": 4265280
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767842,
+      "title": "SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767842/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 95.12,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:48:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-767842-preview.mp3",
+      "sha256": "D91FA0DF0C4304C576CAC92429BF6CA75AF41CAA749EFE4CAD8FBF5E663E557C",
+      "byteSize": 2199648
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767840,
+      "title": "SunixMuz - Dark Castle (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767840/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Dark Castle (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 72.9233,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:48:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-767840-preview.mp3",
+      "sha256": "EDDDE57DD5E622197D8CC03276707385C4C971C6DEF56688751253E962243578",
+      "byteSize": 1687632
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 442385,
+      "title": "Cinematic_Percussion_001.wav",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/442385/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Cinematic_Percussion_001.wav\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 7.01873,
+      "tags": [
+        "Cinematic",
+        "Drum",
+        "FX",
+        "Percussion",
+        "audacity",
+        "cubase",
+        "flstudio",
+        "wav"
+      ],
+      "styleTags": [
+        "epic",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:49:19+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-442385-preview.mp3",
+      "sha256": "9DBC15F0C762713C86C289BE9E12CC7C1A9C34FCDAFD98D52E336C37534F58E8",
+      "byteSize": 162532
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 442384,
+      "title": "Cinematic_Percussion_002.wav",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/442384/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Cinematic_Percussion_002.wav\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 4.10719,
+      "tags": [
+        "Cinematic",
+        "Drum",
+        "FX",
+        "Percussion",
+        "audacity",
+        "cubase",
+        "flstudio",
+        "wav"
+      ],
+      "styleTags": [
+        "epic",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:49:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-442384-preview.mp3",
+      "sha256": "5B4A0C8C32B18E82121C1C9393A3C5262E9BB94C00607B833A15CB4AC66792FA",
+      "byteSize": 97675
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 455888,
+      "title": "Cinematic_Percussion_010.wav",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/455888/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Cinematic_Percussion_010.wav\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 9.25481,
+      "tags": [
+        "Cinematic",
+        "Drum",
+        "FX",
+        "Percussion",
+        "audacity",
+        "cubase",
+        "epic",
+        "flstudio",
+        "wav"
+      ],
+      "styleTags": [
+        "epic",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:49:41+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-455888-preview.mp3",
+      "sha256": "4917D384F1FB7AF49B827B128546579A13BBBD78738AA232FD1E2769F7D8A5CA",
+      "byteSize": 138291
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 608570,
+      "title": "Live_Dark Cinematical Piano 01",
+      "author": "gunnbladez",
+      "sourceUrl": "https://freesound.org/s/608570/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Live_Dark Cinematical Piano 01\" by gunnbladez (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 5.85288,
+      "tags": [
+        "cinematic",
+        "dark",
+        "film",
+        "movie",
+        "piano"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:49:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-608570-preview.mp3",
+      "sha256": "7EECE4E108DEFCE8E314662038979055F25FE1FE2E403FF7D52E9E428A010D1A",
+      "byteSize": 138789
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 608569,
+      "title": "Live_Dark Cinematical Piano 02",
+      "author": "gunnbladez",
+      "sourceUrl": "https://freesound.org/s/608569/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Live_Dark Cinematical Piano 02\" by gunnbladez (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 18.683,
+      "tags": [
+        "cinematic",
+        "dark",
+        "film",
+        "movie",
+        "piano"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:50:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-608569-preview.mp3",
+      "sha256": "5770BC1427989B7970EABCFCD87455A5E27AC2CD847A52171F7BEA065D29EF5F",
+      "byteSize": 433573
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 608568,
+      "title": "Live_Dark Cinematical Piano 03",
+      "author": "gunnbladez",
+      "sourceUrl": "https://freesound.org/s/608568/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Live_Dark Cinematical Piano 03\" by gunnbladez (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 13.5536,
+      "tags": [
+        "cinematic",
+        "dark",
+        "film",
+        "movie",
+        "piano"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:50:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-608568-preview.mp3",
+      "sha256": "3E0B65469DBF84854319993CD141CADA35984B777289B8EBD49EE405B2A9899C",
+      "byteSize": 320445
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 608567,
+      "title": "Live_Dark Cinematical Piano 04",
+      "author": "gunnbladez",
+      "sourceUrl": "https://freesound.org/s/608567/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Live_Dark Cinematical Piano 04\" by gunnbladez (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 4.26376,
+      "tags": [
+        "cinematic",
+        "dark",
+        "film",
+        "movie",
+        "piano"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:50:22+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-608567-preview.mp3",
+      "sha256": "A11CB43D4711BED4ADADB2E598F0F4347CE4AB9E61A9A3953B48B99BC3F49DE4",
+      "byteSize": 100389
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 610525,
+      "title": "Cinematic Female Vocal Sample",
+      "author": "Sample_Me",
+      "sourceUrl": "https://freesound.org/s/610525/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 8.11785,
+      "tags": [
+        "apocalypse",
+        "cinematic",
+        "dark",
+        "female",
+        "film",
+        "girl",
+        "movie",
+        "phrase",
+        "speech",
+        "spoken",
+        "voice",
+        "woman"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-17T14:50:24+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-610525-preview.mp3",
+      "sha256": "6D3BCAE67F94D2C80175BB2B91EB5B6B387522BEDCF68075B5444D786843CEA1",
+      "byteSize": 171600
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 334003,
+      "title": "Big Cinematic Spinning Sound.wav",
+      "author": "Uzbazur",
+      "sourceUrl": "https://freesound.org/s/334003/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 20.0333,
+      "tags": [
+        "ambience",
+        "atmosphere",
+        "big",
+        "cinematic",
+        "dark",
+        "processed",
+        "sound",
+        "sounddesign",
+        "spinning",
+        "top"
+      ],
+      "styleTags": [
+        "epic",
+        "dark"
+      ],
+      "retrievedAt": "2026-09-17T14:50:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-334003-preview.mp3",
+      "sha256": "5A77A6D16C7DFEACF0728978F2E7394725E0A9FFC532981A11597526EDCFF5C7",
+      "byteSize": 455972
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 684708,
+      "title": "Cinematic Violin Uplifting Music",
+      "author": "humanoide9000",
+      "sourceUrl": "https://freesound.org/s/684708/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Cinematic Violin Uplifting Music\" by humanoide9000 (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 40.7168,
+      "tags": [
+        "christmas",
+        "cinematic",
+        "fantasy",
+        "film",
+        "happy",
+        "movie",
+        "nostalgic",
+        "orchestra",
+        "orchestral",
+        "ost",
+        "soundtrack",
+        "steampunk"
+      ],
+      "styleTags": [
+        "epic",
+        "orchestral",
+        "playful",
+        "rock",
+        "warm",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-17T14:50:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-684708-preview.mp3",
+      "sha256": "90EE402C7173BE0DB3DCD6767F0BEADEB4A3FA27F7D22F3FC81B25C8B2B90694",
+      "byteSize": 942733
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 106266,
+      "title": "Cinematic Bass Atmosphere.wav",
+      "author": "Benboncan",
+      "sourceUrl": "https://freesound.org/s/106266/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Cinematic Bass Atmosphere.wav\" by Benboncan (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 69.7221,
+      "tags": [
+        "atmosphere",
+        "cinematic",
+        "drone",
+        "loop",
+        "pulsating",
+        "rhythmic",
+        "stereo"
+      ],
+      "styleTags": [
+        "epic",
+        "ambient-low",
+        "steady",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:51:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-106266-preview.mp3",
+      "sha256": "FAB48EB282E6274B1E7A716AE27E6C83C2F0104B538458D7450E84378194C224",
+      "byteSize": 1337681
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 467338,
+      "title": "stevysound_ethnic_percussion_125bpm_143239.wav",
+      "author": "stevysound",
+      "sourceUrl": "https://freesound.org/s/467338/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"stevysound_ethnic_percussion_125bpm_143239.wav\" by stevysound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 26.7721,
+      "tags": [
+        "120bpm",
+        "arabic",
+        "drum",
+        "drums",
+        "ethnic",
+        "loop",
+        "percussion",
+        "percussion-loop",
+        "tabla"
+      ],
+      "styleTags": [
+        "percussive",
+        "world",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:51:52+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-467338-preview.mp3",
+      "sha256": "145FE9E8FA24E7F9496A44D5AA8327A9D886F2889B01F10A91ABF7B671EDF4EF",
+      "byteSize": 657216
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 467337,
+      "title": "stevysound_ethnic_percussion_125bpm_144536.wav",
+      "author": "stevysound",
+      "sourceUrl": "https://freesound.org/s/467337/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"stevysound_ethnic_percussion_125bpm_144536.wav\" by stevysound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 26.7721,
+      "tags": [
+        "120bpm",
+        "arabic",
+        "drum",
+        "drums",
+        "ethnic",
+        "loop",
+        "percussion",
+        "percussion-loop",
+        "tabla"
+      ],
+      "styleTags": [
+        "percussive",
+        "world",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:52:19+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-467337-preview.mp3",
+      "sha256": "0EAFAC24E231D0C3BCB96AB8F497A6AC331FC0BB2F6C73D2D31B32E54FEFE6B9",
+      "byteSize": 499997
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 467335,
+      "title": "stevysound_ethnic_percussion_120bpm_151143.wav",
+      "author": "stevysound",
+      "sourceUrl": "https://freesound.org/s/467335/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"stevysound_ethnic_percussion_120bpm_151143.wav\" by stevysound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 16.0,
+      "tags": [
+        "120bpm",
+        "arabic",
+        "drum",
+        "drums",
+        "ethnic",
+        "loop",
+        "percussion",
+        "percussion-loop",
+        "tabla"
+      ],
+      "styleTags": [
+        "percussive",
+        "world",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:52:28+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-467335-preview.mp3",
+      "sha256": "686DBE856CDB59E990470C511B5AD064F78255F53647B146C4FC33A45F4DE758",
+      "byteSize": 260112
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 467334,
+      "title": "stevysound_ethnic_percussion_120bpm_152606.wav",
+      "author": "stevysound",
+      "sourceUrl": "https://freesound.org/s/467334/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"stevysound_ethnic_percussion_120bpm_152606.wav\" by stevysound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 16.0,
+      "tags": [
+        "120bpm",
+        "arabic",
+        "drum",
+        "drums",
+        "ethnic",
+        "loop",
+        "percussion",
+        "percussion-loop",
+        "tabla"
+      ],
+      "styleTags": [
+        "percussive",
+        "world",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:52:31+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-467334-preview.mp3",
+      "sha256": "4DE32595C84FF11D702BF4944DA54795E0DA0CB95FB04E601F2C6D763A500E82",
+      "byteSize": 280640
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 467333,
+      "title": "stevysound_ethnic_percussion_120bpm_153002.wav",
+      "author": "stevysound",
+      "sourceUrl": "https://freesound.org/s/467333/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"stevysound_ethnic_percussion_120bpm_153002.wav\" by stevysound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 68.0,
+      "tags": [
+        "120bpm",
+        "arabic",
+        "drum",
+        "drums",
+        "ethnic",
+        "loop",
+        "no-effects",
+        "percussion",
+        "percussion-loop",
+        "tabla"
+      ],
+      "styleTags": [
+        "percussive",
+        "world",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:52:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-467333-preview.mp3",
+      "sha256": "2E895A39DAC8F110CC297DE308B56D4B8BA71623F7D4C496FCB3A94838AFCE24",
+      "byteSize": 1600556
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687919,
+      "title": "Nylon Guitar Percussion Loop 128bpm 3",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687919/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 3.75,
+      "tags": [
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "acoustic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:52:58+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687919-preview.mp3",
+      "sha256": "DDE38FF53B75F06DF5D20874CCE0F0A9D7173CC023063483C8917614EA25B54E",
+      "byteSize": 47612
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687918,
+      "title": "Nylon Guitar Percussion Loop 128bpm 2",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687918/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 7.5,
+      "tags": [
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "acoustic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:00+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687918-preview.mp3",
+      "sha256": "54E60B5D61BD82695EACECA00E9BCFBF8909C5EBFA4FF0D1610EC0DC4CDFB6CD",
+      "byteSize": 187238
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687917,
+      "title": "Nylon Guitar Percussion Loop 100bpm 3",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687917/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 4.8,
+      "tags": [
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "acoustic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:04+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687917-preview.mp3",
+      "sha256": "43D88070F9DA716FCA052D695625EA43D60DA612FEBD240C9523A72980D792F0",
+      "byteSize": 71301
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687916,
+      "title": "Nylon Guitar Percussion Loop 100bpm 2",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687916/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 9.6,
+      "tags": [
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "acoustic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:06+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687916-preview.mp3",
+      "sha256": "31BD5A28E96DF1FC66646E9524B57DB0FFFFFBEF1E636C5611A35726B4B5AAF2",
+      "byteSize": 238006
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687910,
+      "title": "Nylon Guitar Percussion Loop 174bpm",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687910/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 5.51726,
+      "tags": [
+        "acoustic",
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "acoustic",
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:10+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687910-preview.mp3",
+      "sha256": "A08D85589B460495F6C1FED5A95124232003DD9692DFD8120871B50196B9DA3E",
+      "byteSize": 105999
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687909,
+      "title": "Nylon Guitar Percussion Loop 140bpm",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687909/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "acoustic",
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "acoustic",
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:12+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687909-preview.mp3",
+      "sha256": "45BC90C5E8A3D272646B2DC33B9017A1FDBA985C340E8FB445F671497AAA1B7C",
+      "byteSize": 123569
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687908,
+      "title": "Nylon Guitar Percussion Loop 128bpm",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687908/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 7.5,
+      "tags": [
+        "acoustic",
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "acoustic",
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:15+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687908-preview.mp3",
+      "sha256": "FA3218DFE4F2DAFDDD8E0CD3BA0E8BFA35C710CC3D6007EA59DEA10BC099A5B7",
+      "byteSize": 130817
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687907,
+      "title": "Nylon Guitar Percussion Loop 100bpm",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687907/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 9.6,
+      "tags": [
+        "acoustic",
+        "cc0",
+        "drum-loop",
+        "drums",
+        "free",
+        "guitar",
+        "loop",
+        "nylon",
+        "perc",
+        "percussion",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "acoustic",
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687907-preview.mp3",
+      "sha256": "07A1DCAC06137F299076156D39A76B3972587347F13082AF792CED31E6CEA658",
+      "byteSize": 177571
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687116,
+      "title": "Forest Crunchy Percussion Loop 140 2",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687116/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "140",
+        "cc0",
+        "crunchy",
+        "drums",
+        "dubstep",
+        "foley",
+        "forest",
+        "free",
+        "loop",
+        "perc",
+        "percussion"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687116-preview.mp3",
+      "sha256": "33000019D271A1F725FED3E2FA576FC5FCA6583D83552B50C36A2203528461F0",
+      "byteSize": 124537
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687115,
+      "title": "Forest Crunchy Percussion Loop 140 1",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687115/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 3.42857,
+      "tags": [
+        "140",
+        "cc0",
+        "crunchy",
+        "drums",
+        "dubstep",
+        "foley",
+        "forest",
+        "free",
+        "loop",
+        "perc",
+        "percussion"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:27+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687115-preview.mp3",
+      "sha256": "03AFA1F13E26ECD5A136BE5438CC58D8DFF2691DE4EB93A4E8107BA414408540",
+      "byteSize": 101045
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687111,
+      "title": "Forest Garage Percussion 134 2",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687111/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 3.58211,
+      "tags": [
+        "134",
+        "cc0",
+        "drums",
+        "forest",
+        "free",
+        "garage",
+        "loop",
+        "perc",
+        "percussion"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:29+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687111-preview.mp3",
+      "sha256": "FE0DAF28EDB11B04347981A7181F321ACB041BF172CBCA6270D36CF71A1E06C7",
+      "byteSize": 90441
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687110,
+      "title": "Forest Garage Percussion 134 1",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687110/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 3.58211,
+      "tags": [
+        "134",
+        "cc0",
+        "drums",
+        "forest",
+        "free",
+        "garage",
+        "loop",
+        "perc",
+        "percussion"
+      ],
+      "styleTags": [
+        "percussive",
+        "playful",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-17T14:53:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687110-preview.mp3",
+      "sha256": "526CE27C910071008405784E5DB307BD253A32B679994018237F3B82119B0A59",
+      "byteSize": 91425
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687084,
+      "title": "Glitchy Forest Percussion Loop 134 6",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687084/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 10.7463,
+      "tags": [
+        "cc0",
+        "crunchy",
+        "design",
+        "forest",
+        "free",
+        "glitch",
+        "glitchy",
+        "loop",
+        "perc",
+        "percussion",
+        "rhythm",
+        "sound"
+      ],
+      "styleTags": [
+        "playful",
+        "steady",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:53:40+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687084-preview.mp3",
+      "sha256": "776E76342A3212854A59FAB5119003049EB85A158B0353F343374933F281BFD5",
+      "byteSize": 270981
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687083,
+      "title": "Glitchy Forest Percussion Loop 134 5",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687083/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 5.37315,
+      "tags": [
+        "cc0",
+        "crunchy",
+        "design",
+        "forest",
+        "free",
+        "glitch",
+        "glitchy",
+        "loop",
+        "perc",
+        "percussion",
+        "rhythm",
+        "sound"
+      ],
+      "styleTags": [
+        "playful",
+        "steady",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:53:55+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687083-preview.mp3",
+      "sha256": "A34CD9AD95B08C81615F4F1EA40F98C8C11907DC4C2C64C0BDCCA8708332B973",
+      "byteSize": 127275
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687081,
+      "title": "Glitchy Forest Percussion Loop 134 3",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687081/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 23.2836,
+      "tags": [
+        "cc0",
+        "crunchy",
+        "design",
+        "forest",
+        "free",
+        "glitch",
+        "glitchy",
+        "loop",
+        "perc",
+        "percussion",
+        "rhythm",
+        "sound"
+      ],
+      "styleTags": [
+        "playful",
+        "steady",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:54:03+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687081-preview.mp3",
+      "sha256": "9A1EB2A60BF5D91F3160CEDCB31F34B71F2EB6F535DFBEB4384625783B087020",
+      "byteSize": 650745
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 687080,
+      "title": "Glitchy Forest Percussion Loop 134 2",
+      "author": "deadrobotmusic",
+      "sourceUrl": "https://freesound.org/s/687080/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 17.9105,
+      "tags": [
+        "cc0",
+        "crunchy",
+        "design",
+        "forest",
+        "free",
+        "glitch",
+        "glitchy",
+        "loop",
+        "perc",
+        "percussion",
+        "rhythm",
+        "sound"
+      ],
+      "styleTags": [
+        "playful",
+        "steady",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-17T14:54:12+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687080-preview.mp3",
+      "sha256": "763BA35211B76A7A01B17C33AA0320C24B5C11347902AECC9DBD45B1D64FBBDB",
+      "byteSize": 469738
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 785643,
+      "name": "Fast Epic - 1 min - 2",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785513,
+      "name": "Slow Epic - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785504,
+      "name": "Epic - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785497,
+      "name": "An Epic - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785644,
+      "name": "Fast Epic - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 759651,
+      "name": "Epic Ethnic Music",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785642,
+      "name": "Fast Epic - 1 min - 1",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785505,
+      "name": "Epic - 30 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785498,
+      "name": "An Epic - 30 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785514,
+      "name": "Slow Epic - 30 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 725003,
+      "name": "Cinematic Epic (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 721942,
+      "name": "Epic Motivational Trailer (loop1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 759656,
+      "name": "Epic Boss Music",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785645,
+      "name": "Fast Epic - 30 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 721950,
+      "name": "Cinematic Inspiring Piano (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 511723,
+      "name": "Cinematic Piano Trailer Score - Piano Only Version.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 511070,
+      "name": "Cinematic Action Percussion Trailer.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 511069,
+      "name": "Cinematic Celesta Trailer Score.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 511068,
+      "name": "Cinematic Oriental Trailer.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 514509,
+      "name": "Cinematic Chanting / Throat Singing Percussion Trailer.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 547577,
+      "name": "Cinematic Cello Arpeggio",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 555524,
+      "name": "Cinematic Orchestral Percussion Trailer.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 578724,
+      "name": "Cinematic Piano Trailer Score - With Effects.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 578722,
+      "name": "Cinematic Lullaby Fairy Tale - Celesta and Strings.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 578710,
+      "name": "Cinematic Piano Dream Sequence - 02.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 652694,
+      "name": "Cinematic Epic Trailer Score, with SFX.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 652692,
+      "name": "Cinematic Epic Percussion Trailer.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 463446,
+      "name": "ESCAPE TRAILER",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 463376,
+      "name": "ON THE RUN TRAILER",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 756392,
+      "name": "Rockstar Trailer - short",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 762695,
+      "name": "Sport Rock Trailer - Medium 1",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 761470,
+      "name": "Sport Rock Trailer",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785663,
+      "name": "Trailer Hybrid - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785662,
+      "name": "Trailer Hybrid - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785660,
+      "name": "Trailer Film - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785657,
+      "name": "Trailer Cinematic - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785656,
+      "name": "Trailer Cinematic - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785653,
+      "name": "Inspiring Trailer - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785652,
+      "name": "Inspiring Trailer - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785647,
+      "name": "Film Trailer - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785646,
+      "name": "Film Trailer - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785638,
+      "name": "Cinematic Trailer - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785630,
+      "name": "A Trailer - 15 sec",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785629,
+      "name": "A Trailer - 1 min",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785501,
+      "name": "Dramatic Hybrid Trailer - 1 min version 2",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 785500,
+      "name": "Dramatic Hybrid Trailer - 1 min version 1",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "sufficiency": {
+    "count": 42,
+    "minimumExpected": 3
+  }
+}

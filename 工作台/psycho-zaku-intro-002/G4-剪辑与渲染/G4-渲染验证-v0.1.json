@@ -1,0 +1,33 @@
+{
+ "status": "valid",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G4",
+ "segments": 13,
+ "timelineDurationMs": 94720,
+ "validatedAt": "2026-09-17T10:55:00Z",
+ "canvas": { "width": 1920, "height": 1080, "fps": 30 },
+ "g4Validate": { "status": "valid", "segments": 13, "timelineDurationMs": 94720 },
+ "finalMaster": {
+  "path": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+  "sha256": "47B2F4C43010287C225BEE6F0341E221C11505BD1657F7C82EE801F0A693C7A2",
+  "durationMs": 94733,
+  "durationRoundingMs": 13,
+  "integratedLufs": -15.1,
+  "truePeakDbtp": -2.9,
+  "assemblyRecord": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json"
+ },
+ "bgmMix": {
+  "contract": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+  "trackOffsetMs": 0, "bedGainDb": -12.0, "duckReductionDb": 6.0,
+  "fades": { "fadeInMs": 2000, "fadeOutStartMs": 92720, "fadeOutMs": 2000 }
+ },
+ "checkFrames": [
+  { "t": "1.5", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-1.5.jpg" },
+  { "t": "12.0", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-12.0.jpg" },
+  { "t": "30.0", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-30.0.jpg" },
+  { "t": "54.0", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-54.0.jpg" },
+  { "t": "78.0", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-78.0.jpg" },
+  { "t": "93.0", "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/检查帧/check-93.0.jpg" }
+ ],
+ "checkFrameVerdict": "6/6 目视通过：1.5s 片头标题卡完整无豆腐块；12.0s/30.0s/54.0s 长 cue 显式两行断行完整在框（首轮渲染发现本构建 libass 不自动断 CJK 长行致 N02/N04/N07 溢出触边，已在 cue 内 \\N 语义断行修复后复验）；mask 带生效无源字幕透出；口播字幕位于 70-84% 车道；左上水印+右下台标保留（internal_test 边界）"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-2071e9a7",
+      "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+      "sourceKind": "local-file",
+      "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "byteSize": 112654603,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-the-darkest-alleys-final-stage-perturbator-26-486eb52e",
+      "relativePath": "07_授权音频/The Darkest Alleys (Final Stage)-Perturbator-26408416.mp3",
+      "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+      "byteSize": 5377506,
+      "fileExtension": ".mp3",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "bgmRegistration": {
+        "relativePath": "07_授权音频/BGM-候选登记-The-Darkest-Alleys-Final-Stage-83042094.json",
+        "sha256": "89D930225395B06F54A8CACFCB14F8BC93E75CA68FA4E555E627544822B28720",
+        "licenseType": "unknown",
+        "distributionBoundary": "internal_test"
+      },
+      "bgmAnalysis": {
+        "relativePath": "07_授权音频/BGM-分析报告-The Darkest Alleys (Final Stage)-Perturbator-26408416-83042094.json",
+        "sha256": "044E48B0F819D062F999441DA907AB31383AA0ECED3C23EE955699A0D891B61B"
+      }
+    }
+  ],
+  "bgm": {
+    "decision": "provided",
+    "preference": "背景音乐你从 freesound 里找好了",
+    "libraryPending": false,
+    "clearCondition": null
+  },
+  "packStatus": "complete",
+  "registeredAt": "2026-09-17T08:23:27.110254Z"
+}

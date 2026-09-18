@@ -1,0 +1,8 @@
+{
+ "imagePath": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/cover/cover-source.jpg",
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "title": "精神力扎古：凌驾于主角机之上的怪物",
+ "fontsize": 64,
+ "output": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+ "note": "主标题=G3 批准章节卡 title-01 文案；封面帧=计划 coverFrameMs 16000（seg-02 目标主体全身揭示，源 141143ms）"
+}

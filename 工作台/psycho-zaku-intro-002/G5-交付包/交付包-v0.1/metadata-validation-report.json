@@ -1,0 +1,132 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G5",
+ "projectId": "psycho-zaku-intro-002",
+ "generatedAt": "2026-09-17T11:15:00Z",
+ "bundle": "工作台/psycho-zaku-intro-002/G5-交付包/交付包-v0.1",
+ "status": "completed",
+ "finishedAt": "2026-09-18T10:26:00+08:00",
+ "checks": {
+  "decode": {
+   "pass": true,
+   "stderr": ""
+  },
+  "videoCodec": {
+   "pass": true,
+   "codec": "h264"
+  },
+  "dimensions": {
+   "pass": true,
+   "w": 1920,
+   "h": 1080
+  },
+  "fps": {
+   "pass": true,
+   "r": "30/1"
+  },
+  "audio": {
+   "pass": true,
+   "codec": "aac",
+   "channels": 2
+  },
+  "duration": {
+   "pass": true,
+   "ms": 94733,
+   "timelineMs": 94720,
+   "roundingMs": 13
+  },
+  "blackFrames": {
+   "detector": "blackdetect d=0.3 pix_th=0.10",
+   "intervals": [],
+   "verdict": "none_detected"
+  },
+  "silence": {
+   "detector": "silencedetect -45dB 0.5s",
+   "intervals": [],
+   "verdict": "none_detected"
+  },
+  "duplicateSegments": {
+   "detector": "mpdecimate(default)",
+   "droppedFrames": 1101,
+   "totalFrames": 2842,
+   "verdict": "warn",
+   "note": "默认阈值对动画平涂色块过敏；13 段同源区间互斥已由 validate_g3_plan 机器验证、6 检查帧目视未见主观重复画面；按合同记警告不报通过"
+  },
+  "cover": {
+   "pass": true,
+   "dims": "1920,1080",
+   "readable": true,
+   "basis": "G5 目视封面成品：主体全身揭示+标题完整无缺字；水印保留=internal_test 边界"
+  },
+  "subtitleParse": {
+   "pass": true,
+   "cueGroups": 13
+  },
+  "narrationSync": {
+   "basis": "句区间=G2 实测配音清单 v0.3 逐句时值（合同链），一条口播一 cue；抽帧 12/30/54/78/93s 字幕与句界一致",
+   "verdict": "machine_consistent"
+  },
+  "audioMix": {
+   "loudness": {
+    "integratedLufs": -15.1,
+    "truePeakDbtp": -2.9,
+    "target": -14.0,
+    "deviationLu": 1.1,
+    "withinThreshold": true
+   },
+   "bgmContract": "bed -12dB/duck -6dB/offset 0/淡入2s/淡出92.72s 起（混音合同逐项执行）",
+   "verdict": "machine_consistent"
+  },
+  "duplicateNarration": {
+   "pass": true,
+   "basis": "口播轨=13 句各一次拼接（concat 清单逐句），无重复旁白/双声道复制"
+  },
+  "noDoubleBurnedText": {
+   "pass": true,
+   "basis": "源字幕 mask 带生效（6 检查帧目视无双字幕透出）；新字幕仅口播+片头卡"
+  },
+  "chapterCardsNoSpeechCut": {
+   "pass": true,
+   "basis": "标题卡 0–3.2s 落在 N01（0–11.2s）句内非起音区，句音频未截断"
+  },
+  "fontLicense": {
+   "note": "Songti.ttc/PingFang SC=系统字体，内部测试使用"
+  },
+  "musicLicense": {
+   "warn": true,
+   "note": "BGM《The Darkest Alleys》未清权——仅内部测试，对外前必须换清权曲（04_授权说明+G3/G4 卡已披露）"
+  }
+ },
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "47B2F4C43010287C225BEE6F0341E221C11505BD1657F7C82EE801F0A693C7A2"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "69ABB901C58648A3A23A09699E53FECF3B924FF58202E6A119AF64CFE3F0E54D"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "C0CC1A734587AF0AB3250EFC832C9BCF89835985588585D4EFDBB0BAC25CFB5C"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/ch1-开场-战争语境.mp4",
+    "sha256": "86E9605591FB1003160A3EB470B3268A9B34BCBD795AC723711440921E16ACA9"
+   },
+   {
+    "path": "clips/ch2-精神力扎古与Reuse-P.mp4",
+    "sha256": "7948A84654A73F8536CC8AF847F1F04354B005DBA05E87414BF9545A6D6BFE5A"
+   },
+   {
+    "path": "clips/ch3-达里尔与代价.mp4",
+    "sha256": "64D6D76013EAD1213B9B62D67E445323E2C0B28DDB4C4389CF992EBE4B8D3D77"
+   },
+   {
+    "path": "clips/ch4-凌驾主角机的怪物.mp4",
+    "sha256": "90779323CAD4A7DFED0CA55C58D08D4E02FEC79512CCE86184950A612DB91D98"
+   }
+  ]
+ }
+}

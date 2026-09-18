@@ -1,0 +1,515 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "psycho-zaku-intro-002",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+  "inputEvidence": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-证据清单-v0.2.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 13,
+  "timelineDurationMs": 94720,
+  "targetDurationMs": 180000,
+  "durationDeltaMs": -85280,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 100000,
+        "endMs": 111200,
+        "durationMs": 11200
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 11200,
+        "durationMs": 11200
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 100000,
+        "endMs": 111200,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 2,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 136143,
+        "endMs": 146223,
+        "durationMs": 10080
+      },
+      "timeline": {
+        "startMs": 11200,
+        "endMs": 21280,
+        "durationMs": 10080
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 136143,
+        "endMs": 146223,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 3,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 0,
+        "endMs": 7200,
+        "durationMs": 7200
+      },
+      "timeline": {
+        "startMs": 21280,
+        "endMs": 28480,
+        "durationMs": 7200
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 0,
+        "endMs": 7200,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 4,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 27210,
+        "endMs": 36490,
+        "durationMs": 9280
+      },
+      "timeline": {
+        "startMs": 28480,
+        "endMs": 37760,
+        "durationMs": 9280
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 27210,
+        "endMs": 36490,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-05",
+      "order": 5,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 74226,
+        "endMs": 82786,
+        "durationMs": 8560
+      },
+      "timeline": {
+        "startMs": 37760,
+        "endMs": 46320,
+        "durationMs": 8560
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 74226,
+        "endMs": 82786,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-06",
+      "order": 6,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 229210,
+        "endMs": 234170,
+        "durationMs": 4960
+      },
+      "timeline": {
+        "startMs": 46320,
+        "endMs": 51280,
+        "durationMs": 4960
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 229210,
+        "endMs": 234170,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-07",
+      "order": 7,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 166176,
+        "endMs": 173616,
+        "durationMs": 7440
+      },
+      "timeline": {
+        "startMs": 51280,
+        "endMs": 58720,
+        "durationMs": 7440
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 166176,
+        "endMs": 173616,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 8,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 185000,
+        "endMs": 193880,
+        "durationMs": 8880
+      },
+      "timeline": {
+        "startMs": 58720,
+        "endMs": 67600,
+        "durationMs": 8880
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 185000,
+        "endMs": 193880,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-09",
+      "order": 9,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 203310,
+        "endMs": 207710,
+        "durationMs": 4400
+      },
+      "timeline": {
+        "startMs": 67600,
+        "endMs": 72000,
+        "durationMs": 4400
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 203310,
+        "endMs": 207710,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-10",
+      "order": 10,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 290543,
+        "endMs": 294943,
+        "durationMs": 4400
+      },
+      "timeline": {
+        "startMs": 72000,
+        "endMs": 76400,
+        "durationMs": 4400
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 290543,
+        "endMs": 294943,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-11",
+      "order": 11,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 276576,
+        "endMs": 282576,
+        "durationMs": 6000
+      },
+      "timeline": {
+        "startMs": 76400,
+        "endMs": 82400,
+        "durationMs": 6000
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 276576,
+        "endMs": 282576,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-12",
+      "order": 12,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 309826,
+        "endMs": 317586,
+        "durationMs": 7760
+      },
+      "timeline": {
+        "startMs": 82400,
+        "endMs": 90160,
+        "durationMs": 7760
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 309826,
+        "endMs": 317586,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    },
+    {
+      "segmentId": "seg-13",
+      "order": 13,
+      "assetId": "source-02-2071e9a7",
+      "source": {
+        "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+        "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+        "startMs": 322010,
+        "endMs": 326570,
+        "durationMs": 4560
+      },
+      "timeline": {
+        "startMs": 90160,
+        "endMs": 94720,
+        "durationMs": 4560
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 322010,
+        "endMs": 326570,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ]
+    }
+  ],
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

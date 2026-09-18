@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_mix_contract",
+  "projectId": "psycho-zaku-intro-002",
+  "bgmAudio": {
+    "path": "工作台/psycho-zaku-intro-002/G0-素材包/07_授权音频/The Darkest Alleys (Final Stage)-Perturbator-26408416.mp3",
+    "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF"
+  },
+  "evidence": {
+    "planRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+    "planSha256": "3D2996EF05AF729EBF1B3A3E022FC39826B093A7D82CF27B5144EFC6DA30B6E3",
+    "alignmentRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "alignmentSha256": "8BDD4BC7B79F5AC878EC195F773E5D8E2AFF9FB050D06CC60C85945A43BF3D36"
+  },
+  "timelineMs": 94720,
+  "trackOffsetMs": 0,
+  "bedGainDb": -12.0,
+  "duckReductionDb": 6.0,
+  "fades": {
+    "fadeInMs": 2000,
+    "fadeOutStartMs": 92720,
+    "fadeOutMs": 2000
+  },
+  "ducking": [
+    {
+      "sentenceId": "N01",
+      "fromMs": 0,
+      "toMs": 11200
+    },
+    {
+      "sentenceId": "N02",
+      "fromMs": 11200,
+      "toMs": 21280
+    },
+    {
+      "sentenceId": "N03",
+      "fromMs": 21280,
+      "toMs": 28480
+    },
+    {
+      "sentenceId": "N04",
+      "fromMs": 28480,
+      "toMs": 37760
+    },
+    {
+      "sentenceId": "N05",
+      "fromMs": 37760,
+      "toMs": 46320
+    },
+    {
+      "sentenceId": "N06",
+      "fromMs": 46320,
+      "toMs": 51280
+    },
+    {
+      "sentenceId": "N07",
+      "fromMs": 51280,
+      "toMs": 58720
+    },
+    {
+      "sentenceId": "N08",
+      "fromMs": 58720,
+      "toMs": 67600
+    },
+    {
+      "sentenceId": "N09",
+      "fromMs": 67600,
+      "toMs": 72000
+    },
+    {
+      "sentenceId": "N17",
+      "fromMs": 72000,
+      "toMs": 76400
+    },
+    {
+      "sentenceId": "N18",
+      "fromMs": 76400,
+      "toMs": 82400
+    },
+    {
+      "sentenceId": "N19",
+      "fromMs": 82400,
+      "toMs": 90160
+    },
+    {
+      "sentenceId": "N20",
+      "fromMs": 90160,
+      "toMs": 94720
+    }
+  ],
+  "duckSegments": [
+    {
+      "fromMs": 0,
+      "toMs": 94720,
+      "sentenceIds": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N17",
+        "N18",
+        "N19",
+        "N20"
+      ]
+    }
+  ],
+  "mixMode": "duck-table",
+  "predictedLufs": {
+    "trackIntegratedLufs": -6.9,
+    "bedFullLufs": -18.9,
+    "bedDuckedLufs": -24.9,
+    "narrationTargetLufs": -14.0,
+    "windowLufs": [
+      -32.0,
+      -20.0
+    ]
+  }
+}

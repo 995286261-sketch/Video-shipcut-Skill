@@ -1,0 +1,12 @@
+{
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "fontsize": 56,
+ "cards": [
+  {
+   "chapterId": "title-01",
+   "title": "精神力扎古：凌驾于主角机之上的怪物",
+   "startMs": 0,
+   "endMs": 3200
+  }
+ ]
+}

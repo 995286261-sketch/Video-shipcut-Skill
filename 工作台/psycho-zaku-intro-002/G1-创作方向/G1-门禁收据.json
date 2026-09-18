@@ -1,0 +1,45 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G1",
+ "cardType": "g1_direction_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-17T07:50:33.312175Z",
+ "reviewCardRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-最终回显卡-v0.1.md",
+ "basisRefs": [
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向简报.json",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向简报.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向确认记录.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/BGM-推荐回显-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/BGM-推荐回显-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/BGM-推荐回显-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/BGM-试听笔记回显-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/BGM-试听笔记回显-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/试听选型包/听歌指引.md"
+ ],
+ "checklist": [
+  {
+   "id": "direction_brief",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向简报.json"
+  },
+  {
+   "id": "claims_and_boundaries",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向简报.md"
+  },
+  {
+   "id": "direction_card",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-最终回显卡-v0.1.md"
+  }
+ ],
+ "echoStyle": "final-echo-style-guide v1.1",
+ "notes": "单卡模式：四方向决策点默认预选获整卡批准（用户验收推荐默认项）；D5 音乐方案未决，BGM 槽保持 pending 由状态机在 G2/G3 批准前硬拒兜底。"
+}

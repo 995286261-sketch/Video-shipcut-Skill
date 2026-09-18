@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/BGM-检索词-v0.1.json",
+    "terms": [
+      "冷峻 工业电子",
+      "赛博朋克 纯音乐",
+      "darksynth",
+      "EBM",
+      "克制 电子 氛围"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-09-17T15:04:14+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1364585504,
+      "title": "Darksynth",
+      "artist": "Psychill Mystery",
+      "album": "# 30 Ambient Psychill - Ambient, Psybient, Psychedelic Music Mix",
+      "durationMs": 313999,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1364585504",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1364585504.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Psychill Mystery - Darksynth",
+      "retrievedAt": "2026-09-17T15:03:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1364585504-Darksynth.mp3",
+      "sha256": "B0DF8430007CFEA0086C1E85E48FF8FBBFB1A26C64C8D9BDDDD3FF535C1D8331",
+      "byteSize": 5025167
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 26408416,
+      "title": "The Darkest Alleys (Final Stage)",
+      "artist": "Perturbator",
+      "album": "Terror 404",
+      "durationMs": 336014,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=26408416",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=26408416.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Perturbator - The Darkest Alleys (Final Stage)",
+      "retrievedAt": "2026-09-17T15:03:54+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-26408416-The_Darkest_Alleys_(Final_Stage).mp3",
+      "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+      "byteSize": 5377506
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1364585569,
+      "title": "Darksynth",
+      "artist": "Out of Body Experience",
+      "album": "Ambientronic - Dark Ambient Industrial Music",
+      "durationMs": 307999,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1364585569",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1364585569.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Out of Body Experience - Darksynth",
+      "retrievedAt": "2026-09-17T15:03:56+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1364585569-Darksynth.mp3",
+      "sha256": "FF8F0870B35B2BCEAB9D4626AF0A0D6847065E5BE3340995023A757FB16CBF36",
+      "byteSize": 4929036
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1364610623,
+      "title": "Darksynth",
+      "artist": "Synth Essential",
+      "album": "Darksynth - Dark Ambient Electronic Music",
+      "durationMs": 316000,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1364610623",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1364610623.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Synth Essential - Darksynth",
+      "retrievedAt": "2026-09-17T15:03:59+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1364610623-Darksynth.mp3",
+      "sha256": "AD95F5B663F3DC7903103B99B60BBEDC735E388A99EB72C047F86E6DBFC9754D",
+      "byteSize": 5056932
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1812153232,
+      "title": "Fallen Darkness",
+      "artist": "ROBORG",
+      "album": "CyberCrime",
+      "durationMs": 314932,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1812153232",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1812153232.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "ROBORG - Fallen Darkness",
+      "retrievedAt": "2026-09-17T15:04:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1812153232-Fallen_Darkness.mp3",
+      "sha256": "47CD72914B8CA8F097936A99D5AD17B739A1D5C3001AF95EA845D76E73C5FE03",
+      "byteSize": 5039377
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 27112020,
+      "title": "Little Fluffy Clouds (Adam Freelands Tsunami One Remix)",
+      "artist": "The Orb",
+      "album": "Little Fluffy Clouds",
+      "durationMs": 477000,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=27112020",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=27112020.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "The Orb - Little Fluffy Clouds (Adam Freelands Tsunami One Remix)",
+      "retrievedAt": "2026-09-17T15:04:05+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-27112020-Little_Fluffy_Clouds_(Adam_Freelands_Tsunami_One.mp3",
+      "sha256": "907ACC3794021EFB0E4D11471B63FE88BFDB207737B17B02A46B55D5325D74A3",
+      "byteSize": 7633409
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1472627566,
+      "title": "Dein Herz, meine Gier (REanimate 2020)",
+      "artist": "Suicide Commando",
+      "album": "Dein Herz, meine Gier",
+      "durationMs": 366600,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1472627566",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1472627566.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Suicide Commando - Dein Herz, meine Gier (REanimate 2020)",
+      "retrievedAt": "2026-09-17T15:04:09+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-1472627566-Dein_Herz,_meine_Gier_(REanimate_2020).mp3",
+      "sha256": "84FFD4EEBB0CAE29C8C4AA5771AE19EA6F9EE2B534677241BFD5C48AC8BBB796",
+      "byteSize": 5866519
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 2757139944,
+      "name": "谪仙dj",
+      "reason": "duration 135824ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436579100,
+      "name": "墨骨惊筝",
+      "reason": "duration 137208ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437376356,
+      "name": "晚风寄信",
+      "reason": "duration 216733ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437459429,
+      "name": "晚风寄信（DJ版）",
+      "reason": "duration 214013ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437598508,
+      "name": "电子古意（国风电子）",
+      "reason": "duration 80065ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436579758,
+      "name": "冥河拨律",
+      "reason": "duration 135888ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437592733,
+      "name": "电子跃动",
+      "reason": "duration 80065ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436579469,
+      "name": "伏岳沉音",
+      "reason": "duration 152376ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436578159,
+      "name": "玄戈鸣弦",
+      "reason": "duration 126408ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437580135,
+      "name": "轻松电子氛围BGM",
+      "reason": "duration 90044ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2599542590,
+      "name": "電 子 蝴 蝶 破 碎 物 語",
+      "reason": "duration 172888ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437080325,
+      "name": "电子杂音与反叛诗",
+      "reason": "duration 147973ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3370220713,
+      "name": "大圣进行曲",
+      "reason": "duration 140638ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2162959879,
+      "name": "他们说一切都是最好的安排",
+      "reason": "duration 136735ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2667221823,
+      "name": "Улеталиптицамигордыми (骄傲的鸟儿飞走了)",
+      "reason": "duration 156666ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436910785,
+      "name": "雷鳴の鼓動",
+      "reason": "duration 286653ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3416400875,
+      "name": "Eternal longing",
+      "reason": "duration 104350ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437094954,
+      "name": "电子杂音与反叛诗(DEMO)",
+      "reason": "duration 140813ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436881369,
+      "name": "印尼电子琴",
+      "reason": "duration 136290ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3437272158,
+      "name": "超燃动感车载电子DJ",
+      "reason": "duration 177562ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3428840725,
+      "name": "Veil Energy",
+      "reason": "duration 112380ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2135420694,
+      "name": "威马野",
+      "reason": "duration 77669ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436580491,
+      "name": "狂澜碎徽",
+      "reason": "duration 146280ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1857981866,
+      "name": "电子禁忌",
+      "reason": "duration 167164ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2601491234,
+      "name": "赛博朋克城 纯音乐",
+      "reason": "duration 149652ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2061675473,
+      "name": "赛博朋克2.0（纯音乐）",
+      "reason": "duration 165087ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2061675474,
+      "name": "赛博朋克3.0（纯音乐）",
+      "reason": "duration 130609ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2061675472,
+      "name": "赛博朋克1.0（纯音乐）",
+      "reason": "duration 186434ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2601491235,
+      "name": "赛博朋克  纯音乐",
+      "reason": "duration 121486ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 468513690,
+      "name": "赛博朋克人",
+      "reason": "duration 261517ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2698511276,
+      "name": "赛博朋克的秘密",
+      "reason": "duration 146541ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1349935238,
+      "name": "Those Who Dwell in Shadows",
+      "reason": "duration 195013ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3427541896,
+      "name": "两束光（纯音乐）",
+      "reason": "duration 196000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2161394308,
+      "name": "OGAME - Slowed",
+      "reason": "duration 125843ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2739258437,
+      "name": "机动部队",
+      "reason": "duration 185159ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1847597373,
+      "name": "Brian is the Most Beautiful",
+      "reason": "duration 225000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2733450608,
+      "name": "Tikolin Purre",
+      "reason": "duration 124251ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 22505333,
+      "name": "Left Hand Suzuki Method",
+      "reason": "duration 192506ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2090162436,
+      "name": "奥德赛(Odyssey)",
+      "reason": "duration 290666ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2165763414,
+      "name": "Signals",
+      "reason": "duration 266689ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2655211636,
+      "name": "Stray.wav",
+      "reason": "duration 102460ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3372202698,
+      "name": "不听劝",
+      "reason": "duration 144822ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1395636510,
+      "name": "钢铁之泪",
+      "reason": "duration 210750ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1308570995,
+      "name": "Evolution",
+      "reason": "duration 99744ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1901701246,
+      "name": "[NOT FREE ]未来战争 - 游戏BPM X 实验赛博 X 未来气氛 X 实验音乐",
+      "reason": "duration 184502ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3392302634,
+      "name": "[FREE] 夜之城 - Memphis Rap×赛博朋克 Type Beat",
+      "reason": "duration 155526ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3390705441,
+      "name": "PARADOX 1",
+      "reason": "duration 127934ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3390705690,
+      "name": "PARADOX 3",
+      "reason": "duration 210920ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2665612681,
+      "name": "Dark Hunter",
+      "reason": "duration 224842ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2027614797,
+      "name": "DARK SYNTH",
+      "reason": "duration 285878ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1393331319,
+      "name": "Darkness",
+      "reason": "duration 257490ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1372598091,
+      "name": "Dark Synth",
+      "reason": "duration 3955746ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1819655901,
+      "name": "DARK SYNTH",
+      "reason": "duration 228923ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1427696455,
+      "name": "Dark Synth",
+      "reason": "duration 99692ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2096037204,
+      "name": "Dive Into The Void",
+      "reason": "duration 193565ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1372188635,
+      "name": "Daylight",
+      "reason": "duration 162749ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2096037207,
+      "name": "God Run",
+      "reason": "duration 253440ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1913370206,
+      "name": "Dark Synth",
+      "reason": "duration 181714ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1833418440,
+      "name": "Dark Synth",
+      "reason": "duration 85970ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1849573397,
+      "name": "Trinity",
+      "reason": "duration 234236ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1906443355,
+      "name": "Can't Take This",
+      "reason": "duration 226295ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1364125057,
+      "name": "Adrift",
+      "reason": "duration 290526ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2642166399,
+      "name": "Death Racer (The Crew Motorfest Official Soundtrack)",
+      "reason": "duration 254100ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1812151585,
+      "name": "Highway Ruins",
+      "reason": "duration 292806ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1812151586,
+      "name": "Lost Fragment",
+      "reason": "duration 292369ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 33875061,
+      "name": "Mandarin's Claws",
+      "reason": "duration 224920ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1812151589,
+      "name": "Surrogates (feat. Unitra)",
+      "reason": "duration 291005ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 34690516,
+      "name": "Plasma",
+      "reason": "duration 220241ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1884547271,
+      "name": "EBM",
+      "reason": "duration 175200ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 513731716,
+      "name": "Scheinfromm",
+      "reason": "duration 217397ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1438009554,
+      "name": "Ebm",
+      "reason": "duration 149035ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 26370412,
+      "name": "Adrenalin",
+      "reason": "duration 192509ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1491840554,
+      "name": "EBM",
+      "reason": "duration 251986ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 17845293,
+      "name": "Fear of Domination",
+      "reason": "duration 243173ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1941414557,
+      "name": "We Are Dumb",
+      "reason": "duration 253822ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 862548808,
+      "name": "Der Mussolini",
+      "reason": "duration 234600ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 27512471,
+      "name": "Hydra (Ear Scrapping Chaos Mix)",
+      "reason": "duration 235493ms outside [300.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 7,
+    "minimumExpected": 3
+  }
+}

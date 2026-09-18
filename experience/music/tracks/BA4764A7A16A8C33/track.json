@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "BA4764A7A16A8C33C784220C60C317F865156A203665F16832A9F3F8E86CD7B5",
+  "aliases": [
+    {
+      "title": "Post Mortem",
+      "neteaseId": 1431353842,
+      "sourceUrl": "https://music.163.com/song?id=1431353842",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T07:02:47Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1431353842-Post_Mortem.mp3",
+      "recordedAt": "2026-09-17T07:02:47Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T07:02:47Z",
+  "updatedAt": "2026-09-17T07:02:47Z"
+}

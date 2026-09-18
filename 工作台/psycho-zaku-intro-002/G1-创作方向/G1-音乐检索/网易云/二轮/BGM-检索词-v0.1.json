@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": "背景音乐你从 freesound 里找好了（Freesound 整轨供给不足，供给面卡片呈报）",
+    "themeRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "工业电子",
+      "rationale": "笔记原话：参照曲实测为快节奏工业电子/Techno（模型听觉笔记）",
+      "source": "theme"
+    },
+    {
+      "term": "硬核 Techno",
+      "rationale": "笔记原话：参照曲为硬核Techno、快节奏高能量",
+      "source": "brief"
+    },
+    {
+      "term": "机械感 电子",
+      "rationale": "笔记原话：参照曲具强烈机械感（题材=机甲契合）",
+      "source": "theme"
+    },
+    {
+      "term": "紧张 电子鼓点",
+      "rationale": "笔记原话：紧迫叙事性+节奏驱动",
+      "source": "theme"
+    },
+    {
+      "term": "战斗 电子 BGM",
+      "rationale": "主题：UC末期战场叙事的平台语汇",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 300,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-17T15:00:45+08:00"
+}

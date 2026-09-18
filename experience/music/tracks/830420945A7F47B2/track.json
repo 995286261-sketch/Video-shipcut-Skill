@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF",
+  "aliases": [
+    {
+      "title": "The Darkest Alleys (Final Stage)",
+      "neteaseId": 26408416,
+      "sourceUrl": "https://music.163.com/song?id=26408416",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T08:17:44Z"
+    },
+    {
+      "title": "The Darkest Alleys (Final Stage)",
+      "artist": "Perturbator",
+      "neteaseId": "26408416",
+      "sourceUrl": "https://music.163.com/song?id=26408416",
+      "provenance": "netease_preview",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T08:21:51Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/三轮/netease-26408416-The_Darkest_Alleys_(Final_Stage).mp3",
+      "recordedAt": "2026-09-17T08:17:44Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T08:17:44Z",
+  "updatedAt": "2026-09-17T08:21:51Z"
+}

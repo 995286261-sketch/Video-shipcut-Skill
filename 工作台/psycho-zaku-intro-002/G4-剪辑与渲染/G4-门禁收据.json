@@ -1,0 +1,42 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G4",
+ "cardType": "g4_candidate_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-17T10:55:00Z",
+ "reviewCardRef": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-回放复核卡-v0.1.md",
+ "basisRefs": [
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-渲染验证-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-源字幕遮蔽合同-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-封面合同-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-批准记录.md"
+ ],
+ "checklist": [
+  {
+   "id": "candidate_or_export",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1.mp4"
+  },
+  {
+   "id": "playback_review_card",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-回放复核卡-v0.1.md"
+  },
+  {
+   "id": "render_validation",
+   "required": true,
+   "status": "completed",
+   "evidenceRef": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-渲染验证-v0.1.json"
+  }
+ ]
+}

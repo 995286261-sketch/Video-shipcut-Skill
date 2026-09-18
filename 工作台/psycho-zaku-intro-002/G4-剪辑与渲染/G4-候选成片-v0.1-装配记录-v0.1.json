@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "psycho-zaku-intro-002",
+  "status": "assembled",
+  "manifest": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-可编辑工程-v0.2.json",
+  "timelineDurationMs": 94720,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-001.mp4",
+      "sha256": "E11B8036180C9A0611A79573E301B1F15C2DD12914F8839A1F0C7CCE300D08B4"
+    },
+    {
+      "segmentId": "seg-02",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-002.mp4",
+      "sha256": "E9F7D76E90091A646F826AFE20960BB21C5F3DACBD6FB4FD32984A0346EE214A"
+    },
+    {
+      "segmentId": "seg-03",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-003.mp4",
+      "sha256": "A77F7F53B92C1CCD5B95560189370F03CD2A446D36190F8E435FFA4215BCB00E"
+    },
+    {
+      "segmentId": "seg-04",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-004.mp4",
+      "sha256": "858BCC79FCC33B0686E4FED29CFA7DC2C5A41E16AF065EBD9D1EFA5D8DE02B01"
+    },
+    {
+      "segmentId": "seg-05",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-005.mp4",
+      "sha256": "152E5CCDFA4209C8C49DEEFBE2803626298B1C43CA1433AB62AACAABB7794C25"
+    },
+    {
+      "segmentId": "seg-06",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-006.mp4",
+      "sha256": "16F59EE8B05F29780402D9079473BEA4ABFB635C01FC86DC294867AE91364259"
+    },
+    {
+      "segmentId": "seg-07",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-007.mp4",
+      "sha256": "2A97993FFB61D49CA385377AA9E9C498560721B419E82DE8C7F3A635EEE9C5C8"
+    },
+    {
+      "segmentId": "seg-08",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-008.mp4",
+      "sha256": "EC60560932CA0D4F29A06BB49C8D96E79DC5158CBE812860C3F425D58A7E1C5A"
+    },
+    {
+      "segmentId": "seg-09",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-009.mp4",
+      "sha256": "C1B3AA6CC26C3FB4083B1CD9AB137D109D3924383C23FA066F7EA849D60C6D99"
+    },
+    {
+      "segmentId": "seg-10",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-010.mp4",
+      "sha256": "4C3DE4F7D6C60D978A7A29F78FF5862E11A638E3202616402245EA9A7079377D"
+    },
+    {
+      "segmentId": "seg-11",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-011.mp4",
+      "sha256": "EB0D0D2A0E1647E4E273CD6FC17361162100D9305A9C7057697474EEFDEA2303"
+    },
+    {
+      "segmentId": "seg-12",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-012.mp4",
+      "sha256": "C8D64C2B0FF744766F242E8FA24A3EF065EF9941AB6D1E16D997D74261EF1F6B"
+    },
+    {
+      "segmentId": "seg-13",
+      "file": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/clean-segments/seg-013.mp4",
+      "sha256": "D4F2F4C4D4E0811A79C09666BE9E4E1D12B549098AA9EFEB31B955603640E55E"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+    "sha256": "974BC1F3A5270A4FED24E11BCB8739EFDC0F6495E5EF50CC8342D1AF19330779",
+    "durationMs": 94720,
+    "loudness": {
+      "integratedLufs": -15.1,
+      "truePeakDbtp": -2.9,
+      "engine": "ffmpeg-ebur128",
+      "targetIntegratedLufs": -14.0,
+      "chain": "standard-narration-chain (acompressor+loudnorm, issue ㊌)",
+      "caveat": "measured on the assembled master including the BGM bed, not narration alone"
+    }
+  },
+  "bgmMix": {
+    "audio": {
+      "path": "工作台/psycho-zaku-intro-002/G0-素材包/07_授权音频/The Darkest Alleys (Final Stage)-Perturbator-26408416.mp3",
+      "sha256": "830420945A7F47B2CA6051F7D84DE3F2E80502C62DD6C9A3A1BBFA5A673D44AF"
+    },
+    "contract": {
+      "path": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+      "sha256": "2CA78389CBD444F86447E781B33C0A4AF57CA63731125B10A4551D1D53E105F2"
+    },
+    "trackOffsetMs": 0,
+    "bedGainDb": -12.0,
+    "duckReductionDb": 6.0,
+    "duckSegments": [
+      {
+        "fromMs": 0,
+        "toMs": 94720,
+        "sentenceIds": [
+          "N01",
+          "N02",
+          "N03",
+          "N04",
+          "N05",
+          "N06",
+          "N07",
+          "N08",
+          "N09",
+          "N17",
+          "N18",
+          "N19",
+          "N20"
+        ]
+      }
+    ],
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 92720,
+      "fadeOutMs": 2000
+    },
+    "measuredInPlaceLufs": -24.8
+  },
+  "subtitleAss": {
+    "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+    "sha256": "DFB791BA2FEEA66320A43212EF0B16CF333904950CA47A0FBDE144EEC2550E2C"
+  },
+  "output": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+  "outputSha256": "47B2F4C43010287C225BEE6F0341E221C11505BD1657F7C82EE801F0A693C7A2",
+  "probedDurationMs": 94733,
+  "fps": 30,
+  "cover": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+  "chapterCards": {
+    "path": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+    "sha256": "8265757C2825113C72A40C61CC7E00A82103908D1D0ADD7E45C12D8DA28BCC8C",
+    "cards": 1,
+    "subtitleCuesTrimmed": 1
+  },
+  "titleBar": null,
+  "filterGraph": "[0:v]fps=fps=30,format=yuv420p,subtitles=captions.ass,drawtext=fontfile=/System/Library/Fonts/Supplemental/Songti.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work/chapter-card-1.txt:fontsize=56:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,0.000,3.200)'[v];[1:a]acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=9[narr];[2:a]volume=-12dB,volume=-6dB:enable='between(t,0.000,94.720)',afade=t=in:st=0:d=2.000,afade=t=out:st=92.720:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/psycho-zaku-intro-002/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work"
+}

@@ -1,0 +1,2896 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "projectId": "psycho-zaku-intro-002",
+  "records": [
+    {
+      "recordId": "vf-001",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 0,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-001-0000000000ms.jpg",
+      "observedVisuals": "座舱内白色驾驶服人物，紫调面部，暗舱",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-002",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 5000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-002-0000005000ms.jpg",
+      "observedVisuals": "舱内驾驶员特写，白盔红冠、吉翁胸章，字幕『才是折磨我们的真正敌人』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-003",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 10000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-003-0000010000ms.jpg",
+      "observedVisuals": "驾驶员侧脸+他人戴手套伸手",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-004",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 15000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-004-0000015000ms.jpg",
+      "observedVisuals": "洋红/紫机体躯干与盾局部+红发女性人物，字幕『能在这场战争中活下去可以说是奇迹』",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-005",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 20000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-005-0000020000ms.jpg",
+      "observedVisuals": "洋红扎古式腿部装甲特写（弹射平台）",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-006",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 25000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-006-0000025000ms.jpg",
+      "observedVisuals": "格纳库悬吊洋红扎古全身：单眼、肩甲刺、背部大型光束炮与推进器组（与 E1 高机动型构型一致）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-007",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 30000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-007-0000030000ms.jpg",
+      "observedVisuals": "驾驶员正面特写，字幕『达利路·劳伦斯 出击』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-008",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 35000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-008-0000035000ms.jpg",
+      "observedVisuals": "弹射口外星空残骸带",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-009",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 40000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-009-0000040000ms.jpg",
+      "observedVisuals": "残骸带远景，紫色尾焰小体，右下角机体碎片入画",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-010",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 45000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-010-0000045000ms.jpg",
+      "observedVisuals": "倒置舱内驾驶员（吉翁徽背景）",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-011",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 50000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-011-0000050000ms.jpg",
+      "observedVisuals": "残骸带中红色小影带蓝焰，距离远",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-012",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 55000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-012-0000055000ms.jpg",
+      "observedVisuals": "战舰甲板大爆炸，粉紫光束",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-013",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 60000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-013-0000060000ms.jpg",
+      "observedVisuals": "蓝色推进光点拖尾",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-014",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 65000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-014-0000065000ms.jpg",
+      "observedVisuals": "灰色舰体装甲板特写",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-015",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 70000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-015-0000070000ms.jpg",
+      "observedVisuals": "灰色战舰上层建筑开火",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-016",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 75000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-016-0000075000ms.jpg",
+      "observedVisuals": "蓝光点+黄色光束弹幕+粉色爆炸",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-017",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 80000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-017-0000080000ms.jpg",
+      "observedVisuals": "爆炸火球+绿色光束命中舰甲",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-018",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 85000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-018-0000085000ms.jpg",
+      "observedVisuals": "蓝色光迹",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-019",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 90000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-019-0000090000ms.jpg",
+      "observedVisuals": "舱内驾驶员特写（红冠盔、惊愕）",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-020",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 95000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-020-0000095000ms.jpg",
+      "observedVisuals": "联邦白盔星徽驾驶员，字幕『战斗还没结束』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-021",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 100000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-021-0000100000ms.jpg",
+      "observedVisuals": "黑暗巨构剪影，字幕『强敌还在那里』",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-022",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 105000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-022-0000105000ms.jpg",
+      "observedVisuals": "洋红与白色机体部件叠影（叠化过渡）",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-023",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 110000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-023-0000110000ms.jpg",
+      "observedVisuals": "巨大爆炸火球+环形冲击波",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-024",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 115000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-024-0000115000ms.jpg",
+      "observedVisuals": "漫画风橙色头盔人物嘶吼特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-025",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 120000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-025-0000120000ms.jpg",
+      "observedVisuals": "漫画分镜：白色高达型对红色扎古型肉搏，顶部字幕组滚动条",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-026",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 125000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-026-0000125000ms.jpg",
+      "observedVisuals": "暗星空残骸",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-027",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 130000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-027-0000130000ms.jpg",
+      "observedVisuals": "白色联邦高达型正面（EFSF 盾）",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-028",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 135000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-028-0000135000ms.jpg",
+      "observedVisuals": "红紫机体俯冲+蓝光束军刀+蜘蛛网状背景",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-029",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 140000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-029-0000140000ms.jpg",
+      "observedVisuals": "红紫扎古近景：单眼、肩刺、背部大型光束炮，与 25s 同机构型",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-030",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 145000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-030-0000145000ms.jpg",
+      "observedVisuals": "红紫扎古全身持大型火箭炮、单眼紫光、高机动腿部",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-031",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 150000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-031-0000150000ms.jpg",
+      "observedVisuals": "洋红机体发射大型粉色光束，躯干/背包炮与 25s/140s 同构（头部未入画）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-032",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 155000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-032-0000155000ms.jpg",
+      "observedVisuals": "俯视洋红小机+橙色爆炸环+紫色光束",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-033",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 160000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-033-0000160000ms.jpg",
+      "observedVisuals": "舱内红冠盔驾驶员，字幕『你造的机动战士』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-034",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 165000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-034-0000165000ms.jpg",
+      "observedVisuals": "驾驶员含泪面部特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-035",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 170000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-035-0000170000ms.jpg",
+      "observedVisuals": "洋红扎古持大型火箭筒开火（蓝色炮口焰）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-036",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 175000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-036-0000175000ms.jpg",
+      "observedVisuals": "白/粉高达型飞行（蓝推进器）",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-037",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 180000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-037-0000180000ms.jpg",
+      "observedVisuals": "尘埃云中坠落残骸",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-038",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 185000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-038-0000185000ms.jpg",
+      "observedVisuals": "驾驶员眼部特写（红盔）",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-039",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 190000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-039-0000190000ms.jpg",
+      "observedVisuals": "白色高达头部开火特写",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-040",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 195000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-040-0000195000ms.jpg",
+      "observedVisuals": "白色高达头部开火特写（同镜延续）",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-041",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 200000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-041-0000200000ms.jpg",
+      "observedVisuals": "灰蓝高达型头部特写+橙烟",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-042",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 205000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-042-0000205000ms.jpg",
+      "observedVisuals": "洋红机体暗舱静置：背负大型光束步枪、单眼可见",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-043",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 210000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-043-0000210000ms.jpg",
+      "observedVisuals": "舱内多名白色服联邦乘员漂浮",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-044",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 215000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-044-0000215000ms.jpg",
+      "observedVisuals": "灰白高达型头肩特写",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-045",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 220000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-045-0000220000ms.jpg",
+      "observedVisuals": "红紫小影+蓝光点+白色线网",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-046",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 225000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-046-0000225000ms.jpg",
+      "observedVisuals": "漫画风红盔驾驶员嘶吼特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-047",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 230000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-047-0000230000ms.jpg",
+      "observedVisuals": "洋红扎古单眼紫光发射大型粉光束",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-048",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 235000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-048-0000235000ms.jpg",
+      "observedVisuals": "洋红机体高速机动拖白烟（运动模糊重）",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark",
+        "motion_blur"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-049",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 240000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-049-0000240000ms.jpg",
+      "observedVisuals": "漫画风驾驶员咬牙特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-050",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 245000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-050-0000245000ms.jpg",
+      "observedVisuals": "机体部件特写：灰甲+洋红散热结构+白色炮身",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-051",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 250000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-051-0000250000ms.jpg",
+      "observedVisuals": "白色高达型全身持 EFSF 盾+紫光束军刀",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-052",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 255000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-052-0000255000ms.jpg",
+      "observedVisuals": "俯瞰废墟城市、街道中红紫小影",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-053",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 260000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-053-0000260000ms.jpg",
+      "observedVisuals": "漫画风人物眼部特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-054",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 265000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-054-0000265000ms.jpg",
+      "observedVisuals": "蓝色竖向光流转场",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-055",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 270000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-055-0000270000ms.jpg",
+      "observedVisuals": "焦黑高达型头部残骸特写",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-056",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 275000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-056-0000275000ms.jpg",
+      "observedVisuals": "白甲+蓝色电弧+仪表『125』特写",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-057",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 280000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-057-0000280000ms.jpg",
+      "observedVisuals": "漫画风紫调眼睛特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-058",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 285000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-058-0000285000ms.jpg",
+      "observedVisuals": "机械臂持大型枪+紫光（局部）",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-059",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 290000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-059-0000290000ms.jpg",
+      "observedVisuals": "漫画风舱内驾驶员握杆",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-060",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 295000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-060-0000295000ms.jpg",
+      "observedVisuals": "漫画风驾驶服手臂特写，字幕『为什么』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-061",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 300000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-061-0000300000ms.jpg",
+      "observedVisuals": "漫画风红冠盔驾驶员仰望，字幕『我明白了 卡拉』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-062",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 305000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-062-0000305000ms.jpg",
+      "observedVisuals": "漫画风含泪面部特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-063",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 310000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-063-0000310000ms.jpg",
+      "observedVisuals": "洋红机体躯干特写：橙色核心块、双联炮口、背负推进器，手持残骸（头部未入画）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-064",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 315000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-064-0000315000ms.jpg",
+      "observedVisuals": "同镜拉远：单眼头部入画，洋红装甲+Zeon 徽记",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-065",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 320000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-065-0000320000ms.jpg",
+      "observedVisuals": "漫画风红冠盔驾驶员，字幕『我居然输给了这种残废吗？』",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-066",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 325000,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-066-0000325000ms.jpg",
+      "observedVisuals": "EVA 宇航员漂浮+白色高达型残骸",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "vf-067",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 326018,
+      "frameExtractionSpec": "interval_ms=5000 full_source",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "frame-067-0000326018ms.jpg",
+      "observedVisuals": "同镜延续：EVA 宇航员+高达型残骸",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:30:00Z"
+    },
+    {
+      "recordId": "sd-019",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 57226,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-019-0000057226ms.jpg",
+      "observedVisuals": "战舰剪影+爆炸火光",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-024",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 74226,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-024-0000074226ms.jpg",
+      "observedVisuals": "巨大粉紫爆炸云+暗色结构",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-028",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 79809,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-028-0000079809ms.jpg",
+      "observedVisuals": "粉色爆炸云+灰黑舰体装甲",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-029",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 82376,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-029-0000082376ms.jpg",
+      "observedVisuals": "洋红机体局部+黄色命中爆闪",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-035",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 93876,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-035-0000093876ms.jpg",
+      "observedVisuals": "洋红扎古式躯干：单眼紫光、背部炮、爆炸火光背景",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-042",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 113376,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-042-0000113376ms.jpg",
+      "observedVisuals": "倒置深色高达型+品红 EFSF 盾",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-052",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 135976,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-052-0000135976ms.jpg",
+      "observedVisuals": "红紫机体+大粉光束+蓝光束军刀",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-070",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 158126,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-070-0000158126ms.jpg",
+      "observedVisuals": "红紫机体+双蓝光束军刀+大粉光束",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-075",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 170993,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-075-0000170993ms.jpg",
+      "observedVisuals": "白高达型+粉光束",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-077",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 171993,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-077-0000171993ms.jpg",
+      "observedVisuals": "洋红机体+蓝光束+白网",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-084",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 188993,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-084-0000188993ms.jpg",
+      "observedVisuals": "舱内 ROUTE SIMULATION 仪表屏",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-094",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 206643,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-094-0000206643ms.jpg",
+      "observedVisuals": "洋红扎古躯干特写：单眼头、背包炮、Zeon 徽、橙色核心块",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-095",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 210576,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-095-0000210576ms.jpg",
+      "observedVisuals": "漫画风紫调眼睛特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-105",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 231293,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-105-0000231293ms.jpg",
+      "observedVisuals": "深色高达型持品红 EFSF 盾",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-106",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 232593,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-106-0000232593ms.jpg",
+      "observedVisuals": "白/粉高达型发射大型粉光束",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-120",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 270576,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-120-0000270576ms.jpg",
+      "observedVisuals": "深色高达型特写发射紫光束，字幕『义肢混蛋』",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-121",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 271509,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-121-0000271509ms.jpg",
+      "observedVisuals": "深色高达型开火+紫光束，字幕『义肢混蛋』",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark",
+        "burned_subtitle"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-123",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 276243,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-123-0000276243ms.jpg",
+      "observedVisuals": "紫色调人眼特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-124",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 276943,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-124-0000276943ms.jpg",
+      "observedVisuals": "洋红机体头部特写：单眼紫光（运动模糊）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark",
+        "motion_blur"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-125",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 278126,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-125-0000278126ms.jpg",
+      "observedVisuals": "白高达型中弹爆闪+舱内 UI 前景",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-126",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 279993,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-126-0000279993ms.jpg",
+      "observedVisuals": "深色高达型装甲特写+烟雾",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-129",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 285343,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-129-0000285343ms.jpg",
+      "observedVisuals": "白色机械臂持炮特写",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-130",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 287226,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-130-0000287226ms.jpg",
+      "observedVisuals": "洋红扎古躯干+背包双联炮+Zeon 徽+单眼",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-131",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 287926,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-131-0000287926ms.jpg",
+      "observedVisuals": "洋红机体头部特写：单眼紫光+光束掠过",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-132",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 288543,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-132-0000288543ms.jpg",
+      "observedVisuals": "红色机体爆炸+紫光束",
+      "identityStatus": "uncertain",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-133",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 289776,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-133-0000289776ms.jpg",
+      "observedVisuals": "舱内白盔蓝眼驾驶员",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-134",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 291293,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-134-0000291293ms.jpg",
+      "observedVisuals": "红紫扎古躯干+橙色核心块+双联背包炮+单眼",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-135",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 293409,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-135-0000293409ms.jpg",
+      "observedVisuals": "洋红扎古持盾发射大型粉光束、肩刺",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-138",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 303993,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-138-0000303993ms.jpg",
+      "observedVisuals": "漫画风含泪面部特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark",
+        "manga_panel"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-140",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 309826,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-140-0000309826ms.jpg",
+      "observedVisuals": "洋红扎古躯干+橙色核心块+Zeon 徽+单眼紫光",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "sd-142",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 316660,
+      "frameExtractionSpec": "scdet_scene=0.3 shot_mid>=300ms magenta_prefilter>=0.03",
+      "analysisPromptVersion": "g3-subject-s2-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "shot-142-0000316660ms.jpg",
+      "observedVisuals": "红紫扎古躯干+EVA 宇航员+橙色核心块",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T11:10:00Z"
+    },
+    {
+      "recordId": "pr-001",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 6200,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000006200ms.jpg",
+      "observedVisuals": "座舱内部特写：绿色制服手臂操作驾驶杆，左缘红冠头盔，控制台金色徽记",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-002",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 27710,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000027710ms.jpg",
+      "observedVisuals": "紫红装甲推进器组喷射蓝白光束（背视角）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-003",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 31200,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000031200ms.jpg",
+      "observedVisuals": "圆形推进喷口群特写（青色发光）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-004",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 32250,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000032250ms.jpg",
+      "observedVisuals": "蓝色光束拖尾划过暗背景（高速运动光效）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-005",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 32590,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000032590ms.jpg",
+      "observedVisuals": "洋红紫扎古携大型多管武器、蓝色推进器多点喷射，背景碎片场",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-006",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 34000,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000034000ms.jpg",
+      "observedVisuals": "巨型绿色舰内机库，小飞行器拖蓝尾穿过碎片带",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-007",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 35800,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000035800ms.jpg",
+      "observedVisuals": "白盔红冠驾驶员面部特写：汗珠、瞪眼、HUD 反光，烧录字幕“时间到了”",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-008",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 36420,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000036420ms.jpg",
+      "observedVisuals": "头盔内驾驶员面部极特写，红色面罩件，眼神上视",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-009",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 78090,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000078090ms.jpg",
+      "observedVisuals": "暗红扎古头部特写：洋红单眼、白色大型火箭筒、前景绿色光束军刀、胸章",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-010",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 78840,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000078840ms.jpg",
+      "observedVisuals": "绿色光束切过暗色表面、爆闪",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-011",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 106800,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000106800ms.jpg",
+      "observedVisuals": "白红头盔驾驶员坐舱内景，左侧红色圆形屏，控制台金色徽记",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-012",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 109200,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000109200ms.jpg",
+      "observedVisuals": "红冠头盔驾驶员面部极特写：紫光、瞪大眼张口（震惊反应）",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-013",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 168000,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000168000ms.jpg",
+      "observedVisuals": "含泪年轻驾驶员面部特写，黄绿头盔，烧录字幕“比我失去的手脚还自如”",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-014",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 171500,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000171500ms.jpg",
+      "observedVisuals": "红色扎古战斗近景：洋红单眼、蓝色推进焰、带刺盾",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-015",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 172900,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000172900ms.jpg",
+      "observedVisuals": "红色扎古持火箭筒，蓝色光束拖尾，碎片场",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-016",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 190300,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000190300ms.jpg",
+      "observedVisuals": "紫光头盔内面部极特写，瞪眼",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-017",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 192100,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000192100ms.jpg",
+      "observedVisuals": "红色扎古在废墟建筑内开火大口径黄色炮口焰，单眼发光",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-018",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 193700,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000193700ms.jpg",
+      "observedVisuals": "带疤痕驾驶员面部特写，白盔，绿色 HUD 反光，咬牙",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-019",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 231990,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000231990ms.jpg",
+      "observedVisuals": "巨大粉黄爆炸火球，左下角洋红紫扎古剪影",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-020",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 233600,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000233600ms.jpg",
+      "observedVisuals": "红色扎古机体喷射白色气体（受创/泄压），持光束步枪，蓝推进尾",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-021",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 281800,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000281800ms.jpg",
+      "observedVisuals": "红色机体发射大粒子炮：炮口黄光、红冠头部、洋红单眼",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "pr-022",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 312800,
+      "frameExtractionSpec": "shot-layer probe: 候选区间内 scdet 子镜头中帧（g3-plan.md 镜头层）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "子镜头探针/probe-0000312800ms.jpg",
+      "observedVisuals": "橙色装甲圆形舱口特写、光晕与损伤",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-001",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 100000,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-01/start-0000100000ms.jpg",
+      "observedVisuals": "黑暗太空巨型结构剪影+粉色星云，烧录字幕“强敌还在那里”，左上 bilibili 水印、右下 SUNRISE 台标",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-002",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 105600,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-01/middle-0000105600ms.jpg",
+      "observedVisuals": "座舱屏幕特写：紫光中驾驶员面部、粉色装甲上金色徽记",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-003",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 111199,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-01/end-0000111199ms.jpg",
+      "observedVisuals": "双蓝白光束拖尾+粉色爆炸（太空战）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-004",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 136143,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-02/start-0000136143ms.jpg",
+      "observedVisuals": "蓝白光中开火的机动战士，角状头冠",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-005",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 141183,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-02/middle-0000141183ms.jpg",
+      "observedVisuals": "红色扎古持大型火箭筒悬浮于绿色网格表面上方（殖民地内部）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-006",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 146222,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-02/end-0000146222ms.jpg",
+      "observedVisuals": "红色机体开火光束、蓝色推进器、战斗场面",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-007",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 0,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-03/start-0000000000ms.jpg",
+      "observedVisuals": "驾驶员俯身进入座舱：白色制服、紫面罩头盔、面部可见",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-008",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 3600,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-03/middle-0000003600ms.jpg",
+      "observedVisuals": "绿手套手部特写握住操纵杆",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-009",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 7199,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-03/end-0000007199ms.jpg",
+      "observedVisuals": "座舱内驾驶员握杆操作",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-010",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 27210,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-04/start-0000027210ms.jpg",
+      "observedVisuals": "洋红紫扎古开火光束+蓝色推进尾焰",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-011",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 31850,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-04/middle-0000031850ms.jpg",
+      "observedVisuals": "青色发光圆形推进喷口群特写",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-012",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 36489,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-04/end-0000036489ms.jpg",
+      "observedVisuals": "红冠头盔驾驶员面部极特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-013",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 74226,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-05/start-0000074226ms.jpg",
+      "observedVisuals": "舰内机库结构巨大粉色爆炸",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-014",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 78506,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-05/middle-0000078506ms.jpg",
+      "observedVisuals": "暗红扎古持白色火箭筒、绿色光束军刀、单眼",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-015",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 82785,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-05/end-0000082785ms.jpg",
+      "observedVisuals": "洋红紫扎古发射大型火箭筒、粉色光束",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-016",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 229210,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-06/start-0000229210ms.jpg",
+      "observedVisuals": "红色扎古开火光束、白紫光轨",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-017",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 231690,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-06/middle-0000231690ms.jpg",
+      "observedVisuals": "橙色爆炸火球+碎片",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-018",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 234169,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-06/end-0000234169ms.jpg",
+      "observedVisuals": "红色扎古携盾、白色烟迹",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-019",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 166176,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-07/start-0000166176ms.jpg",
+      "observedVisuals": "含泪驾驶员面部特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-020",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 169896,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-07/middle-0000169896ms.jpg",
+      "observedVisuals": "同镜头：含泪驾驶员面部",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-021",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 173615,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-07/end-0000173615ms.jpg",
+      "observedVisuals": "红色高机动扎古发射蓝色光束、碎片场上方",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-022",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 185000,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-08/start-0000185000ms.jpg",
+      "observedVisuals": "灰色烟雾+坠散碎片",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-023",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 189440,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-08/middle-0000189440ms.jpg",
+      "observedVisuals": "座舱雷达屏幕“ROUTE SIMULATION”显示",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-024",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 193879,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-08/end-0000193879ms.jpg",
+      "observedVisuals": "疤痕驾驶员面部特写、绿光、咬牙",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-025",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 203310,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-09/start-0000203310ms.jpg",
+      "observedVisuals": "洋红紫扎古发射巨大蓝色光束",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-026",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 205510,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-09/middle-0000205510ms.jpg",
+      "observedVisuals": "红色扎古携盾、火花",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-027",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 207709,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-09/end-0000207709ms.jpg",
+      "observedVisuals": "年轻驾驶员面部特写、红冠头盔",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-028",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 290543,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-10/start-0000290543ms.jpg",
+      "observedVisuals": "瞪大眼震惊驾驶员特写、粉色座舱屏幕",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-029",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 292743,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-10/middle-0000292743ms.jpg",
+      "observedVisuals": "紫色调战斗：扎古携盾发射洋红光束",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-030",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 294942,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-10/end-0000294942ms.jpg",
+      "observedVisuals": "白粉色机体腿部/推进器运动极特写",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-031",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 276576,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-11/start-0000276576ms.jpg",
+      "observedVisuals": "暗红装甲近景、大面积黑色阴影区（低照度镜头，装甲边缘可辨）",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-032",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 279576,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-11/middle-0000279576ms.jpg",
+      "observedVisuals": "紫色眼睛大张极特写、画面边缘手指",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-033",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 282575,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-11/end-0000282575ms.jpg",
+      "observedVisuals": "红色扎古大粒子炮开火、炮口黄光、洋红单眼",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-034",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 309826,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-12/start-0000309826ms.jpg",
+      "observedVisuals": "紫色眼睛极特写（大张）",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-035",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 313706,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-12/middle-0000313706ms.jpg",
+      "observedVisuals": "同镜头紫色眼睛极特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-036",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 317585,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-12/end-0000317585ms.jpg",
+      "observedVisuals": "红紫扎古躯干损伤+绿衣驾驶员浮出舱口，烧录字幕“不可能”",
+      "identityStatus": "confirmed",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-037",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 322010,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-13/start-0000322010ms.jpg",
+      "observedVisuals": "暗色眼睛极特写、手指压眉",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-038",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 324290,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-13/middle-0000324290ms.jpg",
+      "observedVisuals": "同镜头眼睛极特写",
+      "identityStatus": "person_only",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    },
+    {
+      "recordId": "vv-039",
+      "sourceAssetId": "source-02-2071e9a7",
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceMs": 326569,
+      "frameExtractionSpec": "verification start/middle/end: 候选区间起/中/终帧（g3-plan.md 实际画面验证）",
+      "analysisPromptVersion": "g3-visual-verification-v1",
+      "provider": "agent-multimodal",
+      "model": "zcode-vision",
+      "analysisStatus": "completed",
+      "frameRef": "seg-13/end-0000326569ms.jpg",
+      "observedVisuals": "太空远景：EVA 宇航员漂浮于被毁白色机动战士与大型光束炮残骸旁",
+      "identityStatus": "not_present",
+      "riskFlags": [
+        "channel_watermark"
+      ],
+      "createdAt": "2026-09-17T10:07:58Z"
+    }
+  ]
+}

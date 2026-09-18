@@ -1,0 +1,193 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "status": "approved",
+ "narrationDraft": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+ "narrationDecisionRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+ "timingBasis": "G2-配音清单-longtian-v0.3.json 逐句实测时长（累计 94720ms）",
+ "beats": [
+  {
+   "beatId": "beat-N01",
+   "sentenceId": "N01",
+   "outputStartMs": 0,
+   "outputEndMs": 11200,
+   "narrationText": "宇宙世纪0079年，一年战争的尾声。当所有人的目光都盯着那些主角机时，吉翁公国悄悄投入了一个更危险的实验。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "战争氛围语境画面（战舰/残骸/机体剪影任一）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N02",
+   "sentenceId": "N02",
+   "outputStartMs": 11200,
+   "outputEndMs": 21280,
+   "narrationText": "它基于量产的扎古，却搭载了一套几乎不被正史记载的系统——Reuse-P装置。它的名字，叫精神力扎古。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "目标主体机体全身或大半身可见（达里尔版精神力扎古）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N03",
+   "sentenceId": "N03",
+   "outputStartMs": 21280,
+   "outputEndMs": 28480,
+   "narrationText": "这套装置能直接读取驾驶员的神经信号，让机体的四肢像身体的延伸一样，随念头而动。",
+   "claim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": [
+     "驾驶员舱内操作 与/或 目标主体肢体动作"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N04",
+   "sentenceId": "N04",
+   "outputStartMs": 28480,
+   "outputEndMs": 37760,
+   "narrationText": "驾驶它的，不是王牌，也不是少爷——而是\"假死者部队\"的达里尔·洛伦兹。一支部队，连番号都在宣告他们的牺牲。",
+   "claim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": [
+     "达里尔舱内形象（白盔红冠驾驶服）可见"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N05",
+   "sentenceId": "N05",
+   "outputStartMs": 37760,
+   "outputEndMs": 46320,
+   "narrationText": "当年十二月，达里尔迅速掌握了这台机体：重创对手母舰\"蜂巢\"，击沉数艘萨拉米斯级。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "战舰被命中/爆炸画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N06",
+   "sentenceId": "N06",
+   "outputStartMs": 46320,
+   "outputEndMs": 51280,
+   "narrationText": "请注意，这是一台扎古——一个已经开始落后的骨架。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "目标主体扎古系骨架轮廓可辨"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N07",
+   "sentenceId": "N07",
+   "outputStartMs": 51280,
+   "outputEndMs": 58720,
+   "narrationText": "它能打出越级的战绩，是因为设计重心从来不在装甲和出力，而在\"把人的大脑当作操作系统\"。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "舱内操作画面与目标主体动作交替"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N08",
+   "sentenceId": "N08",
+   "outputStartMs": 58720,
+   "outputEndMs": 67600,
+   "narrationText": "代价同样残酷：这种系统要求驾驶员与机器融为一体，而越融合，人的边界越模糊。",
+   "claim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": [
+     "驾驶员面部情绪特写"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N09",
+   "sentenceId": "N09",
+   "outputStartMs": 67600,
+   "outputEndMs": 72000,
+   "narrationText": "精神力扎古自始至终是试作机，从未正式量产。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "目标主体静置/展示画面（试作机语境）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N17",
+   "sentenceId": "N17",
+   "outputStartMs": 72000,
+   "outputEndMs": 76400,
+   "narrationText": "回到标题：为什么说它是\"凌驾于主角机之上的怪物\"？",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "目标主体战斗或特写画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N18",
+   "sentenceId": "N18",
+   "outputStartMs": 76400,
+   "outputEndMs": 82400,
+   "narrationText": "因为它从不曾拥有主角的光环，却每一次登场，都是别人的生死劫。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "目标主体开火/命中画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N19",
+   "sentenceId": "N19",
+   "outputStartMs": 82400,
+   "outputEndMs": 90160,
+   "narrationText": "它是一台被神经系统逼到极限的量产机，一名老兵最后的义肢，一个不肯死去的旧时代残响。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "目标主体特写（义肢/残响意象承载）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N20",
+   "sentenceId": "N20",
+   "outputStartMs": 90160,
+   "outputEndMs": 94720,
+   "narrationText": "下一期，我们把精神力扎古的装备和战果，逐帧拆开看。",
+   "claim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": [
+     "收尾画面（EVA/残骸/机体剪影任一）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  }
+ ]
+}

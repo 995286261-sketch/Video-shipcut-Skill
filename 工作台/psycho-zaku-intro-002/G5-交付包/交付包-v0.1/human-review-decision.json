@@ -1,0 +1,34 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G5",
+ "status": "approved",
+ "decision": "accepted",
+ "reviewedAt": "2026-09-18T10:26:00+08:00",
+ "reviewedBy": "用户",
+ "approvalVerbatim": "确认G5",
+ "humanReviewPoints": [
+  "成片完整播放",
+  "封面",
+  "字幕",
+  "警告清单 W1-W5 知悉",
+  "交付包内容清单"
+ ],
+ "coverage": {
+  "finalVideo": "用户按卡第四节决定=A 确认交付（口令未注明逐条接受警告）",
+  "cover": "已目视抽看依据图",
+  "subtitles": "机器对账+检查帧"
+ },
+ "warningsHandling": {
+  "acknowledgedVia": "G5-交付回显卡-v0.1 第四节 + 用户 确认G5",
+  "individuallyAccepted": false,
+  "standingBlocks": [
+   "W1 BGM 未清权：任何对外发布前必须换清权曲并重过授权关（硬边界，不随交付关闭）",
+   "W2 水印/台标保留：仅限 internal_test 分发边界",
+   "W3 mpdecimate 警告：如转对外可复审检测阈值",
+   "W4 时长偏差：G3 已批口径",
+   "W5 听感：以用户亲耳复核（本次确认交付即含用户听感验收）"
+  ]
+ },
+ "note": "确认交付≠逐条接受警告（zaku-001 语义沿用）：状态机按 completed 关单而非 completed_with_accepted_warnings"
+}

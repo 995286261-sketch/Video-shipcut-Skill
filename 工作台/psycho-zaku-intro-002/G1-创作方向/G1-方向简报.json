@@ -1,0 +1,61 @@
+{
+  "projectId": "psycho-zaku-intro-002",
+  "coreQuestion": "精神力扎古为什么被称为『凌驾于主角机之上的怪物』？",
+  "audience": "高达爱好者 / 军武机甲粉（G0 确认）",
+  "title": "精神力扎古：凌驾于主角机之上的怪物",
+  "titleExpressionType": "editorial_expression",
+  "coreViewpoint": "精神力扎古是吉翁新人类兵器路线的代表作：以『怪物』之姿登场、战果与压迫感足以盖过主角机的机体，值得一次专门介绍。",
+  "outputPreferences": {
+    "aspectRatio": "16:9",
+    "targetDurationSec": [
+      180,
+      600
+    ],
+    "usagePurpose": "internal_review"
+  },
+  "bgmDecision": "use_library_later",
+  "directionChoice": {
+    "id": "recommended-1",
+    "label": "机体科普 + 剧情背景：以设定、武装与战场表现为主线，复刻参考片『单机介绍』的叙事节奏",
+    "source": "agent_recommendation"
+  },
+  "styleRules": [
+    "顶部节目横幅条 + 中英双语大标题（中文白色描边、英文黄色），参考片包装版式抽象",
+    "底部中英双语字幕道：中文白色大号、英文蓝色小号",
+    "开场标题卡：主标题+副题/年代标签+主体大画面，随后进入正题",
+    "平均镜头约 6-7 秒，高潮段 2-4 秒快切，铺垫段允许 15-20 秒慢段",
+    "暗色电影感底图 + 标题/字幕/角标三层信息层级"
+  ],
+  "expressionBoundaries": [
+    "仅内部预览，不得对外发布（主素材为 B 站下载的他人粗剪）",
+    "参考片的任何视觉元素（logo、奖项桂冠装饰、版权字样水印）不得带入成片",
+    "不使用源视频原声与原 BGM；音轨 = AI 配音 + 经登记的 BGM",
+    "设定事实未经 G2 核实前不得写成已确认事实"
+  ],
+  "claims": [
+    {
+      "claimId": "claim-001",
+      "text": "精神力扎古是登场于《机动战士高达 逆袭的夏亚》的新人类用试作机动战士",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-002",
+      "text": "精神力扎古搭载的精神感应系统与新人类驾驶员的状态强关联",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-003",
+      "text": "精神力扎古的武装配置（如大型光束武器）在扎古系机体中属于越级水平",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-004",
+      "text": "精神力扎古在作品后半的战场表现足以对主角机构成致命威胁",
+      "status": "pending",
+      "evidenceRefs": []
+    }
+  ]
+}

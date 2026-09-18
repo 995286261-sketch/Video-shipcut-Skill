@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommend_profile",
+  "project": "psycho-zaku-intro-002",
+  "targetDurationSec": 300,
+  "bpmRange": [110.7, 135.4],
+  "minSegments": 3,
+  "styleTags": ["epic", "dark", "driving", "building"],
+  "distributionBoundary": "internal_test",
+  "styleBrief": {
+    "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+    "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "bpm": 123.05,
+    "bpmRange": [110.7, 135.4],
+    "energyShape": [0.894, 0.795, 0.74, 0.989, 0.848, 0.925, 0.843, 0.769, 0.956, 0.815, 0.907, 0.915, 1.0, 0.968, 0.924, 0.584],
+    "segmentCount": 8,
+    "note": "简报数值系参考片解说混音后事实（非乐曲本体），用于形状锚定；风格词以检索词卡推导依据为准"
+  },
+  "basis": {
+    "preference": "背景音乐你从 freesound 里找好了",
+    "themeRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+    "styleBriefRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json",
+    "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/BGM-检索词-v0.1.json"
+  }
+}

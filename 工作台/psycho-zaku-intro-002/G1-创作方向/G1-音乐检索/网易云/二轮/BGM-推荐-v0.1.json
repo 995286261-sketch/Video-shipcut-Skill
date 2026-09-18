@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommendation",
+  "profile": {
+    "schemaVersion": "0.1",
+    "purpose": "bgm_recommend_profile",
+    "project": "psycho-zaku-intro-002",
+    "targetDurationSec": 300,
+    "bpmRange": [
+      110.7,
+      135.4
+    ],
+    "minSegments": 3,
+    "styleTags": [
+      "epic",
+      "dark",
+      "driving",
+      "building"
+    ],
+    "distributionBoundary": "internal_test",
+    "styleBrief": {
+      "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+      "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+      "bpm": 123.05,
+      "bpmRange": [
+        110.7,
+        135.4
+      ],
+      "energyShape": [
+        0.894,
+        0.795,
+        0.74,
+        0.989,
+        0.848,
+        0.925,
+        0.843,
+        0.769,
+        0.956,
+        0.815,
+        0.907,
+        0.915,
+        1.0,
+        0.968,
+        0.924,
+        0.584
+      ],
+      "segmentCount": 8,
+      "note": "简报数值系参考片解说混音后事实（非乐曲本体），用于形状锚定；风格词以检索词卡推导依据为准"
+    },
+    "basis": {
+      "preference": "背景音乐你从 freesound 里找好了",
+      "themeRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+      "styleBriefRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json",
+      "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/BGM-检索词-v0.1.json"
+    }
+  },
+  "minScore": 0.7,
+  "ranked": [
+    {
+      "title": "Post Mortem",
+      "freesoundId": null,
+      "neteaseId": 1431353842,
+      "provenance": "netease_search",
+      "sourceUrl": "https://music.163.com/song?id=1431353842",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1431353842-Post_Mortem.mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": true,
+      "durationMs": 443636,
+      "tempoBpm": 129.2,
+      "integratedLufs": -7.3,
+      "hitPointCount": 1457,
+      "styleTags": [],
+      "sha256": "BA4764A7A16A8C33C784220C60C317F865156A203665F16832A9F3F8E86CD7B5",
+      "score": 0.7478,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.2061",
+        "tags 0/4",
+        "uncleared_internal_test_only"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "7:23.636"
+    },
+    {
+      "title": "宗教に犯されているのではないか。",
+      "freesoundId": null,
+      "neteaseId": 1987381634,
+      "provenance": "netease_search",
+      "sourceUrl": "https://music.163.com/song?id=1987381634",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1987381634-宗教に犯されているのではないか。.mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": true,
+      "durationMs": 321103,
+      "tempoBpm": 143.55,
+      "integratedLufs": -4.3,
+      "hitPointCount": 833,
+      "styleTags": [],
+      "sha256": "49BB3CEB3490E8429F34AD3A91CCD5F141218E74C4FF3D76786A7A75EC8F7605",
+      "score": 0.6831,
+      "notes": [
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.504",
+        "tags 0/4",
+        "uncleared_internal_test_only"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "5:21.103"
+    },
+    {
+      "title": "Hard Slog (Original Mix)",
+      "freesoundId": null,
+      "neteaseId": 3413875935,
+      "provenance": "netease_search",
+      "sourceUrl": "https://music.163.com/song?id=3413875935",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-3413875935-Hard_Slog_(Original_Mix).mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": true,
+      "durationMs": 327070,
+      "tempoBpm": 152.0,
+      "integratedLufs": -5.2,
+      "hitPointCount": 1120,
+      "styleTags": [],
+      "sha256": "F3EFE45E6C47DCEF4305AFAB550FB224DF5F5AB2DD945CF1F1BC5D767BEFF629",
+      "score": 0.6131,
+      "notes": [
+        "bpm_proximity=0.2158",
+        "energy_similarity=0.4429",
+        "tags 0/4",
+        "uncleared_internal_test_only"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "5:27.070"
+    },
+    {
+      "title": "BITCH",
+      "freesoundId": null,
+      "neteaseId": 3409316502,
+      "provenance": "netease_search",
+      "sourceUrl": "https://music.163.com/song?id=3409316502",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-3409316502-BITCH.mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": true,
+      "durationMs": 373346,
+      "tempoBpm": 184.57,
+      "integratedLufs": -7.4,
+      "hitPointCount": 1366,
+      "styleTags": [],
+      "sha256": "D1910E7DE689CB63175B24FB24A4498D393CE2A9C7CD91AE87E31DE0D76E7A80",
+      "score": 0.5911,
+      "notes": [
+        "bpm_proximity=0.1666",
+        "energy_similarity=0.3789",
+        "tags 0/4",
+        "uncleared_internal_test_only"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "6:13.346"
+    }
+  ],
+  "passing": [
+    {
+      "title": "Post Mortem",
+      "freesoundId": null,
+      "neteaseId": 1431353842,
+      "provenance": "netease_search",
+      "sourceUrl": "https://music.163.com/song?id=1431353842",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1431353842-Post_Mortem.mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": true,
+      "durationMs": 443636,
+      "tempoBpm": 129.2,
+      "integratedLufs": -7.3,
+      "hitPointCount": 1457,
+      "styleTags": [],
+      "sha256": "BA4764A7A16A8C33C784220C60C317F865156A203665F16832A9F3F8E86CD7B5",
+      "score": 0.7478,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.2061",
+        "tags 0/4",
+        "uncleared_internal_test_only"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "7:23.636"
+    }
+  ],
+  "unanalyzed": [],
+  "sufficiency": {
+    "passing": 1,
+    "minExpected": 3,
+    "enough": false,
+    "gapAction": "候选不足：向用户呈现 补检索 / 放宽画像 / 缩短成品 三项，不得自行拼凑"
+  },
+  "licenseWarning": "⚠ 侵权风险：4/4 条候选未清权（uncleared-platform-catalog，网易云试听选型）。平台曲库授权仅覆盖端内播放——未登记而将其用于成片即构成侵权。本池仅限 internal_test 选型；挑曲后整轨必须经官方渠道取得并经 music_register_candidate.py 登记真实许可后方可进剪辑计划。对外分发项目在任何清权完成前不得使用这些曲目。"
+}

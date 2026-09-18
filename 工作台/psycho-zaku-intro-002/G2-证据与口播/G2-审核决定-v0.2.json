@@ -1,0 +1,30 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G2",
+ "projectId": "psycho-zaku-intro-002",
+ "status": "approved_for_g3",
+ "approvedNarrationRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+ "factCitationRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+ "voiceBriefRef": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.3.json",
+ "permittedFactIds": [
+  "E1"
+ ],
+ "prohibitedTopics": [
+  "Mk-II/血脉延伸叙事（N10–N16 已随短版删除，不得经剪辑复活）",
+  "袖章红色扎古=精神力扎古血统（E3 未证实，维持存疑口径）",
+  "UC 正剧关键剧情转折剧透",
+  "源视频原声（他人粗剪内嵌歌曲与音效）"
+ ],
+ "supersededDraftRefs": [
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.1.md",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播句子-v0.1.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.2.json",
+  "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听/G2-配音清单-v0.1.json"
+ ],
+ "userManuallyVerifiedClaims": [],
+ "audioPolicy": {
+  "bgm": "The Darkest Alleys (Final Stage)-Perturbator（G0 登记，未清权红灯在册）",
+  "sourceOriginalAudio": "排除",
+  "narrationVoice": "longtian_v3 成品级（用户自选）"
+ }
+}

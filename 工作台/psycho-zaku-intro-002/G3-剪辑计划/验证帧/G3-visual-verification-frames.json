@@ -1,0 +1,638 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G3",
+ "purpose": "visual-verification-frames",
+ "planRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 100000,
+    "endMs": 111200
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 100000,
+     "sourceMs": 100000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/start-0000100000ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 105600,
+     "sourceMs": 105600,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/middle-0000105600ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 111199,
+     "sourceMs": 111199,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-01/end-0000111199ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 136143,
+    "endMs": 146223
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 136143,
+     "sourceMs": 136143,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/start-0000136143ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 141183,
+     "sourceMs": 141183,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/middle-0000141183ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 146222,
+     "sourceMs": 146222,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-02/end-0000146222ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-03",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 7200
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 0,
+     "sourceMs": 0,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/start-0000000000ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 3600,
+     "sourceMs": 3600,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/middle-0000003600ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 7199,
+     "sourceMs": 7199,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-03/end-0000007199ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 27210,
+    "endMs": 36490
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 27210,
+     "sourceMs": 27210,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/start-0000027210ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 31850,
+     "sourceMs": 31850,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/middle-0000031850ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 36489,
+     "sourceMs": 36489,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-04/end-0000036489ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 74226,
+    "endMs": 82786
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 74226,
+     "sourceMs": 74226,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/start-0000074226ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 78506,
+     "sourceMs": 78506,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/middle-0000078506ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 82785,
+     "sourceMs": 82785,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-05/end-0000082785ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 229210,
+    "endMs": 234170
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 229210,
+     "sourceMs": 229210,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/start-0000229210ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 231690,
+     "sourceMs": 231690,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/middle-0000231690ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 234169,
+     "sourceMs": 234169,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-06/end-0000234169ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 166176,
+    "endMs": 173616
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 166176,
+     "sourceMs": 166176,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/start-0000166176ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 169896,
+     "sourceMs": 169896,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/middle-0000169896ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 173615,
+     "sourceMs": 173615,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-07/end-0000173615ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 185000,
+    "endMs": 193880
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 185000,
+     "sourceMs": 185000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/start-0000185000ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 189440,
+     "sourceMs": 189440,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/middle-0000189440ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 193879,
+     "sourceMs": 193879,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-08/end-0000193879ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 203310,
+    "endMs": 207710
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 203310,
+     "sourceMs": 203310,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/start-0000203310ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 205510,
+     "sourceMs": 205510,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/middle-0000205510ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 207709,
+     "sourceMs": 207709,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-09/end-0000207709ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 290543,
+    "endMs": 294943
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 290543,
+     "sourceMs": 290543,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/start-0000290543ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 292743,
+     "sourceMs": 292743,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/middle-0000292743ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 294942,
+     "sourceMs": 294942,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-10/end-0000294942ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 276576,
+    "endMs": 282576
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 276576,
+     "sourceMs": 276576,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/start-0000276576ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 279576,
+     "sourceMs": 279576,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/middle-0000279576ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 282575,
+     "sourceMs": 282575,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-11/end-0000282575ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 309826,
+    "endMs": 317586
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 309826,
+     "sourceMs": 309826,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/start-0000309826ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 313706,
+     "sourceMs": 313706,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/middle-0000313706ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 317585,
+     "sourceMs": 317585,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-12/end-0000317585ms.jpg"
+    }
+   ]
+  },
+  {
+   "segmentId": "seg-13",
+   "assetId": "source-02-2071e9a7",
+   "sourceRange": {
+    "startMs": 322010,
+    "endMs": 326570
+   },
+   "frames": [
+    {
+     "label": "start",
+     "requestedSourceMs": 322010,
+     "sourceMs": 322010,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/start-0000322010ms.jpg"
+    },
+    {
+     "label": "middle",
+     "requestedSourceMs": 324290,
+     "sourceMs": 324290,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/middle-0000324290ms.jpg"
+    },
+    {
+     "label": "end",
+     "requestedSourceMs": 326569,
+     "sourceMs": 326569,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/seg-13/end-0000326569ms.jpg"
+    }
+   ]
+  }
+ ],
+ "shotLayerProbes": [
+  {
+   "probeId": "pr-001",
+   "segmentIntervalMs": [
+    0,
+    7200
+   ],
+   "sourceMs": 6200,
+   "observedVisuals": "座舱内部特写：绿色制服手臂操作驾驶杆，左缘红冠头盔，控制台金色徽记",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000006200ms.jpg",
+   "segmentId": "seg-03"
+  },
+  {
+   "probeId": "pr-002",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 27710,
+   "observedVisuals": "紫红装甲推进器组喷射蓝白光束（背视角）",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000027710ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-003",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 31200,
+   "observedVisuals": "圆形推进喷口群特写（青色发光）",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000031200ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-004",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 32250,
+   "observedVisuals": "蓝色光束拖尾划过暗背景（高速运动光效）",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000032250ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-005",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 32590,
+   "observedVisuals": "洋红紫扎古携大型多管武器、蓝色推进器多点喷射，背景碎片场",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000032590ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-006",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 34000,
+   "observedVisuals": "巨型绿色舰内机库，小飞行器拖蓝尾穿过碎片带",
+   "identityStatus": "not_present",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000034000ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-007",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 35800,
+   "observedVisuals": "白盔红冠驾驶员面部特写：汗珠、瞪眼、HUD 反光，烧录字幕“时间到了”",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000035800ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-008",
+   "segmentIntervalMs": [
+    27210,
+    36490
+   ],
+   "sourceMs": 36420,
+   "observedVisuals": "头盔内驾驶员面部极特写，红色面罩件，眼神上视",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000036420ms.jpg",
+   "segmentId": "seg-04"
+  },
+  {
+   "probeId": "pr-009",
+   "segmentIntervalMs": [
+    74226,
+    82786
+   ],
+   "sourceMs": 78090,
+   "observedVisuals": "暗红扎古头部特写：洋红单眼、白色大型火箭筒、前景绿色光束军刀、胸章",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000078090ms.jpg",
+   "segmentId": "seg-05"
+  },
+  {
+   "probeId": "pr-010",
+   "segmentIntervalMs": [
+    74226,
+    82786
+   ],
+   "sourceMs": 78840,
+   "observedVisuals": "绿色光束切过暗色表面、爆闪",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000078840ms.jpg",
+   "segmentId": "seg-05"
+  },
+  {
+   "probeId": "pr-011",
+   "segmentIntervalMs": [
+    100000,
+    111200
+   ],
+   "sourceMs": 106800,
+   "observedVisuals": "白红头盔驾驶员坐舱内景，左侧红色圆形屏，控制台金色徽记",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000106800ms.jpg",
+   "segmentId": "seg-01"
+  },
+  {
+   "probeId": "pr-012",
+   "segmentIntervalMs": [
+    100000,
+    111200
+   ],
+   "sourceMs": 109200,
+   "observedVisuals": "红冠头盔驾驶员面部极特写：紫光、瞪大眼张口（震惊反应）",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000109200ms.jpg",
+   "segmentId": "seg-01"
+  },
+  {
+   "probeId": "pr-013",
+   "segmentIntervalMs": [
+    166176,
+    173616
+   ],
+   "sourceMs": 168000,
+   "observedVisuals": "含泪年轻驾驶员面部特写，黄绿头盔，烧录字幕“比我失去的手脚还自如”",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000168000ms.jpg",
+   "segmentId": "seg-07"
+  },
+  {
+   "probeId": "pr-014",
+   "segmentIntervalMs": [
+    166176,
+    173616
+   ],
+   "sourceMs": 171500,
+   "observedVisuals": "红色扎古战斗近景：洋红单眼、蓝色推进焰、带刺盾",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000171500ms.jpg",
+   "segmentId": "seg-07"
+  },
+  {
+   "probeId": "pr-015",
+   "segmentIntervalMs": [
+    166176,
+    173616
+   ],
+   "sourceMs": 172900,
+   "observedVisuals": "红色扎古持火箭筒，蓝色光束拖尾，碎片场",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000172900ms.jpg",
+   "segmentId": "seg-07"
+  },
+  {
+   "probeId": "pr-016",
+   "segmentIntervalMs": [
+    185000,
+    193880
+   ],
+   "sourceMs": 190300,
+   "observedVisuals": "紫光头盔内面部极特写，瞪眼",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000190300ms.jpg",
+   "segmentId": "seg-08"
+  },
+  {
+   "probeId": "pr-017",
+   "segmentIntervalMs": [
+    185000,
+    193880
+   ],
+   "sourceMs": 192100,
+   "observedVisuals": "红色扎古在废墟建筑内开火大口径黄色炮口焰，单眼发光",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000192100ms.jpg",
+   "segmentId": "seg-08"
+  },
+  {
+   "probeId": "pr-018",
+   "segmentIntervalMs": [
+    185000,
+    193880
+   ],
+   "sourceMs": 193700,
+   "observedVisuals": "带疤痕驾驶员面部特写，白盔，绿色 HUD 反光，咬牙",
+   "identityStatus": "person_only",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000193700ms.jpg",
+   "segmentId": "seg-08"
+  },
+  {
+   "probeId": "pr-019",
+   "segmentIntervalMs": [
+    229210,
+    234170
+   ],
+   "sourceMs": 231990,
+   "observedVisuals": "巨大粉黄爆炸火球，左下角洋红紫扎古剪影",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000231990ms.jpg",
+   "segmentId": "seg-06"
+  },
+  {
+   "probeId": "pr-020",
+   "segmentIntervalMs": [
+    229210,
+    234170
+   ],
+   "sourceMs": 233600,
+   "observedVisuals": "红色扎古机体喷射白色气体（受创/泄压），持光束步枪，蓝推进尾",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000233600ms.jpg",
+   "segmentId": "seg-06"
+  },
+  {
+   "probeId": "pr-021",
+   "segmentIntervalMs": [
+    276576,
+    282576
+   ],
+   "sourceMs": 281800,
+   "observedVisuals": "红色机体发射大粒子炮：炮口黄光、红冠头部、洋红单眼",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000281800ms.jpg",
+   "segmentId": "seg-11"
+  },
+  {
+   "probeId": "pr-022",
+   "segmentIntervalMs": [
+    309826,
+    317586
+   ],
+   "sourceMs": 312800,
+   "observedVisuals": "橙色装甲圆形舱口特写、光晕与损伤",
+   "identityStatus": "confirmed",
+   "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/验证帧/子镜头探针/probe-0000312800ms.jpg",
+   "segmentId": "seg-12"
+  }
+ ]
+}

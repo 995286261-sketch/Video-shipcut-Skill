@@ -1,0 +1,714 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/BGM-检索词-v0.1.json",
+    "terms": [
+      "工业电子",
+      "硬核 Techno",
+      "机械感 电子",
+      "紧张 电子鼓点",
+      "战斗 电子 BGM"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-09-17T15:01:05+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1987381634,
+      "title": "宗教に犯されているのではないか。",
+      "artist": "アメリカ民謡研究会、結月ゆかり",
+      "album": "宗教に犯されているのではないか。",
+      "durationMs": 321149,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1987381634",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1987381634.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "アメリカ民謡研究会、結月ゆかり - 宗教に犯されているのではないか。",
+      "retrievedAt": "2026-09-17T15:00:47+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1987381634-宗教に犯されているのではないか。.mp3",
+      "sha256": "49BB3CEB3490E8429F34AD3A91CCD5F141218E74C4FF3D76786A7A75EC8F7605",
+      "byteSize": 5138852
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1431353842,
+      "title": "Post Mortem",
+      "artist": "Dominik Saltevski",
+      "album": "Post Mortem",
+      "durationMs": 443636,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1431353842",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1431353842.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Dominik Saltevski - Post Mortem",
+      "retrievedAt": "2026-09-17T15:00:50+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-1431353842-Post_Mortem.mp3",
+      "sha256": "BA4764A7A16A8C33C784220C60C317F865156A203665F16832A9F3F8E86CD7B5",
+      "byteSize": 7099080
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3409316502,
+      "title": "BITCH",
+      "artist": "Jesus_lebt、Kursed System",
+      "album": "BITCH",
+      "durationMs": 373346,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3409316502",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3409316502.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Jesus_lebt、Kursed System - BITCH",
+      "retrievedAt": "2026-09-17T15:00:56+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-3409316502-BITCH.mp3",
+      "sha256": "D1910E7DE689CB63175B24FB24A4498D393CE2A9C7CD91AE87E31DE0D76E7A80",
+      "byteSize": 5974770
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3413875935,
+      "title": "Hard Slog (Original Mix)",
+      "artist": "SveTec、Luckes",
+      "album": "Hard Beats",
+      "durationMs": 327070,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3413875935",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3413875935.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "SveTec、Luckes - Hard Slog (Original Mix)",
+      "retrievedAt": "2026-09-17T15:01:03+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/二轮/netease-3413875935-Hard_Slog_(Original_Mix).mp3",
+      "sha256": "F3EFE45E6C47DCEF4305AFAB550FB224DF5F5AB2DD945CF1F1BC5D767BEFF629",
+      "byteSize": 5234146
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 1448284210,
+      "name": "电子羊",
+      "reason": "duration 193714ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 4417816,
+      "name": "We Walked in Line",
+      "reason": "duration 292048ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2695754328,
+      "name": "出笼",
+      "reason": "duration 201818ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1860234038,
+      "name": "死如秋叶",
+      "reason": "duration 251453ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3404986486,
+      "name": "相对论 (工业电子版)",
+      "reason": "duration 128893ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3413704793,
+      "name": "红灯遐想曲 (工业电子)",
+      "reason": "duration 111636ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3344577828,
+      "name": "O`3300【FREE】地下 实验 工业 电子 炫酷 Beat",
+      "reason": "duration 162000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2657833378,
+      "name": "无尽的施工日·白昼",
+      "reason": "duration 242702ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2068099842,
+      "name": "p.h. (Magens remix) feat. 初音ミク",
+      "reason": "duration 127272ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3378741522,
+      "name": "Trap & Hip-Hop工业电子狂舞",
+      "reason": "duration 176039ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2653105705,
+      "name": "BrainDance (脑舞)",
+      "reason": "duration 154002ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3399756532,
+      "name": "前世今生-工业电子风格",
+      "reason": "duration 232320ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2133577356,
+      "name": "孤独治疗方案",
+      "reason": "duration 188624ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2641927335,
+      "name": "我的家乡在逼我出去",
+      "reason": "duration 185000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3363464966,
+      "name": "原创BGM_工业电子革新_20260326",
+      "reason": "duration 87066ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2689204824,
+      "name": "舞",
+      "reason": "duration 156167ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2069132500,
+      "name": "参与争斗 (Feat.Kleine Eiswürfel)",
+      "reason": "duration 204264ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3371795126,
+      "name": "アダチ・レイ (feat. 足立レイ)",
+      "reason": "duration 143636ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3336533673,
+      "name": "底色theory。（Feat.ayuri）",
+      "reason": "duration 194694ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2756757943,
+      "name": "噛み合わない愛(feat.初音ミク)",
+      "reason": "duration 192684ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2666651340,
+      "name": "工业电子Techno",
+      "reason": "duration 2364447ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2726299739,
+      "name": "心之壁",
+      "reason": "duration 216688ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436572405,
+      "name": "机器很忙（HardTechno）",
+      "reason": "duration 173960ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2118213286,
+      "name": "机械开场 宇宙摇 硬核棒子140-145Psy Techno Bounce（MY兄弟 remix）",
+      "reason": "duration 4215745ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3436576538,
+      "name": "机器特别忙（HardTechno）",
+      "reason": "duration 192920ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2644024355,
+      "name": "主场必备实用单曲全新硬核顶级资150HardTechno&HardBounce爆点",
+      "reason": "duration 3884303ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3408952545,
+      "name": "You Fucked Me, It Must Mean Love (REPTILIAN Remix)",
+      "reason": "duration 291666ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2730981107,
+      "name": "DESTROY",
+      "reason": "duration 185858ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2730982667,
+      "name": "BREAK YOUR NECK",
+      "reason": "duration 167312ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1976382398,
+      "name": "Born To Rave (Original Mix)",
+      "reason": "duration 288000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2730981106,
+      "name": "KILL THEM ALL",
+      "reason": "duration 186197ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2730981108,
+      "name": "STOMP YOUR HEAD",
+      "reason": "duration 272572ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2730982665,
+      "name": "WARZONE",
+      "reason": "duration 144171ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3400257132,
+      "name": "土耳其进行曲",
+      "reason": "duration 172695ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2758264914,
+      "name": "Eyes On Me",
+      "reason": "duration 218978ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3315631806,
+      "name": "Bring The Fire",
+      "reason": "duration 264394ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3390198712,
+      "name": "台北一夜",
+      "reason": "duration 195361ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3422551689,
+      "name": "像素方块的硬核才是王道",
+      "reason": "duration 145039ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2163665381,
+      "name": "老北京杀器",
+      "reason": "duration 207294ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3333138880,
+      "name": "活死人2026Cypher",
+      "reason": "duration 693455ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1355292217,
+      "name": "丑陋鼠草",
+      "reason": "duration 181579ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2720473642,
+      "name": "缪斯",
+      "reason": "duration 160000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3395554719,
+      "name": "后遗症",
+      "reason": "duration 268032ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3370116562,
+      "name": "悬崖华尔兹",
+      "reason": "duration 175368ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2682672178,
+      "name": "机械心跳电子动感背景音乐",
+      "reason": "duration 127000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2019599314,
+      "name": "雷射灯光下的机械舞蹈",
+      "reason": "duration 204000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3330096628,
+      "name": "機械の彗星",
+      "reason": "duration 226119ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3330096635,
+      "name": "機械都市の夜",
+      "reason": "duration 161479ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 36621797,
+      "name": "電波中毒ガール",
+      "reason": "duration 237349ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1948839957,
+      "name": "电子天使",
+      "reason": "duration 191335ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2038181515,
+      "name": "深夜电台",
+      "reason": "duration 151698ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2636642863,
+      "name": "你眼中的蓝",
+      "reason": "duration 195201ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3398217698,
+      "name": "念破",
+      "reason": "duration 240000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2149031238,
+      "name": "LaRa - Live2022『蓝之华』 -",
+      "reason": "duration 286594ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1367368050,
+      "name": "S_TEAM",
+      "reason": "duration 238608ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2126122189,
+      "name": "出生在这",
+      "reason": "duration 180663ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2614203226,
+      "name": "你眼中的蓝",
+      "reason": "duration 196522ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2621642791,
+      "name": "マシーネ・クリーク (Chinese ver.)",
+      "reason": "duration 169714ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 28515947,
+      "name": "口供记录误送至普通住宅",
+      "reason": "duration 110000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1862583529,
+      "name": "ララ",
+      "reason": "duration 265040ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2710663964,
+      "name": "ENTER SIMULATION",
+      "reason": "duration 196000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3361900383,
+      "name": "Zankyō no Chō / 残响之蝶",
+      "reason": "duration 239839ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3372365627,
+      "name": "林妹妹你别哭 蕊琦Ricky",
+      "reason": "duration 156332ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3365756573,
+      "name": "Plasma Heart / 等离子心脏",
+      "reason": "duration 191545ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1415663307,
+      "name": "Another Dimension",
+      "reason": "duration 175512ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 26109419,
+      "name": "机械ハイジ",
+      "reason": "duration 208026ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1478725736,
+      "name": "ヒバリ",
+      "reason": "duration 266571ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1906111467,
+      "name": "Old Friend老友记",
+      "reason": "duration 228750ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3413798431,
+      "name": "迷醉",
+      "reason": "duration 161564ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3394250373,
+      "name": "半疯半癫戏人间",
+      "reason": "duration 181928ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3372340896,
+      "name": "Come on hand dance",
+      "reason": "duration 94153ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3344804783,
+      "name": "Yurak Remix",
+      "reason": "duration 169438ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3360961957,
+      "name": "Parallel Dilemma",
+      "reason": "duration 214637ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3360604597,
+      "name": "Haruno Kakera",
+      "reason": "duration 252399ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3361245187,
+      "name": "Frozen Clock / 冻结时钟",
+      "reason": "duration 171839ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2681743338,
+      "name": "心机女",
+      "reason": "duration 214919ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3368026397,
+      "name": "烽火",
+      "reason": "duration 142679ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2647434408,
+      "name": "月下思君",
+      "reason": "duration 240048ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2647434406,
+      "name": "月下琴缘",
+      "reason": "duration 240048ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2647433480,
+      "name": "月下琴缘",
+      "reason": "duration 194256ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3340170495,
+      "name": "九九潮音谣",
+      "reason": "duration 257509ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3430287076,
+      "name": "跳起来 甩起来",
+      "reason": "duration 202527ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3357647010,
+      "name": "平凡小傲娇",
+      "reason": "duration 167663ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3326551337,
+      "name": "《锦衣卫》",
+      "reason": "duration 212359ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3355621842,
+      "name": "云中书简",
+      "reason": "duration 130632ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2756917037,
+      "name": "时光的磁带",
+      "reason": "duration 141217ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2705305197,
+      "name": "柔肠涟漪",
+      "reason": "duration 155759ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2724001154,
+      "name": "只能看着你离开",
+      "reason": "duration 36037ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3331553119,
+      "name": "伞",
+      "reason": "duration 129480ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3358171696,
+      "name": "反转人生",
+      "reason": "duration 142759ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2684181061,
+      "name": "韵染东方",
+      "reason": "duration 172239ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3371664776,
+      "name": "【前奏】 (1)",
+      "reason": "duration 192959ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 517565261,
+      "name": "地球剣・電子銀河斬り <M41,M16'>",
+      "reason": "duration 99666ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 517571266,
+      "name": "科学剣・稲妻重力落とし <M23,M22>",
+      "reason": "duration 89133ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1382990083,
+      "name": "ステージ3、5前半",
+      "reason": "duration 62380ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 517566270,
+      "name": "太陽剣・オーロラプラズマ返し <M3,M8 II>",
+      "reason": "duration 178466ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1382990076,
+      "name": "ステージ1、4前半",
+      "reason": "duration 78811ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2718589574,
+      "name": "广顺2025 Cypher",
+      "reason": "duration 269870ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3416046371,
+      "name": "亡命之徒",
+      "reason": "duration 181475ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2751754891,
+      "name": "徐工建机",
+      "reason": "duration 168000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2615759271,
+      "name": "拒绝打工 尽情摇摆",
+      "reason": "duration 101478ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1371833906,
+      "name": "From Wa State",
+      "reason": "duration 273209ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 28528973,
+      "name": "坷拉忍者疾风传",
+      "reason": "duration 292000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2674516893,
+      "name": "得到失去是相对-SASIOVERLXRD",
+      "reason": "duration 110454ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1473008121,
+      "name": "Boring Freestyle",
+      "reason": "duration 128888ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3428669697,
+      "name": "赛道",
+      "reason": "duration 154824ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2144687449,
+      "name": "Street Gang Ft Voicen",
+      "reason": "duration 221030ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1848204641,
+      "name": "Beijing Master 京城少爷",
+      "reason": "duration 227517ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 358943,
+      "name": "红星照我去战斗",
+      "reason": "duration 215826ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2134735734,
+      "name": "Ragnarok 2 (Deuses Vs Humanos)",
+      "reason": "duration 828624ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1422492636,
+      "name": "feng了freestyle（prod by鹤仙问鹿仙）",
+      "reason": "duration 182451ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3362948055,
+      "name": "那个积极举报",
+      "reason": "duration 187319ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1336871724,
+      "name": "YO家班(Prod. by Yoken)",
+      "reason": "duration 266666ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3362559664,
+      "name": "那个积极举报",
+      "reason": "duration 173719ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2620031568,
+      "name": "电影还是太仁慈",
+      "reason": "duration 212352ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2620031567,
+      "name": "电影的续集",
+      "reason": "duration 231594ms outside [300.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 4,
+    "minimumExpected": 3
+  }
+}

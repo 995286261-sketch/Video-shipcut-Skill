@@ -1,0 +1,21 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "purpose": "keyframe_extraction_input",
+ "sourceEvidence": [
+  {
+   "assetId": "source-02-2071e9a7",
+   "relativePath": "02_原始素材/超越高达的怪物—精神力扎古.mp4",
+   "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+   "sourceProbe": {
+    "durationMs": 327018,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+   },
+   "derivedFrom": "G0-素材包/material-pack.json sourceAssets + ffprobe 现场复核"
+  }
+ ],
+ "provenance": "assetId/sha256 与 material-pack.json 一致；durationMs 由 ffprobe 327.018500s 取整"
+}

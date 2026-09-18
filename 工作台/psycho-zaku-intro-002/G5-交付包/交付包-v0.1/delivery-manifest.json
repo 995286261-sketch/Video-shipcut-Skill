@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "psycho-zaku-intro-002",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-2071e9a7",
+      "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+      "sourceProbe": {
+        "durationMs": 327018,
+        "video": {
+          "width": 1920,
+          "height": 1080,
+          "fps": 30,
+          "codec": "h264"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 48000,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        0,
+        11200
+      ],
+      "narrationStartMs": 0,
+      "narrationEndMs": 11200,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "sourceStartMs": 100000,
+      "sourceEndMs": 111200,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        11200,
+        21280
+      ],
+      "narrationStartMs": 11200,
+      "narrationEndMs": 21280,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "sourceStartMs": 136143,
+      "sourceEndMs": 146223,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        21280,
+        28480
+      ],
+      "narrationStartMs": 21280,
+      "narrationEndMs": 28480,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 0,
+      "sourceEndMs": 7200,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        28480,
+        37760
+      ],
+      "narrationStartMs": 28480,
+      "narrationEndMs": 37760,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 27210,
+      "sourceEndMs": 36490,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        37760,
+        46320
+      ],
+      "narrationStartMs": 37760,
+      "narrationEndMs": 46320,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 74226,
+      "sourceEndMs": 82786,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        46320,
+        51280
+      ],
+      "narrationStartMs": 46320,
+      "narrationEndMs": 51280,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 229210,
+      "sourceEndMs": 234170,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        51280,
+        58720
+      ],
+      "narrationStartMs": 51280,
+      "narrationEndMs": 58720,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 166176,
+      "sourceEndMs": 173616,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        58720,
+        67600
+      ],
+      "narrationStartMs": 58720,
+      "narrationEndMs": 67600,
+      "mappingMode": "one_to_one",
+      "layoutTier": "留白",
+      "sourceStartMs": 185000,
+      "sourceEndMs": 193880,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        67600,
+        72000
+      ],
+      "narrationStartMs": 67600,
+      "narrationEndMs": 72000,
+      "mappingMode": "one_to_one",
+      "layoutTier": "留白",
+      "sourceStartMs": 203310,
+      "sourceEndMs": 207710,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        72000,
+        76400
+      ],
+      "narrationStartMs": 72000,
+      "narrationEndMs": 76400,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "sourceStartMs": 290543,
+      "sourceEndMs": 294943,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        76400,
+        82400
+      ],
+      "narrationStartMs": 76400,
+      "narrationEndMs": 82400,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 276576,
+      "sourceEndMs": 282576,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        82400,
+        90160
+      ],
+      "narrationStartMs": 82400,
+      "narrationEndMs": 90160,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "sourceStartMs": 309826,
+      "sourceEndMs": 317586,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    },
+    {
+      "segmentId": "seg-13",
+      "assetId": "source-02-2071e9a7",
+      "outputRangeMs": [
+        90160,
+        94720
+      ],
+      "narrationStartMs": 90160,
+      "narrationEndMs": 94720,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 322010,
+      "sourceEndMs": 326570,
+      "sourceSha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F"
+    }
+  ],
+  "editPlan": {
+    "engine": "local_ffmpeg",
+    "resolution": "1920x1080",
+    "fps": 30,
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "outputStartMs": 0,
+        "outputEndMs": 11200,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-02",
+        "outputStartMs": 11200,
+        "outputEndMs": 21280,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-03",
+        "outputStartMs": 21280,
+        "outputEndMs": 28480,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-04",
+        "outputStartMs": 28480,
+        "outputEndMs": 37760,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-05",
+        "outputStartMs": 37760,
+        "outputEndMs": 46320,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-06",
+        "outputStartMs": 46320,
+        "outputEndMs": 51280,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-07",
+        "outputStartMs": 51280,
+        "outputEndMs": 58720,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-08",
+        "outputStartMs": 58720,
+        "outputEndMs": 67600,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-09",
+        "outputStartMs": 67600,
+        "outputEndMs": 72000,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-10",
+        "outputStartMs": 72000,
+        "outputEndMs": 76400,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-11",
+        "outputStartMs": 76400,
+        "outputEndMs": 82400,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-12",
+        "outputStartMs": 82400,
+        "outputEndMs": 90160,
+        "transition": "dissolve"
+      },
+      {
+        "segmentId": "seg-13",
+        "outputStartMs": 90160,
+        "outputEndMs": 94720,
+        "transition": "dissolve"
+      }
+    ]
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "47B2F4C43010287C225BEE6F0341E221C11505BD1657F7C82EE801F0A693C7A2"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "69ABB901C58648A3A23A09699E53FECF3B924FF58202E6A119AF64CFE3F0E54D"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "C0CC1A734587AF0AB3250EFC832C9BCF89835985588585D4EFDBB0BAC25CFB5C"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch1-开场-战争语境.mp4",
+        "sha256": "86E9605591FB1003160A3EB470B3268A9B34BCBD795AC723711440921E16ACA9"
+      },
+      {
+        "path": "clips/ch2-精神力扎古与Reuse-P.mp4",
+        "sha256": "7948A84654A73F8536CC8AF847F1F04354B005DBA05E87414BF9545A6D6BFE5A"
+      },
+      {
+        "path": "clips/ch3-达里尔与代价.mp4",
+        "sha256": "64D6D76013EAD1213B9B62D67E445323E2C0B28DDB4C4389CF992EBE4B8D3D77"
+      },
+      {
+        "path": "clips/ch4-凌驾主角机的怪物.mp4",
+        "sha256": "90779323CAD4A7DFED0CA55C58D08D4E02FEC79512CCE86184950A612DB91D98"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "710F975B36BFB2FE0DBCE230A1F8CD9600AEE4EFC8AABD2CCE021D72AC88A898"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    {
+      "id": "hrp-final-timeline",
+      "point": "最终八列回显整体确认：13 段连续无重叠时间线、逐段实际画面观察与验证帧、BGM 乐句档位、字幕布局与源字幕处理",
+      "status": "approved"
+    }
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-审核决定-v0.2.json",
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/G2-口播草案-v0.2.md",
+    "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听-longtian/G2-配音清单-longtian-v0.3.json"
+  ],
+  "warnings": [
+    "源片全片烧录卡拉OK字幕+左上UP主水印+右下SUNRISE台标：G4 按逐段遮罩执行，成片字幕全部为本项目新制口播字幕",
+    "BGM 未清权（Perturbator 曲目，用户委托选定）：internal_test 预览可用，对外发布前必须换清权曲（G5 分发边界兜底）",
+    "seg-01/seg-05/seg-08/seg-11/seg-13 含非目标主体语境画面（战舰/敌机/EVA），承载句均为编辑表达或语境句，不构成目标主体身份主张"
+  ],
+  "authorization": "仅内部测试（源片=B站他人二创；BGM 未清权）；对外发布前必须换清权曲并重过授权关",
+  "distribution": "internal_test_not_for_distribution",
+  "status": "completed",
+  "finishedAt": "2026-09-18T10:26:00+08:00",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

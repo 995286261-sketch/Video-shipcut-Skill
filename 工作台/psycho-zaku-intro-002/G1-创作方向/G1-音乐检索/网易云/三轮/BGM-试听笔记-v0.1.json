@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "精神力扎古介绍片，B站内部测试，军武机甲科普，需要机械感工业电子底乐、不喧宾夺主（AI旁白在上）",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Fallen Darkness",
+      "neteaseId": 1812153232,
+      "sha256": "47CD72914B8CA8F097936A99D5AD17B739A1D5C3001AF95EA845D76E73C5FE03",
+      "reused": false,
+      "notes": "1) 参照曲是极简工业Techno，节奏克制、冷峻机械；候选曲是宏大Trance，旋律繁复、高亢激昂。\n2) 不能。候选曲旋律线太强且动态过大，会严重干扰旁白，缺乏所需的“工业底噪”感。\n3) 4分。气质过于史诗化，喧宾夺主，无法充当合格的科普类背景音。"
+    },
+    {
+      "title": "Darksynth",
+      "neteaseId": 1364585569,
+      "sha256": "FF8F0870B35B2BCEAB9D4626AF0A0D6847065E5BE3340995023A757FB16CBF36",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满机械张力；候选曲则是无节奏、纯铺底的氛围音乐（Ambient），气质舒缓空灵，缺乏打击乐与金属感。\n2) 不能。候选曲完全缺失“机械感”与推进力，无法匹配机甲科普的硬核调性，且情绪过于柔和，难以撑起测试片所需的紧张氛围。\n3) 贴合度：2/10。理由：风格完全背道而驰，这是冥想音乐而非工业电子。"
+    },
+    {
+      "title": "Darksynth",
+      "neteaseId": 1364585504,
+      "sha256": "B0DF8430007CFEA0086C1E85E48FF8FBBFB1A26C64C8D9BDDDD3FF535C1D8331",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是强节奏工业电子，鼓点硬朗、机械感强；候选曲则是慢速氛围乐，以合成器铺底为主，缺乏律动。\n2) 不能。候选曲过于舒缓空灵，完全缺失介绍片所需的“机械推进感”和紧张度，无法匹配机甲科普的硬核基调。\n3) 2分。风格南辕北辙，缺乏核心的工业节奏驱动，无法撑起军武题材的张力。"
+    },
+    {
+      "title": "Dein Herz, meine Gier (REanimate 2020)",
+      "neteaseId": 1472627566,
+      "sha256": "84FFD4EEBB0CAE29C8C4AA5771AE19EA6F9EE2B534677241BFD5C48AC8BBB796",
+      "reused": false,
+      "notes": "1) 参照曲是工业感强的Techno，节奏克制；候选曲是旋律激烈的Trance/Hardstyle，人声嘶吼，气质过于躁动。\n2) 不能。候选曲人声与主旋律太满，会严重干扰旁白，缺乏所需的冷静机械底乐特质。\n3) 2分。音乐攻击性过强且含人声，完全无法作为科普类视频的衬托背景。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

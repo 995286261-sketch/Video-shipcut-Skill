@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G2",
+  "purpose": "narration_synthesis_measured_durations",
+  "provider": "macos_say",
+  "voice": "Rocko (中文（中国大陆）)",
+  "voiceTier": "preview_only",
+  "tierNotice": "macOS system TTS is preview-tier only; production narration requires authorized neural TTS (e.g. Bailian CosyVoice) or a human voice (issue 028).",
+  "measuredTotalDurationMs": 5417,
+  "sentences": [
+    {
+      "sentenceId": "AUD",
+      "text": "它能打出越级的战绩，是因为设计重心从来不在装甲和出力。",
+      "file": "工作台/psycho-zaku-intro-002/G2-证据与口播/配音试听/候选-Rocko/AUD.wav",
+      "durationMs": 5417
+    }
+  ],
+  "asrVerification": null,
+  "cacheKey": "430B9D9C06C622D056785596BA6A062F0196E6C2028D8A222C2E99F2B56EE035"
+}

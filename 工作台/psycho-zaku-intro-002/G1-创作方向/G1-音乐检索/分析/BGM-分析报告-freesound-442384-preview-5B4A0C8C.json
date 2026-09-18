@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "5B4A0C8C32B18E82121C1C9393A3C5262E9BB94C00607B833A15CB4AC66792FA",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-442384-preview.mp3",
+    "sha256": "5B4A0C8C32B18E82121C1C9393A3C5262E9BB94C00607B833A15CB4AC66792FA",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 4.153469,
+    "decodedDurationMs": 4107
+  },
+  "tempoBpm": 258.4,
+  "beatsMs": [
+    511,
+    743
+  ],
+  "onsetsMs": [
+    441,
+    511,
+    604,
+    720
+  ],
+  "hitPoints": [
+    {
+      "tMs": 511,
+      "kind": "beat"
+    },
+    {
+      "tMs": 743,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 4087,
+      "energyMean": 0.026902
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.00014
+    },
+    {
+      "tMs": 372,
+      "rms": 0.003584
+    },
+    {
+      "tMs": 743,
+      "rms": 0.235252
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.068104
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.036013
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.020662
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.010325
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.003882
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.002463
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.001078
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.000282
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.000207
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -18.4,
+    "loudnessRangeLu": 9.2,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

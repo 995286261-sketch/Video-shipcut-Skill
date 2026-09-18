@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "80221733D5C686CE58AE9996AD91DC669C2E0F64BEA08870F0E54AF5823E5E68",
+  "aliases": [
+    {
+      "title": "盛放的红",
+      "neteaseId": 2632221263,
+      "sourceUrl": "https://music.163.com/song?id=2632221263",
+      "provenance": "netease_search",
+      "project": "psycho-zaku-intro-002",
+      "seenAt": "2026-09-17T06:59:59Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-2632221263-盛放的红.mp3",
+      "recordedAt": "2026-09-17T06:59:59Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-17T06:59:59Z",
+  "updatedAt": "2026-09-17T07:01:55Z"
+}

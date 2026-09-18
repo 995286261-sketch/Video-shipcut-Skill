@@ -1,0 +1,932 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "psycho-zaku-intro-002",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "full_source_interval_5000ms",
+ "cacheKey": {
+  "node": "G3",
+  "purpose": "keyframe-extraction",
+  "assetId": "source-02-2071e9a7",
+  "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+  "sourceRange": {
+   "startMs": 0,
+   "endMs": 327018
+  },
+  "intervalMs": 5000
+ },
+ "sourcePackRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G0-素材包/material-pack.json",
+ "provider": "agent-multimodal",
+ "model": "zcode-vision",
+ "promptVersion": "g3-subject-s2-v1",
+ "targetAssets": [
+  {
+   "assetId": "source-02-2071e9a7",
+   "sha256": "D10A30FA09D2EE3C1F5BDE0C9859C8A0E42230E3B5FD76A0EE2E834475C8241F",
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 327018
+   },
+   "keyframes": [
+    {
+     "frameId": "vf-001",
+     "requestedSourceMs": 0,
+     "sourceMs": 0,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-001-0000000000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "座舱内白色驾驶服人物，紫调面部，暗舱",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-001"
+    },
+    {
+     "frameId": "vf-002",
+     "requestedSourceMs": 5000,
+     "sourceMs": 5000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-002-0000005000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "舱内驾驶员特写，白盔红冠、吉翁胸章，字幕『才是折磨我们的真正敌人』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-002"
+    },
+    {
+     "frameId": "vf-003",
+     "requestedSourceMs": 10000,
+     "sourceMs": 10000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-003-0000010000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "驾驶员侧脸+他人戴手套伸手",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-003"
+    },
+    {
+     "frameId": "vf-004",
+     "requestedSourceMs": 15000,
+     "sourceMs": 15000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-004-0000015000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红/紫机体躯干与盾局部+红发女性人物，字幕『能在这场战争中活下去可以说是奇迹』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-004"
+    },
+    {
+     "frameId": "vf-005",
+     "requestedSourceMs": 20000,
+     "sourceMs": 20000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-005-0000020000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红扎古式腿部装甲特写（弹射平台）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-005"
+    },
+    {
+     "frameId": "vf-006",
+     "requestedSourceMs": 25000,
+     "sourceMs": 25000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-006-0000025000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "格纳库悬吊洋红扎古全身：单眼、肩甲刺、背部大型光束炮与推进器组（与 E1 高机动型构型一致）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-006"
+    },
+    {
+     "frameId": "vf-007",
+     "requestedSourceMs": 30000,
+     "sourceMs": 30000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-007-0000030000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "驾驶员正面特写，字幕『达利路·劳伦斯 出击』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-007"
+    },
+    {
+     "frameId": "vf-008",
+     "requestedSourceMs": 35000,
+     "sourceMs": 35000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-008-0000035000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "弹射口外星空残骸带",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-008"
+    },
+    {
+     "frameId": "vf-009",
+     "requestedSourceMs": 40000,
+     "sourceMs": 40000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-009-0000040000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "残骸带远景，紫色尾焰小体，右下角机体碎片入画",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-009"
+    },
+    {
+     "frameId": "vf-010",
+     "requestedSourceMs": 45000,
+     "sourceMs": 45000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-010-0000045000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "倒置舱内驾驶员（吉翁徽背景）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-010"
+    },
+    {
+     "frameId": "vf-011",
+     "requestedSourceMs": 50000,
+     "sourceMs": 50000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-011-0000050000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "残骸带中红色小影带蓝焰，距离远",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-011"
+    },
+    {
+     "frameId": "vf-012",
+     "requestedSourceMs": 55000,
+     "sourceMs": 55000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-012-0000055000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "战舰甲板大爆炸，粉紫光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-012"
+    },
+    {
+     "frameId": "vf-013",
+     "requestedSourceMs": 60000,
+     "sourceMs": 60000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-013-0000060000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "蓝色推进光点拖尾",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-013"
+    },
+    {
+     "frameId": "vf-014",
+     "requestedSourceMs": 65000,
+     "sourceMs": 65000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-014-0000065000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "灰色舰体装甲板特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-014"
+    },
+    {
+     "frameId": "vf-015",
+     "requestedSourceMs": 70000,
+     "sourceMs": 70000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-015-0000070000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "灰色战舰上层建筑开火",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-015"
+    },
+    {
+     "frameId": "vf-016",
+     "requestedSourceMs": 75000,
+     "sourceMs": 75000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-016-0000075000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "蓝光点+黄色光束弹幕+粉色爆炸",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-016"
+    },
+    {
+     "frameId": "vf-017",
+     "requestedSourceMs": 80000,
+     "sourceMs": 80000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-017-0000080000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "爆炸火球+绿色光束命中舰甲",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-017"
+    },
+    {
+     "frameId": "vf-018",
+     "requestedSourceMs": 85000,
+     "sourceMs": 85000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-018-0000085000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "蓝色光迹",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-018"
+    },
+    {
+     "frameId": "vf-019",
+     "requestedSourceMs": 90000,
+     "sourceMs": 90000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-019-0000090000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "舱内驾驶员特写（红冠盔、惊愕）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-019"
+    },
+    {
+     "frameId": "vf-020",
+     "requestedSourceMs": 95000,
+     "sourceMs": 95000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-020-0000095000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "联邦白盔星徽驾驶员，字幕『战斗还没结束』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-020"
+    },
+    {
+     "frameId": "vf-021",
+     "requestedSourceMs": 100000,
+     "sourceMs": 100000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-021-0000100000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "黑暗巨构剪影，字幕『强敌还在那里』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-021"
+    },
+    {
+     "frameId": "vf-022",
+     "requestedSourceMs": 105000,
+     "sourceMs": 105000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-022-0000105000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红与白色机体部件叠影（叠化过渡）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-022"
+    },
+    {
+     "frameId": "vf-023",
+     "requestedSourceMs": 110000,
+     "sourceMs": 110000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-023-0000110000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "巨大爆炸火球+环形冲击波",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-023"
+    },
+    {
+     "frameId": "vf-024",
+     "requestedSourceMs": 115000,
+     "sourceMs": 115000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-024-0000115000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风橙色头盔人物嘶吼特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-024"
+    },
+    {
+     "frameId": "vf-025",
+     "requestedSourceMs": 120000,
+     "sourceMs": 120000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-025-0000120000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "漫画分镜：白色高达型对红色扎古型肉搏，顶部字幕组滚动条",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-025"
+    },
+    {
+     "frameId": "vf-026",
+     "requestedSourceMs": 125000,
+     "sourceMs": 125000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-026-0000125000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "暗星空残骸",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-026"
+    },
+    {
+     "frameId": "vf-027",
+     "requestedSourceMs": 130000,
+     "sourceMs": 130000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-027-0000130000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白色联邦高达型正面（EFSF 盾）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-027"
+    },
+    {
+     "frameId": "vf-028",
+     "requestedSourceMs": 135000,
+     "sourceMs": 135000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-028-0000135000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "红紫机体俯冲+蓝光束军刀+蜘蛛网状背景",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-028"
+    },
+    {
+     "frameId": "vf-029",
+     "requestedSourceMs": 140000,
+     "sourceMs": 140000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-029-0000140000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "红紫扎古近景：单眼、肩刺、背部大型光束炮，与 25s 同机构型",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-029"
+    },
+    {
+     "frameId": "vf-030",
+     "requestedSourceMs": 145000,
+     "sourceMs": 145000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-030-0000145000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "红紫扎古全身持大型火箭炮、单眼紫光、高机动腿部",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-030"
+    },
+    {
+     "frameId": "vf-031",
+     "requestedSourceMs": 150000,
+     "sourceMs": 150000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-031-0000150000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红机体发射大型粉色光束，躯干/背包炮与 25s/140s 同构（头部未入画）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-031"
+    },
+    {
+     "frameId": "vf-032",
+     "requestedSourceMs": 155000,
+     "sourceMs": 155000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-032-0000155000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "俯视洋红小机+橙色爆炸环+紫色光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-032"
+    },
+    {
+     "frameId": "vf-033",
+     "requestedSourceMs": 160000,
+     "sourceMs": 160000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-033-0000160000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "舱内红冠盔驾驶员，字幕『你造的机动战士』",
+     "riskFlags": [
+      "channel_watermark",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-033"
+    },
+    {
+     "frameId": "vf-034",
+     "requestedSourceMs": 165000,
+     "sourceMs": 165000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-034-0000165000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "驾驶员含泪面部特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-034"
+    },
+    {
+     "frameId": "vf-035",
+     "requestedSourceMs": 170000,
+     "sourceMs": 170000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-035-0000170000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古持大型火箭筒开火（蓝色炮口焰）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-035"
+    },
+    {
+     "frameId": "vf-036",
+     "requestedSourceMs": 175000,
+     "sourceMs": 175000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-036-0000175000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白/粉高达型飞行（蓝推进器）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-036"
+    },
+    {
+     "frameId": "vf-037",
+     "requestedSourceMs": 180000,
+     "sourceMs": 180000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-037-0000180000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "尘埃云中坠落残骸",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-037"
+    },
+    {
+     "frameId": "vf-038",
+     "requestedSourceMs": 185000,
+     "sourceMs": 185000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-038-0000185000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "驾驶员眼部特写（红盔）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-038"
+    },
+    {
+     "frameId": "vf-039",
+     "requestedSourceMs": 190000,
+     "sourceMs": 190000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-039-0000190000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白色高达头部开火特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-039"
+    },
+    {
+     "frameId": "vf-040",
+     "requestedSourceMs": 195000,
+     "sourceMs": 195000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-040-0000195000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白色高达头部开火特写（同镜延续）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-040"
+    },
+    {
+     "frameId": "vf-041",
+     "requestedSourceMs": 200000,
+     "sourceMs": 200000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-041-0000200000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "灰蓝高达型头部特写+橙烟",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-041"
+    },
+    {
+     "frameId": "vf-042",
+     "requestedSourceMs": 205000,
+     "sourceMs": 205000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-042-0000205000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红机体暗舱静置：背负大型光束步枪、单眼可见",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-042"
+    },
+    {
+     "frameId": "vf-043",
+     "requestedSourceMs": 210000,
+     "sourceMs": 210000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-043-0000210000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "舱内多名白色服联邦乘员漂浮",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-043"
+    },
+    {
+     "frameId": "vf-044",
+     "requestedSourceMs": 215000,
+     "sourceMs": 215000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-044-0000215000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "灰白高达型头肩特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-044"
+    },
+    {
+     "frameId": "vf-045",
+     "requestedSourceMs": 220000,
+     "sourceMs": 220000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-045-0000220000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "红紫小影+蓝光点+白色线网",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-045"
+    },
+    {
+     "frameId": "vf-046",
+     "requestedSourceMs": 225000,
+     "sourceMs": 225000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-046-0000225000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风红盔驾驶员嘶吼特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-046"
+    },
+    {
+     "frameId": "vf-047",
+     "requestedSourceMs": 230000,
+     "sourceMs": 230000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-047-0000230000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红扎古单眼紫光发射大型粉光束",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-047"
+    },
+    {
+     "frameId": "vf-048",
+     "requestedSourceMs": 235000,
+     "sourceMs": 235000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-048-0000235000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "洋红机体高速机动拖白烟（运动模糊重）",
+     "riskFlags": [
+      "channel_watermark",
+      "motion_blur"
+     ],
+     "ledgerRecordId": "vf-048"
+    },
+    {
+     "frameId": "vf-049",
+     "requestedSourceMs": 240000,
+     "sourceMs": 240000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-049-0000240000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风驾驶员咬牙特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-049"
+    },
+    {
+     "frameId": "vf-050",
+     "requestedSourceMs": 245000,
+     "sourceMs": 245000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-050-0000245000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "机体部件特写：灰甲+洋红散热结构+白色炮身",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-050"
+    },
+    {
+     "frameId": "vf-051",
+     "requestedSourceMs": 250000,
+     "sourceMs": 250000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-051-0000250000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "白色高达型全身持 EFSF 盾+紫光束军刀",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-051"
+    },
+    {
+     "frameId": "vf-052",
+     "requestedSourceMs": 255000,
+     "sourceMs": 255000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-052-0000255000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "俯瞰废墟城市、街道中红紫小影",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-052"
+    },
+    {
+     "frameId": "vf-053",
+     "requestedSourceMs": 260000,
+     "sourceMs": 260000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-053-0000260000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风人物眼部特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-053"
+    },
+    {
+     "frameId": "vf-054",
+     "requestedSourceMs": 265000,
+     "sourceMs": 265000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-054-0000265000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "蓝色竖向光流转场",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-054"
+    },
+    {
+     "frameId": "vf-055",
+     "requestedSourceMs": 270000,
+     "sourceMs": 270000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-055-0000270000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "焦黑高达型头部残骸特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-055"
+    },
+    {
+     "frameId": "vf-056",
+     "requestedSourceMs": 275000,
+     "sourceMs": 275000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-056-0000275000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "白甲+蓝色电弧+仪表『125』特写",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-056"
+    },
+    {
+     "frameId": "vf-057",
+     "requestedSourceMs": 280000,
+     "sourceMs": 280000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-057-0000280000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风紫调眼睛特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-057"
+    },
+    {
+     "frameId": "vf-058",
+     "requestedSourceMs": 285000,
+     "sourceMs": 285000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-058-0000285000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "uncertain",
+     "observedVisuals": "机械臂持大型枪+紫光（局部）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-058"
+    },
+    {
+     "frameId": "vf-059",
+     "requestedSourceMs": 290000,
+     "sourceMs": 290000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-059-0000290000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风舱内驾驶员握杆",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-059"
+    },
+    {
+     "frameId": "vf-060",
+     "requestedSourceMs": 295000,
+     "sourceMs": 295000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-060-0000295000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风驾驶服手臂特写，字幕『为什么』",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-060"
+    },
+    {
+     "frameId": "vf-061",
+     "requestedSourceMs": 300000,
+     "sourceMs": 300000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-061-0000300000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风红冠盔驾驶员仰望，字幕『我明白了 卡拉』",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-061"
+    },
+    {
+     "frameId": "vf-062",
+     "requestedSourceMs": 305000,
+     "sourceMs": 305000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-062-0000305000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风含泪面部特写",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel"
+     ],
+     "ledgerRecordId": "vf-062"
+    },
+    {
+     "frameId": "vf-063",
+     "requestedSourceMs": 310000,
+     "sourceMs": 310000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-063-0000310000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "洋红机体躯干特写：橙色核心块、双联炮口、背负推进器，手持残骸（头部未入画）",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-063"
+    },
+    {
+     "frameId": "vf-064",
+     "requestedSourceMs": 315000,
+     "sourceMs": 315000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-064-0000315000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "confirmed",
+     "observedVisuals": "同镜拉远：单眼头部入画，洋红装甲+Zeon 徽记",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-064"
+    },
+    {
+     "frameId": "vf-065",
+     "requestedSourceMs": 320000,
+     "sourceMs": 320000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-065-0000320000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "person_only",
+     "observedVisuals": "漫画风红冠盔驾驶员，字幕『我居然输给了这种残废吗？』",
+     "riskFlags": [
+      "channel_watermark",
+      "manga_panel",
+      "burned_subtitle"
+     ],
+     "ledgerRecordId": "vf-065"
+    },
+    {
+     "frameId": "vf-066",
+     "requestedSourceMs": 325000,
+     "sourceMs": 325000,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-066-0000325000ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "EVA 宇航员漂浮+白色高达型残骸",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-066"
+    },
+    {
+     "frameId": "vf-067",
+     "requestedSourceMs": 326018,
+     "sourceMs": 326018,
+     "path": "工作台/psycho-zaku-intro-002/G3-剪辑计划/视觉分析关键帧/关键帧/frame-067-0000326018ms.jpg",
+     "analysisStatus": "completed",
+     "identityStatus": "not_present",
+     "observedVisuals": "同镜延续：EVA 宇航员+高达型残骸",
+     "riskFlags": [
+      "channel_watermark"
+     ],
+     "ledgerRecordId": "vf-067"
+    }
+   ]
+  }
+ ],
+ "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed",
+ "frameExtractionSpec": "interval_ms=5000 full_source",
+ "promptNote": "身份规则=工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.1.json（S2：仅达里尔版 Reuse-P 为 confirmed；Mk-II/袖章红扎古按排除规则处理）",
+ "analyzedAt": "2026-09-17T10:30:00Z",
+ "subjectConfirmationRef": "工作台/psycho-zaku-intro-002/G3-剪辑计划/G3-目标主体确认-v0.1.json"
+}

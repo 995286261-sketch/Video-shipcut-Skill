@@ -1,0 +1,50 @@
+{{Infobox/Gundam/Technology
+| image = Megabazookalauncher.jpg;Deployed
+Megabazookalauncher-transport.jpg;Transport Configuration
+| era = Universal Century
+| series = Mobile Suit Zeta Gundam, Mobile Suit Gundam Unicorn, Mobile Suit Gundam Unicorn RE:0096, Mobile Suit Zeta Gundam: A New Translation II - Lovers
+| powerplant = Thermonuclear Reactor
+| function = Energy Weapon
+| discharge = Energy Beam
+| manufacturer = Anaheim Electronics
+| operator = AEUG, ECOAS
+}}
+The '''Mega Bazooka Launcher''' is a beam weapon introduced in ''[[Mobile Suit Zeta Gundam]]''.
+
+==Technical Information==
+The Mega Bazooka Launcher is a large mega particle cannon with firepower exceeding that of a warship's guns, which draws its power from a built-in thermonuclear reactor. Though Mega Bazooka Launchers are equipped with maneuvering verniers, their sheer bulk reduces the mobility of the mobile suits that carry them and due to their high power requirements, they must spend a considerable amount of time charging up prior to each shot. Additional mobile suits could be connected to the Mega Bazooka Launchers to serve as energy tanks to speed up this recharging process. This method also works if connected to a ship's power source.
+
+==History==
+The Mega Bazooka Launcher was developed by [[Anaheim Electronics]] as a strategic high-energy weapon for use by mobile suits. The Mega Bazooka Launcher was first used by the [[Anti Earth Union Group|AEUG]] during the [[Gryps War]], being the preferred heavy weapon of the [[MSN-00100 Hyaku Shiki]]. The launcher was most notably used to attack the "''[[Dogosse Giar-class|Dogosse Giar]]''" during a trip to negotiate with Axis Zeon, and during the [[Battle of Gryps]] to wipe out several dozen [[AMX-003 Gaza-C]]s.{{Ref|Zeta|49}}
+
+After the Gryps War, Anaheim Electronics took the Mega Bazooka Launcher technology and adapted it into the [[FXA-08R Mega Rider]], which was used by the AEUG throughout the [[First Neo Zeon War]].
+
+During the [[Third Neo Zeon War|Laplace Conflict]], a [[RGM-89De Jegan (ECOAS Type)]] on board the [[SCVA-76 Nahel Argama]] equipped a Mega Bazooka Launcher to the ships power supply for use as a turret against the [[Sleeves]] mobile suits.
+
+==Gallery==
+<gallery hideaddbutton="true">
+File:Hyaku-Shiki Mega Bazooka Launcher 01 (Zeta Ep32).png|Deployed
+File:Hyaku-Shiki Mega Bazooka Launcher 02 (Zeta Ep32).png|Aiming Mega Bazooka Launcher
+File:Hyaku Shiki Mega Bazooka Launcher 04 (Zeta NT2).png|Preparing to fire Mega Bazooka Launcher ([[Mobile Suit Zeta Gundam: A New Translation II - Lovers]])
+File:Hyaku Shiki Mega Bazooka Launcher Firing 01 (Zeta Ep38).png|Mega Bazooka Launcher Firing
+File:Mega Bazooka Launcher Turret 01 (Unicorn 0096 Ep18).png|Used as a turret
+File:EXVS Methuss.jpg|In ''[[Mobile Suit Gundam: Extreme Vs.]]'' with [[MSN-00100 Hyaku Shiki]] and [[MSA-005 Methuss]]
+File:FB Mega Bazooka Launcher.jpg|In ''[[Mobile Suit Gundam: Extreme Vs. Full Boost]]''
+</gallery>
+
+==[[Gunpla]]==
+<gallery hideaddbutton="true">
+File:Hguc-msn0100-mbl.jpg|1/144 [[High Grade Universal Century|HGUC]] "MSN-00100 Hyaku Shiki + Mega Bazooka Launcher" (2004): box art
+File:HGUC Mega Bazooka Launcher.jpg|1/144 HGUC Mega Bazooka Launcher (P-Bandai exclusive; 2016): box art
+File:MG Mega Bazooka Launcher.jpg|1/100 [[Master Grade|MG]] FHA-03M1 Mega Bazooka Launcher (P-Bandai exclusive; 2015): box art
+File:SDGG-62-HyakuShiki&MegaBazookaLauncher.jpg|[[SD Gundam G Generation Model Series|SDGG]] MSN-00100 Hyaku Shiki & Mega Bazooka Launcher (2001): box art
+</gallery>
+==Notes & Trivia==
+
+==Appearances==
+{{Appearances}}
+
+==References==
+<References/>
+
+{{Universal Century Technology}}

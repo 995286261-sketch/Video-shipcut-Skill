@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "精神力扎古介绍片，B站内部测试，军武机甲科普，需要机械感工业电子底乐、不喧宾夺主（AI旁白在上）",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Post Mortem",
+      "neteaseId": 1431353842,
+      "sha256": "BA4764A7A16A8C33C784220C60C317F865156A203665F16832A9F3F8E86CD7B5",
+      "reused": false,
+      "notes": "1. 差距：参照曲是叙事性强的工业Techno，节奏稳健；候选曲是Hard Techno，BPM极快，音色尖锐暴力，缺乏叙事空间。\n2. 结论：不能。候选曲侵略性过强，会严重干扰AI旁白，破坏科普片所需的冷静机械感。\n3. 评分：2/10。理由：节奏过快且喧宾夺主，完全不适合需要清晰解说的介绍片。"
+    },
+    {
+      "title": "宗教に犯されているのではないか。",
+      "neteaseId": 1987381634,
+      "sha256": "49BB3CEB3490E8429F34AD3A91CCD5F141218E74C4FF3D76786A7A75EC8F7605",
+      "reused": false,
+      "notes": "1) 参照曲是节奏规整、氛围冷峻的工业电子；候选曲则是高速混乱、充满失真吉他的硬核金属，乐器与气质差异巨大。\n2) 不能。候选曲攻击性过强且旋律繁杂，会严重干扰旁白，完全不符合“不喧宾夺主”的要求。\n3) 贴合度2分。理由：音乐风格过于激进噪杂，缺乏所需的机械秩序感，无法作为解说类视频的背景乐。"
+    },
+    {
+      "title": "Hard Slog (Original Mix)",
+      "neteaseId": 3413875935,
+      "sha256": "F3EFE45E6C47DCEF4305AFAB550FB224DF5F5AB2DD945CF1F1BC5D767BEFF629",
+      "reused": false,
+      "notes": "1) 参照曲是叙事感强的工业电子，人声清晰、底鼓克制；候选曲是硬核Techno，失真底鼓极重、节奏狂暴且无人声留白。\n2) 不能。候选曲音量与侵略性过强，会完全淹没AI旁白，缺乏科普片所需的“呼吸感”。\n3) 2分。音乐风格过于激进喧宾夺主，无法作为解说类视频的底层配乐。"
+    },
+    {
+      "title": "BITCH",
+      "neteaseId": 3409316502,
+      "sha256": "D1910E7DE689CB63175B24FB24A4498D393CE2A9C7CD91AE87E31DE0D76E7A80",
+      "reused": false,
+      "notes": "1) 参照曲是叙事感强的工业电子，节奏克制；候选曲是极速Hardcore/ Gabber，乐器为失真重鼓，气质极度狂暴躁动。\n2) 完全不能。候选曲BPM过高且侵略性太强，会彻底盖过AI旁白，破坏科普片需要的冷静机械氛围。\n3) 1分。音乐风格过于极端噪杂，严重喧宾夺主，完全不适合做解说类视频的背景乐。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

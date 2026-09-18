@@ -1,0 +1,28 @@
+[Script Info]
+Title: psycho-zaku-intro-002 G3 口播主字幕
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,PingFang SC,64,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,2,60,60,173,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+;; 片头标题卡（0–3200ms「精神力扎古：凌驾于主角机之上的怪物」）按 packagingDecisions 由 G4 上部车道绘制，不占口播字幕轨
+Dialogue: 0,0:00:00.00,0:00:11.20,Narration,,0,0,0,,宇宙世纪0079年，一年战争的尾声。当所有人的目光都盯\N着那些主角机时，吉翁公国悄悄投入了一个更危险的实验。
+Dialogue: 0,0:00:11.20,0:00:21.28,Narration,,0,0,0,,它基于量产的扎古，却搭载了一套几乎不被正史记载的系统—\N—Reuse-P装置。它的名字，叫精神力扎古。
+Dialogue: 0,0:00:21.28,0:00:28.48,Narration,,0,0,0,,这套装置能直接读取驾驶员的神经信号，\N让机体的四肢像身体的延伸一样，随念头而动。
+Dialogue: 0,0:00:28.48,0:00:37.76,Narration,,0,0,0,,驾驶它的，不是王牌，也不是少爷——而是'假死者部队'的\N达里尔·洛伦兹。一支部队，连番号都在宣告他们的牺牲。
+Dialogue: 0,0:00:37.76,0:00:46.32,Narration,,0,0,0,,当年十二月，达里尔迅速掌握了这台机体：\N重创对手母舰'蜂巢'，击沉数艘萨拉米斯级。
+Dialogue: 0,0:00:46.32,0:00:51.28,Narration,,0,0,0,,请注意，这是一台扎古——一个已经开始落后的骨架。
+Dialogue: 0,0:00:51.28,0:00:58.72,Narration,,0,0,0,,它能打出越级的战绩，是因为设计重心从来不在装甲和出力，\N而在'把人的大脑当作操作系统'。
+Dialogue: 0,0:00:58.72,0:01:07.60,Narration,,0,0,0,,代价同样残酷：这种系统要求驾驶员与机器融为一体，\N而越融合，人的边界越模糊。
+Dialogue: 0,0:01:07.60,0:01:12.00,Narration,,0,0,0,,精神力扎古自始至终是试作机，从未正式量产。
+Dialogue: 0,0:01:12.00,0:01:16.40,Narration,,0,0,0,,回到标题：为什么说它是'凌驾于主角机之上的怪物'？
+Dialogue: 0,0:01:16.40,0:01:22.40,Narration,,0,0,0,,因为它从不曾拥有主角的光环，\N却每一次登场，都是别人的生死劫。
+Dialogue: 0,0:01:22.40,0:01:30.16,Narration,,0,0,0,,它是一台被神经系统逼到极限的量产机，\N一名老兵最后的义肢，一个不肯死去的旧时代残响。
+Dialogue: 0,0:01:30.16,0:01:34.72,Narration,,0,0,0,,下一期，我们把精神力扎古的装备和战果，逐帧拆开看。

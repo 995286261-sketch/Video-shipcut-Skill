@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": "背景音乐你从 freesound 里找好了（通道按供给实际可切换）",
+    "themeRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-方向输入-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "史诗 战斗 BGM",
+      "rationale": "主题：机体科普+UC末期大战叙事",
+      "source": "theme"
+    },
+    {
+      "term": "燃向 器乐",
+      "rationale": "主题：B站军武科普常见选曲语汇（平台中文标签）",
+      "source": "theme"
+    },
+    {
+      "term": "电影配乐 高燃",
+      "rationale": "版式锚定：参考片预告片式包装",
+      "source": "theme"
+    },
+    {
+      "term": "黑暗 史诗",
+      "rationale": "主题：新人类兵器的悲剧底色",
+      "source": "theme"
+    },
+    {
+      "term": "鼓点 推进",
+      "rationale": "简报锚定：123BPM、卡点637、节奏驱动",
+      "source": "brief"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 300,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-17T14:57:30+08:00"
+}

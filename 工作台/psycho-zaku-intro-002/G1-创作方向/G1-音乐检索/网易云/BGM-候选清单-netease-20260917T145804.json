@@ -1,0 +1,402 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/BGM-检索词-v0.1.json",
+    "terms": [
+      "史诗 战斗 BGM",
+      "燃向 器乐",
+      "电影配乐 高燃",
+      "黑暗 史诗",
+      "鼓点 推进"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-09-17T14:58:04+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1408761974,
+      "title": "Free-Out 2019 cypher",
+      "artist": "Free-Out、高天佐、Round_2、BigYear大年、Lil Howcy、Ice Paper、Mc光光、Kc、BustaZun",
+      "album": "Free-Out Tape Vol.1",
+      "durationMs": 351187,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1408761974",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1408761974.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Free-Out、高天佐、Round_2、BigYear大年、Lil Howcy、Ice Paper、Mc光光、Kc、BustaZun - Free-Out 2019 cypher",
+      "retrievedAt": "2026-09-17T14:57:37+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-1408761974-Free-Out_2019_cypher.mp3",
+      "sha256": "37E0A915ADE6C68308630C61269B858F5B38D4A88955F473F071D37419BE628D",
+      "byteSize": 5619885
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 25815771,
+      "title": "阳光照耀着塔什库尔干",
+      "artist": "马向华",
+      "album": "马向华二胡独奏专辑",
+      "durationMs": 509000,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=25815771",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=25815771.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "马向华 - 阳光照耀着塔什库尔干",
+      "retrievedAt": "2026-09-17T14:57:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-25815771-阳光照耀着塔什库尔干.mp3",
+      "sha256": "7D33B47FA5ADFEDBE37B0EBC59D06B6FC46A8CD0550780D398DD1B531AD50FD7",
+      "byteSize": 8145231
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3376296485,
+      "title": "驿动的心",
+      "artist": "华语晓毅",
+      "album": "驿动的心",
+      "durationMs": 304368,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3376296485",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3376296485.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "华语晓毅 - 驿动的心",
+      "retrievedAt": "2026-09-17T14:57:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-3376296485-驿动的心.mp3",
+      "sha256": "2CEC8EDEBAB77A1E0E13AA88497EBB2A63B8ED8F70B80237D2B2B1F83D2AAAFC",
+      "byteSize": 4870940
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 539342161,
+      "title": "《众神的舞台》全职高手同人曲",
+      "artist": "卡修Rui、伦桑、尧顺宇、阿睿、六音、Ash灰、张猫、馒头妞、赖仔、南瑾天、慕斯小乖、卡修、圣香 远夏",
+      "album": "《众神的舞台》全职高手同人曲",
+      "durationMs": 312528,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=539342161",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=539342161.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "卡修Rui、伦桑、尧顺宇、阿睿、六音、Ash灰、张猫、馒头妞、赖仔、南瑾天、慕斯小乖、卡修、圣香 远夏 - 《众神的舞台》全职高手同人曲",
+      "retrievedAt": "2026-09-17T14:57:49+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-539342161-《众神的舞台》全职高手同人曲.mp3",
+      "sha256": "D564C680D515FC0DE127775FA581D732C557FC4BF20D18CF46FAE0A923EB9418",
+      "byteSize": 5001343
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1421785646,
+      "title": "攻防(翻自 陶大鸽)",
+      "artist": "阿陶耶",
+      "album": "攻防【剑网三十周年】",
+      "durationMs": 347480,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1421785646",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1421785646.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "阿陶耶 - 攻防(翻自 陶大鸽)",
+      "retrievedAt": "2026-09-17T14:57:52+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-1421785646-攻防(翻自_陶大鸽).mp3",
+      "sha256": "FF57646ED48E9072BCD7C11A35F999C6DFBF82002BD452A0BBE614236672F9A8",
+      "byteSize": 5560155
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 543978332,
+      "title": "《众神的舞台》",
+      "artist": "弥逻音频、卡修Rui、伦桑、慕斯の小乖、尧顺宇、阿睿凌霓剑裳、远皓ZIL、六音、馒头妞、Ash灰、南瑾天、赖仔Morris",
+      "album": "《众神的舞台》全职高手原创歌曲",
+      "durationMs": 312528,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=543978332",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=543978332.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "弥逻音频、卡修Rui、伦桑、慕斯の小乖、尧顺宇、阿睿凌霓剑裳、远皓ZIL、六音、馒头妞、Ash灰、南瑾天、赖仔Morris - 《众神的舞台》",
+      "retrievedAt": "2026-09-17T14:57:54+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-543978332-《众神的舞台》.mp3",
+      "sha256": "D564C680D515FC0DE127775FA581D732C557FC4BF20D18CF46FAE0A923EB9418",
+      "byteSize": 5001343
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2034842293,
+      "title": "真实的虚幻三",
+      "artist": "辐射波RadiationWave",
+      "album": "真实的虚幻(REAL UNREAL)",
+      "durationMs": 582908,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=2034842293",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2034842293.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "辐射波RadiationWave - 真实的虚幻三",
+      "retrievedAt": "2026-09-17T14:57:56+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-2034842293-真实的虚幻三.mp3",
+      "sha256": "3336AF64302C8FCE6539F103E94D743B32284AD69A1838D16F6F7A732F935717",
+      "byteSize": 9327639
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2632221263,
+      "title": "盛放的红",
+      "artist": "钟毅",
+      "album": "盛放的红",
+      "durationMs": 337239,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=2632221263",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2632221263.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "钟毅 - 盛放的红",
+      "retrievedAt": "2026-09-17T14:58:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/网易云/netease-2632221263-盛放的红.mp3",
+      "sha256": "80221733D5C686CE58AE9996AD91DC669C2E0F64BEA08870F0E54AF5823E5E68",
+      "byteSize": 5396781
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 2738955449,
+      "name": "史诗 战斗",
+      "reason": "duration 84500ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3369809923,
+      "name": "史诗战斗",
+      "reason": "duration 89939ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3422467169,
+      "name": "惊鸿战歌-古风战斗热血史诗燃向BGM",
+      "reason": "duration 133720ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1379121080,
+      "name": "史诗战斗",
+      "reason": "duration 87222ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2738955617,
+      "name": "史诗战斗",
+      "reason": "duration 92444ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2656596673,
+      "name": "エピックバトルファンタジア",
+      "reason": "duration 183089ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3341148541,
+      "name": "史诗战斗",
+      "reason": "duration 206069ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3364791055,
+      "name": "史诗战斗",
+      "reason": "duration 239959ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2613427214,
+      "name": "史诗战斗 宏大场面（影视配乐）",
+      "reason": "duration 119979ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3387017175,
+      "name": "Bang Bang Bang - Silly Funk",
+      "reason": "duration 92750ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3423050406,
+      "name": "我们之间的战斗是史诗级的",
+      "reason": "duration 114886ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3429211208,
+      "name": "Bang Bang Bang（电锯人同人曲）",
+      "reason": "duration 116810ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3362794488,
+      "name": "\"Bad Vibes\" - Hoodtrap x .nathan. bounce Type Beat",
+      "reason": "duration 160032ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2657451679,
+      "name": "【Free】孤身一人的战斗（Bridge & 杨和苏 Type beat）",
+      "reason": "duration 219167ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3411753087,
+      "name": "Winter Throne",
+      "reason": "duration 275346ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 28528973,
+      "name": "坷拉忍者疾风传",
+      "reason": "duration 292000ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2057554229,
+      "name": "戦闘!スター団（宝可梦 朱紫 天星队战斗BGM）",
+      "reason": "duration 201221ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1458264307,
+      "name": "戦闘! オリーヴ ~ VS 奥莉薇（精灵宝可梦 剑盾 战斗BGM）（翻自 一之瀬剛）",
+      "reason": "duration 130768ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1458266142,
+      "name": "戦闘! ローズ ~ VS 洛兹（精灵宝可梦 剑盾 BOSS战斗BGM）（翻自 足立美奈子）",
+      "reason": "duration 172199ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 544202641,
+      "name": "【RURIN】潜藏の實力【布里陣容曲】",
+      "reason": "duration 103503ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 544668916,
+      "name": "【FV-BH01】潛藏の實力【煌黑-布里】",
+      "reason": "duration 102048ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1960308687,
+      "name": "战斗吧！",
+      "reason": "duration 103488ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2736322061,
+      "name": "童心向党 (合唱版)",
+      "reason": "duration 163495ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3351101320,
+      "name": "战天下终极版本",
+      "reason": "duration 179919ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1498618015,
+      "name": "玲珑骰",
+      "reason": "duration 214286ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3343908651,
+      "name": "FREE-焰潮-Passion Hardcore HipHop Beat",
+      "reason": "duration 156960ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1841800503,
+      "name": "【灵笼】笼中微光（纯歌版）",
+      "reason": "duration 276362ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1841800502,
+      "name": "【灵笼】笼中微光（剧情版）",
+      "reason": "duration 281107ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 2045417851,
+      "name": "【会看谈笑定天山】燃向古风",
+      "reason": "duration 203200ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 34142710,
+      "name": "海浪沙",
+      "reason": "duration 234357ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 3391170281,
+      "name": "下沉市场（Prod By 9Zi）",
+      "reason": "duration 142027ms outside [300.0,600.0]s"
+    },
+    {
+      "neteaseId": 1378420473,
+      "name": "归还世界给你",
+      "reason": "duration 273816ms outside [300.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 8,
+    "minimumExpected": 3
+  }
+}

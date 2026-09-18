@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "526CE27C910071008405784E5DB307BD253A32B679994018237F3B82119B0A59",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687110-preview.mp3",
+    "sha256": "526CE27C910071008405784E5DB307BD253A32B679994018237F3B82119B0A59",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 3.63102,
+    "decodedDurationMs": 3582
+  },
+  "tempoBpm": 89.1,
+  "beatsMs": [
+    255,
+    929,
+    1625,
+    2276,
+    2949,
+    3529
+  ],
+  "onsetsMs": [
+    70,
+    255,
+    488,
+    697,
+    929,
+    1138,
+    1370,
+    1625,
+    1834,
+    2043,
+    2276,
+    2485,
+    2717,
+    2949,
+    3158,
+    3297,
+    3413,
+    3529
+  ],
+  "hitPoints": [
+    {
+      "tMs": 70,
+      "kind": "accent"
+    },
+    {
+      "tMs": 255,
+      "kind": "beat"
+    },
+    {
+      "tMs": 488,
+      "kind": "accent"
+    },
+    {
+      "tMs": 697,
+      "kind": "accent"
+    },
+    {
+      "tMs": 929,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1138,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1370,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1625,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1834,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2043,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2276,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2485,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2717,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2949,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3158,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3297,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3529,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 3529,
+      "energyMean": 0.074491
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.040255
+    },
+    {
+      "tMs": 372,
+      "rms": 0.035162
+    },
+    {
+      "tMs": 743,
+      "rms": 0.027822
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.22057
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.033501
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.061799
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.196677
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.016107
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.14359
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.026733
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -15.4,
+    "loudnessRangeLu": 0.6,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

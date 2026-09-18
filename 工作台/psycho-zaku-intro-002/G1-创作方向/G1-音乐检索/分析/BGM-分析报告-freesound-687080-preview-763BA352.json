@@ -1,0 +1,790 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "763BA35211B76A7A01B17C33AA0320C24B5C11347902AECC9DBD45B1D64FBBDB",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/psycho-zaku-intro-002/G1-创作方向/G1-音乐检索/candidates/freesound-687080-preview.mp3",
+    "sha256": "763BA35211B76A7A01B17C33AA0320C24B5C11347902AECC9DBD45B1D64FBBDB",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 17.946122,
+    "decodedDurationMs": 17910
+  },
+  "tempoBpm": 107.67,
+  "beatsMs": [
+    139,
+    697,
+    1254,
+    1811,
+    2392,
+    3042,
+    3622,
+    4272,
+    4830,
+    5410,
+    5968,
+    6525,
+    7082,
+    7639,
+    8197,
+    8754,
+    9311,
+    9868,
+    10449,
+    11006,
+    11564,
+    12121,
+    12678,
+    13235,
+    13793,
+    14350,
+    14907,
+    15488,
+    16138,
+    16718,
+    17276,
+    17833
+  ],
+  "onsetsMs": [
+    139,
+    255,
+    372,
+    464,
+    697,
+    906,
+    1022,
+    1138,
+    1254,
+    1370,
+    1486,
+    1602,
+    1695,
+    1811,
+    1927,
+    2043,
+    2159,
+    2276,
+    2392,
+    2485,
+    2601,
+    2717,
+    3042,
+    3367,
+    3506,
+    3599,
+    3738,
+    3831,
+    3947,
+    4063,
+    4156,
+    4272,
+    4389,
+    4505,
+    4621,
+    4714,
+    4830,
+    4969,
+    5062,
+    5178,
+    5294,
+    5387,
+    5503,
+    5619,
+    5735,
+    5851,
+    5944,
+    6200,
+    6316,
+    6409,
+    6525,
+    6618,
+    6757,
+    6850,
+    6966,
+    7082,
+    7198,
+    7314,
+    7407,
+    7523,
+    7639,
+    7755,
+    7872,
+    7964,
+    8081,
+    8197,
+    8313,
+    8429,
+    8522,
+    8638,
+    8754,
+    8870,
+    8986,
+    9102,
+    9218,
+    9311,
+    9427,
+    9543,
+    9660,
+    9752,
+    9868,
+    9985,
+    10101,
+    10310,
+    10426,
+    10565,
+    10774,
+    10890,
+    11006,
+    11215,
+    11331,
+    11540,
+    11680,
+    11796,
+    11889,
+    12098,
+    12237,
+    12446,
+    12562,
+    12794,
+    12910,
+    13003,
+    13119,
+    13235,
+    13351,
+    13468,
+    13560,
+    13700,
+    13793,
+    13909,
+    14025,
+    14141,
+    14257,
+    14350,
+    14466,
+    14582,
+    14698,
+    14907,
+    15023,
+    15256,
+    15372,
+    15464,
+    15581,
+    15697,
+    15813,
+    15929,
+    16138,
+    16370,
+    16602,
+    16695,
+    16834,
+    17136,
+    17276,
+    17485,
+    17624,
+    17810
+  ],
+  "hitPoints": [
+    {
+      "tMs": 139,
+      "kind": "beat"
+    },
+    {
+      "tMs": 372,
+      "kind": "accent"
+    },
+    {
+      "tMs": 464,
+      "kind": "accent"
+    },
+    {
+      "tMs": 697,
+      "kind": "beat"
+    },
+    {
+      "tMs": 906,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1022,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1254,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1486,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1602,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1811,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2043,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2159,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2392,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2601,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2717,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3042,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3367,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3622,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3831,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3947,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4063,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4272,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4505,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4621,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4830,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4969,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5062,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5178,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5410,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5619,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5735,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5968,
+      "kind": "beat"
+    },
+    {
+      "tMs": 6200,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6316,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6525,
+      "kind": "beat"
+    },
+    {
+      "tMs": 6757,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6850,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7082,
+      "kind": "beat"
+    },
+    {
+      "tMs": 7314,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7407,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7639,
+      "kind": "beat"
+    },
+    {
+      "tMs": 7872,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7964,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8197,
+      "kind": "beat"
+    },
+    {
+      "tMs": 8429,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8522,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8754,
+      "kind": "beat"
+    },
+    {
+      "tMs": 8986,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9102,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9311,
+      "kind": "beat"
+    },
+    {
+      "tMs": 9543,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9660,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9868,
+      "kind": "beat"
+    },
+    {
+      "tMs": 10101,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10310,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10449,
+      "kind": "beat"
+    },
+    {
+      "tMs": 10774,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11006,
+      "kind": "beat"
+    },
+    {
+      "tMs": 11215,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11331,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11564,
+      "kind": "beat"
+    },
+    {
+      "tMs": 11796,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11889,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12121,
+      "kind": "beat"
+    },
+    {
+      "tMs": 12446,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12678,
+      "kind": "beat"
+    },
+    {
+      "tMs": 12910,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13003,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13235,
+      "kind": "beat"
+    },
+    {
+      "tMs": 13468,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13560,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13793,
+      "kind": "beat"
+    },
+    {
+      "tMs": 14025,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14141,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14350,
+      "kind": "beat"
+    },
+    {
+      "tMs": 14582,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14698,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14907,
+      "kind": "beat"
+    },
+    {
+      "tMs": 15256,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15488,
+      "kind": "beat"
+    },
+    {
+      "tMs": 15697,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15813,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15929,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16138,
+      "kind": "beat"
+    },
+    {
+      "tMs": 16370,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16718,
+      "kind": "beat"
+    },
+    {
+      "tMs": 17136,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17276,
+      "kind": "beat"
+    },
+    {
+      "tMs": 17485,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17624,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17833,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 3994,
+      "energyMean": 0.105939
+    },
+    {
+      "startMs": 4087,
+      "endMs": 8545,
+      "energyMean": 0.102468
+    },
+    {
+      "startMs": 8638,
+      "endMs": 13746,
+      "energyMean": 0.120653
+    },
+    {
+      "startMs": 13839,
+      "endMs": 17833,
+      "energyMean": 0.096468
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.068875
+    },
+    {
+      "tMs": 372,
+      "rms": 0.140472
+    },
+    {
+      "tMs": 743,
+      "rms": 0.112482
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.280441
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.097004
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.054689
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.112249
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.075249
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.000505
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.098324
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.091345
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.017872
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.130649
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.078057
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.096164
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.117026
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.215952
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.134068
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.11836
+    },
+    {
+      "tMs": 7059,
+      "rms": 0.138379
+    },
+    {
+      "tMs": 7430,
+      "rms": 0.121824
+    },
+    {
+      "tMs": 7802,
+      "rms": 0.111452
+    },
+    {
+      "tMs": 8173,
+      "rms": 0.07903
+    },
+    {
+      "tMs": 8545,
+      "rms": 0.057197
+    },
+    {
+      "tMs": 8916,
+      "rms": 0.10597
+    },
+    {
+      "tMs": 9288,
+      "rms": 0.177285
+    },
+    {
+      "tMs": 9660,
+      "rms": 0.035728
+    },
+    {
+      "tMs": 10031,
+      "rms": 0.066466
+    },
+    {
+      "tMs": 10403,
+      "rms": 0.120537
+    },
+    {
+      "tMs": 10774,
+      "rms": 0.110914
+    },
+    {
+      "tMs": 11146,
+      "rms": 0.051337
+    },
+    {
+      "tMs": 11517,
+      "rms": 0.146735
+    },
+    {
+      "tMs": 11889,
+      "rms": 0.099178
+    },
+    {
+      "tMs": 12260,
+      "rms": 0.060455
+    },
+    {
+      "tMs": 12632,
+      "rms": 0.083132
+    },
+    {
+      "tMs": 13003,
+      "rms": 0.177459
+    },
+    {
+      "tMs": 13375,
+      "rms": 0.048079
+    },
+    {
+      "tMs": 13746,
+      "rms": 0.192191
+    },
+    {
+      "tMs": 14118,
+      "rms": 0.131806
+    },
+    {
+      "tMs": 14489,
+      "rms": 0.138026
+    },
+    {
+      "tMs": 14861,
+      "rms": 0.17953
+    },
+    {
+      "tMs": 15232,
+      "rms": 0.104691
+    },
+    {
+      "tMs": 15604,
+      "rms": 0.070851
+    },
+    {
+      "tMs": 15975,
+      "rms": 0.007237
+    },
+    {
+      "tMs": 16347,
+      "rms": 0.348642
+    },
+    {
+      "tMs": 16718,
+      "rms": 0.161315
+    },
+    {
+      "tMs": 17090,
+      "rms": 0.092035
+    },
+    {
+      "tMs": 17461,
+      "rms": 0.202316
+    },
+    {
+      "tMs": 17833,
+      "rms": 0.048705
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -9.3,
+    "loudnessRangeLu": 1.6,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

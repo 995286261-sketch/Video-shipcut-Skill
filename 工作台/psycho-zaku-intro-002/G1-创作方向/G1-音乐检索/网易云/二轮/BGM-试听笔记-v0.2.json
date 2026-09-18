@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.22.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/tiger-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "精神力扎古介绍片，B站内部测试，军武机甲科普，需要机械感工业电子底乐、不喧宾夺主（AI旁白在上）",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Free-Out 2019 cypher",
+      "neteaseId": 1408761974,
+      "sha256": "37E0A915ADE6C68308630C61269B858F5B38D4A88955F473F071D37419BE628D",
+      "reused": false,
+      "notes": "1) 参照曲是纯粹的工业电子/Techno，节奏机械冷峻；候选曲是人声主导的Trap/Hip-hop，鼓点重且Flow密集。\n2) 不能。候选曲人声过于突出，会严重干扰AI旁白，且嘻哈气质与军武科普的硬核严肃感不符。\n3) 2分。人声喧宾夺主且风格错位，完全无法作为解说类视频的背景乐。"
+    },
+    {
+      "title": "盛放的红",
+      "neteaseId": 2632221263,
+      "sha256": "80221733D5C686CE58AE9996AD91DC669C2E0F64BEA08870F0E54AF5823E5E68",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是工业感极强的Techno电子乐，节奏强劲机械；候选曲则是庄严宏大的管弦合唱，充满人文情感。\n2) 完全不行。候选曲人声过于突出，会严重干扰旁白，且其悲壮史诗气质与机甲科普所需的冷峻科技感背道而驰。\n3) 贴合度1分。风格完全相反，如同用圣歌给赛博朋克配乐，不仅无法衬托机械感，更会造成严重的听感冲突。"
+    },
+    {
+      "title": "驿动的心",
+      "neteaseId": 3376296485,
+      "sha256": "2CEC8EDEBAB77A1E0E13AA88497EBB2A63B8ED8F70B80237D2B2B1F83D2AAAFC",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是硬核工业电子，失真合成器与重鼓点营造冷峻机械感；候选曲是华语流行抒情，钢琴弦乐配女声，气质温柔浪漫，节奏舒缓。\n2) 完全不能。候选曲人声会严重干扰旁白，且情感基调与军武机甲的硬核风格背道而驰。\n3) 贴合度：1/10。理由：抒情流行乐无法承载军事科普所需的工业机械氛围。"
+    },
+    {
+      "title": "《众神的舞台》全职高手同人曲",
+      "neteaseId": 539342161,
+      "sha256": "D564C680D515FC0DE127775FA581D732C557FC4BF20D18CF46FAE0A923EB9418",
+      "reused": false,
+      "notes": "1. 差距：参照曲是冷峻、循环的工业Techno，强调机械律动；候选曲则是热血、宏大的日系摇滚（J-Rock），人声与旋律喧宾夺主。\n2. 结论：完全不能用。候选曲情感太满、动态过大，会严重干扰AI旁白，且缺乏所需的“冷酷机械感”。\n3. 评分：2/10。这是燃向战歌而非冷静科普底乐，风格南辕北辙。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}
