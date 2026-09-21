@@ -70,5 +70,5 @@ metadata:
 - `references/library-probes.md`：曲库与引擎选型实测结论。
 - `references/search-terms-contract.md`：检索词生成合同（专员侧 I/O 固化）。
 - `references/listen-notes-contract.md`：模型试听笔记合同（能力探测、不编造纪律、成本封顶）。
-- `scripts/music_analyze.py`、`scripts/music_search_terms.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_listen_omni.py`、`scripts/music_library.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：十个唯一入口（`music_tags.py` 共享词表、`music_echo.py` 固定表格回显卡渲染模块；经验库 `experience/music/` 只许 `music_library.py` 写）。
+- `scripts/music_analyze.py`、`scripts/music_search_terms.py`、`scripts/music_search_freesound.py`、`scripts/music_search_netease.py`、`scripts/music_register_candidate.py`、`scripts/music_recommend.py`、`scripts/music_listen_omni.py`、`scripts/music_library.py`、`scripts/music_align.py`、`scripts/music_mix_plan.py`：十个唯一入口（共享模块：`music_tags.py` 受控词表、`music_echo.py` 固定表格回显卡渲染、`versioned_output.py` 版本命名——多轮回显产物永不静默覆盖（002 问题⑬），只许 import 不单独调用；经验库 `experience/music/` 只许 `music_library.py` 写）。
 - `tests/`：analyze / sourcing / recommend / align / search-terms / netease / listen-omni / mix-plan 确定性与阻断回归（含"无能力不编造"三例）。
