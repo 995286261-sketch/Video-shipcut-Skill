@@ -45,7 +45,7 @@ python skill/subtitle-expert/scripts/subtitle_trim_cues.py --ass <批准.ass> --
 | 节点 | 接缝 | 消费/产出 |
 |---|---|---|
 | G2 | 字幕文本权威源 | 专员**不碰**口播稿内容层；转写/口播稿经 G2 批准后进 G3 作字幕文本唯一来源 |
-| G3 | 布局合同+时间轴生成 | **查经验库拿推荐默认**（`subtitle_experience.py query --kind layout --resolution <WxH>` / `--kind font`——库=建议层：命中项作回显卡【默认=推荐】候选，依据写"经验库+来源项目"；未命中按 style-contract 画幅默认起步）→ 探能力档（probe）→ 写合同与 ASS/SRT → `subtitle_validate_layout.py` 过检 → 产物入 G3 最终回显与门禁收据 `subtitle_timeline` 项；**批准收口后**由节点调 `record-layout/record-renderer` 入库（未过门禁的排版不入库）。库永不携带 cue 时刻与文本（红线 2），G0 追问项跨项目不自动沿用的纪律同样适用于字体/参数——每次都要用户在场批 |
+| G3 | 布局合同+时间轴生成 | **查经验库拿推荐默认**（`subtitle_experience.py query --kind layout --resolution <WxH>` / `--kind font`——库=建议层：命中项作回显卡【默认=推荐】候选，依据写"经验库+来源项目"；未命中按 style-contract 画幅默认起步，且依据必须写明"经验库未命中（含 resolutionMiss），回落模板默认"——查询结果二选一在卡上必显，用户凭此观察库在工作）→ 探能力档（probe）→ 写合同与 ASS/SRT → `subtitle_validate_layout.py` 过检 → 产物入 G3 最终回显与门禁收据 `subtitle_timeline` 项；**批准收口后**由节点调 `record-layout/record-renderer` 入库（未过门禁的排版不入库）。库永不携带 cue 时刻与文本（红线 2），G0 追问项跨项目不自动沿用的纪律同样适用于字体/参数——每次都要用户在场批 |
 | G4 | 烧录执行 | `g4_assemble.py --subtitle-ass` 逐字执行已批准 ASS；**章节卡期间的 cue 修剪由本专员 `subtitle_trim_cues.py` 执行**（"卡上隐字幕"是呈现层规则，实现随归属入专员），G4 只烧派生文件、计数进装配记录 `subtitleCuesTrimmed`，批准源永不改动；样式排版策略见 `style-contract.md`；字体字形覆盖由 G4 ㉛ 预检守门（drawtext 路线），字幕烧录走 libass |
 | G5 | 字幕面 QA | `references/qa-contract.md`（越界 ROI 判读纪律⑪）；**交付包必备 `subtitle-srt-check.json`**（本专员 `subtitle_check_srt.py` 报告）：`g5_validate_delivery.py` 校验握手——status=passed 且报告 sha256 与包内 subtitles.srt 一致（㊍ 交付侧防线，G5 不自持格式正则）；收据 `check_frames` 含字幕检查帧 |
 

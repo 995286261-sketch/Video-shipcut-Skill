@@ -188,7 +188,7 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 字幕时间轴与布局合同必须通过布局校验器机器校验后才能进入最终回显。校验器与全部排版规则（行数/宽度模型、渲染器能力档 `autoWrap`、CJK 显式 `\N` 语义断行、ASS/SRT 同源生成）归**字幕专员**，G3 只调用与消费、不改规则：
 
 ```powershell
-python skill/subtitle-expert/scripts/subtitle_experience.py query --kind layout --resolution <宽x高>   # 先查经验库拿推荐默认（建议层：命中项作【默认=推荐】候选、依据写"经验库+来源项目"；批准≠继承）
+python skill/subtitle-expert/scripts/subtitle_experience.py query --kind layout --resolution <宽x高>   # 先查经验库拿推荐默认（建议层：命中项作【默认=推荐】候选、依据写"经验库+来源项目"；未命中依据必须写"经验库未命中（含 resolutionMiss），回落模板默认"——查询结果二选一在回显卡上必显，不得让用户看不出查没查；批准≠继承）
 python skill/subtitle-expert/scripts/subtitle_probe_renderer.py --output-dir <G3-剪辑计划/字幕/>   # 探能力档（默认保守 autoWrap=false）
 python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> --srt <subtitles.srt> --source <G2-口播句子.json>
 ```
