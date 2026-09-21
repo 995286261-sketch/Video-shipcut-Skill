@@ -1,3 +1,6 @@
+import contextlib
+import importlib.util
+import io
 import json
 import shutil
 import subprocess
@@ -9,6 +12,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 RENDER = ROOT / "skill" / "local-video-render" / "scripts" / "g4_render.py"
+
+
+def load_render_module():
+    spec = importlib.util.spec_from_file_location("g4_render_under_test", RENDER)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+RENDER_MODULE = load_render_module()
 
 
 class G4RenderProfileTest(unittest.TestCase):
@@ -129,6 +142,56 @@ class G4RenderProfileTest(unittest.TestCase):
             )
             self.assertEqual(2, result.returncode)
             self.assertIn("requires --width and --height", result.stdout)
+
+
+class G4RenderTransitionCutTest(unittest.TestCase):
+    """转场手柄扩切（指令经 prepare 透传到段 transition 字段）——进程内 dry-run，
+    红线：负数/起点为负一律拒办；零手柄必须与旧命令逐字相同（默认零风险）。"""
+
+    def dry_commands(self, root, transition, source_start=2000, source_end=12000):
+        raw = root / "pack" / "raw"
+        raw.mkdir(parents=True, exist_ok=True)
+        (raw / "a.mp4").write_bytes(b"not-a-real-video-but-dry-run-only")
+        manifest = root / "manifest.json"
+        segment = {"segmentId": "seg-011", "source": {"relativePath": "raw/a.mp4", "startMs": source_start, "endMs": source_end},
+                   "timeline": {"startMs": 1000, "endMs": 11000}, "output": {"filename": "seg-011.mp4"}}
+        if transition is not None:
+            segment["transition"] = transition
+        manifest.write_text(json.dumps({"status": "prepared_for_render", "projectId": "t", "segments": [segment]}), encoding="utf-8")
+        backup = sys.argv
+        sys.argv = ["g4_render.py", "--manifest", str(manifest), "--source-pack", str(root / "pack"),
+                    "--output-dir", str(root / "out"), "--aspect-ratio-policy", "explicit", "--width", "1920", "--height", "1080", "--dry-run"]
+        stdout = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(stdout):
+                RENDER_MODULE.main()
+        finally:
+            sys.argv = backup
+        return json.loads(stdout.getvalue())["commands"]
+
+    def test_transition_extras_extend_ss_and_duration(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            command = self.dry_commands(Path(temporary), {"headExtraMs": 250, "tailExtraMs": 250})[0]
+            # 起点前移 head、-t 覆盖 网格+两侧手柄：10000+250+250=10500ms；网格本身不变。
+            self.assertAlmostEqual(1.75, float(command[command.index("-ss") + 1]))
+            self.assertAlmostEqual(10.5, float(command[command.index("-t") + 1]))
+
+    def test_zero_transition_reproduces_legacy_cut(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            legacy = self.dry_commands(root, None)
+            extended = self.dry_commands(root, {"headExtraMs": 0, "tailExtraMs": 0})
+        self.assertEqual(legacy, extended)
+
+    def test_head_extra_running_before_source_start_is_refused(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(ValueError, "before source start"):
+                self.dry_commands(Path(temporary), {"headExtraMs": 250, "tailExtraMs": 0}, source_start=100)
+
+    def test_negative_extra_is_refused(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(ValueError, "negative transition extra"):
+                self.dry_commands(Path(temporary), {"headExtraMs": -10, "tailExtraMs": 0})
 
 
 if __name__ == "__main__":

@@ -40,6 +40,9 @@ def build_mask_filters(masks, segment, canvas):
     pixel bands become ih ratios so the mask survives any target canvas."""
     filters = []
     out_start, out_end = segment["timeline"]["startMs"], segment["timeline"]["endMs"]
+    # 手柄扩切后段文件的 0 点前移 headExtra：批准表的绝对窗口换算局部秒时按新原点。
+    head_extra = int((segment.get("transition") or {}).get("headExtraMs") or 0)
+    origin = out_start - head_extra
     for mask in masks:
         if mask.get("segmentId") != segment.get("segmentId"):
             continue
@@ -54,7 +57,7 @@ def build_mask_filters(masks, segment, canvas):
         color = mask.get("color", "black")
         filters.append(
             f"drawbox=x=0:y=trunc(ih*{r0:.6f}):w=iw:h=ih-trunc(ih*{r0:.6f})"
-            f":color={color}:t=fill:enable='between(t,{(start - out_start) / 1000:.3f},{(end - out_start) / 1000:.3f})'"
+            f":color={color}:t=fill:enable='between(t,{(start - origin) / 1000:.3f},{(end - origin) / 1000:.3f})'"
         )
     return filters
 
@@ -125,9 +128,18 @@ def main():
         source=args.source_pack/segment["source"]["relativePath"]
         output=segments_out/segment["output"]["filename"]
         if not source.is_file(): fail(f"missing source {source}")
-        duration=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"])/1000
+        # 转场手柄扩切（transition-expert 指令经 prepare 透传）：文件比成网格面
+        # 多渲染 head/tail 毫秒，源起点前移——G3 深检已保证源余量，这里双保险起点≥0。
+        transition = segment.get("transition") or {}
+        head_extra = int(transition.get("headExtraMs") or 0)
+        tail_extra = int(transition.get("tailExtraMs") or 0)
+        if head_extra < 0 or tail_extra < 0:
+            fail(f"negative transition extra for {segment.get('segmentId')}")
+        if head_extra and segment["source"]["startMs"] - head_extra < 0:
+            fail(f"transition head extra for {segment.get('segmentId')} runs before source start (指令与源范围矛盾)")
+        duration=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"]+head_extra+tail_extra)/1000
         source_duration=(segment["source"]["endMs"]-segment["source"]["startMs"])/1000
-        if duration > source_duration:
+        if duration - (head_extra + tail_extra)/1000 > source_duration:
             fail(f"output duration exceeds approved source range for {segment.get('segmentId')}")
         crop=f"crop=iw:trunc(ih*{1-args.crop_bottom_ratio}):0:0,"
         vf=crop+f"scale={target_width}:{target_height}:force_original_aspect_ratio=decrease,pad={target_width}:{target_height}:(ow-iw)/2:(oh-ih)/2:color=0x101418,setsar=1,fps={args.fps}"
@@ -138,7 +150,7 @@ def main():
         if image_input:
             cmd += ["-loop", "1", "-i", str(source)]
         else:
-            cmd += ["-ss",str(segment["source"]["startMs"]/1000),"-i",str(source)]
+            cmd += ["-ss",str((segment["source"]["startMs"]-head_extra)/1000),"-i",str(source)]
         cmd += ["-t",str(duration),"-map","0:v:0","-vf",vf,"-c:v","libx264","-preset","veryfast","-crf","20","-an","-movflags","+faststart",str(output)]
         commands.append(cmd); outputs.append(output)
     if args.dry_run:
@@ -154,6 +166,8 @@ def main():
         "segmentsDir":str(segments_out),
         "aspectRatioPolicy": args.aspect_ratio_policy,
         "canvas": {"width": target_width, "height": target_height},
+        "transitionsExtended": sum(1 for segment in data.get("segments", [])
+                                   if int((segment.get("transition") or {}).get("headExtraMs") or 0) or int((segment.get("transition") or {}).get("tailExtraMs") or 0)),
     },ensure_ascii=True)); return 0
 if __name__=="__main__":
     try: raise SystemExit(main())

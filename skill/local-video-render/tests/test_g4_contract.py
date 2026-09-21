@@ -118,4 +118,62 @@ class G4ContractTest(unittest.TestCase):
         value=self.run_cli(VALIDATE,"--manifest",mp,"--handoff-dir",handoff,code=2)
         self.assertEqual("invalid",value["status"])
 
+    def make_transition_pack_plan(self):
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":2,"narrationEstimatedDurationSec":2,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},
+              "segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual,"transitionInstruction":"叠化","transitionDurationMs":500},
+                          {"segmentId":"two","assetId":"a","startMs":1000,"endMs":2000,"mappingMode":"one_to_one","visualVerification":visual}],
+              "editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
+        evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
+        p=self.root/"G3-剪辑计划-v0.1.json"; e=self.root/"evidence.json"
+        p.write_text(json.dumps(plan)); e.write_text(json.dumps(evidence))
+        return pack,p,e
+
+    def make_transition_directive(self, plan_path, evidence_path, **overrides):
+        import hashlib
+        directive={"schemaVersion":"0.1","skill":"transition-expert","purpose":"transition_directive","gridInvariant":True,
+                   "timelineDurationMs":2000,
+                   "planSha256":hashlib.sha256(plan_path.read_bytes()).hexdigest().upper(),
+                   "evidenceSha256":hashlib.sha256(evidence_path.read_bytes()).hexdigest().upper(),
+                   "segments":[{"segmentId":"one","headExtraMs":0,"tailExtraMs":250},{"segmentId":"two","headExtraMs":250,"tailExtraMs":0}],
+                   "boundaries":[{"fromSegmentId":"one","toSegmentId":"two","transition":"dissolve","durationMs":500,"offsetMs":750}],
+                   "masterFades":{"fadeInMs":0,"fadeOutMs":0}}
+        directive.update(overrides)
+        path=self.root/"directive.json"; path.write_text(json.dumps(directive,ensure_ascii=False)); return path
+
+    def test_prepare_refuses_approved_transitions_without_directive(self):
+        """挂空合同 G4 侧防线：批准里有转场而不带指令，拒办而不是静默硬切。"""
+        pack,p,e=self.make_transition_pack_plan()
+        value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out",code=2)
+        self.assertIn("--transition-directive",value["error"])
+
+    def test_prepare_transparently_binds_directive_into_manifest(self):
+        pack,p,e=self.make_transition_pack_plan()
+        d=self.make_transition_directive(p,e)
+        self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out","--transition-directive",d)
+        manifest=json.loads((self.root/"out"/"G4-可编辑工程-v0.1.json").read_text(encoding="utf-8"))
+        self.assertEqual({"headExtraMs":0,"tailExtraMs":250},manifest["segments"][0]["transition"])
+        self.assertEqual({"headExtraMs":250,"tailExtraMs":0},manifest["segments"][1]["transition"])
+        block=manifest["transitionDirective"]
+        self.assertEqual(str(d),block["path"]); self.assertEqual(1,block["boundaries"])
+        import hashlib; self.assertEqual(hashlib.sha256(d.read_bytes()).hexdigest().upper(),block["sha256"])
+        # 网格不变：透传手柄绝不移动 timeline 游标。
+        self.assertEqual(0,manifest["segments"][0]["timeline"]["startMs"])
+        self.assertEqual(2000,manifest["timelineDurationMs"])
+
+    def test_prepare_rejects_stale_or_unbound_directive(self):
+        pack,p,e=self.make_transition_pack_plan()
+        d=self.make_transition_directive(p,e,planSha256="0"*64)
+        value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"o1","--transition-directive",d,code=2)
+        self.assertIn("计划哈希",value["error"])
+        d2=self.make_transition_directive(p,e,timelineDurationMs=9999)
+        value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"o2","--transition-directive",d2,code=2)
+        self.assertIn("网格",value["error"])
+        d3=self.make_transition_directive(p,e,skill="somebody-else")
+        value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"o3","--transition-directive",d3,code=2)
+        self.assertIn("transition-expert",value["error"])
+
 if __name__=="__main__": unittest.main()

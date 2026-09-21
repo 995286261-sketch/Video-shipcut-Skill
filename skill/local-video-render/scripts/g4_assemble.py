@@ -145,11 +145,20 @@ def measure_bgm_in_place(bgm_path: Path, contract: dict, timeline_ms: int) -> fl
 
 
 def build_assemble_command(list_file: Path, inputs: list[Path], filter_complex: str, output: Path, fps: int, duration_s: float,
-                           bgm_seek_s: float | None = None) -> list[str]:
-    command = ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(list_file)]
-    for index, path in enumerate(inputs):
-        loop = ["-stream_loop", "-1"] if path.suffix.lower() in {".mp3", ".m4a", ".wav", ".ogg", ".flac", ".aac"} and index > 0 else []
-        seek = ["-ss", f"{bgm_seek_s:.3f}"] if bgm_seek_s and index == 1 else []
+                           bgm_seek_s: float | None = None, segment_files: list | None = None) -> list[str]:
+    command = ["ffmpeg", "-y"]
+    audio_start = 1
+    if segment_files:
+        # 转场路径：逐段独立输入供 xfade/concat 滤镜链使用（网格由指令的 offset 算术保证）。
+        for path in segment_files:
+            command += ["-i", str(path)]
+        audio_start = len(segment_files)
+    else:
+        command += ["-f", "concat", "-safe", "0", "-i", str(list_file)]
+    for offset, path in enumerate(inputs):
+        index = audio_start + offset
+        loop = ["-stream_loop", "-1"] if path.suffix.lower() in {".mp3", ".m4a", ".wav", ".ogg", ".flac", ".aac"} and offset > 0 else []
+        seek = ["-ss", f"{bgm_seek_s:.3f}"] if bgm_seek_s and offset == 1 else []
         command += [*loop, *seek, "-i", str(path)]
     command += [
         "-filter_complex", filter_complex,
@@ -161,6 +170,30 @@ def build_assemble_command(list_file: Path, inputs: list[Path], filter_complex: 
         str(output),
     ]
     return command
+
+
+def build_video_chain(video_layers: list[str], card_filters: list[str], fade_layers: list[str],
+                      segment_ids: list[str], transition_by_pair: dict, fps: int, use_xfade: bool) -> str:
+    """无转场：旧路径 [0:v] 分层，逐字节不变。有转场：逐段 [i:v] 先统一 fps/format/sar
+    （xfade 前提），再按批准边界逐个 xfade、硬切边保持 concat，字幕/标题栏/章节卡等
+    叠加层落在链接输出之后——网格不变 ⇒ 这些时间坐标与旧路径完全一致。"""
+    if not use_xfade:
+        return ",".join([*video_layers, *card_filters, *fade_layers]) + "[v]"
+    parts = [f"[{index}:v]fps=fps={fps},format=yuv420p,setsar=1[segv{index}]" for index in range(len(segment_ids))]
+    current = "segv0"
+    for index in range(len(segment_ids) - 1):
+        following = f"segv{index + 1}"
+        output = f"vcat{index}"
+        boundary = transition_by_pair.get((segment_ids[index], segment_ids[index + 1]))
+        if boundary:
+            duration = int(boundary["durationMs"]) / 1000
+            offset = int(boundary["offsetMs"]) / 1000
+            parts.append(f"[{current}][{following}]xfade=transition={boundary['transition']}:duration={duration:.3f}:offset={offset:.3f}[{output}]")
+        else:
+            parts.append(f"[{current}][{following}]concat=n=2:v=1:a=0[{output}]")
+        current = output
+    overlays = ",".join([*video_layers[1:], *card_filters, *fade_layers])
+    return ";".join(parts + [f"[{current}]{overlays}"]) + "[v]"
 
 
 SUBTITLE_TRIM_SCRIPT = Path(__file__).resolve().parents[2] / "subtitle-expert" / "scripts" / "subtitle_trim_cues.py"
@@ -429,6 +462,34 @@ def main() -> int:
     if abs(cursor - timeline_ms) > args.duration_tolerance_ms:
         fail(f"segment timeline {cursor}ms does not match manifest timelineDurationMs {timeline_ms}ms")
 
+    # 转场指令（transition-expert 经 prepare 透传）：加载即对账——哈希新鲜、网格一致、
+    # 段文件确已按指令扩切。执行==批准，缺做的转场在这里就拦下，不留到成片。
+    directive = None
+    bound = manifest.get("transitionDirective")
+    if isinstance(bound, dict) and bound:
+        directive_path = require_file(Path(str(bound.get("path"))), "transition directive")
+        if sha256(directive_path) != str(bound.get("sha256", "")).upper():
+            fail("transition directive hash drifted from the manifest registration (stale — regenerate directive, then rerun prepare)")
+        directive = load(directive_path)
+        if directive.get("skill") != "transition-expert" or directive.get("purpose") != "transition_directive":
+            fail("manifest.transitionDirective is not a transition-expert transition_directive artifact")
+        if int(directive.get("timelineDurationMs") or 0) != timeline_ms:
+            fail(f"transition directive grid {directive.get('timelineDurationMs')}ms != manifest timeline {timeline_ms}ms")
+    use_xfade = bool(directive and directive.get("boundaries"))
+    transition_by_pair = {(b["fromSegmentId"], b["toSegmentId"]): b for b in (directive or {}).get("boundaries", [])}
+    if use_xfade:
+        directive_extras = {item.get("segmentId"): item for item in directive.get("segments", [])}
+        for segment, path in zip(segments, ordered_files):
+            head = int((segment.get("transition") or {}).get("headExtraMs") or 0)
+            tail = int((segment.get("transition") or {}).get("tailExtraMs") or 0)
+            wanted = directive_extras.get(segment.get("segmentId"), {})
+            if head != int(wanted.get("headExtraMs", 0)) or tail != int(wanted.get("tailExtraMs", 0)):
+                fail(f"{segment.get('segmentId')} manifest transition extras do not match the directive")
+            expected_ms = segment["timeline"]["endMs"] - segment["timeline"]["startMs"] + head + tail
+            file_ms = probe_duration_ms(path)
+            if abs(file_ms - expected_ms) > max(90, 2000 // args.fps):
+                fail(f"{segment.get('segmentId')} rendered file {file_ms}ms != 网格+手柄 {expected_ms}ms——段文件未按指令扩切，重跑 g4_render")
+
     narration = require_file(args.narration_audio, "narration audio")
     narration_ms = probe_duration_ms(narration)
     if narration_ms + args.duration_tolerance_ms < timeline_ms:
@@ -478,10 +539,21 @@ def main() -> int:
     title_contract = load(require_file(args.title_bar, "title bar contract")) if args.title_bar else None
     if title_contract:
         video_layers.append(build_title_bar_filter(title_contract, work))
-    video_chain = ",".join([*video_layers, *card_filters]) + "[v]"
-    filter_complex = video_chain + ";" + audio_filter_chain(1, 2 if len(inputs) == 2 else None, mix_contract, narration_pre)
+    fade_layers: list[str] = []
+    if directive:
+        master = directive.get("masterFades") or {}
+        if int(master.get("fadeInMs") or 0) > 0:
+            fade_layers.append(f"fade=t=in:st=0:d={int(master['fadeInMs']) / 1000:.3f}")
+        if int(master.get("fadeOutMs") or 0) > 0:
+            fade_layers.append(f"fade=t=out:st={(timeline_ms - int(master['fadeOutMs'])) / 1000:.3f}:d={int(master['fadeOutMs']) / 1000:.3f}")
+    video_chain = build_video_chain(video_layers, card_filters, fade_layers,
+                                    [seg.get("segmentId") for seg in segments], transition_by_pair, args.fps, use_xfade)
+    audio_base = len(ordered_files) if use_xfade else 1
+    filter_complex = video_chain + ";" + audio_filter_chain(audio_base, audio_base + 1 if len(inputs) == 2 else None, mix_contract, narration_pre)
     bgm_seek_s = (int(mix_contract.get("trackOffsetMs") or 0) / 1000) if mix_contract else None
-    command = build_assemble_command(list_file.resolve(), [path.resolve() for path in inputs], filter_complex, args.output.resolve(), args.fps, timeline_ms / 1000, bgm_seek_s=bgm_seek_s)
+    command = build_assemble_command(list_file.resolve(), [path.resolve() for path in inputs], filter_complex, args.output.resolve(),
+                                     args.fps, timeline_ms / 1000, bgm_seek_s=bgm_seek_s,
+                                     segment_files=[path.resolve() for path in ordered_files] if use_xfade else None)
     run_checked(command, args.output, "assembled master", cwd=work)
 
     output_ms = probe_duration_ms(args.output)
@@ -553,6 +625,11 @@ def main() -> int:
             "path": str(args.title_bar), "sha256": sha256(args.title_bar),
             "text": str(title_contract.get("text")),
         } if title_contract else None,
+        "transitionDirective": {
+            "path": str(bound.get("path")), "sha256": bound.get("sha256"),
+            "boundaries": len((directive or {}).get("boundaries", [])),
+            "masterFades": (directive or {}).get("masterFades"),
+        } if directive else None,
         "filterGraph": filter_complex,
         "workDir": str(work),
     }

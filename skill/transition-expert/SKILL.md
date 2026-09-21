@@ -23,8 +23,9 @@ metadata:
 ## 执行入口（唯一）
 
 - 探测：`scripts/transition_probe_host.py --output-dir <目录>` → 《转场-宿主能力档-v0.1.json》（xfade 可用性+转场名单实测解析；未知如实 unknown）。
-- 计划深检：`scripts/transition_validate_plan.py --plan <G3计划> --evidence <证据JSON> [--host-profile <能力档>]`（词表/位次/窗口压口播/章节卡交叠/手柄余量/网格连续，批量报错）。
-- （批②）执行指令：`scripts/transition_directive.py`；（批③）装配复检：`scripts/transition_report.py`——立册时未创建，勿调用。
+- 计划深检：`scripts/transition_validate_plan.py --plan <G3计划> --evidence <证据JSON> [--host-profile <能力档>]`（词表/位次/窗口压口播/章节卡交叠/手柄余量/偶数时长/网格连续，批量报错）。
+- 执行指令（批准后、g4_prepare 前运行）：`scripts/transition_directive.py --plan <已批计划> --evidence <证据JSON> --host-profile <能力档> --output-dir <G4目录>` → 《G4-转场执行指令-v0.1.json》（确定性推导：段头尾扩切毫秒、边界 xfade offset、片头片尾黑场；非法计划直接 blocked——**先过深检才有指令**）。prepare 以 `--transition-directive` 消费；计划含转场而不传指令=G4 拒办。
+- 装配复检（G5 握手产物生产者）：`scripts/transition_report.py --manifest <可编辑工程> --assembly-record <装配记录> --directive <指令> --output-dir <目录>` → `transition-audit.json`（filterGraph 逐项对账边界/fade；无转场项目也出报告，transitions=[]）。
 
 不要用临时脚本或手敲 ffmpeg 替代。
 

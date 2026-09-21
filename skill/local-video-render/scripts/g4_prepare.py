@@ -56,6 +56,8 @@ def main() -> int:
     parser.add_argument("--source-pack", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--handle-ms", type=int, default=0)
+    parser.add_argument("--transition-directive", type=Path,
+                        help="transition-expert G4-转场执行指令 (required when the approved plan carries transitions)")
     parser.add_argument("--force", action="store_true", help="overwrite an existing derived manifest intentionally")
     args = parser.parse_args()
     enforce_g4_root(args.plan, args.output_dir)
@@ -71,6 +73,24 @@ def main() -> int:
     evidence_by_id = {item.get("assetId"): item for item in evidence.get("sourceEvidence", [])}
     pack_by_id = {item.get("assetId"): item for item in pack_manifest.get("sourceAssets", [])}
     declared = {item.get("segmentId"): item for item in plan.get("segments", [])}
+    # 转场指令绑定（transition-expert 产物握手）：批准含转场而不传指令=G4 拒办，
+    # 绝不静默丢弃批准的转场（002 挂空合同教训的 G4 侧）。
+    directive_doc = None
+    plan_transitions = any(seg.get("transitionInstruction") not in (None, "硬切") for seg in declared.values())
+    if args.transition_directive:
+        directive_doc = load(args.transition_directive)
+        if directive_doc.get("skill") != "transition-expert" or directive_doc.get("purpose") != "transition_directive":
+            fail("--transition-directive is not a transition-expert transition_directive artifact")
+        if directive_doc.get("planSha256") != sha256(args.plan):
+            fail("转场指令绑定的计划哈希与 --plan 不一致（stale，先重跑 transition_directive.py）")
+        if directive_doc.get("evidenceSha256") != sha256(args.evidence):
+            fail("转场指令绑定的证据哈希与 --evidence 不一致（stale，先重跑 transition_directive.py）")
+        if directive_doc.get("gridInvariant") is not True:
+            fail("转场指令未声明网格不变，拒收")
+    elif plan_transitions:
+        fail("批准的计划含转场但未传 --transition-directive：先运行 skill/transition-expert/scripts/transition_directive.py 生成《G4-转场执行指令》，"
+             "G4 不静默丢弃批准的转场（transition-contract.md）")
+    directive_extras = {item.get("segmentId"): item for item in (directive_doc or {}).get("segments", [])}
     timeline = plan.get("editPlan", {}).get("timeline", [])
     order = [item.get("segmentId") for item in timeline]
     timeline_by_id = {item.get("segmentId"): item for item in timeline}
@@ -128,10 +148,14 @@ def main() -> int:
             "timeline": {"startMs": cursor, "endMs": cursor + output_duration, "durationMs": output_duration},
             "mapping": {"mode": segment.get("mappingMode", "one_to_one"), "playbackRate": 1.0, "freeze": None, "padding": None},
             "editableSource": {"startMs": handle_start, "endMs": handle_end, "handleBeforeMs": start-handle_start, "handleAfterMs": handle_end-end},
+            "transition": {"headExtraMs": int((directive_extras.get(segment_id) or {}).get("headExtraMs", 0)),
+                           "tailExtraMs": int((directive_extras.get(segment_id) or {}).get("tailExtraMs", 0))},
             "output": {"filename": f"seg-{index:03d}.mp4", "audio": "excluded", "subtitleTreatment": "per G3 source-subtitle policy"},
             "riskFlags": segment.get("riskFlags", []),
         })
         cursor += output_duration
+    if directive_doc and cursor != directive_doc.get("timelineDurationMs"):
+        fail(f"转场指令网格 {directive_doc.get('timelineDurationMs')}ms != 计划成片网格 {cursor}ms（stale，重跑指令）")
     # Issue 025: the authoritative target duration is the user-approved durationDecision,
     # not an optional targetProfile; a missing decision must block instead of yielding 0ms.
     decision_target = plan.get("durationDecision", {}).get("targetDurationSec")
@@ -152,6 +176,9 @@ def main() -> int:
         "sourceAudioPolicy": "exclude", "segmentCount": len(rendered), "timelineDurationMs": cursor,
         "targetDurationMs": target_ms, "durationDeltaMs": cursor-target_ms, "targetFps": edit_fps,
         "segments": rendered,
+        "transitionDirective": ({"path": str(args.transition_directive), "sha256": sha256(args.transition_directive),
+                                 "boundaries": len(directive_doc["boundaries"]), "masterFades": directive_doc["masterFades"]}
+                                if directive_doc else None),
         "renderRequirements": {"preserveSegmentBoundaries": True, "sourceAudio": "exclude", "flattenedPreview": "qa_only_not_chatcut_timeline_source"},
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)

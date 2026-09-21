@@ -138,6 +138,9 @@ def validate_plan(plan: dict, evidence: dict, host_profile) -> dict:
         if not isinstance(duration, int) or isinstance(duration, bool) or not MIN_DURATION_MS <= duration <= MAX_DURATION_MS:
             errors.append(f"{segment_id} 转场 {mode} 需整数 transitionDurationMs ∈ [{MIN_DURATION_MS},{MAX_DURATION_MS}]ms")
             continue
+        if duration % 2:
+            errors.append(f"{segment_id} 转场时长必须为偶数毫秒（手柄回填对称模型：两侧各 D/2，网格分毫不移）")
+            continue
         start, end = segment.get("outputStartMs", 0), segment.get("outputEndMs", 0)
         last = position == len(ordered) - 1
         if mode == "黑场入" and position != 0:

@@ -269,6 +269,82 @@ class G4AssembleTests(unittest.TestCase):
         self.assertNotEqual(0, result.returncode)
         self.assertIn("-24 and -8", result.stdout + result.stderr)
 
+    # --- xfade 链实装（transition-expert 指令经 prepare 透传）。夹具：两个 1000ms
+    # 段文件 + 2s 口播。网格 750+750、边界 D=500 ⇒ 段文件恰为网格+250 手柄的扩切
+    # 产物，成片总长必须仍是 1500——重叠掉的就是手柄，网格零位移是本批宪法验收。
+
+    def bind(self, segments_grid, boundary_offset):
+        import hashlib
+        directive = {"schemaVersion": "0.1", "skill": "transition-expert", "purpose": "transition_directive",
+                     "gridInvariant": True, "timelineDurationMs": sum(segments_grid),
+                     "segments": [{"segmentId": "s1", "headExtraMs": 0, "tailExtraMs": 250},
+                                  {"segmentId": "s2", "headExtraMs": 250, "tailExtraMs": 0}],
+                     "boundaries": [{"fromSegmentId": "s1", "toSegmentId": "s2", "transition": "dissolve",
+                                     "durationMs": 500, "offsetMs": boundary_offset}],
+                     "masterFades": {"fadeInMs": 0, "fadeOutMs": 400}}
+        directive_path = self.root / "directive.json"
+        directive_path.write_text(json.dumps(directive, ensure_ascii=False), encoding="utf-8")
+        digest = hashlib.sha256(directive_path.read_bytes()).hexdigest().upper()
+        self.manifest.write_text(json.dumps({
+            "schemaVersion": "0.2", "node": "G4", "projectId": "demo-001", "status": "prepared_for_render",
+            "timelineDurationMs": sum(segments_grid),
+            "segments": [
+                {"segmentId": "s1", "order": 1, "timeline": {"startMs": 0, "endMs": segments_grid[0]},
+                 "transition": {"headExtraMs": 0, "tailExtraMs": 250}, "output": {"filename": "seg-001.mp4"}},
+                {"segmentId": "s2", "order": 2, "timeline": {"startMs": segments_grid[0], "endMs": sum(segments_grid)},
+                 "transition": {"headExtraMs": 250, "tailExtraMs": 0}, "output": {"filename": "seg-002.mp4"}},
+            ],
+            "transitionDirective": {"path": str(directive_path), "sha256": digest, "boundaries": 1,
+                                    "masterFades": {"fadeInMs": 0, "fadeOutMs": 400}},
+        }), encoding="utf-8")
+
+    def rehash_directive_registration(self):
+        import hashlib
+        doc = json.loads(self.manifest.read_text(encoding="utf-8"))
+        doc["transitionDirective"]["sha256"] = hashlib.sha256((self.root / "directive.json").read_bytes()).hexdigest().upper()
+        self.manifest.write_text(json.dumps(doc), encoding="utf-8")
+
+    def test_golden_xfade_master_keeps_grid_and_records_execution(self):
+        self.bind([750, 750], 500)
+        result = self.run_assemble()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
+        # 1000+1000 段文件重叠 500 ⇒ 成片恰好等于批准网格 1500：手柄回填模型成立。
+        self.assertLessEqual(abs(record["probedDurationMs"] - 1500), 400)
+        self.assertIn("xfade=transition=dissolve:duration=0.500:offset=0.500", record["filterGraph"])
+        self.assertIn("fade=t=out:st=1.100:d=0.400", record["filterGraph"])
+        self.assertEqual({"fadeInMs": 0, "fadeOutMs": 400}, record["transitionDirective"]["masterFades"])
+        self.assertEqual({"video", "audio"}, self.stream_kinds(self.output))
+
+    def test_stale_directive_registration_is_refused(self):
+        self.bind([750, 750], 500)
+        doc = json.loads(self.manifest.read_text(encoding="utf-8"))
+        doc["transitionDirective"]["sha256"] = "F" * 64
+        self.manifest.write_text(json.dumps(doc), encoding="utf-8")
+        result = self.run_assemble()
+        self.assertEqual(2, result.returncode)
+        self.assertIn("drifted", result.stdout + result.stderr)
+
+    def test_unextended_segment_file_is_refused_not_silently_retried(self):
+        # 网格按 1000+1000 但段文件没扩手柄：期望 1250 实得 1000 → 拒办并指回 g4_render。
+        self.bind([1000, 1000], 750)
+        result = self.run_assemble()
+        self.assertEqual(2, result.returncode)
+        joined = result.stdout + result.stderr
+        # 错误 JSON 走 ensure_ascii，中文以转义形式出现：断言 ASCII 骨架 + g4_render 指路。
+        self.assertIn("rendered file 1000ms", joined)
+        self.assertIn("g4_render", joined)
+
+    def test_directive_grid_mismatch_is_refused(self):
+        self.bind([750, 750], 500)
+        directive = json.loads((self.root / "directive.json").read_text(encoding="utf-8"))
+        directive["timelineDurationMs"] = 9999
+        (self.root / "directive.json").write_text(json.dumps(directive), encoding="utf-8")
+        self.rehash_directive_registration()
+        result = self.run_assemble()
+        self.assertEqual(2, result.returncode)
+        self.assertIn("grid", result.stdout + result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()
