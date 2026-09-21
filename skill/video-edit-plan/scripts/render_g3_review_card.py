@@ -33,6 +33,12 @@ def mmss(ms: int) -> str:
     return f"{minutes:02}:{seconds:02}.{millis:03}"
 
 
+def transition_cell(row: dict) -> str:
+    mode = row["transitionInstruction"]
+    duration = row.get("transitionDurationMs")
+    return f"{mode} · {mmss(duration)}" if isinstance(duration, int) else mode
+
+
 def bgm_basis_block(basis: dict) -> list[str]:
     total = basis["snappedCount"] + basis["missedCount"]
     return [
@@ -69,7 +75,7 @@ def render(callback: dict) -> str:
             row["observedVisuals"],
             f"{row['semanticStatus']} / {row['subjectStatus']} / {row['riskSummary']}",
             bgm_cell,
-            row["transitionInstruction"],
+            transition_cell(row),
         ]
         lines.append("| " + " | ".join(cell(value) for value in values) + " |")
     lines.extend(["", "请核对全表；确认无误后，使用精确确认串：`确认 G3`。", ""])

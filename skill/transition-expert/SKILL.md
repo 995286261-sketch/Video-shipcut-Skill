@@ -1,0 +1,37 @@
+---
+name: transition-expert
+description: 对视频转场做确定性探测、模型校验与执行指令推导的领域专员：探测宿主 ffmpeg xfade 能力档（转场名单实测解析，无探测不声称），深检 G3 计划的转场决定（受控词表、口播停顿窗口、手柄回填余量、缺料摊牌报最大可行时长、成片网格不变），并向 G4 提供确定性执行指令与装配复检。核心模型=音不动画面服从、手柄回填、G4 永不静默降级。不负责剪辑决策、口播/字幕内容、BGM 对齐或交付打包——那些归各节点专员。
+metadata:
+  pipelineNode: support
+---
+
+# 转场专家（transition-expert）
+
+把"转场"从 G3 卡上的挂空列（有卡无计划、有计划无执行——002 实际批准过"叠化/硬切按 G4 微调"）剥成独立领域专员（用户 2026-09-21 拍板；出生证=缺陷梳理 §一-8，方案经 plan 模式批准）。本 Skill 是**领域专员**（`pipelineNode: support`）：转场模型与校验全在这里出合同，节点专员只调用与逐字执行（与 music-expert、subtitle-expert 同一"底座+插件"架构）。
+
+## 插件纪律（可迁移四标准）
+
+1. 接口只有 CLI 参数与产物文件；节点零代码 import 本专员。
+2. 依赖全靠环境变量与 PATH（ffmpeg/ffprobe；库根如需再议走 `TRANSITION_EXPERT_*` 通用名），禁硬编码机器路径；产物一律 `--output-dir`。
+3. 合同自带接线说明书（`references/transition-contract.md` 末节），拷到新宿主照说明书重接。
+4. 缺能力结构化 blocked / 保守降级，绝不编造：无能力档则叠化一律不声称可用（能力可以缺、事实不能编）。
+
+## 核心模型（三条宪法）
+
+**网格不变性**（口播时间轴为权威，转场零平移）、**手柄回填**（叠化吃切点两侧源余量 D/2，成片总长不变）、**缺料摊牌**（余量不足报确切缺口与最大可行时长，用户逐切点定夺；G4 永不静默降级）。全文以 `references/transition-contract.md` 为唯一事实源。
+
+## 执行入口（唯一）
+
+- 探测：`scripts/transition_probe_host.py --output-dir <目录>` → 《转场-宿主能力档-v0.1.json》（xfade 可用性+转场名单实测解析；未知如实 unknown）。
+- 计划深检：`scripts/transition_validate_plan.py --plan <G3计划> --evidence <证据JSON> [--host-profile <能力档>]`（词表/位次/窗口压口播/章节卡交叠/手柄余量/网格连续，批量报错）。
+- （批②）执行指令：`scripts/transition_directive.py`；（批③）装配复检：`scripts/transition_report.py`——立册时未创建，勿调用。
+
+不要用临时脚本或手敲 ffmpeg 替代。
+
+## 边界（不做什么）
+
+不决定哪里该用转场（G3 人工逐切点批准，专员不推荐不代选）；不碰口播/字幕/音乐内容层；不渲染不装配（执行参数归 G4，专员只产指令文件与校验）；不建经验库（第一批无验证历史可沉淀，冻结律）。
+
+## 接线现状
+
+G3：probe → `transition_validate_plan.py` 深检 → 产物入最终回显与门禁收据；节点侧词表校验在 video-edit-plan（`plan-contract.md` 转场节）。G4/G5：批②③建设中，接线表见 `references/transition-contract.md` 末节。改任一接缝先改合同。

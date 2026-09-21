@@ -15,6 +15,13 @@ from pathlib import Path
 # design: skills never import each other's code, the contract file is truth.
 LAYOUT_TIERS = {"快切", "推进", "常规", "留白"}
 
+# Transition vocabulary shared with validate_g3_callback.py and
+# skill/transition-expert/references/transition-contract.md (002 挂空合同修复批：
+# 回显卡"转场指令"列从此在计划侧有出处）。抹开=预留档，第一批禁用。
+# Window/handle/缺料 deep checks belong to transition-expert, not this node validator.
+TRANSITION_MODES = {"硬切", "叠化", "黑场入", "黑场出", "抹开"}
+TRANSITION_DURATION_MODES = {"叠化", "黑场入", "黑场出", "抹开"}
+
 
 G2_DECISION_VALIDATOR = Path(__file__).resolve().parents[2] / "media-evidence-prep" / "scripts" / "validate_g2_decision.py"
 spec = importlib.util.spec_from_file_location("validate_g2_decision", G2_DECISION_VALIDATOR)
@@ -463,6 +470,22 @@ def validate_segment(segment: dict, ids: set, known: dict, beat_index: dict, sou
     # mode — a review-stage plan must never carry values the approval stage rejects.
     mapping = segment.get("mappingMode", "one_to_one")
     check(mapping in {"one_to_one", "trim"}, f"segment {segment_id} mappingMode is not allowed")
+    # 转场字段：absent = 硬切。词表合法与时长在场是节点侧门条；窗口压口播、
+    # 手柄缺料、档位位次等模型校验归 transition-expert（transition_validate_plan.py）。
+    transition = segment.get("transitionInstruction")
+    if transition is not None:
+        check(transition in TRANSITION_MODES,
+              f"segment {segment_id} transitionInstruction must be one of 硬切/叠化/黑场入/黑场出（抹开=预留未开放）；"
+              f"写明单一指令，含糊句（如：按 G4 微调）一律拒绝")
+        if transition == "抹开":
+            check(False, f"segment {segment_id} 抹开是预留档，第一批未开放（见 transition-contract.md）")
+        if transition in TRANSITION_DURATION_MODES:
+            duration = segment.get("transitionDurationMs")
+            check(isinstance(duration, int) and not isinstance(duration, bool) and 100 <= duration <= 1500,
+                  f"segment {segment_id} transition {transition} requires integer transitionDurationMs between 100 and 1500")
+        else:
+            check(segment.get("transitionDurationMs") is None,
+                  f"segment {segment_id} 硬切 must not carry transitionDurationMs")
     output_start, output_end = segment.get("outputStartMs"), segment.get("outputEndMs")
     output_duration = segment.get("outputDurationMs")
     if isinstance(start, int) and isinstance(end, int):

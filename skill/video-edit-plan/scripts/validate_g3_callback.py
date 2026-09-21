@@ -19,6 +19,9 @@ SELECTION_HEADERS = [
 PLACEHOLDER = re.compile(r"未生成|待缩窄|候选|待定|\bnone\b|^无$", re.IGNORECASE)
 # Shared controlled vocabulary with validate_g3_plan.py / music_align v0.2.
 LAYOUT_TIERS = {"快切", "推进", "常规", "留白"}
+# Transition vocabulary shared with validate_g3_plan.py and
+# skill/transition-expert/references/transition-contract.md (duplicated by design).
+TRANSITION_MODES = {"硬切", "叠化", "黑场入", "黑场出", "抹开"}
 BGM_BASIS_FIELDS = ("alignmentRef", "trackOffsetMs", "timelineMs", "snappedCount", "missedCount", "duckedSentences")
 
 
@@ -168,6 +171,16 @@ def validate_final(callback: dict, plan: dict, alignment: dict | None = None) ->
                 fail(f"{segment_id} layoutTier must be one of 快切/推进/常规/留白")
             if tier != plan_segment.get("layoutTier"):
                 fail(f"{segment_id} callback layoutTier must equal the plan segment's layoutTier")
+        # 002 挂空合同修复批：卡上第 8 列必须逐字等于计划侧字段（缺省=硬切）。
+        # "叠化/硬切按 G4 微调"这类含糊句从此进不了批准卡——批准什么就执行什么。
+        if row["transitionInstruction"] not in TRANSITION_MODES:
+            fail(f"{segment_id} transitionInstruction must be one of 硬切/叠化/黑场入/黑场出"
+                 f"（抹开=预留未开放）；复合或含糊指令一律拒绝")
+        plan_transition = plan_segment.get("transitionInstruction") or "硬切"
+        if row["transitionInstruction"] != plan_transition:
+            fail(f"{segment_id} callback transitionInstruction must equal the plan segment's（计划缺省即硬切）")
+        if plan_transition != "硬切" and row.get("transitionDurationMs") != plan_segment.get("transitionDurationMs"):
+            fail(f"{segment_id} callback transitionDurationMs must equal the plan's transitionDurationMs")
         if plan_segment.get("visualVerification", {}).get("status") != "verified":
             fail(f"{segment_id} requires verified visualVerification in the plan")
         if plan_segment.get("semanticAlignment", {}).get("status") not in {"direct_match", "not_applicable"}:
