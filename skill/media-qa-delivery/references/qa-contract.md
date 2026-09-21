@@ -41,7 +41,7 @@ Check decode, codec, dimensions, frame rate, audio tracks, duration delta, cover
 
 ### 检测器判读纪律（002 验收问题 ⑪⑭）
 
-- **字幕越界检测（⑪）**：边缘越界类机器检查（如 cropdetect/边缘阈值）**只对字幕不透明描边/底带 ROI 出结论**；画面内容自身的亮边（亮色肩甲、高光轮廓等）不构成字幕被裁的证据。任何越界告警必须经检查帧目视确认后才能升级为警告或阻塞项，未确认前如实写"待人工判读"，不得直接报通过、也不得把误报当缺陷呈卡。
+- **字幕面检查（⑪等）**：判读纪律唯一口径已剥入字幕专员 `skill/subtitle-expert/references/qa-contract.md`（越界只对描边/底带 ROI 出结论、告警须目视确认、绿灯不背渲染正确性的锅）；G5 按该合同消费，检查帧证据仍登记在收据 `check_frames` 项。
 - **重复帧检测对动漫平涂过敏（⑭）**：mpdecimate 一类检测器对平涂/赛璐璐画风会大量误标（002 实测 2842→1741 帧）。标准解释链 = **源区间互斥机验**（traceability 中各段源时间区间两两不重叠）**+ 抽帧目视**双确认；两者一致时按"检测器判读差异"如实记警告并附解释链，不得据此报"无重复画面"通过，也不得把误标帧当作重复画面缺陷。
 - **finishedAt 语义（⑬）**：`finishedAt` = **机器质检收口时刻**（metadata QA 完成、报告落盘的时间），不是交付关单时刻；交付关单以 pipeline-state 的 `确认G5` 审批记录为准。pending-human-review 状态的 manifest 允许暂缺 `finishedAt`，质检收口后必须回填。
 

@@ -1,6 +1,6 @@
-# subtitle-expert 章程草案 v0.1（待用户拍板，未立册）
+# subtitle-expert 章程 v0.1（已拍板并执行）
 
-> 2026-09-21 随 002 裁决批次起草。**本文件只是章程，不代表已剥出**——剥出与否、何时剥，等用户口令。
+> 2026-09-21 随 002 裁决批次起草为草案；同日用户口令"push，然后万事大吉了我们就弄 subtitle-expert 了"拍板剥出立册。文件名保留"章程草案"以存历史。执行结果与本章程的出入，如实记在文末《执行记录》。
 
 ## 为什么是它（earned，不是想象）
 
@@ -38,3 +38,17 @@
 
 - 迁移=两份合同搬家+一处校验器搬家+引用清扫，估计单批可完成；风险=硬编码引用漏清，靠全量回归兜底。
 - 反对意见如实呈出：⑧ 的原地修复**已经落地**（7ba993c），剥不剥不再买"能修 bug"，只买"归属清晰+可整体迁移"。若你判断当前维护成本优先，维持现状完全成立。
+
+## 执行记录（2026-09-21，剥出立册）
+
+- **落册物**：`skill/subtitle-expert/`（SKILL.md，`pipelineNode: support`，花名册已登记）——
+  - 块1 能力探测：`scripts/subtitle_probe_renderer.py` 新写（探测 ffmpeg/libass 版本；`autoWrap=true` 必须随附实测证据，否则拒收），产物 `字幕-渲染器能力档-v0.1.json`；缺 ffmpeg 结构化 blocked。
+  - 块2 排版合同与校验：`scripts/subtitle_validate_layout.py` 自 video-edit-plan 迁入（含 ⑧ autoWrap 档位逻辑，零行为改动）；`references/layout-contract.md` 立为唯一事实源（合同形状＋能力档语义＋生成规则＋接线说明书末节）。
+  - 块3 烧录参数合同：`references/style-contract.md` 自 local-video-render 的 caption-style-contract.md 迁入（正文原样保留，仅加归属头）。
+  - 块4 QA 纪律：`references/qa-contract.md` 新写（⑪ ROI-only 边缘检测与判读纪律；"绿灯≠渲染正确"——画面发现裁切=能力档选错，回 G3 改档，不背渲染锅）。
+- **与章程的出入（如实）**：
+  - 块2 的"断行引擎、ASS/SRT 同源生成器"**未新建**——防过度设计红线：暂无事故证明需要生成引擎；SRT 换算规则（cs×10 零填充＋真实换行）已作为文档纪律固化进 layout-contract.md，生成仍由节点按合同执行。
+  - 块1 的"字形覆盖探测"**未做**——㉛ drawtext 字形预检留在 G4 装载守卫内（非字幕排版能力），SKILL 边界已写明不抢。
+  - 块3 的"g4_assemble 哈希对账"只落了**合同指向**：G4 逐字消费 `--subtitle-ass`（G3 冻结产物）＋读专员 style-contract，未新增对账机制——SRT 时基类事故（㊍）的修复已由换算规则承担，复现证据出现前不加层。
+- **接线清扫**：G3（SKILL 改为"只调专员脚本、不实现规则"，g3-plan.md 校验命令指向专员＋能力档说明保留）、G4（SKILL 指向专员 style-contract）、G5（media-qa-delivery qa-contract 字幕面改指针）；旧脚本、旧 caption-style 合同、旧测试删除，grep 零残留。
+- **验证**：新套件 12/12（校验器 9＋探测器 3，进程内 importlib 模式）；全量回归 9 套全绿（subtitle-expert 12、video-edit-plan 90、music-expert 96、local-video-render 34、其余 5 套照常）。

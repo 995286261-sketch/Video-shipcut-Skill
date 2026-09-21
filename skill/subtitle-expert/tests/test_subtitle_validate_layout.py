@@ -1,5 +1,7 @@
+import contextlib
+import importlib.util
+import io
 import json
-import subprocess
 import sys
 import tempfile
 import unittest
@@ -7,8 +9,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SCRIPT = ROOT / "skill/video-edit-plan/scripts/validate_g3_subtitle_layout.py"
-PYTHON = sys.executable
+SCRIPT = ROOT / "skill/subtitle-expert/scripts/subtitle_validate_layout.py"
+
+_spec = importlib.util.spec_from_file_location("subtitle_validate_layout", SCRIPT)
+validator = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(validator)
 
 ASS_HEADER = """[Script Info]
 ScriptType: v4.00+
@@ -51,19 +56,35 @@ class SubtitleLayoutTests(unittest.TestCase):
         value.update(overrides)
         return self.write("layout.json", json.dumps(value, ensure_ascii=False))
 
-    def run_cli(self, ass, layout):
-        result = subprocess.run([PYTHON, str(SCRIPT), "--ass", str(ass), "--layout", str(layout)], capture_output=True, text=True, encoding="utf-8")
-        return result.returncode, result.stdout + result.stderr
+    def run_validator(self, ass, layout):
+        """Call main() in-process (importlib pattern, as in music-expert tests):
+        mirrors the __main__ contract — ValueError becomes an invalid JSON exit 2."""
+        argv = ["subtitle_validate_layout", "--ass", str(ass), "--layout", str(layout)]
+        buffer = io.StringIO()
+        saved = sys.argv
+        sys.argv = argv
+        try:
+            with contextlib.redirect_stdout(buffer):
+                try:
+                    code = validator.main()
+                except SystemExit as error:
+                    code = error.code if isinstance(error.code, int) else 2
+                except (OSError, ValueError, json.JSONDecodeError) as error:
+                    buffer.write(json.dumps({"status": "invalid", "error": str(error)}, ensure_ascii=True))
+                    code = 2
+        finally:
+            sys.argv = saved
+        return code, buffer.getvalue()
 
     def test_two_broken_lines_within_contract_pass(self):
         ass = self.ass(14, "从 NZ 开头的番号就能看出它的血脉：\\N它是在第一次新吉翁战争时期投入实战的机体。")
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertEqual(0, code, output)
         self.assertIn('"maxRenderedLinesObserved": 2', output)
 
     def test_fontsize_drift_from_contract_is_rejected(self):
         ass = self.ass(20, "短句一条。")
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertNotEqual(0, code)
         self.assertIn("differs from layout contract fontsize", output)
 
@@ -71,31 +92,31 @@ class SubtitleLayoutTests(unittest.TestCase):
         # Issue 002-⑧: absent autoWrap means the renderer may NOT auto-wrap CJK;
         # a 100-char run must be flagged as clipping, not silently "wrapped".
         ass = self.ass(14, "句" * 100)
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertNotEqual(0, code)
         self.assertIn("unbreakable run", output)
 
     def test_single_run_wrapping_to_three_lines_is_rejected(self):
         ass = self.ass(14, "句" * 100)
-        code, output = self.run_cli(ass, self.layout(lane={"autoWrap": True}))
+        code, output = self.run_validator(ass, self.layout(lane={"autoWrap": True}))
         self.assertNotEqual(0, code)
         self.assertIn("needs 3 rendered lines", output)
 
     def test_autoWrap_capability_profile_reported(self):
         ass = self.ass(14, "短句一条。")
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertEqual(0, code, output)
         self.assertIn('"autoWrap": false', output)
 
     def test_non_boolean_autoWrap_is_rejected(self):
         ass = self.ass(14, "短句一条。")
-        code, output = self.run_cli(ass, self.layout(lane={"autoWrap": "yes"}))
+        code, output = self.run_validator(ass, self.layout(lane={"autoWrap": "yes"}))
         self.assertNotEqual(0, code)
         self.assertIn("autoWrap must be a boolean", output)
 
     def test_hard_breaks_beyond_max_lines_are_rejected(self):
         ass = self.ass(14, "第一行\\N第二行\\N第三行")
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertNotEqual(0, code)
         self.assertIn("needs 3 rendered lines", output)
 
@@ -105,13 +126,13 @@ class SubtitleLayoutTests(unittest.TestCase):
         del value["lanes"]["narration"]["maxLines"]
         contract.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
         ass = self.ass(14, "短句一条。")
-        code, output = self.run_cli(ass, contract)
+        code, output = self.run_validator(ass, contract)
         self.assertNotEqual(0, code)
         self.assertIn("maxLines", output)
 
     def test_timeline_without_events_is_rejected(self):
         ass = self.ass(14)
-        code, output = self.run_cli(ass, self.layout())
+        code, output = self.run_validator(ass, self.layout())
         self.assertNotEqual(0, code)
         self.assertIn("no dialogue events", output)
 

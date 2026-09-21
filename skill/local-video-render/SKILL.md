@@ -10,7 +10,7 @@ metadata:
 
 G4 是单一节点、单一 Skill，正式项目产物写入 `G4_ROOT`。读取 [渲染合同](references/render-contract.md) 和 [项目布局合同](../p0-c-pipeline/references/project-layout-contract.md) 后执行。用户回显遵循 [P0-C 路径展示合同](../p0-c-pipeline/references/path-display-contract.md)；工程 JSON 和验证报告中的机器路径保持原始字符串。
 
-当用户要求固定字幕、或预览显示字幕因自适应换行而产生位置/字号跳动时，读取 [固定字幕条合同](references/caption-style-contract.md)。
+当用户要求固定字幕、或预览显示字幕因自适应换行而产生位置/字号跳动时，读取字幕专员的 [固定字幕条合同](../subtitle-expert/references/style-contract.md)（G4 只逐字执行，排版策略归专员）。
 
 当成片需要封面、章节卡、配音、背景音乐或烧录字幕时，必须读取 [客户演示成片质量补丁](references/demo-quality-patch.md)。该补丁来自 TASK-050 的实际渲染与人工评审，优先于本文件中与画幅、旁白和最终合成有关的旧默认值。
 

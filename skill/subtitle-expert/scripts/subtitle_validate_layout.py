@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Machine-check a G3 narration ASS timeline against its subtitle layout contract.
 
+Owned by subtitle-expert (字幕领域专员，用户 2026-09-21 拍板自 video-edit-plan 剥出，
+原名 validate_g3_subtitle_layout.py)。G3 只调用并消费结果；布局合同形状与渲染器能力档
+见 references/layout-contract.md。
+
 Issue 026: long sentences silently wrapped past the contracted line budget (e.g. three
 rendered lines under maxLines=2), and the ASS style fontsize could drift from the
 contract. This validator estimates every dialogue's rendered line count from the ASS

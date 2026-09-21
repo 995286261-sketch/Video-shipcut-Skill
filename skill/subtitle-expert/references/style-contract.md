@@ -1,4 +1,6 @@
-# 固定字幕条合同
+# 固定字幕条合同（style-contract）
+
+> 归属 subtitle-expert（用户 2026-09-21 拍板剥出，原 `local-video-render/references/caption-style-contract.md`）。G4 只逐字执行本合同的排版策略；合同变更在专员侧。
 
 当用户明确要求字幕稳定、易读，或审核发现 SRT 的自适应换行使文字位置、字号或视觉重心跳动时，选择 `fixed_bottom_band`。这是压平预览/成片的排版策略；SRT 仍保留为可编辑与交付字幕参考。
 
