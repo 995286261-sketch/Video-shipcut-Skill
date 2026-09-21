@@ -26,10 +26,12 @@
 ## 校验入口（唯一）
 
 ```bash
-python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> [--srt <subtitles.srt>]
+python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> [--srt <subtitles.srt>] [--source <G2-口播句子.json>]
+python skill/subtitle-expert/scripts/subtitle_check_srt.py <subtitles.srt>   # G5 交付侧独立复检；stdout JSON 存为包内 subtitle-srt-check.json
+python skill/subtitle-expert/scripts/subtitle_trim_cues.py --ass <批准.ass> --out <派生.ass> --card-range <起ms:止ms>   # 章节卡隐藏，由 G4 调用
 ```
 
-保守档下的判定模型：空格是唯一合法断点；**任何不可断且超宽的连续段（典型为无空格中文长句）直接判违规**（渲染器会裁切而不是折行）；行数=`\N` 硬断行数+空格折行数，超 `maxLines` 违规。`--srt` 附带交付副本格式校验（`HH:MM:SS,mmm` 零填充、单调不重叠、与 ASS 逐 cue 对齐，㊍）。
+保守档下的判定模型：空格是唯一合法断点；**任何不可断且超宽的连续段（典型为无空格中文长句）直接判违规**（渲染器会裁切而不是折行）；行数=`\N` 硬断行数+空格折行数，超 `maxLines` 违规。机器强制的生成纪律：`--srt` 按 [Events] 书写序逐 cue 与批准时间轴**对时、对文**（标点/换行不敏感）——**10× 时基错位（㊍）在逐 cue 对时下必然被拒**；`--source` 按序逐块对 G2 批准的口播句子 JSON（一条批准口播块=一个排版块，规则 1）；将事件按 Start 排序后仍出现时间重叠的，视为"强调拆层"（规则 3）。
 
 ## 生成规则（G3 写 ASS/SRT 时执行）
 
@@ -44,7 +46,7 @@ python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字�
 |---|---|---|
 | G2 | 字幕文本权威源 | 专员**不碰**口播稿内容层；转写/口播稿经 G2 批准后进 G3 作字幕文本唯一来源 |
 | G3 | 布局合同+时间轴生成 | 探能力档（probe）→ 写合同与 ASS/SRT → `subtitle_validate_layout.py` 过检 → 产物入 G3 最终回显与门禁收据 `subtitle_timeline` 项 |
-| G4 | 烧录执行 | `g4_assemble.py --subtitle-ass` 逐字执行已批准 ASS；样式排版策略见 `style-contract.md`；字体字形覆盖由 G4 ㉛ 预检守门（drawtext 路线），字幕烧录走 libass |
-| G5 | 字幕面 QA | `references/qa-contract.md`（越界 ROI 判读纪律⑪、SRT 交付格式）；收据 `check_frames` 含字幕检查帧 |
+| G4 | 烧录执行 | `g4_assemble.py --subtitle-ass` 逐字执行已批准 ASS；**章节卡期间的 cue 修剪由本专员 `subtitle_trim_cues.py` 执行**（"卡上隐字幕"是呈现层规则，实现随归属入专员），G4 只烧派生文件、计数进装配记录 `subtitleCuesTrimmed`，批准源永不改动；样式排版策略见 `style-contract.md`；字体字形覆盖由 G4 ㉛ 预检守门（drawtext 路线），字幕烧录走 libass |
+| G5 | 字幕面 QA | `references/qa-contract.md`（越界 ROI 判读纪律⑪）；**交付包必备 `subtitle-srt-check.json`**（本专员 `subtitle_check_srt.py` 报告）：`g5_validate_delivery.py` 校验握手——status=passed 且报告 sha256 与包内 subtitles.srt 一致（㊍ 交付侧防线，G5 不自持格式正则）；收据 `check_frames` 含字幕检查帧 |
 
 改任一接缝先改本合同；节点侧文档与本合同冲突时以本合同为准。

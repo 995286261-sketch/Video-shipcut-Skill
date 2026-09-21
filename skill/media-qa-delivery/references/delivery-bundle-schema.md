@@ -7,7 +7,7 @@
 
 ```text
 交付包-v<版本>/
-├── final-video.mp4  cover.jpg  subtitles.srt
+├── final-video.mp4  cover.jpg  subtitles.srt  subtitle-srt-check.json
 ├── source-timecode-list.json  edit-plan.json  edit-timeline.md
 ├── export-config.json  metadata-validation-report.json
 ├── human-review-decision.json  delivery-manifest.json
@@ -16,7 +16,9 @@
 └── qa/ 等审计件（合同外，validator 不查）
 ```
 
-`subtitles.srt` 至少含一行合法时间戳：`HH:MM:SS,mmm --> HH:MM:SS,mmm`。`failure-samples/README.md` 若机器检查全绿、零失败，正文必须是真实说明（"为何为空"），不允许缺文件。
+`failure-samples/README.md` 若机器检查全绿、零失败，正文必须是真实说明（"为何为空"），不允许缺文件。
+
+**`subtitle-srt-check.json`（2026-09-21 新增，㊍ 交付侧防线）**：由字幕专员 `skill/subtitle-expert/scripts/subtitle_check_srt.py` 对包内 `subtitles.srt` 运行后存档（stdout JSON）。validator 校验握手：`skill=="subtitle-expert"`、`purpose=="subtitle_check_srt"`、`status=="passed"`，且报告 `sha256` 与包内 `subtitles.srt` 实测哈希一致（报告必须是**这份文件**的，防止改稿后忘复检）。字幕格式规则本体（零填充时间戳、单调不重叠等）在专员侧，G5 不再自持正则。防线分工如实声明：本复检只保证**结构与单调**；时基正确性（10× 错位形态）由 G3 `subtitle_validate_layout.py --srt` 逐 cue 对时把关，交付包内没有批准 ASS，G5 单独看不可能发现整体重定时。旧封存包（zaku-001/tiger-001/psycho-002）按当时合同有效，不追溯重验。
 
 ## delivery-manifest.json（builder 产出，validator `CONTRACT_FIELDS` 逐项非空）
 

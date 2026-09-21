@@ -23,7 +23,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 PROFILE_NAME = "字幕-渲染器能力档-v0.1.json"
-LIBASS_LINE = re.compile(r"libass\s+(\S+)")
+# 09-21 实测抓到误解析：configuration 行的 "--enable-libass --enable-libfreetype" 曾被
+# 当成版本号。只接受独立成行的 libass 版本（如 "libass 0.17.3"）；configuration 行只用于
+# 判定编译开关是否启用，版本拿不到就如实 unknown——事实可以缺，不能解析错。
+LIBASS_LINE = re.compile(r"^libass\s+(\d\S*)", re.M)
+LIBASS_FLAG = re.compile(r"--enable-libass\b")
 
 
 def emit(payload: dict) -> None:
@@ -45,11 +49,17 @@ def probe_ffmpeg() -> dict | None:
                                 timeout=30, shell=False)
     except (OSError, subprocess.TimeoutExpired):
         return {"error": "ffmpeg -version failed to run"}
-    banner = (result.stdout or "").splitlines()
+    return parse_version_output(result.stdout or "")
+
+
+def parse_version_output(stdout: str) -> dict:
+    banner = stdout.splitlines()
     version_line = banner[0] if banner else ""
-    libass = LIBASS_LINE.search(result.stdout or "")
+    libass = LIBASS_LINE.search(stdout)
+    enabled = bool(LIBASS_FLAG.search(stdout))
     return {"versionLine": version_line[:200],
-            "libass": libass.group(1) if libass else "unknown"}
+            "libass": libass.group(1) if libass else ("unknown (enabled at build, no version line)" if enabled else "absent"),
+            "libassEnabled": enabled or bool(libass)}
 
 
 def main() -> int:

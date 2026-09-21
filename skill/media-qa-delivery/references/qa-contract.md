@@ -16,6 +16,7 @@ source-timecode-list.json
 edit-plan.json
 edit-timeline.md
 subtitles.srt
+subtitle-srt-check.json
 export-config.json
 metadata-validation-report.json
 delivery-manifest.json

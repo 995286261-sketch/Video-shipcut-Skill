@@ -5,15 +5,38 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import re
 import subprocess
 from pathlib import Path
 
 
-REQUIRED = ("final-video.mp4", "cover.jpg", "subtitles.srt", "source-timecode-list.json", "edit-plan.json", "edit-timeline.md", "export-config.json", "metadata-validation-report.json", "human-review-decision.json", "delivery-manifest.json", "README.md", "failure-samples/README.md")
+REQUIRED = ("final-video.mp4", "cover.jpg", "subtitles.srt", "subtitle-srt-check.json", "source-timecode-list.json", "edit-plan.json", "edit-timeline.md", "export-config.json", "metadata-validation-report.json", "human-review-decision.json", "delivery-manifest.json", "README.md", "failure-samples/README.md")
 CONTRACT_FIELDS = ("schemaVersion", "projectId", "sourceProbe", "segments", "editPlan", "artifacts", "qaReport", "humanReviewPoints", "evidenceRefs", "warnings", "status", "finishedAt")
 QA_CHECKS = ("decode", "videoCodec", "dimensions", "fps", "audio", "duration", "blackFrames", "silence", "duplicateSegments", "cover")
-SRT_TIME = re.compile(r"^\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}$")
+
+
+def check_delivery_srt(bundle: Path, errors: list[str]) -> None:
+    """SRT format rules belong to subtitle-expert (issue ㊍: a 10× timebase slip once
+    shipped in a bundle). G5 holds no private timestamp regex; it consumes the
+    specialist's report — same artifact-handshake pattern as G0's BGM registration
+    receipt: report present, status passed, and its sha256 still matches the bundle
+    file (freshness, per ⑦ lesson: a receipt must describe THIS file)."""
+    report_path = bundle / "subtitle-srt-check.json"
+    if not report_path.is_file():
+        errors.append("missing subtitle-srt-check.json — run subtitle-expert/scripts/subtitle_check_srt.py on subtitles.srt and file the report before closing QA")
+        return
+    report = load(report_path)
+    if report.get("skill") != "subtitle-expert" or report.get("purpose") != "subtitle_check_srt":
+        errors.append("subtitle-srt-check.json is not a subtitle-expert check report")
+        return
+    if report.get("status") != "passed":
+        errors.append(f"subtitles.srt failed subtitle-expert check: status={report.get('status')} {('; '.join(report.get('errors', [])) or report.get('error') or '')[:200]}")
+        return
+    srt = bundle / "subtitles.srt"
+    if not srt.is_file():
+        errors.append("subtitle-srt-check.json present but subtitles.srt missing")
+        return
+    if str(report.get("sha256", "")).upper() != digest(srt):
+        errors.append("subtitle-srt-check.json is stale: recorded sha256 does not match the bundle's subtitles.srt (re-run the specialist checker after any edit)")
 
 
 def load(path: Path) -> dict:
@@ -124,7 +147,7 @@ def main() -> int:
         if not refs or not set(refs).issubset(segments): errors.append(f"chapter traceability failed: {chapter.get('chapterId')}")
     for item in [qa.get("artifacts", {}).get("finalVideo", {}), qa.get("artifacts", {}).get("cover", {}), qa.get("artifacts", {}).get("subtitles", {}), manifest.get("artifacts", {}).get("editTimeline", {})] + qa.get("artifacts", {}).get("chapterClips", []): check_artifact(bundle, item, errors)
     if not set(QA_CHECKS).issubset(qa.get("checks", {})): errors.append("qa report lacks required machine checks")
-    if not any(SRT_TIME.match(line.strip()) for line in (bundle / "subtitles.srt").read_text(encoding="utf-8-sig").splitlines()): errors.append("subtitles.srt has no valid timestamp")
+    check_delivery_srt(bundle, errors)
     if manifest.get("status", "").startswith("completed") and not (review.get("status") == "approved" and review.get("decision") == "accepted"):
         errors.append("completed bundle lacks accepted human review")
     if manifest.get("authorization") in (None, "") or manifest.get("distribution") in (None, ""): errors.append("authorization or distribution boundary missing")

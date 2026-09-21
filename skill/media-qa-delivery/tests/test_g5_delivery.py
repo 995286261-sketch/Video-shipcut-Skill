@@ -17,7 +17,9 @@ class G5DeliveryTest(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.bundle = Path(self.temp.name) / "bundle"; self.bundle.mkdir(); (self.bundle / "clips").mkdir(); (self.bundle / "failure-samples").mkdir()
         self.project = "fixture-g5"
-        self.write("final-video.mp4", b"video"); self.write("cover.jpg", b"cover"); self.write("subtitles.srt", b"1\n00:00:00,000 --> 00:00:01,000\nHello\n")
+        self.write("final-video.mp4", b"video"); self.write("cover.jpg", b"cover"); self.srt_bytes = b"1\n00:00:00,000 --> 00:00:01,000\nHello\n"; self.write("subtitles.srt", self.srt_bytes)
+        self.write("subtitle-srt-check.json", json.dumps({"skill": "subtitle-expert", "purpose": "subtitle_check_srt", "status": "passed",
+                                                          "sha256": hashlib.sha256(self.srt_bytes).hexdigest().upper(), "cues": 1}).encode())
         self.write("README.md", b"readme"); self.write("failure-samples/README.md", b"real failure\n")
         self.write("edit-timeline.md", b"| Segment | Output time | Source |\n| --- | --- | --- |\n")
         segments = []
@@ -52,6 +54,26 @@ class G5DeliveryTest(unittest.TestCase):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
         result = self.run_cli(VALIDATE, "--bundle", self.bundle)
         self.assertEqual(result["status"], "valid")
+
+    def test_rejects_missing_or_stale_subtitle_srt_check(self):
+        # ㊍ defence moved to subtitle-expert: G5 consumes the specialist's report and must catch
+        # a missing handshake as well as a report describing a different file than shipped.
+        (self.bundle / "subtitle-srt-check.json").unlink()
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("missing required file: subtitle-srt-check.json", " ".join(result["errors"]))
+        self.json("subtitle-srt-check.json", {"skill": "subtitle-expert", "purpose": "subtitle_check_srt", "status": "passed",
+                                              "sha256": "B" * 64, "cues": 1})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("stale", " ".join(result["errors"]))
+
+    def test_rejects_failed_subtitle_srt_check(self):
+        self.json("subtitle-srt-check.json", {"skill": "subtitle-expert", "purpose": "subtitle_check_srt", "status": "failed",
+                                              "sha256": hashlib.sha256(self.srt_bytes).hexdigest().upper(), "cues": 1,
+                                              "errors": ["cue 1: overlaps or precedes the previous cue"]})
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("failed subtitle-expert check", " ".join(result["errors"]))
 
     def test_rejects_hash_or_human_review_failure(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)

@@ -1,6 +1,6 @@
 ---
 name: subtitle-expert
-description: 对字幕做确定性排版与校验的领域专员：探测宿主渲染器能力档（libass 版本、autoWrap 证据化判定），产出/机器校验 G3 字幕布局合同与 ASS/SRT 时间轴（CJK 显式语义断行、两行均衡、宽度模型、SRT 同源派生与格式校验），固化烧录排版策略（固定字幕条），并向 G5 提供字幕面 QA 判读纪律。作为字幕专员已接入 G3（布局合同与时间轴校验）、G4（烧录执行 style-contract）、G5（字幕 QA qa-contract）；G2 只供文本权威源、专员不碰内容层。不负责口播写作、剪辑决策、渲染装配、QA 打包或交付。
+description: 对字幕做确定性排版与校验的领域专员：探测宿主渲染器能力档（libass 版本、autoWrap 证据化判定），产出/机器校验 G3 字幕布局合同与 ASS/SRT 时间轴（CJK 显式语义断行、宽度模型、SRT 逐 cue 同源对时、口播块对齐），执行章节卡期间的 cue 修剪（供 G4 调用），固化烧录排版策略（固定字幕条），并向 G5 提供交付侧 SRT 复检与字幕面 QA 判读纪律。作为字幕专员已接入 G3（布局合同与时间轴校验）、G4（烧录 style-contract + trim 调用）、G5（qa-contract + subtitle-srt-check.json 握手）；G2 只供文本权威源、专员不碰内容层。不负责口播写作、剪辑决策、渲染装配、QA 打包或交付。
 metadata:
   pipelineNode: support
 ---
@@ -19,7 +19,9 @@ metadata:
 ## 执行入口（唯一）
 
 - 渲染器能力探测：`scripts/subtitle_probe_renderer.py --output-dir <目录> [--font <字体>] [--auto-wrap true --auto-wrap-evidence <证据>]` → 《字幕-渲染器能力档-v0.1.json》。默认保守档 autoWrap=false；升 true 必须带证据。
-- 布局校验：`scripts/subtitle_validate_layout.py --ass <时间轴> --layout <布局合同> [--srt <交付副本>]`。合同形状、能力档语义、生成规则全部见 `references/layout-contract.md`（唯一事实源）。
+- 布局校验：`scripts/subtitle_validate_layout.py --ass <时间轴> --layout <布局合同> [--srt <交付副本>] [--source <G2-口播句子.json>]`。合同形状、能力档语义、生成规则全部见 `references/layout-contract.md`（唯一事实源）。生成规则已入机验：`--srt` 逐 cue 对时对文（㊍）、`--source` 一条批准口播块=一个排版块（规则 1）、事件时间重叠视为强调拆层（规则 3）。
+- 交付侧 SRT 复检：`scripts/subtitle_check_srt.py <subtitles.srt>`——G5 封包前运行，stdout JSON 存为包内 `subtitle-srt-check.json`，validator 校验握手（只保证结构/单调，时基防线在 G3，分工见 qa-contract）。
+- 章节卡 cue 修剪：`scripts/subtitle_trim_cues.py --ass <批准.ass> --out <派生.ass> --card-range <起ms:止ms>`——"卡上隐字幕"由本专员执行，G4 assemble 调用并只烧派生件，批准源永不改动。
 - 烧录排版策略：`references/style-contract.md`（固定字幕条；G4 逐字执行）。
 - 字幕面 QA 判读：`references/qa-contract.md`（G5 消费）。
 - 不要用临时脚本或手敲 ffmpeg 替代。
@@ -32,4 +34,4 @@ metadata:
 
 ## 接线现状
 
-G3：布局合同+ASS/SRT 生成过检（video-edit-plan 调用，收据项 `subtitle_timeline`）；G4：`g4_assemble.py --subtitle-ass` 逐字执行 + style-contract；G5：qa-contract 判读纪律 + 检查帧收据 `check_frames`。G2 为文本上游、不接线（只读权威源）。改接缝先改 `layout-contract.md`。
+G3：布局合同+ASS/SRT 生成过检，含逐 cue 对时（--srt）与口播块对齐（--source）（video-edit-plan 调用，收据项 `subtitle_timeline`）；G4：`g4_assemble.py --subtitle-ass` 逐字执行 + style-contract，**章节卡 cue 修剪由 G4 调用本专员 `subtitle_trim_cues.py`**（装配记录 `subtitleCuesTrimmed`）；G5：qa-contract 判读纪律 + **交付包必备 `subtitle-srt-check.json` 握手**（`g5_validate_delivery.py` 消费，G5 不自持字幕格式规则）+ 检查帧收据 `check_frames`。G2 为文本上游、不接线（只读权威源）。改接缝先改 `layout-contract.md`。

@@ -189,7 +189,7 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 
 ```powershell
 python skill/subtitle-expert/scripts/subtitle_probe_renderer.py --output-dir <G3-剪辑计划/字幕/>   # 探能力档（默认保守 autoWrap=false）
-python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> --srt <subtitles.srt>
+python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> --srt <subtitles.srt> --source <G2-口播句子.json>
 ```
 
 合同形状、能力档语义与生成规则以 `skill/subtitle-expert/references/layout-contract.md` 为唯一事实源（002 问题⑧：绿灯必须建立在所选能力档之上，合同不写能力档=按保守档判）。

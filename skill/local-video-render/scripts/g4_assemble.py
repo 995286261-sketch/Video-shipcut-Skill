@@ -18,6 +18,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 
@@ -162,60 +163,29 @@ def build_assemble_command(list_file: Path, inputs: list[Path], filter_complex: 
     return command
 
 
-ASS_TIME = re.compile(r"(\d+):(\d{2}):(\d{2})\.(\d{2})")
+SUBTITLE_TRIM_SCRIPT = Path(__file__).resolve().parents[2] / "subtitle-expert" / "scripts" / "subtitle_trim_cues.py"
 
 
-def parse_ass_ms(value: str) -> int:
-    match = ASS_TIME.fullmatch(value.strip())
-    if not match:
-        fail(f"unparsable ASS timestamp: {value!r}")
-    hours, minutes, seconds, centis = (int(part) for part in match.groups())
-    return ((hours * 60 + minutes) * 60 + seconds) * 1000 + centis * 10
-
-
-def format_ass_ms(milliseconds: int) -> str:
-    hours, rem = divmod(milliseconds, 3_600_000)
-    minutes, rem = divmod(rem, 60_000)
-    seconds, millis = divmod(rem, 1000)
-    return f"{hours}:{minutes:02d}:{seconds:02d}.{millis // 10:02d}"
-
-
-def trim_ass_cues(text: str, card_ranges: list[tuple[int, int]]) -> tuple[str, int]:
-    """Remove chapter-card intervals from every subtitle cue so the card never
-    competes with the narration text layer (demo-quality-patch §4)."""
-    lines, fmt, trimmed = [], None, 0
-    for raw in text.splitlines():
-        line = raw.strip()
-        if line.startswith("Format:") and {"Start", "End", "Text"} <= {f.strip() for f in line[7:].split(",")}:
-            fmt = [f.strip() for f in line[7:].split(",")]
-            lines.append(raw)
-            continue
-        if fmt and line.startswith("Dialogue:"):
-            values = line[9:].split(",", len(fmt) - 1)
-            event = dict(zip(fmt, values))
-            start, end = parse_ass_ms(event["Start"]), parse_ass_ms(event["End"])
-            pieces = [[start, end]]
-            for card_start, card_end in card_ranges:
-                kept = []
-                for piece_start, piece_end in pieces:
-                    if card_end <= piece_start or card_start >= piece_end:
-                        kept.append([piece_start, piece_end])
-                        continue
-                    if card_start > piece_start:
-                        kept.append([piece_start, min(card_start, piece_end)])
-                    if card_end < piece_end:
-                        kept.append([max(card_end, piece_start), piece_end])
-                pieces = kept
-            if pieces != [[start, end]]:
-                trimmed += 1
-            for piece_start, piece_end in pieces:
-                if piece_end - piece_start < 40:
-                    continue
-                event["Start"], event["End"] = format_ass_ms(piece_start), format_ass_ms(piece_end)
-                lines.append("Dialogue: " + ",".join(event[field] for field in fmt))
-            continue
-        lines.append(raw)
-    return "\n".join(lines) + "\n", trimmed
+def run_specialist_trim(ass_path: Path, out_path: Path, card_ranges: list[tuple[int, int]]) -> int:
+    """Hide-under-chapter-card cue trimming is subtitle presentation logic and lives in
+    subtitle-expert (plugin handshake: CLI args in, derived .ass + JSON report out;
+    zero in-process imports, G4 burns only what the specialist writes)."""
+    if not SUBTITLE_TRIM_SCRIPT.is_file():
+        fail(f"subtitle-expert trim script not found: {SUBTITLE_TRIM_SCRIPT}; "
+             "install skill/subtitle-expert alongside this skill (cue trimming is not G4's job)")
+    command = [sys.executable, str(SUBTITLE_TRIM_SCRIPT), "--ass", str(ass_path), "--out", str(out_path)]
+    for start, end in card_ranges:
+        command += ["--card-range", f"{start}:{end}"]
+    result = subprocess.run(command, capture_output=True, text=True,
+                            encoding="utf-8", errors="replace", shell=False)
+    try:
+        report = json.loads(result.stdout.strip().splitlines()[-1])
+    except (ValueError, IndexError):
+        report = {}
+    if result.returncode != 0 or report.get("status") != "completed":
+        detail = report.get("error") or (result.stderr or result.stdout or "").strip()[:300]
+        fail(f"subtitle-expert cue trim failed (exit {result.returncode}): {detail}")
+    return int(report.get("trimmedCues") or 0)
 
 
 def _cmap_codepoints(data: bytes, off: int) -> set[int]:
@@ -501,8 +471,7 @@ def main() -> int:
         if not subtitles_filter_available():
             fail("this ffmpeg build lacks the libass subtitles filter; install full FFmpeg before burning captions")
         if card_ranges:
-            derived, trimmed_cues = trim_ass_cues(Path(args.subtitle_ass).read_text(encoding="utf-8-sig"), card_ranges)
-            (work / "captions.ass").write_text(derived, encoding="utf-8")
+            trimmed_cues = run_specialist_trim(args.subtitle_ass, work / "captions.ass", card_ranges)
         else:
             shutil.copyfile(args.subtitle_ass, work / "captions.ass")
         video_layers.append("subtitles=captions.ass")

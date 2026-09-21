@@ -56,10 +56,10 @@ class SubtitleLayoutTests(unittest.TestCase):
         value.update(overrides)
         return self.write("layout.json", json.dumps(value, ensure_ascii=False))
 
-    def run_validator(self, ass, layout):
+    def run_validator(self, ass, layout, *extra):
         """Call main() in-process (importlib pattern, as in music-expert tests):
         mirrors the __main__ contract — ValueError becomes an invalid JSON exit 2."""
-        argv = ["subtitle_validate_layout", "--ass", str(ass), "--layout", str(layout)]
+        argv = ["subtitle_validate_layout", "--ass", str(ass), "--layout", str(layout), *map(str, extra)]
         buffer = io.StringIO()
         saved = sys.argv
         sys.argv = argv
@@ -135,6 +135,74 @@ class SubtitleLayoutTests(unittest.TestCase):
         code, output = self.run_validator(ass, self.layout())
         self.assertNotEqual(0, code)
         self.assertIn("no dialogue events", output)
+
+    # ---- per-cue SRT identity (㊍) and narration-source alignment (rule 1) ----
+
+    def srt(self, *texts, end_override=None):
+        """Build an SRT matching self.ass()'s generated times: cue i spans i*1000..(i+1)*1000 ms."""
+        blocks = []
+        for index, text in enumerate(texts, 1):
+            end = end_override.get(index) if end_override and index in end_override else index * 1000
+            blocks.append(f"{index}\n00:00:{index - 1:02d},000 --> 00:00:{end // 1000:02d},{end % 1000:03d}\n{text}\n")
+        return self.write("delivery.srt", "\n".join(blocks))
+
+    def test_srt_matching_cue_for_cue_passes(self):
+        ass = self.ass(14, "第一句。", "第二句。")
+        srt = self.srt("第一句。", "第二句。")
+        code, output = self.run_validator(ass, self.layout(), "--srt", srt)
+        self.assertEqual(0, code, output)
+        self.assertIn('"srtCues": 2', output)
+
+    def test_srt_timebase_slip_rejected_even_when_monotonic(self):
+        # ㊍ shape: cue 1 end shifted to 500ms — order stays monotonic, so the OLD
+        # count+monotonic check passed it; per-cue time identity must not.
+        ass = self.ass(14, "第一句。", "第二句。")
+        srt = self.srt("第一句。", "第二句。", end_override={1: 500})
+        code, output = self.run_validator(ass, self.layout(), "--srt", srt)
+        self.assertNotEqual(0, code)
+        self.assertIn("do not match ASS event times", output)
+
+    def test_srt_text_drift_rejected(self):
+        ass = self.ass(14, "第一句。", "第二句。")
+        srt = self.srt("第一句！", "改过的第二句。")
+        code, output = self.run_validator(ass, self.layout(), "--srt", srt)
+        self.assertNotEqual(0, code)
+        self.assertIn("does not match the ASS event", output)
+
+    def source(self, *blocks):
+        payload = [{"sentenceId": f"N{i:02d}", "text": t} for i, t in enumerate(blocks, 1)]
+        return self.write("sentences.json", json.dumps(payload, ensure_ascii=False))
+
+    def test_source_blocks_pass_even_with_punctuation_and_break_differences(self):
+        # 002 实测形态：块内含多个句号、视觉换行落句中——规范化后必须相等。
+        ass = self.ass(14, "宇宙世纪0079年，尾声。\\N实验。", "第二块。")
+        source = self.source("宇宙世纪0079年，尾声。实验。", "第二块。")
+        code, output = self.run_validator(ass, self.layout(), "--source", source)
+        self.assertEqual(0, code, output)
+        self.assertIn('"sourceSentences": 2', output)
+
+    def test_source_amended_but_timeline_not_regenerated_is_rejected(self):
+        ass = self.ass(14, "第一句。", "第二句。")
+        source = self.source("第一句。", "改过的第二句。")
+        code, output = self.run_validator(ass, self.layout(), "--source", source)
+        self.assertNotEqual(0, code)
+        self.assertIn("does not match narration block 2", output)
+
+    def test_count_mismatch_between_blocks_and_events_is_rejected(self):
+        ass = self.ass(14, "第一句。", "第二句。")
+        source = self.source("第一句。第二句。")
+        code, output = self.run_validator(ass, self.layout(), "--source", source)
+        self.assertNotEqual(0, code)
+        self.assertIn("one narration block must be exactly one layout block", output)
+
+    def test_overlapping_events_rejected_as_layer_split(self):
+        # rule 3: emphasis must be rich text inside one block, not a parallel event.
+        ass = self.write("captions.ass", (ASS_HEADER.format(fontsize=14)
+            + "Dialogue: 0,0:00:00.00,0:00:02.00,NarrMain,,0,0,0,,正文。\n"
+            + "Dialogue: 0,0:00:01.00,0:00:02.00,NarrMain,,0,0,0,,强调拆层。\n"))
+        code, output = self.run_validator(ass, self.layout())
+        self.assertNotEqual(0, code)
+        self.assertIn("overlap in time", output)
 
 
 if __name__ == "__main__":

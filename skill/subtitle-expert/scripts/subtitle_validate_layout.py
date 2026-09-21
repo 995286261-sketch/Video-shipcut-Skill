@@ -23,27 +23,44 @@ from pathlib import Path
 NARROW_RATIO = 0.55
 OVERRIDE_TAG = re.compile(r"\{[^}]*\}")
 SRT_TIME = re.compile(r"(\d{2}):(\d{2}):(\d{2}),(\d{3}) --> (\d{2}):(\d{2}):(\d{2}),(\d{3})")
+ASS_TIME = re.compile(r"(\d+):(\d{2}):(\d{2})\.(\d{2})")
+PUNCTUATION = "。！？；，、：：“”‘’\"'（）()《》…—·-~～\\N \t\r"
 
 
 def fail(message: str) -> None:
     raise ValueError(message)
 
 
+def ass_to_ms(value: str) -> int:
+    match = ASS_TIME.fullmatch(value.strip())
+    if not match:
+        fail(f"unparsable ASS timestamp: {value!r}")
+    hours, minutes, seconds, centis = (int(part) for part in match.groups())
+    return ((hours * 60 + minutes) * 60 + seconds) * 1000 + centis * 10
+
+
 def srt_to_ms(hours, minutes, seconds, millis) -> int:
     return ((int(hours) * 60 + int(minutes)) * 60 + int(seconds)) * 1000 + int(millis)
 
 
-def validate_srt_reference(path: Path, event_count: int) -> int:
-    """The SRT delivery reference must be standard-padded (HH:MM:SS,mmm), monotonic and
-    non-overlapping, and cue-for-cue with the approved ASS timeline. Guards the known
-    failure of converting ASS centiseconds to SRT milliseconds without x10 scaling."""
+def normalize_text(text: str) -> str:
+    """Compare cue identity with line breaks and punctuation ignored: the same caption
+    may legitimately drop sentence-final punctuation across ASS→SRT or vs the script."""
+    return "".join(ch for ch in text if ch not in PUNCTUATION)
+
+
+def validate_srt_reference(path: Path, events: list[dict]) -> int:
+    """The SRT delivery copy must be standard-padded (HH:MM:SS,mmm) AND cue-for-cue
+    identical to the approved ASS timeline: same count, same start/end in milliseconds,
+    same text (punctuation/break-insensitive). The old check only verified count and
+    monotonicity, so a uniform 10× timebase slip (issue ㊍) could still pass; matching
+    ASS times explicitly is what makes '同源派生' machine-enforced."""
     blocks = [b for b in re.split(r"\n\s*\n", path.read_text(encoding="utf-8-sig").strip()) if b.strip()]
     if not blocks:
         fail("srt reference has no cues")
-    if len(blocks) != event_count:
-        fail(f"srt cue count {len(blocks)} does not match ASS event count {event_count}")
-    previous_end = 0
-    for index, block in enumerate(blocks, 1):
+    if len(blocks) != len(events):
+        fail(f"srt cue count {len(blocks)} does not match ASS event count {len(events)}")
+    for index, (block, event) in enumerate(zip(blocks, events), 1):
         lines = block.splitlines()
         if len(lines) < 3:
             fail(f"srt cue {index} must be an index, a timestamp line, and text")
@@ -53,11 +70,53 @@ def validate_srt_reference(path: Path, event_count: int) -> int:
         start, end = srt_to_ms(*match.groups()[:4]), srt_to_ms(*match.groups()[4:])
         if end <= start:
             fail(f"srt cue {index} ends before it starts")
-        if start < previous_end:
-            fail(f"srt cue {index} overlaps or precedes the previous cue")
-        if not "".join(lines[2:]).strip():
+        ass_start, ass_end = ass_to_ms(event["Start"]), ass_to_ms(event["End"])
+        if (start, end) != (ass_start, ass_end):
+            fail(f"srt cue {index} times {start}-{end}ms do not match ASS event times {ass_start}-{ass_end}ms — the delivery copy must be derived from the approved timeline, not re-timed (㊍)")
+        ass_text = normalize_text(OVERRIDE_TAG.sub("", event.get("Text", "")))
+        srt_text = normalize_text("".join(lines[2:]))
+        if not srt_text:
             fail(f"srt cue {index} has empty text")
-        previous_end = end
+        if srt_text != ass_text:
+            fail(f"srt cue {index} text does not match the ASS event (normalized): {lines[2].strip()[:24]!r}")
+    return len(blocks)
+
+
+def check_event_overlap(events: list[dict]) -> list[str]:
+    """Narration lanes are a single text layer: two events sharing wall-clock time is
+    how 'emphasis split into its own layer' (rule 3) shows up mechanically (layout-contract)."""
+    problems: list[str] = []
+    timed = sorted(events, key=lambda item: ass_to_ms(item["Start"]))
+    for previous, current in zip(timed, timed[1:]):
+        if ass_to_ms(current["Start"]) < ass_to_ms(previous["End"]):
+            problems.append(f"events at {previous.get('Start')} and {current.get('Start')} overlap in time — emphasis must stay inside one block's rich-text tags, not a parallel layer (rule 3)")
+    return problems
+
+
+def check_narration_source(path: Path, events: list[dict]) -> int:
+    """Rule 1 (一条口播一排版块) machine-enforced against the authoritative layer: the
+    G2 口播句子 JSON ([{sentenceId,text}, ...] — one approved narration block per row)
+    must line up with the ASS timeline event for event, text identical modulo
+    punctuation and \\N (002 实测形态: a block may contain several 。clauses and one
+    visual break mid-sentence). Guards silent divergence when narration is amended but
+    the timeline is not regenerated."""
+    data = json.loads(path.read_text(encoding="utf-8-sig"))
+    if isinstance(data, dict):
+        data = data.get("sentences") or data.get("units") or []
+    if not isinstance(data, list):
+        fail("--source must be the G2 口播句子 JSON (a list of narration blocks, each with text)")
+    blocks = []
+    for item in data:
+        text = item.get("text") if isinstance(item, dict) else item
+        normalized = normalize_text(str(text or ""))
+        if normalized:
+            blocks.append(normalized)
+    if len(blocks) != len(events):
+        fail(f"narration source has {len(blocks)} blocks but the timeline has {len(events)} events — one narration block must be exactly one layout block (rule 1)")
+    for index, (block, event) in enumerate(zip(blocks, events), 1):
+        cue_text = normalize_text(OVERRIDE_TAG.sub("", event.get("Text", "")))
+        if cue_text != block:
+            fail(f"event {index} text does not match narration block {index} (normalized): {cue_text[:24]!r} vs {block[:24]!r} — subtitles carry the approved narration verbatim")
     return len(blocks)
 
 
@@ -150,7 +209,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--ass", required=True, type=Path)
     parser.add_argument("--layout", required=True, type=Path)
-    parser.add_argument("--srt", type=Path, help="optional SRT delivery reference to format-check against the ASS timeline")
+    parser.add_argument("--srt", type=Path, help="optional SRT delivery copy to check cue-for-cue against the ASS timeline")
+    parser.add_argument("--source", type=Path, help="optional G2 口播句子 JSON (authoritative narration blocks) to enforce one-block-per-event (rule 1)")
     args = parser.parse_args()
     layout = load(args.layout)
     if layout.get("schemaVersion") != "0.1" or layout.get("node") != "G3":
@@ -217,10 +277,14 @@ def main() -> int:
         if total > max_lines:
             preview = text.replace("\\N", "⏎")[:24]
             violations.append(f"event at {event.get('Start', '?')} needs {total} rendered lines (max {max_lines}): {preview}")
+    if any("Start" not in event or "End" not in event for event in events):
+        fail("ASS events must carry Start and End fields in [Events] Format")
+    violations.extend(check_event_overlap(events))
     if violations:
         suffix = f" (+{len(violations) - 10} more)" if len(violations) > 10 else ""
         fail("subtitle layout violations: " + "; ".join(violations[:10]) + suffix)
-    srt_cues = validate_srt_reference(args.srt, len(events)) if args.srt else None
+    srt_cues = validate_srt_reference(args.srt, events) if args.srt else None
+    source_sentences = check_narration_source(args.source, events) if args.source else None
     print(json.dumps({
         "status": "completed",
         "events": len(events),
@@ -231,6 +295,7 @@ def main() -> int:
         "maxRenderedLinesObserved": observed,
         "playRes": [play_res_x, play_res_y],
         "srtCues": srt_cues,
+        "sourceSentences": source_sentences,
     }, ensure_ascii=True))
     return 0
 

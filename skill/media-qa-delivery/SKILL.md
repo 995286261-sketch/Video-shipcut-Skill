@@ -45,6 +45,7 @@ The default review and audit bundle contains:
 - `edit-plan.json`: machine-readable operation, ordering, audio, subtitle, cover, artifact, and human-review fields.
 - `edit-timeline.md`: the approved G3 row-by-row edit timeline. It must list each output time interval, source asset and source interval, crop/mask/replace treatment, motion, narration, on-screen text, and BGM or source-audio rule. This is a required delivery artifact, not a chat-only summary.
 - `subtitles.srt`: final narration subtitles.
+- `subtitle-srt-check.json`: required handshake from subtitle-expert — run `skill/subtitle-expert/scripts/subtitle_check_srt.py subtitles.srt` and file the JSON report in the bundle. G5 validates the handshake (status passed + sha256 matches the bundle file) and holds no subtitle format rules of its own (issue ㊍; the 10× timebase shape is caught at G3's per-cue ASS↔SRT match, not here).
 - `export-config.json`: platform, aspect ratio, target duration, subtitle, cover, audio, music, and authorization settings. Use `not_specified` rather than hard-coding an unknown platform profile.
 - `metadata-validation-report.json`: machine checks, warnings, file hashes, and manual review status.
 - `delivery-manifest.json`: the single machine-readable G5 contract entry point. It consolidates source probes, segment traceability, edit-plan summary, artifact hashes, QA reference, human-review references, warnings, and delivery boundary.

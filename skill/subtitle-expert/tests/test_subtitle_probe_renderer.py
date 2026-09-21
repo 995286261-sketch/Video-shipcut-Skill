@@ -69,6 +69,23 @@ class SubtitleProbeTest(unittest.TestCase):
         self.assertIn("宿主实测", profile["autoWrap"]["evidence"])
         self.assertEqual("measured evidence", profile["autoWrap"]["basis"])
 
+    def test_libass_banner_parsing_never_reads_configuration_flags_as_versions(self):
+        # 09-21 实测抓到：WorkTool ffmpeg 无独立 libass 版本行，旧正则把
+        # "--enable-libass --enable-libfreetype" 的下一个 token 当成了版本号。
+        worktool_banner = ("ffmpeg n7.0.1\n  configuration: --enable-gpl --enable-libass "
+                          "--enable-libfreetype --enable-libx264\n")
+        parsed = probe.parse_version_output(worktool_banner)
+        self.assertTrue(parsed["libassEnabled"])
+        self.assertNotIn("--", parsed["libass"])
+        self.assertTrue(parsed["libass"].startswith("unknown"))
+        with_version = "ffmpeg 6.1\nlibass 0.17.3\n  configuration: --enable-libass\n"
+        parsed = probe.parse_version_output(with_version)
+        self.assertEqual("0.17.3", parsed["libass"])
+        self.assertTrue(parsed["libassEnabled"])
+        parsed = probe.parse_version_output("ffmpeg 6.1\n  configuration: --enable-libx264\n")
+        self.assertEqual("absent", parsed["libass"])
+        self.assertFalse(parsed["libassEnabled"])
+
 
 if __name__ == "__main__":
     unittest.main()

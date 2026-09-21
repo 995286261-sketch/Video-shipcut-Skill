@@ -52,3 +52,13 @@
   - 块3 的"g4_assemble 哈希对账"只落了**合同指向**：G4 逐字消费 `--subtitle-ass`（G3 冻结产物）＋读专员 style-contract，未新增对账机制——SRT 时基类事故（㊍）的修复已由换算规则承担，复现证据出现前不加层。
 - **接线清扫**：G3（SKILL 改为"只调专员脚本、不实现规则"，g3-plan.md 校验命令指向专员＋能力档说明保留）、G4（SKILL 指向专员 style-contract）、G5（media-qa-delivery qa-contract 字幕面改指针）；旧脚本、旧 caption-style 合同、旧测试删除，grep 零残留。
 - **验证**：新套件 12/12（校验器 9＋探测器 3，进程内 importlib 模式）；全量回归 9 套全绿（subtitle-expert 12、video-edit-plan 90、music-expert 96、local-video-render 34、其余 5 套照常）。
+
+## 追加：同日"彻底化"改造（用户复审"剥离出来了就彻底一点，不要节点里有一点专员里有一点"）
+
+复审发现三处不彻底并全部改造，另抓一处真缺陷：
+
+1. **"卡上隐字幕"实现迁入专员**：`trim_ass_cues` 及 ASS 时基解析自 `g4_assemble.py` 剥出为 `subtitle_trim_cues.py`（CLI+JSON 报告）；G4 改为调用并只烧派生件，装配记录 `subtitleCuesTrimmed` 字段语义不变（既有 34 例 G4 测试经真实 ffmpeg 走新链路全绿）。
+2. **G5 私有 SRT 正则删除**：改产物握手——交付包必备 `subtitle-srt-check.json`（专员 `subtitle_check_srt.py` 报告），validator 校验 status=passed＋sha256 与包内文件一致（新鲜度，⑦ 同款）。防线分工如实入 qa-contract：G5 复检只保证结构/单调，㊍ 形态的锁死点是 G3 逐 cue 对时。
+3. **生成规则入机验（章程块 2 补全）**：此前"一条口播一排版块/同源派生/不拆层"只是文字纪律。校验器升级：`--srt` 由"计数+单调"改为**逐 cue 对时对文**（10× 错位必然拒绝，实测验证）；新增 `--source`（G2 口播句子 JSON 逐块对齐，实测 002 13 块全中）；事件时间重叠判"强调拆层"。"断行引擎未建"仍成立——不需要引擎，需要的是让手写的产物过真校验。
+4. **探测真缺陷修复**：libass 版本正则误把 configuration 行 `--enable-libass --enable-libfreetype` 的下一 token 当版本号（活体探测现场抓包）；改为只认独立版本行、configuration 行只判编译开关，拿不到版本如实标 unknown。
+- **改造后验证**：subtitle-expert 套件扩至 33 例全绿；全量回归 9 套全绿；002 实产物（13 events 时间轴/合同/交付 SRT/口播句子 JSON）作为常驻活体样例贯穿 G3/G4/G5/探测演示。
