@@ -74,12 +74,16 @@ def main():
     )
     parser.add_argument("--width", type=int)
     parser.add_argument("--height", type=int)
-    parser.add_argument("--fps", type=int, default=24)
+    parser.add_argument("--fps", type=int, default=None,
+                        help="override; by default inherit the manifest targetFps from the approved plan (issue 002-⑨)")
     parser.add_argument("--crop-bottom-ratio", type=float, default=0.0)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     data=load(args.manifest)
     if data.get("status") != "prepared_for_render": fail("manifest is not prepared_for_render")
+    if args.fps is None:
+        inherited = data.get("targetFps")
+        args.fps = inherited if isinstance(inherited, int) and not isinstance(inherited, bool) and inherited > 0 else 24
     if not (0 <= args.crop_bottom_ratio < 1): fail("crop-bottom-ratio must be in [0,1)")
     masks, mask_canvas = [], {}
     if args.source_mask:

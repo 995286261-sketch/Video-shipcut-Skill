@@ -93,6 +93,22 @@ class G5DeliveryTest(unittest.TestCase):
         result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
         self.assertIn("missing required file: edit-timeline.md", result["errors"])
 
+    def test_pending_manifest_may_omit_finished_at(self):
+        # Issue 002-⑬: finishedAt = machine-QA close moment, not delivery sign-off;
+        # a pending-human-review manifest legitimately lacks it, a completed one must not.
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        path = self.bundle / "delivery-manifest.json"
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        manifest["status"] = "pending-human-review"
+        manifest.pop("finishedAt", None)
+        self.json("delivery-manifest.json", manifest)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle)
+        self.assertEqual("valid", result["status"])
+        manifest["status"] = "completed"
+        self.json("delivery-manifest.json", manifest)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("delivery manifest missing finishedAt", result["errors"])
+
     def test_mirror_replaces_stale_artifacts(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
         audit = self.bundle.parent / "audit" / self.bundle.name; audit.mkdir(parents=True)

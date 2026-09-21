@@ -81,6 +81,39 @@ class G4AssembleTests(unittest.TestCase):
         self.assertTrue(record["outputSha256"])
         self.assertEqual(2000, record["timelineDurationMs"])
 
+    def set_manifest_fps(self, value):
+        doc = json.loads(self.manifest.read_text(encoding="utf-8"))
+        if value is not None:
+            doc["targetFps"] = value
+        self.manifest.write_text(json.dumps(doc), encoding="utf-8")
+
+    def read_record(self):
+        return json.loads((self.root / "final" / "master-装配记录-v0.1.json").read_text(encoding="utf-8"))
+
+    def test_legacy_manifest_without_target_fps_falls_back(self):
+        # Issue 002-⑨: manifests predating the fps carry-over keep working at 24, visibly.
+        result = self.run_assemble()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        self.assertEqual(24, record["fps"])
+        self.assertEqual("default-24", record["fpsSource"])
+
+    def test_fps_inherited_from_manifest_target(self):
+        self.set_manifest_fps(30)
+        result = self.run_assemble()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        self.assertEqual(30, record["fps"])
+        self.assertEqual("manifest-targetFps", record["fpsSource"])
+
+    def test_explicit_fps_overrides_manifest(self):
+        self.set_manifest_fps(30)
+        result = self.run_assemble(("--fps", "25"))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        self.assertEqual(25, record["fps"])
+        self.assertEqual("explicit-override", record["fpsSource"])
+
     def make_bgm_and_contract(self, tamper_hash=False):
         import hashlib
         bgm = self.root / "bgm.wav"
@@ -150,9 +183,7 @@ class G4AssembleTests(unittest.TestCase):
         self.assertIn("shorter than the timeline", result.stdout)
 
     def test_cover_is_composited_and_recorded(self):
-        font = next((Path(candidate) for pattern in ("/System/Library/Fonts/Supplemental/*.ttf", "/System/Library/Fonts/*.ttf") for candidate in glob.glob(pattern)), None)
-        if not font:
-            self.skipTest("no TrueType font available for drawtext")
+        font = self.any_font()
         image = self.root / "cover-source.png"
         subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "color=c=gray:s=320x240", "-frames:v", "1", str(image)], check=True, capture_output=True)
         cover_out = self.root / "final" / "cover.jpg"
@@ -165,7 +196,17 @@ class G4AssembleTests(unittest.TestCase):
         self.assertEqual(str(cover_out.resolve()), record["cover"])
 
 
+    # The ㉛ glyph preflight correctly refuses script-only fonts (e.g. NotoSansLepcha
+    # has no Latin/CJK coverage), so "first .ttf on disk" is not a usable test font.
+    # Prefer the production-approved covering fonts; glob is only a last resort.
+    COVERING_FONT_CANDIDATES = ("/System/Library/Fonts/Supplemental/Songti.ttc",
+                                "/System/Library/Fonts/PingFang.ttc")
+
     def any_font(self):
+        for candidate in self.COVERING_FONT_CANDIDATES:
+            path = Path(candidate)
+            if path.is_file():
+                return path
         font = next((Path(c) for p in ("/System/Library/Fonts/Supplemental/*.ttf", "/System/Library/Fonts/*.ttf") for c in glob.glob(p)), None)
         if not font:
             self.skipTest("no TrueType font available for drawtext")

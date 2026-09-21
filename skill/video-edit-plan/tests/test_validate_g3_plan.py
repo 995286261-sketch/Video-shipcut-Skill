@@ -563,6 +563,21 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.assertIn("end > start", joined)
         self.assertIn("requires a title", joined)
 
+    def test_fact_entry_in_sourceEvidence_is_batch_error_not_traceback(self):
+        # Issue 002-⑤: a malformed evidence list must produce structured errors[],
+        # never a raw KeyError traceback from the data-loading layer.
+        value = json.loads(self.evidence_path.read_text(encoding="utf-8"))
+        value["sourceEvidence"].insert(0, {"factId": "f1", "statement": "事实条目混进了媒体清单"})
+        self.evidence_path.write_text(json.dumps(value), encoding="utf-8")
+        decision = self.decision()
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(2, code)
+        self.assertNotIn("Traceback", output)
+        payload = json.loads(output.strip().splitlines()[-1])
+        joined = " ".join(payload["errors"])
+        self.assertIn("is not a media entry with assetId", joined)
+        self.assertIn("webSourceEvidence", joined)
+
 
 if __name__ == "__main__":
     unittest.main()

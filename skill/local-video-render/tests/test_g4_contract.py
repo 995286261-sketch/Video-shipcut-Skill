@@ -35,6 +35,26 @@ class G4ContractTest(unittest.TestCase):
         forced=self.run_cli(PREPARE,"--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack,"--output-dir",output,"--force")
         self.assertEqual("prepared",forced["status"])
 
+    def test_prepare_carries_approved_plan_fps_into_manifest(self):
+        """Issue 002-⑨: editPlan.fps is a machine fact the whole G4 chain must inherit."""
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
+        base_plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
+        p=self.root/"plan.json"; e=self.root/"e.json"
+        plan=json.loads(json.dumps(base_plan)); plan["editPlan"]["fps"]=30
+        p.write_text(json.dumps(plan)); e.write_text(json.dumps(evidence))
+        self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out")
+        manifest=json.loads((self.root/"out"/"G4-可编辑工程-v0.1.json").read_text(encoding="utf-8"))
+        self.assertEqual(30, manifest["targetFps"])
+        # A malformed fps blocks at prepare time, never reaches render.
+        bad=json.loads(json.dumps(base_plan)); bad["editPlan"]["fps"]="30"
+        p.write_text(json.dumps(bad))
+        blocked=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out2",code=2)
+        self.assertIn("editPlan.fps",blocked["error"])
+
     def test_prepare_requires_a_positive_target_duration(self):
         """Issue 025: no durationDecision and no targetProfile must block, not emit 0ms."""
         pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")

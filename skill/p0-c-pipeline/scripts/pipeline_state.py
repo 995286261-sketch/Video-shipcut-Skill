@@ -311,6 +311,15 @@ def command_approve(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": "approval requires the node to be review_required", "nodeStatus": record.get("status")}, 2)
     if not record.get("reviewGate"):
         emit({"status": "blocked", "error": "approval requires a recorded review gate"}, 2)
+    # Issue 002-⑦: the receipt file may have changed after record-review. Compare the live
+    # receipt against the frozen snapshot BEFORE blaming a missing basisRef on stale data.
+    try:
+        fresh_gate = load_review_gate(state_path, record["reviewGate"]["reviewGateRef"], node, state["projectId"])
+    except ValueError as error:
+        emit({"status": "blocked", "error": f"review gate receipt no longer valid: {error}"}, 2)
+    if fresh_gate != record["reviewGate"]:
+        emit({"status": "blocked",
+              "error": "review gate receipt changed since record-review (renderedAt/basisRefs/checklist); re-run record-review before approving"}, 2)
     if node in ("G2", "G3") and (state.get("bgm") or {}).get("libraryPending"):
         emit({"status": "blocked", "error": f"{node} 批准被 BGM 待找乐槽拦住：音乐须在首个消费节点前在场（N9 顺序）。挑曲→官方渠道取得整轨→登记→bgm-choice 翻槽后再批"}, 2)
     try:

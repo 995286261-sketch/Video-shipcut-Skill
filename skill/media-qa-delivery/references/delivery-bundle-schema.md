@@ -20,7 +20,7 @@
 
 ## delivery-manifest.json（builder 产出，validator `CONTRACT_FIELDS` 逐项非空）
 
-`schemaVersion`（当前 `"0.1"`）、`projectId`、`sourceProbe`（数组，每项含 `assetId`+`sourceProbe`）、`segments`（顶层扁平数组，每项含 `segmentId`，必须与 source-timecode-list 的 segments **集合相等**）、`editPlan`、`artifacts`（含 `editTimeline`：`{path, sha256}`）、`qaReport`、`humanReviewPoints`、`evidenceRefs`、`warnings`、`status`、`finishedAt`（非空字符串）。`status` 以 `completed` 开头时，`human-review-decision.json` 必须已是 `approved`+`accepted`。`authorization`、`distribution` 两个边界字段必须非空。
+`schemaVersion`（当前 `"0.1"`）、`projectId`、`sourceProbe`（数组，每项含 `assetId`+`sourceProbe`）、`segments`（顶层扁平数组，每项含 `segmentId`，必须与 source-timecode-list 的 segments **集合相等**）、`editPlan`、`artifacts`（含 `editTimeline`：`{path, sha256}`）、`qaReport`、`humanReviewPoints`、`evidenceRefs`、`warnings`、`status`、`finishedAt`（非空字符串；**语义=机器质检收口时刻，不是交付关单时刻**——关单以 pipeline-state 的 `确认G5` 审批为准。`status` 以 `pending` 开头时允许暂缺，质检收口后必须回填；002 问题⑬裁决）。`status` 以 `completed` 开头时，`human-review-decision.json` 必须已是 `approved`+`accepted`。`authorization`、`distribution` 两个边界字段必须非空。
 
 ## source-timecode-list.json
 
@@ -36,7 +36,7 @@
 
 ## export-config.json
 
-`projectId` 必填；`video`：`codec`（如 `h264`）及可选 `width`/`height`/`fps`/`durationActualMs`；`audio`：`codec`。这些值只在 validator 带 `--media` 时对真实成片复核：解码全片、ffprobe 对 codec/分辨率/fps（±0.1）/时长（±150ms）、音轨 codec。不传 `--media` 时只查 JSON 形状。
+`projectId` 必填；`video`：`codec`（如 `h264`）及可选 `width`/`height`/`fps`/`durationActualMs`；`audio`：`codec`；**`authorization` 与 `distribution` 必填**（002 问题⑫补记：builder 从这两个字段抬进 manifest 的边界栏，缺省填 `not_specified` 虽能过机器校验，但等于边界未声明——G5 回显卡必须如实呈出）。这些值只在 validator 带 `--media` 时对真实成片复核：解码全片、ffprobe 对 codec/分辨率/fps（±0.1）/时长（±150ms）、音轨 codec。不传 `--media` 时只查 JSON 形状。
 
 ## human-review-decision.json
 

@@ -39,6 +39,12 @@ The exact JSON shape of every component above (field names, required keys, artif
 
 Check decode, codec, dimensions, frame rate, audio tracks, duration delta, cover dimensions, subtitle syntax, file hashes, black frames, silence, duplicate segments, and source traceability. Detector limitations and anomalies are warnings, not passes.
 
+### 检测器判读纪律（002 验收问题 ⑪⑭）
+
+- **字幕越界检测（⑪）**：边缘越界类机器检查（如 cropdetect/边缘阈值）**只对字幕不透明描边/底带 ROI 出结论**；画面内容自身的亮边（亮色肩甲、高光轮廓等）不构成字幕被裁的证据。任何越界告警必须经检查帧目视确认后才能升级为警告或阻塞项，未确认前如实写"待人工判读"，不得直接报通过、也不得把误报当缺陷呈卡。
+- **重复帧检测对动漫平涂过敏（⑭）**：mpdecimate 一类检测器对平涂/赛璐璐画风会大量误标（002 实测 2842→1741 帧）。标准解释链 = **源区间互斥机验**（traceability 中各段源时间区间两两不重叠）**+ 抽帧目视**双确认；两者一致时按"检测器判读差异"如实记警告并附解释链，不得据此报"无重复画面"通过，也不得把误标帧当作重复画面缺陷。
+- **finishedAt 语义（⑬）**：`finishedAt` = **机器质检收口时刻**（metadata QA 完成、报告落盘的时间），不是交付关单时刻；交付关单以 pipeline-state 的 `确认G5` 审批记录为准。pending-human-review 状态的 manifest 允许暂缺 `finishedAt`，质检收口后必须回填。
+
 ## Human gate
 
 Human review is mandatory for burned subtitles, subtitle overlap, safe area, narration-picture sync, key shots, complete playback, audio mix, confirmed voice language/accent/voice type/speaking rate, and authorization. Do not mark G5 complete before the human decision is recorded.

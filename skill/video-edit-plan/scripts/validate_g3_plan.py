@@ -335,9 +335,26 @@ def main() -> int:
     decision_ref = plan.get("narrationDecisionRef")
     check(isinstance(decision_ref, str) and normalized_ref(decision_ref) == normalized_ref(str(args.g2_decision)),
           "plan narrationDecisionRef must exactly identify --g2-decision")
+    # Issue 002-⑤: structural normalization happens HERE, as batch errors — a fact
+    # entry mixed into sourceEvidence must not crash the run with a raw KeyError.
     evidence_entries = evidence.get("sourceEvidence", [])
-    known = {entry["assetId"]: entry["sourceProbe"]["durationMs"] for entry in evidence_entries}
-    source_identity = {entry["assetId"]: str(entry.get("sha256") or entry["assetId"]).lower() for entry in evidence_entries}
+    if not isinstance(evidence_entries, list):
+        ERRORS.append("evidence sourceEvidence must be a list")
+        evidence_entries = []
+    known: dict = {}
+    source_identity: dict = {}
+    for position, entry in enumerate(evidence_entries, 1):
+        if not isinstance(entry, dict) or not isinstance(entry.get("assetId"), str) or not entry["assetId"]:
+            ERRORS.append(f"evidence sourceEvidence[{position}] is not a media entry with assetId "
+                          "(fact entries belong in webSourceEvidence)")
+            continue
+        probe = entry.get("sourceProbe")
+        duration = probe.get("durationMs") if isinstance(probe, dict) else None
+        if not isinstance(duration, (int, float)) or isinstance(duration, bool):
+            ERRORS.append(f"evidence sourceEvidence {entry['assetId']} requires sourceProbe.durationMs")
+            continue
+        known[entry["assetId"]] = duration
+        source_identity[entry["assetId"]] = str(entry.get("sha256") or entry["assetId"]).lower()
     segments = plan.get("segments")
     check(isinstance(segments, list) and bool(segments), "plan requires non-empty segments")
     if not isinstance(segments, list) or not segments:

@@ -140,12 +140,17 @@ def main() -> int:
     if not isinstance(target_seconds, (int, float)) or isinstance(target_seconds, bool) or target_seconds <= 0:
         fail("plan lacks a positive durationDecision.targetDurationSec; G4 refuses to prepare with a zero target (issue 025)")
     target_ms = int(target_seconds * 1000)
+    # Issue 002-⑨: the approved plan's frame rate is a machine fact; carry it into the
+    # manifest so render and assembly inherit it instead of silently defaulting to 24.
+    edit_fps = plan.get("editPlan", {}).get("fps")
+    if edit_fps is not None and (not isinstance(edit_fps, int) or isinstance(edit_fps, bool) or edit_fps <= 0):
+        fail("editPlan.fps must be a positive integer when present (issue 002-⑨)")
     result = {
         "schemaVersion": "0.2", "node": "G4", "projectId": plan["projectId"],
         "status": "prepared_for_render", "inputPlan": str(args.plan), "inputEvidence": str(args.evidence),
         "durationDecisionRef": "plan.durationDecision" if decision_target else "plan.targetProfile",
         "sourceAudioPolicy": "exclude", "segmentCount": len(rendered), "timelineDurationMs": cursor,
-        "targetDurationMs": target_ms, "durationDeltaMs": cursor-target_ms,
+        "targetDurationMs": target_ms, "durationDeltaMs": cursor-target_ms, "targetFps": edit_fps,
         "segments": rendered,
         "renderRequirements": {"preserveSegmentBoundaries": True, "sourceAudio": "exclude", "flattenedPreview": "qa_only_not_chatcut_timeline_source"},
     }

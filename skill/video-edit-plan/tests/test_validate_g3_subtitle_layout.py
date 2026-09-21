@@ -67,11 +67,31 @@ class SubtitleLayoutTests(unittest.TestCase):
         self.assertNotEqual(0, code)
         self.assertIn("differs from layout contract fontsize", output)
 
-    def test_single_run_wrapping_to_three_lines_is_rejected(self):
+    def test_unbreakable_cjk_run_rejected_under_conservative_default(self):
+        # Issue 002-⑧: absent autoWrap means the renderer may NOT auto-wrap CJK;
+        # a 100-char run must be flagged as clipping, not silently "wrapped".
         ass = self.ass(14, "句" * 100)
         code, output = self.run_cli(ass, self.layout())
         self.assertNotEqual(0, code)
+        self.assertIn("unbreakable run", output)
+
+    def test_single_run_wrapping_to_three_lines_is_rejected(self):
+        ass = self.ass(14, "句" * 100)
+        code, output = self.run_cli(ass, self.layout(lane={"autoWrap": True}))
+        self.assertNotEqual(0, code)
         self.assertIn("needs 3 rendered lines", output)
+
+    def test_autoWrap_capability_profile_reported(self):
+        ass = self.ass(14, "短句一条。")
+        code, output = self.run_cli(ass, self.layout())
+        self.assertEqual(0, code, output)
+        self.assertIn('"autoWrap": false', output)
+
+    def test_non_boolean_autoWrap_is_rejected(self):
+        ass = self.ass(14, "短句一条。")
+        code, output = self.run_cli(ass, self.layout(lane={"autoWrap": "yes"}))
+        self.assertNotEqual(0, code)
+        self.assertIn("autoWrap must be a boolean", output)
 
     def test_hard_breaks_beyond_max_lines_are_rejected(self):
         ass = self.ass(14, "第一行\\N第二行\\N第三行")

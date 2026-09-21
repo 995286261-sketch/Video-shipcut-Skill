@@ -69,13 +69,23 @@ def token_width(token: str, fontsize: float) -> float:
     return sum(char_units(ch) for ch in token) * fontsize
 
 
-def wrap_line(line: str, fontsize: float, available: float) -> int:
-    """Count the lines libass needs for one hard line, breaking at spaces and (for
-    oversized CJK runs) at any character, conservatively."""
+def wrap_line(line: str, fontsize: float, available: float, allow_char_break: bool) -> tuple[int, bool]:
+    """Count the lines the renderer needs for one hard line, and report overflow.
+
+    Issue 002-⑧: the old model assumed any CJK character could break, but local libass
+    builds do NOT auto-wrap CJK runs — a validator green light did not guarantee a
+    correct render. With allow_char_break=False (the conservative default) spaces are
+    the only legal break points, and a single token wider than the available width is
+    reported as overflow: that renderer will clip it instead of wrapping."""
     space_width = NARROW_RATIO * fontsize
     pieces: list[str] = []
+    overflow = False
     for token in line.split(" "):
         if not token or token_width(token, fontsize) <= available:
+            pieces.append(token)
+            continue
+        if not allow_char_break:
+            overflow = True
             pieces.append(token)
             continue
         chunk = ""
@@ -95,7 +105,7 @@ def wrap_line(line: str, fontsize: float, available: float) -> int:
         else:
             lines += 1
             current = width
-    return lines
+    return lines, overflow
 
 
 def parse_ass(text: str) -> tuple[dict, dict, list[dict]]:
@@ -150,6 +160,11 @@ def main() -> int:
         fail("layout contract lanes.narration.fontsize must be a positive number")
     if not isinstance(max_lines, int) or isinstance(max_lines, bool) or max_lines < 1:
         fail("layout contract lanes.narration.maxLines must be a positive integer")
+    # Renderer capability profile (issue 002-⑧): absent means conservative — assume the
+    # renderer cannot auto-wrap CJK, so explicit line breaks are mandatory for long runs.
+    auto_wrap = lane.get("autoWrap", False)
+    if not isinstance(auto_wrap, bool):
+        fail("layout contract lanes.narration.autoWrap must be a boolean when present")
     info, styles, events = parse_ass(args.ass.read_text(encoding="utf-8-sig"))
     if not events:
         fail("subtitle timeline has no dialogue events")
@@ -186,7 +201,14 @@ def main() -> int:
         text = OVERRIDE_TAG.sub("", event.get("Text", ""))
         if not text.strip():
             fail(f"event at {event.get('Start', '?')} has empty text")
-        total = sum(max(1, wrap_line(hard, style_fontsize, available)) for hard in text.split("\\N"))
+        total, overflowed = 0, False
+        for hard in text.split("\\N"):
+            hard_lines, hard_overflow = wrap_line(hard, style_fontsize, available, auto_wrap)
+            total += max(1, hard_lines)
+            overflowed = overflowed or hard_overflow
+        if overflowed and not auto_wrap:
+            preview = text.replace("\\N", "⏎")[:24]
+            violations.append(f"event at {event.get('Start', '?')} has an unbreakable run wider than the render width; this renderer does not auto-wrap CJK — split with explicit \\N: {preview}")
         observed = max(observed, total)
         if total > max_lines:
             preview = text.replace("\\N", "⏎")[:24]
@@ -201,6 +223,7 @@ def main() -> int:
         "styles": len(styles),
         "fontsize": fontsize,
         "maxLines": max_lines,
+        "autoWrap": auto_wrap,
         "maxRenderedLinesObserved": observed,
         "playRes": [play_res_x, play_res_y],
         "srtCues": srt_cues,

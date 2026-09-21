@@ -276,10 +276,21 @@ class PipelineStateTest(unittest.TestCase):
         self.init()
         self.prepare_node("G1")
         self.approve("G1")
-        self.prepare_node("G2", basis_refs=[self.narration, self.facts, self.voice])
+        # facts deliberately NOT a receipt basisRef, so the approval-argument check is
+        # what catches its deletion (receipt reload stays green).
+        self.prepare_node("G2", basis_refs=[self.narration, self.voice])
         self.facts.unlink()
         blocked = self.approve("G2", code=2)
         self.assertIn("G2 factCitationRef", blocked["error"])
+
+    def test_deleted_receipt_basis_after_record_review_is_flagged_invalid(self):
+        # Issue 002-⑦ companion: a basis file pulled out from under a recorded receipt
+        # makes the receipt no longer valid — approve must refuse, not trust the snapshot.
+        self.init()
+        self.prepare_node("G1")
+        self.files["G1"]["basis"].unlink()
+        blocked = self.approve("G1", code=2)
+        self.assertIn("no longer valid", blocked["error"])
 
     def test_reopen_invalidates_review_gate_and_approval(self):
         self.init()
@@ -298,6 +309,31 @@ class PipelineStateTest(unittest.TestCase):
         status = self.run_cli("status", "--state", self.state)
         self.assertEqual("completed", status["currentNode"])
         self.assertEqual("completed", status["status"])
+
+    def test_receipt_changed_after_record_review_is_flagged_stale(self):
+        # Issue 002-⑦: editing the receipt after record-review must say "snapshot stale,
+        # re-record" — never blame the (correct) frozen snapshot for a "missing" basisRef.
+        self.init()
+        self.prepare_node("G1")
+        receipt_path = self.root / "G1-review-gate.json"
+        value = json.loads(receipt_path.read_text(encoding="utf-8"))
+        value["renderedAt"] = "2026-09-08T09:00:00Z"
+        receipt_path.write_text(json.dumps(value), encoding="utf-8")
+        blocked = self.approve("G1", code=2)
+        self.assertIn("changed since record-review", blocked["error"])
+        # Re-recording the (valid) receipt refreshes the snapshot and approval proceeds.
+        self.register_review("G1", basis_refs=[self.files["G1"]["approval"], self.files["G1"]["basis"]])
+        self.approve("G1")
+
+    def test_receipt_broken_after_record_review_is_flagged_invalid(self):
+        self.init()
+        self.prepare_node("G1")
+        receipt_path = self.root / "G1-review-gate.json"
+        value = json.loads(receipt_path.read_text(encoding="utf-8"))
+        value["reviewStatus"] = "draft"
+        receipt_path.write_text(json.dumps(value), encoding="utf-8")
+        blocked = self.approve("G1", code=2)
+        self.assertIn("no longer valid", blocked["error"])
 
 
 if __name__ == "__main__":

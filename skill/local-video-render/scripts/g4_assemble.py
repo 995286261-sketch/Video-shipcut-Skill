@@ -427,13 +427,22 @@ def main() -> int:
     parser.add_argument("--title-bar", type=Path, help="title bar contract JSON: fontFile, text, fontsize, marginPct")
     parser.add_argument("--normalize-narration-lufs", type=float, default=None,
                         help="apply the standard narration loudness chain to this integrated-loudness target (e.g. -14); result is measured and recorded, never assumed")
-    parser.add_argument("--fps", type=int, default=24)
+    parser.add_argument("--fps", type=int, default=None,
+                        help="override; by default inherit the manifest targetFps from the approved plan (issue 002-⑨)")
     parser.add_argument("--duration-tolerance-ms", type=int, default=400)
     args = parser.parse_args()
 
     manifest = load(require_file(args.manifest, "G4 manifest"))
     if manifest.get("status") != "prepared_for_render":
         fail("manifest is not prepared_for_render")
+    if args.fps is None:
+        inherited = manifest.get("targetFps")
+        if isinstance(inherited, int) and not isinstance(inherited, bool) and inherited > 0:
+            args.fps, fps_source = inherited, "manifest-targetFps"
+        else:
+            args.fps, fps_source = 24, "default-24"
+    else:
+        fps_source = "explicit-override"
     segments = manifest.get("segments", [])
     if not segments:
         fail("manifest has no segments")
@@ -565,6 +574,7 @@ def main() -> int:
         "outputSha256": sha256(args.output),
         "probedDurationMs": output_ms,
         "fps": args.fps,
+        "fpsSource": fps_source,
         "cover": str(cover_output) if cover_output else None,
         "chapterCards": {
             "path": str(args.chapter_cards), "sha256": sha256(args.chapter_cards),

@@ -189,6 +189,8 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 python skill/video-edit-plan/scripts/validate_g3_subtitle_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json>
 ```
 
-校验器强制 ASS 样式字号与布局合同一致，并按画面分辨率与样式边距保守估计每条 cue 的渲染行数（全角字符按 1em、半角按 0.55em，空格与任意字符处可断）；任何超过 `lanes.narration.maxLines` 的估计行数都要求重新语义断行，不得靠渲染器自动折行兜底。
+校验器强制 ASS 样式字号与布局合同一致，并按画面分辨率与样式边距保守估计每条 cue 的渲染行数（全角字符按 1em、半角按 0.55em）；任何超过 `lanes.narration.maxLines` 的估计行数都要求重新语义断行，不得靠渲染器自动折行兜底。
+
+**渲染器能力档 `lanes.narration.autoWrap`（002 验收问题⑧，默认 false）**：旧模型假设"任意字符可断行"，但本机 libass 构建**不会自动断 CJK 长行**——校验器绿灯曾放行出被裁的字幕。autoWrap=false 时只有空格是合法断点，任何不可断且超宽的连续段（典型为无空格中文长句）直接判违规，要求用显式 `\N` 语义断行（一条口播一排版块、两行均衡）；只有当目标渲染器确认可自动折行时，才允许在合同中显式写 `"autoWrap": true`。**绿灯必须建立在所选能力档之上：合同不写能力档 = 按保守档判**。
 
 在 `approved_for_g4` 前逐项检查：G2 事实状态及来源层级、全文口播时长与目标时长（冲突已由用户明确决定）、逐帧切点、每段源字幕清除、字幕布局机器校验通过、标题/口播无冲突、封面无源字幕/Logo、用户明确放行。G4 可微调切点、裁切/遮罩坐标、字幕断句、车道和 BGM 音量；不得改变 G2 事实状态、音频排除或分发边界。G3 不创建 ChatCut 项目、不上传素材、不渲染或发布。

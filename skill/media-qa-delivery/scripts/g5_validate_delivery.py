@@ -96,7 +96,12 @@ def main() -> int:
         qa, review, export = load(bundle / "metadata-validation-report.json"), load(bundle / "human-review-decision.json"), load(bundle / "export-config.json")
     except json.JSONDecodeError as error:
         print(json.dumps({"status": "invalid", "errors": [f"invalid JSON: {error}"]}, ensure_ascii=True)); return 2
+    # Issue 002-⑬: the contract already allows "finishedAt OR explicit pending status"
+    # (qa-contract); a pending-human-review manifest legitimately has no QA close time yet.
+    manifest_status = str(manifest.get("status") or "")
     for field in CONTRACT_FIELDS:
+        if field == "finishedAt" and manifest_status.startswith("pending"):
+            continue
         if manifest.get(field) in (None, "", [], {}): errors.append(f"delivery manifest missing {field}")
     project_id = manifest.get("projectId")
     for label, data in (("traceability", trace), ("edit plan", plan), ("qa", qa), ("human review", review), ("export config", export)):
