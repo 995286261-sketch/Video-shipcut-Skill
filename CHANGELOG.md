@@ -1,5 +1,18 @@
 # 变更记录
 
+## v1.4.0 — 2026-09-21 — **字幕专员版本**
+
+发布范围＝002 验收测后裁决 14 条批次 ＋ "底座+插件"定案 ＋ subtitle-expert 剥出立册与彻底化（提交 `b7cc9c2`…`603be16`）：
+
+- **002 十四条裁决批次收口**（批 A `7ba993c`／批 B `e2c21b4`／批 C `abaf3c1`／收口 `dc9b2f1`）：⑧ 渲染器能力档 `autoWrap`（缺省保守档=本机 libass 不自动断 CJK 长行，绿灯必须建立在所选能力档之上——002 唯一用户可见级高危根治）、⑤ validate_g3_plan 批量报错、⑦ approve 重读收据比对快照（changed since record-review）、⑨ editPlan.fps 经 manifest targetFps 贯通 prepare→render→assemble（`fpsSource` 溯源）、③ Freesound 时长两档（放宽重试+`durationShortfall` 显式标注，决策权在卡）、④ 候选耗尽四选一主动脱出、⑪⑫⑬⑭ 合同兑现（ROI 判读纪律/REQUIRED 对账/finishedAt 语义/mpdecimate 判读链）、① 新对话开场只报磁盘事实成文（AGENTS 路由 6+operator-dialogue 规则 6）、⑥⑩ 口径。② 早已修，销账。逐条去向=002 问题清单尾部《测后裁决执行台账》。
+- **music-expert 加固**（`b7cc9c2`）：环境变量通用名补齐（`MUSIC_EXPERT_*` 优先、`P0C_*` 兼容别名）；两检索器 SSRF URL 白名单守卫（Mimosa L3 拦截后修复，含 3 组守卫测试）。
+- **"底座+插件"定案**（用户 2026-09-21）：节点专员串联=底座，领域专员=可迁移插件；插件四标准=CLI+产物文件握手（零跨节点 import）/依赖全环境变量（通用名优先、禁硬编码路径）/合同自带接线说明书/缺能力结构化 blocked 或保守默认。
+- **subtitle-expert 剥出立册**（`b43eb12`/`35e0cbc`，插件专员 No.2，出生证=002 问题⑧㉖㊍）：布局校验器自 video-edit-plan 迁入、style-contract 自 local-video-render 迁入、新增渲染器能力档探测 `subtitle_probe_renderer.py`；layout/qa 两合同＋接线说明书立为唯一事实源（`references/layout-contract.md`）。章程三块"新引擎"防过度设计未建，出入如实记于章程《执行记录》。
+- **彻底化批**（`dee6568`，用户复审"剥离出来了就彻底一点，不要节点里有一点专员里有一点"）：G4 内嵌的章节卡 cue 修剪（`trim_ass_cues`+ASS 时基解析）迁入专员 `subtitle_trim_cues.py`，G4 改 CLI 调用、只烧派生件（批准源永不改动，装配记录 `subtitleCuesTrimmed` 语义不变）；G5 私有 SRT 正则删除，改产物握手——交付包新增必备件 `subtitle-srt-check.json`（专员 `subtitle_check_srt.py` 报告，validator 校验 status=passed＋sha256 新鲜度）；生成纪律入机验：`--srt` 逐 cue 对时对文（10× 时基漂移必拒，㊍ 锁死点）、新增 `--source` 对 G2 口播句子 JSON 逐块对齐（一条批准口播块=一个排版块）、事件重叠判"强调拆层"；修探测真缺陷——libass 版本正则误把 configuration 行 `--enable-libass --enable-libfreetype` 的 flag 当版本号（改为只认独立版本行，拿不到如实 unknown）。
+- **展示资产**：总流程图 v0.2 定稿并入库上 GitHub（`43421d5`，补 确认G2 链＋2x 高清导出）。
+- **验证**：subtitle-expert 套件 12→33 全绿；002 实产物活体复验贯穿 G3/G4/G5/探测（13 events 全中、漂移拒、trim 源零改动、复检 passed）；全量回归 9 套全绿。
+- **标签**：本版按用户拍板走数字版本系列（`v1.4.0`，annotated）；此前误用专名 tag `subtitle-expert` 同日撤销删除。
+
 ## v1.3.0 — 2026-09-18 — **BGM完善版本**
 
 发布范围＝以下四批（单卡交互合同、主线接线①G0/②G1、music-expert N10+锚定打分）＋发布期内追加：
