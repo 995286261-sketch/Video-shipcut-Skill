@@ -20,6 +20,9 @@ class G5DeliveryTest(unittest.TestCase):
         self.write("final-video.mp4", b"video"); self.write("cover.jpg", b"cover"); self.srt_bytes = b"1\n00:00:00,000 --> 00:00:01,000\nHello\n"; self.write("subtitles.srt", self.srt_bytes)
         self.write("subtitle-srt-check.json", json.dumps({"skill": "subtitle-expert", "purpose": "subtitle_check_srt", "status": "passed",
                                                           "sha256": hashlib.sha256(self.srt_bytes).hexdigest().upper(), "cues": 1}).encode())
+        self.write("transition-audit.json", json.dumps({"skill": "transition-expert", "purpose": "transition_check", "status": "passed",
+                                                        "gridInvariant": True, "transitions": [],
+                                                        "master": {"path": "final-video.mp4", "sha256": hashlib.sha256(b"video").hexdigest().upper()}}).encode())
         self.write("README.md", b"readme"); self.write("failure-samples/README.md", b"real failure\n")
         self.write("edit-timeline.md", b"| Segment | Output time | Source |\n| --- | --- | --- |\n")
         segments = []
@@ -74,6 +77,23 @@ class G5DeliveryTest(unittest.TestCase):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
         result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
         self.assertIn("failed subtitle-expert check", " ".join(result["errors"]))
+
+    def test_rejects_missing_or_stale_transition_audit(self):
+        # 批③ 握手：转场物证缺失/指向旧成片/机器未过检，都不得关单（批准≠执行防线）。
+        (self.bundle / "transition-audit.json").unlink()
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("missing required file: transition-audit.json", " ".join(result["errors"]))
+        self.json("transition-audit.json", {"skill": "transition-expert", "purpose": "transition_check", "status": "passed",
+                                            "gridInvariant": True, "transitions": [],
+                                            "master": {"path": "final-video.mp4", "sha256": "C" * 64}})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("transition-audit.json is stale", " ".join(result["errors"]))
+        self.json("transition-audit.json", {"skill": "transition-expert", "purpose": "transition_check", "status": "failed",
+                                            "gridInvariant": True, "transitions": [], "errors": ["xfade 执行参数与指令不符"],
+                                            "master": {"path": "final-video.mp4", "sha256": hashlib.sha256(b"video").hexdigest().upper()}})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("transition audit failed", " ".join(result["errors"]))
 
     def test_rejects_hash_or_human_review_failure(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)

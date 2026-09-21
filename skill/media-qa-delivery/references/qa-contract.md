@@ -17,6 +17,7 @@ edit-plan.json
 edit-timeline.md
 subtitles.srt
 subtitle-srt-check.json
+transition-audit.json
 export-config.json
 metadata-validation-report.json
 delivery-manifest.json
@@ -43,6 +44,7 @@ Check decode, codec, dimensions, frame rate, audio tracks, duration delta, cover
 ### 检测器判读纪律（002 验收问题 ⑪⑭）
 
 - **字幕面检查（⑪等）**：判读纪律唯一口径已剥入字幕专员 `skill/subtitle-expert/references/qa-contract.md`（越界只对描边/底带 ROI 出结论、告警须目视确认、绿灯不背渲染正确性的锅）；G5 按该合同消费，检查帧证据仍登记在收据 `check_frames` 项。
+- **转场面检查（批③）**：执行==批准的机器物证是 `transition-audit.json`（transition-expert `transition_report.py` 产物，握手照 subtitle-srt-check 模式：身份+`status passed`+`gridInvariant`+成片哈希新鲜）。但审计只证明滤镜参数与指令一致，**不背书观感**（⑧纪律）：每个转场窗口中点必检帧目视确认混合真实存在（非黑帧、非单源突切）、黑场出入渐变平滑，帧证据登记在收据 `check_frames` 项，不新增收据 id。
 - **重复帧检测对动漫平涂过敏（⑭）**：mpdecimate 一类检测器对平涂/赛璐璐画风会大量误标（002 实测 2842→1741 帧）。标准解释链 = **源区间互斥机验**（traceability 中各段源时间区间两两不重叠）**+ 抽帧目视**双确认；两者一致时按"检测器判读差异"如实记警告并附解释链，不得据此报"无重复画面"通过，也不得把误标帧当作重复画面缺陷。
 - **finishedAt 语义（⑬）**：`finishedAt` = **机器质检收口时刻**（metadata QA 完成、报告落盘的时间），不是交付关单时刻；交付关单以 pipeline-state 的 `确认G5` 审批记录为准。pending-human-review 状态的 manifest 允许暂缺 `finishedAt`，质检收口后必须回填。
 

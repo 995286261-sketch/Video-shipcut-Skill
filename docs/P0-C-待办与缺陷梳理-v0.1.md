@@ -17,7 +17,7 @@
 | 5 | 发现㊌：G2 旁白响度无链路 | CosyVoice 源 −23.9 LUFS/真峰 +0.5（PLR 24.4dB），G4 临场试 4 种链才到 −15.2 | **G4 侧已修（2026-09-09 晚）**：`g4_assemble.py --normalize-narration-lufs` 内置实测标准链 + ebur128 渲染后实测写装配记录（>1.5 LU 偏差记复核提示）。G2 配音清单登记目标响度字段仍并入接线批次 | 中→低 |
 | 6 | A3：批准口令 UX 与纪律依赖 Agent | 用户全程从未打出带空格口令（确认G2/确认/确认G5），靠 Agent 归一化+逐字入档（发现⑧ 的延续） | **已修（2026-09-09 晚）**：`pipeline_state.py` 脚本级归一化（canonical/无空格/裸"确认"仅当节点、错节点号拒绝、含糊拒绝），state 存 canonical + Verbatim + normalizedFromVariant 留痕，下游校验零改动 | ✅ |
 | 7 | A4：music-expert v0.2 修复滞留分支 | ebur128 −70 哨兵值误读修复在 feat/music-expert-001（2e7156c），main 未含 | 随分支合并进 main | 低（合并即消） |
-| 8 | 转场指令挂空合同（批准≠执行，⑧同族） | G3 八列卡第 8 列 `transitionInstruction` 只活在回显层（callback 仅查非空），计划层无字段、`validate_g3_plan.py` 零校验、G4 视频转场实现=零；002 实际批准过"叠化/硬切按 G4 微调"含糊句 | 三批修复（用户批准方案 09-21）：①词表入计划+卡-计划逐字对账（止血+立册，已 commit）②执行链：探测/窗口-手柄深检/directive/G4 prepare 透传+render 扩切+assemble xfade 链+report 复检（手柄回填、网格不变模型）——已完成：回归 399 全绿，WorkSpace 冒烟（红蓝绿三段 1 叠化+1 黑场出）成片 9000ms 网格零位移、中点帧为真混合、无转场项目产物逐字节一致，待 commit 口令 ③G5 转场 audit 握手+中点检查帧（未开工） | 高（批①②完成，批③待做） |
+| 8 | 转场指令挂空合同（批准≠执行，⑧同族） | G3 八列卡第 8 列 `transitionInstruction` 只活在回显层（callback 仅查非空），计划层无字段、`validate_g3_plan.py` 零校验、G4 视频转场实现=零；002 实际批准过"叠化/硬切按 G4 微调"含糊句 | 三批修复（用户批准方案 09-21）：①词表入计划+卡-计划逐字对账（止血+立册，`9bf3d08`）②执行链：探测/窗口-手柄深检/directive/G4 prepare 透传+render 扩切+assemble xfade 链+report 复检（手柄回填、网格不变模型，`0b496ad`；WorkSpace 冒烟成片 9000ms 零位移、中点帧真混合、无转场逐字节一致）③G5 握手：`transition-audit.json` 入交付包 REQUIRED（身份+passed+gridInvariant+成片哈希新鲜）+转场中点必检帧（g5-choice-cards/qa-contract/delivery-bundle-schema 同步）+花名册/AGENTS/render-contract 收口。全量回归 399 例绿。v1.5.0 发版等用户口令 | ✅（三批全落，发版待口令） |
 
 ## 二、设计缺口（非 bug，需决策）
 

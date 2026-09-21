@@ -1,6 +1,6 @@
 # P0-C Local Video Workflow
 
-This repository contains a six-stage local video production workflow. Before responding to any request involving video, images, documents, transcripts, reference videos, brand assets, music, clips, editing, rendering, subtitles, covers, or delivery packages, read `skill/p0-c-pipeline/SKILL.md` and follow it.
+This repository contains a six-stage local video production workflow. Before responding to any request involving video, images, documents, transcripts, reference videos, brand assets, music, clips, editing, transitions, rendering, subtitles, covers, or delivery packages, read `skill/p0-c-pipeline/SKILL.md` and follow it.
 
 Do not ask the user to name a skill or prepare technical artifacts. Infer the request is a new or continuing P0-C project and route through `p0-c-pipeline`.
 

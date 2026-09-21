@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 
-REQUIRED = ("final-video.mp4", "cover.jpg", "subtitles.srt", "subtitle-srt-check.json", "source-timecode-list.json", "edit-plan.json", "edit-timeline.md", "export-config.json", "metadata-validation-report.json", "human-review-decision.json", "delivery-manifest.json", "README.md", "failure-samples/README.md")
+REQUIRED = ("final-video.mp4", "cover.jpg", "subtitles.srt", "subtitle-srt-check.json", "transition-audit.json", "source-timecode-list.json", "edit-plan.json", "edit-timeline.md", "export-config.json", "metadata-validation-report.json", "human-review-decision.json", "delivery-manifest.json", "README.md", "failure-samples/README.md")
 CONTRACT_FIELDS = ("schemaVersion", "projectId", "sourceProbe", "segments", "editPlan", "artifacts", "qaReport", "humanReviewPoints", "evidenceRefs", "warnings", "status", "finishedAt")
 QA_CHECKS = ("decode", "videoCodec", "dimensions", "fps", "audio", "duration", "blackFrames", "silence", "duplicateSegments", "cover")
 
@@ -37,6 +37,29 @@ def check_delivery_srt(bundle: Path, errors: list[str]) -> None:
         return
     if str(report.get("sha256", "")).upper() != digest(srt):
         errors.append("subtitle-srt-check.json is stale: recorded sha256 does not match the bundle's subtitles.srt (re-run the specialist checker after any edit)")
+
+
+def check_transition_audit(bundle: Path, errors: list[str]) -> None:
+    """转场执行==批准的唯一物证（transition-expert 批③握手，照 subtitle-srt-check 模式）：
+    报告身份、status passed、且登记的成片哈希就是包内这一支 final-video.mp4——
+    报告若指向旧成片即 stale。无转场项目该报告照常存在（transitions: []、passed）。"""
+    report_path = bundle / "transition-audit.json"
+    if not report_path.is_file():
+        errors.append("missing transition-audit.json — run transition-expert/scripts/transition_report.py on the G4 assembly record and file the report before closing QA")
+        return
+    report = load(report_path)
+    if report.get("skill") != "transition-expert" or report.get("purpose") != "transition_check":
+        errors.append("transition-audit.json is not a transition-expert check report")
+        return
+    if report.get("status") != "passed":
+        errors.append(f"transition audit failed: {('; '.join(report.get('errors', [])) or '')[:200]}")
+        return
+    if report.get("gridInvariant") is not True:
+        errors.append("transition-audit.json does not assert gridInvariant — refuse to deliver a timeline the directive never promised")
+    video = bundle / "final-video.mp4"
+    recorded = str((report.get("master") or {}).get("sha256") or "").upper()
+    if video.is_file() and recorded and recorded != digest(video):
+        errors.append("transition-audit.json is stale: recorded master sha256 does not match the bundle's final-video.mp4 (re-run the audit after any re-render)")
 
 
 def load(path: Path) -> dict:
@@ -148,6 +171,7 @@ def main() -> int:
     for item in [qa.get("artifacts", {}).get("finalVideo", {}), qa.get("artifacts", {}).get("cover", {}), qa.get("artifacts", {}).get("subtitles", {}), manifest.get("artifacts", {}).get("editTimeline", {})] + qa.get("artifacts", {}).get("chapterClips", []): check_artifact(bundle, item, errors)
     if not set(QA_CHECKS).issubset(qa.get("checks", {})): errors.append("qa report lacks required machine checks")
     check_delivery_srt(bundle, errors)
+    check_transition_audit(bundle, errors)
     if manifest.get("status", "").startswith("completed") and not (review.get("status") == "approved" and review.get("decision") == "accepted"):
         errors.append("completed bundle lacks accepted human review")
     if manifest.get("authorization") in (None, "") or manifest.get("distribution") in (None, ""): errors.append("authorization or distribution boundary missing")
