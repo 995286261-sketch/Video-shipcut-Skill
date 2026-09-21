@@ -198,40 +198,59 @@ def main() -> int:
         emit({"status": "blocked", "blockers": [{"type": "missing_toolchain", "detail": "ffmpeg required for the decode probe of downloads"}]})
         return 2
 
+    # Issue 002-③: the duration floor starts as a hard filter; when it starves the pool
+    # (live 002: 42/42 rejected for a 3–10 min target) we run ONE relaxed pass and keep
+    # undersized candidates visibly marked `durationShortfall`. Loop/splice/relax stays a
+    # user decision on the G1 card — never silent padding.
+    RELAXED_MIN = 15.0
     results, blockers = [], []
-    if args.similar_to is not None:
-        payload, error = api_get(token, f"/sounds/{args.similar_to}/similar/", {"page_size": args.max_results, "fields": SEARCH_FIELDS})
-        if payload is None:
-            emit({"status": "blocked", "blockers": [error]})
-            return 2
-        results = payload.get("results", [])
-    else:
+    duration_mode = "hard"
+
+    def search_pass(min_duration: float):
+        pass_results, pass_blockers = [], []
         for query in queries:
-            params = {"fields": SEARCH_FIELDS, "page_size": max(args.max_results * 3, args.max_results), "min_duration": args.duration_min, "max_duration": args.duration_max}
+            params = {"fields": SEARCH_FIELDS, "page_size": max(args.max_results * 3, args.max_results),
+                      "min_duration": min_duration, "max_duration": args.duration_max}
             if query:
                 params["query"] = query
             if args.tags:
                 params["filter"] = " ".join(f'tag:"{tag.strip()}"' for tag in args.tags.split(",") if tag.strip())
             payload, error = api_get(token, "/search/text/", params)
             if payload is None:
-                blockers.append({"query": query, **error})
+                pass_blockers.append({"query": query, **error})
                 continue
-            results.extend(payload.get("results", []))
+            pass_results.extend(payload.get("results", []))
+        return pass_results, pass_blockers
+
+    def dedupe(items):
+        seen_ids, unique = set(), []
+        for item in items:
+            sound_id = item.get("id")
+            if sound_id in seen_ids:
+                continue
+            seen_ids.add(sound_id)
+            unique.append(item)
+        return unique
+
+    text_search = args.similar_to is None
+    if not text_search:
+        payload, error = api_get(token, f"/sounds/{args.similar_to}/similar/", {"page_size": args.max_results, "fields": SEARCH_FIELDS})
+        if payload is None:
+            emit({"status": "blocked", "blockers": [error]})
+            return 2
+        results = payload.get("results", [])
+    else:
+        results, blockers = search_pass(args.duration_min)
         if blockers and len(blockers) == len(queries):
             emit({"status": "blocked", "blockers": blockers})
             return 2
-    seen_ids, unique = set(), []
-    for item in results:
-        sound_id = item.get("id")
-        if sound_id in seen_ids:
-            continue
-        seen_ids.add(sound_id)
-        unique.append(item)
-    results = unique
+    results = dedupe(results)
     candidates_dir = args.output_dir / "candidates"
     candidates = []
     excluded = []
-    for item in results:
+
+    def collect(items, shortfall_floor=None):
+      for item in items:
         verdict = classify_license(item.get("license"))
         if verdict is None:
             excluded.append({"freesoundId": item.get("id"), "name": item.get("name"), "license": item.get("license"),
@@ -261,6 +280,9 @@ def main() -> int:
             "decodeProbe": {"status": "not_run", "engine": "ffmpeg"},
             "analysisRef": None,
         }
+        if shortfall_floor is not None and isinstance(item.get("duration"), (int, float)) and item["duration"] < shortfall_floor:
+            record["durationShortfall"] = {"requiredMinSec": shortfall_floor, "actualSec": item["duration"],
+                                           "note": "短于目标时长：进卡如实标注，循环/拼接/放宽由用户在卡片上决定（002-③），不得静默凑时长"}
         if not args.no_download:
             # Live 2026-09-17: the API renamed preview keys to hyphen form
             # (preview-hq-mp3); accept both spellings so old and new responses work.
@@ -285,6 +307,16 @@ def main() -> int:
                 record["decodeProbe"]["error"] = probe_detail or "undecodable"
         candidates.append(record)
 
+    collect(results)
+    if text_search and not candidates and args.duration_min > RELAXED_MIN:
+        relaxed_results, relaxed_blockers = search_pass(RELAXED_MIN)
+        blockers.extend(relaxed_blockers)
+        seen_ids = {item.get("id") for item in results}
+        collect([item for item in dedupe(relaxed_results) if item.get("id") not in seen_ids],
+                shortfall_floor=args.duration_min)
+        if candidates:
+            duration_mode = "soft-fallback"
+
     kept = [c for c in candidates if c["decodeProbe"]["status"] != "failed"]
     manifest_path = args.output_dir / f"BGM-候选清单-freesound-{datetime.now().strftime('%Y%m%dT%H%M%S')}.json"
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
@@ -293,6 +325,9 @@ def main() -> int:
         "query": {"text": args.query, "tags": args.tags, "similarTo": args.similar_to,
                   "termsFile": str(args.terms_file) if args.terms_file else None, "terms": queries or None},
         "partialBlockers": blockers,
+        "durationFilter": {"mode": duration_mode, "requestedMinSec": args.duration_min,
+                           "appliedMinSec": (RELAXED_MIN if duration_mode == "soft-fallback" else args.duration_min),
+                           "maxSec": args.duration_max},
         "retrievedAt": now(), "candidates": kept, "excluded": excluded,
         "sufficiency": {"count": len(kept), "minimumExpected": 3},
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

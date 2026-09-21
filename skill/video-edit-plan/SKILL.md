@@ -47,6 +47,8 @@ python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路�
 
 停止条件：G2/G3 的 approve 在 `libraryPending` 时被状态机硬拒（N9：音乐须在首个消费节点前在场）；用户明示不用 BGM 走 `bgm-choice --decision no_bgm`，同样留痕。`provided` 路径（G0 即有歌）跳过 1–5，只做第 6 步。
 
+**候选耗尽必须卡片主动脱出（002 问题④）**：挑曲循环出现"整轮候选全被否"或"候选池已空"时，**不得再等用户喊停**（002 实测：18 首全否后靠用户原话"你随便挑选一首"才脱出），卡片必须主动给出四条出路：【委托选定（模型从已试听池挑最可用并写明依据）／放宽画像重检（含时长软档，见 sourcing-contract 002-③）／切换检索通道／不要 BGM】。委托选定按"用户委托"如实归属（默认=推荐纪律），选中的曲子仍走完整登记+三哈希链，不因委托降格证据要求。
+
 ## Pipeline Integration
 
 Read `工作台/<projectId>/pipeline-state.json`. Work only when `currentNode` is G1 or G3 and use only registered inputs. Archived files are never inputs. Record only the active node's artifacts and review points through `$p0-c-pipeline`; do not advance G2 or G4.

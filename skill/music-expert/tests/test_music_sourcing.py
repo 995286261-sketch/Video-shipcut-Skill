@@ -427,6 +427,19 @@ class RecommendTest(unittest.TestCase):
         self.assertEqual("no_candidates", json.loads(result.stdout)["blockers"][0]["type"])
 
 
+class DurationSoftFallbackTest(unittest.TestCase):
+    """Issue 002-③: a hard duration floor must never silently starve the pool."""
+
+    def test_relaxed_pass_and_shortfall_marking_present(self):
+        source = SEARCH.read_text(encoding="utf-8")
+        self.assertIn("durationShortfall", source)
+        self.assertIn("search_pass(RELAXED_MIN)", source)
+        self.assertIn("soft-fallback", source)
+        self.assertIn("durationFilter", source)
+        # The relaxed retry only fires on an empty first pass and a raised floor.
+        self.assertIn("not candidates and args.duration_min > RELAXED_MIN", source)
+
+
 class SsrfGuardTest(unittest.TestCase):
     """Mimosa L3 (2026-09-21): every outbound fetch must pass the URL allowlist guard."""
 
