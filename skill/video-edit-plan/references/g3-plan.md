@@ -10,6 +10,8 @@ G3 还必须读取 G2 审核决定中的 `approvedNarrationRef`、`voiceBriefRef
 python skill/video-edit-plan/scripts/validate_g3_plan.py --plan <G3计划.json> --evidence <G2证据清单.json> --g2-decision <G2审核决定.json> --visual-analysis <G3视觉分析.json> --semantic-beats <G3口播语义节拍.json> --material-pack <G0-素材包/material-pack.json> --bgm-alignment <G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json>
 ```
 
+**文件版本 ≠ schemaVersion（002 问题⑥）**：计划修订走**文件名**递增（`G3-剪辑计划-v0.2.json`），合同字段 `schemaVersion` 恒为 `"0.1"`（校验器只认 0.1）。升版本改文件名、不动 schemaVersion；误升 schemaVersion 会被直接拒绝——两者撞名是直觉陷阱，此处为唯一口径。
+
 G2 决策只有 `status: approved_for_g3` 才能放行；计划中的 `narrationDraft` 与 `narrationDecisionRef` 必须分别精确匹配决策的 `approvedNarrationRef` 与校验命令传入的决策路径。若用户已人肉判断某客观断言为真，可在 G2 决策的 `userManuallyVerifiedClaims` 列表中逐条登记，并标明该来源层级不是一手出处；不得把它改写成“官方已核验”。
 
 每个候选片段必须保留 `assetId`、原片 `startMs/endMs`、用途、理由和 `evidenceRefs`。不得把机器转写当作事实，不得使用参考视频画面或原片音频。带烧录字幕或剧情风险的片段必须进入人工审核点；画面身份不清（`uncertain`/`mixed`/`person_only`/`not_present`）的片段按主体确认规则直接排除并计入不可用素材，不得带身份歧义进入时间线。

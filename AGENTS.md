@@ -11,6 +11,7 @@ Do not ask the user to name a skill or prepare technical artifacts. Infer the re
 3. Do not read, repair, or infer state from legacy `run-manifest.json`.
 4. Keep all source media read-only. Respect authorization and distribution limits.
 5. Stop at every human-review gate. Record explicit approvals through `p0-c-pipeline`; do not treat chat context alone as a completed gate.
+6. A fresh session must open with disk facts only (state file read now, file existence). Never recount prior progress from memory, chat history, or handoff docs; whether to continue or restart is the user's call. See `operator-dialogue.md` rule 6 (002 issue ①).
 
 The six nodes are G0 material intake, G1 direction, G2 evidence/narration, G3 edit plan, G4 local/ChatCut editing, and G5 QA/delivery.
 

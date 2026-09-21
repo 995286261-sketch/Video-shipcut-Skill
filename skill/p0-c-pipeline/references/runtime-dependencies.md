@@ -12,6 +12,18 @@ Skill 文件本身不等于完整运行环境。把项目交给另一台电脑�
 | Faster-Whisper 模型缓存 | G2 离线转写 | `P0C_FASTER_WHISPER_MODEL_HOME` | 不默认打包；体积和模型许可需单独确认 |
 | 本地 TTS/配音来源 | G2 试听、G4 完整旁白 | 以实际可发现的本地来源为准 | 不假设存在；需登记来源和许可 |
 
+## drawtext 字体推荐（002 问题⑩）
+
+G4 字形覆盖预检（㉛）会在 ffmpeg 动手前拦下缺字形的字体。macOS 上按此清单选，**路径不得含空格**（drawtext 的 fontfile 解析会被空格截断）：
+
+| 字体 | 路径 | 覆盖 |
+| --- | --- | --- |
+| 宋体 | `/System/Library/Fonts/Supplemental/Songti.ttc` | 中文+拉丁（预检读 TTC 首 face） |
+| 苹方 | `/System/Library/Fonts/PingFang.ttc` | 中文+拉丁 |
+
+- **不要用**：`Hiragino Sans GB.ttc`（cmap format 14，预检正确拦截，002 实录）、路径含空格的任何字体、脚本专用字体（如 NotoSansLepcha——连基本拉丁都不含）。
+- 其他平台不假设本机字体存在：先跑一次 `g4_assemble` 预检确认覆盖，再排产。
+
 ## 可选工具
 
 `.tools/crawl4ai` 是网页抓取辅助环境，不是六节点视频生产的必需依赖。Facebook、TikTok 等站点是否可访问仍受站点、账号、授权和网络边界约束；安装 Crawl4AI 不代表可以绕过这些限制。
