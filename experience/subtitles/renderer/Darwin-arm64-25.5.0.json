@@ -1,0 +1,27 @@
+{
+ "kind": "renderer",
+ "host": {
+  "system": "Darwin",
+  "release": "25.5.0",
+  "machine": "arm64"
+ },
+ "ffmpeg": {
+  "versionLine": "ffmpeg version 7.0 Copyright (c) 2000-2024 the FFmpeg developers",
+  "libass": "unknown (enabled at build, no version line)",
+  "libassEnabled": true
+ },
+ "autoWrap": {
+  "value": false,
+  "evidence": null,
+  "basis": "conservative default — CJK runs must carry explicit line breaks (002-⑧)"
+ },
+ "observations": [
+  {
+   "at": "2026-09-21T16:57:22+08:00",
+   "file": "/Users/chuanzhangbigye/工作/WorkSpace/subtitle-expert-实测-v0.1/fixcheck/字幕-渲染器能力档-v0.1.json"
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:57:22+08:00"
+}

@@ -1,0 +1,24 @@
+{
+ "kind": "layout",
+ "resolution": "1920x1080",
+ "narration": {
+  "fontsize": 48,
+  "maxLines": 2,
+  "marginL": 120,
+  "marginR": 120,
+  "marginV": 173
+ },
+ "projects": [
+  "zaku-intro-001"
+ ],
+ "approvals": [
+  {
+   "at": "2026-09-21T16:57:22+08:00",
+   "file": "工作台/zaku-intro-001/G3-剪辑计划/G3-批准记录.md",
+   "contract": "工作台/zaku-intro-001/G3-剪辑计划/G3-字幕布局合同-v0.1.json"
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:57:22+08:00"
+}

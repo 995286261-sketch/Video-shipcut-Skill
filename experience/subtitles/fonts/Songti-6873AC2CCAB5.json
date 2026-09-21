@@ -1,0 +1,19 @@
+{
+ "kind": "font",
+ "identity": "file",
+ "fontFile": "Songti.ttc",
+ "sha256": "6873AC2CCAB5C2E74D87D6B690F3773098DD6A6238805363A3B3567F2CAF6F47",
+ "records": [
+  {
+   "at": "2026-09-21T16:56:12+08:00",
+   "usage": "drawtext",
+   "verdict": "usable",
+   "evidence": "002 验收当日 G4 实跑：㉛换字体后渲染通过；drawtext 常驻推荐=Supplemental/Songti.ttc（runtime-dependencies 字体表）",
+   "project": null,
+   "note": "TTC 首-face 陷阱：选单 face 文件或小范围实字过预检"
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:56:12+08:00"
+}

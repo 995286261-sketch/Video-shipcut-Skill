@@ -1,0 +1,26 @@
+{
+ "kind": "layout",
+ "resolution": "1436x1080",
+ "narration": {
+  "fontsize": 62,
+  "maxLines": 2,
+  "topPct": 70,
+  "bottomPct": 84,
+  "marginL": 60,
+  "marginR": 60,
+  "marginV": 173
+ },
+ "projects": [
+  "tiger-intro-001"
+ ],
+ "approvals": [
+  {
+   "at": "2026-09-21T16:57:22+08:00",
+   "file": "工作台/tiger-intro-001/G3-剪辑计划/G3-门禁收据.json",
+   "contract": "工作台/tiger-intro-001/G3-剪辑计划/G3-字幕布局合同-v0.1.json"
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:57:22+08:00"
+}

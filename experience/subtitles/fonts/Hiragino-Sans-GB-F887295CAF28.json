@@ -1,0 +1,19 @@
+{
+ "kind": "font",
+ "identity": "file",
+ "fontFile": "Hiragino Sans GB.ttc",
+ "sha256": "F887295CAF2881CAB9554B14C5AB4C9EE624C3895599DA152EC37416B5AEFAE0",
+ "records": [
+  {
+   "at": "2026-09-21T16:56:12+08:00",
+   "usage": "drawtext",
+   "verdict": "rejected",
+   "evidence": "002 验收当日：cmap format 14 被㉛预检红线 blocked（G4 三缺陷之一），改用 Songti.ttc",
+   "project": null,
+   "note": null
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:56:12+08:00"
+}

@@ -188,10 +188,11 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 字幕时间轴与布局合同必须通过布局校验器机器校验后才能进入最终回显。校验器与全部排版规则（行数/宽度模型、渲染器能力档 `autoWrap`、CJK 显式 `\N` 语义断行、ASS/SRT 同源生成）归**字幕专员**，G3 只调用与消费、不改规则：
 
 ```powershell
+python skill/subtitle-expert/scripts/subtitle_experience.py query --kind layout --resolution <宽x高>   # 先查经验库拿推荐默认（建议层：命中项作【默认=推荐】候选、依据写"经验库+来源项目"；批准≠继承）
 python skill/subtitle-expert/scripts/subtitle_probe_renderer.py --output-dir <G3-剪辑计划/字幕/>   # 探能力档（默认保守 autoWrap=false）
 python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> --srt <subtitles.srt> --source <G2-口播句子.json>
 ```
 
-合同形状、能力档语义与生成规则以 `skill/subtitle-expert/references/layout-contract.md` 为唯一事实源（002 问题⑧：绿灯必须建立在所选能力档之上，合同不写能力档=按保守档判）。
+合同形状、能力档语义与生成规则以 `skill/subtitle-expert/references/layout-contract.md` 为唯一事实源（002 问题⑧：绿灯必须建立在所选能力档之上，合同不写能力档=按保守档判）。`确认G3` 批准后由 `subtitle_experience.py record-layout --contract … --approval …` 把排版参数入经验库（只有过了门禁的才入库；库是下个项目回显卡上的推荐默认，不是自动沿用）。
 
 在 `approved_for_g4` 前逐项检查：G2 事实状态及来源层级、全文口播时长与目标时长（冲突已由用户明确决定）、逐帧切点、每段源字幕清除、字幕布局机器校验通过、标题/口播无冲突、封面无源字幕/Logo、用户明确放行。G4 可微调切点、裁切/遮罩坐标、字幕断句、车道和 BGM 音量；不得改变 G2 事实状态、音频排除或分发边界。G3 不创建 ChatCut 项目、不上传素材、不渲染或发布。

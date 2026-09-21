@@ -1,0 +1,18 @@
+{
+ "kind": "font",
+ "identity": "family",
+ "fontFamily": "PingFang SC",
+ "records": [
+  {
+   "at": "2026-09-21T16:56:12+08:00",
+   "usage": "libass",
+   "verdict": "usable",
+   "evidence": "zaku-001/kshatriya-001/002/tiger-001 等 6 项目 G5 交付+人工 QA 无缺字报告；002 验收视频用户亲剪交付",
+   "project": null,
+   "note": "本机（macOS 25.5）无独立 PingFang.ttc 文件，family 由系统字体服务解析——换宿主此判定不自动迁移"
+  }
+ ],
+ "schemaVersion": "0.1",
+ "updatedBy": "subtitle_experience.py",
+ "updatedAt": "2026-09-21T16:56:12+08:00"
+}

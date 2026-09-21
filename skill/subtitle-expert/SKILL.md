@@ -24,6 +24,7 @@ metadata:
 - 章节卡 cue 修剪：`scripts/subtitle_trim_cues.py --ass <批准.ass> --out <派生.ass> --card-range <起ms:止ms>`——"卡上隐字幕"由本专员执行，G4 assemble 调用并只烧派生件，批准源永不改动。
 - 烧录排版策略：`references/style-contract.md`（固定字幕条；G4 逐字执行）。
 - 字幕面 QA 判读：`references/qa-contract.md`（G5 消费）。
+- 经验库（唯一写入口，库根 `--library` 或 `SUBTITLE_EXPERIENCE_HOME`，默认仓内 `experience/subtitles/`）：`scripts/subtitle_experience.py query --kind layout|font|renderer`（G3 出合同前查推荐默认——**库=建议层不是批准**）；`record-font/record-layout/record-renderer`（只录带真实证据/门禁批准的事实；红线见 `experience/subtitles/README.md`）。
 - 不要用临时脚本或手敲 ffmpeg 替代。
 
 ## 边界（不做什么）
@@ -34,4 +35,4 @@ metadata:
 
 ## 接线现状
 
-G3：布局合同+ASS/SRT 生成过检，含逐 cue 对时（--srt）与口播块对齐（--source）（video-edit-plan 调用，收据项 `subtitle_timeline`）；G4：`g4_assemble.py --subtitle-ass` 逐字执行 + style-contract，**章节卡 cue 修剪由 G4 调用本专员 `subtitle_trim_cues.py`**（装配记录 `subtitleCuesTrimmed`）；G5：qa-contract 判读纪律 + **交付包必备 `subtitle-srt-check.json` 握手**（`g5_validate_delivery.py` 消费，G5 不自持字幕格式规则）+ 检查帧收据 `check_frames`。G2 为文本上游、不接线（只读权威源）。改接缝先改 `layout-contract.md`。
+G3：布局合同+ASS/SRT 生成过检，含逐 cue 对时（--srt）与口播块对齐（--source）（video-edit-plan 调用，收据项 `subtitle_timeline`）；G4：`g4_assemble.py --subtitle-ass` 逐字执行 + style-contract，**章节卡 cue 修剪由 G4 调用本专员 `subtitle_trim_cues.py`**（装配记录 `subtitleCuesTrimmed`）；G5：qa-contract 判读纪律 + **交付包必备 `subtitle-srt-check.json` 握手**（`g5_validate_delivery.py` 消费，G5 不自持字幕格式规则）+ 检查帧收据 `check_frames`。G2 为文本上游、不接线（只读权威源）。经验库 `experience/subtitles/`（字体/排版/宿主能力档三类档案，建议层）自 2026-09-21 建成，首批档案=六个已交付项目的批准件实录。改接缝先改 `layout-contract.md`。
