@@ -25,6 +25,33 @@ from pathlib import Path
 import music_tags
 
 API_BASE = "https://freesound.org/apiv2"
+
+# --- URL allowlist guard (SSRF, Mimosa L3 pre-commit 2026-09-21): only the official
+# Freesound host may ever be fetched, and redirects are refused, never blind-followed.
+ALLOWED_HOSTS = ("freesound.org",)
+_REDIRECT_CODES = (301, 302, 303, 307, 308)
+
+
+class _RefuseRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_OPENER = urllib.request.build_opener(_RefuseRedirect)
+
+
+def guard_url(url: str) -> str | None:
+    """Return None when the URL may be fetched, else the refusal reason."""
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except ValueError:
+        return "malformed URL"
+    if parts.scheme != "https":
+        return f"scheme {parts.scheme or '?'} is not https"
+    host = (parts.hostname or "").lower()
+    if not any(host == d or host.endswith("." + d) for d in ALLOWED_HOSTS):
+        return f"host {host or '?'} is outside the allowlist"
+    return None
 SEARCH_FIELDS = "id,name,username,license,type,duration,previews,urls.page,tags,attribution"
 # The API's license field arrives either as a display name or as a Creative
 # Commons URL (live-verified 2026-09-17: URLs like .../publicdomain/zero/1.0/);
@@ -65,11 +92,17 @@ def classify_license(raw: str | None) -> dict | None:
 
 def api_get(token: str, path: str, params: dict) -> tuple[dict | None, dict | None]:
     query = urllib.parse.urlencode({**params, "token": token})
-    request = urllib.request.Request(f"{API_BASE}{path}?{query}", headers={"User-Agent": "p0c-music-expert/0.1"})
+    url = f"{API_BASE}{path}?{query}"
+    refusal = guard_url(url)
+    if refusal:
+        return None, {"type": "url_not_allowed", "detail": f"SSRF guard: {refusal}"}
+    request = urllib.request.Request(url, headers={"User-Agent": "p0c-music-expert/0.1"})
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        with _OPENER.open(request, timeout=30) as response:
             return json.loads(response.read().decode("utf-8")), None
     except urllib.error.HTTPError as error:
+        if error.code in _REDIRECT_CODES:
+            return None, {"type": "redirect_refused", "detail": f"HTTP {error.code} redirect refused by SSRF guard"}
         kind = "auth_failed" if error.code in (401, 403) else ("rate_limited" if error.code == 429 else "http_error")
         return None, {"type": kind, "detail": f"HTTP {error.code} from {path}"}
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
@@ -77,9 +110,16 @@ def api_get(token: str, path: str, params: dict) -> tuple[dict | None, dict | No
 
 
 def download(url: str, target: Path) -> str | None:
+    refusal = guard_url(url)
+    if refusal:
+        return f"download blocked by SSRF guard: {refusal}"
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "p0c-music-expert/0.1"}), timeout=120) as response:
+        with _OPENER.open(urllib.request.Request(url, headers={"User-Agent": "p0c-music-expert/0.1"}), timeout=120) as response:
             data = response.read()
+    except urllib.error.HTTPError as error:
+        if error.code in _REDIRECT_CODES:
+            return "download blocked by SSRF guard: redirect refused"
+        return f"download failed: HTTP {error.code}"
     except (urllib.error.URLError, TimeoutError) as error:
         return f"download failed: {str(error)[:150]}"
     if not data:

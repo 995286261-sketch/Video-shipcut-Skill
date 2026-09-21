@@ -3,7 +3,7 @@
 
 Produces a BGM analysis report: tempo, beats, onsets, energy segments, hit-point table,
 measured duration and loudness. Reuses the controlled-runtime pattern (issue 014): the
-analysis libraries load only from P0C_MUSIC_RUNTIME_HOME, a missing runtime is a
+analysis libraries load only from MUSIC_EXPERT_RUNTIME_HOME (legacy P0C_MUSIC_RUNTIME_HOME), a missing runtime is a
 structured block, never an import traceback. Reuses the cacheKey pattern (issue 031):
 re-running on the same bytes returns cache_hit without recomputation. Every produced
 file is verified to exist and be non-empty (issue 022). Source media stay read-only.

@@ -7,8 +7,9 @@ audio-capable model is reachable it emits a structured `capability_missing` bloc
 an echo card that says so in plain words — it never invents a track description.
 Notes are reference text for the human gate; they are never a pass/fail criterion.
 
-Default backend is Aliyun Bailian `bl omni` (qwen-omni family); point P0C_BL_BIN or
---bl at any compatible CLI. Cost discipline: only the shortlist is listened to.
+Default backend is Aliyun Bailian `bl omni` (qwen-omni family); point
+MUSIC_EXPERT_BL_BIN (legacy alias P0C_BL_BIN) or --bl at any compatible CLI.
+Cost discipline: only the shortlist is listened to.
 """
 from __future__ import annotations
 
@@ -38,14 +39,17 @@ def emit(payload: dict) -> None:
 
 
 def resolve_bl(explicit: str | None) -> str:
-    return explicit or os.environ.get("P0C_BL_BIN") or "bl"
+    # Generic name first so the skill stays portable; P0C_* kept as a legacy alias.
+    return (explicit or os.environ.get("MUSIC_EXPERT_BL_BIN")
+            or os.environ.get("P0C_BL_BIN") or "bl")
 
 
 def probe_capability(bl_path: str) -> tuple[bool, str]:
     """Can this environment actually listen? Absence is a fact to report, not to hide."""
     binary = shutil.which(bl_path)
     if not binary:
-        return False, f"audio-model CLI `{bl_path}` not found; install it or point --bl/P0C_BL_BIN at one"
+        return False, (f"audio-model CLI `{bl_path}` not found; install it or point "
+                       "--bl/MUSIC_EXPERT_BL_BIN at one")
     try:
         version = subprocess.run([binary, "--version"], capture_output=True, text=True, timeout=30)
     except (OSError, subprocess.TimeoutExpired) as error:
@@ -159,7 +163,8 @@ def main() -> int:
     parser.add_argument("--manifest", action="append", required=True, type=Path,
                         help="candidate manifest or recommendation JSON (repeatable)")
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--bl", default=None, help="audio-model CLI (default $P0C_BL_BIN or `bl`)")
+    parser.add_argument("--bl", default=None,
+                        help="audio-model CLI (default $MUSIC_EXPERT_BL_BIN, legacy $P0C_BL_BIN, or `bl`)")
     parser.add_argument("--model", default=None, help="model id override (default: CLI profile default)")
     parser.add_argument("--project-brief", default="给本项目当高燃卡点 BGM", help="fit role phrasing")
     parser.add_argument("--excerpt-sec", type=int, default=90, help="0 = send original files")

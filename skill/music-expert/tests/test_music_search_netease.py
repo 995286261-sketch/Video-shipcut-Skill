@@ -61,7 +61,8 @@ class CliBlockedTest(unittest.TestCase):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         full_env = dict(os.environ)
-        full_env["P0C_NETEASE_SEARCH_URL"] = "http://127.0.0.1:9/search"  # discard port: instant refusal
+        # Generic env name first (legacy alias P0C_* stays covered by test_music_search_terms)
+        full_env["MUSIC_EXPERT_NETEASE_SEARCH_URL"] = "http://127.0.0.1:9/search"  # discard port: instant refusal
         if env:
             full_env.update(env)
         result = subprocess.run([PYTHON, str(SEARCH), "--query", "phonk", "--output-dir", tmp.name, *args],

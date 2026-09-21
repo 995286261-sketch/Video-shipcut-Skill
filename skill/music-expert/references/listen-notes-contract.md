@@ -10,7 +10,7 @@
 
 ## 能力探测（先于任何调用）
 
-1. `--bl`（或 `$P0C_BL_BIN`，默认 `bl`）指向的 CLI 是否存在、`--version` 可跑；
+1. `--bl`（或 `$MUSIC_EXPERT_BL_BIN`，历史别名 `$P0C_BL_BIN`，默认 `bl`）指向的 CLI 是否存在、`--version` 可跑；
 2. `auth status` 显示模型 API key 已配置；
 3. 任一不满足 → `blocked/capability_missing`，回显卡明写"当前环境没有听觉分析能力……此处不编造"。
 

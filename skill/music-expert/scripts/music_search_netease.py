@@ -30,8 +30,46 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-SEARCH_URL = os.environ.get("P0C_NETEASE_SEARCH_URL", "https://music.163.com/api/search/get/web")
-PREVIEW_BASE = os.environ.get("P0C_NETEASE_PREVIEW_BASE", "https://music.163.com/song/media/outer/url")
+# Generic names first so the skill stays portable; P0C_* kept as legacy aliases.
+_NETEASE_SEARCH_DEFAULT = "https://music.163.com/api/search/get/web"
+_NETEASE_PREVIEW_DEFAULT = "https://music.163.com/song/media/outer/url"
+SEARCH_URL = (os.environ.get("MUSIC_EXPERT_NETEASE_SEARCH_URL")
+              or os.environ.get("P0C_NETEASE_SEARCH_URL") or _NETEASE_SEARCH_DEFAULT)
+PREVIEW_BASE = (os.environ.get("MUSIC_EXPERT_NETEASE_PREVIEW_BASE")
+                or os.environ.get("P0C_NETEASE_PREVIEW_BASE") or _NETEASE_PREVIEW_DEFAULT)
+
+# --- URL allowlist guard (SSRF, Mimosa L3 pre-commit 2026-09-21): env overrides exist
+# for testing, but only NetEase official hosts (plus loopback for the discard-port test
+# suites) may ever be fetched. Preview downloads may 302 to the licensed CDN hosts, each
+# hop re-validated; anything else is refused, never blind-followed.
+SEARCH_ALLOWED_HOSTS = ("music.163.com",)
+DOWNLOAD_ALLOWED_HOSTS = ("music.163.com", "163.com", "126.net", "netease.com")
+_LOOPBACK = {"127.0.0.1", "localhost", "::1"}
+_REDIRECT_CODES = (301, 302, 303, 307, 308)
+
+
+class _RefuseRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_OPENER = urllib.request.build_opener(_RefuseRedirect)
+
+
+def guard_url(url: str, allowed_hosts: tuple) -> str | None:
+    """Return None when the URL may be fetched, else the refusal reason."""
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except ValueError:
+        return "malformed URL"
+    host = (parts.hostname or "").lower()
+    if parts.scheme == "http" and host in _LOOPBACK:
+        return None
+    if parts.scheme != "https":
+        return f"scheme {parts.scheme or '?'} is not https"
+    if not any(host == d or host.endswith("." + d) for d in allowed_hosts):
+        return f"host {host or '?'} is outside the allowlist"
+    return None
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
     "Referer": "https://music.163.com/",
@@ -97,9 +135,12 @@ def candidate_record(song: dict) -> dict:
 
 def search(query: str, limit: int) -> tuple[dict | None, dict | None]:
     data = urllib.parse.urlencode({"s": query, "type": 1, "offset": 0, "limit": max(min(limit * 3, 100), limit)}).encode()
+    refusal = guard_url(SEARCH_URL, SEARCH_ALLOWED_HOSTS)
+    if refusal:
+        return None, {"type": "url_not_allowed", "detail": f"SSRF guard: {refusal}"}
     request = urllib.request.Request(SEARCH_URL, data=data, headers=HEADERS)
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        with _OPENER.open(request, timeout=30) as response:
             payload = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as error:
         kind = "rate_limited" if error.code == 429 else "http_error"
@@ -121,11 +162,27 @@ def title_slug(title: str | None) -> str:
 
 
 def download(url: str, target: Path) -> str | None:
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=120) as response:
-            data = response.read()
-    except (urllib.error.URLError, TimeoutError, ValueError) as error:
-        return f"download failed: {str(error)[:150]}"
+    current = url
+    for _ in range(6):
+        refusal = guard_url(current, DOWNLOAD_ALLOWED_HOSTS)
+        if refusal:
+            return f"download blocked by SSRF guard: {refusal}"
+        try:
+            with _OPENER.open(urllib.request.Request(current, headers=HEADERS), timeout=120) as response:
+                data = response.read()
+            break
+        except urllib.error.HTTPError as error:
+            if error.code in _REDIRECT_CODES:
+                location = error.headers.get("Location")
+                if not location:
+                    return f"download failed: HTTP {error.code} without redirect target"
+                current = urllib.parse.urljoin(current, location)
+                continue
+            return f"download failed: HTTP {error.code}"
+        except (urllib.error.URLError, TimeoutError, ValueError) as error:
+            return f"download failed: {str(error)[:150]}"
+    else:
+        return "download blocked by SSRF guard: too many redirects"
     if not data:
         return "downloaded file is empty"
     target.write_bytes(data)

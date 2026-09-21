@@ -11,6 +11,7 @@
 `scripts/music_search_freesound.py`。有官方 API、每条声音带明确 license、可下载预览件。约束：
 
 - 鉴权 token 从 `MUSIC_EXPERT_FREESOUND_TOKEN` 读取（历史别名 `P0C_FREESOUND_TOKEN`）；缺失即 `blocked`，**不静默换源、不降级到无授权来源**。
+- **URL 白名单守卫（SSRF，Mimosa L3 2026-09-21）**：一切外发请求（API 与预览件下载）只允许 `https://*.freesound.org`，重定向一律拒绝不盲从；越界即结构化拒绝，不进候选。
 - 许可过滤：仅接受 `Creative Commons 0` 与 `Attribution`；凡名字含 `NC / NonCommercial / ND / NoDerivatives / Sampling` 一律排除并记入 `excluded`（附原因）。
 - 每条候选保留完整证据链：`sourceUrl`、`license`、`licenseType`、`attributionRequired`、`attributionText`、`author`、`retrievedAt`、下载预览件 `sha256`/`byteSize`、`decodeProbe`。
 - 下载预览件后立即 `ffmpeg` 解码探针；未通过即丢弃（假文件/加密文件不进池）。
@@ -32,6 +33,7 @@
 - **每条候选写死** `license: uncleared-platform-catalog`、`distributionBoundary: internal_test` 与 `licenseNote`：平台曲库授权仅覆盖端内播放，不存在"用了 API 就等于有版权"。
 - **候选只能用于试听选型**：选中的歌要进剪辑计划，必须由人经官方渠道取得整轨文件，走轨道二登记真实许可证据（内测项目按 zaku 先例登记 `cleared-for-project` + 用户明示内部使用）。**试听件直接进成片 = 红线违规**，G0 三哈希链与 G5 审计会拒收。
 - 风控响应（-462/verifyType）与网络失败一律结构化 `blocked`，不静默换源、不重试轰炸。
+- **URL 白名单守卫（SSRF，Mimosa L3 2026-09-21）**：检索端点只允许 `music.163.com`（回环 http 例外仅供测试套件）；试听件下载允许网易系官方域（`*.163.com / *.126.net / *.netease.com`），302 逐跳重新校验主机、限 5 跳，越界即拒。
 - 商用迁移路径：换带商用许可的来源适配器（Epidemic/Artlist/曲多多等）或 AI 生成音乐；候选 schema 与下游链路不变，换源只换这一个脚本。
 
 ## 登记产物

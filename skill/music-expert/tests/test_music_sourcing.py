@@ -427,5 +427,39 @@ class RecommendTest(unittest.TestCase):
         self.assertEqual("no_candidates", json.loads(result.stdout)["blockers"][0]["type"])
 
 
+class SsrfGuardTest(unittest.TestCase):
+    """Mimosa L3 (2026-09-21): every outbound fetch must pass the URL allowlist guard."""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib
+        sys.path.insert(0, str(SKILL / "scripts"))
+        cls.fs = importlib.import_module("music_search_freesound")
+        cls.ne = importlib.import_module("music_search_netease")
+
+    def test_freesound_only_official_https(self):
+        for url in ("http://freesound.org/x", "https://evil.com/x",
+                    "https://freesound.org.evil.cn/x", "https://169.254.169.254/latest/meta-data/",
+                    "file:///etc/passwd"):
+            self.assertIsNotNone(self.fs.guard_url(url), url)
+        self.assertIsNone(self.fs.guard_url("https://freesound.org/data/previews/a.mp3"))
+
+    def test_freesound_download_refuses_without_network(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        error = self.fs.download("file:///etc/passwd", Path(tmp.name) / "x.mp3")
+        self.assertIn("SSRF guard", error)
+
+    def test_netease_allowlists_and_loopback_exception(self):
+        g = self.ne.guard_url
+        for url in ("https://evil.com/x", "http://169.254.169.254/", "file:///etc/passwd",
+                    "https://not126.net.evil.cn/p.mp3"):
+            self.assertIsNotNone(g(url, self.ne.DOWNLOAD_ALLOWED_HOSTS), url)
+        self.assertIsNone(g("https://music.163.com/api", self.ne.SEARCH_ALLOWED_HOSTS))
+        self.assertIsNone(g("https://ws-stream-126kt.netease.com/p.mp3", self.ne.DOWNLOAD_ALLOWED_HOSTS))
+        # loopback http stays allowed for the discard-port test suites
+        self.assertIsNone(g("http://127.0.0.1:9/search", self.ne.SEARCH_ALLOWED_HOSTS))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -20,7 +20,7 @@ metadata:
 - `ffmpeg`/`ffprobe` 在 PATH。
 - 节奏/能量分析库（numpy、librosa）只能从托管运行时加载，路径由 `MUSIC_EXPERT_RUNTIME_HOME` 声明（`P0C_MUSIC_RUNTIME_HOME` 为历史别名）；缺失即结构化 `blocked`，禁止运行时下载或 pip 安装（与 faster-whisper 同一纪律）。
 - Freesound 自动检索需 `MUSIC_EXPERT_FREESOUND_TOKEN`（历史别名 `P0C_FREESOUND_TOKEN`）；缺失即 `blocked`，不静默换到无授权来源。
-- 模型试听笔记层需具备**听觉分析能力**（默认百炼 `bl`，`P0C_BL_BIN` 可指向其他兼容 CLI 或本地开源音频模型包装）；探测不过 → 结构化 `capability_missing` 并明确告知用户"当前模型没有听觉分析能力"，**不允许以任何文字冒充听过**。
+- 模型试听笔记层需具备**听觉分析能力**（默认百炼 `bl`，`MUSIC_EXPERT_BL_BIN` 可指向其他兼容 CLI 或本地开源音频模型包装，历史别名 `P0C_BL_BIN`）；探测不过 → 结构化 `capability_missing` 并明确告知用户"当前模型没有听觉分析能力"，**不允许以任何文字冒充听过**。
 - 本 Skill 不假设任何仓库内路径或宿主目录：输入输出全靠显式参数，依赖全靠环境变量，可整体迁移到其他仓库或平台。
 
 ## 工作流
