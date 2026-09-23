@@ -1,5 +1,18 @@
 # 变更记录
 
+## v1.6.0 — 2026-09-23 — **试装预览版本**
+
+发布范围＝转场试装预览四批（`10422f4` 立骨／`bfa8493` G3 硬门禁／`2842d7c` 活体彩排收口／`3879e82` 观看页）＋同批挂账裁决（`3923f74` 清扫、`5eae66f` 推荐层转正）：
+
+- **转场试装预览（先看后批）**：痛点=批准转场时看不到效果、必须整片渲完才知道（㉔ 颗粒叠化事故的手工小样无记录=反面教训）。`transition-expert/scripts/transition_preview.py` 对计划每个非硬切切点产低清无声小样（约两秒+上下文）。**防幻觉宪法=预览与成片代码同源**：入口复用 `transition_validate_plan.validate_plan` 与 `transition_directive.build_directive`（同 boundaries/offsets/extras 算术零新公式），裁剪/缩放/xfade/settb/黑场滤镜与 g4_render/g4_assemble 同式（跨专员零 import，`FormulaParityTests` 逐片段断言同构锁死）。**窗口被批准裁切钳制**：`[S−D/2−C, S+D/2+C]`、C=min(1200ms, 手柄富余)，永不展示批准裁切之外的画面；黑场档全额预留 D。渲染前源素材 sha 三方对账（evidence↔material-pack磁盘），不过=结构化 `blocked_previews` 带披露句，不猜不装。
+- **G3 硬门禁（用户裁决：硬门禁+如实豁免）**：`validate_g3_callback` 新增对账——计划含非硬切转场而预览缺席=卡校验拒并点名切点；清单 `planSha256`≠当前计划=stale 拒（改版自动逼重跑）；小样/观看页文件缺失或 sha 不符=拒；Ref/Waiver 二选一；无转场计划不得挂预览；`audio` 必须 false。唯一豁免=`blocked_previews` 原文入卡并如实披露"你批准的是未见过的效果"，不许静默跳卡。G3 收据 basisRefs 挂清单路径（不新增 checklist id，㉙）。
+- **回显呈现（用户 09-23 验收定案）**：`render_g3_review_card` 八列对账表一字未动，表后新增「转场试装预览（先看后批）」区——首行统一挂 **▶ 一页看全部**链接（用户拍板），另逐切点一行（类型·时长·成片窗口 m:ss.mmm·无声小样链接）。**《转场-预览观看页-v<M.N>.html》由脚本生成**：自包含内嵌播放器、与清单同目录同版号、呈现层零算术数据全取清单；布局规格=代码即规格，不另写文档（用户选，免两处不一致）。
+- **产物合同**：《转场-预览清单-v<M.N>.json》schemaVersion 0.2——四输入哈希绑定（plan/evidence/hostProfile/mediaPack）+`viewerPage`/`projectId` 字段+逐条 `{boundary,type,durationMs,windowMs,file,probedLenMs,expectLenMs,sha256,renderArgs 全量入册可逐字重建}`；`next_versioned_path` 自增永不覆盖（㉘）；小样按边界 id 命名（弃人肉 A/B/C）；中间件删除。
+- **活体彩排（sinjuku-intro-001 已批 G3 v0.6+87.6MB 真源，全局 WorkSpace）**：三小样实测时长=批准窗口分毫不差；中点帧与交付成片同镜对同混合观感；预览窗口中心=指令 offset+D/2 真中点——查实当年手工"平滑中点"帧实取在过渡起点，新预览比它准。如实入账：第三切点混合相位差 ≤100ms=成片多段 xfade 链文件取整累积漂移（小样从源直裁无此漂移），属观感层容差不阻塞（执行==指令由 G5 transition-audit 机器对账）。
+- **同批挂账裁决**：转场词表定案四档（硬切/叠化/黑场入/黑场出）、第二批缓建；**推荐层转正**——三层分工入合同=编排出提案带【默认=推荐｜理由】、专员脚本零机器推荐只摊可行性事实、决定权在人逐切点；tiger《Infinity》不换曲+通用纪律（未清权资产须在用户可见环节带"会违反权益"人话标签）；远端仓库改名撤销（永久保留 Video-shipcut-Skill）。
+- **验证**：全量回归 **39 个测试文件逐文件单跑全绿**（预览套件 11 例、门禁卡套件 26 例，含观看页自包含/死链拒/旧清单兼容缺席）；彩排 v0.2 重跑+模拟审批卡经用户视角验收通过。
+- **已知限制**：小样不复现源字幕遮蔽等包装层（只验转场观感，卡上明写）；无声是裁决非缺陷（混音属 G4）；Mimosa 完整扫描结论仍未取得（各 commit 带 library_source_unavailable 兼容放行提示），不宣称项目安全。
+
 ## v1.5.0 — 2026-09-23 — **转场专员版本**
 
 发布范围＝transition-expert 立册+执行链三批（`9bf3d08`/`0b496ad`/`c0127fd`）＋首次全链实片验收（验收003，sinjuku-intro-001 G0–G5 闭环）＋29 条测后修复批次（`873c128` 代码／`a6f4ca2` 合同／`5d81ee2` 产物入库）：
