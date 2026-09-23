@@ -49,6 +49,7 @@ Per operator-dialogue's single-echo contract (用户 2026-09-11 定案): a node 
 - G2 approval requires `approvedNarrationRef` and `factCitationRef`.
 - G3 approval requires an explicit approval record and cannot use a superseded narration draft.
 - A `use_library_later` BGM slot cannot stay pending through G2 or G3 approval: clear it with `bgm-choice` plus real registration evidence, or record an explicit `no_bgm`. Never let chat context pretend the slot is cleared.
+- **选曲关单时长比对（issue ⑫，sinjuku 实测：177.875s 曲配 180s 目标拖到 G2 才爆）**：`bgm-choice --decision provided` 关单时，编排必须用登记件里的 `trackDurationMs` 机器比对 G0 目标时长下限；轨短于下限时确认卡/回显必须亮 warning 并给出两条出路（缩 timeline 或换更长曲），**禁止静默放行到 G2**。分析报告里时长字段有值而不比对=编排漏步。
 - G4 local-direct branch can advance with a validated local candidate and explicit user review. When ChatCut is selected, G4 cannot advance without a real ChatCut export reference; a flattened preview is not an editable handoff.
 - G5 cannot complete until human QA is recorded. Accepted warnings remain visible.
 - `not_for_distribution`, unknown authorization, or `user_manually_verified` claims cannot be silently upgraded or bypassed.

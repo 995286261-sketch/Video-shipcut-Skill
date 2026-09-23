@@ -30,6 +30,8 @@ G3 编辑计划已实现为人工审核规划，输入为已校验素材包、G2
 
 `resolution` 只能是 `preserve_target_with_editorial_padding`、`follow_narration_natural_duration` 或 `rewrite_narration`。完整时间线确认必须记录在计划级 `timelineReview` 中；用户一次确认整表，局部修改按 `segmentId` 记录。设计性留白只可用于片头、章节转场、情绪停顿或片尾；每段必须记录原始成片时间轴范围、表达目的和获准 BGM 规则。普通视频镜头必须显式记录 `sourceDurationMs`、`outputDurationMs` 和 `mappingMode`，默认一比一播放；连续动作候选还应记录 `actionUnitId`、`continuityGroup`、`continuityRole`、`preAction/action/reaction/recovery`、`retainPolicy` 和 `handleFrames`，以避免在动作因果链中间硬切；不得用重复片段、循环、无目的慢放、冻结、隐式 padding、重复口播或未确认事实填充时长。同一源 SHA-256 的源区间不得相交，紧邻区间可以相接。
 
+**连续网格（硬约束，issue ⑯）**：`approved_for_g4` 计划的段输出区间必须**连续覆盖成片**——首段 `outputStartMs=0`、末段 `outputEndMs=timelineDurationMs`、相邻段共端点零缝隙；`validate_g3_plan.py` 机器强制，缝隙不再只到转场校验才摊牌。留白归属规则：句间留白不悬空，切点取**留白中点**（段 i 输出=[上一切点, narrEnd_i+gapAfter_i/2)，示例：口播 0–4000、下句 5000 起 ⇒ 边界 4500，段 1 输出 0–4500）。转场窗口正是从这段归属画面里取手柄（见 transition-expert 合同"手柄回填"）。
+
 ## G3 BGM 计划（bgmPlan，机器化）
 
 素材包 `07_授权音频` 中存在带 `bgmRegistration` 的音频资产时，计划**必须**含 `bgmPlan`，且校验必须同时传 `--material-pack <material-pack.json> --bgm-alignment <BGM-对齐建议-v0.2.json>`。BGM 数字禁止手抄：002 的教训是"数字有出处，但人肉抄写让出处不可查证"。规格：

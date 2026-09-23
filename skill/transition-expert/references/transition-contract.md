@@ -13,9 +13,9 @@
 | 指令 | 语义 | 位次 | 时长字段 | 素材需求 |
 |---|---|---|---|---|
 | `硬切` | 无转场（缺省值） | 任意 | 禁止携带 | 无 |
-| `叠化` | 本段退场与下一段入场交叠混合（xfade dissolve） | 不得在末段 | `transitionDurationMs` ∈ [100,1500] 且**必须偶数**（对称 D/2） | 两侧净手柄各 ≥D/2 |
-| `黑场入` | 成片开场自黑渐亮（时间内） | 仅首段 | 同上 | 无（fade 滤镜） |
-| `黑场出` | 成片收尾入黑（时间内） | 仅末段 | 同上 | 无（fade 滤镜） |
+| `叠化` | 本段退场与下一段入场交叠混合（xfade `fade`，平滑交叉淡化。注：xfade 自带的 `dissolve` 是噪声抖动式混合、中点呈颗粒感，不是行业语义的叠化——2026-09-22 验收003 ㉔ 实片裁决改用 `fade`） | 不得在末段 | `transitionDurationMs` ∈ [100,1500] 且**必须偶数**（对称 D/2） | 两侧净手柄各 ≥D/2 |
+| `黑场入` | 成片开场自黑渐亮（时间内） | 仅首段 | 同上 | 零手柄，**但须成片开头存在 ≥D 的无口播静默**（窗口同样不得压口播——口播从 0 起播的网格上黑场入物理不可行，issue ⑰；G3 出卡前先算，不可行就摊牌，别让用户在卡上才看到） |
+| `黑场出` | 成片收尾入黑（时间内） | 仅末段 | 同上 | 零手柄，**但须成片结尾存在 ≥D 的无口播静默**（同上；标准出路=末句后追加片尾静默并重跑 music_align 再提案，作为可选路径写明） |
 | `抹开` | **预留档**：wipe 系。解锁需合同修订+宿主能力档实测 | — | — | — |
 
 窗口纪律：转场窗口**只准落在口播停顿里**（与任何段 narrationStart/EndMs 区间零重叠）；与章节卡区间零交叠；`叠化` 期间不得有字幕 cue 起始（G3 出 ASS 后由 `--ass` 复检并入）。复合/含糊指令（"X/Y 按 G4 微调"）在词表层直接拒绝——批准什么就执行什么。每段字段唯一（一个指令位）：**首段若要同时"黑场入+退场叠化"，须拆成两个 segment 各携一个指令**（seg-00a/00b 句内切段先例，网格照常连续）。
@@ -31,7 +31,7 @@ python skill/transition-expert/scripts/transition_validate_plan.py --plan <G3-�
 
 ## 执行指令形状（批②落地）
 
-批准收口后 G4 装配头一步产《G4-转场执行指令-v0.1.json》：`{skill, purpose: "transition_directive", planSha256, hostProfileSha256, gridInvariant: true, segments: [{segmentId, headExtraMs, tailExtraMs}], boundaries: [{fromSegmentId, toSegmentId, transition: "dissolve", durationMs, offsetMs}], masterFades: {fadeInMs, fadeOutMs}}`——由 `transition_directive.py` 从已批计划+能力档+证据源时长**确定性推导**（同输入必同产物），g4_render 按 head/tailExtra 扩切、g4_assemble 按 boundaries 链式 xfade；无转场项目走原 concat 路径逐字节不变。
+批准收口后 G4 装配头一步产《G4-转场执行指令-v<M.N>.json》（文件名版本自动递增、永不覆盖既有产物——reopen 重跑旧指令留盘作审计，issue ㉘）：`{skill, purpose: "transition_directive", planSha256, hostProfileSha256, gridInvariant: true, segments: [{segmentId, headExtraMs, tailExtraMs}], boundaries: [{fromSegmentId, toSegmentId, transition: "fade", durationMs, offsetMs}], masterFades: {fadeInMs, fadeOutMs}}`——由 `transition_directive.py` 从已批计划+能力档+证据源时长**确定性推导**（同输入必同产物），g4_render 按 head/tailExtra 扩切、g4_assemble 按 boundaries 链式 xfade；无转场项目走原 concat 路径逐字节不变。
 
 ## 接线说明书
 
