@@ -25,6 +25,7 @@
 ```powershell
 python skill/transition-expert/scripts/transition_probe_host.py --output-dir <G3-剪辑计划/转场/>          # 探宿主（xfade 名单实测解析）
 python skill/transition-expert/scripts/transition_validate_plan.py --plan <G3-剪辑计划.json> --evidence <证据JSON> [--host-profile <能力档>]  # 深检，含叠化必传能力档
+python skill/transition-expert/scripts/transition_preview.py --plan <计划> --evidence <证据JSON> --host-profile <能力档> --material-pack <G0/material-pack.json> --output-dir <G3-剪辑计划/预览小样/> --fps <成片帧率> [--crop-bottom-ratio <计划值>]  # 试装预览（批准前观感层，见下节）
 ```
 
 节点侧（validate_g3_plan/callback）只管词表、时长在场、卡-计划逐字一致；窗口/手柄/网格模型深检**只在本合同与本脚本**。
@@ -33,12 +34,21 @@ python skill/transition-expert/scripts/transition_validate_plan.py --plan <G3-�
 
 批准收口后 G4 装配头一步产《G4-转场执行指令-v<M.N>.json》（文件名版本自动递增、永不覆盖既有产物——reopen 重跑旧指令留盘作审计，issue ㉘）：`{skill, purpose: "transition_directive", planSha256, hostProfileSha256, gridInvariant: true, segments: [{segmentId, headExtraMs, tailExtraMs}], boundaries: [{fromSegmentId, toSegmentId, transition: "fade", durationMs, offsetMs}], masterFades: {fadeInMs, fadeOutMs}}`——由 `transition_directive.py` 从已批计划+能力档+证据源时长**确定性推导**（同输入必同产物），g4_render 按 head/tailExtra 扩切、g4_assemble 按 boundaries 链式 xfade；无转场项目走原 concat 路径逐字节不变。
 
+## 试装预览（G3 批准前观感层，用户 2026-09-23 批准方案）
+
+**防幻觉宪法：预览不新写一套"长得像"的效果。**`transition_preview.py` 从入口起复用 `validate_plan`（不过检=blocked，与指令同门槛）与 `build_directive`（拿完全相同的 extras/boundaries/masterFades）；裁剪/缩放/xfade/settb/黑场滤镜公式与 g4_render、g4_assemble 同式（跨专员零 import=插件四标准，故为故意同式复制，由测试逐片段断言同构锁死）。将来任何一边走路，另一边必然跟着变。
+
+- **窗口**：每非硬切边界一条小样，覆盖成片网格 `[S−D/2−C, S+D/2+C]`，C=min(1200ms, 两侧成片段长−D/2, ≥0)。**永不展示批准裁切之外的画面**——手柄刚好=D/2 时小样即 D 长的混合窗本身。
+- **纯画面无声**（用户裁决）：配音/BGM 混音属 G4，清单 disclaimer 与卡上明写；小样不复现源字幕遮蔽等包装层（`--crop-bottom-ratio` 传入时复现底部裁切），只验转场观感。
+- **硬门禁+如实豁免**（用户裁决）：计划含非硬切转场 → 终审卡必挂预览清单（逐边界一一对应、planSha256==当前计划、文件 sha 匹配），缺=卡校验拒。唯一豁免=结构化 `blocked_previews`（无 ffmpeg/素材 sha 变更/渲染失败），编排必须把披露句"本机无法生成预览：你批准的是未见过的效果"原样上卡后放行，**不许静默跳卡**（㉔ 的手工小样无记录教训：renderArgs 全量入册、可逐字重建）。
+- **产物**：《转场-预览清单-v<M.N>.json》（next_versioned_path 自增永不覆盖，㉘）+ 逐边界 `转场预览-<from>to<to>-v<M.N>.mp4`（边界 id 命名，弃用人肉 A/B/C）；中间件删除、renderArgs 入册。G3 收据 basisRefs 挂清单路径；**不新增 checklist id**（㉙ 教训）。计划改版→清单 planSha256 失配=自动 stale，逼重跑预览。
+
 ## 接线说明书
 
 | 节点 | 接缝 | 消费/产出 |
 |---|---|---|
 | G2 | 口播时值权威源 | 专员不碰内容层；口播实测毫秒是停顿窗口的判定基准 |
-| G3 | 转场决策+深检 | 出计划前 probe 宿主 → 逐切点人工批准（第 8 列单一指令+时长，缺料摊牌上卡）→ `transition_validate_plan.py` 过检入最终回显与门禁收据；**批准≠继承，每项目重批**。**推荐层分工（用户 09-23 拍板转正）**：提案与【默认=推荐｜理由】归编排（编辑判断），专员只摊可行性事实（缺口毫秒/最大可行 D/黑场前提），机器侧评分推荐不存在；决定权在人 |
+| G3 | 转场决策+深检+试装预览 | 出计划前 probe 宿主 → **有非硬切转场必调 `transition_preview.py`，终审卡挂预览小样先看后批（硬门禁，见"试装预览"节）** → 逐切点人工批准（第 8 列单一指令+时长，缺料摊牌上卡）→ `transition_validate_plan.py` 过检入最终回显与门禁收据；**批准≠继承，每项目重批**。**推荐层分工（用户 09-23 拍板转正）**：提案与【默认=推荐｜理由】归编排（编辑判断），专员只摊可行性事实（缺口毫秒/最大可行 D/黑场前提），机器侧评分推荐不存在；决定权在人 |
 | G4 | 装配执行 | 装配头一步 `transition_directive.py`（plan+能力档+证据→指令，产物入装配记录）；g4_render/g4_assemble 逐字执行；缺能力/缺料→blocked，不降级 |
 | G5 | 转场面 QA | 交付包必备 `transition-audit.json`（`transition_report.py` 从装配记录 filterGraph 反推执行==指令，sha256 新鲜度握手）；必检帧含**每转场窗口中点检查帧**（目视混合正常、非意外黑帧）；机器绿灯不背书观感（⑧纪律） |
 
