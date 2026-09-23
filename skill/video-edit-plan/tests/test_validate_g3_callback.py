@@ -206,5 +206,151 @@ class G3CallbackValidatorTests(unittest.TestCase):
         self.assertIn("phrase-01 · 推进档", card)
 
 
+class G3PreviewGateTests(unittest.TestCase):
+    """试装预览硬门禁（批②）：缺=拒、stale=拒、样被改=拒、豁免=如实披露才放行。
+    进程内直调 validate_final/render（不起子进程，路径与哈希合同不变）。"""
+
+    def setUp(self):
+        render_spec = importlib.util.spec_from_file_location("render_g3_review_card_t2", RENDERER)
+        self.render = importlib.util.module_from_spec(render_spec)
+        render_spec.loader.exec_module(self.render)
+
+    def transition_plan_payload(self, with_transition=True):
+        segments = []
+        for number, start in enumerate((0, 1000), 1):
+            seg = {"segmentId": f"seg-{number:03}", "startMs": start + 10000, "endMs": start + 11000,
+                   "outputStartMs": start, "outputEndMs": start + 1000,
+                   "visualVerification": {"status": "verified"}, "semanticAlignment": {"status": "direct_match"}}
+            if with_transition and number == 1:
+                seg.update({"transitionInstruction": "叠化", "transitionDurationMs": 500})
+            segments.append(seg)
+        return {"projectId": "p", "segments": segments, "timelineDurationMs": 2000}
+
+    def transition_callback(self, **extra):
+        rows = []
+        for number, start in enumerate((0, 1000), 1):
+            row = {"segmentId": f"seg-{number:03}", "outputStartMs": start, "outputEndMs": start + 1000,
+                   "outputTimecode": validator.format_review_range(start, start + 1000),
+                   "narrationText": "口播原文", "sourceStartMs": start + 10000, "sourceEndMs": start + 11000,
+                   "sourceTimecode": validator.format_review_range(start + 10000, start + 11000),
+                   "observedVisuals": "实际可见的目标主体", "semanticStatus": "direct_match",
+                   "subjectStatus": "target_confirmed", "riskSummary": "左上角水印需裁切",
+                   "bgmPhrase": "phrase-01", "transitionInstruction": "硬切"}
+            if number == 1:
+                row.update({"transitionInstruction": "叠化", "transitionDurationMs": 500})
+            rows.append(row)
+        value = {"schemaVersion": "0.1", "node": "G3", "projectId": "p", "callbackType": "final_review",
+                 "durationMs": 2000, "columns": list(validator.FINAL_HEADERS), "rows": rows}
+        value.update(extra)
+        return value
+
+    def artifacts(self, plan_payload=None):
+        import hashlib
+        import tempfile
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        root = Path(self._tmp.name)
+        plan_path = root / "plan.json"
+        plan_path.write_text(json.dumps(plan_payload or self.transition_plan_payload(), ensure_ascii=False), encoding="utf-8")
+        sample_dir = root / "预览小样"
+        sample_dir.mkdir()
+        clip = sample_dir / "转场预览-seg-001toseg-002-v0.1.mp4"
+        clip.write_bytes(b"fake clip bytes")
+        manifest = {"skill": "transition-expert", "purpose": "transition_preview", "audio": False,
+                    "planSha256": hashlib.sha256(plan_path.read_bytes()).hexdigest().upper(),
+                    "previews": [{"boundary": "seg-001→seg-002", "type": "叠化", "durationMs": 500,
+                                  "windowMs": [250, 1500], "file": clip.name,
+                                  "sha256": hashlib.sha256(clip.read_bytes()).hexdigest().upper()}]}
+        manifest_path = sample_dir / "转场-预览清单-v0.1.json"
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+        return plan_path, manifest_path, json.loads(plan_path.read_text(encoding="utf-8")), manifest
+
+    def check(self, callback, plan_path, plan, manifest_path=None, manifest=None):
+        validator.validate_final(callback, plan, None,
+                                 plan_path=plan_path, preview_path=manifest_path, preview=manifest)
+
+    def test_missing_preview_blocked(self):
+        plan_path, _, plan, _ = self.artifacts()
+        with self.assertRaises(ValueError) as caught:
+            self.check(self.transition_callback(), plan_path, plan)
+        self.assertIn("硬门禁", str(caught.exception))
+        self.assertIn("seg-001→seg-002", str(caught.exception))
+
+    def test_matching_preview_passes_and_renders_links(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        self.check(callback, plan_path, plan, manifest_path, manifest)  # 不抛=过检
+        card = self.render.render(callback, manifest, manifest_path, manifest_path.parent.parent / "G3-回显卡.md")
+        self.assertIn("## 转场试装预览（先看后批）", card)
+        self.assertIn("[转场预览-seg-001toseg-002-v0.1.mp4](预览小样/转场预览-seg-001toseg-002-v0.1.mp4)", card)
+        self.assertIn("纯画面无声", card)
+        self.assertIn("seg-001→seg-002 ｜ 叠化 · 00:00.500", card)
+
+    def test_stale_plan_hash_blocked(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        manifest["planSha256"] = "0" * 64
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan, manifest_path, manifest)
+        self.assertIn("stale", str(caught.exception))
+
+    def test_tampered_clip_blocked(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        (manifest_path.parent / manifest["previews"][0]["file"]).write_bytes(b"tampered")
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan, manifest_path, manifest)
+        self.assertIn("哈希不符", str(caught.exception))
+
+    def test_boundary_set_mismatch_blocked(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        manifest["previews"][0]["boundary"] = "seg-999→seg-998"
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan, manifest_path, manifest)
+        self.assertIn("不一一对应", str(caught.exception))
+
+    def test_waiver_with_disclosure_passes(self):
+        plan_path, _, plan, _ = self.artifacts()
+        callback = self.transition_callback(transitionPreviewWaiver={
+            "status": "blocked_previews", "reason": "宿主未安装 ffmpeg",
+            "disclosure": "本机无法生成预览：你批准的是未见过的效果"})
+        self.check(callback, plan_path, plan)  # 不抛=豁免放行
+        card = self.render.render(callback, None, None, Path("G3-回显卡.md"))
+        self.assertIn("能力豁免披露", card)
+        self.assertIn("未见过的效果", card)
+
+    def test_fabricated_waiver_shape_rejected(self):
+        plan_path, _, plan, _ = self.artifacts()
+        callback = self.transition_callback(transitionPreviewWaiver={"status": "completed", "reason": "忘了跑"})
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan)
+        self.assertIn("blocked_previews", str(caught.exception))
+
+    def test_ref_and_waiver_together_rejected(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path),
+                                            transitionPreviewWaiver={"status": "blocked_previews", "disclosure": "d"})
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan, manifest_path, manifest)
+        self.assertIn("二选一", str(caught.exception))
+
+    def test_no_transition_plan_rejects_stray_preview(self):
+        plan_payload = self.transition_plan_payload(with_transition=False)
+        plan_path, manifest_path, _, manifest = self.artifacts(plan_payload)
+        callback = self.callback_plain()
+        callback["transitionPreviewRef"] = str(manifest_path)
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan_payload, manifest_path, manifest)
+        self.assertIn("不得挂预览", str(caught.exception))
+
+    def callback_plain(self):
+        callback = self.transition_callback()
+        for row in callback["rows"]:
+            row["transitionInstruction"] = "硬切"
+            row.pop("transitionDurationMs", None)
+        return callback
+
+
 if __name__ == "__main__":
     unittest.main()

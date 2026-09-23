@@ -51,8 +51,44 @@ def bgm_basis_block(basis: dict) -> list[str]:
     ]
 
 
-def render(callback: dict) -> str:
+def preview_block(manifest: dict, manifest_path: Path, card_path: Path) -> list[str]:
+    """转场试装预览区（批②门禁的展示面）：逐边界一链一窗口，双击即看。"""
+    lines = ["## 转场试装预览（先看后批）", ""]
+    lines.append("小样=按本卡批准参数从源素材实渲染，混合公式与成片逐字同式（代码同源）；"
+                 "**纯画面无声**——配音/BGM 混音属 G4，节奏以口播稿与乐句表为准；"
+                 "小样不复现源字幕遮蔽等包装层处理，只验转场观感。")
+    lines.append("")
+    card_dir = card_path.parent
+    for entry in manifest.get("previews", []):
+        clip = (manifest_path.parent / str(entry["file"])).resolve()
+        try:
+            link = clip.relative_to(card_dir.resolve()).as_posix()
+        except ValueError:
+            link = clip.as_posix()
+        window = entry["windowMs"]
+        lines.append(
+            f"- {entry['boundary']} ｜ {entry['type']} · {mmss(entry['durationMs'])} ｜ "
+            f"成片窗口 {mmss(window[0])}–{mmss(window[1])} ｜ ▶ [{entry['file']}]({link})（无声）")
+    lines += ["", f"清单：`{manifest_path}`（哈希绑定当前计划，计划改版即失效需重跑）", ""]
+    return lines
+
+
+def waiver_block(waiver: dict) -> list[str]:
+    return [
+        "## 转场试装预览（能力豁免披露）",
+        "",
+        f"- {waiver.get('disclosure', '本机无法生成预览：你批准的是未见过的效果')}",
+        f"- 原因：{waiver.get('reason', '未给出')}",
+        "",
+        "批准本卡即表示你在**没有小样**的情况下接受上述转场参数；成片观感核对仍走 G4 回放必检帧。",
+        "",
+    ]
+
+
+def render(callback: dict, manifest: dict | None = None, manifest_path: Path | None = None,
+           card_path: Path | None = None) -> str:
     has_basis = isinstance(callback.get("bgmBasis"), dict)
+    has_transitions = any(row.get("transitionInstruction") not in (None, "硬切") for row in callback.get("rows", []))
     lines = [
         "# G3 剪辑计划最终回显",
         "",
@@ -78,7 +114,12 @@ def render(callback: dict) -> str:
             transition_cell(row),
         ]
         lines.append("| " + " | ".join(cell(value) for value in values) + " |")
-    lines.extend(["", "请核对全表；确认无误后，使用精确确认串：`确认 G3`。", ""])
+    lines.append("")
+    if has_transitions and isinstance(callback.get("transitionPreviewWaiver"), dict):
+        lines += waiver_block(callback["transitionPreviewWaiver"])
+    elif has_transitions and manifest is not None and manifest_path is not None and card_path is not None:
+        lines += preview_block(manifest, manifest_path, card_path)
+    lines.extend(["请核对全表；确认无误后，使用精确确认串：`确认 G3`。", ""])
     return "\n".join(lines)
 
 
@@ -87,13 +128,16 @@ def main() -> int:
     parser.add_argument("--callback", required=True, type=Path)
     parser.add_argument("--plan", required=True, type=Path)
     parser.add_argument("--alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json for card v0.2 verification")
+    parser.add_argument("--preview", type=Path, help="《转场-预览清单-vM.N.json》；计划含转场时必传（豁免披露除外）")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     callback, plan = load(args.callback), load(args.plan)
     alignment = load(args.alignment) if args.alignment else None
-    validator.validate_final(callback, plan, alignment)
+    preview = load(args.preview) if args.preview else None
+    validator.validate_final(callback, plan, alignment,
+                             plan_path=args.plan, preview_path=args.preview, preview=preview)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render(callback), encoding="utf-8")
+    args.output.write_text(render(callback, preview, args.preview, args.output), encoding="utf-8")
     print(json.dumps({"status": "completed", "output": str(args.output), "rows": len(callback["rows"])}, ensure_ascii=True))
     return 0
 
