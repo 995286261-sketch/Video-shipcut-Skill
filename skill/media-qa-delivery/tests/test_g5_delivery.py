@@ -158,5 +158,34 @@ class G5DeliveryTest(unittest.TestCase):
         self.run_cli(MIRROR, "--source-bundle", self.bundle, "--audit-root", audit.parent)
         self.assertFalse((audit / "obsolete.txt").exists())
 
+    # ---- Leader 反馈 R3（用户 2026-09-24 批准）：仓内样例自洽层——
+    # 本版基线包必须通过当前交付校验（今后合同加严若悄悄弄烂基线，本测试当场红）；
+    # 历史封存包不要求通过（按当时合同有效），但必须带 contract-era.json 版本标记：
+    # 不裸奔、不迁移造假、更不许删校验项绕开。 ----
+
+    BASELINE_BUNDLE = ROOT / "工作台" / "sinjuku-intro-001" / "G5-交付包" / "交付包-v0.1"
+    LEGACY_BUNDLES = {
+        "zaku-intro-001": "交付包-v0.1",
+        "kshatriya-intro-001": "交付包-v0.1",
+        "kshatriya-intro-002": "交付包-v0.1",
+        "tiger-intro-001": "交付包-v0.1",
+        "psycho-zaku-intro-002": "交付包-v0.1",
+        "unicorn-gundam-intro-001": "交付包-v0.1-内部验收草案",
+    }
+
+    def test_repo_baseline_bundle_passes_current_validator(self):
+        result = self.run_cli(VALIDATE, "--bundle", self.BASELINE_BUNDLE)
+        self.assertEqual("valid", result["status"])
+        self.assertEqual([], result["errors"])
+
+    def test_legacy_bundles_carry_contract_era_markers(self):
+        for project, sub in self.LEGACY_BUNDLES.items():
+            marker_path = ROOT / "工作台" / project / "G5-交付包" / sub / "contract-era.json"
+            self.assertTrue(marker_path.is_file(), f"{project} 历史封存包缺版本标记（R3：不追溯重验可以，裸奔不行）")
+            marker = json.loads(marker_path.read_text(encoding="utf-8"))
+            self.assertEqual("contract-era-marker", marker["purpose"])
+            self.assertEqual(project, marker["projectId"])
+            self.assertTrue(marker.get("sealedUnderContract"))
+
 
 if __name__ == "__main__": unittest.main()

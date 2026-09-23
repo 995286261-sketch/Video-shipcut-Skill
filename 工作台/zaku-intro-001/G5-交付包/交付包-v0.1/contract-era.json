@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "contract-era-marker",
+  "projectId": "zaku-intro-001",
+  "bundle": "交付包-v0.1",
+  "sealedAt": "2026-09-10T08:04:05Z",
+  "sealedUnderContract": "2026-09-21 合同加严之前（v1.4.0 起 REQUIRED 增 subtitle-srt-check.json；v1.5.0 起再增 transition-audit.json）",
+  "missingCurrentRequirements": [
+    "subtitle-srt-check.json（字幕专员复检握手，REQUIRED since v1.4.0/dee6568）",
+    "transition-audit.json（转场执行审计握手，REQUIRED since v1.5.0/c0127fd）"
+  ],
+  "policy": "按封存当时合同有效，不追溯重验（skill/media-qa-delivery/references/delivery-bundle-schema.md）；禁止删除或放宽当前校验项来让本包通过；禁止补生成两份检查报告冒充迁移（旧项目封存时不存在对应指令/复检链，硬造即造假）。",
+  "currentVersionBaseline": "工作台/sinjuku-intro-001/G5-交付包/交付包-v0.1",
+  "recordedAt": "2026-09-24",
+  "recordedBy": "Leader 反馈 R3 批次（用户 2026-09-24 批准）"
+}
