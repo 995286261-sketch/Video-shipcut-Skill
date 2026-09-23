@@ -38,7 +38,7 @@ python skill/transition-expert/scripts/transition_validate_plan.py --plan <G3-�
 | 节点 | 接缝 | 消费/产出 |
 |---|---|---|
 | G2 | 口播时值权威源 | 专员不碰内容层；口播实测毫秒是停顿窗口的判定基准 |
-| G3 | 转场决策+深检 | 出计划前 probe 宿主 → 逐切点人工批准（第 8 列单一指令+时长，缺料摊牌上卡）→ `transition_validate_plan.py` 过检入最终回显与门禁收据；**批准≠继承，每项目重批** |
+| G3 | 转场决策+深检 | 出计划前 probe 宿主 → 逐切点人工批准（第 8 列单一指令+时长，缺料摊牌上卡）→ `transition_validate_plan.py` 过检入最终回显与门禁收据；**批准≠继承，每项目重批**。**推荐层分工（用户 09-23 拍板转正）**：提案与【默认=推荐｜理由】归编排（编辑判断），专员只摊可行性事实（缺口毫秒/最大可行 D/黑场前提），机器侧评分推荐不存在；决定权在人 |
 | G4 | 装配执行 | 装配头一步 `transition_directive.py`（plan+能力档+证据→指令，产物入装配记录）；g4_render/g4_assemble 逐字执行；缺能力/缺料→blocked，不降级 |
 | G5 | 转场面 QA | 交付包必备 `transition-audit.json`（`transition_report.py` 从装配记录 filterGraph 反推执行==指令，sha256 新鲜度握手）；必检帧含**每转场窗口中点检查帧**（目视混合正常、非意外黑帧）；机器绿灯不背书观感（⑧纪律） |
 
