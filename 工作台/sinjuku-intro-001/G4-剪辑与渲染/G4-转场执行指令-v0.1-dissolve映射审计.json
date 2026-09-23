@@ -1,0 +1,181 @@
+{
+  "boundaries": [
+    {
+      "durationMs": 400,
+      "fromSegmentId": "seg-14",
+      "offsetMs": 99111,
+      "toSegmentId": "seg-15",
+      "transition": "dissolve"
+    },
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-16",
+      "offsetMs": 110121,
+      "toSegmentId": "seg-17",
+      "transition": "dissolve"
+    },
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-26",
+      "offsetMs": 164614,
+      "toSegmentId": "seg-27",
+      "transition": "dissolve"
+    }
+  ],
+  "evidenceSha256": "4C5BC95736E976DC774C400C7463EA576C92C2C7929A9F2132B1113F974EC74E",
+  "gridInvariant": true,
+  "hostProfile": "工作台/sinjuku-intro-001/G3-剪辑计划/转场-宿主能力档-v0.1.json",
+  "hostProfileSha256": "E662F075953B796671D51FC2B81C0A5DF07AB35E643016C993F84161D1CD43E0",
+  "inputEvidence": "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "inputPlan": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json",
+  "masterFades": {
+    "fadeInMs": 0,
+    "fadeOutMs": 0
+  },
+  "planSha256": "20856864CB97BC2DDEF86A5078DFBE038B15E4360EBC0BE93DD3DC7D9CB03449",
+  "purpose": "transition_directive",
+  "schemaVersion": "0.1",
+  "segments": [
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-01",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-02",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-03",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-04",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-05",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-06",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-07",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-08",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-09",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-10",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-11",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-12",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-13",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-14",
+      "tailExtraMs": 200
+    },
+    {
+      "headExtraMs": 200,
+      "segmentId": "seg-15",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-16",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-17",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-18",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-19",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-20",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-21",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-22",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-23",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-24",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-25",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-26",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-27",
+      "tailExtraMs": 0
+    }
+  ],
+  "skill": "transition-expert",
+  "timelineDurationMs": 170167,
+  "transitionVocabulary": [
+    "叠化",
+    "硬切"
+  ]
+}

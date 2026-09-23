@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "status": "completed",
+  "evidencePolicy": "public-canon-secondary-sources（G0 03_事实依据为空；核证通道 bl search web + BWIKI 直采；内部测试分发）",
+  "sourceEvidence": [
+    {
+      "assetId": "source-02-b9f9377f",
+      "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "sourceProbe": {
+        "durationMs": 569701,
+        "video": { "codec": "h264", "width": 1280, "height": 720, "frameRate": "30/1" },
+        "audio": { "codec": "aac", "sampleRate": 44100, "channels": 2 }
+      },
+      "probeRef": "G2-证据与口播/source-02-probe.json",
+      "contactSheetRef": "G2-证据与口播/source-02-contact-sheet.jpg",
+      "transcriptRef": "G2-证据与口播/转写/source-02-transcript.json",
+      "transcriptArtifactsRef": "G2-证据与口播/转写/source-02/manifest.json",
+      "cacheKey": {
+        "assetId": "source-02-b9f9377f",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "language": "zh",
+        "model": "small",
+        "device": "cpu",
+        "computeType": "int8",
+        "runtimeVersion": "local-transcribe-script-v0.2"
+      },
+      "warnings": [
+        "机器转写=草稿证据，不升级为事实/字幕/口播",
+        "源音轨存在；G0 原声策略=排除，镜头/音频取舍归 G3"
+      ]
+    }
+  ],
+  "factEvidenceRefs": [
+    "G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "G2-证据与口播/事实依据/raw/bwiki-sinjuku.html",
+    "G2-证据与口播/事实依据/raw/bl-search-redcomet.json",
+    "G2-证据与口播/事实依据/raw/bl-search-frontal.json",
+    "G2-证据与口播/事实依据/raw/bl-search-sinjuku3.json",
+    "G2-证据与口播/事实依据/raw/bl-search-sinanju-en.json"
+  ],
+  "claimDispositions": [
+    { "claimId": "claim-001", "disposition": "rewrite_required" },
+    { "claimId": "claim-002", "disposition": "supported_with_qualifier" },
+    { "claimId": "claim-003", "disposition": "supported" }
+  ],
+  "handoff": {
+    "nextNode": "G3",
+    "approvedNarrationRef": null,
+    "factCitationRef": "G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "voiceBriefRef": null,
+    "beatBlueprintRef": "G2-证据与口播/节拍蓝图/BGM-节拍蓝图-v0.1.json",
+    "narrationDraftRef": "G2-证据与口播/G2-口播句子-v0.2.json",
+    "voiceManifestRef": "G2-证据与口播/G2-配音清单-longtian-v0.2.json",
+    "note": "approvedNarrationRef/voiceBriefRef 在确认G2 后写入 G2-审核决定；口播已走一轮 3.5 改稿循环（28→27 句），以 v0.2 实测清单为请批口径"
+  }
+}

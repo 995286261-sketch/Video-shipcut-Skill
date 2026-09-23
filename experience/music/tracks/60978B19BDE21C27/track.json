@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "60978B19BDE21C27499CEC12DEB8FC55426CAF9F6532D4C0EEE2D75D16D2297B",
+  "aliases": [
+    {
+      "title": "Winterstorm II: A Cinematic and ambient soundscape",
+      "sourceUrl": "https://freesound.org/s/552032/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:24Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-552032-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:24Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:24Z",
+  "updatedAt": "2026-09-22T03:33:22Z"
+}

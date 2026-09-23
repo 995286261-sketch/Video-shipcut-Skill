@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "96DC9A45CEE0E694D240DACAFFB1C04DD16A5B68A1AF27552C3AEA383719CF93",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-625886-preview.mp3",
+    "sha256": "96DC9A45CEE0E694D240DACAFFB1C04DD16A5B68A1AF27552C3AEA383719CF93",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 5.32898,
+    "decodedDurationMs": 5298
+  },
+  "tempoBpm": 123.05,
+  "beatsMs": [
+    697,
+    1184,
+    1695,
+    2183,
+    2763,
+    3344,
+    3831,
+    4342,
+    4830
+  ],
+  "onsetsMs": [
+    186,
+    348,
+    673,
+    859,
+    1022,
+    1184,
+    1370,
+    1509,
+    1695,
+    1834,
+    1997,
+    2159,
+    2345,
+    2508,
+    2670,
+    2833,
+    3158,
+    3344,
+    3506,
+    3669,
+    3831,
+    4017,
+    4156,
+    4342,
+    4481,
+    4667,
+    4807,
+    4992
+  ],
+  "hitPoints": [
+    {
+      "tMs": 186,
+      "kind": "accent"
+    },
+    {
+      "tMs": 348,
+      "kind": "accent"
+    },
+    {
+      "tMs": 697,
+      "kind": "beat"
+    },
+    {
+      "tMs": 859,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1022,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1184,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1370,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1509,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1695,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1834,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1997,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2183,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2345,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2508,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2763,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3158,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3344,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3506,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3669,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3831,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4017,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4156,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4342,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4481,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4667,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4830,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4992,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 5294,
+      "energyMean": 0.192986
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.337259
+    },
+    {
+      "tMs": 372,
+      "rms": 0.416909
+    },
+    {
+      "tMs": 743,
+      "rms": 0.144719
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.035486
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.236036
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.101635
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.355598
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.126882
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.000815
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.235082
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.002752
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.046341
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.122582
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.392931
+    },
+    {
+      "tMs": 5201,
+      "rms": 2e-05
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -11.6,
+    "loudnessRangeLu": 0.7,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

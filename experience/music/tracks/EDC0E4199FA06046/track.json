@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "EDC0E4199FA06046A79BB7003B2838EFD194ECEBA5FA3F5E28C89BCE75580C5F",
+  "aliases": [
+    {
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "sourceUrl": "https://freesound.org/s/767844/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:22:50Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-767844-preview.mp3",
+      "recordedAt": "2026-09-22T03:22:50Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:22:50Z",
+  "updatedAt": "2026-09-22T03:35:08Z"
+}

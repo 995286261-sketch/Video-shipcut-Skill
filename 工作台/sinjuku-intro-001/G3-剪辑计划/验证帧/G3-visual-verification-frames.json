@@ -1,0 +1,764 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "visual-verification-frames",
+  "planRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 10480
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 0,
+          "sourceMs": 0,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-01/start-0000000000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 5240,
+          "sourceMs": 5240,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-01/middle-0000005240ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 10479,
+          "sourceMs": 10479,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-01/end-0000010479ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 432000,
+        "endMs": 438880
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 432000,
+          "sourceMs": 432000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-02/start-0000432000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 435440,
+          "sourceMs": 435440,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-02/middle-0000435440ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 438879,
+          "sourceMs": 438879,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-02/end-0000438879ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 64000,
+        "endMs": 71520
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 64000,
+          "sourceMs": 64000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-03/start-0000064000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 67760,
+          "sourceMs": 67760,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-03/middle-0000067760ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 71519,
+          "sourceMs": 71519,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-03/end-0000071519ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 240000,
+        "endMs": 248880
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 240000,
+          "sourceMs": 240000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-04/start-0000240000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 244440,
+          "sourceMs": 244440,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-04/middle-0000244440ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 248879,
+          "sourceMs": 248879,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-04/end-0000248879ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 280000,
+        "endMs": 288480
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 280000,
+          "sourceMs": 280000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-05/start-0000280000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 284240,
+          "sourceMs": 284240,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-05/middle-0000284240ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 288479,
+          "sourceMs": 288479,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-05/end-0000288479ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 288480,
+        "endMs": 294240
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 288480,
+          "sourceMs": 288480,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-06/start-0000288480ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 291360,
+          "sourceMs": 291360,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-06/middle-0000291360ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 294239,
+          "sourceMs": 294239,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-06/end-0000294239ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 438880,
+        "endMs": 441680
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 438880,
+          "sourceMs": 438880,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-07/start-0000438880ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 440280,
+          "sourceMs": 440280,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-07/middle-0000440280ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 441679,
+          "sourceMs": 441679,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-07/end-0000441679ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 71520,
+        "endMs": 80240
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 71520,
+          "sourceMs": 71520,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-08/start-0000071520ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 75880,
+          "sourceMs": 75880,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-08/middle-0000075880ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 80239,
+          "sourceMs": 80239,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-08/end-0000080239ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 80240,
+        "endMs": 86960
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 80240,
+          "sourceMs": 80240,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-09/start-0000080240ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 83600,
+          "sourceMs": 83600,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-09/middle-0000083600ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 86959,
+          "sourceMs": 86959,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-09/end-0000086959ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 441680,
+        "endMs": 445520
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 441680,
+          "sourceMs": 441680,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-10/start-0000441680ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 443600,
+          "sourceMs": 443600,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-10/middle-0000443600ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 445519,
+          "sourceMs": 445519,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-10/end-0000445519ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 380000,
+        "endMs": 384240
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 380000,
+          "sourceMs": 380000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-11/start-0000380000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 382120,
+          "sourceMs": 382120,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-11/middle-0000382120ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 384239,
+          "sourceMs": 384239,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-11/end-0000384239ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 10480,
+        "endMs": 15360
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 10480,
+          "sourceMs": 10480,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-12/start-0000010480ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 12920,
+          "sourceMs": 12920,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-12/middle-0000012920ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 15359,
+          "sourceMs": 15359,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-12/end-0000015359ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-13",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 15360,
+        "endMs": 23920
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 15360,
+          "sourceMs": 15360,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-13/start-0000015360ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 19640,
+          "sourceMs": 19640,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-13/middle-0000019640ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 23919,
+          "sourceMs": 23919,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-13/end-0000023919ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-14",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 120000,
+        "endMs": 125920
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 120000,
+          "sourceMs": 120000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-14/start-0000120000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 122960,
+          "sourceMs": 122960,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-14/middle-0000122960ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 125919,
+          "sourceMs": 125919,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-14/end-0000125919ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-15",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 96000,
+        "endMs": 101440
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 96000,
+          "sourceMs": 96000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-15/start-0000096000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 98720,
+          "sourceMs": 98720,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-15/middle-0000098720ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 101439,
+          "sourceMs": 101439,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-15/end-0000101439ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-16",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 44000,
+        "endMs": 48480
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 44000,
+          "sourceMs": 44000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-16/start-0000044000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 46240,
+          "sourceMs": 46240,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-16/middle-0000046240ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 48479,
+          "sourceMs": 48479,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-16/end-0000048479ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-17",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 330000,
+        "endMs": 336400
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 330000,
+          "sourceMs": 330000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-17/start-0000330000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 333200,
+          "sourceMs": 333200,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-17/middle-0000333200ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 336399,
+          "sourceMs": 336399,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-17/end-0000336399ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-18",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 336400,
+        "endMs": 342960
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 336400,
+          "sourceMs": 336400,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-18/start-0000336400ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 339680,
+          "sourceMs": 339680,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-18/middle-0000339680ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 342959,
+          "sourceMs": 342959,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-18/end-0000342959ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-19",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 356000,
+        "endMs": 361360
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 356000,
+          "sourceMs": 356000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-19/start-0000356000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 358680,
+          "sourceMs": 358680,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-19/middle-0000358680ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 361359,
+          "sourceMs": 361359,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-19/end-0000361359ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-20",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 248880,
+        "endMs": 252320
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 248880,
+          "sourceMs": 248880,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-20/start-0000248880ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 250600,
+          "sourceMs": 250600,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-20/middle-0000250600ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 252319,
+          "sourceMs": 252319,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-20/end-0000252319ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-21",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 136000,
+        "endMs": 140240
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 136000,
+          "sourceMs": 136000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-21/start-0000136000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 138120,
+          "sourceMs": 138120,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-21/middle-0000138120ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 140239,
+          "sourceMs": 140239,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-21/end-0000140239ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-22",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 548000,
+        "endMs": 552480
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 548000,
+          "sourceMs": 548000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-22/start-0000548000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 550240,
+          "sourceMs": 550240,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-22/middle-0000550240ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 552479,
+          "sourceMs": 552479,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-22/end-0000552479ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-23",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 560000,
+        "endMs": 564960
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 560000,
+          "sourceMs": 560000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-23/start-0000560000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 562480,
+          "sourceMs": 562480,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-23/middle-0000562480ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 564959,
+          "sourceMs": 564959,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-23/end-0000564959ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-24",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 544000,
+        "endMs": 546240
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 544000,
+          "sourceMs": 544000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-24/start-0000544000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 545120,
+          "sourceMs": 545120,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-24/middle-0000545120ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 546239,
+          "sourceMs": 546239,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-24/end-0000546239ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-25",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 26000,
+        "endMs": 30160
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 26000,
+          "sourceMs": 26000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-25/start-0000026000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 28080,
+          "sourceMs": 28080,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-25/middle-0000028080ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 30159,
+          "sourceMs": 30159,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-25/end-0000030159ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-26",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 480000,
+        "endMs": 489280
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 480000,
+          "sourceMs": 480000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-26/start-0000480000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 484640,
+          "sourceMs": 484640,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-26/middle-0000484640ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 489279,
+          "sourceMs": 489279,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-26/end-0000489279ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-27",
+      "assetId": "source-02-b9f9377f",
+      "sourceRange": {
+        "startMs": 496000,
+        "endMs": 501120
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 496000,
+          "sourceMs": 496000,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-27/start-0000496000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 498560,
+          "sourceMs": 498560,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-27/middle-0000498560ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 501119,
+          "sourceMs": 501119,
+          "path": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧/seg-27/end-0000501119ms.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "records": [
+  {
+   "recordId": "obs-rg-01",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    0,
+    120000
+   ],
+   "observation": "新安洲红色机体出击/悬停/光束射击、战舰炮战、爆炸、谱线蓝图屏（64-80s）、残骸带、红机独镜（44s/26s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-02",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    120000,
+    240000
+   ],
+   "observation": "红机高机动（120s）、白灰色杰斯塔被击、独角兽毁灭模式红眼头部特写、大爆炸",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-03",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    240000,
+    360000
+   ],
+   "observation": "独角兽红框发光（240-252s）、带袖的金色袖章徽记（284-288s）、红机持大型光束步枪、战舰+红机（330-350s）、头盔驾驶员特写（352-360s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-04",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    360000,
+    480000
+   ],
+   "observation": "独角兽头部特写、红机光束军刀/热能斧（380s）、金色徽记（408s）、红机推进器全开正面冲锋（432-448s）、红色光束弹幕（480s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-05",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    480000,
+    569701
+   ],
+   "observation": "红机白刃齐射特写（484-500s）、红色面部大特写（544s）、新吉翁号粉红巨体（548-556s）、蓝色光子框架之光（560-568s）、终幕残骸",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-seg-01",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    0,
+    10766
+   ],
+   "observation": "0.0s 黑雾开场；5.2s 红机残骸带飞行；10.4s 红机+金色袖章特写",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-01/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-01/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-01/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-02",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    338000,
+    345326
+   ],
+   "observation": "338.0s 红机+蓝光束；341.4s 红机+金色袖章盾牌大特写；344.9s 红机+爆炸（v03 实际三帧全绿）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-02/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-02/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-02/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-03",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    74771,
+    82707
+   ],
+   "observation": "74.8s 联邦战舰+黄色光束；78.8s DATA DECODED 线框蓝图屏；82.5s 战舰甲板",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-03/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-03/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-03/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-04",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    260313,
+    269584
+   ],
+   "observation": "260.3s 红机拔刀展开；265.0s 红白双方对峙闪光；269.4s 独角兽精神感应骨架红框大特写",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-04/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-04/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-04/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-05",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    317796,
+    326733
+   ],
+   "observation": "317.8s 红机全身美颜镜；322.2s 盾牌带袖的金色袖章大特写；326.6s 联邦杰斯塔（抢夺对象语境）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-05/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-05/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-05/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-06",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    288227,
+    294402
+   ],
+   "observation": "288.4s 出击段；291.3s 舱内 HUD 绿光；294.2s 爆炸火球+紫色光球（战争语境；v04 目视页实帧）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-06/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-06/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-06/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-07",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    406838,
+    410014
+   ],
+   "observation": "406.8s 红机+白色闪光；408.4s 红机+蓝/黄光束齐射；410.0s 红机+光束（v02 目视页三帧全红机）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-07/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-07/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-07/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-08",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    493036,
+    502219
+   ],
+   "observation": "493.0s 红机+金色装饰特写；497.6s 红机+黄色军刀；502.2s 大型光束步枪特写（v02c 起/中帧红机强，终帧其武器特写）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-08/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-08/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-08/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-09",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    385751,
+    392912
+   ],
+   "observation": "386.0s 红机+金色装饰；389.3s 红机军刀作战（远景）+蓝尾焰；392.7s 灰白机体+红色光束（对决收尾；v04 目视页实帧）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-09/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-09/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-09/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-10",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    434600,
+    438768
+   ],
+   "observation": "434.6s 背部推进荚舱展开；436.7s 推进翼全开+开火；438.8s 推进翼全开（4fps 探针证实翼段 434.0–438.75s，窗口收在翼段内）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-10/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-10/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-10/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-11",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    392912,
+    397477
+   ],
+   "observation": "393.1s 暗景红色光束拖尾；395.2s 红机拔刀+红色精神感应框格大特写；397.3s 红机+白色军刀+绿光（v04 目视页实帧）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-11/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-11/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-11/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-12",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    10766,
+    15986
+   ],
+   "observation": "10.8s 红机+袖章特写；12.9s 残骸带；15.8s 战舰主炮蓝光",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-12/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-12/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-12/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-13",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    15986,
+    24931
+   ],
+   "observation": "16.1s 战舰主炮白光；19.6s 红机持刀全身+蓝尾焰；24.7s 战舰甲板连镜（4fps 探针证实）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-13/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-13/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-13/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-14",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    125000,
+    131482
+   ],
+   "observation": "125.2s 红机+白色闪光；128.2s 红机全身+步枪；131.2s 红机+蓝尾焰（124.8s 灰机已避开）",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-14/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-14/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-14/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-15",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    96000,
+    102018
+   ],
+   "observation": "96.3s 红机特写+步枪管；98.7s 运动模糊；101.8s 绿色敌机爆炸→大爆炸（4fps 探针证实 101–102s）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-15/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-15/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-15/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-16",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    44000,
+    48942
+   ],
+   "observation": "44.0s 战舰甲板；46.2s 青绿机燃烧；48.7s 爆炸火球→爆闪光球（4fps 探针证实 48–49s）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-16/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-16/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-16/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-17",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    345565,
+    352388
+   ],
+   "observation": "345.8s 红机+爆炸；348.5s 红机+硝烟；351.8s 白色闪光+红机",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-17/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-17/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-17/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-18",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    352388,
+    359434
+   ],
+   "observation": "352.6s 红机+金色装饰；355.0s 红机+甲板上的驾驶员；358.4s 绿色光束作战",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-18/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-18/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-18/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-19",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    359434,
+    365243
+   ],
+   "observation": "359.6s 绿色光束作战（前段收尾）；362.3s 带袖的袖章纪念碑+橙色光柱；365.0s 灰机体（中帧=『夏亚再世』象征物；v04 目视页实帧）",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-19/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-19/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-19/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-20",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    509500,
+    513300
+   ],
+   "observation": "509.7s 红机面部+金饰大特写；511.4s 红机+大型步枪开火；513.1s 红机+大型火箭炮",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-20/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-20/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-20/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-21",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    136000,
+    140486
+   ],
+   "observation": "136.2s 红机+黄刀弧；138.3s 红机 vs 青绿机军刀相交；140.4s 对决火花",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-21/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-21/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-21/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-22",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    548000,
+    552625
+   ],
+   "observation": "548.1s 深绿巨体+青蓝光；550.3s 粉红-红色巨体+金领特写；552.5s 红机 vs 白机+绿光束",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-22/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-22/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-22/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-23",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    560000,
+    565151
+   ],
+   "observation": "560.1s 残骸带；562.6s 红机+金袖章；565.0s 蓝色光晕笼罩机体",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-23/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-23/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-23/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-24",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    544000,
+    546459
+   ],
+   "observation": "544.1s 粉红-红色机体面部+绿传感器+青晶；545.2s 金领大特写；546.3s +电光",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-24/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-24/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-24/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-25",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    26000,
+    30501
+   ],
+   "observation": "26.1s 战舰甲板炮；28.6s 红机大型光束步枪开火白闪光；31.1s 红机全身+步枪",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-25/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-25/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-25/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-26",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    480000,
+    489793
+   ],
+   "observation": "480.2s 红机+蓝尾焰；484.9s 红机 vs 灰机白刃+枪口焰；489.4s 战舰导弹发射",
+   "subjectStatus": "context",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-26/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-26/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-26/end.jpg"
+   ]
+  },
+  {
+   "recordId": "obs-seg-27",
+   "analysisStatus": "completed",
+   "source": "候选层实际起/中/终抽帧目视（验证帧-v04，2026-09-22，连续网格 v0.4）",
+   "rangeMs": [
+    503717,
+    509120
+   ],
+   "observation": "504.0s 红机缠斗灰机；506.6s 红机+大型步枪+推进荚舱；509.1s 红机面部+金饰特写",
+   "subjectStatus": "confirmed",
+   "frameRefs": [
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-27/start.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-27/middle.jpg",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v04/seg-27/end.jpg"
+   ]
+  }
+ ]
+}

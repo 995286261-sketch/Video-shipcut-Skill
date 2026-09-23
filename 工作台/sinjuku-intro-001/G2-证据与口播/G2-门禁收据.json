@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "node": "G2",
+  "cardType": "g2_evidence_narration_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-22T07:05:00Z",
+  "reviewCardRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.3.md",
+  "approvalTokens": [
+    "确认G2",
+    "配音确认"
+  ],
+  "basisRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-审批留痕.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-最终回显卡-v0.3.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.3.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播句子-v0.3.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-排版稿-v0.3.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-配音清单-longtian-v0.3.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据准备报告-v0.1.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/节拍蓝图/BGM-节拍蓝图-v0.1.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/节拍蓝图/BGM-节拍蓝图回显-v0.1.md",
+    "工作台/sinjuku-intro-001/G2-证据与口播/配音试听/配音试听-longtian_v3-8s.wav",
+    "工作台/sinjuku-intro-001/G2-证据与口播/转写/source-02/manifest.json",
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-审核决定-v0.3.json",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-S卡裁决记录.md"
+  ],
+  "checklist": [
+    {
+      "id": "fact_citation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md"
+    },
+    {
+      "id": "approved_narration",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.3.md"
+    },
+    {
+      "id": "voice_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-配音清单-longtian-v0.3.json"
+    },
+    {
+      "id": "g2_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-最终回显卡-v0.2.md"
+    }
+  ],
+  "notes": "第2轮（S2=A 改写重批）；口播权威轴=G2-配音清单-longtian-v0.3.json；双口令逐字见审批留痕.md"
+}

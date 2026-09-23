@@ -1,0 +1,1282 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": null,
+    "similarTo": null,
+    "termsFile": "工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/BGM-检索词-v0.2.json",
+    "terms": [
+      "industrial techno aggressive",
+      "dark electro driving",
+      "action trailer electronic",
+      "hard electro rhythm"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 180.0,
+    "appliedMinSec": 180.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-09-22T11:31:48+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 647274,
+      "title": "LDRUM02.wav",
+      "author": "angelkunev",
+      "sourceUrl": "https://freesound.org/s/647274/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 0.413787,
+      "tags": [
+        "bounce",
+        "brutal",
+        "drum",
+        "effect",
+        "fx",
+        "hard",
+        "hardtechno",
+        "hit",
+        "industrial",
+        "kick",
+        "loud",
+        "rave"
+      ],
+      "styleTags": [
+        "dark",
+        "percussive",
+        "driving",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-22T11:25:27+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-647274-preview.mp3",
+      "sha256": "477E693376D06AF31E9AF9D2B006897B2DEF155642590EB935CF57D1FD8BF5C3",
+      "byteSize": 14405
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 651949,
+      "title": "lonely-traveler-suspense.mp3",
+      "author": "holisticfox",
+      "sourceUrl": "https://freesound.org/s/651949/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"lonely-traveler-suspense.mp3\" by holisticfox (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 467.027,
+      "tags": [
+        "alone",
+        "ambience",
+        "atmosphere",
+        "beats",
+        "buzz",
+        "cinematic",
+        "dark",
+        "dread",
+        "driving",
+        "electro",
+        "electronic",
+        "film"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "driving",
+        "electronic",
+        "orchestral",
+        "acoustic",
+        "ambient-low"
+      ],
+      "retrievedAt": "2026-09-22T11:25:28+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-651949-preview.mp3",
+      "sha256": "76DD99FEAE8CF6B19ACB5DEB8E4BF620706A65FF9169CFCEA4CD421EAB914BD0",
+      "byteSize": 10361641
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 201526,
+      "title": "sub  __",
+      "author": "waveplaySFX",
+      "sourceUrl": "https://freesound.org/s/201526/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 1.0,
+      "tags": [
+        "ambient",
+        "audacity",
+        "bass",
+        "dark",
+        "deep",
+        "downtune",
+        "drive",
+        "driving",
+        "drop",
+        "dub",
+        "dub-step",
+        "dubstep"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "driving",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-22T11:27:43+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-201526-preview.mp3",
+      "sha256": "5366219BCAC993864B08BCFAE7E95FAB644B66FC91D1B6BF3649C1B7EB9EBCD2",
+      "byteSize": 8662
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 201525,
+      "title": "[Ambient Bass] Deep bass",
+      "author": "waveplaySFX",
+      "sourceUrl": "https://freesound.org/s/201525/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 29.9878,
+      "tags": [
+        "ambient",
+        "bass",
+        "dark",
+        "deep",
+        "downtune",
+        "drive",
+        "driving",
+        "drop",
+        "dub",
+        "dub-step",
+        "dubstep",
+        "echo"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "driving",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-22T11:27:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-201525-preview.mp3",
+      "sha256": "2B16D8726D2720BFCAC0A7D83E7B78451BFE2A127701D52C948C7674D7512989",
+      "byteSize": 396360
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 568005,
+      "title": "Attention: Suspenseful Film Score for Action & Cyberpunk",
+      "author": "kjartan_abel",
+      "sourceUrl": "https://freesound.org/s/568005/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Attention: Suspenseful Film Score for Action & Cyberpunk\" by kjartan_abel (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 235.294,
+      "tags": [
+        "ambience",
+        "ambient",
+        "atmosphere",
+        "bakground",
+        "cinematic",
+        "cyberpunk",
+        "dark",
+        "deep",
+        "drone",
+        "effect",
+        "electro",
+        "electronic"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "rock",
+        "dark",
+        "electronic",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-22T11:27:49+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-568005-preview.mp3",
+      "sha256": "06C28A97F7CE1FCABB943BCE92DEBFDDE97261CCF0984948016D1A181A4B91D3",
+      "byteSize": 5219654
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 531854,
+      "title": "Suspension: Mellow Electro-Ambient Soundscape",
+      "author": "kjartan_abel",
+      "sourceUrl": "https://freesound.org/s/531854/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Suspension: Mellow Electro-Ambient Soundscape\" by kjartan_abel (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 111.695,
+      "tags": [
+        "Audio-productions",
+        "Electro-ambience",
+        "Electronic-music",
+        "Futuristic-touch",
+        "Looping",
+        "Podcasts",
+        "Pulsating-rhythm",
+        "Suspension",
+        "Synth-atmosphere",
+        "Vlogs",
+        "action",
+        "ambience"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "percussive",
+        "driving",
+        "ambient-low",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-22T11:28:58+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-531854-preview.mp3",
+      "sha256": "537B944B52CB9A4F004E6D8F1E6247A36578590E7CA0F0F010E9B239F7B5786B",
+      "byteSize": 2607840
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 507747,
+      "title": "Hybrid Action Music 01",
+      "author": "Magmi.Soundtracks",
+      "sourceUrl": "https://freesound.org/s/507747/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 188.598,
+      "tags": [
+        "action",
+        "choir",
+        "dramatic",
+        "drums",
+        "electronic",
+        "epic",
+        "film",
+        "guitar",
+        "hybrid",
+        "intense",
+        "movie",
+        "sci-fi"
+      ],
+      "styleTags": [
+        "driving",
+        "orchestral",
+        "dark",
+        "percussive",
+        "electronic",
+        "epic",
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-22T11:29:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-507747-preview.mp3",
+      "sha256": "0DAB3DF49802D5829CF1A9D1BD2820F8C14767929D4C94C48D71831352890FE1",
+      "byteSize": 4436853
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 670317,
+      "title": "SFX Ambiant glitching bass",
+      "author": "xkeril",
+      "sourceUrl": "https://freesound.org/s/670317/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 16.0,
+      "tags": [
+        "ambiant",
+        "bass",
+        "choppy",
+        "dark",
+        "deep",
+        "drone",
+        "effect",
+        "electronic",
+        "experimental",
+        "glitch",
+        "pitched",
+        "sci-fi"
+      ],
+      "styleTags": [
+        "dark",
+        "ambient-low",
+        "electronic",
+        "mysterious",
+        "epic"
+      ],
+      "retrievedAt": "2026-09-22T11:30:31+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-670317-preview.mp3",
+      "sha256": "08393172000D40AF13C3519FEDFB3CC1175857E7FA6CCEF492EB97C83A66D78A",
+      "byteSize": 368448
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 813200,
+      "title": "Jungle Break A# min 140bpm",
+      "author": "CVLTIV8R",
+      "sourceUrl": "https://freesound.org/s/813200/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 130.29,
+      "tags": [
+        "140-bpm",
+        "EDM",
+        "bass",
+        "beat",
+        "break",
+        "breakbeat",
+        "club",
+        "composition",
+        "dance",
+        "destroy",
+        "drum",
+        "drum-loop"
+      ],
+      "styleTags": [
+        "electronic",
+        "driving",
+        "percussive",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:30:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-813200-preview.mp3",
+      "sha256": "B2F078A71ADFCCA1112B64F19BCA9CFB4C3D38690E0650C1757AC5529126D696",
+      "byteSize": 3133492
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 523223,
+      "title": "synth bass and high rhythm",
+      "author": "Rvgerxini",
+      "sourceUrl": "https://freesound.org/s/523223/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 7.51626,
+      "tags": [
+        "bass",
+        "beat",
+        "dance",
+        "drum",
+        "electro",
+        "hard",
+        "high",
+        "loop",
+        "midi",
+        "rhythm",
+        "synth",
+        "techno"
+      ],
+      "styleTags": [
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:18+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-523223-preview.mp3",
+      "sha256": "0041BD774A87F093BB38DE7C0C347E3527D2CB6B372636CC68E0A61F2CE26387",
+      "byteSize": 179486
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 365960,
+      "title": "bass rhythm.wav",
+      "author": "jeff82mk",
+      "sourceUrl": "https://freesound.org/s/365960/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 8.02084,
+      "tags": [
+        "bass",
+        "beat",
+        "dance",
+        "drum",
+        "drum-loop",
+        "electro",
+        "electronic",
+        "groovy",
+        "hard",
+        "loop",
+        "percs",
+        "percussion-loop"
+      ],
+      "styleTags": [
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-365960-preview.mp3",
+      "sha256": "B866A778E4A6DFD14A4B229BAF85BBEC3286288724FAED971505193113CB00F5",
+      "byteSize": 110009
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 724856,
+      "title": "Lush blooming",
+      "author": "lovescotch",
+      "sourceUrl": "https://freesound.org/s/724856/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Lush blooming\" by lovescotch (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 26.6681,
+      "tags": [
+        "background",
+        "bass",
+        "beat",
+        "brass",
+        "cinematic",
+        "clip",
+        "drum",
+        "drums",
+        "electro",
+        "electronic",
+        "groove",
+        "hard"
+      ],
+      "styleTags": [
+        "steady",
+        "driving",
+        "epic",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "dark"
+      ],
+      "retrievedAt": "2026-09-22T11:31:21+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-724856-preview.mp3",
+      "sha256": "A2EE3111AA36E7643131A7AD7785F59EE2E549B0879FD66A0F6D5A7FAC1D50F2",
+      "byteSize": 694572
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 615569,
+      "title": "Stacking Loop Clean",
+      "author": "adh.dreaming",
+      "sourceUrl": "https://freesound.org/s/615569/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 8.03125,
+      "tags": [
+        "bass",
+        "beat",
+        "cc0",
+        "dance",
+        "distorted",
+        "drum",
+        "edm",
+        "electro",
+        "glitch",
+        "hard",
+        "loop",
+        "loud"
+      ],
+      "styleTags": [
+        "driving",
+        "rock",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:30+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-615569-preview.mp3",
+      "sha256": "6B96B21BB732D7FFBC58E11E666B1DA3B7C17421FE920DD18B185A3CBF70D101",
+      "byteSize": 158713
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 615568,
+      "title": "Stacking Loop Gated Glitch",
+      "author": "adh.dreaming",
+      "sourceUrl": "https://freesound.org/s/615568/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 8.00522,
+      "tags": [
+        "bass",
+        "beat",
+        "cc0",
+        "dance",
+        "distorted",
+        "drum",
+        "edm",
+        "electro",
+        "glitch",
+        "hard",
+        "loop",
+        "loud"
+      ],
+      "styleTags": [
+        "driving",
+        "rock",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-615568-preview.mp3",
+      "sha256": "ECBD8D49558E59C9C21D9F8BA1A2C41E948D2B2BF8720C0215F3180037A7805B",
+      "byteSize": 130911
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666810,
+      "title": "Current Working List",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666810/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Current Working List\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "Joker",
+        "MrJimX",
+        "beat",
+        "break",
+        "container",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:34+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666810-preview.mp3",
+      "sha256": "83D1A4ADB7CC7DB21C0799856732F4193ED3FB90B3FD50D94CDFF8131E28A5F7",
+      "byteSize": 81196
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666809,
+      "title": "All Kinds Of Anomalies",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666809/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"All Kinds Of Anomalies\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "break",
+        "cleaner",
+        "container",
+        "dance",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "fast"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:35+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666809-preview.mp3",
+      "sha256": "7FE1B431F5418B3568E58B9DBBC8B1EAABB6F9430B0E8610AF9B4540FB88BA78",
+      "byteSize": 80044
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666808,
+      "title": "And I Know There Are More",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666808/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"And I Know There Are More\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "break",
+        "cleaner",
+        "dance",
+        "drum-loop",
+        "drumrolls",
+        "electro",
+        "electronic",
+        "fast",
+        "funky"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666808-preview.mp3",
+      "sha256": "4F8EF35DCBE073B7CC8BB17E9D079E02E6361A89B490430E3FD60556156E8C9A",
+      "byteSize": 79937
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666807,
+      "title": "Workflow",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666807/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Workflow\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "Elements",
+        "Joker",
+        "MrJimX",
+        "Rave",
+        "beat",
+        "break",
+        "core",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumroll"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "orchestral",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:37+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666807-preview.mp3",
+      "sha256": "7D1D2045701D198C17B7485D6234AFA099513FE5753D2F5DD68F46F134BD65C2",
+      "byteSize": 82452
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666806,
+      "title": "Incoming",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666806/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Incoming\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "break",
+        "cleaner",
+        "container",
+        "dance",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "fast"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:38+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666806-preview.mp3",
+      "sha256": "3C2E15FDED54A9873267FBF2567A2BFA50723FE2DCFAFD1094356F409F9BD39C",
+      "byteSize": 81717
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666805,
+      "title": "Just Jokes But 4 Real",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666805/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Just Jokes But 4 Real\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "Joker",
+        "MrJimX",
+        "beat",
+        "break",
+        "breakbeat",
+        "container",
+        "core",
+        "dance",
+        "drum-loop",
+        "drumroll",
+        "electro"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "orchestral",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:40+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666805-preview.mp3",
+      "sha256": "8660820C762B0D1F564A25771CD68F042BB63E512149C0968C53E7D5D4DC3597",
+      "byteSize": 81825
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666804,
+      "title": "Respect The Craft",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666804/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Respect The Craft\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "break",
+        "breakbeat",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "fast"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:41+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666804-preview.mp3",
+      "sha256": "835117BBDEB9C7A75E453005EEA37B157C7C1EA93BFC56E2A77FA0E921D432BC",
+      "byteSize": 83077
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666803,
+      "title": "4 The Shiny New Technology",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666803/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"4 The Shiny New Technology\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "MrJimX",
+        "beat",
+        "break",
+        "cleaner",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumloop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "fast"
+      ],
+      "styleTags": [
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:43+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666803-preview.mp3",
+      "sha256": "FFE2AECFD9F305EDB6540C648540B598DEA5DA808AFC3C03250BB08903AA8CD2",
+      "byteSize": 81838
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666802,
+      "title": "You Better Not Fall 4 It",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666802/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"You Better Not Fall 4 It\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "130-bpm",
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "fast",
+        "groovy"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666802-preview.mp3",
+      "sha256": "B0AF0BB2F76BC00BA14A1DAB8F0B3B32864C7901ACF01EA4C0495AFF75739397",
+      "byteSize": 82985
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 666801,
+      "title": "Last Bit Of Free Game",
+      "author": "MrJmix",
+      "sourceUrl": "https://freesound.org/s/666801/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Last Bit Of Free Game\" by MrJmix (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.24499,
+      "tags": [
+        "16-bit",
+        "Alternative",
+        "MrJimX",
+        "beat",
+        "dance",
+        "drum",
+        "drum-loop",
+        "drumroll",
+        "electro",
+        "electronic",
+        "funky",
+        "groovy"
+      ],
+      "styleTags": [
+        "rock",
+        "driving",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:45+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666801-preview.mp3",
+      "sha256": "243BD0D4A7340645818E54D93B316E22CC476D94B1B81BB242946B634EAE5E3B",
+      "byteSize": 83875
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 625886,
+      "title": "matr_Bassdrum groove.wav",
+      "author": "nfrae",
+      "sourceUrl": "https://freesound.org/s/625886/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 5.29805,
+      "tags": [
+        "analog",
+        "bass",
+        "beat",
+        "dark",
+        "distorted",
+        "drum",
+        "drums",
+        "electro",
+        "electronic",
+        "glitchy",
+        "gritty",
+        "hard"
+      ],
+      "styleTags": [
+        "driving",
+        "dark",
+        "rock",
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-22T11:31:46+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-625886-preview.mp3",
+      "sha256": "96DC9A45CEE0E694D240DACAFFB1C04DD16A5B68A1AF27552C3AEA383719CF93",
+      "byteSize": 116327
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 456500,
+      "name": "Freesound 2018 in Sound, by Downloads",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 727559,
+      "name": "Dramatic Epic Technology - bpm 85 loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 719492,
+      "name": "Sci-Fi Times (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 423457,
+      "name": "wb breakbeat.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 718152,
+      "name": "Science Technology (loop1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 709983,
+      "name": "Dramatic Emotional Future (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 709982,
+      "name": "Dramatic Emotional Future (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 719493,
+      "name": "Sci-Fi Times (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 718153,
+      "name": "Science Technology - hi-tech hybrid (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 719495,
+      "name": "Sci-Fi Times (short ver.3)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 719494,
+      "name": "Sci-Fi Times (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 530079,
+      "name": "Arise.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 722858,
+      "name": "Futuristic Sci Fi Cinematic (loop1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 718154,
+      "name": "Science Technology (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 181675,
+      "name": "Hard bassline groove.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 182824,
+      "name": "break beat.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 368555,
+      "name": "dread loop.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 350776,
+      "name": "Brutal remix of zagi2's freesound #350738.flac",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 529477,
+      "name": "Area2.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 529468,
+      "name": "Area.wav 100bpm",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "sufficiency": {
+    "count": 25,
+    "minimumExpected": 3
+  }
+}

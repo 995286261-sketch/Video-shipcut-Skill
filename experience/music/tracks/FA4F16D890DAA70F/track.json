@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "FA4F16D890DAA70FAFCE4C26A69A2737779CF344032B68AB13C8D18602E23EF8",
+  "aliases": [
+    {
+      "title": "Cinematic Piano for Emotional Scenes",
+      "sourceUrl": "https://freesound.org/s/769382/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:49Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-769382-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:49Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:49Z",
+  "updatedAt": "2026-09-22T03:34:54Z"
+}

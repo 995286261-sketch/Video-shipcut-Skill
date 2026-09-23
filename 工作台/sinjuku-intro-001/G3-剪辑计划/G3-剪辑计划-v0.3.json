@@ -1,0 +1,1838 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "status": "review_required",
+ "planVersion": "0.3",
+ "sourceAudioPolicy": "exclude",
+ "narrationDraft": "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.3.md",
+ "narrationDecisionRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-审核决定-v0.3.json",
+ "timelineDurationMs": 170167,
+ "durationDecision": {
+  "targetDurationSec": 180,
+  "narrationEstimatedDurationSec": 170.167,
+  "resolution": "follow_narration_natural_duration",
+  "decisionReason": "G0 目标约 3 分钟；BGM 轨长 177.875s 封顶（问题⑫）；成片时长=口播止点 170.167s（002 口径，尾段不设无旁白段），BGM 按对齐产物 fadeOut 168167–170167 收束",
+  "intentionalSilence": [],
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "bgmPlan": {
+  "audioSha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+  "reportSha256": "8682481817C70AEA82B2EDC445E82BF263D2F4D7B56E8A4FA922CC71501F483B",
+  "alignmentRef": "工作台/sinjuku-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+  "alignmentSha256": "839F3FD02F9283B6CAE5BE6489B25B37BB771E54149EC1BDC4881E3D0040764F",
+  "trackOffsetMs": 0,
+  "fades": {
+   "fadeInMs": 2000,
+   "fadeOutStartMs": 168167,
+   "fadeOutMs": 2000
+  },
+  "duckingPolicy": "旁白句全程 ducking（27 句，区间见对齐产物 ducking 表）；句间留白恢复"
+ },
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 0,
+   "endMs": 10480,
+   "sourceDurationMs": 10480,
+   "outputStartMs": 70,
+   "outputEndMs": 10550,
+   "outputDurationMs": 10480,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 70,
+   "narrationEndMs": 10550,
+   "narrationText": "U.C. 0096，战后不平静的星海——一道红色的影子再度划过，仿佛那颗彗星从未老去。",
+   "semanticBeatIds": [
+    "beat-N01"
+   ],
+   "layoutTier": "留白",
+   "purpose": "开场黑雾→红机残骸带飞行→红机金饰特写（黑场入承载『红色影子再度划过』）",
+   "reason": "开场黑雾→红机残骸带飞行→红机金饰特写（黑场入承载『红色影子再度划过』）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "红色机体高速掠过星空的语境画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧均见红色机体出击语境",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-01/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "黑场入",
+   "transitionDurationMs": 500,
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-01/start-0000000000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-01/middle-0000005240ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-01/end-0000010479ms.jpg"
+    ],
+    "observedVisuals": "0.0s 黑雾开场；5.2s 红机残骸带飞行；10.4s 红机+金色袖章特写",
+    "derivedFromObservationIds": [
+     "obs-seg-01"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 338000,
+   "endMs": 344880,
+   "sourceDurationMs": 6880,
+   "outputStartMs": 10983,
+   "outputEndMs": 17863,
+   "outputDurationMs": 6880,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 10983,
+   "narrationEndMs": 17863,
+   "narrationText": "它叫 MSN-06S 新安洲，属于那个被称为夏亚再世的人。",
+   "semanticBeatIds": [
+    "beat-N02"
+   ],
+   "layoutTier": "留白",
+   "purpose": "红机+蓝光束→金盾袖章大特写→红机+爆炸+军刀（型号+夏亚再世身份揭示）",
+   "reason": "红机+蓝光束→金盾袖章大特写→红机+爆炸+军刀（型号+夏亚再世身份揭示）",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "新安洲全身/半身可辨（红色+大型光束步枪+袖章装饰）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧均见红机+金袖章盾（身份揭示主体在场）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-02/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-02/start-0000338000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-02/middle-0000341440ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-02/end-0000344879ms.jpg"
+    ],
+    "observedVisuals": "338.0s 红机+蓝光束+金盾袖章；341.4s 红机+金色袖章盾牌大特写；344.9s 红机+爆炸（v03 实际三帧全绿）",
+    "derivedFromObservationIds": [
+     "obs-seg-02"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-03",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 75000,
+   "endMs": 82520,
+   "sourceDurationMs": 7520,
+   "outputStartMs": 18321,
+   "outputEndMs": 25841,
+   "outputDurationMs": 7520,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 18321,
+   "narrationEndMs": 25841,
+   "narrationText": "可这台机，最初不是为任何人造的——它诞生于地球联邦的 UC 计划。",
+   "semanticBeatIds": [
+    "beat-N03"
+   ],
+   "layoutTier": "推进",
+   "purpose": "联邦战舰开火→DATA DECODED 线框蓝图屏→战舰甲板（UC计划出身）",
+   "reason": "联邦战舰开火→DATA DECODED 线框蓝图屏→战舰甲板（UC计划出身）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "机体谱线/蓝图/机库语境画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧蓝图数据屏+起/终帧联邦战舰（UC计划=联邦项目语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-03/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-03/start-0000075000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-03/middle-0000078760ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-03/end-0000082519ms.jpg"
+    ],
+    "observedVisuals": "75.0s 联邦战舰+黄色光束；78.8s DATA DECODED 线框蓝图屏；82.5s 战舰甲板",
+    "derivedFromObservationIds": [
+     "obs-seg-03"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 260500,
+   "endMs": 269380,
+   "sourceDurationMs": 8880,
+   "outputStartMs": 26215,
+   "outputEndMs": 35095,
+   "outputDurationMs": 8880,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 26215,
+   "narrationEndMs": 35095,
+   "narrationText": "阿纳海姆电子公司拿它验证精神感应骨架技术，实验数据后来直接喂给了 RX-0 独角兽高达。",
+   "semanticBeatIds": [
+    "beat-N04"
+   ],
+   "layoutTier": "推进",
+   "purpose": "红机拔刀→红白机体军刀对决→独角兽红框大特写（技术喂给独角兽）",
+   "reason": "红机拔刀→红白机体军刀对决→独角兽红框大特写（技术喂给独角兽）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "精神感应骨架发光特征（独角兽红/绿光框任一，语境）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "终帧独角兽红框发光，中帧双方对决（抽象结论语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-04/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-04/start-0000260500ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-04/middle-0000264940ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-04/end-0000269379ms.jpg"
+    ],
+    "observedVisuals": "260.5s 红机拔刀展开；265.0s 红白双方对峙闪光；269.4s 独角兽精神感应骨架红框大特写",
+    "derivedFromObservationIds": [
+     "obs-seg-04"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 318000,
+   "endMs": 326480,
+   "sourceDurationMs": 8480,
+   "outputStartMs": 35503,
+   "outputEndMs": 43983,
+   "outputDurationMs": 8480,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 35503,
+   "narrationEndMs": 43983,
+   "narrationText": "U.C. 0094，新吉翁残党「带袖的」一场大胆抢夺，把它从验证机变成了自己的座机。",
+   "semanticBeatIds": [
+    "beat-N05"
+   ],
+   "layoutTier": "推进",
+   "purpose": "红机全身美颜→盾牌金色袖章大特写→联邦杰斯塔（0094 抢夺叙事）",
+   "reason": "红机全身美颜→盾牌金色袖章大特写→联邦杰斯塔（0094 抢夺叙事）",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "带袖的袖章徽记或红色机体与战舰同框"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧带袖的金色袖章大特写（action 最低证据=袖章徽记）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-05/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-05/start-0000318000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-05/middle-0000322240ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-05/end-0000326479ms.jpg"
+    ],
+    "observedVisuals": "318.0s 红机全身美颜镜；322.2s 盾牌带袖的金色袖章大特写；326.5s 联邦杰斯塔（抢夺对象语境）",
+    "derivedFromObservationIds": [
+     "obs-seg-05"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 288480,
+   "endMs": 294240,
+   "sourceDurationMs": 5760,
+   "outputStartMs": 44489,
+   "outputEndMs": 50249,
+   "outputDurationMs": 5760,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 44489,
+   "narrationEndMs": 50249,
+   "narrationText": "他们要的从来不只是一台高性能 MS，而是一面能收拢人心的旗。",
+   "semanticBeatIds": [
+    "beat-N06"
+   ],
+   "layoutTier": "推进",
+   "purpose": "出击段→舱内 HUD 绿光→舱内仪表（『旗=人心』抽象结论氛围）",
+   "reason": "出击段→舱内 HUD 绿光→舱内仪表（『旗=人心』抽象结论氛围）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "红色机体或舱内/驾驶员战争语境（『旗=人心』抽象氛围）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧舱内 HUD（抽象结论=人心之旗氛围）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-06/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-06/start-0000288480ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-06/middle-0000291360ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-06/end-0000294239ms.jpg"
+    ],
+    "observedVisuals": "288.5s 出击段；291.4s 舱内 HUD 绿光；294.2s 舱内仪表",
+    "derivedFromObservationIds": [
+     "obs-seg-06"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 407000,
+   "endMs": 409800,
+   "sourceDurationMs": 2800,
+   "outputStartMs": 50573,
+   "outputEndMs": 53373,
+   "outputDurationMs": 2800,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 50573,
+   "narrationEndMs": 53373,
+   "narrationText": "那面旗，就是赤色彗星的威光。",
+   "semanticBeatIds": [
+    "beat-N07"
+   ],
+   "layoutTier": "推进",
+   "purpose": "红机+白色闪光→红机+蓝/黄光束弹幕→红机+光束（赤色彗星威光）",
+   "reason": "红机+白色闪光→红机+蓝/黄光束弹幕→红机+光束（赤色彗星威光）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "新安洲威压姿态（冲锋/举枪）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧均见红机（威光抽象）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-07/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-07/start-0000407000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-07/middle-0000408400ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-07/end-0000409799ms.jpg"
+    ],
+    "observedVisuals": "407.0s 红机+白色闪光；408.4s 红机+蓝/黄光束齐射；409.8s 红机+光束（v02 目视页三帧全红机）",
+    "derivedFromObservationIds": [
+     "obs-seg-07"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 493250,
+   "endMs": 501970,
+   "sourceDurationMs": 8720,
+   "outputStartMs": 53801,
+   "outputEndMs": 62521,
+   "outputDurationMs": 8720,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 53801,
+   "narrationEndMs": 62521,
+   "narrationText": "这台机的纸面相当张扬：全高 22.6 米，全备重量 56.9 吨，出力 3240 千瓦。",
+   "semanticBeatIds": [
+    "beat-N08"
+   ],
+   "layoutTier": "常规",
+   "purpose": "红机金饰特写→红机+黄色军刀→大型光束步枪特写（纸面参数段）",
+   "reason": "红机金饰特写→红机+黄色军刀→大型光束步枪特写（纸面参数段）",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "蓝图/参数屏或机体全身参照物画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "起/中帧红机，终帧其步枪特写（参数描述对象在场）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-08/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-08/start-0000493250ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-08/middle-0000497610ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-08/end-0000501969ms.jpg"
+    ],
+    "observedVisuals": "493.25s 红机+金色装饰特写；497.6s 红机+黄色军刀；502.0s 大型光束步枪特写（v02c 起/中帧红机强，终帧其武器特写）",
+    "derivedFromObservationIds": [
+     "obs-seg-08"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 386000,
+   "endMs": 392720,
+   "sourceDurationMs": 6720,
+   "outputStartMs": 63019,
+   "outputEndMs": 69739,
+   "outputDurationMs": 6720,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 63019,
+   "narrationEndMs": 69739,
+   "narrationText": "有意思的是，它不挂一件浮游武器——它的任务，就是把机体本身推向极限。",
+   "semanticBeatIds": [
+    "beat-N09"
+   ],
+   "layoutTier": "常规",
+   "purpose": "红机+大型步枪→红机军刀近战→红机+蓝尾焰（无浮游武器、单体极限）",
+   "reason": "红机+大型步枪→红机军刀近战→红机+蓝尾焰（无浮游武器、单体极限）",
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "新安洲使用实弹/光束武器（非浮游炮）画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧红机单体作战、无浮游武器可见",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-09/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-09/start-0000386000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-09/middle-0000389360ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-09/end-0000392719ms.jpg"
+    ],
+    "observedVisuals": "386.0s 红机+大型步枪特写；389.4s 红机军刀作战（远景）+蓝尾焰；392.9s 红机+军刀（远景）",
+    "derivedFromObservationIds": [
+     "obs-seg-09"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 435000,
+   "endMs": 438840,
+   "sourceDurationMs": 3840,
+   "outputStartMs": 70124,
+   "outputEndMs": 73964,
+   "outputDurationMs": 3840,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 70124,
+   "narrationEndMs": 73964,
+   "narrationText": "背部展开一对大型推进翼，全身布满推进器。",
+   "semanticBeatIds": [
+    "beat-N10"
+   ],
+   "layoutTier": "快切",
+   "purpose": "背部四具白色推进荚舱/推进翼全开三连帧（434.0–438.75s 翼段内）",
+   "reason": "背部四具白色推进荚舱/推进翼全开三连帧（434.0–438.75s 翼段内）",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "背部大型推进翼可见"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧均见背部推进翼/荚舱展开（appearance 最低证据）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-10/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-10/start-0000435000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-10/middle-0000436920ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-10/end-0000438839ms.jpg"
+    ],
+    "observedVisuals": "435.0s 背部四具白色推进荚舱展开；436.9s 推进翼全开+开火；438.8s 推进翼全开（439.0s 起切爆炸，窗口收在翼段内）",
+    "derivedFromObservationIds": [
+     "obs-seg-10"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 393000,
+   "endMs": 397240,
+   "sourceDurationMs": 4240,
+   "outputStartMs": 74234,
+   "outputEndMs": 78474,
+   "outputDurationMs": 4240,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 74234,
+   "narrationEndMs": 78474,
+   "narrationText": "新安洲的答案很直接：机体本身就是武器。",
+   "semanticBeatIds": [
+    "beat-N11"
+   ],
+   "layoutTier": "快切",
+   "purpose": "红机+黄色光束军刀→军刀近战→红机+军刀蓝尾焰（机体本身就是武器）",
+   "reason": "红机+黄色光束军刀→军刀近战→红机+军刀蓝尾焰（机体本身就是武器）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "机体近战/武器齐射画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中/终帧光束军刀近战大特写（abstract 最低证据=近战画面）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-11/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-11/start-0000393000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-11/middle-0000395120ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-11/end-0000397239ms.jpg"
+    ],
+    "observedVisuals": "393.0s 红机+军刀蓝尾焰（远景）；395.1s 红机拔刀+红色精神感应框格大特写；397.2s 红机+白色军刀+绿光",
+    "derivedFromObservationIds": [
+     "obs-seg-11"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 10480,
+   "endMs": 15360,
+   "sourceDurationMs": 4880,
+   "outputStartMs": 78855,
+   "outputEndMs": 83735,
+   "outputDurationMs": 4880,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 78855,
+   "narrationEndMs": 83735,
+   "narrationText": "说到速度，那个称号要回到 U.C. 0079 的战火星海。",
+   "semanticBeatIds": [
+    "beat-N12"
+   ],
+   "layoutTier": "快切",
+   "purpose": "红机+带袖的袖章特写、残骸带、战舰主炮蓝光（0079 战火星海氛围）",
+   "reason": "红机+带袖的袖章特写、残骸带、战舰主炮蓝光（0079 战火星海氛围）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "红色机体高速机动+战舰炮战氛围语境"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧战争氛围（abstract_conclusion 语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-12/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-12/start-0000010480ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-12/middle-0000012920ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-12/end-0000015359ms.jpg"
+    ],
+    "observedVisuals": "10.5s 红机+袖章特写；12.9s 残骸带；15.4s 战舰主炮蓝光",
+    "derivedFromObservationIds": [
+     "obs-seg-12"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-13",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 15360,
+   "endMs": 23920,
+   "sourceDurationMs": 8560,
+   "outputStartMs": 84033,
+   "outputEndMs": 92593,
+   "outputDurationMs": 8560,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 84033,
+   "narrationEndMs": 92593,
+   "narrationText": "鲁姆会战中，他以一道红色的残影杀穿舰队——从那天起，有了「红色彗星」。",
+   "semanticBeatIds": [
+    "beat-N13"
+   ],
+   "layoutTier": "快切",
+   "purpose": "战舰主炮蓝光→红机持刀全身+蓝尾焰→战舰甲板白光（杀穿舰队氛围）",
+   "reason": "战舰主炮蓝光→红机持刀全身+蓝尾焰→战舰甲板白光（杀穿舰队氛围）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "红色机体冲锋/爆炸氛围语境"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "红机+战舰氛围三帧（abstract_conclusion 语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-13/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-13/start-0000015360ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-13/middle-0000019640ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-13/end-0000023919ms.jpg"
+    ],
+    "observedVisuals": "15.4s 战舰主炮蓝光；19.6s 红机持刀全身+蓝尾焰；23.9s 战舰甲板白光",
+    "derivedFromObservationIds": [
+     "obs-seg-13"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-14",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 125000,
+   "endMs": 130920,
+   "sourceDurationMs": 5920,
+   "outputStartMs": 93066,
+   "outputEndMs": 98986,
+   "outputDurationMs": 5920,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 93066,
+   "narrationEndMs": 98986,
+   "narrationText": "红色涂装与无人能及的速度，是一枚硬币的两面，共同铸成了那个称号。",
+   "semanticBeatIds": [
+    "beat-N14"
+   ],
+   "layoutTier": "常规",
+   "purpose": "红机+白色闪光→红机全身+步枪→红机+蓝尾焰（红色涂装与速度）",
+   "reason": "红机+白色闪光→红机全身+步枪→红机+蓝尾焰（红色涂装与速度）",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "【缺口】红色扎古/涂装与速度同框影像"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧红色涂装+高机动尾焰",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-14/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-14/start-0000125000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-14/middle-0000127960ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-14/end-0000130919ms.jpg"
+    ],
+    "observedVisuals": "125.0s 红机+白色闪光；128.0s 红机全身+步枪；130.9s 红机+蓝尾焰",
+    "derivedFromObservationIds": [
+     "obs-seg-14"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-15",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 96000,
+   "endMs": 101440,
+   "sourceDurationMs": 5440,
+   "outputStartMs": 99637,
+   "outputEndMs": 105077,
+   "outputDurationMs": 5440,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 99637,
+   "narrationEndMs": 105077,
+   "narrationText": "后来的阿克西斯事件与最终决战，让他从对手变成了传说。",
+   "semanticBeatIds": [
+    "beat-N15"
+   ],
+   "layoutTier": "常规",
+   "purpose": "红机特写+步枪管、运动模糊、绿机爆炸（传说语境）",
+   "reason": "红机特写+步枪管、运动模糊、绿机爆炸（传说语境）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "残骸带/爆炸终幕语境"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧战斗/爆炸（abstract_conclusion 语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-15/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-15/start-0000096000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-15/middle-0000098720ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-15/end-0000101439ms.jpg"
+    ],
+    "observedVisuals": "96.0s 红机特写+步枪管；98.7s 运动模糊；101.4s 绿色敌机爆炸",
+    "derivedFromObservationIds": [
+     "obs-seg-15"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-16",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 44000,
+   "endMs": 48480,
+   "sourceDurationMs": 4480,
+   "outputStartMs": 105581,
+   "outputEndMs": 110061,
+   "outputDurationMs": 4480,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 105581,
+   "narrationEndMs": 110061,
+   "narrationText": "战争的尘埃落定，红色彗星的传说却没有褪色。",
+   "semanticBeatIds": [
+    "beat-N16"
+   ],
+   "layoutTier": "常规",
+   "purpose": "战舰甲板、青绿机燃烧、爆炸火球（战争尘埃落定）",
+   "reason": "战舰甲板、青绿机燃烧、爆炸火球（战争尘埃落定）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "星空+红色机体独镜语境"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧战争尘埃意象（abstract_conclusion 语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-16/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 300,
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-16/start-0000044000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-16/middle-0000046240ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-16/end-0000048479ms.jpg"
+    ],
+    "observedVisuals": "44.0s 战舰甲板；46.2s 青绿机燃烧；48.5s 暗夜爆炸火球",
+    "derivedFromObservationIds": [
+     "obs-seg-16"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-17",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 345000,
+   "endMs": 351400,
+   "sourceDurationMs": 6400,
+   "outputStartMs": 110481,
+   "outputEndMs": 116881,
+   "outputDurationMs": 6400,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 110481,
+   "narrationEndMs": 116881,
+   "narrationText": "U.C. 0096，带袖的重整登场星海，冲在最前面的正是那台红色机体。",
+   "semanticBeatIds": [
+    "beat-N17"
+   ],
+   "layoutTier": "推进",
+   "purpose": "红机+爆炸→红机+硝烟→红色面部金色装饰特写（0096 带袖的冲在最前）",
+   "reason": "红机+爆炸→红机+硝烟→红色面部金色装饰特写（0096 带袖的冲在最前）",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "新安洲在舰队/战场中突进"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧红机突进在场（带袖的登场）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-17/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-17/start-0000345000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-17/middle-0000348200ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-17/end-0000351399ms.jpg"
+    ],
+    "observedVisuals": "345.0s 红机+爆炸；348.2s 红机+灰机+硝烟；351.4s 白色闪光+红机",
+    "derivedFromObservationIds": [
+     "obs-seg-17"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-18",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 351500,
+   "endMs": 358060,
+   "sourceDurationMs": 6560,
+   "outputStartMs": 117307,
+   "outputEndMs": 123867,
+   "outputDurationMs": 6560,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 117307,
+   "narrationEndMs": 123867,
+   "narrationText": "驾驶者自称弗尔·弗朗特——红色座机、面具、华丽的作战风格。",
+   "semanticBeatIds": [
+    "beat-N18"
+   ],
+   "layoutTier": "推进",
+   "purpose": "红色面部金饰特写→驾驶员面部（绿光）→红机作战（弗尔·弗朗特红色座机+面具）",
+   "reason": "红色面部金饰特写→驾驶员面部（绿光）→红机作战（弗尔·弗朗特红色座机+面具）",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "弗尔·弗朗特/驾驶员画面或新安洲+面具意象"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧驾驶员+红色座机（appearance 最低证据=座机+面具）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-18/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-18/start-0000351500ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-18/middle-0000354780ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-18/end-0000358059ms.jpg"
+    ],
+    "observedVisuals": "351.5s 白色闪光+红机；354.8s 红机+甲板上的驾驶员；358.1s 白色闪光+红机边缘",
+    "derivedFromObservationIds": [
+     "obs-seg-18"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-19",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 360000,
+   "endMs": 365360,
+   "sourceDurationMs": 5360,
+   "outputStartMs": 124413,
+   "outputEndMs": 129773,
+   "outputDurationMs": 5360,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 124413,
+   "narrationEndMs": 129773,
+   "narrationText": "人人都说他是夏亚再世，他自己却说，只是一个「容器」。",
+   "semanticBeatIds": [
+    "beat-N19"
+   ],
+   "layoutTier": "推进",
+   "purpose": "带袖的袖章纪念碑+橙光柱→纪念碑续镜→灰机体（『容器』引语象征物）",
+   "reason": "带袖的袖章纪念碑+橙光柱→纪念碑续镜→灰机体（『容器』引语象征物）",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "驾驶员头盔面部特写（绿光舱内）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧袖章纪念碑（『夏亚再世』象征物）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-19/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-19/start-0000360000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-19/middle-0000362680ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-19/end-0000365359ms.jpg"
+    ],
+    "observedVisuals": "360.0s 绿色光束作战剪影；362.7s 带袖的袖章纪念碑+橙色光柱；365.4s 灰机体（中帧=『夏亚再世』象征物）",
+    "derivedFromObservationIds": [
+     "obs-seg-19"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-20",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 509500,
+   "endMs": 512940,
+   "sourceDurationMs": 3440,
+   "outputStartMs": 130125,
+   "outputEndMs": 133565,
+   "outputDurationMs": 3440,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 130125,
+   "narrationEndMs": 133565,
+   "narrationText": "精神感应骨架、红色涂装、彗星之名。",
+   "semanticBeatIds": [
+    "beat-N20"
+   ],
+   "layoutTier": "快切",
+   "purpose": "红机+浮游荚舱黄光→红机+白色闪光→红机+大型火箭炮（骨架/涂装/之名）",
+   "reason": "红机+浮游荚舱黄光→红机+白色闪光→红机+大型火箭炮（骨架/涂装/之名）",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "骨架/涂装/徽记三要素分镜"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧均见红机+步枪（涂装/骨架语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-20/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-20/start-0000509500ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-20/middle-0000511220ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-20/end-0000512939ms.jpg"
+    ],
+    "observedVisuals": "509.5s 红机面部+金饰大特写；511.2s 红机+大型步枪开火；512.9s 红机+步枪+硝烟",
+    "derivedFromObservationIds": [
+     "obs-seg-20"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-21",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 136000,
+   "endMs": 140240,
+   "sourceDurationMs": 4240,
+   "outputStartMs": 133933,
+   "outputEndMs": 138173,
+   "outputDurationMs": 4240,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 133933,
+   "narrationEndMs": 138173,
+   "narrationText": "对联邦军，它产生了实打实的心理压力。",
+   "semanticBeatIds": [
+    "beat-N21"
+   ],
+   "layoutTier": "快切",
+   "purpose": "红机+黄刀弧→红机 vs 青绿杰斯塔军刀相交→对决火花（联邦军心理压力）",
+   "reason": "红机+黄刀弧→红机 vs 青绿杰斯塔军刀相交→对决火花（联邦军心理压力）",
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "联邦机（杰斯塔系）被动摇/被击画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "红机 vs 联邦杰斯塔对决（心理压力对象在场）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-21/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-21/start-0000136000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-21/middle-0000138120ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-21/end-0000140239ms.jpg"
+    ],
+    "observedVisuals": "136.0s 红机+黄刀弧；138.1s 红机 vs 青绿机军刀相交；140.2s 对决火花",
+    "derivedFromObservationIds": [
+     "obs-seg-21"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-22",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 548000,
+   "endMs": 552480,
+   "sourceDurationMs": 4480,
+   "outputStartMs": 138298,
+   "outputEndMs": 142778,
+   "outputDurationMs": 4480,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 138298,
+   "narrationEndMs": 142778,
+   "narrationText": "最后一战，他搭乘新吉翁号，与独角兽正面对决。",
+   "semanticBeatIds": [
+    "beat-N22"
+   ],
+   "layoutTier": "快切",
+   "purpose": "深绿巨体+青蓝光→粉红巨体+金领特写→红机 vs 白机绿光束（新吉翁号对决独角兽）",
+   "reason": "深绿巨体+青蓝光→粉红巨体+金领特写→红机 vs 白机绿光束（新吉翁号对决独角兽）",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "新吉翁号与独角兽对决画面"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "中帧粉红巨体+终帧 vs 白机（新吉翁号对决）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-22/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-22/start-0000548000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-22/middle-0000550240ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-22/end-0000552479ms.jpg"
+    ],
+    "observedVisuals": "548.0s 深绿巨体+青蓝光；550.2s 粉红-红色巨体+金领特写；552.5s 红机 vs 白机+绿光束",
+    "derivedFromObservationIds": [
+     "obs-seg-22"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-23",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 560000,
+   "endMs": 564960,
+   "sourceDurationMs": 4960,
+   "outputStartMs": 142942,
+   "outputEndMs": 147902,
+   "outputDurationMs": 4960,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 142942,
+   "narrationEndMs": 147902,
+   "narrationText": "精神与夏亚融合，把未来托付给少年之后，他离去了。",
+   "semanticBeatIds": [
+    "beat-N23"
+   ],
+   "layoutTier": "快切",
+   "purpose": "残骸带→红机+金袖章→蓝色光晕笼罩机体（托付与离去）",
+   "reason": "残骸带→红机+金袖章→蓝色光晕笼罩机体（托付与离去）",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "蓝光/光子框架消散意象"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "终帧蓝色光晕（离去意象语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-23/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-23/start-0000560000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-23/middle-0000562480ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-23/end-0000564959ms.jpg"
+    ],
+    "observedVisuals": "560.0s 残骸带；562.5s 红机+金袖章；565.0s 蓝色光晕笼罩机体",
+    "derivedFromObservationIds": [
+     "obs-seg-23"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-24",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 544000,
+   "endMs": 546240,
+   "sourceDurationMs": 2240,
+   "outputStartMs": 148120,
+   "outputEndMs": 150360,
+   "outputDurationMs": 2240,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 148120,
+   "narrationEndMs": 150360,
+   "narrationText": "是本人，还是继承者？",
+   "semanticBeatIds": [
+    "beat-N24"
+   ],
+   "layoutTier": "快切",
+   "purpose": "粉红-红色机体面部+绿传感器→金领大特写→电光（是本人还是继承者）",
+   "reason": "粉红-红色机体面部+绿传感器→金领大特写→电光（是本人还是继承者）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "机体面部特写（歧义问句留白）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧机体面部大特写（身份之问）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-24/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-24/start-0000544000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-24/middle-0000545120ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-24/end-0000546239ms.jpg"
+    ],
+    "observedVisuals": "544.0s 粉红-红色机体面部+绿传感器+青晶；545.1s 金领大特写；546.2s +电光",
+    "derivedFromObservationIds": [
+     "obs-seg-24"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-25",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 26000,
+   "endMs": 30160,
+   "sourceDurationMs": 4160,
+   "outputStartMs": 150581,
+   "outputEndMs": 154741,
+   "outputDurationMs": 4160,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 150581,
+   "narrationEndMs": 154741,
+   "narrationText": "新安洲，把「红色彗星」的答案留给了整片星海。",
+   "semanticBeatIds": [
+    "beat-N25"
+   ],
+   "layoutTier": "快切",
+   "purpose": "战舰甲板炮→红机大型光束步枪开火白闪光→红机全身+步枪（答案留给星海）",
+   "reason": "战舰甲板炮→红机大型光束步枪开火白闪光→红机全身+步枪（答案留给星海）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "新安洲星空独镜"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧红机步枪作战（答案意象语境）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-25/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-25/start-0000026000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-25/middle-0000028080ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-25/end-0000030159ms.jpg"
+    ],
+    "observedVisuals": "26.0s 战舰甲板炮；28.5s 红机大型光束步枪开火白闪光；31.0s 红机全身+步枪",
+    "derivedFromObservationIds": [
+     "obs-seg-25"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-26",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 480000,
+   "endMs": 489280,
+   "sourceDurationMs": 9280,
+   "outputStartMs": 155202,
+   "outputEndMs": 164482,
+   "outputDurationMs": 9280,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 155202,
+   "narrationEndMs": 164482,
+   "narrationText": "UC 计划的机体、残党的旗舰、传说的复刻、解不开的谜——叠加在一起，才只是这一抹红。",
+   "semanticBeatIds": [
+    "beat-N26"
+   ],
+   "layoutTier": "留白",
+   "purpose": "红机+蓝尾焰→红机 vs 灰机白刃+枪口焰→战舰导弹发射（多重身份叠加）",
+   "reason": "红机+蓝尾焰→红机 vs 灰机白刃+枪口焰→战舰导弹发射（多重身份叠加）",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "多重画面叠化或红色机体剪影收束"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧白刃+导弹齐射（叠加意象）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-26/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark",
+    "mixed_fast_cut"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "硬切",
+   "identityStatus": "context",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-26/start-0000480000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-26/middle-0000484640ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-26/end-0000489279ms.jpg"
+    ],
+    "observedVisuals": "480.0s 红机+蓝尾焰；484.6s 红机 vs 灰机白刃+枪口焰；489.3s 战舰导弹发射",
+    "derivedFromObservationIds": [
+     "obs-seg-26"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  },
+  {
+   "segmentId": "seg-27",
+   "assetId": "source-02-b9f9377f",
+   "startMs": 504000,
+   "endMs": 509120,
+   "sourceDurationMs": 5120,
+   "outputStartMs": 165047,
+   "outputEndMs": 170167,
+   "outputDurationMs": 5120,
+   "mappingMode": "one_to_one",
+   "narrationStartMs": 165047,
+   "narrationEndMs": 170167,
+   "narrationText": "如果这抹红还让你心动，点赞关注走一波，下期继续聊星海。",
+   "semanticBeatIds": [
+    "beat-N27"
+   ],
+   "layoutTier": "留白",
+   "purpose": "红机缠斗灰机→红机+大型步枪→红机+荚舱+红光束军刀（终幕收束，黑场出）",
+   "reason": "红机缠斗灰机→红机+大型步枪→红机+荚舱+红光束军刀（终幕收束，黑场出）",
+   "narrativeClaim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": "不要求画面（尾卡/纯BGM段）"
+   },
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "三帧红机收束（步枪+荚舱+面部特写）",
+    "evidenceSeenAt": "起/中/终三帧（验证帧-v03/seg-27/）"
+   },
+   "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+    "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉文字索引-v0.1.json"
+   ],
+   "riskFlags": [
+    "channel_watermark"
+   ],
+   "sourceCaptionTreatment": {
+    "method": "none",
+    "region": "底部无烧录对白字幕；左上角烧录 UP 主水印（shini都文玩鸭子+bilibili）",
+    "note": "水印保留不消除（尊重 UP 主署名，内部测试）；标题/信息卡避开左上，口播主字幕 70–84% 车道"
+   },
+   "transitionInstruction": "黑场出",
+   "transitionDurationMs": 800,
+   "identityStatus": "confirmed",
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-27/start-0000504000ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-27/middle-0000506560ms.jpg",
+     "工作台/sinjuku-intro-001/G3-剪辑计划/验证帧-v03/seg-27/end-0000509119ms.jpg"
+    ],
+    "observedVisuals": "504.0s 红机+金袖章+灰机；506.6s 红机+大型步枪+推进荚舱；509.1s 红机面部+金饰特写",
+    "derivedFromObservationIds": [
+     "obs-seg-27"
+    ],
+    "verifiedBy": "多模态视觉模型逐帧目视（G3.4 局部验证，实际起/中/终抽帧）",
+    "verifiedAt": "2026-09-22T16:20:00+08:00"
+   }
+  }
+ ],
+ "packagingDecisions": {
+  "coverSource": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4@432500ms",
+  "coverFrameMs": 432500,
+  "chapterCards": [
+   {
+    "cardId": "title-01",
+    "startMs": 0,
+    "endMs": 3500,
+    "lane": "上部标题带（右置避让左上水印）",
+    "title": "新安洲：红色彗星的再临"
+   },
+   {
+    "cardId": "chapter-02",
+    "startMs": 78130,
+    "endMs": 81130,
+    "lane": "上部标题带（右置）",
+    "title": "红色彗星之名"
+   },
+   {
+    "cardId": "chapter-03",
+    "startMs": 124890,
+    "endMs": 127890,
+    "lane": "上部标题带（右置）",
+    "title": "带袖的与「夏亚再世」"
+   }
+  ],
+  "titleCardPolicy": "标题卡右上避让左上水印；与口播错开 0.5–1s",
+  "subtitleStyle": "主字幕 70–84% 车道，两行内，样式母版 ASS（字幕专员校验）"
+ },
+ "warnings": [
+  "素材为 B 站 UP 主二创 AMV（UC 正片快剪，647 切点）：多数区间为 mixed 快切语境，confirmed 专属镜头仅授予探针全绿区间",
+  "全片左上角烧录 UP 主水印，保留不消除",
+  "BGM 轨长 177.875s < G0 目标 180s（问题⑫），timeline 已按 170.167s 收口"
+ ],
+ "visualAnalysisRefs": [
+  "工作台/sinjuku-intro-001/G3-剪辑计划/G3-目标素材视觉分析-v0.1.json"
+ ],
+ "subjectConfirmationRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+ "semanticBeatRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.3.json",
+ "observationLedgerRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.2.json",
+ "humanReviewPoints": [
+  "八列终审回显（确认G3）",
+  "转场逐切点指令（默认硬切；黑场入/出+1 处叠化提案）"
+ ],
+ "editPlan": {
+  "engine": "local_ffmpeg",
+  "resolution": "1280x720",
+  "fps": 30,
+  "timeline": [
+   {
+    "segmentId": "seg-01",
+    "outputStartMs": 70,
+    "outputEndMs": 10550,
+    "transition": "fade_in"
+   },
+   {
+    "segmentId": "seg-02",
+    "outputStartMs": 10983,
+    "outputEndMs": 17863,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-03",
+    "outputStartMs": 18321,
+    "outputEndMs": 25841,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-04",
+    "outputStartMs": 26215,
+    "outputEndMs": 35095,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-05",
+    "outputStartMs": 35503,
+    "outputEndMs": 43983,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-06",
+    "outputStartMs": 44489,
+    "outputEndMs": 50249,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-07",
+    "outputStartMs": 50573,
+    "outputEndMs": 53373,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-08",
+    "outputStartMs": 53801,
+    "outputEndMs": 62521,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-09",
+    "outputStartMs": 63019,
+    "outputEndMs": 69739,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-10",
+    "outputStartMs": 70124,
+    "outputEndMs": 73964,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-11",
+    "outputStartMs": 74234,
+    "outputEndMs": 78474,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-12",
+    "outputStartMs": 78855,
+    "outputEndMs": 83735,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-13",
+    "outputStartMs": 84033,
+    "outputEndMs": 92593,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-14",
+    "outputStartMs": 93066,
+    "outputEndMs": 98986,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-15",
+    "outputStartMs": 99637,
+    "outputEndMs": 105077,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-16",
+    "outputStartMs": 105581,
+    "outputEndMs": 110061,
+    "transition": "dissolve"
+   },
+   {
+    "segmentId": "seg-17",
+    "outputStartMs": 110481,
+    "outputEndMs": 116881,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-18",
+    "outputStartMs": 117307,
+    "outputEndMs": 123867,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-19",
+    "outputStartMs": 124413,
+    "outputEndMs": 129773,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-20",
+    "outputStartMs": 130125,
+    "outputEndMs": 133565,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-21",
+    "outputStartMs": 133933,
+    "outputEndMs": 138173,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-22",
+    "outputStartMs": 138298,
+    "outputEndMs": 142778,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-23",
+    "outputStartMs": 142942,
+    "outputEndMs": 147902,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-24",
+    "outputStartMs": 148120,
+    "outputEndMs": 150360,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-25",
+    "outputStartMs": 150581,
+    "outputEndMs": 154741,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-26",
+    "outputStartMs": 155202,
+    "outputEndMs": 164482,
+    "transition": "hardCut"
+   },
+   {
+    "segmentId": "seg-27",
+    "outputStartMs": 165047,
+    "outputEndMs": 170167,
+    "transition": "fade_out"
+   }
+  ]
+ },
+ "timelineReview": null,
+ "g3Approval": null
+}

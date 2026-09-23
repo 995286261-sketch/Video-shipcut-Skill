@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "freesound",
+  "inputs": {
+    "preference": "BGM的话你从 freesound 找",
+    "themeRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-方向输入-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "industrial techno aggressive",
+      "rationale": "模型对参照曲《冷战奇迹》节选十次 A/B 亲耳判定：快节奏、强鼓点、工业电子/Techno（BGM-试听笔记回显-v0.1，非脑补）",
+      "source": "theme"
+    },
+    {
+      "term": "dark electro driving",
+      "rationale": "同上耳朵证据的黑暗+推进双属性；driving 对应快节奏混剪需求（G1 风格规则：~3s 镜头快节奏）",
+      "source": "theme"
+    },
+    {
+      "term": "action trailer electronic",
+      "rationale": "新安洲机体快剪的预告片动作感，但限定 electronic 体裁与参照曲一致",
+      "source": "theme"
+    },
+    {
+      "term": "hard electro rhythm",
+      "rationale": "参照曲硬派质感与明确节拍（笔记多次指出候选曲'无固定节拍'是首要淘汰因，此项直击节拍存在性）",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 180,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-22T11:25:17+08:00"
+}

@@ -1,0 +1,11 @@
+{
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "fontsize": 40,
+ "yRatio": 0.10,
+ "cards": [
+  {"chapterId": "title-01", "title": "新安洲：红色彗星的再临", "startMs": 0, "endMs": 3500},
+  {"chapterId": "chapter-02", "title": "红色彗星之名", "startMs": 78130, "endMs": 81130},
+  {"chapterId": "chapter-03", "title": "带袖的与「夏亚再世」", "startMs": 124890, "endMs": 127890}
+ ],
+ "note": "G3 批准 packagingDecisions 三卡原样；yRatio=0.10 落上部标题车道（8–18%）；水平居中为装配器唯一档位（合同不支持右置），上中部不压左上水印——如实记入 G4 卡"
+}

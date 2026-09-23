@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.27.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/sinjuku-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "新安洲（机动战士）介绍片的快节奏混剪 BGM，给高达迷看，情绪要史诗紧张推进感",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "INTENSE AMBEINT RHYTHMIC PULSE.WAV",
+      "neteaseId": null,
+      "sha256": "5B8353AD3A18D1FD10AB3748D913A5D4E95CCAEC04E9E16FB91010710E80D698",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏强劲、有明确鼓点的工业电子乐；候选曲是无固定节拍的暗黑氛围音乐，缺乏打击乐，气质阴郁而非激昂。\n2) 不能。它缺少高达混剪所需的爆发力与速度感，无法营造史诗推进的情绪。\n3) 2分。候选曲仅有压迫感而无战斗动感，完全不符合快节奏混剪需求。"
+    },
+    {
+      "title": "Winterstorm II: A Cinematic and ambient soundscape",
+      "neteaseId": null,
+      "sha256": "60978B19BDE21C27499CEC12DEB8FC55426CAF9F6532D4C0EEE2D75D16D2297B",
+      "reused": false,
+      "notes": "1. 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满动能与压迫感；候选曲则是无节奏、铺底音色的氛围音乐（Ambient），气质静谧空灵。\n2. 完全不能。候选曲缺乏必要的速度感和冲击力，无法营造史诗紧张的氛围，会让混剪显得拖沓沉闷。\n3. 贴合度：1/10。理由是风格截然相反，它只有空间感而完全缺失了混剪所需的叙事驱动力。"
+    },
+    {
+      "title": "Dark Strings Music 02",
+      "neteaseId": null,
+      "sha256": "EA5E9F100F484016FC32C7F65662D93DFA365F7367AE187D164FA7E5D2D2D3C5",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满动能；候选曲是慢速、无节拍的暗黑氛围乐，以低沉弦乐为主，气质压抑悬疑。\n2) 完全不能。其缓慢的节奏和缺乏冲击力的特质，无法支撑高达混剪所需的史诗紧张感与速度感。\n3) 贴合度：2/10。理由是节奏过于拖沓，完全缺失机甲战斗应有的爆发力与推进感。"
+    },
+    {
+      "title": "Interstellar sound space orchestral",
+      "neteaseId": null,
+      "sha256": "98A45EB87BE4CB00E13F1748D91A0B649FEA034CE7058FFC8C7EA7845CE82B0A",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏工业电子，鼓点强劲；候选曲是慢速氛围音乐，仅有铺底合成器，无节奏。\n2) 完全不能。候选曲缺乏推进感与紧张度，无法支撑快节奏混剪，会让画面显得拖沓。\n3) 贴合度1分。理由：候选曲过于舒缓静谧，与新安洲所需的史诗紧张感背道而驰。"
+    },
+    {
+      "title": "Cinematic Piano for Emotional Scenes",
+      "neteaseId": null,
+      "sha256": "FA4F16D890DAA70FAFCE4C26A69A2737779CF344032B68AB13C8D18602E23EF8",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满紧张感；候选曲是舒缓优美的纯钢琴独奏，气质宁静忧伤，几乎无节奏驱动。\n2) 完全不能。候选曲缺乏新安洲介绍片所需的史诗感与紧迫推进力，情绪完全相反。\n3) 贴合度：1分。理由：音乐风格与视频所需的情绪氛围南辕北辙。"
+    },
+    {
+      "title": "Dark Shepard Tone 3",
+      "neteaseId": null,
+      "sha256": "C740C8C896455476F927EB2CFF5C3E7B5281F472EEC3FD479AE5848D4A9C6B5E",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满动感；候选曲是无节奏、氛围压抑的黑暗氛围音乐（Dark Ambient）。\n2) 完全不能。它缺乏混剪必需的节奏驱动力和史诗感，无法营造紧张推进的情绪。\n3) 贴合度：1/10。理由：候选曲仅有氛围铺垫功能，完全缺失作为混剪BGM核心的节奏与能量。"
+    },
+    {
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "neteaseId": null,
+      "sha256": "EDC0E4199FA06046A79BB7003B2838EFD194ECEBA5FA3F5E28C89BCE75580C5F",
+      "reused": false,
+      "notes": "1) 参照曲是快节奏电子乐，合成器与鼓机主导，气质冷峻紧迫；候选曲是史诗管弦乐，真鼓与宏大弦乐为主，气质辉煌激昂。\n2) 不能。候选曲节奏偏慢、过于恢弘，缺乏新安洲介绍片所需的机械感与疾速推进的紧张氛围。\n3) 4分。音乐虽史诗但风格错位，更像决战BGM而非机体快剪。"
+    },
+    {
+      "title": "Dark night city Keys Piano Music Dramatic Cinematic",
+      "neteaseId": null,
+      "sha256": "DE9E139896B442F4630F8F380CF0E1EF933EEA5CD1F62810EA87AFF01A16D864",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏工业电子/Techno，鼓点强劲、气质硬核；候选曲是慢速氛围音乐，乐器为钢琴与合成器Pad，气质忧郁静谧，几乎无节奏驱动感。\n2) 完全不能。缺乏新安洲所需的爆发力与速度感，无法支撑快节奏混剪，会让画面显得拖沓沉闷。\n3) 贴合度：1分。理由：情绪与节奏完全背道而驰，这是悲伤独白而非史诗战歌。"
+    },
+    {
+      "title": "Cinematic Strings and Piano",
+      "neteaseId": null,
+      "sha256": "AECB48804CFF2C38C36A77A4C22A466AAA2CA6DC8602A867D0F7D1909367D18B",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏电子工业风，合成器与鼓机驱动，气质紧张；候选曲是慢速管弦乐，钢琴与弦乐主导，气质悲伤抒情。\n2) 完全不能。候选曲节奏过慢、情绪悲怆，无法营造新安洲所需的史诗紧张与高速推进感，会让混剪显得拖无力。\n3) 贴合度1分。音乐风格与情绪基调完全相反，无法用于需要高燃快节奏的机甲战斗混剪。"
+    },
+    {
+      "title": "Hopeful Piano/String Cinematic Ambience Drama Background Music",
+      "neteaseId": null,
+      "sha256": "6496A24E73B91FD12C477E62075B263370C41ADC46E9E3A80A3C7D8C80463334",
+      "reused": false,
+      "notes": "1) 参照曲是快节奏工业电子，鼓点强劲、气质紧张；候选曲是慢速史诗管弦乐，以弦乐为主，气质悲壮舒缓。2)\n不能。候选曲节奏过慢，缺乏混剪所需的紧迫推进感。3) 贴合度：2分。理由：音乐虽宏大但节奏完全不符，无法支撑快节奏画面剪辑。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

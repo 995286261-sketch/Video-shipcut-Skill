@@ -1,0 +1,62 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "records": [
+  {
+   "recordId": "obs-rg-01",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    0,
+    120000
+   ],
+   "observation": "新安洲红色机体出击/悬停/光束射击、战舰炮战、爆炸、谱线蓝图屏（64-80s）、残骸带、红机独镜（44s/26s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-02",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    120000,
+    240000
+   ],
+   "observation": "红机高机动（120s）、白灰色杰斯塔被击、独角兽毁灭模式红眼头部特写、大爆炸",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-03",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    240000,
+    360000
+   ],
+   "observation": "独角兽红框发光（240-252s）、带袖的金色袖章徽记（284-288s）、红机持大型光束步枪、战舰+红机（330-350s）、头盔驾驶员特写（352-360s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-04",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    360000,
+    480000
+   ],
+   "observation": "独角兽头部特写、红机光束军刀/热能斧（380s）、金色徽记（408s）、红机推进器全开正面冲锋（432-448s）、红色光束弹幕（480s）",
+   "subjectStatus": "mixed"
+  },
+  {
+   "recordId": "obs-rg-05",
+   "analysisStatus": "completed",
+   "source": "网格层目视（4s 间隔 143 帧）",
+   "rangeMs": [
+    480000,
+    569701
+   ],
+   "observation": "红机白刃齐射特写（484-500s）、红色面部大特写（544s）、新吉翁号粉红巨体（548-556s）、蓝色光子框架之光（560-568s）、终幕残骸",
+   "subjectStatus": "mixed"
+  }
+ ]
+}

@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/sinjuku-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "bgm": {
+    "decision": "provided",
+    "preference": "\u7528\u6237\u539f\u8bdd\"BGM\u7684\u8bdd\u4f60\u4ece freesound \u627e\"\uff08\u901a\u9053\u504f\u597d=Freesound \u6e05\u6743\u5e93\uff1bG1 \u672b\u786e\u8ba4\u5361\u4e0a\u6807\u660e\u901a\u9053\u3001\u53ef\u5207\u6362\uff09",
+    "libraryPending": false,
+    "clearCondition": "G1 \u672b\u51fa\u68c0\u7d22\u8bcd\u5361\u627e\u4e50 \u2192 \u7528\u6237\u6311\u66f2 \u2192 \u7ecf\u5b98\u65b9\u6e20\u9053\u53d6\u5f97\u6574\u8f68\u5e76\u767b\u8bb0\u56de\u586b 07_\u6388\u6743\u97f3\u9891/ \u540e\u6539 provided",
+    "history": [
+      {
+        "at": "2026-09-22T05:28:15Z",
+        "from": "use_library_later",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json",
+        "note": null
+      }
+    ],
+    "evidence": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json"
+  },
+  "currentNode": "completed",
+  "status": "completed",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/sinjuku-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.2.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u9700\u6c42\u753b\u50cf-v0.2.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.3.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-AB-v0.2.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u8bd5\u542c\u9009\u578b\u5305"
+      ],
+      "humanReviewPoints": [
+        "\u65b9\u5411\u5361\uff1a\u6807\u9898/\u53d9\u4e8b\u89d2\u5ea6/\u4e8b\u5b9e\u4e3b\u5f20/\u8868\u8fbe\u8fb9\u754c/\u98ce\u683c\u89c4\u5219\uff08\u9ed8\u8ba4=\u63a8\u8350\uff09",
+        "\u68c0\u7d22\u8bcd\u5361 v0.2\uff08v0.1 \u56e0\u95ee\u9898\u2463\u4f5c\u5e9f\u91cd\u68c0\uff09",
+        "\u9009\u66f2\u5361\uff1aFreesound \u4e24\u8f6e\u5019\u9009\u8017\u5c3d\uff0c\u56db\u6761\u51fa\u8def\u5f85\u5b9a"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM-\u5206\u6790\u56de\u663e-LOW-PHONK-0B2F3018.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM-\u5206\u6790\u62a5\u544a-LOW-PHONK-0B2F3018.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-09-22T13:33:00+08:00"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G1",
+        "approvalResponse": "\u786e\u8ba4 G1",
+        "approvalTokenVerbatim": "\u786e\u8ba4G1",
+        "approvalResponseVerbatim": "\u786e\u8ba4G1",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-22T05:32:12Z"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [
+        "reapprove_g2_amendment"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.3.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.3.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u53e5\u5b50-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.3.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u8bc1\u636e\u6458\u8981-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8282\u62cd\u84dd\u56fe/BGM-\u8282\u62cd\u84dd\u56fe-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8282\u62cd\u84dd\u56fe/BGM-\u8282\u62cd\u84dd\u56fe\u56de\u663e-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/\u914d\u97f3\u8bd5\u542c-longtian_v3-8s.wav",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/source-02/manifest.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-S\u5361\u88c1\u51b3\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-22T07:05:00Z"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvalTokenVerbatim": "\u786e\u8ba4G2",
+        "approvalResponseVerbatim": "\u786e\u8ba4 G2",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-22T07:25:47Z",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.3.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u8bc1\u636e\u6458\u8981-v0.1.md",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.3.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.6.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.6.md",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.2.json"
+      ],
+      "humanReviewPoints": [
+        "\u516b\u5217\u7ec8\u5ba1\u56de\u663e v0.6\uff08\u786e\u8ba4G3=3 \u5904\u53e0\u5316\u7248\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.6.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.6.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.6.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u7d20\u6750\u89c6\u89c9\u5206\u6790-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9a8c\u8bc1\u5e27-v04/G3-visual-verification-frames.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55\u63a2\u9488/\u5b57\u5e55-\u6e32\u67d3\u5668\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.srt",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/\u9a8c\u6536003-\u95ee\u9898\u6e05\u5355.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.6.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.6.md"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-22T18:40:00+08:00"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.6.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.6.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvalTokenVerbatim": "\u786e\u8ba4 G3",
+        "approvalResponseVerbatim": "\u786e\u8ba4G3",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-22T10:18:13Z",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e-v0.6.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.2.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.3.md"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.6.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u5e73\u6ed1\u4e2d\u70b9A-14to15.jpg",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u5e73\u6ed1\u4e2d\u70b9B-16to17.jpg",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u5e73\u6ed1\u4e2d\u70b9C-26to27.jpg",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u8f6c\u573a\u9884\u89c8A-\u5e73\u6ed1-v0.3.mp4",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u8f6c\u573a\u9884\u89c8B-\u5e73\u6ed1-v0.3.mp4",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u68c0\u67e5\u5e27/\u8f6c\u573a\u9884\u89c8C-\u5e73\u6ed1-v0.3.mp4",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.2.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.3.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-22T18:40:00+08:00"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "approvalToken": "\u786e\u8ba4 G4",
+        "approvalResponse": "\u786e\u8ba4 G4",
+        "approvalTokenVerbatim": "\u786e\u8ba4G4",
+        "approvalResponseVerbatim": "\u786e\u8ba4G4",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-22T10:39:43Z",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+        "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/transition-audit.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitle-srt-check.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/edit-timeline.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/README.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+          "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-22T18:52:00+08:00"
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvalTokenVerbatim": "\u786e\u8ba4G5",
+        "approvalResponseVerbatim": "\u786e\u8ba4G5",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-23T01:58:43Z",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-09-22T02:37:51Z",
+  "updatedAt": "2026-09-23T01:58:43Z",
+  "amendmentHistory": [
+    {
+      "fromNode": "G3",
+      "toNode": "G2",
+      "reason": "G3 S\u5361\u88c1\u51b3 S2=A\uff1aN12/N13/N15/N16 \u6539\u5199\u4e3a\u6c1b\u56f4\u8bed\u5883\u53ef\u627f\u8f7d\u8868\u8ff0\uff0c\u56de G2 \u91cd\u6279 v0.3\uff08\u89c1 G3-\u526a\u8f91\u8ba1\u5212/G3-S\u5361\u88c1\u51b3\u8bb0\u5f55.md\uff09",
+      "reworkRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-S\u5361\u88c1\u51b3\u8bb0\u5f55.md",
+      "reopenedAt": "2026-09-22T06:49:04Z"
+    },
+    {
+      "fromNode": "G5",
+      "toNode": "G3",
+      "reason": "\u3256 \u7ec8\u5ba1\u5361\u53cc\u4e49\u53e3\u4ee4\u7f3a\u9677\uff1a\u7528\u6237\u6309 09-22 \u9ed8\u8ba4\u63a8\u8350\u65b0\u89c4\u4ee5 \u786e\u8ba4G3 \u6279\u51c6 3 \u5904\u53e0\u5316\u63d0\u6848\uff08\u7f16\u6392\u63d0\u6848\u5361\u9ed8\u8ba4\u63a8\u8350\u2460\uff09\uff0c\u5361\u7247\u6536\u5c3e\u53e5\u5374\u628a\u540c\u4e00\u5b9a\u4e49\u4e3a\u6309\u73b0\u72b6\u5173\u5355\uff0c\u5f52\u5c5e=\u5361\u7247\u8d77\u8349\u9519\u8bef\u975e\u7528\u6237\u8bef\u8bfb\u3002\u56de\u9000\u843d\u5730\u63d0\u6848\u2460\uff1av0.6=seg-14\u219215 \u53e0\u5316400ms + seg-16\u219217 \u53e0\u5316300ms + seg-26\u219227 \u53e0\u5316300ms\uff0c\u7f51\u683c/\u5b57\u5e55/BGM \u5750\u6807\u96f6\u53d8\u5316",
+      "reworkRef": "\u5de5\u4f5c\u53f0/sinjuku-intro-001/\u9a8c\u6536003-\u95ee\u9898\u6e05\u5355.md",
+      "reopenedAt": "2026-09-22T10:14:44Z"
+    }
+  ]
+}

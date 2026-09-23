@@ -1,0 +1,45 @@
+{
+ "schemaVersion": "0.1",
+ "node": "G2",
+ "projectId": "sinjuku-intro-001",
+ "status": "approved_for_g3",
+ "approvedNarrationRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.2.md",
+ "factCitationRef": "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+ "voiceBriefRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-配音清单-longtian-v0.2.json",
+ "permittedFactIds": [
+  "claim-002",
+  "claim-003",
+  "E1",
+  "E2",
+  "E3",
+  "E5",
+  "E6"
+ ],
+ "prohibitedTopics": [
+  "claim-001 原文「夏亚定制」以事实口径播出（仅证据摘要改写链路可用：UC计划开发→0094被带袖的夺取→夏亚再世驾驶）",
+  "弗尔·弗朗特=夏亚本人 的断言（歧义仅可按 N24 问句呈现）",
+  "沙扎比直接后继/升级机 表述（系谱限定=精神感应骨架同脉络）",
+  "源视频原声（G0 原声策略=排除）",
+  "机器转写文本升级为事实、字幕或口播"
+ ],
+ "supersededDraftRefs": [
+  "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.1.md",
+  "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播句子-v0.1.json",
+  "工作台/sinjuku-intro-001/G2-证据与口播/G2-排版稿-v0.1.md",
+  "工作台/sinjuku-intro-001/G2-证据与口播/G2-配音清单-longtian-v0.1.json"
+ ],
+ "userManuallyVerifiedClaims": [],
+ "approvalTokens": {
+  "g2": "确认G2",
+  "voice": "配音确认"
+ },
+ "beatBlueprintRef": "工作台/sinjuku-intro-001/G2-证据与口播/节拍蓝图/BGM-节拍蓝图-v0.1.json",
+ "layoutRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-排版稿-v0.2.md",
+ "narrationTimelineAuthorityMs": 173186,
+ "audioPolicy": {
+  "bgm": "LOW-PHONK（G0 登记清权，SHA 0B2F3018…，整轨 2:57.875，timeline 2:57.000 无需循环）",
+  "sourceOriginalAudio": "排除",
+  "distribution": "仅内部测试",
+  "narrationVoice": "longtian_v3 成品级（用户逐字 `配音确认`）"
+ }
+}

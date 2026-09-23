@@ -1,0 +1,29 @@
+{
+  "projectId": "sinjuku-intro-001",
+  "coreQuestion": "新安洲凭什么被称为\"红色彗星的再临\"，它在 UC 时间线里处于什么位置？",
+  "audience": "对机动战士（Gundam 系列）感兴趣的观众",
+  "title": "红色彗星的再临：把\"时髦\"发挥到顶点的名机——新安洲",
+  "titleExpressionType": "editorial_expression",
+  "coreViewpoint": "新安洲是夏亚·阿兹纳布尔在 UC 末期定制的机体，沙扎比设计思想的集大成与 Banshee 系谱的前身；红色涂装与\"红色彗星\"符号的再现，使它成为系列里时髦值公认拉满的名机",
+  "outputPreferences": {"aspectRatio": "16:9", "targetDurationSec": [150, 210], "usagePurpose": "internal_test"},
+  "bgmDecision": "provided",
+  "directionChoice": {"id": "recommended-1", "label": "符号学视角：一台机体如何承载\"红色彗星\"的传说", "source": "agent_recommendation"},
+  "styleRules": [
+    "快节奏混剪科普：镜头平均时长控制在 3 秒上下（参考片实测节奏）",
+    "底部固定字幕条，一条口播一个排版块（字幕专员布局合同）",
+    "顶部标题栏标注小节主题（packagingDecisions.titleBar）",
+    "章节卡只插在完整句边界（packagingDecisions.chapterCards）",
+    "片头黑场入、片尾黑场出（转场专员词表档）"
+  ],
+  "expressionBoundaries": [
+    "不使用未经证实的排名或\"最强\"断言",
+    "剧情涉及处标注剧透范围（UC 正片为主，不引小说后期剧透）",
+    "仅内部测试使用，不得对外发布",
+    "不将参考片《冷战奇迹》的原句、画面、音乐带入成片"
+  ],
+  "claims": [
+    {"claimId": "claim-001", "text": "新安洲型号为 MSN-06S，为夏亚·阿兹纳布尔定制", "status": "pending", "evidenceRefs": []},
+    {"claimId": "claim-002", "text": "新安洲登场于《机动战士高达 UC》，是沙扎比系谱的延续", "status": "pending", "evidenceRefs": []},
+    {"claimId": "claim-003", "text": "\"红色彗星\"称号源自夏亚在一年战争时期的涂装与战绩", "status": "pending", "evidenceRefs": []}
+  ]
+}

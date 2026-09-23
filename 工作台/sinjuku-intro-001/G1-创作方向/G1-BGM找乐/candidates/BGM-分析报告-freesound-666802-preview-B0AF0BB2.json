@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "B0AF0BB2F76BC00BA14A1DAB8F0B3B32864C7901ACF01EA4C0495AFF75739397",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-666802-preview.mp3",
+    "sha256": "B0AF0BB2F76BC00BA14A1DAB8F0B3B32864C7901ACF01EA4C0495AFF75739397",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 3.291429,
+    "decodedDurationMs": 3245
+  },
+  "tempoBpm": 117.45,
+  "beatsMs": [
+    70,
+    604,
+    1161,
+    1672,
+    2183,
+    2694
+  ],
+  "onsetsMs": [
+    70,
+    232,
+    348,
+    441,
+    766,
+    859,
+    1068,
+    1161,
+    1254,
+    1370,
+    1463,
+    1649,
+    1858,
+    1974,
+    2067,
+    2392,
+    2485,
+    2670,
+    2786,
+    2879,
+    2995,
+    3088,
+    3181
+  ],
+  "hitPoints": [
+    {
+      "tMs": 70,
+      "kind": "beat"
+    },
+    {
+      "tMs": 232,
+      "kind": "accent"
+    },
+    {
+      "tMs": 348,
+      "kind": "accent"
+    },
+    {
+      "tMs": 441,
+      "kind": "accent"
+    },
+    {
+      "tMs": 604,
+      "kind": "beat"
+    },
+    {
+      "tMs": 766,
+      "kind": "accent"
+    },
+    {
+      "tMs": 859,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1161,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1370,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1463,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1672,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1858,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1974,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2183,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2392,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2485,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2694,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2879,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2995,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3088,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3181,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 3158,
+      "energyMean": 0.18136
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.15229
+    },
+    {
+      "tMs": 372,
+      "rms": 0.130469
+    },
+    {
+      "tMs": 743,
+      "rms": 0.107627
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.105281
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.176843
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.150268
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.162903
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.146097
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.215889
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -13.2,
+    "loudnessRangeLu": 20.0,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

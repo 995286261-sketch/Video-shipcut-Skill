@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "5B8353AD3A18D1FD10AB3748D913A5D4E95CCAEC04E9E16FB91010710E80D698",
+  "aliases": [
+    {
+      "title": "INTENSE AMBEINT RHYTHMIC PULSE.WAV",
+      "sourceUrl": "https://freesound.org/s/203725/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:15Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-203725-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:15Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:15Z",
+  "updatedAt": "2026-09-22T03:33:16Z"
+}

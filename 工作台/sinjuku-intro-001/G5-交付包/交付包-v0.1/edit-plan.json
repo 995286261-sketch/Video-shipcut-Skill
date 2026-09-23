@@ -1,0 +1,112 @@
+{
+ "projectId": "sinjuku-intro-001",
+ "node": "G5",
+ "editPlan": {
+  "approvedPlanRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json",
+  "planSha256": "20856864CB97BC2DDEF86A5078DFBE038B15E4360EBC0BE93DD3DC7D9CB03449",
+  "segmentCount": 27,
+  "timelineDurationMs": 170167,
+  "durationDecision": {},
+  "transitions": {
+   "vocabulary": "硬切/叠化（transition-expert 词表）",
+   "mapping": "叠化→xfade fade（㉔ 用户裁决 2026-09-22）",
+   "directive": {
+    "ref": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+    "sha256": "CBBEC22681B69640E911DC48A252971342C84E684D7073FC44B6A9F41C748240"
+   },
+   "boundaries": [
+    {
+     "durationMs": 400,
+     "fromSegmentId": "seg-14",
+     "offsetMs": 99111,
+     "toSegmentId": "seg-15",
+     "transition": "fade"
+    },
+    {
+     "durationMs": 300,
+     "fromSegmentId": "seg-16",
+     "offsetMs": 110121,
+     "toSegmentId": "seg-17",
+     "transition": "fade"
+    },
+    {
+     "durationMs": 300,
+     "fromSegmentId": "seg-26",
+     "offsetMs": 164614,
+     "toSegmentId": "seg-27",
+     "transition": "fade"
+    }
+   ],
+   "gridInvariant": true
+  },
+  "narration": {
+   "source": "G2 配音清单 v0.3（cosyvoice-v3-flash · longtian_v3）",
+   "sentences": 27,
+   "chain": "acompressor+loudnorm 目标 -14 LUFS（成片实测 -15.4/TP -2.9）"
+  },
+  "bgm": {
+   "track": "LOW(PHONK)",
+   "license": "cleared-for-project（Freesound）",
+   "contract": "工作台/sinjuku-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+   "mix": {
+    "bedGainDb": -12.0,
+    "duckReductionDb": -6.0,
+    "ducks": 27,
+    "fadeInS": 2.0,
+    "fadeOutMs": [
+     168167,
+     170167
+    ]
+   }
+  },
+  "subtitles": {
+   "ass": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+   "srt": "subtitles.srt",
+   "cues": 27,
+   "burned": true
+  },
+  "packaging": {
+   "cover": "cover.jpg",
+   "chapterCards": [
+    {
+     "chapterId": "title-01",
+     "title": "新安洲：红色彗星的再临",
+     "startMs": 0,
+     "endMs": 3500
+    },
+    {
+     "chapterId": "chapter-02",
+     "title": "红色彗星之名",
+     "startMs": 78130,
+     "endMs": 81130
+    },
+    {
+     "chapterId": "chapter-03",
+     "title": "带袖的与「夏亚再世」",
+     "startMs": 124890,
+     "endMs": 127890
+    }
+   ]
+  },
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "evidenceRefs": [
+  "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json"
+ ],
+ "humanReviewPoints": [
+  "全片回放（口播清晰度/BGM 配比/三处叠化观感）",
+  "字幕安全区与断行",
+  "封面与章节卡",
+  "分发边界披露确认"
+ ],
+ "warnings": [
+  "internal_test：源为第三方 AMV（日升 IP 二创），左上水印『shin超次元响子 bilibili』保留",
+  "BGM LOW(PHONK) 为 Freesound cleared-for-project，对外分发前需按合同复核",
+  "成片综合响度 -15.4 LUFS（目标 -14，偏差 1.4 LU，如实记录）"
+ ]
+}

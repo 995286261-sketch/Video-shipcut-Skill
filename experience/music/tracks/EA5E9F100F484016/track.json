@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "EA5E9F100F484016FC32C7F65662D93DFA365F7367AE187D164FA7E5D2D2D3C5",
+  "aliases": [
+    {
+      "title": "Dark Strings Music 02",
+      "sourceUrl": "https://freesound.org/s/507741/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:32Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-507741-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:32Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:32Z",
+  "updatedAt": "2026-09-22T03:33:30Z"
+}

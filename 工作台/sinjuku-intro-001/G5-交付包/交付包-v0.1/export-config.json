@@ -1,0 +1,33 @@
+{
+ "projectId": "sinjuku-intro-001",
+ "node": "G5",
+ "platform": "not_specified（G0 登记 B站画幅 16:9，分发=internal_test 未上架）",
+ "distribution": "internal_test",
+ "authorization": "画面：用户提供的第三方混剪《红色彗星的再临》（日升 IP 二创，UP 主 shin超次元响子），仅限内部测试；BGM：LOW(PHONK)（Freesound，cleared-for-project）；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+ "video": {
+  "codec": "h264",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "durationActualMs": 170200,
+  "timelineDurationMs": 170167,
+  "durationTargetMs": 180000,
+  "durationDeltaMs": -9800,
+  "aspectRatioPolicy": "16:9 原生源，无裁切无填充"
+ },
+ "audio": {
+  "narrationLoudnessMeasured": "-15.4 LUFS / TP -2.9 dBTP（成片综合，含 BGM 垫底）",
+  "narrationTargetLufs": -14.0,
+  "bgm": "bed -12dB + 逐句 duck -6dB（27 句）",
+  "sourceAudio": "excluded"
+ },
+ "subtitles": {
+  "burned": true,
+  "deliveredSrt": "subtitles.srt",
+  "cueCount": 27
+ },
+ "cover": {
+  "file": "cover.jpg",
+  "frame": "源 432.5s 红机+大型光束步枪+金袖章（㉓ 勘误后描述）"
+ }
+}

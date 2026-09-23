@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 1.27.0",
+    "modelOverride": null
+  },
+  "reference": "工作台/sinjuku-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "新安洲（机动战士）介绍片的快节奏混剪 BGM，给高达迷看，情绪要史诗紧张推进感",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "INTENSE AMBEINT RHYTHMIC PULSE.WAV",
+      "neteaseId": null,
+      "sha256": "5B8353AD3A18D1FD10AB3748D913A5D4E95CCAEC04E9E16FB91010710E80D698",
+      "reused": false,
+      "notes": "1) 参照曲是节奏强劲、带有工业感的Techno，鼓点清晰；候选曲则是无明确节拍的暗黑氛围音乐，缺乏打击乐，气质阴郁压抑。\n2) 不能。高达混剪需要强烈的节奏驱动力来匹配画面剪辑，此曲过于缓慢且缺乏冲击力，无法营造史诗紧张感。\n3) 2分。它完全缺失了混剪所需的节奏骨架与能量推进感。"
+    },
+    {
+      "title": "Winterstorm II: A Cinematic and ambient soundscape",
+      "neteaseId": null,
+      "sha256": "60978B19BDE21C27499CEC12DEB8FC55426CAF9F6532D4C0EEE2D75D16D2297B",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏工业电子，有强劲鼓点和叙事感；候选曲是无节奏的氛围音乐（Ambient），仅有铺底合成器，气质静谧冥想。\n2) 完全不能。候选曲缺乏推进力与紧张感，无法支撑高达混剪所需的史诗战斗氛围，会让画面显得拖沓。\n3) 贴合度：1/10。理由：候选曲是静态氛围乐，与参照曲的动态节奏及视频所需的情绪张力背道而驰。"
+    },
+    {
+      "title": "Dark Strings Music 02",
+      "neteaseId": null,
+      "sha256": "EA5E9F100F484016FC32C7F65662D93DFA365F7367AE187D164FA7E5D2D2D3C5",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满动能；候选曲是慢速、无节拍的暗黑氛围乐，以合成器铺底，气质压抑悬疑。\n2) 不能。候选曲缺乏高达混剪所需的推进力与爆发感，无法带动情绪，会让画面显得拖沓。\n3) 贴合度：2/10。理由：节奏过于缓慢沉静，完全缺失“史诗紧张推进”的核心需求。"
+    },
+    {
+      "title": "Attention: Suspenseful Film Score for Action & Cyberpunk",
+      "neteaseId": null,
+      "sha256": "06C28A97F7CE1FCABB943BCE92DEBFDDE97261CCF0984948016D1A181A4B91D3",
+      "reused": false,
+      "notes": "1) 参照曲是强节奏工业电子，气质冷峻压迫；候选曲是史诗管弦乐，宏大辉煌但节奏平缓。2)\n不适合。高达迷期待的“快节奏混剪”需要高频律动和紧张感，此曲推进力不足，易显拖沓。3)\n贴合度4分。理由：虽有史诗感，但缺乏混剪所需的紧迫驱动力和现代工业气质。"
+    },
+    {
+      "title": "Interstellar sound space orchestral",
+      "neteaseId": null,
+      "sha256": "98A45EB87BE4CB00E13F1748D91A0B649FEA034CE7058FFC8C7EA7845CE82B0A",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业/EBM电子乐，充满张力；候选曲是无节奏、无旋律的氛围音乐（Ambient），极度舒缓空灵。\n2) 完全不能。候选曲缺乏推进感与紧张度，会让混剪显得拖沓沉闷，无法调动高达迷的热血情绪。\n3) 贴合度：1分。理由：二者气质截然相反，候选曲的静谧完全背离了“史诗紧张”的需求。"
+    },
+    {
+      "title": "Dark Shepard Tone 3",
+      "neteaseId": null,
+      "sha256": "C740C8C896455476F927EB2CFF5C3E7B5281F472EEC3FD479AE5848D4A9C6B5E",
+      "reused": false,
+      "notes": "1)\n差距巨大。参照曲是快节奏电子乐，鼓点强劲、充满动感；候选曲则是无节奏的氛围音乐（Drone），只有缓慢铺陈的合成器音色，缺乏打击乐和明确旋律，气质沉静悬疑。\n\n2) 完全不能。其缓慢、静态的特质无法匹配“快节奏混剪”所需的能量与紧张感，会严重拖慢影片节奏。\n\n3) 贴合度：1/10。理由：候选曲的冥想氛围与高达战斗混剪所需的史诗紧张感背道而驰。"
+    },
+    {
+      "title": "Hybrid Action Music 01",
+      "neteaseId": null,
+      "sha256": "0DAB3DF49802D5829CF1A9D1BD2820F8C14767929D4C94C48D71831352890FE1",
+      "reused": false,
+      "notes": "1) 差距：参照曲是强节奏Industrial Techno，鼓点硬朗驱动；候选曲为Cinematic Hybrid，重氛围铺垫与管弦乐，缺乏持续驱动力。\n2) 能否使用：不能。候选曲前段过于舒缓，缺少混剪所需的紧迫“推进感”，高潮爆发也偏晚。\n3) 贴合度：4/10。理由：史诗感有余但节奏拖沓，无法匹配快节奏剪辑的燃向需求。"
+    },
+    {
+      "title": "Cinematic Piano for Emotional Scenes",
+      "neteaseId": null,
+      "sha256": "FA4F16D890DAA70FAFCE4C26A69A2737779CF344032B68AB13C8D18602E23EF8",
+      "reused": false,
+      "notes": "1) 参照曲是快节奏工业电子，鼓点强劲、气质紧张；候选曲是慢速独奏钢琴，气质忧伤舒缓，二者在节奏与配器上截然相反。\n2) 不能。候选曲缺乏高达混剪所需的史诗感与推进力，情绪过于悲伤，无法匹配战斗画面。\n3) 贴合度：1/10。理由：风格完全背道而驰，这是抒情曲而非战歌。"
+    },
+    {
+      "title": "lonely-traveler-suspense.mp3",
+      "neteaseId": null,
+      "sha256": "76DD99FEAE8CF6B19ACB5DEB8E4BF620706A65FF9169CFCEA4CD421EAB914BD0",
+      "reused": false,
+      "notes": "1) 差距：参照曲是快节奏Techno，电子乐器，气质紧张现代；候选曲是慢速氛围音乐，合成器铺底，气质忧伤空灵。\n2) 能否使用：不能。候选曲节奏过缓，缺乏史诗感和推进力，无法匹配高达混剪的紧张情绪。\n3) 贴合度：2/10。理由：节奏与情绪完全相反，过于舒缓忧伤，不适合表现机甲战斗的激烈场面。"
+    },
+    {
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "neteaseId": null,
+      "sha256": "EDC0E4199FA06046A79BB7003B2838EFD194ECEBA5FA3F5E28C89BCE75580C5F",
+      "reused": false,
+      "notes": "1) 参照曲是工业感强的硬核电子，节奏驱动叙事；候选曲是好莱坞式管弦史诗，宏大但缺乏现代锐度。\n2) 不能。其节奏推进缓慢，缺少新安洲所需的极速压迫感和科技冷峻气质，情绪过于传统。\n3) 4分。音乐虽宏大却失之拖沓，无法匹配高达系机体那种令人窒息的快节奏战斗张力。"
+    },
+    {
+      "title": "Dark night city Keys Piano Music Dramatic Cinematic",
+      "neteaseId": null,
+      "sha256": "DE9E139896B442F4630F8F380CF0E1EF933EEA5CD1F62810EA87AFF01A16D864",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满压迫感；候选曲则是慢速、无打击乐的暗黑氛围音乐，气质阴郁迟缓。\n2) 完全不能。其缓慢拖沓的节奏无法支撑新安洲介绍片所需的史诗紧张感与高速推进力，会让画面显得沉闷。\n3) 贴合度：1分。理由：节奏与情绪完全相反，无法用于需要高燃推进感的场景。"
+    },
+    {
+      "title": "Jungle Break A# min 140bpm",
+      "neteaseId": null,
+      "sha256": "B2F078A71ADFCCA1112B64F19BCA9CFB4C3D38690E0650C1757AC5529126D696",
+      "reused": false,
+      "notes": "1) 参照曲是叙事感强的Techno，节奏稳定；候选曲是Breakcore/IDM，节奏破碎、音色尖锐混乱。2)\n不能。候选曲过于狂躁无序，缺乏史诗感与清晰的推进逻辑，会干扰画面叙事。3)\n贴合度3分。其混乱的听感更适合表现机体失控或系统崩溃，而非展现新安洲的强大与压迫感。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

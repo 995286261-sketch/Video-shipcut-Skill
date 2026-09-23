@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-b9f9377f",
+      "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "sourceProbe": {
+        "durationMs": 569701,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "30/1"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 0,
+      "sourceEndMs": 10766,
+      "outputStartMs": 0,
+      "outputEndMs": 10766,
+      "order": 1,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 338000,
+      "sourceEndMs": 345326,
+      "outputStartMs": 10766,
+      "outputEndMs": 18092,
+      "order": 2,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 74771,
+      "sourceEndMs": 82707,
+      "outputStartMs": 18092,
+      "outputEndMs": 26028,
+      "order": 3,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 260313,
+      "sourceEndMs": 269584,
+      "outputStartMs": 26028,
+      "outputEndMs": 35299,
+      "order": 4,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 317796,
+      "sourceEndMs": 326733,
+      "outputStartMs": 35299,
+      "outputEndMs": 44236,
+      "order": 5,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 288227,
+      "sourceEndMs": 294402,
+      "outputStartMs": 44236,
+      "outputEndMs": 50411,
+      "order": 6,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 406838,
+      "sourceEndMs": 410014,
+      "outputStartMs": 50411,
+      "outputEndMs": 53587,
+      "order": 7,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 493036,
+      "sourceEndMs": 502219,
+      "outputStartMs": 53587,
+      "outputEndMs": 62770,
+      "order": 8,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 385751,
+      "sourceEndMs": 392912,
+      "outputStartMs": 62770,
+      "outputEndMs": 69931,
+      "order": 9,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 434600,
+      "sourceEndMs": 438768,
+      "outputStartMs": 69931,
+      "outputEndMs": 74099,
+      "order": 10,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 392912,
+      "sourceEndMs": 397477,
+      "outputStartMs": 74099,
+      "outputEndMs": 78664,
+      "order": 11,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 10766,
+      "sourceEndMs": 15986,
+      "outputStartMs": 78664,
+      "outputEndMs": 83884,
+      "order": 12,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-13",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 15986,
+      "sourceEndMs": 24931,
+      "outputStartMs": 83884,
+      "outputEndMs": 92829,
+      "order": 13,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-14",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 125000,
+      "sourceEndMs": 131482,
+      "outputStartMs": 92829,
+      "outputEndMs": 99311,
+      "order": 14,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "叠化"
+    },
+    {
+      "segmentId": "seg-15",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 96000,
+      "sourceEndMs": 102018,
+      "outputStartMs": 99311,
+      "outputEndMs": 105329,
+      "order": 15,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-16",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 44000,
+      "sourceEndMs": 48942,
+      "outputStartMs": 105329,
+      "outputEndMs": 110271,
+      "order": 16,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "叠化"
+    },
+    {
+      "segmentId": "seg-17",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 345565,
+      "sourceEndMs": 352388,
+      "outputStartMs": 110271,
+      "outputEndMs": 117094,
+      "order": 17,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-18",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 352388,
+      "sourceEndMs": 359434,
+      "outputStartMs": 117094,
+      "outputEndMs": 124140,
+      "order": 18,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-19",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 359434,
+      "sourceEndMs": 365243,
+      "outputStartMs": 124140,
+      "outputEndMs": 129949,
+      "order": 19,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-20",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 509500,
+      "sourceEndMs": 513300,
+      "outputStartMs": 129949,
+      "outputEndMs": 133749,
+      "order": 20,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-21",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 136000,
+      "sourceEndMs": 140486,
+      "outputStartMs": 133749,
+      "outputEndMs": 138235,
+      "order": 21,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-22",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 548000,
+      "sourceEndMs": 552625,
+      "outputStartMs": 138235,
+      "outputEndMs": 142860,
+      "order": 22,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-23",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 560000,
+      "sourceEndMs": 565151,
+      "outputStartMs": 142860,
+      "outputEndMs": 148011,
+      "order": 23,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-24",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 544000,
+      "sourceEndMs": 546459,
+      "outputStartMs": 148011,
+      "outputEndMs": 150470,
+      "order": 24,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-25",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 26000,
+      "sourceEndMs": 30501,
+      "outputStartMs": 150470,
+      "outputEndMs": 154971,
+      "order": 25,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    },
+    {
+      "segmentId": "seg-26",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 480000,
+      "sourceEndMs": 489793,
+      "outputStartMs": 154971,
+      "outputEndMs": 164764,
+      "order": 26,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "叠化"
+    },
+    {
+      "segmentId": "seg-27",
+      "assetId": "source-02-b9f9377f",
+      "sourceStartMs": 503717,
+      "sourceEndMs": 509120,
+      "outputStartMs": 164764,
+      "outputEndMs": 170167,
+      "order": 27,
+      "sourcePath": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+      "sourceSha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+      "motion": "硬切"
+    }
+  ],
+  "editPlan": {
+    "approvedPlanRef": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json",
+    "planSha256": "20856864CB97BC2DDEF86A5078DFBE038B15E4360EBC0BE93DD3DC7D9CB03449",
+    "segmentCount": 27,
+    "timelineDurationMs": 170167,
+    "durationDecision": {},
+    "transitions": {
+      "vocabulary": "硬切/叠化（transition-expert 词表）",
+      "mapping": "叠化→xfade fade（㉔ 用户裁决 2026-09-22）",
+      "directive": {
+        "ref": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+        "sha256": "CBBEC22681B69640E911DC48A252971342C84E684D7073FC44B6A9F41C748240"
+      },
+      "boundaries": [
+        {
+          "durationMs": 400,
+          "fromSegmentId": "seg-14",
+          "offsetMs": 99111,
+          "toSegmentId": "seg-15",
+          "transition": "fade"
+        },
+        {
+          "durationMs": 300,
+          "fromSegmentId": "seg-16",
+          "offsetMs": 110121,
+          "toSegmentId": "seg-17",
+          "transition": "fade"
+        },
+        {
+          "durationMs": 300,
+          "fromSegmentId": "seg-26",
+          "offsetMs": 164614,
+          "toSegmentId": "seg-27",
+          "transition": "fade"
+        }
+      ],
+      "gridInvariant": true
+    },
+    "narration": {
+      "source": "G2 配音清单 v0.3（cosyvoice-v3-flash · longtian_v3）",
+      "sentences": 27,
+      "chain": "acompressor+loudnorm 目标 -14 LUFS（成片实测 -15.4/TP -2.9）"
+    },
+    "bgm": {
+      "track": "LOW(PHONK)",
+      "license": "cleared-for-project（Freesound）",
+      "contract": "工作台/sinjuku-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+      "mix": {
+        "bedGainDb": -12.0,
+        "duckReductionDb": -6.0,
+        "ducks": 27,
+        "fadeInS": 2.0,
+        "fadeOutMs": [
+          168167,
+          170167
+        ]
+      }
+    },
+    "subtitles": {
+      "ass": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-字幕时间轴-v0.1.ass",
+      "srt": "subtitles.srt",
+      "cues": 27,
+      "burned": true
+    },
+    "packaging": {
+      "cover": "cover.jpg",
+      "chapterCards": [
+        {
+          "chapterId": "title-01",
+          "title": "新安洲：红色彗星的再临",
+          "startMs": 0,
+          "endMs": 3500
+        },
+        {
+          "chapterId": "chapter-02",
+          "title": "红色彗星之名",
+          "startMs": 78130,
+          "endMs": 81130
+        },
+        {
+          "chapterId": "chapter-03",
+          "title": "带袖的与「夏亚再世」",
+          "startMs": 124890,
+          "endMs": 127890
+        }
+      ]
+    },
+    "antiFillRule": {
+      "disallowRepeatedSegments": true,
+      "disallowLoops": true,
+      "disallowMeaninglessSlowMotion": true,
+      "disallowUnverifiedFactPadding": true
+    }
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "7C123A2D9559281464102D8FC2B1E88C5A6636C81A2370370CDBD1AAF18508EB"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "715016D04147C77CFF85E4A2B51DF14327A5C4DCF4CD806A0FE4E42505856CCB"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "BFA8B3238A390D04DCCD603038F2A033DCD225306B840F563657574260DD56FA"
+    },
+    "subtitleSrtCheck": {
+      "path": "subtitle-srt-check.json",
+      "sha256": "962D971B323FC1C51F0BD1706762F7B18E54C64CF8F4B185E536BAFCBC758FFE"
+    },
+    "transitionAudit": {
+      "path": "transition-audit.json",
+      "sha256": "20FF26A98EE20F349EE0EE3128DA9CF270542B85C1047EE5C12AF6AFEB4AFF7A"
+    },
+    "bgmChainAudit": {
+      "path": "bgm-chain-audit.json",
+      "sha256": "AF96F5400447AAB14D398F7D4AC8994EC753847203D7BD4072E0902D282DE1EC"
+    },
+    "sourceTimecodeList": {
+      "path": "source-timecode-list.json",
+      "sha256": "4878FB63D378B61A85D1243E50DC48C2A4F096CFE09303357649A3A567790B63"
+    },
+    "editPlan": {
+      "path": "edit-plan.json",
+      "sha256": "3D683E20CD45A772A0FDC441D92E0EDEA9003B46B102EAF86EAD74E861CA6BD8"
+    },
+    "exportConfig": {
+      "path": "export-config.json",
+      "sha256": "EA809B8366FFF6AEAED37484256AB8A118DF5D90319BD6B8A3DC03FB0271FAA2"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/chapter-01.mp4",
+        "sha256": "B2A7E3F3D70F0EEB99C8DCE0902649845D122B091DA5B315B91DCE7A91EFEF3D"
+      },
+      {
+        "path": "clips/chapter-02.mp4",
+        "sha256": "EBD8DE9681B585D77DF8226E1CF96023A65159191AFD6D8ADD82FFDEDD31DB99"
+      },
+      {
+        "path": "clips/chapter-03.mp4",
+        "sha256": "572166F4526B06407A9CE7E1796118DA259CBE2F83B47D86B79995AFBABDE011"
+      },
+      {
+        "path": "clips/chapter-04.mp4",
+        "sha256": "21972638377DA6C1924B2993B95EBBD8D519A42EB8AD104675C823242095BF7E"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "8526F902C1F6BD2FADCC758812CBEB050263C60FB52242E66FD936B4000F5829"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "全片回放（口播清晰度/BGM 配比/三处叠化观感）",
+    "字幕安全区与断行",
+    "封面与章节卡",
+    "分发边界披露确认"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json"
+  ],
+  "warnings": [
+    "internal_test：源为第三方 AMV（日升 IP 二创），左上水印『shin超次元响子 bilibili』保留",
+    "BGM LOW(PHONK) 为 Freesound cleared-for-project，对外分发前需按合同复核",
+    "成片综合响度 -15.4 LUFS（目标 -14，偏差 1.4 LU，如实记录）"
+  ],
+  "authorization": "画面：用户提供的第三方混剪《红色彗星的再临》（日升 IP 二创，UP 主 shin超次元响子），仅限内部测试；BGM：LOW(PHONK)（Freesound，cleared-for-project）；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+  "distribution": "internal_test",
+  "status": "g5_pending_human_review",
+  "finishedAt": "2026-09-22T18:48:00+08:00",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

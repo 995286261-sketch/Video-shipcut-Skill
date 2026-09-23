@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "skill": "transition-expert",
+  "purpose": "transition_check",
+  "generatedAt": "2026-09-22T18:41:39+08:00",
+  "checkedAt": "2026-09-22T18:41:39+08:00",
+  "transitions": [
+    {
+      "boundary": "seg-14→seg-15",
+      "transition": "fade",
+      "durationMs": 400,
+      "offsetMs": 99111
+    },
+    {
+      "boundary": "seg-16→seg-17",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 110121
+    },
+    {
+      "boundary": "seg-26→seg-27",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 164614
+    }
+  ],
+  "masterFades": {
+    "fadeInMs": 0,
+    "fadeOutMs": 0
+  },
+  "gridInvariant": true,
+  "manifest": {
+    "path": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.6.json",
+    "sha256": "5BEA063609CB64ECD1AD9D4F698EE494166896777E41C16ECBAE19818E74B0B5"
+  },
+  "assemblyRecord": {
+    "path": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-候选成片-v0.3-装配记录-v0.1.json",
+    "sha256": "994ADAE8786549682F6B18D3CC9AC72EB0512B31CF7F3B1F4100FFC95B44321A"
+  },
+  "directive": {
+    "path": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+    "sha256": "CBBEC22681B69640E911DC48A252971342C84E684D7073FC44B6A9F41C748240"
+  },
+  "master": {
+    "path": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-候选成片-v0.3.mp4",
+    "sha256": "7C123A2D9559281464102D8FC2B1E88C5A6636C81A2370370CDBD1AAF18508EB"
+  },
+  "errors": []
+}

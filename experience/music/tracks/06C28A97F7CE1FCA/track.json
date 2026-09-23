@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "06C28A97F7CE1FCABB943BCE92DEBFDDE97261CCF0984948016D1A181A4B91D3",
+  "aliases": [
+    {
+      "title": "Attention: Suspenseful Film Score for Action & Cyberpunk",
+      "sourceUrl": "https://freesound.org/s/568005/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:33:35Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-568005-preview.mp3",
+      "recordedAt": "2026-09-22T03:33:35Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:33:35Z",
+  "updatedAt": "2026-09-22T03:33:35Z"
+}

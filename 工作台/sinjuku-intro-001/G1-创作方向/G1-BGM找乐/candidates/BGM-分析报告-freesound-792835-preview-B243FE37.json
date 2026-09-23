@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "B243FE3754A2B6FC8C9D79CB38375D878C539AAF9ADFA0F0C67DE6510F40F266",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-792835-preview.mp3",
+    "sha256": "B243FE3754A2B6FC8C9D79CB38375D878C539AAF9ADFA0F0C67DE6510F40F266",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 8.698776,
+    "decodedDurationMs": 8654
+  },
+  "tempoBpm": 143.55,
+  "beatsMs": [
+    93,
+    534,
+    952,
+    1370,
+    1788,
+    2183,
+    2624,
+    3019,
+    3413,
+    3831,
+    4249,
+    4667,
+    5085,
+    5503,
+    5898,
+    6339
+  ],
+  "onsetsMs": [
+    70,
+    441,
+    650,
+    1765,
+    2183,
+    2368,
+    2624,
+    2786,
+    2995,
+    3413,
+    3738,
+    5062,
+    5480,
+    5689,
+    5898,
+    6107,
+    6316
+  ],
+  "hitPoints": [
+    {
+      "tMs": 93,
+      "kind": "beat"
+    },
+    {
+      "tMs": 534,
+      "kind": "beat"
+    },
+    {
+      "tMs": 952,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1370,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1788,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2183,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2368,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2624,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2786,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3019,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3413,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3831,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4249,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4667,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5085,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5503,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5689,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5898,
+      "kind": "beat"
+    },
+    {
+      "tMs": 6107,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6339,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 4551,
+      "energyMean": 0.138027
+    },
+    {
+      "startMs": 4644,
+      "endMs": 8638,
+      "energyMean": 0.063028
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.019728
+    },
+    {
+      "tMs": 372,
+      "rms": 0.169548
+    },
+    {
+      "tMs": 743,
+      "rms": 0.128428
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.139614
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.096094
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.196268
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.140537
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.109228
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.144584
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.114028
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.164001
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.114289
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.170096
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.094075
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.14558
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.121788
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.180401
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.171166
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.015523
+    },
+    {
+      "tMs": 7059,
+      "rms": 0.0
+    },
+    {
+      "tMs": 7430,
+      "rms": 0.0
+    },
+    {
+      "tMs": 7802,
+      "rms": 0.0
+    },
+    {
+      "tMs": 8173,
+      "rms": 0.0
+    },
+    {
+      "tMs": 8545,
+      "rms": 0.0
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -14.0,
+    "loudnessRangeLu": 3.4,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

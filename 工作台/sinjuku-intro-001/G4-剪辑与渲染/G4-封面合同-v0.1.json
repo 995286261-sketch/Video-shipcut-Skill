@@ -1,0 +1,8 @@
+{
+ "imagePath": "工作台/sinjuku-intro-001/G4-剪辑与渲染/cover/cover-source.jpg",
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "title": "新安洲：红色彗星的再临",
+ "fontsize": 43,
+ "output": "工作台/sinjuku-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+ "note": "封面帧=计划 coverFrameMs 432500（红机+大型光束步枪+金袖章特写，429–433.5s 步枪段；432.5s 非推进翼段，翼段 434.0s 起——问题㉓描述勘误，2026-09-22 G4 卡 D3 批准）；主标题=title-01 文案；fontsize 按 720p 等比（002 64/1080→43/720）"
+}

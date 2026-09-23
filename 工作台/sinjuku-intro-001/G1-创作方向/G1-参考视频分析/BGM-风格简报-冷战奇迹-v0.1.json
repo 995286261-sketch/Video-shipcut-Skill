@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "reference_music_style_brief",
+  "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+  "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+  "bpm": 123.05,
+  "bpmRange": [
+    110.7,
+    135.4
+  ],
+  "durationMs": 163029,
+  "energyShape": [
+    0.894,
+    0.795,
+    0.74,
+    0.989,
+    0.848,
+    0.925,
+    0.843,
+    0.769,
+    0.956,
+    0.815,
+    0.907,
+    0.915,
+    1.0,
+    0.968,
+    0.924,
+    0.584
+  ],
+  "shapeBuckets": 16,
+  "shapeBucketMs": 10189,
+  "segmentCount": 8,
+  "usage": "检索与推荐输入；energyShape 为 16 桶均值曲线（消除解说音轨逐句 ducking 周期噪声，保留宏观能量形状）；suggestedQueryTerms 由 Agent 依情绪/风格补写，本文件只承载机器事实",
+  "suggestedQueryTerms": []
+}

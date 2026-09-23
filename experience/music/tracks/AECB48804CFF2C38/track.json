@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "AECB48804CFF2C38C36A77A4C22A466AAA2CA6DC8602A867D0F7D1909367D18B",
+  "aliases": [
+    {
+      "title": "Cinematic Strings and Piano",
+      "sourceUrl": "https://freesound.org/s/789277/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:23:07Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-789277-preview.mp3",
+      "recordedAt": "2026-09-22T03:23:07Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:23:07Z",
+  "updatedAt": "2026-09-22T03:23:07Z"
+}

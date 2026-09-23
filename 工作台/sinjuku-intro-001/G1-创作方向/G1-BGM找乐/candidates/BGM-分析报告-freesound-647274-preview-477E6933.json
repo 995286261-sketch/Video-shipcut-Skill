@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "477E693376D06AF31E9AF9D2B006897B2DEF155642590EB935CF57D1FD8BF5C3",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-647274-preview.mp3",
+    "sha256": "477E693376D06AF31E9AF9D2B006897B2DEF155642590EB935CF57D1FD8BF5C3",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 0.444082,
+    "decodedDurationMs": 414
+  },
+  "tempoBpm": 287.11,
+  "beatsMs": [
+    255
+  ],
+  "onsetsMs": [
+    139,
+    255,
+    348
+  ],
+  "hitPoints": [
+    {
+      "tMs": 255,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 372,
+      "energyMean": 0.563946
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.429903
+    },
+    {
+      "tMs": 372,
+      "rms": 0.578421
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -4.3,
+    "loudnessRangeLu": 0.0,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "C740C8C896455476F927EB2CFF5C3E7B5281F472EEC3FD479AE5848D4A9C6B5E",
+  "aliases": [
+    {
+      "title": "Dark Shepard Tone 3",
+      "sourceUrl": "https://freesound.org/s/404910/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:57Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-404910-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:57Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:57Z",
+  "updatedAt": "2026-09-22T03:33:51Z"
+}

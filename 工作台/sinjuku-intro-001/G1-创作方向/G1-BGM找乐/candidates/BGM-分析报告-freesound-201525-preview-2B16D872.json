@@ -1,0 +1,704 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "2B16D8726D2720BFCAC0A7D83E7B78451BFE2A127701D52C948C7674D7512989",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-201525-preview.mp3",
+    "sha256": "2B16D8726D2720BFCAC0A7D83E7B78451BFE2A127701D52C948C7674D7512989",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 30.024,
+    "decodedDurationMs": 29988
+  },
+  "tempoBpm": 117.45,
+  "beatsMs": [
+    163
+  ],
+  "onsetsMs": [
+    70,
+    116,
+    163,
+    464,
+    766,
+    1091,
+    1347,
+    1950,
+    2252,
+    2786,
+    3065,
+    3367,
+    3622,
+    3924,
+    4481,
+    5062,
+    5341,
+    5898,
+    6757,
+    7384,
+    7639,
+    8243,
+    8522,
+    8824,
+    9102,
+    9381,
+    9683,
+    9938,
+    10542,
+    10797,
+    11401,
+    11703,
+    11981,
+    12260,
+    12562,
+    12841,
+    13119,
+    13421,
+    13700,
+    14002,
+    14536,
+    14814,
+    15093,
+    15673,
+    16231,
+    16509,
+    17090,
+    17392,
+    17670,
+    17949,
+    18530,
+    18808,
+    19365,
+    19667,
+    20225,
+    20526,
+    21084,
+    21664,
+    21943,
+    22523,
+    22802,
+    23359,
+    24218,
+    25078
+  ],
+  "hitPoints": [
+    {
+      "tMs": 163,
+      "kind": "beat"
+    },
+    {
+      "tMs": 464,
+      "kind": "accent"
+    },
+    {
+      "tMs": 766,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1091,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1347,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1950,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2252,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2786,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3065,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3367,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3622,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3924,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4481,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5062,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5341,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5898,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6757,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7384,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7639,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8243,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8522,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8824,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9102,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9381,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9683,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9938,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10542,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10797,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11401,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11703,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11981,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12260,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12562,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12841,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13119,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13421,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13700,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14002,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14536,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14814,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15093,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15673,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16231,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16509,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17090,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17392,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17670,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17949,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18530,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18808,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19365,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19667,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20225,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20526,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21084,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21664,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21943,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22523,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22802,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23359,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24218,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25078,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 7245,
+      "energyMean": 0.183586
+    },
+    {
+      "startMs": 7338,
+      "endMs": 13653,
+      "energyMean": 0.061243
+    },
+    {
+      "startMs": 13746,
+      "endMs": 18947,
+      "energyMean": 0.026625
+    },
+    {
+      "startMs": 19040,
+      "endMs": 23220,
+      "energyMean": 0.019617
+    },
+    {
+      "startMs": 23313,
+      "endMs": 29907,
+      "energyMean": 0.005958
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.361256
+    },
+    {
+      "tMs": 372,
+      "rms": 0.311303
+    },
+    {
+      "tMs": 743,
+      "rms": 0.299142
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.219512
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.240455
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.185606
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.208738
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.163281
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.142652
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.156534
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.162006
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.128892
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.144991
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.124573
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.144365
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.140694
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.140442
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.140036
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.123057
+    },
+    {
+      "tMs": 7059,
+      "rms": 0.12601
+    },
+    {
+      "tMs": 7430,
+      "rms": 0.091538
+    },
+    {
+      "tMs": 7802,
+      "rms": 0.087887
+    },
+    {
+      "tMs": 8173,
+      "rms": 0.07482
+    },
+    {
+      "tMs": 8545,
+      "rms": 0.071324
+    },
+    {
+      "tMs": 8916,
+      "rms": 0.068924
+    },
+    {
+      "tMs": 9288,
+      "rms": 0.061775
+    },
+    {
+      "tMs": 9660,
+      "rms": 0.069852
+    },
+    {
+      "tMs": 10031,
+      "rms": 0.069138
+    },
+    {
+      "tMs": 10403,
+      "rms": 0.059059
+    },
+    {
+      "tMs": 10774,
+      "rms": 0.064131
+    },
+    {
+      "tMs": 11146,
+      "rms": 0.059668
+    },
+    {
+      "tMs": 11517,
+      "rms": 0.051174
+    },
+    {
+      "tMs": 11889,
+      "rms": 0.053022
+    },
+    {
+      "tMs": 12260,
+      "rms": 0.047164
+    },
+    {
+      "tMs": 12632,
+      "rms": 0.039377
+    },
+    {
+      "tMs": 13003,
+      "rms": 0.043092
+    },
+    {
+      "tMs": 13375,
+      "rms": 0.041889
+    },
+    {
+      "tMs": 13746,
+      "rms": 0.035255
+    },
+    {
+      "tMs": 14118,
+      "rms": 0.03466
+    },
+    {
+      "tMs": 14489,
+      "rms": 0.03283
+    },
+    {
+      "tMs": 14861,
+      "rms": 0.027102
+    },
+    {
+      "tMs": 15232,
+      "rms": 0.025165
+    },
+    {
+      "tMs": 15604,
+      "rms": 0.026055
+    },
+    {
+      "tMs": 15975,
+      "rms": 0.021674
+    },
+    {
+      "tMs": 16347,
+      "rms": 0.025024
+    },
+    {
+      "tMs": 16718,
+      "rms": 0.024444
+    },
+    {
+      "tMs": 17090,
+      "rms": 0.025336
+    },
+    {
+      "tMs": 17461,
+      "rms": 0.02601
+    },
+    {
+      "tMs": 17833,
+      "rms": 0.023491
+    },
+    {
+      "tMs": 18204,
+      "rms": 0.026297
+    },
+    {
+      "tMs": 18576,
+      "rms": 0.021938
+    },
+    {
+      "tMs": 18947,
+      "rms": 0.025318
+    },
+    {
+      "tMs": 19319,
+      "rms": 0.021718
+    },
+    {
+      "tMs": 19691,
+      "rms": 0.023247
+    },
+    {
+      "tMs": 20062,
+      "rms": 0.021833
+    },
+    {
+      "tMs": 20434,
+      "rms": 0.021141
+    },
+    {
+      "tMs": 20805,
+      "rms": 0.021438
+    },
+    {
+      "tMs": 21177,
+      "rms": 0.01842
+    },
+    {
+      "tMs": 21548,
+      "rms": 0.020343
+    },
+    {
+      "tMs": 21920,
+      "rms": 0.016375
+    },
+    {
+      "tMs": 22291,
+      "rms": 0.018274
+    },
+    {
+      "tMs": 22663,
+      "rms": 0.015789
+    },
+    {
+      "tMs": 23034,
+      "rms": 0.015669
+    },
+    {
+      "tMs": 23406,
+      "rms": 0.014468
+    },
+    {
+      "tMs": 23777,
+      "rms": 0.012514
+    },
+    {
+      "tMs": 24149,
+      "rms": 0.013013
+    },
+    {
+      "tMs": 24520,
+      "rms": 0.009869
+    },
+    {
+      "tMs": 24892,
+      "rms": 0.010443
+    },
+    {
+      "tMs": 25263,
+      "rms": 0.009748
+    },
+    {
+      "tMs": 25635,
+      "rms": 0.007028
+    },
+    {
+      "tMs": 26006,
+      "rms": 0.007232
+    },
+    {
+      "tMs": 26378,
+      "rms": 0.005535
+    },
+    {
+      "tMs": 26749,
+      "rms": 0.003825
+    },
+    {
+      "tMs": 27121,
+      "rms": 0.002776
+    },
+    {
+      "tMs": 27492,
+      "rms": 0.001983
+    },
+    {
+      "tMs": 27864,
+      "rms": 0.001432
+    },
+    {
+      "tMs": 28235,
+      "rms": 0.001503
+    },
+    {
+      "tMs": 28607,
+      "rms": 0.00169
+    },
+    {
+      "tMs": 28979,
+      "rms": 0.002079
+    },
+    {
+      "tMs": 29350,
+      "rms": 0.001984
+    },
+    {
+      "tMs": 29722,
+      "rms": 0.001863
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -25.4,
+    "loudnessRangeLu": 24.3,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "subtitle-expert",
+  "purpose": "subtitle_renderer_profile",
+  "probedAt": "2026-09-22T16:37:22+08:00",
+  "host": {
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64"
+  },
+  "ffmpeg": {
+    "versionLine": "ffmpeg version 7.0 Copyright (c) 2000-2024 the FFmpeg developers",
+    "libass": "unknown (enabled at build, no version line)",
+    "libassEnabled": true
+  },
+  "font": {
+    "path": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+    "exists": true
+  },
+  "autoWrap": {
+    "value": false,
+    "evidence": null,
+    "basis": "conservative default — CJK runs must carry explicit line breaks (002-⑧)"
+  }
+}

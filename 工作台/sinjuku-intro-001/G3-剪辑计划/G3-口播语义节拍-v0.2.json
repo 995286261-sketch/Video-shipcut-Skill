@@ -1,0 +1,390 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "status": "draft",
+ "narrationDraft": "工作台/sinjuku-intro-001/G2-证据与口播/G2-口播草案-v0.3.md",
+ "narrationDecisionRef": "工作台/sinjuku-intro-001/G2-证据与口播/G2-审核决定-v0.2.json",
+ "timingBasis": "工作台/sinjuku-intro-001/G2-证据与口播/G2-配音清单-longtian-v0.3.json",
+ "beats": [
+  {
+   "beatId": "beat-N01",
+   "sentenceId": "N01",
+   "outputStartMs": 70,
+   "outputEndMs": 10550,
+   "narrationText": "U.C. 0096，战后不平静的星海——一道红色的影子再度划过，仿佛那颗彗星从未老去。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "红色机体高速掠过星空的语境画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N02",
+   "sentenceId": "N02",
+   "outputStartMs": 10983,
+   "outputEndMs": 17863,
+   "narrationText": "它叫 MSN-06S 新安洲，属于那个被称为夏亚再世的人。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "新安洲全身/半身可辨（红色+大型光束步枪+袖章装饰）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N03",
+   "sentenceId": "N03",
+   "outputStartMs": 18321,
+   "outputEndMs": 25841,
+   "narrationText": "可这台机，最初不是为任何人造的——它诞生于地球联邦的 UC 计划。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "机体谱线/蓝图/机库语境画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N04",
+   "sentenceId": "N04",
+   "outputStartMs": 26215,
+   "outputEndMs": 35095,
+   "narrationText": "阿纳海姆电子公司拿它验证精神感应骨架技术，实验数据后来直接喂给了 RX-0 独角兽高达。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "精神感应骨架发光特征（独角兽红/绿光框任一，语境）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N05",
+   "sentenceId": "N05",
+   "outputStartMs": 35503,
+   "outputEndMs": 43983,
+   "narrationText": "U.C. 0094，新吉翁残党「带袖的」一场大胆抢夺，把它从验证机变成了自己的座机。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "带袖的袖章徽记或红色机体与战舰同框"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N06",
+   "sentenceId": "N06",
+   "outputStartMs": 44489,
+   "outputEndMs": 50249,
+   "narrationText": "他们要的从来不只是一台高性能 MS，而是一面能收拢人心的旗。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "徽记/旗帜象征物特写"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N07",
+   "sentenceId": "N07",
+   "outputStartMs": 50573,
+   "outputEndMs": 53373,
+   "narrationText": "那面旗，就是赤色彗星的威光。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "新安洲威压姿态（冲锋/举枪）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N08",
+   "sentenceId": "N08",
+   "outputStartMs": 53801,
+   "outputEndMs": 62521,
+   "narrationText": "这台机的纸面相当张扬：全高 22.6 米，全备重量 56.9 吨，出力 3240 千瓦。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "蓝图/参数屏或机体全身参照物画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N09",
+   "sentenceId": "N09",
+   "outputStartMs": 63019,
+   "outputEndMs": 69739,
+   "narrationText": "有意思的是，它不挂一件浮游武器——它的任务，就是把机体本身推向极限。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "新安洲使用实弹/光束武器（非浮游炮）画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N10",
+   "sentenceId": "N10",
+   "outputStartMs": 70124,
+   "outputEndMs": 73964,
+   "narrationText": "背部展开一对大型推进翼，全身布满推进器。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "背部大型推进翼可见"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N11",
+   "sentenceId": "N11",
+   "outputStartMs": 74234,
+   "outputEndMs": 78474,
+   "narrationText": "新安洲的答案很直接：机体本身就是武器。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "机体近战/武器齐射画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N12",
+   "sentenceId": "N12",
+   "outputStartMs": 78855,
+   "outputEndMs": 83735,
+   "narrationText": "说到速度，那个称号要回到 U.C. 0079 的战火星海。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "红色机体高速机动+战舰炮战氛围语境"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N13",
+   "sentenceId": "N13",
+   "outputStartMs": 84033,
+   "outputEndMs": 92593,
+   "narrationText": "鲁姆会战中，他以一道红色的残影杀穿舰队——从那天起，有了「红色彗星」。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "红色机体冲锋/爆炸氛围语境"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N14",
+   "sentenceId": "N14",
+   "outputStartMs": 93066,
+   "outputEndMs": 98986,
+   "narrationText": "红色涂装与无人能及的速度，是一枚硬币的两面，共同铸成了那个称号。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "【缺口】红色扎古/涂装与速度同框影像"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N15",
+   "sentenceId": "N15",
+   "outputStartMs": 99637,
+   "outputEndMs": 105077,
+   "narrationText": "后来的阿克西斯事件与最终决战，让他从对手变成了传说。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "残骸带/爆炸终幕语境"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N16",
+   "sentenceId": "N16",
+   "outputStartMs": 105581,
+   "outputEndMs": 110061,
+   "narrationText": "战争的尘埃落定，红色彗星的传说却没有褪色。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "星空+红色机体独镜语境"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N17",
+   "sentenceId": "N17",
+   "outputStartMs": 110481,
+   "outputEndMs": 116881,
+   "narrationText": "U.C. 0096，带袖的重整登场星海，冲在最前面的正是那台红色机体。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "新安洲在舰队/战场中突进"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N18",
+   "sentenceId": "N18",
+   "outputStartMs": 117307,
+   "outputEndMs": 123867,
+   "narrationText": "驾驶者自称弗尔·弗朗特——红色座机、面具、华丽的作战风格。",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "弗尔·弗朗特/驾驶员画面或新安洲+面具意象"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N19",
+   "sentenceId": "N19",
+   "outputStartMs": 124413,
+   "outputEndMs": 129773,
+   "narrationText": "人人都说他是夏亚再世，他自己却说，只是一个「容器」。",
+   "claim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": [
+     "驾驶员头盔面部特写（绿光舱内）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N20",
+   "sentenceId": "N20",
+   "outputStartMs": 130125,
+   "outputEndMs": 133565,
+   "narrationText": "精神感应骨架、红色涂装、彗星之名。",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "骨架/涂装/徽记三要素分镜"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N21",
+   "sentenceId": "N21",
+   "outputStartMs": 133933,
+   "outputEndMs": 138173,
+   "narrationText": "对联邦军，它产生了实打实的心理压力。",
+   "claim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": [
+     "联邦机（杰斯塔系）被动摇/被击画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N22",
+   "sentenceId": "N22",
+   "outputStartMs": 138298,
+   "outputEndMs": 142778,
+   "narrationText": "最后一战，他搭乘新吉翁号，与独角兽正面对决。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "新吉翁号与独角兽对决画面"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N23",
+   "sentenceId": "N23",
+   "outputStartMs": 142942,
+   "outputEndMs": 147902,
+   "narrationText": "精神与夏亚融合，把未来托付给少年之后，他离去了。",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "蓝光/光子框架消散意象"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N24",
+   "sentenceId": "N24",
+   "outputStartMs": 148120,
+   "outputEndMs": 150360,
+   "narrationText": "是本人，还是继承者？",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "机体面部特写（歧义问句留白）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N25",
+   "sentenceId": "N25",
+   "outputStartMs": 150581,
+   "outputEndMs": 154741,
+   "narrationText": "新安洲，把「红色彗星」的答案留给了整片星海。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "新安洲星空独镜"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N26",
+   "sentenceId": "N26",
+   "outputStartMs": 155202,
+   "outputEndMs": 164482,
+   "narrationText": "UC 计划的机体、残党的旗舰、传说的复刻、解不开的谜——叠加在一起，才只是这一抹红。",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "多重画面叠化或红色机体剪影收束"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  },
+  {
+   "beatId": "beat-N27",
+   "sentenceId": "N27",
+   "outputStartMs": 165047,
+   "outputEndMs": 170167,
+   "narrationText": "如果这抹红还让你心动，点赞关注走一波，下期继续聊星海。",
+   "claim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": [
+     "不要求画面（尾卡/纯BGM段）"
+    ]
+   },
+   "allowedVisualAlternatives": []
+  }
+ ],
+ "revisionNote": "v0.2：随 G2 v0.3 改写循环同步（N12/N13/N15/N16 降为抽象结论+氛围语境最低证据；全表时间码对齐 v0.3 实测）"
+}

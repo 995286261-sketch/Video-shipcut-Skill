@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "source-02-b9f9377f",
+    "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/sinjuku-intro-001/G0-素材包/02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 1360,
+      "endMs": 5420,
+      "text": "Mobile Suits 但在手裏",
+      "words": [
+        {
+          "startMs": 1360,
+          "endMs": 1960,
+          "text": "M",
+          "probability": 0.045290764421224594
+        },
+        {
+          "startMs": 1960,
+          "endMs": 2120,
+          "text": "obile",
+          "probability": 0.7205182313919067
+        },
+        {
+          "startMs": 2120,
+          "endMs": 2420,
+          "text": " Su",
+          "probability": 0.20815004408359528
+        },
+        {
+          "startMs": 2420,
+          "endMs": 2540,
+          "text": "its",
+          "probability": 0.9825976490974426
+        },
+        {
+          "startMs": 2700,
+          "endMs": 2840,
+          "text": " 但",
+          "probability": 0.3273640275001526
+        },
+        {
+          "startMs": 2840,
+          "endMs": 3480,
+          "text": "在",
+          "probability": 0.11306685209274292
+        },
+        {
+          "startMs": 5020,
+          "endMs": 5200,
+          "text": "手",
+          "probability": 0.3206465542316437
+        },
+        {
+          "startMs": 5200,
+          "endMs": 5420,
+          "text": "裏",
+          "probability": 0.5585546419024467
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0002",
+      "startMs": 5420,
+      "endMs": 6260,
+      "text": "不可以",
+      "words": [
+        {
+          "startMs": 5420,
+          "endMs": 6080,
+          "text": "不",
+          "probability": 0.07713054865598679
+        },
+        {
+          "startMs": 6080,
+          "endMs": 6260,
+          "text": "可以",
+          "probability": 0.22931517660617828
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0003",
+      "startMs": 8180,
+      "endMs": 54150,
+      "text": "在研究中的我车的事件",
+      "words": [
+        {
+          "startMs": 8180,
+          "endMs": 8540,
+          "text": "在",
+          "probability": 0.008423087187111378
+        },
+        {
+          "startMs": 8540,
+          "endMs": 9900,
+          "text": "研",
+          "probability": 0.38617866137064993
+        },
+        {
+          "startMs": 52010,
+          "endMs": 52010,
+          "text": "究",
+          "probability": 0.8980510830879211
+        },
+        {
+          "startMs": 52010,
+          "endMs": 52450,
+          "text": "中",
+          "probability": 0.340630441904068
+        },
+        {
+          "startMs": 52450,
+          "endMs": 53090,
+          "text": "的",
+          "probability": 0.11730289459228516
+        },
+        {
+          "startMs": 53090,
+          "endMs": 53470,
+          "text": "我",
+          "probability": 0.2230859398841858
+        },
+        {
+          "startMs": 53470,
+          "endMs": 53690,
+          "text": "车",
+          "probability": 0.4273823956027627
+        },
+        {
+          "startMs": 53690,
+          "endMs": 53850,
+          "text": "的",
+          "probability": 0.23362542688846588
+        },
+        {
+          "startMs": 53850,
+          "endMs": 54030,
+          "text": "事",
+          "probability": 0.06774602085351944
+        },
+        {
+          "startMs": 54030,
+          "endMs": 54150,
+          "text": "件",
+          "probability": 0.7797791361808777
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0004",
+      "startMs": 54150,
+      "endMs": 55710,
+      "text": "被雷霍治恩拒絕",
+      "words": [
+        {
+          "startMs": 54150,
+          "endMs": 54390,
+          "text": "被",
+          "probability": 0.06887438148260117
+        },
+        {
+          "startMs": 54390,
+          "endMs": 54870,
+          "text": "雷",
+          "probability": 0.3047199696302414
+        },
+        {
+          "startMs": 54870,
+          "endMs": 54990,
+          "text": "霍",
+          "probability": 0.26229545287787914
+        },
+        {
+          "startMs": 54990,
+          "endMs": 55110,
+          "text": "治",
+          "probability": 0.33541184663772583
+        },
+        {
+          "startMs": 55110,
+          "endMs": 55270,
+          "text": "恩",
+          "probability": 0.1736581176519394
+        },
+        {
+          "startMs": 55270,
+          "endMs": 55550,
+          "text": "拒",
+          "probability": 0.4013977386057377
+        },
+        {
+          "startMs": 55550,
+          "endMs": 55710,
+          "text": "絕",
+          "probability": 0.6117499023675919
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0005",
+      "startMs": 56310,
+      "endMs": 58290,
+      "text": "随籍的联邦軍隊",
+      "words": [
+        {
+          "startMs": 56310,
+          "endMs": 56790,
+          "text": "随",
+          "probability": 0.4752437334973365
+        },
+        {
+          "startMs": 56790,
+          "endMs": 57050,
+          "text": "籍",
+          "probability": 0.6456671506166458
+        },
+        {
+          "startMs": 57050,
+          "endMs": 57230,
+          "text": "的",
+          "probability": 0.4391762614250183
+        },
+        {
+          "startMs": 57230,
+          "endMs": 57650,
+          "text": "联",
+          "probability": 0.4017939269542694
+        },
+        {
+          "startMs": 57650,
+          "endMs": 57790,
+          "text": "邦",
+          "probability": 0.6370575428009033
+        },
+        {
+          "startMs": 57790,
+          "endMs": 58010,
+          "text": "軍",
+          "probability": 0.41624876856803894
+        },
+        {
+          "startMs": 58010,
+          "endMs": 58290,
+          "text": "隊",
+          "probability": 0.645429790019989
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0006",
+      "startMs": 58290,
+      "endMs": 60250,
+      "text": "在海域中被毁滅",
+      "words": [
+        {
+          "startMs": 58290,
+          "endMs": 58690,
+          "text": "在",
+          "probability": 0.12811532616615295
+        },
+        {
+          "startMs": 58690,
+          "endMs": 58890,
+          "text": "海",
+          "probability": 0.16573640704154968
+        },
+        {
+          "startMs": 58890,
+          "endMs": 58990,
+          "text": "域",
+          "probability": 0.6438354998826981
+        },
+        {
+          "startMs": 58990,
+          "endMs": 59230,
+          "text": "中",
+          "probability": 0.4157540798187256
+        },
+        {
+          "startMs": 59230,
+          "endMs": 59610,
+          "text": "被",
+          "probability": 0.3776783049106598
+        },
+        {
+          "startMs": 59610,
+          "endMs": 60050,
+          "text": "毁",
+          "probability": 0.48712313175201416
+        },
+        {
+          "startMs": 60050,
+          "endMs": 60250,
+          "text": "滅",
+          "probability": 0.6628610789775848
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0007",
+      "startMs": 64040,
+      "endMs": 65580,
+      "text": "他的主犯被拒絕",
+      "words": [
+        {
+          "startMs": 64040,
+          "endMs": 64520,
+          "text": "他的",
+          "probability": 0.02434646338224411
+        },
+        {
+          "startMs": 64520,
+          "endMs": 64840,
+          "text": "主",
+          "probability": 0.20802652835845947
+        },
+        {
+          "startMs": 64840,
+          "endMs": 65060,
+          "text": "犯",
+          "probability": 0.6946568489074707
+        },
+        {
+          "startMs": 65060,
+          "endMs": 65300,
+          "text": "被",
+          "probability": 0.14073647558689117
+        },
+        {
+          "startMs": 65300,
+          "endMs": 65440,
+          "text": "拒",
+          "probability": 0.4370214492082596
+        },
+        {
+          "startMs": 65440,
+          "endMs": 65580,
+          "text": "絕",
+          "probability": 0.9757146239280701
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0008",
+      "startMs": 66000,
+      "endMs": 67720,
+      "text": "是Full Frontal",
+      "words": [
+        {
+          "startMs": 66000,
+          "endMs": 66240,
+          "text": "是",
+          "probability": 0.07241819053888321
+        },
+        {
+          "startMs": 66240,
+          "endMs": 66840,
+          "text": "F",
+          "probability": 0.07666879147291183
+        },
+        {
+          "startMs": 66840,
+          "endMs": 66900,
+          "text": "ull",
+          "probability": 0.39269325137138367
+        },
+        {
+          "startMs": 66900,
+          "endMs": 67240,
+          "text": " Front",
+          "probability": 0.8184643983840942
+        },
+        {
+          "startMs": 67240,
+          "endMs": 67720,
+          "text": "al",
+          "probability": 0.9923056960105896
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0009",
+      "startMs": 67720,
+      "endMs": 69120,
+      "text": "赫伊随性",
+      "words": [
+        {
+          "startMs": 67720,
+          "endMs": 68180,
+          "text": "赫",
+          "probability": 0.3801921606063843
+        },
+        {
+          "startMs": 68180,
+          "endMs": 68400,
+          "text": "伊",
+          "probability": 0.04240913316607475
+        },
+        {
+          "startMs": 68400,
+          "endMs": 68640,
+          "text": "随",
+          "probability": 0.5060292184352875
+        },
+        {
+          "startMs": 68640,
+          "endMs": 69120,
+          "text": "性",
+          "probability": 0.3319775462150574
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-22T05:35:48.632156Z"
+}

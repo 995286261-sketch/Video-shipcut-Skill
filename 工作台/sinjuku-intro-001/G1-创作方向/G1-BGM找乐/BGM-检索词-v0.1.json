@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "freesound",
+  "inputs": {
+    "preference": "BGM的话你从 freesound 找（通道偏好，非风格偏好）",
+    "themeRef": null,
+    "themeText": "新安洲——红色彗星的再临，UC 末期夏亚定制机，快节奏混剪科普，机械史诗感",
+    "styleBriefRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "epic orchestral",
+      "rationale": "参考片音轨实测为管弦+电子高能量（风格简报锚 123BPM），题材为机动战士史诗",
+      "source": "brief"
+    },
+    {
+      "term": "cinematic dramatic",
+      "rationale": "介绍片叙事张力需求（coreViewpoint：承载传说的名机）",
+      "source": "theme"
+    },
+    {
+      "term": "action trailer",
+      "rationale": "快节奏混剪科普风格规则（镜头约3秒）",
+      "source": "theme"
+    },
+    {
+      "term": "dark intense",
+      "rationale": "夏亚/吉翁线的压迫感情绪，来自题材",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 180,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-22T10:44:40+08:00"
+}

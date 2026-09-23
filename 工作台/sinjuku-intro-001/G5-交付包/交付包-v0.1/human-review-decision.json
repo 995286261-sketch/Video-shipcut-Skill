@@ -1,0 +1,13 @@
+{
+ "projectId": "sinjuku-intro-001", "node": "G5",
+ "status": "approved",
+ "decision": "accepted",
+ "acceptedWarnings": [],
+ "reviewCardRef": "工作台/sinjuku-intro-001/G5-交付包/G5-播放审核卡-v0.1.md",
+ "recordedAt": "2026-09-23T09:05:00+08:00",
+ "option": "1_confirm_delivery",
+ "approvalTokenVerbatim": "确认G5",
+ "normalizedToken": "确认 G5",
+ "approvalRef": "工作台/sinjuku-intro-001/G5-交付包/G5-批准记录-v0.1.md",
+ "note": "警告三条保持可见未逐条接受（未走选项2）；internal_test 分发边界不升级"
+}

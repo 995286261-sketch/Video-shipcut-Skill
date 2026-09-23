@@ -1,0 +1,138 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G5",
+ "subject": {
+  "file": "final-video.mp4",
+  "sha256": "7C123A2D9559281464102D8FC2B1E88C5A6636C81A2370370CDBD1AAF18508EB"
+ },
+ "reviewedAt": "2026-09-22T18:48:00+08:00",
+ "checks": {
+  "decode": {
+   "status": "passed",
+   "detail": "ffmpeg 全片解码零错误",
+   "evidence": "工作台/sinjuku-intro-001/G5-交付包/质检证据/decode.log"
+  },
+  "videoCodec": {
+   "status": "passed",
+   "detail": "h264 与 export-config 一致"
+  },
+  "dimensions": {
+   "status": "passed",
+   "detail": "1280x720 preserve_source（B站画幅）"
+  },
+  "fps": {
+   "status": "passed",
+   "detail": "30/1 == 30"
+  },
+  "audio": {
+   "status": "passed",
+   "detail": "单条 aac 立体声 48kHz；成片综合 −15.4 LUFS / TP −2.9（目标 −14，偏 1.4 LU 记复核项）；BGM 在位实测 −27.1 LUFS"
+  },
+  "duration": {
+   "status": "passed",
+   "detail": "实测 170200ms == 批准网格 170167ms + 帧取整 33ms；G0 设计目标 180000ms，差 −9800ms 由 ⑫ 缩 timeline 决策解释（BGM 177.875s 不足铺 180s，用户裁决缩短）"
+  },
+  "blackFrames": {
+   "status": "passed",
+   "detail": "blackdetect d=0.3s 零命中（三处叠化为 fade 混合非黑场，符合预期）",
+   "evidence": "工作台/sinjuku-intro-001/G5-交付包/质检证据/black.log"
+  },
+  "silence": {
+   "status": "passed",
+   "detail": "silencedetect −45dB/0.8s 零命中",
+   "evidence": "工作台/sinjuku-intro-001/G5-交付包/质检证据/silence.log"
+  },
+  "duplicateSegments": {
+   "status": "warning",
+   "detail": "无机器检测器（detector limitation，非通过）；由 G4 切片校验 27 段源窗口互异 + G5 人工全片播放覆盖"
+  },
+  "cover": {
+   "status": "passed",
+   "detail": "cover.jpg 1280x720，标题=G1 批准文案，不入正片；帧描述已按 ㉓ 勘误（红机+大型光束步枪+金袖章，非推进翼）"
+  },
+  "subtitles": {
+   "status": "passed",
+   "detail": "subtitle-srt-check.json passed（subtitle-expert 握手）；27 cue 烧录+SRT 交付双轨同 10ms 精度"
+  },
+  "transitionAudit": {
+   "status": "passed",
+   "detail": "transition-audit.json passed：3 边界 xfade=fade 与指令 v0.2（CBBEC226…）逐参数一致，gridInvariant，母带哈希一致"
+  },
+  "bgmChainAudit": {
+   "status": "passed",
+   "detail": "bgm-chain-audit.json passed：G0 登记→素材包→计划→混音合同→装配记录哈希链全对账"
+  },
+  "checkFrames": {
+   "status": "passed",
+   "detail": "必检帧含三处转场中点（平滑中点A/B/C，目视=真混合无颗粒）+片头/字幕/章节卡/片尾 6 帧，见 G4-剪辑与渲染/检查帧/；机器绿灯不背书观感（⑧），观感由人工回放裁决"
+  }
+ },
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "7C123A2D9559281464102D8FC2B1E88C5A6636C81A2370370CDBD1AAF18508EB"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "715016D04147C77CFF85E4A2B51DF14327A5C4DCF4CD806A0FE4E42505856CCB"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "BFA8B3238A390D04DCCD603038F2A033DCD225306B840F563657574260DD56FA"
+  },
+  "subtitleSrtCheck": {
+   "path": "subtitle-srt-check.json",
+   "sha256": "962D971B323FC1C51F0BD1706762F7B18E54C64CF8F4B185E536BAFCBC758FFE"
+  },
+  "transitionAudit": {
+   "path": "transition-audit.json",
+   "sha256": "20FF26A98EE20F349EE0EE3128DA9CF270542B85C1047EE5C12AF6AFEB4AFF7A"
+  },
+  "bgmChainAudit": {
+   "path": "bgm-chain-audit.json",
+   "sha256": "AF96F5400447AAB14D398F7D4AC8994EC753847203D7BD4072E0902D282DE1EC"
+  },
+  "sourceTimecodeList": {
+   "path": "source-timecode-list.json",
+   "sha256": "4878FB63D378B61A85D1243E50DC48C2A4F096CFE09303357649A3A567790B63"
+  },
+  "editPlan": {
+   "path": "edit-plan.json",
+   "sha256": "3D683E20CD45A772A0FDC441D92E0EDEA9003B46B102EAF86EAD74E861CA6BD8"
+  },
+  "exportConfig": {
+   "path": "export-config.json",
+   "sha256": "EA809B8366FFF6AEAED37484256AB8A118DF5D90319BD6B8A3DC03FB0271FAA2"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/chapter-01.mp4",
+    "sha256": "B2A7E3F3D70F0EEB99C8DCE0902649845D122B091DA5B315B91DCE7A91EFEF3D"
+   },
+   {
+    "path": "clips/chapter-02.mp4",
+    "sha256": "EBD8DE9681B585D77DF8226E1CF96023A65159191AFD6D8ADD82FFDEDD31DB99"
+   },
+   {
+    "path": "clips/chapter-03.mp4",
+    "sha256": "572166F4526B06407A9CE7E1796118DA259CBE2F83B47D86B79995AFBABDE011"
+   },
+   {
+    "path": "clips/chapter-04.mp4",
+    "sha256": "21972638377DA6C1924B2993B95EBBD8D519A42EB8AD104675C823242095BF7E"
+   }
+  ]
+ },
+ "warnings": [
+  "duplicateSegments 无机器检测器（detector limitation）",
+  "成片综合响度 −15.4 LUFS 偏目标 1.4 LU",
+  "internal_test 分发边界：源 AMV 为第三方二创，不得对外"
+ ],
+ "humanReview": {
+  "status": "g5_pending_human_review",
+  "detail": "等待用户全片回放与 G5 卡裁决"
+ },
+ "status": "g5_pending_human_review",
+ "finishedAt": "2026-09-22T18:48:00+08:00"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "98A45EB87BE4CB00E13F1748D91A0B649FEA034CE7058FFC8C7EA7845CE82B0A",
+  "aliases": [
+    {
+      "title": "Interstellar sound space orchestral",
+      "sourceUrl": "https://freesound.org/s/518933/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:21:40Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-518933-preview.mp3",
+      "recordedAt": "2026-09-22T03:21:40Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:21:40Z",
+  "updatedAt": "2026-09-22T03:33:43Z"
+}

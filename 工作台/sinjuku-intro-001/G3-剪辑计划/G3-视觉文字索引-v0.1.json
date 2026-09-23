@@ -1,0 +1,105 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "entries": [
+  {
+   "rangeMs": [
+    0,
+    120000
+   ],
+   "observedVisuals": "新安洲红色机体出击/悬停/光束射击、战舰炮战、爆炸、谱线蓝图屏（64-80s）、残骸带、红机独镜（44s/26s）",
+   "canCarry": [
+    "N01",
+    "N02",
+    "N03",
+    "N08",
+    "N09",
+    "N12",
+    "N13",
+    "N15",
+    "N16",
+    "N25"
+   ],
+   "cannotCarry": [
+    "任何 0079 扎古/0093 阿克西斯专属画面"
+   ],
+   "subjectStatus": "mixed",
+   "risk": "水印左上"
+  },
+  {
+   "rangeMs": [
+    120000,
+    240000
+   ],
+   "observedVisuals": "红机高机动（120s）、白灰色杰斯塔被击、独角兽毁灭模式红眼头部特写、大爆炸",
+   "canCarry": [
+    "N14",
+    "N21"
+   ],
+   "cannotCarry": [
+    "目标主体专属长镜"
+   ],
+   "subjectStatus": "mixed",
+   "risk": "水印左上"
+  },
+  {
+   "rangeMs": [
+    240000,
+    360000
+   ],
+   "observedVisuals": "独角兽红框发光（240-252s）、带袖的金色袖章徽记（284-288s）、红机持大型光束步枪、战舰+红机（330-350s）、头盔驾驶员特写（352-360s）",
+   "canCarry": [
+    "N04",
+    "N05",
+    "N06",
+    "N17",
+    "N18",
+    "N19",
+    "N20"
+   ],
+   "cannotCarry": [
+    "—"
+   ],
+   "subjectStatus": "mixed",
+   "risk": "水印左上"
+  },
+  {
+   "rangeMs": [
+    360000,
+    480000
+   ],
+   "observedVisuals": "独角兽头部特写、红机光束军刀/热能斧（380s）、金色徽记（408s）、红机推进器全开正面冲锋（432-448s）、红色光束弹幕（480s）",
+   "canCarry": [
+    "N07",
+    "N10",
+    "N11",
+    "N26"
+   ],
+   "cannotCarry": [
+    "—"
+   ],
+   "subjectStatus": "mixed",
+   "risk": "水印左上"
+  },
+  {
+   "rangeMs": [
+    480000,
+    569701
+   ],
+   "observedVisuals": "红机白刃齐射特写（484-500s）、红色面部大特写（544s）、新吉翁号粉红巨体（548-556s）、蓝色光子框架之光（560-568s）、终幕残骸",
+   "canCarry": [
+    "N22",
+    "N23",
+    "N24",
+    "N27"
+   ],
+   "cannotCarry": [
+    "—"
+   ],
+   "subjectStatus": "mixed",
+   "risk": "水印左上"
+  }
+ ],
+ "basis": "fps=1/4 网格 143 帧目视（网格-01..05.jpg）"
+}

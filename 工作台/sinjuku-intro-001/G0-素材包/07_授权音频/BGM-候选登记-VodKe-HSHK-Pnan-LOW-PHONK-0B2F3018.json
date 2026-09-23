@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "VodKe; HSHK; Pnan - LOW(PHONK)",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+  "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+  "byteSize": 7132111,
+  "fileExtension": ".mp3",
+  "sourceUrl": null,
+  "license": "cleared-for-project",
+  "licenseEvidence": "工作台/sinjuku-intro-001/G0-素材包/04_授权说明.md（2026-09-22 用户 G1 末原话\"A\"明示延用 zaku-001 清权件至本项目）",
+  "attribution": "none",
+  "styleTags": [
+    "electronic",
+    "driving",
+    "dark"
+  ],
+  "retrievedAt": "2026-09-22T13:26:11+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": "G0-素材包/07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "B2F078A71ADFCCA1112B64F19BCA9CFB4C3D38690E0650C1757AC5529126D696",
+  "aliases": [
+    {
+      "title": "Jungle Break A# min 140bpm",
+      "sourceUrl": "https://freesound.org/s/813200/",
+      "provenance": "freesound_api",
+      "project": "sinjuku-intro-001",
+      "seenAt": "2026-09-22T03:35:20Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-813200-preview.mp3",
+      "recordedAt": "2026-09-22T03:35:20Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-22T03:35:20Z",
+  "updatedAt": "2026-09-22T03:35:20Z"
+}

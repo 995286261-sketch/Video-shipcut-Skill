@@ -1,0 +1,495 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "voice": "longtian_v3",
+  "voiceDisplayName": "龙甜（CosyVoice v3-flash）",
+  "model": "cosyvoice-v3-flash",
+  "voiceTier": "成品级",
+  "format": "wav",
+  "sampleRate": 24000,
+  "sentenceManifestRef": "G2-证据与口播/G2-口播句子-v0.1.json",
+  "beatBlueprintRef": "G2-证据与口播/节拍蓝图/BGM-节拍蓝图-v0.1.json",
+  "totalMeasuredMs": 178000,
+  "sentences": [
+    {
+      "sentenceId": "N01",
+      "phraseId": "P1",
+      "layoutTier": "留白",
+      "text": "U.C. 0096，战后不平静的星海——一道红色的影子再度划过，仿佛那颗彗星从未老去。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 70,
+      "estDurMs": 8570,
+      "targetEndMs": 8640,
+      "file": "G2-证据与口播/配音试听-longtian/N01-U.C._0096，.wav",
+      "measuredDurMs": 10480,
+      "measuredStartMs": 70,
+      "measuredEndMs": 10550,
+      "intentDeviationMs": 0
+    },
+    {
+      "sentenceId": "N02",
+      "phraseId": "P1",
+      "layoutTier": "留白",
+      "text": "它叫 MSN-06S 新安洲，属于那个被称为夏亚再世的人。",
+      "factRefs": [
+        "E1",
+        "E3"
+      ],
+      "targetStartMs": 9056,
+      "estDurMs": 5510,
+      "targetEndMs": 14566,
+      "file": "G2-证据与口播/配音试听-longtian/N02-它叫_MSN-06S.wav",
+      "measuredDurMs": 6880,
+      "measuredStartMs": 11050,
+      "measuredEndMs": 17930,
+      "intentDeviationMs": 1994
+    },
+    {
+      "sentenceId": "N03",
+      "phraseId": "P2",
+      "layoutTier": "推进",
+      "text": "可这台机，最初不是为任何人造的——它诞生于地球联邦的 UC 计划。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 17485,
+      "estDurMs": 6325,
+      "targetEndMs": 23810,
+      "file": "G2-证据与口播/配音试听-longtian/N03-可这台机，最初不是为.wav",
+      "measuredDurMs": 7520,
+      "measuredStartMs": 18280,
+      "measuredEndMs": 25800,
+      "intentDeviationMs": 795
+    },
+    {
+      "sentenceId": "N04",
+      "phraseId": "P2",
+      "layoutTier": "推进",
+      "text": "阿纳海姆电子公司拿它验证精神感应骨架技术，实验数据后来直接喂给了 RX-0 独角兽高达。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 24288,
+      "estDurMs": 8570,
+      "targetEndMs": 32858,
+      "file": "G2-证据与口播/配音试听-longtian/N04-阿纳海姆电子公司拿它.wav",
+      "measuredDurMs": 8880,
+      "measuredStartMs": 26150,
+      "measuredEndMs": 35030,
+      "intentDeviationMs": 1862
+    },
+    {
+      "sentenceId": "N05",
+      "phraseId": "P2",
+      "layoutTier": "推进",
+      "text": "U.C. 0094，新吉翁残党「带袖的」一场大胆抢夺，把它从验证机变成了自己的座机。",
+      "factRefs": [
+        "E1",
+        "E3"
+      ],
+      "targetStartMs": 33321,
+      "estDurMs": 8365,
+      "targetEndMs": 41686,
+      "file": "G2-证据与口播/配音试听-longtian/N05-U.C._0094，.wav",
+      "measuredDurMs": 8480,
+      "measuredStartMs": 35380,
+      "measuredEndMs": 43860,
+      "intentDeviationMs": 2059
+    },
+    {
+      "sentenceId": "N06",
+      "phraseId": "P2",
+      "layoutTier": "推进",
+      "text": "他们要的从来不只是一台高性能 MS，而是一面能收拢人心的旗。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 42028,
+      "estDurMs": 5920,
+      "targetEndMs": 47948,
+      "file": "G2-证据与口播/配音试听-longtian/N06-他们要的从来不只是一.wav",
+      "measuredDurMs": 5760,
+      "measuredStartMs": 44210,
+      "measuredEndMs": 49970,
+      "intentDeviationMs": 2182
+    },
+    {
+      "sentenceId": "N07",
+      "phraseId": "P2",
+      "layoutTier": "推进",
+      "text": "那面旗，就是赤色彗星的威光。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 48298,
+      "estDurMs": 2855,
+      "targetEndMs": 51153,
+      "file": "G2-证据与口播/配音试听-longtian/N07-那面旗，就是赤色彗星.wav",
+      "measuredDurMs": 2800,
+      "measuredStartMs": 50320,
+      "measuredEndMs": 53120,
+      "intentDeviationMs": 2022
+    },
+    {
+      "sentenceId": "N08",
+      "phraseId": "P3",
+      "layoutTier": "常规",
+      "text": "这台机的纸面相当张扬：全高 22.6 米，全备重量 56.9 吨，出力 3240 千瓦。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 51572,
+      "estDurMs": 7755,
+      "targetEndMs": 59327,
+      "file": "G2-证据与口播/配音试听-longtian/N08-这台机的纸面相当张扬.wav",
+      "measuredDurMs": 8720,
+      "measuredStartMs": 53470,
+      "measuredEndMs": 62190,
+      "intentDeviationMs": 1898
+    },
+    {
+      "sentenceId": "N09",
+      "phraseId": "P3",
+      "layoutTier": "常规",
+      "text": "有意思的是，它不挂任何浮游类精神感应武器——它的全部任务，是把 MS 单体的基本性能推到极限。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 59791,
+      "estDurMs": 9185,
+      "targetEndMs": 68976,
+      "file": "G2-证据与口播/配音试听-longtian/N09-有意思的是，它不挂任.wav",
+      "measuredDurMs": 11440,
+      "measuredStartMs": 62540,
+      "measuredEndMs": 73980,
+      "intentDeviationMs": 2749
+    },
+    {
+      "sentenceId": "N10",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "背部展开一对大型推进翼，全身布满推进器。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 69312,
+      "estDurMs": 4080,
+      "targetEndMs": 73392,
+      "file": "G2-证据与口播/配音试听-longtian/N10-背部展开一对大型推进.wav",
+      "measuredDurMs": 3840,
+      "measuredStartMs": 74180,
+      "measuredEndMs": 78020,
+      "intentDeviationMs": 4868
+    },
+    {
+      "sentenceId": "N11",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "新安洲的答案很直接：机体本身就是武器。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 73677,
+      "estDurMs": 3880,
+      "targetEndMs": 77557,
+      "file": "G2-证据与口播/配音试听-longtian/N11-新安洲的答案很直接：.wav",
+      "measuredDurMs": 4240,
+      "measuredStartMs": 78220,
+      "measuredEndMs": 82460,
+      "intentDeviationMs": 4543
+    },
+    {
+      "sentenceId": "N12",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "说到速度，要回到 U.C. 0079 的鲁姆会战。",
+      "factRefs": [
+        "E2"
+      ],
+      "targetStartMs": 77764,
+      "estDurMs": 4490,
+      "targetEndMs": 82254,
+      "file": "G2-证据与口播/配音试听-longtian/N12-说到速度，要回到_U.wav",
+      "measuredDurMs": 3920,
+      "measuredStartMs": 82660,
+      "measuredEndMs": 86580,
+      "intentDeviationMs": 4896
+    },
+    {
+      "sentenceId": "N13",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "他驾驶扎古Ⅱ杀穿会战、立功晋升少校——从那天起，有了红色彗星。",
+      "factRefs": [
+        "E2"
+      ],
+      "targetStartMs": 82408,
+      "estDurMs": 6325,
+      "targetEndMs": 88733,
+      "file": "G2-证据与口播/配音试听-longtian/N13-他驾驶扎古Ⅱ杀穿会战.wav",
+      "measuredDurMs": 6640,
+      "measuredStartMs": 86780,
+      "measuredEndMs": 93420,
+      "intentDeviationMs": 4372
+    },
+    {
+      "sentenceId": "N14",
+      "phraseId": "P5",
+      "layoutTier": "常规",
+      "text": "红色涂装与无人能及的速度，是一枚硬币的两面，共同铸成了那个称号。",
+      "factRefs": [
+        "E2",
+        "E5"
+      ],
+      "targetStartMs": 88979,
+      "estDurMs": 6530,
+      "targetEndMs": 95509,
+      "file": "G2-证据与口播/配音试听-longtian/N14-红色涂装与无人能及的.wav",
+      "measuredDurMs": 5920,
+      "measuredStartMs": 93770,
+      "measuredEndMs": 99690,
+      "intentDeviationMs": 4791
+    },
+    {
+      "sentenceId": "N15",
+      "phraseId": "P5",
+      "layoutTier": "常规",
+      "text": "U.C. 0093，身为新吉翁总帅的夏亚，把小行星阿克西斯推向地球，也与阿姆罗迎来最终决战。",
+      "factRefs": [
+        "E6"
+      ],
+      "targetStartMs": 95806,
+      "estDurMs": 9185,
+      "targetEndMs": 104991,
+      "file": "G2-证据与口播/配音试听-longtian/N15-U.C._0093，.wav",
+      "measuredDurMs": 9920,
+      "measuredStartMs": 100040,
+      "measuredEndMs": 109960,
+      "intentDeviationMs": 4234
+    },
+    {
+      "sentenceId": "N16",
+      "phraseId": "P5",
+      "layoutTier": "常规",
+      "text": "那场决战，为两人十四年的恩怨画上了一个感叹号。",
+      "factRefs": [
+        "E6"
+      ],
+      "targetStartMs": 105326,
+      "estDurMs": 4695,
+      "targetEndMs": 110021,
+      "file": "G2-证据与口播/配音试听-longtian/N16-那场决战，为两人十四.wav",
+      "measuredDurMs": 4240,
+      "measuredStartMs": 110310,
+      "measuredEndMs": 114550,
+      "intentDeviationMs": 4984
+    },
+    {
+      "sentenceId": "N17",
+      "phraseId": "P6",
+      "layoutTier": "推进",
+      "text": "U.C. 0096，带袖的重整登场星海，冲在最前面的正是那台红色机体。",
+      "factRefs": [
+        "E1",
+        "E3"
+      ],
+      "targetStartMs": 110481,
+      "estDurMs": 6940,
+      "targetEndMs": 117421,
+      "file": "G2-证据与口播/配音试听-longtian/N17-U.C._0096，.wav",
+      "measuredDurMs": 6400,
+      "measuredStartMs": 114900,
+      "measuredEndMs": 121300,
+      "intentDeviationMs": 4419
+    },
+    {
+      "sentenceId": "N18",
+      "phraseId": "P6",
+      "layoutTier": "推进",
+      "text": "驾驶者自称弗尔·弗朗特——红色座机、面具、华丽的作战风格。",
+      "factRefs": [
+        "E3"
+      ],
+      "targetStartMs": 117864,
+      "estDurMs": 5920,
+      "targetEndMs": 123784,
+      "file": "G2-证据与口播/配音试听-longtian/N18-驾驶者自称弗尔·弗朗.wav",
+      "measuredDurMs": 6560,
+      "measuredStartMs": 121650,
+      "measuredEndMs": 128210,
+      "intentDeviationMs": 3786
+    },
+    {
+      "sentenceId": "N19",
+      "phraseId": "P6",
+      "layoutTier": "推进",
+      "text": "人人都说他是夏亚再世，他自己却说，只是一个「容器」。",
+      "factRefs": [
+        "E3"
+      ],
+      "targetStartMs": 124111,
+      "estDurMs": 5305,
+      "targetEndMs": 129416,
+      "file": "G2-证据与口播/配音试听-longtian/N19-人人都说他是夏亚再世.wav",
+      "measuredDurMs": 5360,
+      "measuredStartMs": 128560,
+      "measuredEndMs": 133920,
+      "intentDeviationMs": 4449
+    },
+    {
+      "sentenceId": "N20",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "被夺走的验证机，此刻成了希望的旗舰。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 129846,
+      "estDurMs": 3675,
+      "targetEndMs": 133521,
+      "file": "G2-证据与口播/配音试听-longtian/N20-被夺走的验证机，此刻.wav",
+      "measuredDurMs": 3760,
+      "measuredStartMs": 134120,
+      "measuredEndMs": 137880,
+      "intentDeviationMs": 4274
+    },
+    {
+      "sentenceId": "N21",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "精神感应骨架、红色涂装、彗星之名。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 133677,
+      "estDurMs": 3470,
+      "targetEndMs": 137147,
+      "file": "G2-证据与口播/配音试听-longtian/N21-精神感应骨架、红色涂.wav",
+      "measuredDurMs": 3440,
+      "measuredStartMs": 138080,
+      "measuredEndMs": 141520,
+      "intentDeviationMs": 4403
+    },
+    {
+      "sentenceId": "N22",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "对联邦军，它产生了实打实的心理压力。",
+      "factRefs": [
+        "E1"
+      ],
+      "targetStartMs": 137485,
+      "estDurMs": 3675,
+      "targetEndMs": 141160,
+      "file": "G2-证据与口播/配音试听-longtian/N22-对联邦军，它产生了实.wav",
+      "measuredDurMs": 4240,
+      "measuredStartMs": 141720,
+      "measuredEndMs": 145960,
+      "intentDeviationMs": 4235
+    },
+    {
+      "sentenceId": "N23",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "最后一战，他搭乘新吉翁号，与独角兽正面对决。",
+      "factRefs": [
+        "E3"
+      ],
+      "targetStartMs": 141317,
+      "estDurMs": 4490,
+      "targetEndMs": 145807,
+      "file": "G2-证据与口播/配音试听-longtian/N23-最后一战，他搭乘新吉.wav",
+      "measuredDurMs": 4480,
+      "measuredStartMs": 146160,
+      "measuredEndMs": 150640,
+      "intentDeviationMs": 4843
+    },
+    {
+      "sentenceId": "N24",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "精神与夏亚融合，把未来托付给少年之后，他离去了。",
+      "factRefs": [
+        "E3"
+      ],
+      "targetStartMs": 145937,
+      "estDurMs": 4900,
+      "targetEndMs": 150837,
+      "file": "G2-证据与口播/配音试听-longtian/N24-精神与夏亚融合，把未.wav",
+      "measuredDurMs": 4960,
+      "measuredStartMs": 150840,
+      "measuredEndMs": 155800,
+      "intentDeviationMs": 4903
+    },
+    {
+      "sentenceId": "N25",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "是本人，还是继承者？",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 151139,
+      "estDurMs": 2040,
+      "targetEndMs": 153179,
+      "file": "G2-证据与口播/配音试听-longtian/N25-是本人，还是继承者？.wav",
+      "measuredDurMs": 2240,
+      "measuredStartMs": 156000,
+      "measuredEndMs": 158240,
+      "intentDeviationMs": 4861
+    },
+    {
+      "sentenceId": "N26",
+      "phraseId": "P7",
+      "layoutTier": "快切",
+      "text": "新安洲，把「红色彗星」的答案留给了整片星海。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 153321,
+      "estDurMs": 4490,
+      "targetEndMs": 157811,
+      "file": "G2-证据与口播/配音试听-longtian/N26-新安洲，把「红色彗星.wav",
+      "measuredDurMs": 4160,
+      "measuredStartMs": 158440,
+      "measuredEndMs": 162600,
+      "intentDeviationMs": 5119
+    },
+    {
+      "sentenceId": "N27",
+      "phraseId": "P8",
+      "layoutTier": "留白",
+      "text": "UC 计划的机体、残党的旗舰、传说的复刻、解不开的谜——叠加在一起，才只是这一抹红。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 157989,
+      "estDurMs": 8365,
+      "targetEndMs": 166354,
+      "file": "G2-证据与口播/配音试听-longtian/N27-UC_计划的机体、残.wav",
+      "measuredDurMs": 9280,
+      "measuredStartMs": 163100,
+      "measuredEndMs": 172380,
+      "intentDeviationMs": 5111
+    },
+    {
+      "sentenceId": "N28",
+      "phraseId": "P8",
+      "layoutTier": "留白",
+      "text": "如果这抹红还让你心动，点赞关注走一波，下期继续聊星海。",
+      "factRefs": [
+        "CTA"
+      ],
+      "targetStartMs": 166975,
+      "estDurMs": 5510,
+      "targetEndMs": 172485,
+      "file": "G2-证据与口播/配音试听-longtian/N28-如果这抹红还让你心动.wav",
+      "measuredDurMs": 5120,
+      "measuredStartMs": 172880,
+      "measuredEndMs": 178000,
+      "intentDeviationMs": 5905
+    }
+  ]
+}

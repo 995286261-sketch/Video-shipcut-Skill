@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-22T13:33:00+08:00",
+  "reviewCardRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-方向简报.json",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-方向简报.md",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-方向输入-v0.1.json",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-方向确认记录.md",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/BGM-检索词-v0.2.json",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/BGM-推荐排序-v0.3.json",
+    "工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/BGM-试听笔记回显-v0.2.md",
+    "工作台/sinjuku-intro-001/G1-创作方向/BGM-分析回显-LOW-PHONK-0B2F3018.md",
+    "工作台/sinjuku-intro-001/G1-创作方向/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+    "工作台/sinjuku-intro-001/G0-素材包/07_授权音频/BGM-候选登记-VodKe-HSHK-Pnan-LOW-PHONK-0B2F3018.json"
+  ],
+  "checklist": [
+    {
+      "id": "direction_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "claims_and_boundaries",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-方向简报.json"
+    },
+    {
+      "id": "direction_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md"
+    }
+  ]
+}

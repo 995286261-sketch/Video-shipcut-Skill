@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "sinjuku-intro-001",
+  "node": "G3",
+  "createdAt": "2026-09-22",
+  "decisionSource": "G3 S 卡（新规：带默认推荐，用户直接确认）",
+  "userReplyVerbatim": "A A 是，然后我希望是以后选选项能自动推荐一个，这样用户之后直接确认即可，就像前面几个节点那样，然后默认是缩短时长而不是补素材",
+  "targetSubject": {
+    "canonicalName": "MSN-06S 新安洲（Sinanju，弗尔·弗朗特驾驶形态，带袖的旗机）",
+    "userConfirmed": true,
+    "confirmedBy": "用户（2026-09-22 S1 选 A：仅新安洲本体为目标主体）",
+    "confirmedAt": "2026-09-22",
+    "basisEvidenceRefs": [
+      "工作台/sinjuku-intro-001/G2-证据与口播/事实依据/证据摘要-v0.1.md",
+      "工作台/sinjuku-intro-001/G3-剪辑计划/G3-S卡裁决记录.md"
+    ],
+    "identificationRules": [
+      "判定 confirmed 须同时满足：红色涂装大型 MS；金色袖章装饰/面部绿色传感器/大型光束步枪至少两项可辨；UC0096 战场语境",
+      "仅红色机体剪影无法排除其他红色 MS（如夏亚扎古）时 → uncertain，不自动入选",
+      "仅人物无机体 → person_only，不自动入选（N18/N19 舱内句按语境画面承载，editingUse 标注）"
+    ],
+    "exclusionRules": [
+      "RX-0 独角兽（含毁灭模式红框发光）= 非目标主体，仅语境（N04/N12/N20 承载）",
+      "RGM-96X 杰斯塔等联邦白色系 = 非目标主体，仅语境（N21 承载）",
+      "NZ-666 新吉翁号（粉红巨体）= 非目标主体，仅语境（N22 承载）",
+      "带袖的金色袖章徽记 = 目标主体所属组织象征物，可承载 N05/N06/N20 旗帜类抽象结论",
+      "战舰/残骸带/爆炸 = 战争氛围语境，非目标主体"
+    ]
+  },
+  "sufficiencyFallback": {
+    "preApproved": "shorten_output",
+    "approvedBy": "用户（2026-09-22 S3 原话「是」）",
+    "approvedAt": "2026-09-22",
+    "limits": "只允许压缩语境留白；禁静帧延长/循环/无意义慢放/无关剧情填充；删改已批口播文本必须回 G2 重批；最终八列回显与 确认G3 不可免除"
+  },
+  "candidateVerificationRule": "逐候选以起/中/终验证帧+区间内 scdet 子镜头探针对照 identificationRules 判定 identityStatus；uncertain/mixed/person_only/not_present 不自动入选，只计入不可用素材统计；排他性主张须区间内全部探针满足；快切混剪（647 切点）区间默认按 mixed 语境处理，confirmed 专属镜头仅授予探针全绿的短区间",
+  "downstream": "视觉分析按本规则输出 identityStatus；语境画面入选时 editingUse 必须注明『语境（非目标主体）』"
+}

@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommendation",
+  "profile": {
+    "schemaVersion": "0.1",
+    "purpose": "bgm_recommend_profile",
+    "project": "sinjuku-intro-001",
+    "targetDurationSec": 210,
+    "bpmRange": [
+      110.7,
+      135.4
+    ],
+    "minSegments": 3,
+    "styleTags": [
+      "epic",
+      "dark",
+      "dramatic",
+      "driving"
+    ],
+    "distributionBoundary": "internal_test",
+    "styleBrief": {
+      "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+      "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+      "bpm": 123.05,
+      "bpmRange": [
+        110.7,
+        135.4
+      ],
+      "energyShape": [
+        0.894,
+        0.795,
+        0.74,
+        0.989,
+        0.848,
+        0.925,
+        0.843,
+        0.769,
+        0.956,
+        0.815,
+        0.907,
+        0.915,
+        1.0,
+        0.968,
+        0.924,
+        0.584
+      ],
+      "segmentCount": 8,
+      "note": "简报数值系参考片解说混音后事实（非乐曲本体），用于形状锚定；风格词以检索词卡推导依据为准。简报自 psycho-zaku-intro-002 缓存复用（同 SHA 参考片），provenance 见本项目 G1-参考视频分析 manifest。"
+    },
+    "basis": {
+      "preference": "BGM的话你从 freesound 找",
+      "themeRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-方向输入-v0.1.json",
+      "styleBriefRef": "工作台/sinjuku-intro-001/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json",
+      "termsFile": "工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/BGM-检索词-v0.1.json"
+    }
+  },
+  "minScore": 0.7,
+  "ranked": [],
+  "passing": [],
+  "unanalyzed": [
+    {
+      "title": "Epic Orchestral Cue",
+      "freesoundId": 449202,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic Orchestral Strings",
+      "freesoundId": 511196,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic_Heroic_Orchestral_Dramatic.mp3",
+      "freesoundId": 423499,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Arctic Orchestral Cue",
+      "freesoundId": 449722,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Interstellar sound space orchestral",
+      "freesoundId": 518933,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767844,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Dream alive (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767843,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767842,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Dark Cave (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767841,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Dark Castle (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767840,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Bravery  (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767839,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Brave Fight (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767838,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767837,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Battle Of Avalon (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767836,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767835,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - An Epic Journey (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767834,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Inspiring Orchestral Music with Majestic and Uplifting Themes",
+      "freesoundId": 748406,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "SunixMuz - Fountain of Life (Opening, trailer, epic music, Free CCBY)",
+      "freesoundId": 767845,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic trailer action music",
+      "freesoundId": 575780,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Orchestral Outro Theme",
+      "freesoundId": 569780,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Orchestral-B1.ogg",
+      "freesoundId": 32079,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Cinematic Dramatic Buildup",
+      "freesoundId": 456102,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark night city Keys Piano Music Dramatic Cinematic",
+      "freesoundId": 583487,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Windy Dramatic Drone Cinematic Atmo.wav",
+      "freesoundId": 585148,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Drone Synth Dark Dramatic Atmo Background Cinematic",
+      "freesoundId": 585150,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Sad Mood Orchestra Synth Strings Drone Dramatic Thriller Cinematic Music Surround.wav",
+      "freesoundId": 610534,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Oidz Drop, Dramatic, A.wav",
+      "freesoundId": 410895,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Half Past Murder Time - Dark Cinematic Tension",
+      "freesoundId": 560888,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Cinematic Story Intro",
+      "freesoundId": 456270,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Cinematic Emotion",
+      "freesoundId": 757966,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Winterstorm I: A Cinematic and ambient soundscape",
+      "freesoundId": 541062,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Violin - Western",
+      "freesoundId": 792835,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Cinematic Piano for Emotional Scenes",
+      "freesoundId": 769382,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Cinematic Strings and Piano",
+      "freesoundId": 789277,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "\"BRAAAM\" Cinematic Horn 88200Hz",
+      "freesoundId": 581842,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Hopeful Piano/String Cinematic Ambience Drama Background Music",
+      "freesoundId": 798705,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Winterstorm II: A Cinematic and ambient soundscape",
+      "freesoundId": 552032,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "dramatic production logo",
+      "freesoundId": 447522,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Movie Action Trailer Marimba Female Male Choir Atmo Music Cinematic 120Bpm Mastered.wav",
+      "freesoundId": 622233,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic trailer action music 2",
+      "freesoundId": 575930,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Trailer Impact",
+      "freesoundId": 479960,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Intense-Dark-Guitar.mp3",
+      "freesoundId": 91084,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Haunting melody",
+      "freesoundId": 587004,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Deadly illusions",
+      "freesoundId": 627241,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Intense Bell Resonance",
+      "freesoundId": 745097,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Shepard Tone 3",
+      "freesoundId": 404910,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Horror Ambience",
+      "freesoundId": 789280,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic Dark Trailer Soundscape 001",
+      "freesoundId": 822327,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark psychosis",
+      "freesoundId": 807387,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Loop. An intense cinematic track for an active episode of your movie",
+      "freesoundId": 716157,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Pulsating Atmosphere",
+      "freesoundId": 757962,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark and Atmospheric Soundscapes",
+      "freesoundId": 747937,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Strings Music 02",
+      "freesoundId": 507741,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Epic Dark Trailer Soundscape 002",
+      "freesoundId": 822331,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Intense Horror Build Up",
+      "freesoundId": 747622,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Dark Pulse",
+      "freesoundId": 789282,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "INTENSE AMBEINT RHYTHMIC PULSE.WAV",
+      "freesoundId": 203725,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Intense Synth Instrumental [105 bpm]",
+      "freesoundId": 706389,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Intense Dark Action Orchestra",
+      "freesoundId": 475592,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "InsideATornado.mp3",
+      "freesoundId": 251637,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Hunted by the past",
+      "freesoundId": 803376,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Perfect C.A.R.E.Y. French 2015 (7) (A#) (Aries, Athletic, Amazing, Amazon, Appeal, Artistic, Audible, Ambient).WAV",
+      "freesoundId": 266943,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    }
+  ],
+  "sufficiency": {
+    "passing": 0,
+    "minExpected": 3,
+    "enough": false,
+    "gapAction": "候选不足：向用户呈现 补检索 / 放宽画像 / 缩短成品 三项，不得自行拼凑"
+  }
+}

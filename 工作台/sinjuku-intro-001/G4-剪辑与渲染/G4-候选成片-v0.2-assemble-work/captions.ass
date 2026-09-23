@@ -1,0 +1,42 @@
+[Script Info]
+Title: sinjuku-intro-001 G3 口播主字幕（v0.4 连续网格）
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,PingFang SC,43,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,2,40,40,115,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue:  0,0:00:03.50,0:00:10.55,Narration,,0,0,0,,U.C. 0096，战后不平静的星海——一道红色的影子再度划过，\N仿佛那颗彗星从未老去。
+Dialogue:  0,0:00:10.98,0:00:17.86,Narration,,0,0,0,,它叫 MSN-06S 新安洲，属于那个被称为夏亚再世的人。
+Dialogue:  0,0:00:18.32,0:00:25.84,Narration,,0,0,0,,可这台机，\N最初不是为任何人造的——它诞生于地球联邦的 UC 计划。
+Dialogue:  0,0:00:26.21,0:00:35.09,Narration,,0,0,0,,阿纳海姆电子公司拿它验证精神感应骨架技术，\N实验数据后来直接喂给了 RX-0 独角兽高达。
+Dialogue:  0,0:00:35.50,0:00:43.98,Narration,,0,0,0,,U.C. 0094，新吉翁残党「带袖的」一场大胆抢夺，\N把它从验证机变成了自己的座机。
+Dialogue:  0,0:00:44.48,0:00:50.24,Narration,,0,0,0,,他们要的从来不只是一台高性能 MS，\N而是一面能收拢人心的旗。
+Dialogue:  0,0:00:50.57,0:00:53.37,Narration,,0,0,0,,那面旗，就是赤色彗星的威光。
+Dialogue:  0,0:00:53.80,0:01:02.52,Narration,,0,0,0,,这台机的纸面相当张扬：全高 22.6 米，\N全备重量 56.9 吨，出力 3240 千瓦。
+Dialogue:  0,0:01:03.01,0:01:09.73,Narration,,0,0,0,,有意思的是，它不挂一件浮游武器——它的任务，\N就是把机体本身推向极限。
+Dialogue:  0,0:01:10.12,0:01:13.96,Narration,,0,0,0,,背部展开一对大型推进翼，全身布满推进器。
+Dialogue:  0,0:01:14.23,0:01:18.13,Narration,,0,0,0,,新安洲的答案很直接：机体本身就是武器。
+Dialogue:  0,0:01:21.13,0:01:23.73,Narration,,0,0,0,,说到速度，那个称号要回到 U.C. 0079 的战火星海。
+Dialogue:  0,0:01:24.03,0:01:32.59,Narration,,0,0,0,,鲁姆会战中，他以一道红色的残影杀穿舰队——从那天起，\N有了「红色彗星」。
+Dialogue:  0,0:01:33.06,0:01:38.98,Narration,,0,0,0,,红色涂装与无人能及的速度，\N是一枚硬币的两面，共同铸成了那个称号。
+Dialogue:  0,0:01:39.63,0:01:45.07,Narration,,0,0,0,,后来的阿克西斯事件与最终决战，让他从对手变成了传说。
+Dialogue:  0,0:01:45.58,0:01:50.06,Narration,,0,0,0,,战争的尘埃落定，红色彗星的传说却没有褪色。
+Dialogue:  0,0:01:50.48,0:01:56.88,Narration,,0,0,0,,U.C. 0096，带袖的重整登场星海，\N冲在最前面的正是那台红色机体。
+Dialogue:  0,0:01:57.30,0:02:03.86,Narration,,0,0,0,,驾驶者自称弗尔·弗朗特——红色座机、面具、华丽的作战风格。
+Dialogue:  0,0:02:04.41,0:02:04.89,Narration,,0,0,0,,人人都说他是夏亚再世，他自己却说，只是一个「容器」。
+Dialogue:  0,0:02:07.89,0:02:09.77,Narration,,0,0,0,,人人都说他是夏亚再世，他自己却说，只是一个「容器」。
+Dialogue:  0,0:02:10.12,0:02:13.56,Narration,,0,0,0,,精神感应骨架、红色涂装、彗星之名。
+Dialogue:  0,0:02:13.93,0:02:18.17,Narration,,0,0,0,,对联邦军，它产生了实打实的心理压力。
+Dialogue:  0,0:02:18.29,0:02:22.77,Narration,,0,0,0,,最后一战，他搭乘新吉翁号，与独角兽正面对决。
+Dialogue:  0,0:02:22.94,0:02:27.90,Narration,,0,0,0,,精神与夏亚融合，把未来托付给少年之后，他离去了。
+Dialogue:  0,0:02:28.12,0:02:30.36,Narration,,0,0,0,,是本人，还是继承者？
+Dialogue:  0,0:02:30.58,0:02:34.74,Narration,,0,0,0,,新安洲，把「红色彗星」的答案留给了整片星海。
+Dialogue:  0,0:02:35.20,0:02:44.48,Narration,,0,0,0,,UC 计划的机体、残党的旗舰、传说的复刻、\N解不开的谜——叠加在一起，才只是这一抹红。
+Dialogue:  0,0:02:45.04,0:02:50.16,Narration,,0,0,0,,如果这抹红还让你心动，点赞关注走一波，下期继续聊星海。

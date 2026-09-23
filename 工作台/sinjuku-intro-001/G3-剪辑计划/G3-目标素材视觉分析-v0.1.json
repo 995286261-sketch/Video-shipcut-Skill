@@ -1,0 +1,113 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "purpose": "visual_analysis_manifest_grid_layer",
+ "cacheKey": {
+  "assetId": "source-02-b9f9377f",
+  "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+  "scope": "full",
+  "strategy": "scdet(0.35) cuts + 4s grid (143 frames, 5 tiled sheets)",
+  "model": "host-vision (ZCode 主模型目视)",
+  "promptVersion": "g3-visual-ledger-v1"
+ },
+ "detectorStats": {
+  "scdetThreshold": 0.35,
+  "cuts": 647,
+  "avgShotSec": 0.88,
+  "note": "快切混剪（N8㉓同型）；网格层用于区域地图，入选区间另跑镜头层子镜头探针"
+ },
+ "status": "completed",
+ "analysisScope": "full（scdet 阈值 0.35 检出 647 切点 + fps=1/4 网格 143 帧全片目视；候选区间另跑镜头层子镜头探针）",
+ "regionMap": [
+  {
+   "rangeMs": [
+    0,
+    120000
+   ],
+   "content": "新安洲红色机体出击/光束射击、战舰炮战、爆炸、驾驶舱白衣人员、机体谱线蓝图屏（约68-80s 两帧）、蓝/红光束对撞、残骸带"
+  },
+  {
+   "rangeMs": [
+    120000,
+    240000
+   ],
+   "content": "新安洲头部/全身特写、对白色杰斯塔系近战、蓝色推进光、独角兽毁灭模式红眼头部特写、大爆炸"
+  },
+  {
+   "rangeMs": [
+    240000,
+    360000
+   ],
+   "content": "新安洲 vs RX-0 独角兽（毁灭模式红框发光）大战、带袖的金色袖章徽记特写（约288s）、绿色驾驶舱舱体、红色机体持大型光束步枪冲锋正面镜、约356s 头盔驾驶员面部特写（绿光）"
+  },
+  {
+   "rangeMs": [
+    360000,
+    480000
+   ],
+   "content": "独角兽头部特写（绿眼红框）、新安洲光束军刀/热能斧、金色袖章徽记再现（约408s）、红色机体推进器全开正面冲锋镜（约432-448s）、战舰红色光束弹幕"
+  },
+  {
+   "rangeMs": [
+    480000,
+    569701
+   ],
+   "content": "新安洲红色面部大特写（约552s）、新吉翁号（粉红巨体、精神感应框绿光）登场（约556-560s）、残骸/爆炸终幕、蓝色光子框架之光（约580s 处即约9:40 前）"
+  }
+ ],
+ "identityNotes": [
+  "红色大型光束步枪+金色袖章装饰+面部绿色传感器 = 新安洲（confirmed 判据）",
+  "白色/红发光骨架独角兽、白灰色杰斯塔系、粉红新吉翁号 = 非目标主体（语境可用，按 S 卡规则定）",
+  "全片左上角烧录 bilibili 频道水印『shini都文玩鸭子』——标题/信息卡车道必须避开左上；未发现底部烧录对白字幕",
+  "无 0079 扎古/鲁姆、无 0093 阿克西斯/沙扎比画面（N12–N16 直接证据缺口，见 S 卡）"
+ ],
+ "frames": "视觉分析关键帧/网格-01..05.jpg（fps=1/4, 480px tile 6x5）",
+ "warnings": [
+  "源为二次创作 AMV（B站UP主剪辑），画面素材版权=原作品方；本片分发=仅内部测试",
+  "机器转写与画面无对齐关系（源音轨为 AMV 配乐，原声策略=排除）"
+ ],
+ "targetAssets": [
+  {
+   "assetId": "source-02-b9f9377f",
+   "sha256": "9baec0091a55fe3e69b5099a179335db96e5e34071975021acb154c1a8241a42",
+   "keyframes": [
+    {
+     "sourceMs": 60000,
+     "analysisStatus": "completed",
+     "identityStatus": "mixed",
+     "observedVisuals": "红机出击/光束射击、战舰炮战、爆炸、驾驶舱人员、蓝图屏（75–80s）、残骸带、红机独镜",
+     "frameRef": "工作台/sinjuku-intro-001/G3-剪辑计划/视觉分析关键帧/网格-01.jpg"
+    },
+    {
+     "sourceMs": 180000,
+     "analysisStatus": "completed",
+     "identityStatus": "mixed",
+     "observedVisuals": "红机头/全身特写、对白色杰斯塔近战、蓝推进光、独角兽红眼特写、大爆炸",
+     "frameRef": "工作台/sinjuku-intro-001/G3-剪辑计划/视觉分析关键帧/网格-02.jpg"
+    },
+    {
+     "sourceMs": 300000,
+     "analysisStatus": "completed",
+     "identityStatus": "mixed",
+     "observedVisuals": "独角兽红框（252–256s）、金袖章徽记、红机持大型步枪、战舰+红机、头盔驾驶员特写",
+     "frameRef": "工作台/sinjuku-intro-001/G3-剪辑计划/视觉分析关键帧/网格-03.jpg"
+    },
+    {
+     "sourceMs": 420000,
+     "analysisStatus": "completed",
+     "identityStatus": "mixed",
+     "observedVisuals": "独角兽头特写、红机军刀/斧、金徽记、红机推进翼展开冲锋（434–439s）、红色弹幕",
+     "frameRef": "工作台/sinjuku-intro-001/G3-剪辑计划/视觉分析关键帧/网格-04.jpg"
+    },
+    {
+     "sourceMs": 525000,
+     "analysisStatus": "completed",
+     "identityStatus": "mixed",
+     "observedVisuals": "红机白刃+荚舱（498–509s）、红色面部大特写（544s）、新吉翁号粉红巨体（548–556s）、蓝光（560–568s）",
+     "frameRef": "工作台/sinjuku-intro-001/G3-剪辑计划/视觉分析关键帧/网格-05.jpg"
+    }
+   ]
+  }
+ ]
+}

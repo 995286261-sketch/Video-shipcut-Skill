@@ -1,0 +1,55 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G5",
+ "purpose": "check_frames_manifest",
+ "master": "final-video.mp4",
+ "frames": [
+  {
+   "file": "封面后首帧.jpg",
+   "checkpoint": "0.100s 封面后首帧（seg-01 黑雾开场）",
+   "sha256": "61920BEFE783089C83B4B3535E73A6E2BA9F112E3C6E33862A1567CC10F26EE3"
+  },
+  {
+   "file": "片头标题卡.jpg",
+   "checkpoint": "1.750s 片头标题卡（上部车道，Songti 无豆腐块）",
+   "sha256": "D4DE1893B1F096E0356F04F56FCB62119DACE1991CEA2527FEF9F44657DC393B"
+  },
+  {
+   "file": "字幕-常规句.jpg",
+   "checkpoint": "45.000s N06 两行 cue（含半角 MS）",
+   "sha256": "CC32AE76F000D53376E81491E105AC2D0FE22CD257EAD7851CF22EF8D133010D"
+  },
+  {
+   "file": "章节卡2.jpg",
+   "checkpoint": "79.500s chapter-02 卡「红色彗星之名」",
+   "sha256": "53E962F3DEF4208BD1AA356754426E68EF9ED08A9B82840AA57E868B3E51E690"
+  },
+  {
+   "file": "字幕-快切句.jpg",
+   "checkpoint": "137.000s N21 单行 cue",
+   "sha256": "E9D41FFA70AEAEB910C0791C5C67B970503E78B164EE945B2DC68553C4D4D84C"
+  },
+  {
+   "file": "片尾CTA.jpg",
+   "checkpoint": "169.000s 片尾 CTA cue（网格不变性同位核对）",
+   "sha256": "9687BAD86DE9A11A8AFC9BDA80E93536BFAD6FC0026F4FD3841DB124B13F578D"
+  },
+  {
+   "file": "平滑中点A-14to15.jpg",
+   "checkpoint": "99.311s 叠化A中点=平滑双影（红机肩甲↔红机+步枪）",
+   "sha256": "2D84D3410CD4C918F881B58289136715B75E46CA78B0F3E5EBA2E30E0DE41009"
+  },
+  {
+   "file": "平滑中点B-16to17.jpg",
+   "checkpoint": "110.271s 叠化B中点=平滑双影（爆闪↔红机+硝烟）",
+   "sha256": "1F3A91D5F79C94213837134B103D0C0FA6D5E348DDFB11E9C4FADF9C6CCB14FF"
+  },
+  {
+   "file": "平滑中点C-26to27.jpg",
+   "checkpoint": "164.764s 叠化C中点=平滑双影（步枪蓝光↔战舰甲板）",
+   "sha256": "04EE0D40A4C80CFFE2F2C1AECDAD213EDD2DFBAA3584F260AB75CD4B8A5B65BA"
+  }
+ ],
+ "verdict": "9/9 目视通过（编排视觉检查；机器绿灯不背书观感，观感由用户回放裁决）"
+}

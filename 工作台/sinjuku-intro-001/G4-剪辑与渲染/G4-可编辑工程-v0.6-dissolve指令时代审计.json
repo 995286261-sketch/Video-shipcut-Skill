@@ -1,0 +1,1153 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "sinjuku-intro-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json",
+  "inputEvidence": "工作台/sinjuku-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 27,
+  "timelineDurationMs": 170167,
+  "targetDurationMs": 180000,
+  "durationDeltaMs": -9833,
+  "targetFps": 30,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 0,
+        "endMs": 10766,
+        "durationMs": 10766
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 10766,
+        "durationMs": 10766
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 0,
+        "endMs": 10766,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 2,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 338000,
+        "endMs": 345326,
+        "durationMs": 7326
+      },
+      "timeline": {
+        "startMs": 10766,
+        "endMs": 18092,
+        "durationMs": 7326
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 338000,
+        "endMs": 345326,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 3,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 74771,
+        "endMs": 82707,
+        "durationMs": 7936
+      },
+      "timeline": {
+        "startMs": 18092,
+        "endMs": 26028,
+        "durationMs": 7936
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 74771,
+        "endMs": 82707,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 4,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 260313,
+        "endMs": 269584,
+        "durationMs": 9271
+      },
+      "timeline": {
+        "startMs": 26028,
+        "endMs": 35299,
+        "durationMs": 9271
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 260313,
+        "endMs": 269584,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-05",
+      "order": 5,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 317796,
+        "endMs": 326733,
+        "durationMs": 8937
+      },
+      "timeline": {
+        "startMs": 35299,
+        "endMs": 44236,
+        "durationMs": 8937
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 317796,
+        "endMs": 326733,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-06",
+      "order": 6,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 288227,
+        "endMs": 294402,
+        "durationMs": 6175
+      },
+      "timeline": {
+        "startMs": 44236,
+        "endMs": 50411,
+        "durationMs": 6175
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 288227,
+        "endMs": 294402,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-07",
+      "order": 7,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 406838,
+        "endMs": 410014,
+        "durationMs": 3176
+      },
+      "timeline": {
+        "startMs": 50411,
+        "endMs": 53587,
+        "durationMs": 3176
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 406838,
+        "endMs": 410014,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 8,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 493036,
+        "endMs": 502219,
+        "durationMs": 9183
+      },
+      "timeline": {
+        "startMs": 53587,
+        "endMs": 62770,
+        "durationMs": 9183
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 493036,
+        "endMs": 502219,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-09",
+      "order": 9,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 385751,
+        "endMs": 392912,
+        "durationMs": 7161
+      },
+      "timeline": {
+        "startMs": 62770,
+        "endMs": 69931,
+        "durationMs": 7161
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 385751,
+        "endMs": 392912,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-10",
+      "order": 10,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 434600,
+        "endMs": 438768,
+        "durationMs": 4168
+      },
+      "timeline": {
+        "startMs": 69931,
+        "endMs": 74099,
+        "durationMs": 4168
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 434600,
+        "endMs": 438768,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-11",
+      "order": 11,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 392912,
+        "endMs": 397477,
+        "durationMs": 4565
+      },
+      "timeline": {
+        "startMs": 74099,
+        "endMs": 78664,
+        "durationMs": 4565
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 392912,
+        "endMs": 397477,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-12",
+      "order": 12,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 10766,
+        "endMs": 15986,
+        "durationMs": 5220
+      },
+      "timeline": {
+        "startMs": 78664,
+        "endMs": 83884,
+        "durationMs": 5220
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 10766,
+        "endMs": 15986,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-13",
+      "order": 13,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 15986,
+        "endMs": 24931,
+        "durationMs": 8945
+      },
+      "timeline": {
+        "startMs": 83884,
+        "endMs": 92829,
+        "durationMs": 8945
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 15986,
+        "endMs": 24931,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-14",
+      "order": 14,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 125000,
+        "endMs": 131482,
+        "durationMs": 6482
+      },
+      "timeline": {
+        "startMs": 92829,
+        "endMs": 99311,
+        "durationMs": 6482
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 125000,
+        "endMs": 131482,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 200
+      },
+      "output": {
+        "filename": "seg-014.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-15",
+      "order": 15,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 96000,
+        "endMs": 102018,
+        "durationMs": 6018
+      },
+      "timeline": {
+        "startMs": 99311,
+        "endMs": 105329,
+        "durationMs": 6018
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 96000,
+        "endMs": 102018,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 200,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-015.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-16",
+      "order": 16,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 44000,
+        "endMs": 48942,
+        "durationMs": 4942
+      },
+      "timeline": {
+        "startMs": 105329,
+        "endMs": 110271,
+        "durationMs": 4942
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 44000,
+        "endMs": 48942,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-016.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-17",
+      "order": 17,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 345565,
+        "endMs": 352388,
+        "durationMs": 6823
+      },
+      "timeline": {
+        "startMs": 110271,
+        "endMs": 117094,
+        "durationMs": 6823
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 345565,
+        "endMs": 352388,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-017.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-18",
+      "order": 18,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 352388,
+        "endMs": 359434,
+        "durationMs": 7046
+      },
+      "timeline": {
+        "startMs": 117094,
+        "endMs": 124140,
+        "durationMs": 7046
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 352388,
+        "endMs": 359434,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-018.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-19",
+      "order": 19,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 359434,
+        "endMs": 365243,
+        "durationMs": 5809
+      },
+      "timeline": {
+        "startMs": 124140,
+        "endMs": 129949,
+        "durationMs": 5809
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 359434,
+        "endMs": 365243,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-019.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-20",
+      "order": 20,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 509500,
+        "endMs": 513300,
+        "durationMs": 3800
+      },
+      "timeline": {
+        "startMs": 129949,
+        "endMs": 133749,
+        "durationMs": 3800
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 509500,
+        "endMs": 513300,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-020.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-21",
+      "order": 21,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 136000,
+        "endMs": 140486,
+        "durationMs": 4486
+      },
+      "timeline": {
+        "startMs": 133749,
+        "endMs": 138235,
+        "durationMs": 4486
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 136000,
+        "endMs": 140486,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-021.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-22",
+      "order": 22,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 548000,
+        "endMs": 552625,
+        "durationMs": 4625
+      },
+      "timeline": {
+        "startMs": 138235,
+        "endMs": 142860,
+        "durationMs": 4625
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 548000,
+        "endMs": 552625,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-022.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-23",
+      "order": 23,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 560000,
+        "endMs": 565151,
+        "durationMs": 5151
+      },
+      "timeline": {
+        "startMs": 142860,
+        "endMs": 148011,
+        "durationMs": 5151
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 560000,
+        "endMs": 565151,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-023.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-24",
+      "order": 24,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 544000,
+        "endMs": 546459,
+        "durationMs": 2459
+      },
+      "timeline": {
+        "startMs": 148011,
+        "endMs": 150470,
+        "durationMs": 2459
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 544000,
+        "endMs": 546459,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-024.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-25",
+      "order": 25,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 26000,
+        "endMs": 30501,
+        "durationMs": 4501
+      },
+      "timeline": {
+        "startMs": 150470,
+        "endMs": 154971,
+        "durationMs": 4501
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 26000,
+        "endMs": 30501,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-025.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    },
+    {
+      "segmentId": "seg-26",
+      "order": 26,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 480000,
+        "endMs": 489793,
+        "durationMs": 9793
+      },
+      "timeline": {
+        "startMs": 154971,
+        "endMs": 164764,
+        "durationMs": 9793
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 480000,
+        "endMs": 489793,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-026.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark",
+        "mixed_fast_cut"
+      ]
+    },
+    {
+      "segmentId": "seg-27",
+      "order": 27,
+      "assetId": "source-02-b9f9377f",
+      "source": {
+        "relativePath": "02_原始素材/红色彗星的再临，将时髦发挥到顶点的名机.mp4",
+        "sha256": "9BAEC0091A55FE3E69B5099A179335DB96E5E34071975021ACB154C1A8241A42",
+        "startMs": 503717,
+        "endMs": 509120,
+        "durationMs": 5403
+      },
+      "timeline": {
+        "startMs": 164764,
+        "endMs": 170167,
+        "durationMs": 5403
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 503717,
+        "endMs": 509120,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-027.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": [
+        "channel_watermark"
+      ]
+    }
+  ],
+  "transitionDirective": {
+    "path": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "CA69D5C85FCCEC769F327F0855CB928EE7A2056DD90E06F9E579B4613BC683F6",
+    "boundaries": 3,
+    "masterFades": {
+      "fadeInMs": 0,
+      "fadeOutMs": 0
+    }
+  },
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

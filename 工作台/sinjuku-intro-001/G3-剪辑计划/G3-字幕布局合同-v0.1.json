@@ -1,0 +1,55 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G3",
+ "resolution": [
+  1280,
+  720
+ ],
+ "rendererProfileRef": "工作台/sinjuku-intro-001/G3-剪辑计划/字幕探针/字幕-渲染器能力档-v0.1.json",
+ "experienceQuery": {
+  "at": "2026-09-22T16:36:00+08:00",
+  "kind": "layout",
+  "resolution": "1280x720",
+  "resolutionMiss": true,
+  "basis": "库无 720p 记录；按 psycho-zaku-intro-002 已批准 1920x1080-64px 车道等比换算（64×720/1080≈43，marginV 173→115，marginL/R 60→40）"
+ },
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "标题/章节卡：右置避让左上 UP 主水印"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "信息卡（本项目未启用）"
+  },
+  "narration": {
+   "topPct": 70,
+   "bottomPct": 84,
+   "fontsize": 43,
+   "maxLines": 2,
+   "marginV": 115,
+   "marginL": 40,
+   "marginR": 40,
+   "autoWrap": false
+  },
+  "watermarkExclusion": {
+   "topPct": 0,
+   "bottomPct": 100,
+   "usage": "左上角水印区（约 x<30%,y<12%）：标题卡与任何叠加元素不得进入；口播车道天然避开"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "mask": null,
+  "watermark": "左上『shini都文玩鸭子 bilibili』烧录水印：保留不消除（内部测试），计入 G5 分发边界披露"
+ },
+ "rules": [
+  "一条口播一个排版块（27 cue 与 G2 批准 v0.3 逐句一一对应，逐字未改）",
+  "autoWrap=false（探针实测保守档）：超 26 字手动 \\N 断行，两行内",
+  "口播主字幕永不进入上部 title/watermark 车道",
+  "叠化窗口 [110121,110421) 内无字幕 cue 起始（N16 cue 止 110061、N17 cue 起 110481，天然合规）",
+  "章节卡 3 张按 packagingDecisions 由 G4 上部车道绘制，不占口播字幕轨"
+ ]
+}

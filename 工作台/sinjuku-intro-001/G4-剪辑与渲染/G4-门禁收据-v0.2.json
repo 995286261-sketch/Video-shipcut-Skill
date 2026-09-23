@@ -1,0 +1,40 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "sinjuku-intro-001",
+ "node": "G4",
+ "cardType": "g4_candidate_review",
+ "reviewStatus": "ready_for_approval",
+ "renderedAt": "2026-09-22T18:40:00+08:00",
+ "reviewCardRef": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md",
+ "approvalTokenVerbatim": "确认G4",
+ "supersedes": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-门禁收据.json",
+ "basisRefs": [
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-候选成片-v0.3.mp4",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-候选成片-v0.3-装配记录-v0.1.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-渲染验证-v0.3.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.6.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-封面合同-v0.1.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/平滑中点A-14to15.jpg",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/平滑中点B-16to17.jpg",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/平滑中点C-26to27.jpg",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/转场预览A-平滑-v0.3.mp4",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/转场预览B-平滑-v0.3.mp4",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/检查帧/转场预览C-平滑-v0.3.mp4",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-回放复核卡-v0.2.md",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-门禁收据-v0.2.json",
+  "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-批准记录-v0.2.md",
+  "工作台/sinjuku-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json"
+ ],
+ "checklist": [
+  {"id": "candidate_or_export", "required": true, "status": "completed",
+   "evidenceRef": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-候选成片-v0.3.mp4"},
+  {"id": "render_validation", "required": true, "status": "completed",
+   "evidenceRef": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-渲染验证-v0.3.json"},
+  {"id": "playback_review_card", "required": true, "status": "completed",
+   "evidenceRef": "工作台/sinjuku-intro-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md"}
+ ]
+}
