@@ -427,7 +427,10 @@ class PipelineStateTest(unittest.TestCase):
 
     # ---- Leader 反馈 R1（用户 09-23 裁决方案 A + 负向自动测试）：审批入口必须解析
     # G4/G5 质检报告——失败、报告缺失/非 JSON、结果过期、张冠李戴一律阻断，
-    # 不能仅检查文件存在。有效报告与对应产物匹配且人工批准后才可推进。 ----
+    # 不能仅检查文件存在。有效报告与对应产物匹配且人工批准后才可推进。
+    # 注（R2 后）：报告/成片本身也是被审文件，改完必须重新登记（prepare_node 重跑
+    # = 重渲卡→record-review），否则先被 R2 的"登记审核后变更"拦下——那正是设计行为；
+    # 本组用例先重登记越过 R2，再验 R1 的报告解析层。 ----
 
     def test_g4_positive_bound_report_approved(self):
         # 有效报告+对应产物匹配+人工批准 → 放行（R1 的正向基线）。
@@ -443,6 +446,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G3")
         self.prepare_node("G4")
         self.g4_validation.write_text("fixture", encoding="utf-8")
+        self.prepare_node("G4")  # 报告换版后重新登记（越过 R2 卡↔文件层，专测 R1 解析层）
         blocked = self.approve("G4", code=2)
         self.assertIn("JSON", blocked["error"])
 
@@ -451,6 +455,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G3")
         self.prepare_node("G4")
         self.rewrite_json(self.g4_validation, status="invalid")
+        self.prepare_node("G4")
         blocked = self.approve("G4", code=2)
         self.assertIn("不可批准", blocked["error"])
 
@@ -460,6 +465,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G3")
         self.prepare_node("G4")
         self.drop_json_key(self.g4_validation, "candidate")
+        self.prepare_node("G4")
         blocked = self.approve("G4", code=2)
         self.assertIn("未绑定候选成片指纹", blocked["error"])
 
@@ -468,27 +474,32 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G3")
         self.prepare_node("G4")
         self.rewrite_json(self.g4_validation, projectId="other-film")
+        self.prepare_node("G4")
         blocked = self.approve("G4", code=2)
         self.assertIn("不符", blocked["error"])
 
     def test_g4_stale_report_after_render_change_blocked(self):
-        # 结果过期：报告生成后候选成片被重渲 → 指纹对不上，逼重跑。
+        # 结果过期：重渲候选成片并重新登记（R2 过）后，报告仍描述旧成片 → R1 指纹对不上，逼重跑。
         self.init()
         self.advance_through("G3")
         self.prepare_node("G4")
         self.render.write_bytes(b"re-rendered candidate, report no longer describes this file")
+        self.prepare_node("G4")
         blocked = self.approve("G4", code=2)
         self.assertIn("指纹不符", blocked["error"])
 
     def test_g4_rerun_bound_report_unblocks(self):
-        # 过期被拒后，按门禁提示重跑 g4_validate --candidate（等价语义：重新登记真实指纹）→ 放行。
+        # 过期被拒后，按门禁提示重跑 g4_validate --candidate（等价语义：重新登记真实指纹）
+        # 并重新登记 → 放行（修复通道可用）。
         self.init()
         self.advance_through("G3")
         self.prepare_node("G4")
         self.render.write_bytes(b"re-rendered candidate, report no longer describes this file")
+        self.prepare_node("G4")
         blocked = self.approve("G4", code=2)
         self.assertIn("指纹不符", blocked["error"])
         self.rewrite_json(self.g4_validation, candidate={"path": str(self.render), "sha256": sha_upper(self.render.read_bytes())})
+        self.prepare_node("G4")
         result = self.approve("G4")
         self.assertEqual("G5", result["currentNode"])
 
@@ -497,6 +508,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G4")
         self.prepare_node("G5")
         self.g5_validation.write_text("fixture", encoding="utf-8")
+        self.prepare_node("G5")  # 重新登记后专测 R1 解析层
         blocked = self.approve("G5", code=2)
         self.assertIn("JSON", blocked["error"])
 
@@ -506,6 +518,7 @@ class PipelineStateTest(unittest.TestCase):
         self.prepare_node("G5")
         for bad in ("invalid", "failed", "pending_g5_machine_checks"):
             self.rewrite_json(self.g5_validation, status=bad)
+            self.prepare_node("G5")
             blocked = self.approve("G5", code=2)
             self.assertIn("不可批准", blocked["error"])
 
@@ -514,6 +527,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G4")
         self.prepare_node("G5")
         self.rewrite_json(self.g5_validation, projectId="other-film")
+        self.prepare_node("G5")
         blocked = self.approve("G5", code=2)
         self.assertIn("不符", blocked["error"])
 
@@ -522,6 +536,7 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G4")
         self.prepare_node("G5")
         self.drop_json_key(self.g5_validation, "artifacts")
+        self.prepare_node("G5")
         blocked = self.approve("G5", code=2)
         self.assertIn("未登记产物指纹", blocked["error"])
 
@@ -546,15 +561,106 @@ class PipelineStateTest(unittest.TestCase):
 
     def test_g5_completed_report_still_bound_to_artifacts(self):
         # completed* 可批（历史封包复检语义），但指纹绑定不因状态宽松而豁免。
+        # final-video 不在收据引用面（报告↔实物由 R1 管），改它不触发 R2。
         self.init()
         self.advance_through("G4")
         self.prepare_node("G5")
         self.rewrite_json(self.g5_validation, status="completed_with_accepted_warnings")
+        self.prepare_node("G5")
         self.g5_final.write_bytes(b"swapped final video")
         blocked = self.approve("G5", code=2)
         self.assertIn("指纹不符", blocked["error"])
         self.g5_final.write_bytes(b"fake-final-video")
         self.approve("G5")
+
+    # ---- Leader 反馈 R2（用户 09-24 裁决）：审批绑定被审文件指纹——登记审核后
+    # 同路径替换/修改内容=真人所批版本不存在，旧批准不可复用；须重渲卡→重登记→重确认。 ----
+
+    def test_r2_plan_tampered_after_record_blocked(self):
+        # 她复现的原案：登记 G3 卡后偷换计划内容，approve 必须拒（此前放行）。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.plan.write_text(json.dumps({"projectId": "fixture", "status": "approved_for_g3", "segments": ["偷偷加了一段"]}), encoding="utf-8")
+        blocked = self.approve("G3", code=2)
+        self.assertIn("被审文件已在登记审核后变更", blocked["error"])
+        self.assertIn("G3-剪辑计划/plan.json", blocked["error"])
+
+    def test_r2_rerender_and_rerecord_unblocks(self):
+        # 修复通道：改动后重渲染卡（新内容）→ 重新登记 → 人工重新确认 → 放行。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.plan.write_text(json.dumps({"projectId": "fixture", "status": "approved_for_g3", "segments": ["v2"]}), encoding="utf-8")
+        self.files["G3"]["card"].write_text("# G3 审批卡 v2（重渲染）\n", encoding="utf-8")
+        self.prepare_node("G3")
+        result = self.approve("G3")
+        self.assertEqual("G4", result["currentNode"])
+
+    def test_r2_approval_record_written_at_close_is_exempt(self):
+        # 豁免规则活证：approvalRef 文件本来就是关单时才写的，登记后写它不得误伤。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.files["G3"]["approval"].write_text("用户原话：确认 G3（关单时记录）\n", encoding="utf-8")
+        result = self.approve("G3")
+        self.assertEqual("G4", result["currentNode"])
+
+    def test_r2_checklist_evidence_tampered_blocked(self):
+        # checklist evidenceRef 也在绑定面：登记后改证据文件同样失效。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.files["G3"]["subtitle_timeline"].write_text("retouched evidence", encoding="utf-8")
+        blocked = self.approve("G3", code=2)
+        self.assertIn("被审文件已在登记审核后变更", blocked["error"])
+
+    def test_r2_validation_report_swapped_after_record_blocked(self):
+        # 卡↔报告层（与 R1 互补）：登记 G4 卡后整个换掉验证报告文件——不重登记就想批=拒。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        # 换入一份"内容不同但 R1 本会通过"的报告（如另一次运行的产物）：靠 R2 指纹层拦下。
+        self.g4_validation.write_text(json.dumps({
+            "status": "valid", "projectId": "fixture", "segments": 9, "timelineDurationMs": 1000,
+            "candidate": {"path": str(self.render), "sha256": sha_upper(self.render.read_bytes())}}), encoding="utf-8")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("被审文件已在登记审核后变更", blocked["error"])
+
+    def test_r2_legacy_snapshot_without_hashes_blocked(self):
+        # 升级前登记的在途门禁（快照无 basisHashes）→ 硬切：指路重新登记。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        del state["nodes"]["G3"]["reviewGate"]["basisHashes"]
+        self.state.write_text(json.dumps(state), encoding="utf-8")
+        blocked = self.approve("G3", code=2)
+        self.assertIn("缺少被审文件指纹", blocked["error"])
+
+    def test_r2_unreferenced_file_change_does_not_block(self):
+        # 绑定面只含卡引用的文件：项目里无关文件的改动不得误伤审批。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.file("G3-剪辑计划/unrelated-worknote.md")
+        result = self.approve("G3")
+        self.assertEqual("G4", result["currentNode"])
+
+    def test_r2_approval_records_source_and_frozen_versions(self):
+        # 她要求的留痕：批准记录含来源、时间、口令，且快照冻结了被审文件指纹。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.approve("G3")
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        approval = state["nodes"]["G3"]["approval"]
+        self.assertEqual("host-session", approval["approvalSource"])
+        self.assertTrue(approval["approvedAt"])
+        gates = state["nodes"]["G3"]["reviewGate"]
+        # 已关单门禁保留 basisHashes 作审计（含卡与计划两枚指纹）。
+        self.assertIn(str(self.plan), gates["basisHashes"])
+        self.assertIn(str(self.files["G3"]["card"]), gates["basisHashes"])
 
 
 if __name__ == "__main__":

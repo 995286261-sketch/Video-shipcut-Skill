@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import sys
@@ -10,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from project_layout import CHATCUT_DIRECTORY, require_g4_file, require_g5_file, require_project_file
-from review_gate import load_review_gate, require_basis_references
+from review_gate import load_review_gate, require_basis_references, reviewed_file_hashes, sha256_file
 
 NODES = ("G0", "G1", "G2", "G3", "G4", "G5")
 STATES = {"pending", "in_progress", "review_required", "blocked", "completed", "completed_with_accepted_warnings"}
@@ -249,12 +248,6 @@ def command_status(args: argparse.Namespace) -> None:
     emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
 
 
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest().upper()
 
 
 def command_bgm_choice(args: argparse.Namespace) -> None:
@@ -331,7 +324,9 @@ def command_record_review(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": "review gate can only be recorded while node is review_required", "nodeStatus": record["status"]}, 2)
     try:
         record["reviewGate"] = load_review_gate(state_path, args.review_gate_ref, args.node, state["projectId"])
-    except ValueError as error:
+        # R2（Leader 反馈）：登记即冻结被审文件指纹——真人看到的版本从这一刻起被绑定。
+        record["reviewGate"]["basisHashes"] = reviewed_file_hashes(state_path, args.review_gate_ref)
+    except (ValueError, json.JSONDecodeError, OSError) as error:
         emit({"status": "blocked", "error": str(error)}, 2)
     write_state(state_path, state)
     emit({"status": "review_recorded", "currentNode": args.node, "reviewGate": record["reviewGate"], "nextAction": f"Present the registered card and wait for the exact response 确认 {args.node}."})
@@ -416,9 +411,21 @@ def command_approve(args: argparse.Namespace) -> None:
         fresh_gate = load_review_gate(state_path, record["reviewGate"]["reviewGateRef"], node, state["projectId"])
     except ValueError as error:
         emit({"status": "blocked", "error": f"review gate receipt no longer valid: {error}"}, 2)
-    if fresh_gate != record["reviewGate"]:
+    if fresh_gate != {key: value for key, value in record["reviewGate"].items() if key != "basisHashes"}:
         emit({"status": "blocked",
               "error": "review gate receipt changed since record-review (renderedAt/basisRefs/checklist); re-run record-review before approving"}, 2)
+    # R2（Leader 反馈，用户 09-24 裁决）：收据没动但被审文件被同路径换过内容——
+    # 真人批准的版本已不存在，旧批准不可复用。approvalRef 是关单时才写的文件，豁免。
+    basis_hashes = record["reviewGate"].get("basisHashes")
+    if not isinstance(basis_hashes, dict) or not basis_hashes:
+        emit({"status": "blocked", "error": "审核门禁快照缺少被审文件指纹（R2 升级前登记的在途门禁）：重渲染审核卡并重新 record-review 后再批准"}, 2)
+    try:
+        live_hashes = reviewed_file_hashes(state_path, record["reviewGate"]["reviewGateRef"])
+    except (ValueError, json.JSONDecodeError, OSError) as error:
+        emit({"status": "blocked", "error": f"被审文件在登记审核后缺失或不可读，批准失效：{error}"}, 2)
+    changed = sorted(ref for ref, digest in basis_hashes.items() if ref != args.approval_ref and live_hashes.get(ref) != digest)
+    if changed:
+        emit({"status": "blocked", "error": "被审文件已在登记审核后变更（同路径替换/修改内容=真人所批版本不存在，旧批准不可复用）：" + "、".join(changed) + "；请重渲染审核卡 → 重新 record-review → 重新取得人工确认后再批准"}, 2)
     if node in ("G2", "G3") and (state.get("bgm") or {}).get("libraryPending"):
         emit({"status": "blocked", "error": f"{node} 批准被 BGM 待找乐槽拦住：音乐须在首个消费节点前在场（N9 顺序）。挑曲→官方渠道取得整轨→登记→bgm-choice 翻槽后再批"}, 2)
     try:
@@ -430,7 +437,10 @@ def command_approve(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": str(error)}, 2)
     approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response,
                 "approvalTokenVerbatim": token_verbatim, "approvalResponseVerbatim": response_verbatim,
-                "normalizedFromVariant": normalized, "approvedAt": now()}
+                "normalizedFromVariant": normalized, "approvedAt": now(),
+                # R2 信任边界（见 pipeline-state-contract）：本地阶段确认来源=宿主会话真人回复，
+                # Agent 可代录、不可制造；接 Proxima 后由宿主审核入口提供可信审批事件。
+                "approvalSource": "host-session"}
     if node == "G2":
         if not args.approved_narration_ref or not args.fact_citation_ref or not args.voice_brief_ref:
             emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factCitationRef, and voiceBriefRef"}, 2)

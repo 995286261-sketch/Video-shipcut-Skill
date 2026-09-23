@@ -25,5 +25,6 @@ Do not ask a user to produce hashes, SRT, timecodes, or JSON. Present reviewable
 4. **不预选的三类**：G0 开工单五问（那是采集用户输入，不存在推荐答案）；G3 目标主体身份等**事实/身份判定**；G5 人工 QA 验收等**验收判定**——这三类永远需要用户在场的话。
 5. **能力缺失即停靠点复活**：挑曲默认项=听觉模型试听笔记判"能使用"中的最高适配（不是机器分第一——N8 活测：机器分 0.881 居首者被模型判 2/10）；无听觉能力（capability_missing）时没有可推荐的耳朵，退回停靠点问用户，不得拿机器分冒充推荐。
 6. **新会话开场只报磁盘事实（002 问题①，用户裁决成文）**：接到续接/状态类请求，开场陈述**只允许**来自当场读取的 `pipeline-state.json` 与文件存在性（"磁盘上有什么"），**禁止**凭记忆、聊天记录或交接文档转述"你上次做到哪、当时怎么决定的"——用户感知为被监视而非续接（001 验收载体因此整目录删除重跑）。续接还是从零，由用户看完磁盘事实后自己决定；Agent 不得代做这个决定。
+7. **改过必重出卡（R2，Leader 反馈 2026-09-24）**：审核卡登记之后，被审文件（计划、旁白、字幕、成片、验证报告、审核卡本身、清单证据）任何改动都使旧卡失效——机器以 `basisHashes` 指纹对账强制拦截。正确通道=重渲染卡 → 重新 `record-review` → 重新取得 `确认Gn`，禁止拿旧卡催用户"确认"。Agent 可**代录**用户真实确认（逐字纪律不变），不可凭"自己觉得合格"**制造**确认；信任边界声明见 [pipeline-state-contract](pipeline-state-contract.md)。
 
 For a blocked node, explain the single missing input or decision and do not propose an invented substitute.

@@ -1,10 +1,37 @@
 """Validate machine-checkable G1-G5 review-gate receipts."""
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
 from project_layout import require_project_file
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest().upper()
+
+
+def reviewed_file_hashes(state_path: Path, reference: str) -> dict:
+    """R2（Leader 反馈，用户 09-24 裁决）：被审文件指纹。登记那一刻冻结
+    真人实际看到的版本（审核卡本身 + 全部 basisRefs + 全部 checklist evidenceRef），
+    关单前重算比对——同路径换内容=旧批准失效。
+    approvalRef 文件天然是关单时才写的，由 approve 端豁免，不在这里特殊处理。
+    """
+    path = require_project_file(state_path, reference, "reviewGateRef")
+    receipt = json.loads(path.read_text(encoding="utf-8-sig"))
+    targets = [receipt.get("reviewCardRef"), *(receipt.get("basisRefs") or [])]
+    targets += [item.get("evidenceRef") for item in (receipt.get("checklist") or []) if isinstance(item, dict)]
+    hashes = {}
+    for item in targets:
+        if not isinstance(item, str) or not item.strip() or item in hashes:
+            continue
+        hashes[item] = sha256_file(require_project_file(state_path, item, "reviewed file"))
+    return hashes
 
 CARD_TYPES = {
     "G1": "g1_direction_review",
