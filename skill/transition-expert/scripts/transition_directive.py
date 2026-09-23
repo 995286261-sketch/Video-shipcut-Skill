@@ -3,7 +3,7 @@
 
 先过深检才有指令：本脚本复用 transition_validate_plan 的模型校验（含手柄/窗口/
 偶数时长），任何 invalid 一律 blocked——G4 永远拿不到做不到的批准。
-产物《G4-转场执行指令-v0.1.json》绑定计划+证据+能力档三哈希；g4_prepare 透传、
+产物《G4-转场执行指令-v<M.N>.json》（版本自动递增、永不覆盖，issue ㉘）绑定计划+证据+能力档三哈希；g4_prepare 透传、
 g4_render 按段扩切、g4_assemble 按 boundaries 链式 xfade。无转场批准也出产物
 （boundaries/masterFades 全空），下游路径与旧管线一致。
 """
@@ -16,7 +16,24 @@ import json
 from pathlib import Path
 
 VALIDATOR = Path(__file__).with_name("transition_validate_plan.py")
-DIRECTIVE_NAME = "G4-转场执行指令-v0.1.json"
+DIRECTIVE_PREFIX = "G4-转场执行指令"
+
+
+def next_versioned_path(output_dir: Path, prefix: str) -> Path:
+    """产物版本自动递增、永不覆盖（issue ㉘，sinjuku reopen 重跑现场）：扫描目录内
+    既有 <prefix>-vM.N.json 取最大版本 +0.1；无则 v0.1。旧产物留盘作审计。
+    （与 transition_probe_host 故意重复此 10 行——专员脚本保持零依赖单文件，
+    同 LAYOUT_TIERS 双文件模式。）"""
+    import re
+    pattern = re.compile(rf"^{re.escape(prefix)}-v(\d+)\.(\d+)\.json$")
+    best = (0, 0)
+    for candidate in output_dir.glob(prefix + "-v*.json"):
+        match = pattern.match(candidate.name)
+        if match:
+            best = max(best, (int(match.group(1)), int(match.group(2))))
+    if best == (0, 0):
+        return output_dir / f"{prefix}-v0.1.json"
+    return output_dir / f"{prefix}-v{best[0]}.{best[1] + 1}.json"
 
 
 def load_sibling_validator():
@@ -69,8 +86,10 @@ def build_directive(plan: dict, evidence: dict, host_profile) -> dict:
         previous_id = ordered[index - 1]["segmentId"]
         duration = dissolve_by_pair.get((previous_id, segment["segmentId"]))
         if duration:
+            # 词表"叠化"映射到 xfade fade（平滑交叉淡化）；xfade 自带 dissolve 是噪声抖动式，
+            # 2026-09-22 验收003 ㉔ 实片裁决弃用（合同词表节）。
             boundaries.append({"fromSegmentId": previous_id, "toSegmentId": segment["segmentId"],
-                               "transition": "dissolve", "durationMs": duration, "offsetMs": run - duration})
+                               "transition": "fade", "durationMs": duration, "offsetMs": run - duration})
             run = run + file_len - duration
         else:
             run += file_len
@@ -106,7 +125,7 @@ def main() -> int:
     directive["hostProfile"] = str(args.host_profile) if args.host_profile else None
     directive["hostProfileSha256"] = sha256(args.host_profile) if args.host_profile else None
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    out = args.output_dir / DIRECTIVE_NAME
+    out = next_versioned_path(args.output_dir, DIRECTIVE_PREFIX)
     out.write_text(json.dumps(directive, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": "completed", "directive": str(out), "sha256": sha256(out),
                       "boundaries": len(directive["boundaries"]), "masterFades": directive["masterFades"],

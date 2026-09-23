@@ -117,6 +117,11 @@ class LicenseClassificationTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         import importlib.util
+        # Standalone runs must not depend on another test module having inserted the
+        # scripts dir into sys.path first (latent order-dependency, caught 2026-09-22).
+        scripts_dir = str(SEARCH.parent)
+        if scripts_dir not in sys.path:
+            sys.path.insert(0, scripts_dir)
         spec = importlib.util.spec_from_file_location("music_search_freesound", SEARCH)
         cls.module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cls.module)
@@ -223,6 +228,63 @@ class SearchBlockedTest(unittest.TestCase):
         code, payload = self.run_search(tmp.name, env, "--query", "x", "--terms-file", str(card))
         self.assertEqual(2, code)
         self.assertIn("exactly one", payload["errors"][0]["rule"])
+
+
+class SearchPerTermCapTest(unittest.TestCase):
+    """验收003-⑦: page_size fetches 3x headroom, but the per-term cap must truncate
+    what is kept (live 2026-09-22: 4 terms asked for 8 each, 62 were kept+downloaded)."""
+
+    def load(self):
+        import importlib.util
+        scripts_dir = str(SEARCH.parent)
+        if scripts_dir not in sys.path:
+            sys.path.insert(0, scripts_dir)
+        spec = importlib.util.spec_from_file_location("msf_cap", SEARCH)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_cap_truncates_and_is_auditable(self):
+        import contextlib
+        import io
+        import unittest.mock
+        module = self.load()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        card = Path(tmp.name) / "terms.json"
+        card.write_text(json.dumps({"purpose": "bgm_search_terms", "terms": [
+            {"term": "alpha", "rationale": "r", "source": "theme"},
+            {"term": "beta", "rationale": "r", "source": "theme"}]}, ensure_ascii=False), encoding="utf-8")
+        counter = {"n": 0}
+
+        def fake_api_get(token, path, params):
+            query = params.get("query", "")
+            results = []
+            for _ in range(12):
+                counter["n"] += 1
+                results.append({"id": counter["n"], "name": f"{query} track {counter['n']}",
+                                "duration": 300.0, "username": "u",
+                                "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+                                "tags": ["electronic"]})
+            return {"results": results}, None
+
+        module.api_get = fake_api_get
+        argv = [str(SEARCH), "--terms-file", str(card), "--output-dir", tmp.name,
+                "--max-results", "4", "--no-download"]
+        buffer = io.StringIO()
+        with unittest.mock.patch.object(sys, "argv", argv), \
+                unittest.mock.patch.dict(os.environ, {"MUSIC_EXPERT_FREESOUND_TOKEN": "dummy"}), \
+                contextlib.redirect_stdout(buffer):
+            code = module.main()
+        self.assertEqual(0, code)
+        manifest = next(Path(tmp.name).glob("BGM-候选清单-freesound-*.json"))
+        data = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(8, len(data["candidates"]))
+        per_query = {row["query"]: row for row in data["perQuery"]}
+        for query in ("alpha", "beta"):
+            self.assertEqual(12, per_query[query]["returned"])
+            self.assertEqual(4, per_query[query]["kept"])
+            self.assertEqual(4, per_query[query]["cap"])
 
 
 class RecommendTest(unittest.TestCase):
@@ -433,7 +495,7 @@ class DurationSoftFallbackTest(unittest.TestCase):
     def test_relaxed_pass_and_shortfall_marking_present(self):
         source = SEARCH.read_text(encoding="utf-8")
         self.assertIn("durationShortfall", source)
-        self.assertIn("search_pass(RELAXED_MIN)", source)
+        self.assertIn("search_pass(RELAXED_MIN,", source)  # stats bucket added 2026-09-22 (验收003-⑦)
         self.assertIn("soft-fallback", source)
         self.assertIn("durationFilter", source)
         # The relaxed retry only fires on an empty first pass and a raised floor.

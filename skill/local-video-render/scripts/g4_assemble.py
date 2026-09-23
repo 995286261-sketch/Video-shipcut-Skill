@@ -188,7 +188,13 @@ def build_video_chain(video_layers: list[str], card_filters: list[str], fade_lay
         if boundary:
             duration = int(boundary["durationMs"]) / 1000
             offset = int(boundary["offsetMs"]) / 1000
-            parts.append(f"[{current}][{following}]xfade=transition={boundary['transition']}:duration={duration:.3f}:offset={offset:.3f}[{output}]")
+            # 验收003-㉒：xfade 两侧时基必须一致。叠化落在长 concat 链中段时，第一输入是
+            # concat 输出（tb=1/1000000）、第二输入是单段 fps 输出（tb=1/fps），ffmpeg 7.0
+            # 直接拒绝。junction 前两侧统一 settb=AVTB；concat 边对 tb 差异容忍，不处理。
+            main_link, side_link = f"xc{index}m", f"xc{index}s"
+            parts.append(f"[{current}]settb=AVTB[{main_link}]")
+            parts.append(f"[{following}]settb=AVTB[{side_link}]")
+            parts.append(f"[{main_link}][{side_link}]xfade=transition={boundary['transition']}:duration={duration:.3f}:offset={offset:.3f}[{output}]")
         else:
             parts.append(f"[{current}][{following}]concat=n=2:v=1:a=0[{output}]")
         current = output

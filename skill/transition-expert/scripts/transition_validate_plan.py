@@ -118,8 +118,8 @@ def validate_plan(plan: dict, evidence: dict, host_profile) -> dict:
         else:
             capabilities = host_profile.get("capabilities", {})
             xfade = host_profile.get("xfade", {})
-            if not xfade.get("available") or not capabilities.get("dissolve"):
-                errors.append("宿主能力档显示 xfade/dissolve 不可用：本宿主计划中的叠化全部 blocked，改选硬切或黑场，或换宿主重探")
+            if not xfade.get("available") or not capabilities.get("fade"):
+                errors.append("宿主能力档显示 xfade/fade 不可用：本宿主计划中的叠化全部 blocked，改选硬切或黑场，或换宿主重探")
 
     for position, segment in enumerate(ordered):
         segment_id = segment.get("segmentId")

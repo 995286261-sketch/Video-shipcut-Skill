@@ -322,10 +322,25 @@ def runtime_block_reason() -> str | None:
     try:
         import numpy  # noqa: F401
         import librosa  # noqa: F401
-    except ImportError:
-        return ("numpy/librosa are unavailable; set MUSIC_EXPERT_RUNTIME_HOME (or the legacy "
-                "P0C_MUSIC_RUNTIME_HOME) to the controlled music-expert runtime "
-                "(see references/music-analysis-contract.md). Downloading packages at run time is forbidden.")
+    except ImportError as error:
+        # 验收003-②: "env unset" and "right env, wrong interpreter" produce the same
+        # ImportError but need different fixes — say which, and name the running interpreter.
+        homes = runtime_home_candidates()
+        running = "%d.%d" % (sys.version_info.major, sys.version_info.minor)
+        err_text = str(error)[:120]
+        if not homes:
+            guidance = ("MUSIC_EXPERT_RUNTIME_HOME (or legacy P0C_MUSIC_RUNTIME_HOME) is "
+                        "unset; point it at the controlled music-expert runtime site-packages "
+                        "(see references/music-analysis-contract.md).")
+        else:
+            home = homes[0]
+            venv_python = Path(home).parent.parent.parent / "bin" / "python3"
+            hint = " Or invoke the runtime's own interpreter: %s" % venv_python if venv_python.is_file() else ""
+            guidance = ("Runtime home is set to %s but numpy/librosa fail to import on this "
+                        "interpreter (Python %s) — likely an ABI mismatch; run music_analyze "
+                        "with the venv's own python.%s" % (home, running, hint))
+        return ("numpy/librosa are unavailable: %s. %s "
+                "Downloading packages at run time is forbidden." % (err_text, guidance))
     return None
 
 

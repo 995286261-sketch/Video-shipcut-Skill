@@ -74,6 +74,36 @@ def clear_review_gate(record: dict) -> None:
 
 APPROVAL_WITH_NODE = re.compile(r"^(?:确认|确定)\s*[Gg]?\s*(\d)$")
 APPROVAL_BARE = re.compile(r"^(?:确认|确定)\s*了?\s*[。！!]?$")
+# Issue ㉕ (sinjuku G4/G5 live runs): users type the exact token and then ask an
+# unrelated question in the same message ("确认G5，那么……下一步是什么"), or phrase
+# it as natural prose ("OK，那这个G4我确认了"). A natural reply is accepted only
+# when it carries exactly one unconditional approval clause naming THIS node.
+# Conservative by design: any conditional, negative, imperative, adversative or
+# interrogative marker anywhere refuses the whole text — gate semantics must
+# never be inferred from prose we are not sure about.
+APPROVAL_CLAUSE_SPLIT = re.compile(r"[，,。．！!？?；;：:\n\r\t ]+")
+APPROVAL_UNSAFE_MARKERS = re.compile(
+    r"如果|假如|要是|万一|的话|就确认|再确认|先确认|先别|先不|等.{0,8}再|修改完|改完|修好"
+    r"|不要|不确认|暂不|但|不过|除非|只有|才|帮我|请|帮忙|吗|还是|或者")
+
+
+def _clause_names_only_node(clause: str, node: str) -> bool:
+    digit = node[-1]
+    if re.search(rf"[Gg]\s*{digit}(?![0-9])", clause) is None:
+        return False
+    return not any(re.search(rf"[Gg]\s*{other}(?![0-9])", clause) for other in "12345" if other != digit)
+
+
+def _sentence_confirmation(node: str, text: str) -> tuple[str, bool] | None:
+    clauses = [clause for clause in APPROVAL_CLAUSE_SPLIT.split(text) if clause]
+    if not clauses or APPROVAL_UNSAFE_MARKERS.search(text):
+        return None
+    approved = [c for c in clauses if re.search(r"确认|确定", c) and _clause_names_only_node(c, node)]
+    if len(approved) != 1:
+        return None
+    if any(re.search(r"确认|确定", c) for c in clauses if c is not approved[0]):
+        return None
+    return f"确认 {node}", True
 
 
 def normalize_confirmation(node: str, raw: object) -> tuple[str, bool] | None:
@@ -81,10 +111,11 @@ def normalize_confirmation(node: str, raw: object) -> tuple[str, bool] | None:
 
     Accepted: the exact canonical form, the no-space variants users actually
     type (确认G5 / 确认g5), the 确定 synonym (zaku G1 live run: users type
-    确定G2), and bare 确认/确定 — safe because command_approve has already
-    pinned node == currentNode and a recorded review gate. Anything else
-    (好的 / OK / 确认G for another node) is refused. The canonical string is
-    what gets stored, so every downstream validator stays byte-identical."""
+    确定G2), bare 确认/确定, and — since issue ㉕ — a natural reply whose only
+    确认/确定 clause names this node unconditionally (e.g. "确认G5，那么下一步
+    是什么"). Anything else (好的 / OK / 确认G for another node / conditional
+    or imperative prose) is refused. The canonical string is what gets stored,
+    so every downstream validator stays byte-identical."""
     expected = f"确认 {node}"
     if not isinstance(raw, str):
         return None
@@ -96,17 +127,17 @@ def normalize_confirmation(node: str, raw: object) -> tuple[str, bool] | None:
         return (expected, True) if match.group(1) == node[-1] else None
     if APPROVAL_BARE.match(text):
         return expected, True
-    return None
+    return _sentence_confirmation(node, text)
 
 
 def require_approval_token(node: str, token: str | None, response: str | None) -> tuple[str, str, str, str, bool]:
     expected = f"确认 {node}"
     token_norm = normalize_confirmation(node, token)
     if token_norm is None:
-        raise ValueError(f"{node} approvalToken must be {expected} (typed variants are auto-normalized with the verbatim reply kept)")
+        raise ValueError(f"{node} approval 未识别为无条件批准（typed variants 与单一确认从句的自然语句自动归一、逐字原话保留；含条件/否定/他节点引用的语句拒绝）。请回精确口令：{expected}")
     response_norm = normalize_confirmation(node, response)
     if response_norm is None:
-        raise ValueError(f"{node} approvalResponse must be {expected} (typed variants are auto-normalized with the verbatim reply kept)")
+        raise ValueError(f"{node} approval 未识别为无条件批准（typed variants 与单一确认从句的自然语句自动归一、逐字原话保留；含条件/否定/他节点引用的语句拒绝）。请回精确口令：{expected}")
     return token_norm[0], response_norm[0], str(token).strip(), str(response).strip(), token_norm[1] or response_norm[1]
 
 
@@ -276,12 +307,21 @@ def command_reopen(args: argparse.Namespace) -> None:
 def command_reopen_g3(args: argparse.Namespace) -> None:
     state_path = Path(args.state)
     state = read_state(state_path)
-    if state["currentNode"] != "G4":
-        emit({"status": "blocked", "error": "only an active G4 project can reopen G3", "currentNode": state["currentNode"]}, 2)
+    # 验收003-㉗：G4 关单进入 G5 后同样可能需要回退 G3（批准范围分歧等），
+    # 原实现只允许 currentNode==G4，跨节点回退无合法路径。允许 G4/G5，回退时连带重置 G5。
+    if state["currentNode"] not in ("G4", "G5"):
+        emit({"status": "blocked", "error": "only an active G4/G5 project can reopen G3", "currentNode": state["currentNode"]}, 2)
     if not args.reason or not args.rework_ref:
         emit({"status": "invalid", "error": "reopen-g3 requires reason and reworkRef"}, 2)
     history = state.setdefault("amendmentHistory", [])
-    history.append({"fromNode": "G4", "toNode": "G3", "reason": args.reason, "reworkRef": args.rework_ref, "reopenedAt": now()})
+    history.append({"fromNode": state["currentNode"], "toNode": "G3", "reason": args.reason, "reworkRef": args.rework_ref, "reopenedAt": now()})
+    if state["currentNode"] == "G5":
+        g5 = state["nodes"]["G5"]
+        g5["status"] = "pending"
+        clear_review_gate(g5)
+        g5["approval"] = None
+        g5["inputRefs"] = []
+        g5["humanReviewPoints"] = []
     g3, g4 = state["nodes"]["G3"], state["nodes"]["G4"]
     g3["status"] = "in_progress"
     clear_review_gate(g3)
@@ -289,6 +329,7 @@ def command_reopen_g3(args: argparse.Namespace) -> None:
     g3["humanReviewPoints"] = list(dict.fromkeys(g3.get("humanReviewPoints", []) + ["rebuild_semantic_alignment_and_reapprove_g3"]))
     g4["status"] = "pending"
     clear_review_gate(g4)
+    g4["approval"] = None
     g4["inputRefs"] = []
     g4["humanReviewPoints"] = []
     state["currentNode"] = "G3"

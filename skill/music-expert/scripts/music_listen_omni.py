@@ -31,6 +31,12 @@ ABSOLUTE_TEMPLATE = (
     "3) 情绪与气质；4) 能量结构：铺垫段与高潮段大约在几分几秒到几分几秒；"
     "5) 适合与不适合的剪辑场景各一句。简体中文，200字内。"
 )
+REFERENCE_NOTE_TEMPLATE = (
+    "你是资深音乐总监，正在为一部片子定背景音乐的检索方向。这是【参照曲】——用户想要的感觉。"
+    "认真听完（可能有多段节选，合起来听整体）后回答：1) 曲风流派，精确到子流派；2) BPM 大致区间；"
+    "3) 主要乐器与音色；4) 节奏型：有无持续鼓点/驱动感，还是氛围铺底；5) 情绪与气质；"
+    "6) 若要去音乐库检索同风格成品曲，给 3-5 个英文检索词。简体中文，220字内。"
+)
 PROMPT_VER = "v1"
 
 
@@ -81,8 +87,8 @@ def media_duration(path: Path) -> int | None:
         return None
 
 
-def excerpt(src: Path, workdir: Path, start_ms: int, dur_sec: int) -> Path:
-    target = workdir / f"excerpt-{src.stem[:40]}.mp3"
+def excerpt(src: Path, workdir: Path, start_ms: int, dur_sec: int, suffix: str = "") -> Path:
+    target = workdir / f"excerpt-{src.stem[:40]}{suffix}.mp3"
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(start_ms / 1000.0), "-t", str(dur_sec),
                     "-i", str(src), "-c:a", "libmp3lame", "-q:a", "4", str(target)],
                    check=True, capture_output=True, timeout=180)
@@ -101,6 +107,15 @@ def load_shortlist(manifests: list[Path]) -> tuple[list[dict], list[str]]:
                 continue
             tracks.append(entry)
     return tracks, skipped
+
+
+def file_sha(path: Path) -> str:
+    import hashlib
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest().upper()
 
 
 def listen(binary: str, model: str | None, audios: list[Path],
@@ -142,6 +157,10 @@ def render_echo(result: dict, path: Path) -> None:
         ref_part = f"｜参照曲：{result['reference']}" if result.get("reference") else "｜绝对属性模式（笔记可入库复用）"
         lines += [f"- 模型：{capability['audioModel']}{ref_part}",
                   "- 本层只记录模型真实听到的输出；每条失败如实标注，未听曲目绝不配文字。", ""]
+    note = result.get("referenceNote")
+    if note:
+        head = "## 参照曲风格画像（绝对属性·检索词证据）" if note.get("notes") else "## 参照曲风格画像"
+        lines += [head, "", note["notes"] or f"❌ 未获得笔记（{note.get('error')}）", ""]
     for track in result["tracks"]:
         lines += [f"## {track['title']}", "", track["notes"], ""]
     for failure in result["partialFailures"]:
@@ -155,12 +174,15 @@ def render_echo(result: dict, path: Path) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--reference", type=Path, help="anchor audio the user approved (A/B mode)")
+    parser.add_argument("--reference-note", action="store_true",
+                        help="先对参照曲本体出一张绝对风格画像（出检索词前的耳朵证据，验收003-⑤）；"
+                             "不给 --manifest 时只出参照曲笔记")
     parser.add_argument("--absolute", action="store_true",
                         help="listen to each track on its own (reusable absolute attributes; write-back eligible)")
     parser.add_argument("--library", type=Path, default=None,
                         help="experience/music root: reuse heard notes, ingest ledger, write back absolute notes")
     parser.add_argument("--project", default=None, help="project id for ledger records")
-    parser.add_argument("--manifest", action="append", required=True, type=Path,
+    parser.add_argument("--manifest", action="append", required=False, type=Path, default=[],
                         help="candidate manifest or recommendation JSON (repeatable)")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--bl", default=None,
@@ -174,9 +196,16 @@ def main() -> int:
 
     if args.absolute:
         args.reference = None
-    elif not args.reference or not args.reference.is_file():
-        emit({"status": "invalid", "errors": [{"field": "reference", "rule": "file not found (A/B mode needs the anchor; or run --absolute)",
+    if (args.reference_note or not args.absolute) and (not args.reference or not args.reference.is_file()):
+        emit({"status": "invalid", "errors": [{"field": "reference", "rule": "file not found (A/B or --reference-note needs the anchor; or run --absolute)",
                                                "detail": str(args.reference)}]})
+        return 2
+    if args.reference_note and args.manifest:
+        emit({"status": "invalid", "errors": [{"field": "referenceNote",
+              "rule": "--reference-note profiles the anchor alone; drop --manifest to get the reference style picture, or run a separate A/B pass"}]})
+        return 2
+    if not args.reference_note and not args.manifest:
+        emit({"status": "invalid", "errors": [{"field": "manifest", "rule": "a candidate A/B/absolute pass needs --manifest", "detail": None}]})
         return 2
     library = None
     if args.library:
@@ -215,6 +244,35 @@ def main() -> int:
                                                  "detail": "ffmpeg required for excerpts (or pass --excerpt-sec 0)"}]})
         return 2
 
+    if args.reference_note:
+        # 验收003-⑤: genre facts about the anchor must come from EARS before search terms
+        # are written (N8-⑫ and the live 002 re-run both burned a full round on imagined
+        # "orchestral" terms). Long anchors get 2-3 excerpts across the timeline so a single
+        # quiet passage cannot masquerade as the whole song's style.
+        workdir = args.output.parent / "listen-excerpts"
+        workdir.mkdir(parents=True, exist_ok=True)
+        ref_ms = media_duration(args.reference) or 0
+        audios: list[Path] = [args.reference]
+        if args.excerpt_sec > 0 and ref_ms > args.excerpt_sec * 1000:
+            starts = [0.2, 0.5, 0.8] if ref_ms >= args.excerpt_sec * 3000 else [0.2, 0.7]
+            audios = [excerpt(args.reference, workdir, int(ref_ms * s), args.excerpt_sec,
+                              suffix=f"-ref{int(s * 100)}") for s in starts]
+        text, error = listen(audio_binary, args.model, audios, REFERENCE_NOTE_TEMPLATE, args.timeout)
+        note = {"reference": str(args.reference), "promptVersion": PROMPT_VER, "mode": "reference-note",
+                "excerpts": [str(a) for a in audios], "notes": text, "error": error}
+        result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes", "mode": "reference-note",
+                  "capability": {"available": True, "audioModel": detail, "modelOverride": args.model},
+                  "reference": str(args.reference), "referenceNote": note,
+                  "tracks": [], "partialFailures": [] if text else [{"title": args.reference.name, "error": error}],
+                  "writebackFailures": [], "skippedWithoutPreview": [],
+                  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"}
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+        render_echo(result, echo_path)
+        emit({"status": "ok", "heard": 1 if text else 0, "failures": 0 if text else 1,
+              "output": str(args.output), "echo": str(echo_path)})
+        return 0 if text else 2
+
     tracks, skipped = load_shortlist(args.manifest)
     if not tracks:
         emit({"status": "blocked", "blockers": [{"type": "no_candidates",
@@ -231,6 +289,17 @@ def main() -> int:
             ref_ms = media_duration(args.reference) or 0
             ref = excerpt(args.reference, workdir, max(0, int(ref_ms * 0.2)), args.excerpt_sec)
 
+    # 验收003-⑥: A/B re-ranking re-burns identical (anchor, candidate) pairs. The A/B note
+    # is a RELATIVE verdict -- red line says it never becomes a library fact -- so the cache
+    # is a project-local sidecar, deliberately kept outside experience/music.
+    ab_cache: dict = {}
+    ab_cache_path = args.output.parent / "试听AB-缓存.json"
+    if mode == "ab" and ab_cache_path.is_file():
+        try:
+            ab_cache = json.loads(ab_cache_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            ab_cache = {}
+    ref_sha = file_sha(args.reference) if (mode == "ab" and args.reference) else None
     notes, failures, writeback_failures = [], [], []
     for track in tracks:
         candidate = Path(track["previewPath"])
@@ -241,6 +310,15 @@ def main() -> int:
             if cached:
                 entry["reused"] = True
                 entry["notes"] = f"（复用库内 {cached[0]} 笔记，零成本）\n\n{cached[1]}"
+                notes.append(entry)
+                continue
+        cache_key = None
+        if mode == "ab" and sha and ref_sha:
+            cache_key = f"{sha}|{ref_sha}|{PROMPT_VER}|{args.model or 'default'}|{args.project_brief}"
+            hit = ab_cache.get(cache_key)
+            if hit:
+                entry["reused"] = "ab-cache"
+                entry["notes"] = f"（复用本项目 A/B 试听缓存，零成本）\n\n{hit}"
                 notes.append(entry)
                 continue
         audio_arg = candidate
@@ -255,6 +333,8 @@ def main() -> int:
             continue
         entry.update({"reused": False, "notes": text})
         notes.append(entry)
+        if cache_key:
+            ab_cache[cache_key] = text
         if library and sha:
             try:
                 music_library.upsert_track(library, sha, title=track.get("title"),
@@ -269,6 +349,10 @@ def main() -> int:
                     music_library.put_listen(library, sha, text, detail, PROMPT_VER)
             except Exception as error:  # 写回失败不伪装成"没听到"，也不中断笔记
                 writeback_failures.append({"title": entry.get("title"), "error": str(error)[:200]})
+
+    if mode == "ab" and ab_cache:
+        ab_cache_path.parent.mkdir(parents=True, exist_ok=True)
+        ab_cache_path.write_text(json.dumps(ab_cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
     result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes", "mode": mode,
               "capability": {"available": True, "audioModel": detail, "modelOverride": args.model},

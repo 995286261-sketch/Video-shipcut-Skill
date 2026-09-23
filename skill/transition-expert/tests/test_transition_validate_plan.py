@@ -23,7 +23,7 @@ validator = load_validator()
 
 HOST_PROFILE = {"skill": "transition-expert", "purpose": "transition_host_profile",
                 "xfade": {"available": True, "transitions": ["dissolve", "fade", "fadeblack", "wipeleft"]},
-                "capabilities": {"dissolve": True, "wipe": True, "fadeBlackBoundary": True}}
+                "capabilities": {"fade": True, "dissolve": True, "wipe": True, "fadeBlackBoundary": True}}
 
 
 def base_plan() -> dict:
@@ -186,7 +186,7 @@ class TransitionValidatePlanTests(unittest.TestCase):
 
     def test_dissolve_blocked_when_host_lacks_xfade(self):
         weak = {"skill": "transition-expert", "purpose": "transition_host_profile",
-                "xfade": {"available": False, "transitions": []}, "capabilities": {"dissolve": False}}
+                "xfade": {"available": False, "transitions": []}, "capabilities": {"fade": False, "dissolve": False}}
         self.assert_failed(base_plan(), "blocked", host_profile=weak)
 
     def test_foreign_profile_identity_rejected(self):

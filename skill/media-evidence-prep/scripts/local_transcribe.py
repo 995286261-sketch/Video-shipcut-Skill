@@ -132,8 +132,23 @@ def main() -> int:
     configure_offline_runtime()
     try:
         from faster_whisper import WhisperModel
-    except ImportError:
-        emit({"status": "blocked", "blockers": [{"type": "missing_dependency", "detail": "faster_whisper is not installed; run `python -m pip install faster-whisper` first"}]})
+    except ImportError as error:
+        # 验收003-⑩ (与②同修): "env unset" and "right env, wrong interpreter" both raise
+        # ImportError but need different fixes — say which, name the running interpreter.
+        home = os.environ.get("P0C_FASTER_WHISPER_HOME")
+        running = "%d.%d (%s)" % (sys.version_info.major, sys.version_info.minor, sys.executable)
+        if not home:
+            guidance = ("P0C_FASTER_WHISPER_HOME is unset; point it at the controlled "
+                        "faster-whisper runtime (see references/runtime-dependencies.md).")
+        else:
+            venv_python = Path(home).parent.parent.parent / "bin" / "python3"
+            hint = " Or invoke the runtime's own interpreter: %s" % venv_python if venv_python.is_file() else ""
+            guidance = ("Runtime home is set to %s but faster_whisper fails to import on this "
+                        "interpreter — likely an ABI mismatch; run local_transcribe with the "
+                        "venv's own python.%s" % (home, hint))
+        emit({"status": "blocked", "blockers": [{"type": "missing_dependency",
+               "detail": "faster_whisper unavailable on Python %s: %s. %s Downloading packages at run time is forbidden."
+                         % (running, str(error)[:120], guidance)}]})
         return 2
 
     try:

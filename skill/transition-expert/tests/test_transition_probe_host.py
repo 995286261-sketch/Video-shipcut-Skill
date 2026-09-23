@@ -79,8 +79,24 @@ class MainTests(unittest.TestCase):
             self.assertEqual(profile["purpose"], "transition_host_profile")
             self.assertTrue(profile["xfade"]["available"])
             self.assertIn("dissolve", profile["xfade"]["transitions"])
+            self.assertTrue(profile["capabilities"]["fade"])  # 叠化=xfade fade（㉔ 裁决），能力档必须报这项
             self.assertTrue(profile["capabilities"]["dissolve"])
             self.assertTrue(profile["basis"].startswith("measured probe"))
+
+
+class ProfileVersioningTests(unittest.TestCase):
+    # issue ㉘: 能力档与指令同为"版本自动递增、永不覆盖"（两份重复实现各自测）。
+    def test_next_versioned_path_increments_and_skips_foreign_names(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            self.assertEqual("转场-宿主能力档-v0.1.json",
+                             probe.next_versioned_path(out, "转场-宿主能力档").name)
+            (out / "转场-宿主能力档-v0.1.json").write_text("{}", encoding="utf-8")
+            (out / "转场-宿主能力档-v0.2.json").write_text("{}", encoding="utf-8")
+            (out / "转场-宿主能力档-v3.9.json").write_text("{}", encoding="utf-8")
+            (out / "别的文件-v9.9.json").write_text("{}", encoding="utf-8")
+            self.assertEqual("转场-宿主能力档-v3.10.json",
+                             probe.next_versioned_path(out, "转场-宿主能力档").name)
 
 
 if __name__ == "__main__":

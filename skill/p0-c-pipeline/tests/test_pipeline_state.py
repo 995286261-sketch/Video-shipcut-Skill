@@ -272,6 +272,37 @@ class PipelineStateTest(unittest.TestCase):
         self.assertEqual("确定G4", approval["approvalResponseVerbatim"])
         self.assertTrue(approval["normalizedFromVariant"])
 
+    def test_natural_reply_with_single_unconditional_clause_is_accepted(self):
+        # Issue ㉕ (sinjuku live runs): exact token + unrelated question, and prose
+        # forms like "那这个G4我确认了", must pass while the verbatim reply is kept.
+        self.init()
+        self.prepare_node("G1")
+        reply = "确认G1，那么我们就这边测试做完了是吧，我们下一步是什么"
+        result = self.approve("G1", token=reply, response=reply)
+        self.assertEqual("G2", result["currentNode"])
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G1"]["approval"]
+        self.assertEqual("确认 G1", approval["approvalToken"])
+        self.assertEqual(reply, approval["approvalResponseVerbatim"])
+        self.assertTrue(approval["normalizedFromVariant"])
+        self.prepare_node("G2")
+        reply = "OK，那这个G2我确认了"
+        self.approve("G2", token=reply, response=reply)
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G2"]["approval"]
+        self.assertEqual("确认 G2", approval["approvalResponse"])
+        self.assertEqual(reply, approval["approvalResponseVerbatim"])
+
+    def test_conditional_or_ambiguous_replies_are_refused(self):
+        # ㉕'s conservative edge: anything that is not one unconditional approval
+        # clause naming this node stays refused — gates never infer from shaky prose.
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        for reply in ("这个bug修改完毕的话就 确认G3", "确认G2还是G3", "帮我确认G3",
+                      "确认G3吗", "不确认G3", "确认G3，但先别渲染", "如果没问题就确认G3"):
+            blocked = self.approve("G3", token=reply, response=reply, code=2)
+            self.assertIn("确认 G3", blocked["error"])
+        self.approve("G3")
+
     def test_g2_requires_existing_and_reviewed_references(self):
         self.init()
         self.prepare_node("G1")
@@ -302,6 +333,22 @@ class PipelineStateTest(unittest.TestCase):
         self.assertIsNone(state["nodes"]["G3"]["reviewGate"])
         self.assertIsNone(state["nodes"]["G3"]["approval"])
         self.assertIsNone(state["nodes"]["G4"]["reviewGate"])
+
+    def test_reopen_g3_from_g5_resets_g5_and_g4_approval(self):
+        # Issue ㉗（sinjuku ㉖ 事故现场）：G4 关单进入 G5 后发现 G3 批准范围分歧，
+        # 必须有合法回退命令；回退连带重置 G5，产物留盘作审计。
+        self.init()
+        self.advance_through("G4")
+        self.move_to_review("G5")
+        result = self.run_cli("reopen-g3", "--state", self.state, "--reason", "approval scope dispute",
+                              "--rework-ref", self.file("rework-g5.md"))
+        self.assertEqual("G3", result["currentNode"])
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertIsNone(state["nodes"]["G3"]["approval"])
+        self.assertIsNone(state["nodes"]["G4"]["approval"])
+        self.assertIsNone(state["nodes"]["G4"]["reviewGate"])
+        self.assertIsNone(state["nodes"]["G5"]["reviewGate"])
+        self.assertEqual("pending", state["nodes"]["G5"]["status"])
 
     def test_full_five_node_review_gate_chain(self):
         self.init()

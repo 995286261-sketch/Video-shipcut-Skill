@@ -23,7 +23,21 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROFILE_NAME = "转场-宿主能力档-v0.1.json"
+PROFILE_PREFIX = "转场-宿主能力档"
+
+
+def next_versioned_path(output_dir: Path, prefix: str) -> Path:
+    """产物版本自动递增、永不覆盖（issue ㉘）：与 transition_directive 故意重复此
+    10 行，专员脚本保持零依赖单文件。"""
+    pattern = re.compile(rf"^{re.escape(prefix)}-v(\d+)\.(\d+)\.json$")
+    best = (0, 0)
+    for candidate in output_dir.glob(prefix + "-v*.json"):
+        match = pattern.match(candidate.name)
+        if match:
+            best = max(best, (int(match.group(1)), int(match.group(2))))
+    if best == (0, 0):
+        return output_dir / f"{prefix}-v0.1.json"
+    return output_dir / f"{prefix}-v{best[0]}.{best[1] + 1}.json"
 VERSION_LINE = re.compile(r"ffmpeg version (\S+)")
 # `ffmpeg -h filter=xfade` lists constants as indented rows: name, value, flags
 # (starting "..FV"), description. Only accept that exact shape (mirrors the
@@ -93,6 +107,7 @@ def main() -> int:
         "xfade": {"available": facts["xfadeAvailable"], "transitions": names,
                   "evidence": "ffmpeg -hide_banner -h filter=xfade (parsed constant rows)"},
         "capabilities": {
+            "fade": "fade" in names,
             "dissolve": "dissolve" in names,
             "wipe": "wipeleft" in names,
             "fadeBlackBoundary": "fadeblack" in names,
@@ -100,7 +115,7 @@ def main() -> int:
         "basis": "measured probe — capabilities not listed here must not be claimed by any plan",
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    out = args.output_dir / PROFILE_NAME
+    out = next_versioned_path(args.output_dir, PROFILE_PREFIX)
     out.write_text(json.dumps(profile, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not out.is_file() or out.stat().st_size == 0:
         emit({"status": "blocked", "blockers": [{"type": "write_failed", "detail": f"profile did not land on disk: {out}"}]})

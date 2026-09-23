@@ -1,4 +1,5 @@
 import glob
+import hashlib
 import json
 import shutil
 import subprocess
@@ -335,6 +336,52 @@ class G4AssembleTests(unittest.TestCase):
         self.assertIn("rendered file 1000ms", joined)
         self.assertIn("g4_render", joined)
 
+    def test_long_chain_xfade_midway_timebase_regression(self):
+        # Issue ㉒（sinjuku 27 段实片引爆）：xfade 落在长链中段时，main 输入=concat 输出
+        # （tb=1/1000000）、side 输入=单段 fps 输出（tb=1/30），ffmpeg 7.0 直接拒绝。
+        # 批②冒烟的 2 段夹具两侧都是 fps 直出、测不出来——本例补盲区：6 段链、叠化在第 3 边界。
+        for index in range(3, 7):
+            subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "color=c=red:s=320x240:r=24", "-t", "1",
+                            "-c:v", "libx264", "-an", str(self.segments / f"seg-{index:03d}.mp4")],
+                           check=True, capture_output=True)
+        narration = self.root / "long-narration.wav"
+        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=440:duration=6", str(narration)],
+                       check=True, capture_output=True)
+        grids = [1000, 1000, 750, 750, 1000, 1000]
+        extras = [(0, 0), (0, 0), (0, 250), (250, 0), (0, 0), (0, 0)]
+        segments, start = [], 0
+        for index, grid in enumerate(grids, 1):
+            segments.append({"segmentId": f"s{index}", "order": index,
+                             "timeline": {"startMs": start, "endMs": start + grid},
+                             "transition": {"headExtraMs": extras[index - 1][0], "tailExtraMs": extras[index - 1][1]},
+                             "output": {"filename": f"seg-{index:03d}.mp4"}})
+            start += grid
+        directive = {"schemaVersion": "0.1", "skill": "transition-expert", "purpose": "transition_directive",
+                     "gridInvariant": True, "timelineDurationMs": 5500,
+                     "segments": [{"segmentId": f"s{index}", "headExtraMs": head, "tailExtraMs": tail}
+                                  for index, (head, tail) in enumerate(extras, 1)],
+                     "boundaries": [{"fromSegmentId": "s3", "toSegmentId": "s4", "transition": "fade",
+                                     "durationMs": 500, "offsetMs": 2500}],
+                     "masterFades": {"fadeInMs": 0, "fadeOutMs": 0}}
+        directive_path = self.root / "directive.json"
+        directive_path.write_text(json.dumps(directive, ensure_ascii=False), encoding="utf-8")
+        digest = hashlib.sha256(directive_path.read_bytes()).hexdigest().upper()
+        self.manifest.write_text(json.dumps({
+            "schemaVersion": "0.2", "node": "G4", "projectId": "demo-001", "status": "prepared_for_render",
+            "timelineDurationMs": 5500, "segments": segments,
+            "transitionDirective": {"path": str(directive_path), "sha256": digest, "boundaries": 1,
+                                    "masterFades": {"fadeInMs": 0, "fadeOutMs": 0}},
+        }), encoding="utf-8")
+        result = subprocess.run(
+            [PYTHON, str(SCRIPT), "--manifest", str(self.manifest), "--segments-dir", str(self.segments),
+             "--narration-audio", str(narration), "--output", str(self.output)],
+            capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
+        self.assertIn("settb=AVTB", record["filterGraph"])
+        self.assertIn("xfade=transition=fade:duration=0.500:offset=2.500", record["filterGraph"])
+        self.assertLessEqual(abs(record["probedDurationMs"] - 5500), 400)
+
     def test_directive_grid_mismatch_is_refused(self):
         self.bind([750, 750], 500)
         directive = json.loads((self.root / "directive.json").read_text(encoding="utf-8"))
@@ -344,6 +391,33 @@ class G4AssembleTests(unittest.TestCase):
         result = self.run_assemble()
         self.assertEqual(2, result.returncode)
         self.assertIn("grid", result.stdout + result.stderr)
+
+
+class VideoChainGraphTests(unittest.TestCase):
+    """㉒ 单元层（零 ffmpeg 依赖）：build_video_chain 的 filter 图形状合同。"""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("g4_assemble_under_test", SCRIPT)
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def test_xfade_junction_wraps_both_inputs_with_settb(self):
+        ids = [f"seg-{index:02d}" for index in range(1, 9)]
+        boundary = {"fromSegmentId": "seg-04", "toSegmentId": "seg-05",
+                    "transition": "fade", "durationMs": 400, "offsetMs": 4600}
+        graph = self.module.build_video_chain(["[base]"], [], [], ids,
+                                              {("seg-04", "seg-05"): boundary}, 30, True)
+        self.assertEqual(2, graph.count("settb=AVTB"), "xfade 两侧输入都必须先过 settb")
+        self.assertIn("xfade=transition=fade:duration=0.400:offset=4.600", graph)
+        self.assertEqual(6, graph.count("concat=n=2:v=1:a=0"), "非转场边界保持 concat 硬切")
+
+    def test_no_transition_path_untouched_by_settb(self):
+        # 无转场项目逐字节不变是红线：legacy 路径不得混入任何 xfade/settb 痕迹。
+        graph = self.module.build_video_chain(["[0:v]", "[1:v]"], [], [], ["a", "b"], {}, 30, False)
+        self.assertNotIn("settb", graph)
+        self.assertNotIn("xfade", graph)
 
 
 if __name__ == "__main__":

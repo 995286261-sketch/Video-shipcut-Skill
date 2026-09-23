@@ -374,6 +374,27 @@ def main() -> int:
             pass
         except KeyError as error:
             ERRORS.append(f"segment {segment.get('segmentId')} references unknown data: {error}")
+    if plan_status == "approved_for_g4":
+        # Issue ⑯ (plan-contract 硬约束): 批准计划的段输出区间必须连续覆盖成片——
+        # 首段起于 0、末段止于 timelineDurationMs、相邻段共端点零缝隙；句间留白按
+        # "边界=留白中点"归属相邻两段（合同示例见 plan-contract 连续网格节）。
+        timeline_total = plan.get("timelineDurationMs")
+        ordered = sorted((s for s in segments if isinstance(s, dict)),
+                         key=lambda s: s.get("outputStartMs") or 0)
+        if isinstance(timeline_total, int) and timeline_total > 0 and ordered:
+            for index, segment in enumerate(ordered):
+                start, end = segment.get("outputStartMs"), segment.get("outputEndMs")
+                if not isinstance(start, int) or not isinstance(end, int):
+                    continue
+                if index == 0:
+                    expected_start = 0
+                else:
+                    expected_start = ordered[index - 1].get("outputEndMs")
+                if isinstance(expected_start, int) and start != expected_start:
+                    ERRORS.append(f"approved plan must be a continuous grid: segment {segment.get('segmentId')} starts at {start}, expected {expected_start} (issue ⑯)")
+            last_end = ordered[-1].get("outputEndMs")
+            if isinstance(last_end, int) and last_end != timeline_total:
+                ERRORS.append(f"approved plan must cover the full timeline: last segment ends at {last_end}, expected {timeline_total} (issue ⑯)")
     ranges = {}
     for segment in segments:
         key = source_identity.get(segment.get("assetId"), segment.get("assetId"))

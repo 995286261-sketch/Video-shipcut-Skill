@@ -260,6 +260,26 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.assertNotEqual(0, code)
         self.assertIn("timelineReview", output)
 
+    def test_approved_plan_must_be_continuous_grid(self):
+        # Issue ⑯：批准计划的输出区间缝隙/缺口由计划校验器当场拒绝，不再等转场校验摊牌。
+        decision = self.decision()
+        review = {"status": "confirmed", "confirmedBy": "user", "confirmedAt": "2026-08-18",
+                  "feedback": "整体确认", "basisRefs": ["G3-逐段剪辑时间表-v0.1.md"]}
+        approval = {"approvedBy": "user", "approvedAt": "2026-08-18", "basisRefs": ["check.md"]}
+        short = self.plan(decision, status="approved_for_g4", timelineReview=review,
+                          g3Approval=approval, timelineDurationMs=2_000)
+        code, output = self.run_cli(short, decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("cover the full timeline", output)
+        gap = self.plan(decision, status="approved_for_g4", timelineReview=review,
+                        g3Approval=approval, timelineDurationMs=1_500)
+        value = json.loads(gap.read_text(encoding="utf-8"))
+        value["segments"][0].update({"outputStartMs": 500, "outputEndMs": 1_500})
+        gap.write_text(json.dumps(value), encoding="utf-8")
+        code, output = self.run_cli(gap, decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("continuous grid", output)
+
     def test_bom_encoded_json_is_allowed(self):
         decision = self.decision()
         plan = self.plan(decision)

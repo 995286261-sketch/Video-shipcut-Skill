@@ -16,6 +16,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -206,7 +207,14 @@ def main() -> int:
     results, blockers = [], []
     duration_mode = "hard"
 
-    def search_pass(min_duration: float):
+    # Live 2026-09-22 (验收003-⑦): page_size fetches 3x headroom so post-filter keeps can
+    # still reach the per-term cap -- but the cap itself must actually truncate. Before this
+    # fix, every API result was downloaded (4 terms x 24 = 62 kept live), quietly multiplying
+    # the user-visible "search the top few per term" contract.
+    hard_stats: list[dict] = []
+    kept_per_query: dict[str, int] = {}
+
+    def search_pass(min_duration: float, stats_bucket: list):
         pass_results, pass_blockers = [], []
         for query in queries:
             params = {"fields": SEARCH_FIELDS, "page_size": max(args.max_results * 3, args.max_results),
@@ -219,17 +227,19 @@ def main() -> int:
             if payload is None:
                 pass_blockers.append({"query": query, **error})
                 continue
-            pass_results.extend(payload.get("results", []))
+            returned = payload.get("results", [])
+            stats_bucket.append({"query": query, "returned": len(returned)})
+            pass_results.extend((query, item) for item in returned)
         return pass_results, pass_blockers
 
-    def dedupe(items):
+    def dedupe(pairs):
         seen_ids, unique = set(), []
-        for item in items:
+        for query, item in pairs:
             sound_id = item.get("id")
             if sound_id in seen_ids:
                 continue
             seen_ids.add(sound_id)
-            unique.append(item)
+            unique.append((query, item))
         return unique
 
     text_search = args.similar_to is None
@@ -238,9 +248,9 @@ def main() -> int:
         if payload is None:
             emit({"status": "blocked", "blockers": [error]})
             return 2
-        results = payload.get("results", [])
+        results = [(None, item) for item in payload.get("results", [])]
     else:
-        results, blockers = search_pass(args.duration_min)
+        results, blockers = search_pass(args.duration_min, hard_stats)
         if blockers and len(blockers) == len(queries):
             emit({"status": "blocked", "blockers": blockers})
             return 2
@@ -249,8 +259,10 @@ def main() -> int:
     candidates = []
     excluded = []
 
-    def collect(items, shortfall_floor=None):
-      for item in items:
+    def collect(pairs, shortfall_floor=None):
+      for query, item in pairs:
+        if query is not None and kept_per_query.get(query, 0) >= args.max_results:
+            continue  # per-term cap: this query already contributed its share
         verdict = classify_license(item.get("license"))
         if verdict is None:
             excluded.append({"freesoundId": item.get("id"), "name": item.get("name"), "license": item.get("license"),
@@ -294,6 +306,10 @@ def main() -> int:
                 continue
             candidates_dir.mkdir(parents=True, exist_ok=True)
             target = candidates_dir / f"freesound-{record['freesoundId']}-preview.mp3"
+            # 验收003-①: long searches must show incremental life; stderr keeps the
+            # stdout JSON contract clean.
+            print(f"[{len(candidates) + len(excluded) + 1}] {query or 'similar'} -> {record['freesoundId']} {record['title']}",
+                  file=sys.stderr, flush=True)
             download_error = download(preview, target)
             if download_error is not None:
                 excluded.append({"freesoundId": record["freesoundId"], "name": record["title"], "reason": download_error})
@@ -306,13 +322,17 @@ def main() -> int:
             if not passed:
                 record["decodeProbe"]["error"] = probe_detail or "undecodable"
         candidates.append(record)
+        if query is not None:
+            kept_per_query[query] = kept_per_query.get(query, 0) + 1
 
     collect(results)
     if text_search and not candidates and args.duration_min > RELAXED_MIN:
-        relaxed_results, relaxed_blockers = search_pass(RELAXED_MIN)
+        relaxed_stats: list[dict] = []
+        relaxed_results, relaxed_blockers = search_pass(RELAXED_MIN, relaxed_stats)
         blockers.extend(relaxed_blockers)
-        seen_ids = {item.get("id") for item in results}
-        collect([item for item in dedupe(relaxed_results) if item.get("id") not in seen_ids],
+        hard_stats.extend(relaxed_stats)
+        seen_ids = {item.get("id") for _query, item in results}
+        collect([(query, item) for query, item in dedupe(relaxed_results) if item.get("id") not in seen_ids],
                 shortfall_floor=args.duration_min)
         if candidates:
             duration_mode = "soft-fallback"
@@ -329,6 +349,8 @@ def main() -> int:
                            "appliedMinSec": (RELAXED_MIN if duration_mode == "soft-fallback" else args.duration_min),
                            "maxSec": args.duration_max},
         "retrievedAt": now(), "candidates": kept, "excluded": excluded,
+        "perQuery": [{"query": s["query"], "returned": s["returned"], "cap": args.max_results,
+                      "kept": kept_per_query.get(s["query"], 0)} for s in hard_stats],
         "sufficiency": {"count": len(kept), "minimumExpected": 3},
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     emit({"status": "completed", "manifest": str(manifest_path), "candidates": len(kept), "excluded": len(excluded),

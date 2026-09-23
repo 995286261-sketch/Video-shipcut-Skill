@@ -58,7 +58,10 @@ def main():
             if expected_canvas and actual_canvas!=expected_canvas: fail("bad video profile: "+file.name)
             if detected_canvas is None: detected_canvas=actual_canvas
             if any(s.get("codec_type")=="audio" for s in streams): fail("source audio leaked: "+file.name)
-            expected=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"])/1000
+            # 验收003-㉒后续：转场手柄段（g4_render transitionsExtended）故意多切 head/tailExtra，
+            # 期望时长必须含扩展量，否则叠化两侧段被误判 bad duration。
+            extra=(segment.get("transition") or {}).get("headExtraMs",0)+(segment.get("transition") or {}).get("tailExtraMs",0)
+            expected=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"]+extra)/1000
             if abs(float(meta["format"]["duration"])-expected)>.15: fail("bad duration: "+file.name)
     print(json.dumps({"status":"valid","segments":len(segments),"timelineDurationMs":cursor}, ensure_ascii=True)); return 0
 if __name__=="__main__":

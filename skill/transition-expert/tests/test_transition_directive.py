@@ -23,7 +23,7 @@ directive_script = load_script("transition_directive")
 
 HOST_PROFILE = {"skill": "transition-expert", "purpose": "transition_host_profile",
                 "xfade": {"available": True, "transitions": ["dissolve", "fade", "fadeblack"]},
-                "capabilities": {"dissolve": True, "wipe": False, "fadeBlackBoundary": True}}
+                "capabilities": {"fade": True, "dissolve": True, "wipe": False, "fadeBlackBoundary": True}}
 
 
 def base_plan() -> dict:
@@ -62,8 +62,8 @@ class DirectiveBuildTests(unittest.TestCase):
     def test_boundaries_golden_offsets_grid_invariant(self):
         directive = directive_script.build_directive(base_plan(), base_evidence(), HOST_PROFILE)
         self.assertEqual([
-            {"fromSegmentId": "seg-001", "toSegmentId": "seg-002", "transition": "dissolve", "durationMs": 500, "offsetMs": 3750},
-            {"fromSegmentId": "seg-002", "toSegmentId": "seg-003", "transition": "dissolve", "durationMs": 500, "offsetMs": 8750},
+            {"fromSegmentId": "seg-001", "toSegmentId": "seg-002", "transition": "fade", "durationMs": 500, "offsetMs": 3750},
+            {"fromSegmentId": "seg-002", "toSegmentId": "seg-003", "transition": "fade", "durationMs": 500, "offsetMs": 8750},
         ], directive["boundaries"])
         # 网格不变是宪法：Σ文件长 − Σ重叠 == 批准网格 13000，指令必须自己先把账平掉。
         self.assertEqual(13000, directive["timelineDurationMs"])
@@ -110,6 +110,18 @@ class DirectiveCliTests(unittest.TestCase):
         finally:
             sys.argv = backup
         return code, json.loads(stdout.getvalue())
+
+    def test_rerun_increments_version_and_never_overwrites(self):
+        # issue ㉘ (sinjuku reopen 重跑现场): 旧指令文件必须原样留盘作审计。
+        code, first = self.call(base_plan(), base_evidence(), HOST_PROFILE)
+        self.assertEqual(0, code, first)
+        first_path = Path(first["directive"])
+        self.assertEqual("G4-转场执行指令-v0.1.json", first_path.name)
+        first_bytes = first_path.read_bytes()
+        code, second = self.call(base_plan(), base_evidence(), HOST_PROFILE)
+        self.assertEqual(0, code, second)
+        self.assertEqual("G4-转场执行指令-v0.2.json", Path(second["directive"]).name)
+        self.assertEqual(first_bytes, first_path.read_bytes())
 
     def test_completed_binds_three_input_hashes(self):
         code, payload = self.call(base_plan(), base_evidence(), HOST_PROFILE)

@@ -31,8 +31,8 @@ def golden_directive() -> dict:
     return directive_script.build_directive(plan, {"sourceEvidence": []}, None)
 
 
-GOLDEN_GRAPH = ("[0:v]fps=fps=24,format=yuv420p,setsar=1[segv0];[segv0][segv1]xfade=transition=dissolve:duration=0.500:offset=3.750[vcat0];"
-                "[vcat0][segv2]xfade=transition=dissolve:duration=0.500:offset=8.750[vcat1];[vcat1],format=yuv420p,"
+GOLDEN_GRAPH = ("[0:v]fps=fps=24,format=yuv420p,setsar=1[segv0];[segv0][segv1]xfade=transition=fade:duration=0.500:offset=3.750[vcat0];"
+                "[vcat0][segv2]xfade=transition=fade:duration=0.500:offset=8.750[vcat1];[vcat1],format=yuv420p,"
                 "fade=t=out:st=12.200:d=0.800[v]")
 
 
