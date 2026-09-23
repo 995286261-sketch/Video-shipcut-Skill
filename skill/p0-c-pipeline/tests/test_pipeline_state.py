@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -24,6 +25,10 @@ CHECKLISTS = {
 }
 
 
+def sha_upper(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest().upper()
+
+
 class PipelineStateTest(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -46,17 +51,54 @@ class PipelineStateTest(unittest.TestCase):
         self.voice = self.file("G2-证据与口播/voice.json")
         self.plan = self.file("G3-剪辑计划/plan.json")
         self.timeline = self.file("G3-剪辑计划/timeline-review.md")
-        self.render = self.file("G4-剪辑与渲染/final-candidate.mp4")
-        self.g4_validation = self.file("G4-剪辑与渲染/validation.json")
+        # R1（Leader 反馈，用户 09-23 裁决方案 A）：G4/G5 关单门禁解析质检报告内容
+        # （status/projectId/产物指纹重算），夹具因此必须是真报告+真字节产物，不再是一行 "fixture"。
+        self.render = self.binary("G4-剪辑与渲染/final-candidate.mp4", b"fake-candidate-video-bytes")
+        self.g4_validation = self.json_file("G4-剪辑与渲染/validation.json", {
+            "status": "valid", "projectId": "fixture", "segments": 1, "timelineDurationMs": 1000,
+            "candidate": {"path": str(self.render), "sha256": sha_upper(self.render.read_bytes())},
+        })
         self.chatcut = self.file("G4-剪辑与渲染/ChatCut-导出/batch/final.mp4")
         self.delivery = self.file("G5-交付包/交付包-v0.1/delivery-manifest.json")
-        self.g5_validation = self.file("G5-交付包/交付包-v0.1/validation.json")
+        self.g5_final = self.binary("G5-交付包/交付包-v0.1/final-video.mp4", b"fake-final-video")
+        # chapterClips 的真实形状是列表（sinjuku/tiger 实盘对同），夹具覆盖单条+列表两种。
+        self.g5_clip = self.binary("G5-交付包/交付包-v0.1/clips/chapter-01.mp4", b"fake-chapter-clip")
+        self.g5_validation = self.json_file("G5-交付包/交付包-v0.1/validation.json", {
+            "status": "g5_pending_human_review", "projectId": "fixture",
+            "artifacts": {
+                "finalVideo": {"path": "final-video.mp4", "sha256": sha_upper(self.g5_final.read_bytes())},
+                "chapterClips": [{"path": "clips/chapter-01.mp4", "sha256": sha_upper(self.g5_clip.read_bytes())}],
+            },
+        })
 
     def file(self, relative):
         path = self.root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("fixture", encoding="utf-8")
         return path
+
+    def binary(self, relative, data):
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+        return path
+
+    def json_file(self, relative, value):
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(value), encoding="utf-8")
+        return path
+
+    def rewrite_json(self, path, **overrides):
+        value = json.loads(path.read_text(encoding="utf-8"))
+        value.update(overrides)
+        path.write_text(json.dumps(value), encoding="utf-8")
+        return value
+
+    def drop_json_key(self, path, key):
+        value = json.loads(path.read_text(encoding="utf-8"))
+        value.pop(key)
+        path.write_text(json.dumps(value), encoding="utf-8")
 
     def run_cli(self, *args, code=0):
         result = subprocess.run([sys.executable, str(SCRIPT), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
@@ -381,6 +423,138 @@ class PipelineStateTest(unittest.TestCase):
         receipt_path.write_text(json.dumps(value), encoding="utf-8")
         blocked = self.approve("G1", code=2)
         self.assertIn("no longer valid", blocked["error"])
+
+
+    # ---- Leader 反馈 R1（用户 09-23 裁决方案 A + 负向自动测试）：审批入口必须解析
+    # G4/G5 质检报告——失败、报告缺失/非 JSON、结果过期、张冠李戴一律阻断，
+    # 不能仅检查文件存在。有效报告与对应产物匹配且人工批准后才可推进。 ----
+
+    def test_g4_positive_bound_report_approved(self):
+        # 有效报告+对应产物匹配+人工批准 → 放行（R1 的正向基线）。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        result = self.approve("G4")
+        self.assertEqual("G5", result["currentNode"])
+
+    def test_g4_non_json_placeholder_report_blocked(self):
+        # "不能仅检查文件存在"：文件在、内容不是 JSON 报告 → 拒。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.g4_validation.write_text("fixture", encoding="utf-8")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("JSON", blocked["error"])
+
+    def test_g4_failed_status_blocked(self):
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.rewrite_json(self.g4_validation, status="invalid")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("不可批准", blocked["error"])
+
+    def test_g4_report_without_candidate_fingerprint_blocked(self):
+        # invalid/failed 之外的第三种失败：valid 但没绑成片指纹=报告不指向任何实物。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.drop_json_key(self.g4_validation, "candidate")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("未绑定候选成片指纹", blocked["error"])
+
+    def test_g4_report_from_other_project_blocked(self):
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.rewrite_json(self.g4_validation, projectId="other-film")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("不符", blocked["error"])
+
+    def test_g4_stale_report_after_render_change_blocked(self):
+        # 结果过期：报告生成后候选成片被重渲 → 指纹对不上，逼重跑。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.render.write_bytes(b"re-rendered candidate, report no longer describes this file")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("指纹不符", blocked["error"])
+
+    def test_g4_rerun_bound_report_unblocks(self):
+        # 过期被拒后，按门禁提示重跑 g4_validate --candidate（等价语义：重新登记真实指纹）→ 放行。
+        self.init()
+        self.advance_through("G3")
+        self.prepare_node("G4")
+        self.render.write_bytes(b"re-rendered candidate, report no longer describes this file")
+        blocked = self.approve("G4", code=2)
+        self.assertIn("指纹不符", blocked["error"])
+        self.rewrite_json(self.g4_validation, candidate={"path": str(self.render), "sha256": sha_upper(self.render.read_bytes())})
+        result = self.approve("G4")
+        self.assertEqual("G5", result["currentNode"])
+
+    def test_g5_non_json_placeholder_report_blocked(self):
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.g5_validation.write_text("fixture", encoding="utf-8")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("JSON", blocked["error"])
+
+    def test_g5_failed_or_machine_pending_status_blocked(self):
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        for bad in ("invalid", "failed", "pending_g5_machine_checks"):
+            self.rewrite_json(self.g5_validation, status=bad)
+            blocked = self.approve("G5", code=2)
+            self.assertIn("不可批准", blocked["error"])
+
+    def test_g5_report_from_other_project_blocked(self):
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.rewrite_json(self.g5_validation, projectId="other-film")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("不符", blocked["error"])
+
+    def test_g5_report_without_artifact_bindings_blocked(self):
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.drop_json_key(self.g5_validation, "artifacts")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("未登记产物指纹", blocked["error"])
+
+    def test_g5_missing_registered_artifact_blocked(self):
+        # 报告登记了产物但交付包里没有实物。
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.g5_final.unlink()
+        blocked = self.approve("G5", code=2)
+        self.assertIn("不在交付包中", blocked["error"])
+
+    def test_g5_tampered_artifact_after_report_blocked(self):
+        # 结果过期（含 chapterClips 列表形状同检）：报告后改动任何登记产物 → 拒。
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.g5_clip.write_bytes(b"retouched chapter clip")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("指纹不符", blocked["error"])
+        self.assertIn("chapterClips", blocked["error"])
+
+    def test_g5_completed_report_still_bound_to_artifacts(self):
+        # completed* 可批（历史封包复检语义），但指纹绑定不因状态宽松而豁免。
+        self.init()
+        self.advance_through("G4")
+        self.prepare_node("G5")
+        self.rewrite_json(self.g5_validation, status="completed_with_accepted_warnings")
+        self.g5_final.write_bytes(b"swapped final video")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("指纹不符", blocked["error"])
+        self.g5_final.write_bytes(b"fake-final-video")
+        self.approve("G5")
 
 
 if __name__ == "__main__":

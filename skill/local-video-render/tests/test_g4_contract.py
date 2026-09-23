@@ -176,4 +176,52 @@ class G4ContractTest(unittest.TestCase):
         value=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"o3","--transition-directive",d3,code=2)
         self.assertIn("transition-expert",value["error"])
 
+    # ---- Leader 反馈 R1（方案 A，用户 09-23 裁决）：--candidate 让 G4 报告绑定
+    # projectId 与候选成片指纹（ffprobe 实测时长对账），供关单门禁重算对账。 ----
+
+    def prepared_three_second_manifest(self):
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
+        evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
+        plan_path=self.root/"G3-剪辑计划-v0.9.json"; evidence_path=self.root/"evidence.json"
+        plan_path.write_text(json.dumps(plan)); evidence_path.write_text(json.dumps(evidence))
+        self.run_cli(PREPARE,"--plan",plan_path,"--evidence",evidence_path,"--source-pack",pack,"--output-dir",self.root/"out")
+        return self.root/"out"/"G4-可编辑工程-v0.9.json"
+
+    def make_real_clip(self, name, seconds):
+        import shutil
+        ffmpeg=shutil.which("ffmpeg")
+        result=subprocess.run([ffmpeg,"-y","-f","lavfi","-i",f"color=c=blue:s=360x640:r=24","-t",str(seconds),"-c:v","libx264","-an",str(self.root/name)],capture_output=True,text=True,encoding="utf-8",errors="replace")
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        return self.root/name
+
+    def test_validate_candidate_binds_project_id_and_fingerprint(self):
+        import shutil, hashlib
+        if not shutil.which("ffmpeg") or not shutil.which("ffprobe"): self.skipTest("需要 ffmpeg/ffprobe 生成真实候选成片")
+        manifest=self.prepared_three_second_manifest()
+        candidate=self.make_real_clip("G4-候选成片-v0.9.mp4",3)
+        checked=self.run_cli(VALIDATE,"--manifest",manifest,"--candidate",candidate)
+        self.assertEqual("valid",checked["status"])
+        self.assertEqual("p",checked["projectId"])
+        self.assertEqual(hashlib.sha256(candidate.read_bytes()).hexdigest().upper(),checked["candidate"]["sha256"])
+        self.assertEqual(3000,checked["timelineDurationMs"])
+        self.assertLessEqual(abs(checked["candidate"]["probedDurationMs"]-checked["timelineDurationMs"]),200)
+        # 无参向后兼容：老调用不产生 candidate 字段（管线外手动验证不受影响）。
+        plain=self.run_cli(VALIDATE,"--manifest",manifest)
+        self.assertNotIn("candidate",plain)
+
+    def test_validate_candidate_wrong_cut_or_missing_blocked(self):
+        # R1 负向：报告与成片非同一版（时长对不上）或成片不存在 → 不出 valid 报告。
+        manifest=self.prepared_three_second_manifest()
+        missing=self.run_cli(VALIDATE,"--manifest",manifest,"--candidate",self.root/"nope.mp4",code=2)
+        self.assertIn("不存在",missing["error"])
+        import shutil
+        if not shutil.which("ffmpeg") or not shutil.which("ffprobe"): self.skipTest("需要 ffmpeg/ffprobe 生成错误时长的对照成片")
+        short=self.make_real_clip("stale-cut.mp4",1)
+        mismatch=self.run_cli(VALIDATE,"--manifest",manifest,"--candidate",short,code=2)
+        self.assertIn("非同一版",mismatch["error"])
+
 if __name__=="__main__": unittest.main()

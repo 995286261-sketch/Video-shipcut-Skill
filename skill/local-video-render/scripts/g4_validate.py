@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate a generated G4 editable manifest and ChatCut handoff package."""
 import argparse
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -8,7 +9,11 @@ from pathlib import Path
 def fail(message): raise ValueError(message)
 def load(path): return json.loads(path.read_text(encoding="utf-8-sig"))
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int); parser.add_argument("--height",type=int); parser.add_argument("--fps",type=float,default=24); args=parser.parse_args()
+    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int); parser.add_argument("--height",type=int); parser.add_argument("--fps",type=float,default=24)
+    # Leader 反馈 R1（方案 A，用户 09-23 裁决）：--candidate 把报告绑定到候选成片指纹，
+    # G4 关单门禁要求报告含 projectId+candidate.sha256（无绑定=不可批准，逼重跑）。
+    parser.add_argument("--candidate", type=Path, help="G4 候选成片 mp4：登记 projectId 与成片 sha256 指纹供关单门禁对账")
+    args=parser.parse_args()
     if bool(args.width) != bool(args.height): fail("--width and --height must be supplied together")
     data=load(args.manifest)
     if data.get("schemaVersion") != "0.2" or data.get("status") != "prepared_for_render": fail("invalid G4 editable manifest")
@@ -63,7 +68,14 @@ def main():
             extra=(segment.get("transition") or {}).get("headExtraMs",0)+(segment.get("transition") or {}).get("tailExtraMs",0)
             expected=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"]+extra)/1000
             if abs(float(meta["format"]["duration"])-expected)>.15: fail("bad duration: "+file.name)
-    print(json.dumps({"status":"valid","segments":len(segments),"timelineDurationMs":cursor}, ensure_ascii=True)); return 0
+    result={"status":"valid","projectId":data.get("projectId"),"segments":len(segments),"timelineDurationMs":cursor}
+    if args.candidate:
+        if not args.candidate.is_file(): fail("candidate 候选成片不存在: "+str(args.candidate))
+        probe=subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",str(args.candidate)],capture_output=True,text=True,encoding="utf-8",errors="replace",check=True)
+        probed_ms=int(round(float(probe.stdout.strip())*1000))
+        if abs(probed_ms-cursor)>200: fail(f"candidate 时长 {probed_ms}ms 与可编辑工程时间线 {cursor}ms 不符（报告与成片非同一版）")
+        result["candidate"]={"path":str(args.candidate),"sha256":hashlib.sha256(args.candidate.read_bytes()).hexdigest().upper(),"probedDurationMs":probed_ms}
+    print(json.dumps(result, ensure_ascii=True)); return 0
 if __name__=="__main__":
     try: raise SystemExit(main())
     except (OSError, ValueError, json.JSONDecodeError) as error:

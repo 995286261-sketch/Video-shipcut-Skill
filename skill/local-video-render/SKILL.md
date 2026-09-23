@@ -16,6 +16,8 @@ G4 是单一节点、单一 Skill，正式项目产物写入 `G4_ROOT`。读取 
 
 执行入口：先运行 `scripts/g4_prepare.py` 生成 `G4-可编辑工程-v0.2.json`，再运行 `scripts/g4_render.py` 按该清单裁切，运行 `scripts/g4_validate.py` 验证清单、切片与交接包；需要压平预览或成片时，唯一入口是 `scripts/g4_assemble.py`（concat、旁白混音、BGM 混音=逐字执行 music-expert《BGM-混音合同》（`--bgm-mix-contract`，无合同拒绝混 BGM——专员决策、节点执行，见总账㉜）、字幕烧录、封面合成、章节卡叠加（`--chapter-cards`，卡期间自动裁开字幕 cue）、顶部标题栏（`--title-bar`）、旁白响度标准化（`--normalize-narration-lufs`：套用 kshatriya 批次实测的标准压限归一链 acompressor+loudnorm，渲染后用 ebur128 实测写入装配记录——只测量不假设，偏离目标 >1.5 LU 记复核提示；高峰值因数 TTS 源有响度上限，见发现㊌），并输出装配记录）；可编辑交接包由 `scripts/g4_build_handoff.py` 生成。不要使用项目 `work/` 中的临时脚本或临场拼接的 FFmpeg 命令作为新项目执行入口。
 
+G4 本地直渲染项目的关单质检报告必须带候选成片指纹：成片（候选）落盘后运行 `scripts/g4_validate.py --manifest <清单> --candidate <候选成片.mp4>`，其 stdout JSON（含 `status`、`projectId`、`candidate.sha256`、`probedDurationMs`）原样存档为 `G4-剪辑与渲染/G4-渲染验证-v<M.N>.json` 供 `确认 G4` 门禁对账；候选重渲或改动后必须重跑（Leader 反馈 R1，2026-09-23：门禁不再只查文件存在，报告与成片非同一版=过期阻断）。ChatCut 分支无本地候选成片，不适用此绑定。
+
 ## 前置门禁
 
 - 只接受状态为 `approved_for_g4` 的 G3 编辑计划。

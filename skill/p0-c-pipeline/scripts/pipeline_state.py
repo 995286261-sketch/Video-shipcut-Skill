@@ -31,6 +31,64 @@ def emit(value: dict, code: int = 0) -> None:
     raise SystemExit(code)
 
 
+def load_qa_report(path: Path, label: str) -> dict:
+    try:
+        report = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError) as error:
+        raise ValueError(f"{label} 必须是可解析的 JSON 质检报告（门禁不得只查文件存在，Leader 反馈 R1）：{error}") from error
+    if not isinstance(report, dict):
+        raise ValueError(f"{label} 必须是 JSON 对象")
+    return report
+
+
+def validate_g4_report(report_path: Path, render_path: Path, project_id: str) -> None:
+    # Leader 反馈 R1（方案 A，用户 09-23 裁决）：关单前解析 G4 质检报告——
+    # status/projectId/候选成片指纹三对才放行；报告与成片非同一版=过期，逼重跑。
+    report = load_qa_report(report_path, "G4 g4ValidationRef")
+    if report.get("status") != "valid":
+        raise ValueError(f"G4 质检报告 status={report.get('status')!r} 不可批准：只认 valid；invalid/failed 请回 G4 修复重验")
+    if report.get("projectId") != project_id:
+        raise ValueError(f"G4 质检报告 projectId={report.get('projectId')!r} 与当前项目 {project_id!r} 不符（张冠李戴报告不得过关）")
+    candidate = report.get("candidate") if isinstance(report.get("candidate"), dict) else {}
+    if not candidate.get("sha256"):
+        raise ValueError("G4 质检报告未绑定候选成片指纹（candidate.sha256）：重跑 g4_validate.py --candidate <候选成片> 后再批准")
+    if sha256_file(render_path) != str(candidate["sha256"]).upper():
+        raise ValueError("G4 候选成片与质检报告指纹不符（报告生成后成片被重渲/改动=过期）：重跑 g4_validate.py --candidate")
+
+
+G5_APPROVABLE_STATUSES = ("g5_pending_human_review", "valid")
+
+
+def validate_g5_report(report_path: Path, project_id: str) -> None:
+    # Leader 反馈 R1（方案 A）：关单前解析 G5 质检报告——status 可批值/projectId/
+    # 逐件产物 sha256 重算比对（报告必须绑定它所验的交付包）。
+    report = load_qa_report(report_path, "G5 g5ValidationRef")
+    status = str(report.get("status") or "")
+    if not (status in G5_APPROVABLE_STATUSES or status.startswith("completed")):
+        raise ValueError(f"G5 质检报告 status={status!r} 不可批准：只放行 g5_pending_human_review/valid/completed*；invalid/failed/pending*（机器质检未完成）一律阻断")
+    if report.get("projectId") != project_id:
+        raise ValueError(f"G5 质检报告 projectId={report.get('projectId')!r} 与当前项目 {project_id!r} 不符")
+    artifacts = report.get("artifacts") if isinstance(report.get("artifacts"), dict) else {}
+    # 真实报告形状（sinjuku/tiger 实测）：值既可能是单条 {path,sha256}，
+    # 也可能是逐章切片那样的列表 [{path,sha256},…]——两种都要吃下。
+    entries = []
+    for name in sorted(artifacts):
+        value = artifacts[name]
+        items = value if isinstance(value, list) else [value]
+        for index, item in enumerate(items):
+            entries.append((f"{name}[{index}]" if isinstance(value, list) else name, item))
+    if not entries:
+        raise ValueError("G5 质检报告未登记产物指纹（artifacts）：报告必须绑定交付包实物，重跑 G5 质检")
+    for name, entry in entries:
+        if not isinstance(entry, dict) or not entry.get("sha256") or not entry.get("path"):
+            raise ValueError(f"G5 质检报告产物 {name} 缺 path/sha256 登记")
+        target = report_path.parent / str(entry["path"])
+        if not target.is_file():
+            raise ValueError(f"G5 质检报告登记的产物 {name} 不在交付包中：{entry['path']}")
+        if sha256_file(target) != str(entry["sha256"]).upper():
+            raise ValueError(f"G5 交付包产物 {name} 与质检报告指纹不符（报告后产物被改动=过期）：重跑 G5 质检")
+
+
 def read_state(path: Path) -> dict:
     try:
         state = json.loads(path.read_text(encoding="utf-8"))
@@ -196,7 +254,7 @@ def sha256_file(path: Path) -> str:
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
-    return digest.hexdigest()
+    return digest.hexdigest().upper()
 
 
 def command_bgm_choice(args: argparse.Namespace) -> None:
@@ -419,8 +477,9 @@ def command_approve(args: argparse.Namespace) -> None:
             if not args.local_render_ref or not args.g4_validation_ref:
                 emit({"status": "blocked", "error": "G4 local-direct branch requires localRenderRef and g4ValidationRef"}, 2)
             try:
-                require_g4_file(state_path, args.local_render_ref, "G4 localRenderRef")
-                require_g4_file(state_path, args.g4_validation_ref, "G4 g4ValidationRef")
+                render_path = require_g4_file(state_path, args.local_render_ref, "G4 localRenderRef")
+                report_path = require_g4_file(state_path, args.g4_validation_ref, "G4 g4ValidationRef")
+                validate_g4_report(report_path, render_path, state["projectId"])
             except ValueError as error:
                 emit({"status": "blocked", "error": str(error)}, 2)
             try:
@@ -436,9 +495,10 @@ def command_approve(args: argparse.Namespace) -> None:
             emit({"status": "blocked", "error": "G5 approval requires deliveryManifestRef and g5ValidationRef"}, 2)
         try:
             manifest = require_g5_file(state_path, args.delivery_manifest_ref, "G5 deliveryManifestRef")
-            require_g5_file(state_path, args.g5_validation_ref, "G5 g5ValidationRef")
+            report_path = require_g5_file(state_path, args.g5_validation_ref, "G5 g5ValidationRef")
             if manifest.name != "delivery-manifest.json":
                 raise ValueError("G5 deliveryManifestRef must name delivery-manifest.json")
+            validate_g5_report(report_path, state["projectId"])
         except ValueError as error:
             emit({"status": "blocked", "error": str(error)}, 2)
         try:

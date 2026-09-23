@@ -35,7 +35,7 @@ The exact JSON shape of every component above (field names, required keys, artif
 
 `delivery-manifest.json` is the single machine-readable G5 contract entry point. It must expose `schemaVersion`, `projectId`, `sourceProbe`, `segments`, `editPlan`, `artifacts`, `qaReport`, `humanReviewPoints`, `evidenceRefs`, `warnings`, `status`, and `finishedAt` or an explicit pending-human-review status. It may link to the detailed JSON records, but must retain the source-probe, segment, artifact, warning, and boundary data needed for an independent audit.
 
-`metadata-validation-report.json` remains the detailed QA record. It must contain machine checks, detected anomalies, file hashes, and manual-review status; it is not the combined workflow contract.
+`metadata-validation-report.json` remains the detailed QA record. It must contain machine checks, detected anomalies, file hashes, and manual-review status; it is not the combined workflow contract. Per Leader 反馈 R1 (方案 A, 2026-09-23), it is also parsed — not merely existence-checked — by the pipeline approval gate before `确认 G5`: approvable statuses `g5_pending_human_review`/`valid`/`completed*`, matching `projectId`, and every registered artifact hash recomputed against the bundle bytes next to the report. See `delivery-bundle-schema.md` for the binding rules.
 
 ## Required QA checks
 

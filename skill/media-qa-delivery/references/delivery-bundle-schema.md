@@ -37,7 +37,8 @@
 ## metadata-validation-report.json
 
 - `checks`：必须**恰好覆盖**十个键（可多不可少）：`decode`、`videoCodec`、`dimensions`、`fps`、`audio`、`duration`、`blackFrames`、`silence`、`duplicateSegments`、`cover`；每项 `{status: "pass"}` 或带说明的失败项。
-- `artifacts`：固定键 `finalVideo`、`cover`、`subtitles`、`chapterClips`（数组，对应 clips/ 全部文件）；每项 `{path, sha256}`，`path` 相对包根、`sha256` 大写十六进制，validator 逐一重算比对。
+- `artifacts`：固定键 `finalVideo`、`cover`、`subtitles`、`chapterClips`（数组，对应 clips/ 全部文件）；每项 `{path, sha256}`，`path` 相对包根、`sha256` 大写十六进制，validator 逐一重算比对。项目实际登记时可有额外键（如 subtitleSrtCheck、transitionAudit），同样入对账。
+- **审批入口解析（Leader 反馈 R1，2026-09-23 方案 A）**：`pipeline_state approve G5` 不再只查本报告文件存在——关单前解析 JSON：`status` 须在可批准集合 {`g5_pending_human_review`, `valid`, `completed*`}（`invalid`/`failed`/其余 `pending*`=机器质检未完成一律阻断）；`projectId` 须与 state 一致（张冠李戴报告不得过关）；`artifacts` 逐条（含 chapterClips 数组形态）按**报告所在目录**为基重算 sha256 对同包内实物——报告与其声称验过的交付包不是同一版=过期，逼重跑质检。实盘冒烟即因此抓到 sinjuku 报告登记哈希从未对同过 `source-timecode-list.json`（validator 历来不查该键，门禁只查存在性，故一直漏网）。
 
 ## export-config.json
 
