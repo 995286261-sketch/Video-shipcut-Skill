@@ -33,6 +33,7 @@ from pathlib import Path
 VALIDATOR = Path(__file__).with_name("transition_validate_plan.py")
 DIRECTIVE = Path(__file__).with_name("transition_directive.py")
 MANIFEST_PREFIX = "转场-预览清单"
+VIEWER_PREFIX = "转场-预览观看页"
 CLIP_PREFIX = "转场预览"
 CONTEXT_MS = 1200        # 上下文秒数上限（用户裁决：约两秒低清小样）
 PREVIEW_WIDTH = 854      # 降分辨率不改混合语义（观感由 xfade 公式决定）
@@ -277,6 +278,44 @@ def render_item(item: dict, sources: dict, ffmpeg: str, ffprobe: str, out_dir: P
             "sha256": sha256(output), "renderArgs": args_log}
 
 
+def mmss(ms: int) -> str:
+    minutes, rest = divmod(int(ms), 60000)
+    seconds, millis = divmod(rest, 1000)
+    return f"{minutes}:{seconds:02d}.{millis:03d}"
+
+
+def build_viewer_html(manifest: dict) -> str:
+    """自包含观看页（用户 09-23 拍板：审批卡下统一附一页看全部）。
+    与清单同目录落盘→<video src> 用裸文件名相对引用；数据全部取自清单，
+    本页不重算任何窗口算术（防幻觉宪法：呈现层零算术）。"""
+    markers = "①②③④⑤⑥⑦⑧⑨⑩"
+    entries = []
+    for index, entry in enumerate(manifest["previews"], 1):
+        window = entry["windowMs"]
+        marker = markers[index - 1] if index <= len(markers) else str(index)
+        heading = (f"{marker} {entry['boundary']} ｜ {entry['type']} · {mmss(entry['durationMs'])} ｜ "
+                   f"成片窗口 {mmss(window[0])}–{mmss(window[1])}")
+        video = entry["file"]
+        note = (f"实测时长 {mmss(entry['probedLenMs'])}（批准窗口 {mmss(window[1] - window[0])}）"
+                f"｜ 无声小样，混合公式与成片逐字同式")
+        entries.append(f'<div class="card"><h2>{heading}</h2>\n'
+                       f'<video controls preload="metadata" src="{video}"></video>\n'
+                       f'<p class="note">{note}</p></div>')
+    page_version = manifest.get("version", "")
+    return ("<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"utf-8\">\n"
+            f"<title>转场试装预览 · {manifest.get('projectId', '')} · {page_version}</title>\n<style>\n"
+            " body{font-family:-apple-system,\"PingFang SC\",sans-serif;background:#101418;color:#e8eaed;"
+            "margin:24px auto;max-width:960px}\n h1{font-size:20px}\n .note{color:#9aa0a6;font-size:13px;line-height:1.6}\n"
+            " .card{margin:18px 0;padding:14px;background:#1a1f26;border-radius:10px}\n"
+            " .card h2{font-size:15px;margin:0 0 8px}\n video{width:100%;border-radius:6px;background:#000}\n"
+            "</style>\n</head>\n<body>\n"
+            f"<h1>转场试装预览 · 观看页 {page_version}</h1>\n<p class=\"note\">{manifest['disclaimer']}</p>\n"
+            + "\n".join(entries) + "\n"
+            f"<p class=\"note\">本页与《{MANIFEST_PREFIX}-{page_version}.json》同场生成"
+            f"（计划哈希 {str(manifest.get('planSha256', ''))[:12]}… 绑定；计划改版旧页自动作废，须重跑）。</p>\n"
+            "</body>\n</html>\n")
+
+
 def blocked(reason, status="blocked_previews") -> int:
     print(json.dumps({"status": status, "reason": reason, "disclosure": DISCLOSURE}, ensure_ascii=False))
     return 2
@@ -317,8 +356,9 @@ def main() -> int:
     version = manifest_path.name[len(MANIFEST_PREFIX) + 1:-len(".json")]
 
     used_assets = {part["assetId"] for item in items for part in item["parts"]}
-    manifest = {"schemaVersion": "0.1", "skill": "transition-expert", "purpose": "transition_preview",
+    manifest = {"schemaVersion": "0.2", "skill": "transition-expert", "purpose": "transition_preview",
                 "generatedAt": now(), "audio": False, "version": version,
+                "projectId": plan.get("projectId"),
                 "inputPlan": str(args.plan), "planSha256": sha256(args.plan),
                 "inputEvidence": str(args.evidence), "evidenceSha256": sha256(args.evidence),
                 "hostProfile": str(args.host_profile) if args.host_profile else None,
@@ -368,9 +408,13 @@ def main() -> int:
     except (subprocess.CalledProcessError, ValueError) as error:
         detail = error.stderr.decode("utf-8", "replace")[:500] if isinstance(error, subprocess.CalledProcessError) else str(error)
         return blocked(f"预览渲染失败（不静默跳卡）：{error.__class__.__name__}: {detail}")
+    viewer_path = args.output_dir / f"{VIEWER_PREFIX}-{version}.html"
+    viewer_path.write_text(build_viewer_html(manifest), encoding="utf-8")
+    manifest["viewerPage"] = viewer_path.name  # 相对清单所在目录（与 previews[].file 同规矩）
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
                              encoding="utf-8")
     print(json.dumps({"status": "completed", "manifest": str(manifest_path), "sha256": sha256(manifest_path),
+                      "viewerPage": str(viewer_path),
                       "previews": len(manifest["previews"]),
                       "boundaries": [p["boundary"] for p in manifest["previews"]]}, ensure_ascii=False))
     return 0

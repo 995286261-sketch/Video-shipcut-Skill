@@ -256,7 +256,9 @@ class G3PreviewGateTests(unittest.TestCase):
         sample_dir.mkdir()
         clip = sample_dir / "转场预览-seg-001toseg-002-v0.1.mp4"
         clip.write_bytes(b"fake clip bytes")
-        manifest = {"skill": "transition-expert", "purpose": "transition_preview", "audio": False,
+        (sample_dir / "转场-预览观看页-v0.1.html").write_text("<html>观看页</html>", encoding="utf-8")
+        manifest = {"skill": "transition-expert", "purpose": "transition_preview", "audio": False, "version": "v0.1",
+                    "viewerPage": "转场-预览观看页-v0.1.html",
                     "planSha256": hashlib.sha256(plan_path.read_bytes()).hexdigest().upper(),
                     "previews": [{"boundary": "seg-001→seg-002", "type": "叠化", "durationMs": 500,
                                   "windowMs": [250, 1500], "file": clip.name,
@@ -285,6 +287,17 @@ class G3PreviewGateTests(unittest.TestCase):
         self.assertIn("[转场预览-seg-001toseg-002-v0.1.mp4](预览小样/转场预览-seg-001toseg-002-v0.1.mp4)", card)
         self.assertIn("纯画面无声", card)
         self.assertIn("seg-001→seg-002 ｜ 叠化 · 00:00.500", card)
+        # 用户 09-23 拍板：卡下统一附一页看全部
+        self.assertIn("[一页看全部：转场预览观看页 v0.1](预览小样/转场-预览观看页-v0.1.html)", card)
+
+    def test_viewer_page_link_absent_for_old_manifest(self):
+        # 批②时期清单无 viewerPage 字段：卡照常渲染、不编造链接（能力可以缺、事实不能编）
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        manifest.pop("viewerPage")
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        card = self.render.render(callback, manifest, manifest_path, manifest_path.parent.parent / "G3-回显卡.md")
+        self.assertIn("## 转场试装预览（先看后批）", card)
+        self.assertNotIn("一页看全部", card)
 
     def test_stale_plan_hash_blocked(self):
         plan_path, manifest_path, plan, manifest = self.artifacts()
@@ -301,6 +314,14 @@ class G3PreviewGateTests(unittest.TestCase):
         with self.assertRaises(ValueError) as caught:
             self.check(callback, plan_path, plan, manifest_path, manifest)
         self.assertIn("哈希不符", str(caught.exception))
+
+    def test_missing_viewer_page_file_blocked(self):
+        plan_path, manifest_path, plan, manifest = self.artifacts()
+        (manifest_path.parent / manifest["viewerPage"]).unlink(missing_ok=True)
+        callback = self.transition_callback(transitionPreviewRef=str(manifest_path))
+        with self.assertRaises(ValueError) as caught:
+            self.check(callback, plan_path, plan, manifest_path, manifest)
+        self.assertIn("死链", str(caught.exception))
 
     def test_boundary_set_mismatch_blocked(self):
         plan_path, manifest_path, plan, manifest = self.artifacts()

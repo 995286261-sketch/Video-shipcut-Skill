@@ -41,7 +41,7 @@ python skill/transition-expert/scripts/transition_preview.py --plan <计划> --e
 - **窗口**：每非硬切边界一条小样，覆盖成片网格 `[S−D/2−C, S+D/2+C]`，C=min(1200ms, 两侧成片段长−D/2, ≥0)。**永不展示批准裁切之外的画面**——手柄刚好=D/2 时小样即 D 长的混合窗本身。
 - **纯画面无声**（用户裁决）：配音/BGM 混音属 G4，清单 disclaimer 与卡上明写；小样不复现源字幕遮蔽等包装层（`--crop-bottom-ratio` 传入时复现底部裁切），只验转场观感。
 - **硬门禁+如实豁免**（用户裁决）：计划含非硬切转场 → 终审卡必挂预览清单（逐边界一一对应、planSha256==当前计划、文件 sha 匹配），缺=卡校验拒。唯一豁免=结构化 `blocked_previews`（无 ffmpeg/素材 sha 变更/渲染失败），编排必须把披露句"本机无法生成预览：你批准的是未见过的效果"原样上卡后放行，**不许静默跳卡**（㉔ 的手工小样无记录教训：renderArgs 全量入册、可逐字重建）。
-- **产物**：《转场-预览清单-v<M.N>.json》（next_versioned_path 自增永不覆盖，㉘）+ 逐边界 `转场预览-<from>to<to>-v<M.N>.mp4`（边界 id 命名，弃用人肉 A/B/C）；中间件删除、renderArgs 入册。G3 收据 basisRefs 挂清单路径；**不新增 checklist id**（㉙ 教训）。计划改版→清单 planSha256 失配=自动 stale，逼重跑预览。
+- **产物**：《转场-预览清单-v<M.N>.json》（next_versioned_path 自增永不覆盖，㉘）+ 逐边界 `转场预览-<from>to<to>-v<M.N>.mp4`（边界 id 命名，弃用人肉 A/B/C）+ 《转场-预览观看页-v<M.N>.html》（用户 09-23 拍板：审批卡下统一附"一页看全部"，自包含内嵌播放器、与清单同目录同版号、裸文件名相对引用；呈现层零算术、数据全取清单）；中间件删除、renderArgs 入册。G3 收据 basisRefs 挂清单路径；**不新增 checklist id**（㉙ 教训）。计划改版→清单 planSha256 失配=自动 stale，逼重跑预览。清单声称 viewerPage 而文件缺失=卡校验拒（防死链）。
 
 ## 接线说明书
 

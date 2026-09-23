@@ -86,6 +86,9 @@ def validate_transition_preview(callback: dict, plan_path: Path, plan: dict,
         fail("预览清单未声明 audio:false——小样必须纯画面无声（用户裁决），带声内容属 G4 混音层")
     if preview.get("planSha256") != sha256_file(plan_path):
         fail("预览清单对应的是另一版计划（stale）：计划改过一笔就必须重跑 transition_preview，看旧样批新案=幻觉")
+    viewer = preview.get("viewerPage")
+    if viewer and not (preview_path.parent / str(viewer)).exists():
+        fail(f"清单声称附带观看页 {viewer} 但文件缺失：卡上会挂死链，重跑 transition_preview")
     entries = {str(item.get("boundary")): item for item in preview.get("previews", [])}
     if set(entries) != set(expected):
         fail(f"预览与转场边界不一一对应：缺 {sorted(set(expected) - set(entries))}、"

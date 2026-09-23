@@ -59,6 +59,16 @@ def preview_block(manifest: dict, manifest_path: Path, card_path: Path) -> list[
                  "小样不复现源字幕遮蔽等包装层处理，只验转场观感。")
     lines.append("")
     card_dir = card_path.parent
+    viewer = manifest.get("viewerPage")
+    if viewer:
+        viewer_path = (manifest_path.parent / str(viewer)).resolve()
+        try:
+            viewer_link = viewer_path.relative_to(card_dir.resolve()).as_posix()
+        except ValueError:
+            viewer_link = viewer_path.as_posix()
+        lines.append(f"**▶ [一页看全部：转场预览观看页 {manifest.get('version', '')}]({viewer_link})**"
+                     "（浏览器打开，逐切点内嵌播放器；本页与清单同场生成、同版号）")
+        lines.append("")
     for entry in manifest.get("previews", []):
         clip = (manifest_path.parent / str(entry["file"])).resolve()
         try:

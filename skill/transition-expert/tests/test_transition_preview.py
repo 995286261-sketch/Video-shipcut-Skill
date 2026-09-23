@@ -248,6 +248,22 @@ class LavfiEndToEndTests(unittest.TestCase):
         leftovers = [p.name for p in self.out.iterdir() if "-from." in p.name or "-to." in p.name or "-only." in p.name]
         self.assertEqual([], leftovers)
 
+    def test_viewer_page_generated_and_self_contained(self):
+        # 用户 09-23 拍板：卡下统一附一页看全部——观看页与清单同场同版号生成
+        code, payload = self.run_cli()
+        self.assertEqual(0, code, payload)
+        manifest = json.loads(Path(payload["manifest"]).read_text(encoding="utf-8"))
+        self.assertEqual("转场-预览观看页-v0.1.html", manifest["viewerPage"])
+        page = Path(payload["viewerPage"])
+        self.assertTrue(page.exists())
+        html = page.read_text(encoding="utf-8")
+        for entry in manifest["previews"]:
+            self.assertIn(entry["boundary"], html)
+            self.assertIn(f'src="{entry["file"]}"', html)  # 裸文件名相对引用（与清单同目录）
+        self.assertIn("无声", html)
+        self.assertIn(manifest["disclaimer"], html)
+        self.assertIn(manifest["planSha256"][:12], html)  # 计划哈希绑定可见：改版即换页
+
     def test_rerun_increments_manifest_and_keeps_history(self):
         _, first = self.run_cli()
         first_manifest = Path(first["manifest"])
@@ -256,6 +272,8 @@ class LavfiEndToEndTests(unittest.TestCase):
         _, second = self.run_cli()
         self.assertEqual("转场-预览清单-v0.2.json", Path(second["manifest"]).name)
         self.assertEqual(first_bytes, first_manifest.read_bytes())  # ㉘ 永不覆盖
+        self.assertTrue((self.out / "转场-预览观看页-v0.1.html").exists())   # 旧页留盘作审计
+        self.assertTrue((self.out / "转场-预览观看页-v0.2.html").exists())   # 与清单同版号自增
 
     def test_tampered_source_blocked(self):
         (self.root / "src" / "a2.mp4").write_bytes(b"x")   # 源被改动=哈希失配

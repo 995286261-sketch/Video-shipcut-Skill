@@ -26,7 +26,7 @@ metadata:
 - 计划深检：`scripts/transition_validate_plan.py --plan <G3计划> --evidence <证据JSON> [--host-profile <能力档>]`（词表/位次/窗口压口播/章节卡交叠/手柄余量/偶数时长/网格连续，批量报错）。
 - 执行指令（批准后、g4_prepare 前运行）：`scripts/transition_directive.py --plan <已批计划> --evidence <证据JSON> --host-profile <能力档> --output-dir <G4目录>` → 《G4-转场执行指令-v<M.N>.json》（确定性推导：段头尾扩切毫秒、边界 xfade offset、片头片尾黑场；非法计划直接 blocked——**先过深检才有指令**；版本自动递增、永不覆盖——reopen 重跑时旧指令留盘作审计，issue ㉘）。prepare 以 `--transition-directive` 消费；计划含转场而不传指令=G4 拒办。
 - 装配复检（G5 握手产物生产者）：`scripts/transition_report.py --manifest <可编辑工程> --assembly-record <装配记录> --directive <指令> --output-dir <目录>` → `transition-audit.json`（filterGraph 逐项对账边界/fade；无转场项目也出报告，transitions=[]）。
-- 试装预览（G3 批准前观感层，用户 09-23 批准）：`scripts/transition_preview.py --plan <计划> --evidence <证据JSON> --host-profile <能力档> --material-pack <G0/material-pack.json> --output-dir <G3-剪辑计划/预览小样/> --fps <帧率>` → 《转场-预览清单-v<M.N>.json》+逐边界低清无声小样（复用深检与指令算术，公式与成片路径同式；硬门禁与豁免披露口径见合同"试装预览"节）。
+- 试装预览（G3 批准前观感层，用户 09-23 批准）：`scripts/transition_preview.py --plan <计划> --evidence <证据JSON> --host-profile <能力档> --material-pack <G0/material-pack.json> --output-dir <G3-剪辑计划/预览小样/> --fps <帧率>` → 《转场-预览清单-v<M.N>.json》+逐边界低清无声小样+《转场-预览观看页-v<M.N>.html》（一页看全部、与清单同目录同版号；复用深检与指令算术，公式与成片路径同式；硬门禁与豁免披露口径见合同"试装预览"节）。
 
 不要用临时脚本或手敲 ffmpeg 替代。
 
