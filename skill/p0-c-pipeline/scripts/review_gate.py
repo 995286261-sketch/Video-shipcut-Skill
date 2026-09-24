@@ -33,6 +33,12 @@ def reviewed_file_hashes(state_path: Path, reference: str) -> dict:
         hashes[item] = sha256_file(require_project_file(state_path, item, "reviewed file"))
     return hashes
 
+# 转场实跑测试 2026-09-24 问题⑤（用户裁决"统一更新模板"）：G3 终审卡合同要求由
+# render_g3_review_card.py 生成（八列固定表+机器对账），但收据登记从不验证卡的出处——
+# 编排手制的"长得像"卡能混过 record-review。渲染器输出自带出处标记行，登记时机械校验：
+# 缺标记=手制/改写卡，拒绝登记。唯一合法通道=重跑渲染器。
+G3_CARD_MARKER = "此卡由通过校验的 G3 最终回显数据生成"
+
 CARD_TYPES = {
     "G1": "g1_direction_review",
     "G2": "g2_evidence_narration_review",
@@ -69,7 +75,16 @@ def load_review_gate(state_path: Path, reference: str, expected_node: str, expec
         raise ValueError("review gate receipt must be ready_for_approval")
     if not isinstance(receipt.get("renderedAt"), str) or not receipt["renderedAt"].strip():
         raise ValueError("review gate receipt requires renderedAt")
-    require_project_file(state_path, receipt.get("reviewCardRef", ""), "reviewCardRef")
+    card_path = require_project_file(state_path, receipt.get("reviewCardRef", ""), "reviewCardRef")
+    if expected_node == "G3":
+        # 问题⑤：G3 终审卡必须是渲染器产物（含出处标记行），手制卡拒绝登记。
+        try:
+            card_text = card_path.read_text(encoding="utf-8-sig")
+        except (OSError, UnicodeDecodeError) as error:
+            raise ValueError(f"G3 审核卡无法读取校验出处标记：{error}") from error
+        if G3_CARD_MARKER not in card_text:
+            raise ValueError("G3 审核卡不是 render_g3_review_card.py 生成的合规卡（缺机器出处标记）——"
+                             "手制或改写正文的卡不得登记批准；重跑渲染器后再 record-review")
     basis_refs = receipt.get("basisRefs")
     if not isinstance(basis_refs, list) or not basis_refs:
         raise ValueError("review gate receipt requires non-empty basisRefs")

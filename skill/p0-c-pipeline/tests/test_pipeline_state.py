@@ -46,6 +46,9 @@ class PipelineStateTest(unittest.TestCase):
             }
             for item_id in CHECKLISTS[node]:
                 self.files[node][item_id] = self.file(f"{node}-{item_id}.json")
+        # 问题⑤（Leader 转场实跑 09-24）：G3 登记校验渲染器出处标记，夹具卡须为渲染器产物形状。
+        self.files["G3"]["card"].write_text(
+            "# G3 剪辑计划最终回显\n\n此卡由通过校验的 G3 最终回显数据生成。\n", encoding="utf-8")
         self.narration = self.file("G2-证据与口播/narration.md")
         self.facts = self.file("G2-证据与口播/facts.json")
         self.voice = self.file("G2-证据与口播/voice.json")
@@ -592,10 +595,22 @@ class PipelineStateTest(unittest.TestCase):
         self.advance_through("G2")
         self.prepare_node("G3")
         self.plan.write_text(json.dumps({"projectId": "fixture", "status": "approved_for_g3", "segments": ["v2"]}), encoding="utf-8")
-        self.files["G3"]["card"].write_text("# G3 审批卡 v2（重渲染）\n", encoding="utf-8")
+        self.files["G3"]["card"].write_text(
+            "# G3 剪辑计划最终回显\n\n此卡由通过校验的 G3 最终回显数据生成。\n\n（v2 重渲染）\n", encoding="utf-8")
         self.prepare_node("G3")
         result = self.approve("G3")
         self.assertEqual("G4", result["currentNode"])
+
+    def test_g3_handwritten_card_without_renderer_marker_blocked(self):
+        # 问题⑤（转场实跑 09-24）：编排手制的"长得像"卡必须被登记环节机械拒绝。
+        self.init()
+        self.advance_through("G2")
+        self.prepare_node("G3")
+        self.files["G3"]["card"].write_text("# G3 最终回显卡（手制）\n\n| 自拟表头 | 不合规 |\n", encoding="utf-8")
+        blocked = self.run_cli("record-review", "--state", self.state, "--node", "G3",
+                               "--review-gate-ref", self.receipt("G3"), code=2)
+        self.assertIn("render_g3_review_card.py", blocked["error"])
+        self.assertIn("缺机器出处标记", blocked["error"])
 
     def test_r2_approval_record_written_at_close_is_exempt(self):
         # 豁免规则活证：approvalRef 文件本来就是关单时才写的，登记后写它不得误伤。
