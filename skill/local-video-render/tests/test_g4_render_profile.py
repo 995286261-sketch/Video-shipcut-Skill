@@ -43,7 +43,7 @@ class G4RenderProfileTest(unittest.TestCase):
             )
             manifest = root / "manifest.json"
             manifest.write_text(json.dumps({
-                "status": "prepared_for_render",
+                "status": "prepared_for_render", "targetFps": 24,
                 "segments": [{
                     "segmentId": "vertical",
                     "source": {"relativePath": "raw/vertical.mp4", "startMs": 0, "endMs": 1000},
@@ -71,7 +71,7 @@ class G4RenderProfileTest(unittest.TestCase):
         (raw / "a.mp4").write_bytes(b"not-a-real-video-but-dry-run-only")
         manifest = root / "manifest.json"
         manifest.write_text(json.dumps({
-            "status": "prepared_for_render", "projectId": "mask-test",
+            "status": "prepared_for_render", "targetFps": 24, "projectId": "mask-test",
             "segments": [
                 {"segmentId": "seg-011", "source": {"relativePath": "raw/a.mp4", "startMs": 0, "endMs": 1000},
                  "timeline": {"startMs": 0, "endMs": 1000}, "output": {"filename": "seg-011.mp4"}},
@@ -134,7 +134,7 @@ class G4RenderProfileTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             manifest = root / "manifest.json"
-            manifest.write_text(json.dumps({"status": "prepared_for_render", "segments": []}), encoding="utf-8")
+            manifest.write_text(json.dumps({"status": "prepared_for_render", "targetFps": 24, "segments": []}), encoding="utf-8")
             result = subprocess.run(
                 [sys.executable, str(RENDER), "--manifest", str(manifest), "--source-pack", str(root), "--output-dir", str(root / "out"), "--aspect-ratio-policy", "explicit", "--width", "1080"],
                 capture_output=True,
@@ -157,7 +157,7 @@ class G4RenderTransitionCutTest(unittest.TestCase):
                    "timeline": {"startMs": 1000, "endMs": 11000}, "output": {"filename": "seg-011.mp4"}}
         if transition is not None:
             segment["transition"] = transition
-        manifest.write_text(json.dumps({"status": "prepared_for_render", "projectId": "t", "segments": [segment]}), encoding="utf-8")
+        manifest.write_text(json.dumps({"status": "prepared_for_render", "targetFps": 24, "projectId": "t", "segments": [segment]}), encoding="utf-8")
         backup = sys.argv
         sys.argv = ["g4_render.py", "--manifest", str(manifest), "--source-pack", str(root / "pack"),
                     "--output-dir", str(root / "out"), "--aspect-ratio-policy", "explicit", "--width", "1920", "--height", "1080", "--dry-run"]

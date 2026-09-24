@@ -20,7 +20,7 @@ class G4ContractTest(unittest.TestCase):
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["start.jpg","middle.jpg","end.jpg"],"observedVisuals":"已查看起点、中点、终点帧，主体清晰可见。"}
-        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,"durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
         evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
         # Issue 029: the manifest version derives from the input plan filename.
         plan_path=self.root/"G3-剪辑计划-v0.2.json"; evidence_path=self.root/"evidence.json"; plan_path.write_text(json.dumps(plan)); evidence_path.write_text(json.dumps(evidence)); output=self.root/"out"
@@ -36,24 +36,33 @@ class G4ContractTest(unittest.TestCase):
         self.assertEqual("prepared",forced["status"])
 
     def test_prepare_carries_approved_plan_fps_into_manifest(self):
-        """Issue 002-⑨: editPlan.fps is a machine fact the whole G4 chain must inherit."""
+        """002-⑨ + 转场实跑⑧乙/⑨（09-24 裁决）：顶层 fps 单一事实源进 manifest，缺失/第二位置罢工。"""
         pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
-        base_plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        base_plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,"durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
         evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
-        p=self.root/"plan.json"; e=self.root/"e.json"
-        plan=json.loads(json.dumps(base_plan)); plan["editPlan"]["fps"]=30
-        p.write_text(json.dumps(plan)); e.write_text(json.dumps(evidence))
+        p=self.root/"plan.json"; e=self.root/"e.json"; e.write_text(json.dumps(evidence))
+        p.write_text(json.dumps(base_plan))
         self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out")
         manifest=json.loads((self.root/"out"/"G4-可编辑工程-v0.1.json").read_text(encoding="utf-8"))
         self.assertEqual(30, manifest["targetFps"])
-        # A malformed fps blocks at prepare time, never reaches render.
-        bad=json.loads(json.dumps(base_plan)); bad["editPlan"]["fps"]="30"
+        # ⑧乙: a missing top-level fps blocks (罢工) at prepare time — the silent 24 default died.
+        bad=json.loads(json.dumps(base_plan)); del bad["fps"]
         p.write_text(json.dumps(bad))
         blocked=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out2",code=2)
-        self.assertIn("editPlan.fps",blocked["error"])
+        self.assertIn("⑧乙",blocked["error"])
+        # ⑨: the deprecated second location (editPlan.fps) is refused even when top level is present.
+        bad2=json.loads(json.dumps(base_plan)); bad2["editPlan"]["fps"]=30
+        p.write_text(json.dumps(bad2))
+        blocked2=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out3",code=2)
+        self.assertIn("⑨",blocked2["error"])
+        # A malformed (string) fps also blocks, never reaches render.
+        bad3=json.loads(json.dumps(base_plan)); bad3["fps"]="30"
+        p.write_text(json.dumps(bad3))
+        blocked3=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out4",code=2)
+        self.assertIn("⑧乙",blocked3["error"])
 
     def test_prepare_requires_a_positive_target_duration(self):
         """Issue 025: no durationDecision and no targetProfile must block, not emit 0ms."""
@@ -100,7 +109,7 @@ class G4ContractTest(unittest.TestCase):
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["start.jpg","middle.jpg","end.jpg"],"observedVisuals":"已核验。"}
-        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,"durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
         plan_path=g3/"G3-剪辑方案-v0.1.json"; evidence_path=g3/"evidence.json"
         plan_path.write_text(json.dumps(plan))
         evidence_path.write_text(json.dumps({"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}))
@@ -123,7 +132,7 @@ class G4ContractTest(unittest.TestCase):
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
-        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":2,"narrationEstimatedDurationSec":2,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,"durationDecision":{"targetDurationSec":2,"narrationEstimatedDurationSec":2,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},
               "segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual,"transitionInstruction":"叠化","transitionDurationMs":500},
                           {"segmentId":"two","assetId":"a","startMs":1000,"endMs":2000,"mappingMode":"one_to_one","visualVerification":visual}],
               "editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
@@ -184,7 +193,7 @@ class G4ContractTest(unittest.TestCase):
         import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
         (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
         visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
-        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,"durationDecision":{"targetDurationSec":3,"narrationEstimatedDurationSec":2,"resolution":"preserve_target_with_editorial_padding","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},"segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual},{"segmentId":"two","assetId":"a","startMs":1000,"endMs":3000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"},{"segmentId":"two"}]}}
         evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
         plan_path=self.root/"G3-剪辑计划-v0.9.json"; evidence_path=self.root/"evidence.json"
         plan_path.write_text(json.dumps(plan)); evidence_path.write_text(json.dumps(evidence))

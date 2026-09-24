@@ -86,7 +86,12 @@ def main():
     if data.get("status") != "prepared_for_render": fail("manifest is not prepared_for_render")
     if args.fps is None:
         inherited = data.get("targetFps")
-        args.fps = inherited if isinstance(inherited, int) and not isinstance(inherited, bool) and inherited > 0 else 24
+        if isinstance(inherited, int) and not isinstance(inherited, bool) and inherited > 0:
+            args.fps = inherited
+        else:
+            # 转场实跑⑧乙（用户 09-24 裁决）：旧硬编码默认 24 已删——它曾把批准 30fps
+            # 的成片静默渲成 24fps 且无人报错。没有可信帧率=罢工。
+            fail("manifest 无 targetFps 且未显式 --fps：⑧乙 拒绝默认帧率，重跑 g4_prepare（计划顶层须有 fps）")
     if not (0 <= args.crop_bottom_ratio < 1): fail("crop-bottom-ratio must be in [0,1)")
     masks, mask_canvas = [], {}
     if args.source_mask:

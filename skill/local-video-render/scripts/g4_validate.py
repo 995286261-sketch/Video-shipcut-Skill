@@ -9,7 +9,7 @@ from pathlib import Path
 def fail(message): raise ValueError(message)
 def load(path): return json.loads(path.read_text(encoding="utf-8-sig"))
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int); parser.add_argument("--height",type=int); parser.add_argument("--fps",type=float,default=24)
+    parser=argparse.ArgumentParser(); parser.add_argument("--manifest", required=True, type=Path); parser.add_argument("--handoff-dir", type=Path); parser.add_argument("--segments-dir", type=Path); parser.add_argument("--width",type=int); parser.add_argument("--height",type=int); parser.add_argument("--fps",type=float,default=None,help="批准帧率覆盖值；省略时继承 manifest targetFps（转场实跑⑧乙：旧默认 24 已删，检查段渲染文件时二者皆缺=罢工，绝不猜）")
     # Leader 反馈 R1（方案 A，用户 09-23 裁决）：--candidate 把报告绑定到候选成片指纹，
     # G4 关单门禁要求报告含 projectId+candidate.sha256（无绑定=不可批准，逼重跑）。
     parser.add_argument("--candidate", type=Path, help="G4 候选成片 mp4：登记 projectId 与成片 sha256 指纹供关单门禁对账")
@@ -51,6 +51,9 @@ def main():
         if not expected.issubset(names): fail("handoff does not declare every editable segment")
         if any("粗剪" in str(name) for name in names): fail("handoff must not declare flattened rough cut as timeline asset")
     if args.segments_dir:
+        fps_expected = args.fps if args.fps else data.get("targetFps")
+        if not isinstance(fps_expected, (int, float)) or isinstance(fps_expected, bool) or fps_expected <= 0:
+            fail("检查段渲染文件需要可信帧率：--fps 或 manifest targetFps 至少其一（转场实跑⑧乙：不猜默认 24）")
         detected_canvas=None
         for segment in segments:
             file=args.segments_dir/segment["output"]["filename"]
@@ -63,6 +66,10 @@ def main():
             if expected_canvas and actual_canvas!=expected_canvas: fail("bad video profile: "+file.name)
             if detected_canvas is None: detected_canvas=actual_canvas
             if any(s.get("codec_type")=="audio" for s in streams): fail("source audio leaked: "+file.name)
+            num, _, den = str(video.get("r_frame_rate") or "").partition("/")
+            try: fps_actual=float(num)/float(den or 1)
+            except ValueError: fail("bad fps probe: "+file.name)
+            if abs(fps_actual-float(fps_expected))>.1: fail(f"bad fps: {file.name} 实测 {video.get('r_frame_rate')} ≠ 批准 {fps_expected}（⑧乙）")
             # 验收003-㉒后续：转场手柄段（g4_render transitionsExtended）故意多切 head/tailExtra，
             # 期望时长必须含扩展量，否则叠化两侧段被误判 bad duration。
             extra=(segment.get("transition") or {}).get("headExtraMs",0)+(segment.get("transition") or {}).get("tailExtraMs",0)

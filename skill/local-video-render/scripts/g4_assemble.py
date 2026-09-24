@@ -449,7 +449,8 @@ def main() -> int:
         if isinstance(inherited, int) and not isinstance(inherited, bool) and inherited > 0:
             args.fps, fps_source = inherited, "manifest-targetFps"
         else:
-            args.fps, fps_source = 24, "default-24"
+            # 转场实跑⑧乙（用户 09-24 裁决）：default-24 分支已删，装配罢工不猜帧率。
+            fail("manifest 无 targetFps 且未显式 --fps：⑧乙 拒绝默认帧率，重跑 g4_prepare（计划顶层须有 fps）")
     else:
         fps_source = "explicit-override"
     segments = manifest.get("segments", [])

@@ -49,7 +49,7 @@ class G4AssembleTests(unittest.TestCase):
         self.manifest = self.root / "manifest.json"
         self.manifest.write_text(json.dumps({
             "schemaVersion": "0.2", "node": "G4", "projectId": "demo-001", "status": "prepared_for_render",
-            "timelineDurationMs": 2000,
+            "timelineDurationMs": 2000, "targetFps": 24,
             "segments": [
                 {"segmentId": "s1", "order": 1, "timeline": {"startMs": 0, "endMs": 1000}, "output": {"filename": "seg-001.mp4"}},
                 {"segmentId": "s2", "order": 2, "timeline": {"startMs": 1000, "endMs": 2000}, "output": {"filename": "seg-002.mp4"}},
@@ -84,20 +84,22 @@ class G4AssembleTests(unittest.TestCase):
 
     def set_manifest_fps(self, value):
         doc = json.loads(self.manifest.read_text(encoding="utf-8"))
-        if value is not None:
+        if value is None:
+            doc.pop("targetFps", None)
+        else:
             doc["targetFps"] = value
         self.manifest.write_text(json.dumps(doc), encoding="utf-8")
 
     def read_record(self):
         return json.loads((self.root / "final" / "master-装配记录-v0.1.json").read_text(encoding="utf-8"))
 
-    def test_legacy_manifest_without_target_fps_falls_back(self):
-        # Issue 002-⑨: manifests predating the fps carry-over keep working at 24, visibly.
+    def test_manifest_without_target_fps_blocks(self):
+        # 转场实跑⑧乙（2026-09-24 用户裁决）：default-24 兜底已删除——没有可信帧率=罢工。
+        # 旧用例"legacy manifest keeps working at 24"正是 24fps 静默降帧事故的机器化豁免。
+        self.set_manifest_fps(None)
         result = self.run_assemble()
-        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
-        record = self.read_record()
-        self.assertEqual(24, record["fps"])
-        self.assertEqual("default-24", record["fpsSource"])
+        self.assertEqual(2, result.returncode, result.stdout + result.stderr)
+        self.assertIn("⑧乙", json.loads(result.stdout)["error"])
 
     def test_fps_inherited_from_manifest_target(self):
         self.set_manifest_fps(30)
@@ -288,7 +290,7 @@ class G4AssembleTests(unittest.TestCase):
         digest = hashlib.sha256(directive_path.read_bytes()).hexdigest().upper()
         self.manifest.write_text(json.dumps({
             "schemaVersion": "0.2", "node": "G4", "projectId": "demo-001", "status": "prepared_for_render",
-            "timelineDurationMs": sum(segments_grid),
+            "timelineDurationMs": sum(segments_grid), "targetFps": 24,
             "segments": [
                 {"segmentId": "s1", "order": 1, "timeline": {"startMs": 0, "endMs": segments_grid[0]},
                  "transition": {"headExtraMs": 0, "tailExtraMs": 250}, "output": {"filename": "seg-001.mp4"}},
@@ -368,7 +370,7 @@ class G4AssembleTests(unittest.TestCase):
         digest = hashlib.sha256(directive_path.read_bytes()).hexdigest().upper()
         self.manifest.write_text(json.dumps({
             "schemaVersion": "0.2", "node": "G4", "projectId": "demo-001", "status": "prepared_for_render",
-            "timelineDurationMs": 5500, "segments": segments,
+            "timelineDurationMs": 5500, "targetFps": 24, "segments": segments,
             "transitionDirective": {"path": str(directive_path), "sha256": digest, "boundaries": 1,
                                     "masterFades": {"fadeInMs": 0, "fadeOutMs": 0}},
         }), encoding="utf-8")

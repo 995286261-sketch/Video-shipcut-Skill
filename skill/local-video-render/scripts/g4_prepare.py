@@ -164,11 +164,14 @@ def main() -> int:
     if not isinstance(target_seconds, (int, float)) or isinstance(target_seconds, bool) or target_seconds <= 0:
         fail("plan lacks a positive durationDecision.targetDurationSec; G4 refuses to prepare with a zero target (issue 025)")
     target_ms = int(target_seconds * 1000)
-    # Issue 002-⑨: the approved plan's frame rate is a machine fact; carry it into the
-    # manifest so render and assembly inherit it instead of silently defaulting to 24.
-    edit_fps = plan.get("editPlan", {}).get("fps")
-    if edit_fps is not None and (not isinstance(edit_fps, int) or isinstance(edit_fps, bool) or edit_fps <= 0):
-        fail("editPlan.fps must be a positive integer when present (issue 002-⑨)")
+    # Issue 002-⑨ + 转场实跑⑧乙/⑨ (用户 09-24 裁决): the frame rate is a machine fact with
+    # ONE location — the plan's top-level `fps` — and G4 refuses to prepare without it.
+    # The silent default (24) and the second read location (editPlan.fps) both died here.
+    if isinstance(plan.get("editPlan"), dict) and "fps" in plan["editPlan"]:
+        fail("fps 必须只存在于计划顶层（⑨单一事实源）：editPlan.fps 第二位置已废止，删除该字段后重跑校验")
+    edit_fps = plan.get("fps")
+    if not isinstance(edit_fps, int) or isinstance(edit_fps, bool) or edit_fps <= 0:
+        fail("计划缺顶层 fps 机器字段（⑧乙：缺 fps 即罢工，拒绝猜帧率）——回 G3 按修订链补字段，不在 G4 补数")
     result = {
         "schemaVersion": "0.2", "node": "G4", "projectId": plan["projectId"],
         "status": "prepared_for_render", "inputPlan": str(args.plan), "inputEvidence": str(args.evidence),
