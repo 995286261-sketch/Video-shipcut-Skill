@@ -188,4 +188,27 @@ class G5DeliveryTest(unittest.TestCase):
             self.assertTrue(marker.get("sealedUnderContract"))
 
 
+class FpsReconciliationUnitTests(unittest.TestCase):
+    """⑧丙（转场实跑 2026-09-24 用户裁决）：帧率对账不可静默跳过——函数层锁死三态。"""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("g5_validate_delivery", VALIDATE)
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def test_missing_declaration_is_an_error_not_a_skip(self):
+        # 本跑 24fps 事故正是旧代码 `if expected_fps and …` 在缺声明时不比对放行的。
+        self.assertIn("⑧丙", self.module.fps_reconciliation_error(None, 24.0))
+
+    def test_declared_matches_probed_passes(self):
+        self.assertIsNone(self.module.fps_reconciliation_error(30, 30.0))
+        self.assertIsNone(self.module.fps_reconciliation_error(30, 29.9667))
+
+    def test_declared_diverges_from_probed_blocks(self):
+        self.assertIn("does not match", self.module.fps_reconciliation_error(30, 24.0))
+        self.assertIn("does not match", self.module.fps_reconciliation_error(30, None))
+
+
 if __name__ == "__main__": unittest.main()

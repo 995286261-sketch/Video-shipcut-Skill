@@ -94,6 +94,16 @@ def fraction(value: str | None) -> float | None:
     return float(numerator) / float(denominator) if float(denominator) else None
 
 
+def fps_reconciliation_error(expected, actual_fps):
+    """⑧丙 (转场实跑，用户 09-24 裁决): export-config 声明 fps 与成片实探 fps 必对账、
+    不可跳过——缺声明本身就是病（24fps 事故当年正是"缺声明=不比对"放行的）。"""
+    if expected is None:
+        return "export-config.video.fps is missing (⑧丙: media acceptance never skips the fps reconciliation)"
+    if actual_fps is None or abs(float(actual_fps) - float(expected)) > .1:
+        return "final-video.mp4 fps does not match export-config"
+    return None
+
+
 def validate_media(bundle: Path, export: dict, errors: list[str]) -> None:
     video = bundle / "final-video.mp4"
     result = subprocess.run(["ffmpeg", "-v", "error", "-i", str(video), "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -115,9 +125,9 @@ def validate_media(bundle: Path, export: dict, errors: list[str]) -> None:
                 errors.append("final-video.mp4 codec does not match export-config")
             if profile.get("width") and visual.get("width") != profile["width"] or profile.get("height") and visual.get("height") != profile["height"]:
                 errors.append("final-video.mp4 dimensions do not match export-config")
-            actual_fps, expected_fps = fraction(visual.get("r_frame_rate")), profile.get("fps")
-            if expected_fps and (actual_fps is None or abs(actual_fps - float(expected_fps)) > .1):
-                errors.append("final-video.mp4 fps does not match export-config")
+            fps_error = fps_reconciliation_error(profile.get("fps"), fraction(visual.get("r_frame_rate")))
+            if fps_error:
+                errors.append(fps_error)
             actual_ms = round(float(json.loads(probe.stdout).get("format", {}).get("duration", 0)) * 1000)
             expected_ms = profile.get("durationActualMs")
             if expected_ms and abs(actual_ms - expected_ms) > 150:

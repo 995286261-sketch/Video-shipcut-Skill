@@ -42,7 +42,7 @@
 
 ## export-config.json
 
-`projectId` 必填；`video`：`codec`（如 `h264`）及可选 `width`/`height`/`fps`/`durationActualMs`；`audio`：`codec`；**`authorization` 与 `distribution` 必填**（002 问题⑫补记：builder 从这两个字段抬进 manifest 的边界栏，缺省填 `not_specified` 虽能过机器校验，但等于边界未声明——G5 回显卡必须如实呈出）。这些值只在 validator 带 `--media` 时对真实成片复核：解码全片、ffprobe 对 codec/分辨率/fps（±0.1）/时长（±150ms）、音轨 codec。不传 `--media` 时只查 JSON 形状。
+`projectId` 必填；`video`：`codec`（如 `h264`）及可选 `width`/`height`/`fps`/`durationActualMs`；`audio`：`codec`；**`authorization` 与 `distribution` 必填**（002 问题⑫补记：builder 从这两个字段抬进 manifest 的边界栏，缺省填 `not_specified` 虽能过机器校验，但等于边界未声明——G5 回显卡必须如实呈出）。这些值只在 validator 带 `--media` 时对真实成片复核：解码全片、ffprobe 对 codec/分辨率/fps（±0.1）/时长（±150ms）、音轨 codec。不传 `--media` 时只查 JSON 形状。**`video.fps` 在 `--media` 下必填（转场实跑⑧丙，2026-09-24 用户裁决）**：缺声明直接报错不静默跳过——24fps 事故当年正是"缺声明=不比对"放行的，帧率对账永不可豁免。
 
 ## human-review-decision.json
 
