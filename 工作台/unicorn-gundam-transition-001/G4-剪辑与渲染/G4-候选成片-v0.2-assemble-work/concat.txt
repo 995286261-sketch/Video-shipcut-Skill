@@ -1,0 +1,8 @@
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-001.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-002.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-003.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-004.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-005.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-006.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-007.mp4'
+file '/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-008.mp4'

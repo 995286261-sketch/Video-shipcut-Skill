@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G3",
+  "sourceMedia": "source-02-f1f08154",
+  "purpose": "transition-handle-observations",
+  "analysisMethod": "2fps contact sheets + 15s-interval legacy analysis",
+  "provenance": "obs-001~005 沿用旧项目视觉观察索引 v0.2（换发 ID）；obs-101~110 为本轮转场手柄取证（联系表见 转场-证据帧-v0.1/）",
+  "records": [
+    {
+      "recordId": "obs-001",
+      "sourceRange": {
+        "startMs": 70000,
+        "endMs": 74000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/micro/destroy-01.jpg",
+        "G3-最终候选验证帧-v0.1/micro/destroy-08.jpg"
+      ],
+      "observation": "连续出现独角兽高达的正面与胸部；红色精神感应框架外露，头部由未完全展开过渡到清晰 V 字角。没有烧录对白字幕。",
+      "semanticEvidence": [
+        "毁灭模式",
+        "红色精神感应框架",
+        "V 字形头部独角",
+        "装甲/头部状态变化"
+      ],
+      "reusableFor": [
+        "beat-002 (user-authorized visual variation)",
+        "beat-003",
+        "beat-004",
+        "beat-007",
+        "beat-008"
+      ],
+      "verification": "direct_match",
+      "risks": [
+        "左上角有来源水印；G4 需逐帧 crop_or_mask"
+      ],
+      "reuseRule": "可作为上述可见事实的画面证据。用户已允许其用于 beat-002 的风格化外观展示，但不可声称画面展示了闭合单角或纯白常态机体。",
+      "analysisStatus": "completed",
+      "provenance": "沿用旧项目 G3 视觉观察索引 v0.2"
+    },
+    {
+      "recordId": "obs-002",
+      "sourceRange": {
+        "startMs": 96000,
+        "endMs": 96500
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/micro/head-96-01.jpg"
+      ],
+      "observation": "仅约 0.5 秒的独角兽毁灭模式近景：白色装甲、红色外露框架和 V 字角可见；紧接着切入驾驶员。",
+      "semanticEvidence": [
+        "毁灭模式头部",
+        "红色精神感应框架",
+        "V 字角"
+      ],
+      "reusableFor": [
+        "短促插入镜头"
+      ],
+      "verification": "direct_match_but_too_short_for_primary_slot",
+      "risks": [
+        "左上角有来源水印",
+        "不可延长为连续机体镜头"
+      ],
+      "reuseRule": "只能作为 0.5 秒以内的插入镜头；不得按原候选范围 96-103 秒使用。",
+      "analysisStatus": "completed",
+      "provenance": "沿用旧项目 G3 视觉观察索引 v0.2"
+    },
+    {
+      "recordId": "obs-003",
+      "sourceRange": {
+        "startMs": 210000,
+        "endMs": 214000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/micro/pilot-01.jpg",
+        "G3-最终候选验证帧-v0.1/micro/pilot-08.jpg"
+      ],
+      "observation": "驾驶员在驾驶舱内持续紧张注视，面部有汗、表情收紧；尾端切向机体攻击，故切点固定在 214 秒。",
+      "semanticEvidence": [
+        "驾驶员明确可见",
+        "驾驶舱",
+        "紧张/精神负荷反应"
+      ],
+      "reusableFor": [
+        "beat-005",
+        "beat-006"
+      ],
+      "verification": "direct_match",
+      "risks": [
+        "左上角有来源水印",
+        "约 210-212 秒有底部烧录对白字幕；G4 需逐帧 mask 或裁切"
+      ],
+      "reuseRule": "可承载驾驶员负荷或机体-驾驶员关系的叙事，不能承载机体外观或 NT-D 结构主张。",
+      "analysisStatus": "completed",
+      "provenance": "沿用旧项目 G3 视觉观察索引 v0.2"
+    },
+    {
+      "recordId": "obs-004",
+      "sourceRange": {
+        "startMs": 157000,
+        "endMs": 164000
+      },
+      "probeRate": "start/middle/end manual probes",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/seg-003/start-157s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-003/middle-160s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-003/end-163s.jpg"
+      ],
+      "observation": "可见白色装甲局部、红色结构线，以及后段毁灭模式头部；没有一帧同时清晰证明闭合单角和纯白常态装甲。",
+      "semanticEvidence": [
+        "白色装甲局部",
+        "红色结构线",
+        "毁灭模式结果"
+      ],
+      "reusableFor": [
+        "补充结构细节"
+      ],
+      "verification": "partial_match",
+      "risks": [
+        "左上角有来源水印",
+        "不能替代闭合单角/纯白常态主张"
+      ],
+      "reuseRule": "不得用于 beat-002 的最低可见证据。",
+      "analysisStatus": "completed",
+      "provenance": "沿用旧项目 G3 视觉观察索引 v0.2"
+    },
+    {
+      "recordId": "obs-005",
+      "sourceRange": {
+        "startMs": 68000,
+        "endMs": 74000
+      },
+      "probeRate": "start/middle/end plus 70-74s micro probe",
+      "frameRefs": [
+        "G3-最终候选验证帧-v0.1/seg-001/start-068s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-001/middle-071s.jpg",
+        "G3-最终候选验证帧-v0.1/seg-001/end-073s.jpg"
+      ],
+      "observation": "68 秒仍为驾驶舱操控画面，70 秒后进入可用的毁灭模式镜头，因此原 68-74 秒候选必须收窄为 70-74 秒。",
+      "semanticEvidence": [
+        "候选边界否决依据"
+      ],
+      "reusableFor": [
+        "切点复核"
+      ],
+      "verification": "boundary_corrected",
+      "risks": [
+        "原候选前 2 秒不是机体画面"
+      ],
+      "reuseRule": "不得再将 68-70 秒标记为独角兽机体镜头。",
+      "analysisStatus": "completed",
+      "provenance": "沿用旧项目 G3 视觉观察索引 v0.2"
+    },
+    {
+      "recordId": "obs-101",
+      "sourceRange": {
+        "startMs": 73000,
+        "endMs": 76500
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-73.0-76.5s.jpg"
+      ],
+      "observation": "74.0-74.5 毁灭模式近景延续；75.0 起切推进器蓝焰飞行镜头，75.5 高亮光束闪光，76.0 远景，76.5 转暗。seg-01 前向余量含镜头切换，不宜作叠化手柄。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": []
+    },
+    {
+      "recordId": "obs-102",
+      "sourceRange": {
+        "startMs": 156000,
+        "endMs": 158000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-156.0-158.0s.jpg"
+      ],
+      "observation": "156.0-157.0 库内白色常态装甲躯干/臂部（红色结构线），157.5 绿色传感器头部特写。seg-02 后向手柄 156.884 起为同场景白色装甲，干净可用。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-103",
+      "sourceRange": {
+        "startMs": 163000,
+        "endMs": 171500
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-163.0-171.5s.jpg"
+      ],
+      "observation": "163.0-164.5 毁灭模式头/躯干近景；165.0 起库内全身+蓝色传送门光球；166.0 爆炸白光；166.5-169.5 红色机体光束战；169.5 起画面转暗，约 169.63-171.0 存在黑帧带（旧成片两处黑屏警告的源头）。seg-03 收在 169.584 避开黑帧带。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-104",
+      "sourceRange": {
+        "startMs": 171000,
+        "endMs": 174500
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-171.0-174.5s.jpg"
+      ],
+      "observation": "171.0-171.3 黑底红色拖影（黑帧带尾部）；171.5-172.5 宇宙空间战绿色光束；173.0-174.5 机体特写+光束军刀。seg-04 从 171.3 起，避开黑帧带。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-105",
+      "sourceRange": {
+        "startMs": 174000,
+        "endMs": 176000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-174.0-176.0s.jpg"
+      ],
+      "observation": "174.0-175.9 光束军刀交锋特写（白刃、红色火花），175.5 军刀相抵。seg-04 尾段与后向手柄素材，画面干净。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-106",
+      "sourceRange": {
+        "startMs": 176000,
+        "endMs": 178500
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-176.0-178.5s.jpg"
+      ],
+      "observation": "176.0-177.5 战斗持续（盾+军刀、火神炮）；178.0 转暗蓝，178.5 起黑场。旧 seg-05（175-178）尾端即此暗区，本计划弃用该窗口。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-107",
+      "sourceRange": {
+        "startMs": 193500,
+        "endMs": 198000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-193.5-198.0s.jpg"
+      ],
+      "observation": "193.5 爆炸白光；194.0 暗场残骸；194.5-197.0 红色机体（辛尼曼斯）光束战；197.5 独角兽光束军刀闪光。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": []
+    },
+    {
+      "recordId": "obs-108",
+      "sourceRange": {
+        "startMs": 197000,
+        "endMs": 199000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-197.0-199.0s.jpg"
+      ],
+      "observation": "197.0 红机+蓝推进器爆发；197.5 独角兽军刀白光；198.0 独角兽头部特写（红色背景）；198.5 棕暗转场。seg-05（197.036-199.871）主体为毁灭模式战斗与头部特写。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": []
+    },
+    {
+      "recordId": "obs-109",
+      "sourceRange": {
+        "startMs": 208500,
+        "endMs": 226000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-208.5-226.0s.jpg"
+      ],
+      "observation": "208.5-212.5 驾驶员巴纳吉驾驶舱特写（面部紧张、有汗；208-212 底部有烧录对白字幕、左上角台标）；213.0-214.5 光束闪爆；214.5-216.5 橙蓝爆炸；216.5-221.0 暗红残骸场与红机；221.5-224.0 驾驶员紧张面部（烧录字幕\"这次不会射偏\"）；224.5-225.5 大特写后转暗。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-110",
+      "sourceRange": {
+        "startMs": 213500,
+        "endMs": 215000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-213.5-215.0s.jpg"
+      ],
+      "observation": "213.5 白色光束爆发；214.0-214.5 蓝白高能闪光；214.5-215.0 橙色爆炸团。seg-07 尾段与 seg-08 头部手柄素材，均为爆炸高亮画面。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24 转场测试）",
+      "risks": [
+        "左上角来源水印持续存在"
+      ]
+    },
+    {
+      "recordId": "obs-111",
+      "sourceRange": {
+        "startMs": 199000,
+        "endMs": 201000
+      },
+      "probeRate": "2 fps",
+      "frameRefs": [
+        "G3-剪辑计划/转场-证据帧-v0.1/hp-199.0-201.0s.jpg"
+      ],
+      "observation": "199.0-201.0 红色机体（辛尼曼斯）近身战连续镜头：蓝推进器、光束军刀出鞘，无黑帧无暗转。cut5 叠化手柄（199.871-200.021）素材干净。",
+      "analysisStatus": "completed",
+      "verification": "contact sheet 2fps 逐帧目视（2026-09-24）",
+      "risks": [
+        "左上角来源水印"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "node":"G3",
+  "status":"review_required",
+  "audioAsset":{"assetId":"audio-07-aji-yema-3only-indulgence-4ef6e545","path":"工作台/unicorn-gundam-intro-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3","durationMs":105648,"sampleRateHz":48000,"channels":2},
+  "extensionPolicy":"no_extension_no_loop_no_rearrangement",
+  "userDecision":"Use the BGM only at its native duration; do not extend, loop, or recompose it.",
+  "onsetAnalysisRef":"工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-BGM-onset-candidates-v0.1.json",
+  "onsetMethod":"local_energy_onset_candidates_not_final_beats",
+  "rhythmUse":"chapter_and_action_cut_candidates_only; human_musical_review_required",
+  "timelinePolicy":{"bgmStartMs":0,"bgmEndMs":105648,"afterBgm":"narration_or_explicit_silence_only","neverLoop":true},
+  "chapterMarkers":[
+    {"markerId":"m01","timeMs":0,"purpose":"BGM起点/片头进入","cutGuidance":"片头渐入"},
+    {"markerId":"m02","timeMs":9600,"purpose":"前段能量进入","cutGuidance":"主体建立候选切点"},
+    {"markerId":"m03","timeMs":24000,"purpose":"章节推进候选","cutGuidance":"从环境转主体/结构"},
+    {"markerId":"m04","timeMs":54240,"purpose":"中段重新进入/能量变化","cutGuidance":"动作或状态转换候选"},
+    {"markerId":"m05","timeMs":72000,"purpose":"后段动作结构","cutGuidance":"动作重拍候选"},
+    {"markerId":"m06","timeMs":96000,"purpose":"尾段收束候选","cutGuidance":"进入结尾或降低口播竞争"},
+    {"markerId":"m07","timeMs":105648,"purpose":"BGM自然结束","cutGuidance":"不得延长；后续只能使用口播或明确留白"}
+  ],
+  "warnings":["onsetCandidatesAreNotFinalBeats","bgmShorterThan150SecondTarget","no_bgm_extension_or_loop"]
+}

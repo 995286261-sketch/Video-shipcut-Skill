@@ -1,0 +1,20 @@
+{
+  "schemaVersion":"0.1",
+  "projectId":"unicorn-gundam-intro-001",
+  "node":"G3",
+  "audioAsset":{"assetId":"audio-07-aji-yema-3only-indulgence-4ef6e545","path":"工作台/unicorn-gundam-intro-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3","nativeDurationMs":105648},
+  "analysisRef":"工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-BGM节奏骨架-v0.1.json",
+  "beatConfidence":"energy_onset_candidates_not_final_beats",
+  "extensionPolicy":"no_loop_no_extension_no_rearrangement",
+  "markers":[
+    {"markerId":"phrase-01","startMs":0,"endMs":9600,"role":"intro","transition":"fade_in_then_hard_cut","preferredVisual":"title_or_environment"},
+    {"markerId":"phrase-02","startMs":9600,"endMs":24000,"role":"subject_establish","transition":"hard_cut_on_energy_change","preferredVisual":"main_subject_or_mecha_display"},
+    {"markerId":"phrase-03","startMs":24000,"endMs":40000,"role":"context_to_mechanism","transition":"hard_cut_or_short_dissolve_at_sentence_break","preferredVisual":"environment_detail_or_mechanism"},
+    {"markerId":"phrase-04","startMs":40000,"endMs":54240,"role":"mechanism_build","transition":"hard_cut_on_action_change","preferredVisual":"transformation_or_structure"},
+    {"markerId":"phrase-05","startMs":54240,"endMs":72000,"role":"action_rise","transition":"hard_cut_on_strong_onset","preferredVisual":"verified_action"},
+    {"markerId":"phrase-06","startMs":72000,"endMs":84000,"role":"narration_priority","transition":"fewer_cuts_or_hold","preferredVisual":"human_or_subject_relation"},
+    {"markerId":"phrase-07","startMs":84000,"endMs":96000,"role":"second_action_push","transition":"hard_cut_on_energy_change","preferredVisual":"mecha_action"},
+    {"markerId":"phrase-08","startMs":96000,"endMs":105648,"role":"outro_or_bgm_end","transition":"fade_out_at_native_end","preferredVisual":"summary_or_emotional_release"}
+  ],
+  "humanReviewPoints":["onset_candidates_need_musical_review","choose_bgm_stop_behavior_after_105648ms"]
+}

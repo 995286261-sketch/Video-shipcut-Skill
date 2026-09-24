@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G5",
+  "status": "approved",
+  "decision": "accepted",
+  "acceptedWarnings": [],
+  "reviewCardRef": "工作台/unicorn-gundam-transition-001/G5-交付包/G5-质检与播放审核卡-v0.1.md",
+  "recordedAt": "2026-09-24T18:05:00+08:00",
+  "option": "1_confirm_delivery",
+  "approvalTokenVerbatim": "确认G5",
+  "normalizedToken": "确认G5",
+  "approvalRef": "工作台/unicorn-gundam-transition-001/G5-交付包/G5-批准记录-v0.1.md",
+  "note": "警告 1–6 保持随包可见、未逐条接受（未走选项 2）；⑩ 定性为过程工具缺口非资产缺陷，随包披露、测后修订不阻塞封包；internal_test 分发边界不升级"
+}

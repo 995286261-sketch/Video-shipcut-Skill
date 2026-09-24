@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G2",
+  "purpose": "voice_brief",
+  "source": "G2-完整口播-yunyang-v0.3-short.vtt 的句序文本 + silencedetect(-40dB,d=0.18) 实测发声起止（v0.1 的 cue 边界为首尾相接的伪边界，v0.2 修正为真实发声区间，句间静音 752-832ms 为转场窗口）",
+  "sentences": [
+    {
+      "sentenceId": "s01",
+      "startMs": 217,
+      "durationMs": 4520,
+      "text": "在宇宙世纪 0096 年，RX-0 独角兽高达登场。"
+    },
+    {
+      "sentenceId": "s02",
+      "startMs": 5498,
+      "durationMs": 5007,
+      "text": "白色装甲之下，是在 NT-D 激活后显露的红色精神感应框架。"
+    },
+    {
+      "sentenceId": "s03",
+      "startMs": 11277,
+      "durationMs": 5166,
+      "text": "当系统启动，装甲展开，头部独角分裂为标志性的 V 字形。"
+    },
+    {
+      "sentenceId": "s04",
+      "startMs": 17274,
+      "durationMs": 3658,
+      "text": "毁灭模式因此成为独角兽最鲜明的视觉标志。"
+    },
+    {
+      "sentenceId": "s05",
+      "startMs": 21717,
+      "durationMs": 2028,
+      "text": "但这种力量并非没有代价。"
+    },
+    {
+      "sentenceId": "s06",
+      "startMs": 24514,
+      "durationMs": 5302,
+      "text": "驾驶舱里的巴纳吉必须承受极高的精神负荷，才能驾驭这台机体。"
+    },
+    {
+      "sentenceId": "s07",
+      "startMs": 30568,
+      "durationMs": 7623,
+      "text": "这就是独角兽高达：一台将新人类力量、驾驶员意志与战斗代价同时写进画面的机体。"
+    }
+  ]
+}

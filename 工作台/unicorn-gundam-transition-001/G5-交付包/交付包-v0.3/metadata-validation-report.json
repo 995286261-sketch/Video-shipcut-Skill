@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "projectId": "unicorn-gundam-transition-001",
+  "generatedAt": "2026-09-24T17:42:00+08:00",
+  "subject": { "file": "final-video.mp4", "sha256": "99CBF0629814F9CDFA33C8FAA96CF79D3EE55E16C851FFB789770C1BC2904CE6" },
+  "status": "completed",
+  "finishedAt": "2026-09-24T18:05:00+08:00",
+  "checks": {
+    "decode": { "status": "passed", "detail": "ffmpeg 全片解码零错误（第 3 轮候选 v0.3 复跑）" },
+    "videoCodec": { "status": "passed", "detail": "h264 与 export-config 一致" },
+    "dimensions": { "status": "passed", "detail": "1920x1080 == 原生源，无裁切无填充" },
+    "fps": { "status": "passed", "detail": "30/1 == 批准卡 30fps == 源 30fps（⑧ 修复复验；1165 帧；装配记录 fpsSource=manifest-targetFps）" },
+    "audio": { "status": "warning", "detail": "aac 44100Hz 2ch；成片综合 −16.1 LUFS / TP −2.8（目标 −14，偏 2.1 LU 记复核项）；BGM 在位实测 −23.3 LUFS（预测 −25.0，漂移内）；源英文音轨已排除" },
+    "duration": { "status": "passed", "detail": "实测 38833ms == 批准网格 38832ms + 1ms 帧取整" },
+    "blackFrames": { "status": "passed", "detail": "blackdetect d=0.3s 零命中（黑场入 200ms 低于阈值、黑场出 600ms 为渐变收尾，符合预期）" },
+    "silence": { "status": "passed", "detail": "silencedetect −45dB/0.8s 零命中" },
+    "duplicateSegments": { "status": "warning", "detail": "无机器检测器（detector limitation，非通过）；8 段源窗口互异由 source-timecode-list 核对 + 人工全片回放覆盖" },
+    "cover": { "status": "passed", "detail": "cover.jpg 源 218.500s 静帧，不入正片；水印保留属授权边界披露项" },
+    "subtitles": { "status": "passed", "detail": "subtitle-srt-check.json passed（subtitle-expert 握手，7 cue；第 2 轮修复 ⑦ 后轴 v0.2）" },
+    "transitionAudit": { "status": "passed", "detail": "transition-audit.json passed：4 边界与指令 v0.3 逐参数一致、母带哈希绑定候选 v0.3" },
+    "bgmChainAudit": { "status": "failed", "detail": "bgm-chain-audit.json 16 链路 15 passed / planFileHash failed（⑩）：混音合同锁定的计划指纹为第 1 轮版本（DB6426CB…），第 2/3 轮修订+盖戳后计划现为 c251e92e…；混音参数逐字段比对一致、BGM 在位实测相符，属修订链与下游合同指纹锁缺重锁协议的设计缺口，非资产错误；已列入警告清单交 G5 人工裁决" },
+    "checkFrames": { "status": "passed", "detail": "G4 抽帧含 5.30s/5.34s 字幕修复验证帧 + 转场中点帧；机器绿灯不背书观感，观感由人工回放裁决" }
+  },
+  "artifacts": {
+    "finalVideo": { "path": "final-video.mp4", "sha256": "99CBF0629814F9CDFA33C8FAA96CF79D3EE55E16C851FFB789770C1BC2904CE6" },
+    "cover": { "path": "cover.jpg", "sha256": "5DDF393154958B3B627D409C9237726E4F8FBFDE6BC93F6800246C645E417504" },
+    "subtitles": { "path": "subtitles.srt", "sha256": "593615DAFBDD1F57F4828C12FBC43D706C94EDC64B27A3735113544B920044B4" },
+    "subtitleSrtCheck": { "path": "subtitle-srt-check.json", "sha256": "C9BEC7A166B302E7269FA602EFFB7812774B119B18D02AE72B725F8A51405B2D" },
+    "transitionAudit": { "path": "transition-audit.json", "sha256": "BD66C7773110FE4657E868EF21D779A93DB1AE2B1111B812F44B1029A44F3401" },
+    "bgmChainAudit": { "path": "bgm-chain-audit.json", "sha256": "67231E9A1120963657214B44A66300D0FF868366960AB3BECE6450466A43E128" },
+    "sourceTimecodeList": { "path": "source-timecode-list.json", "sha256": "9878C4D27E466205EA64BC53724D2CD1EB9F8243B0B954A4871791AE45B5AB22" },
+    "editPlan": { "path": "edit-plan.json", "sha256": "5464875DC503F58B1A58417D397BD73851E3AABC2F8BAA0263E56DE2307B059C" },
+    "exportConfig": { "path": "export-config.json", "sha256": "167035B29958612A37CBE8434BB9340B5B22D0C6545A7B847C76C077BD21DC78" },
+    "chapterClips": [
+      { "path": "clips/ch1-登场与装甲.mp4", "sha256": "855B640439F277B387E49177EA2CF1C86D9506E67AAB50AFCB2F8CD6E37B09DA" },
+      { "path": "clips/ch2-毁灭模式标志.mp4", "sha256": "5AEFDA0DF2C822B9B4A4583941DD7237BB0BC9DC8600E105EF8804BF75B70DCF" },
+      { "path": "clips/ch3-代价与驾驶员.mp4", "sha256": "868E10B7FDFA30D517B6FA4DA14AAE556D3A8BF69B1717BB842B8550C9BE673F" },
+      { "path": "clips/ch4-收束.mp4", "sha256": "19CE8C5F0BFEAA53D33524BE060F6727D6D5325CBFA7B0B89466150FFFE83E4F" }
+    ]
+  },
+  "warnings": [
+    "bgmChainAudit.planFileHash failed（⑩：修订轮改写计划后混音合同无重锁通道；其余 15 链路全过，含逐字段混音比对与 BGM 在位实测）",
+    "duplicateSegments 无机器检测器（detector limitation）",
+    "成片综合响度 −16.1 LUFS 偏目标 −14 达 2.1 LU",
+    "时长 38833ms 较批准网格 38832ms 有 +1ms 帧取整",
+    "源画面自带水印保留（G4 遮蔽合同裁决=保留），封包披露",
+    "internal_test 分发边界：第三方 IP 二创素材，不得对外发布"
+  ]
+}

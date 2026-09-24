@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "title": "独角兽高达——最强 NT 机体的诞生与悲壮",
+  "titleExpressionType": "editorial_expression",
+  "narrativeAngle": "视觉盛宴 + 情感共鸣",
+  "narrativeAngleDescription": "画面冲击为主，配合史诗感叙事（沿用原项目已确认角度）",
+  "coreQuestion": "独角兽高达为什么被称为最强 NT 机体？它的诞生与毁灭模式如何构成 UC 时间线里最悲壮的一笔？",
+  "audience": "高达爱好者、机甲爱好者",
+  "coreViewpoint": "RX-0 独角兽高达是阿纳海姆电子公司在 UC 0096 年打造的秘密武器；NT-D 系统一旦被新人类触发，性能跃升、骨架变红，但这份\"最强\"背后是控制与毁灭交织的悲壮命运——成片以画面冲击承载设定，以情感共鸣收束悲剧",
+  "outputPreferences": {
+    "aspectRatio": "16:9",
+    "targetDurationSec": 300,
+    "usagePurpose": "internal_test"
+  },
+  "bgmDecision": "provided",
+  "bgmFile": "工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3",
+  "directionChoice": {
+    "id": "carryover-visual-emotion",
+    "label": "沿用原项目已确认方向：视觉盛宴为主 + 情感共鸣的史诗感叙事（本轮变量只有转场，方向不引入新变量）",
+    "source": "agent_recommendation"
+  },
+  "styleReference": {
+    "video": "冷战奇迹 - 逆羽雄鹰 -1080P.mp4",
+    "analysisReport": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+    "analysisManifest": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "cacheLocation": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-参考视频分析/",
+    "keyFindings": {
+      "totalScenes": 24,
+      "avgSceneDuration": 6.8,
+      "transitionType": "硬切为主",
+      "colorTone": "冷灰色调",
+      "textStyle": {
+        "topBanner": "白色粗体大号 GLOBAL MILITARY PROGRAM",
+        "mainTitle": "中文白色特大 + 英文黄色大号",
+        "subtitle": "中文白色大号 + 英文蓝色小号",
+        "position": "底部居中"
+      },
+      "infoLayers": 3,
+      "cameraMotion": "静态为主，少量 zoom/pan"
+    }
+  },
+  "styleRules": [
+    "以硬切为主要切点处理，场景平均时长约 6.8 秒（参考片《冷战奇迹-逆羽雄鹰》实测节奏；本轮转场测试允许按切点证据个别改叠化/黑场，须逐点提案）",
+    "冷灰色调为主的整体调色",
+    "顶部白色粗体大号标题栏，主标题中文白色特大＋英文黄色大号",
+    "字幕底部居中：中文白色大号＋英文蓝色小号，信息分层不超过三层",
+    "镜头以静态为主，少量 zoom/pan"
+  ],
+  "expressionBoundaries": [
+    "剧透范围：可以全部剧透（UC 正片为主，沿袭原项目，用户 G0 沿用确认卡已逐项确认）",
+    "无额外禁止事项（原项目表达边界沿用）",
+    "本项目为转场流程测试与内部审核用途，不得对外发布",
+    "不将参考片《冷战奇迹-逆羽雄鹰》的原句、画面、音乐直接带入成片"
+  ],
+  "claims": [
+    {
+      "claimId": "claim-001",
+      "text": "UC 0096 年秘密武器，阿纳海姆电子公司开发",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-002",
+      "text": "NT-D 系统，Newtype 触发毁灭模式",
+      "status": "pending",
+      "evidenceRefs": []
+    },
+    {
+      "claimId": "claim-003",
+      "text": "毁灭模式下性能提升，框架变红",
+      "status": "pending",
+      "evidenceRefs": []
+    }
+  ],
+  "provenance": "克隆自 unicorn-gundam-intro-001（该项目已 completed、不可重开）。方向/证据/剪辑计划为原项目已确认内容换发新项目 ID；用户 2026-09-24 在 G0 沿用确认卡逐项确认（含配音、品牌、授权、BGM）。三条事实主张在 G2 沿用证据链中原为 pending→supported 的对应关系以 G2 重呈卡为准。"
+}

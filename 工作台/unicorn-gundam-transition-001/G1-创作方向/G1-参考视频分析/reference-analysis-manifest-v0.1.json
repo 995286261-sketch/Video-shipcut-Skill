@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G1",
+  "status": "completed_with_warnings",
+  "analysisOnly": true,
+  "source": {
+    "assetId": "reference-cold-war-miracle",
+    "path": "工作台/unicorn-gundam-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "durationSec": 163
+  },
+  "cacheKey": {
+    "assetId": "reference-cold-war-miracle",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "analysisScope": "scene-cut-points-and-style-only",
+    "sampling": { "sceneDetection": "ffmpeg-select-gt-scene-0.3", "sceneFramePolicy": "scene-start-frame", "fixedFramesSec": [0, 40, 80, 120, 160] },
+    "provider": "legacy-recorded-unknown",
+    "model": "legacy-recorded-unknown",
+    "promptVersion": "legacy-recorded-unknown"
+  },
+  "canonical": {
+    "technicalReport": "G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+    "sceneAnalysis": "G1-参考视频分析/scene_analysis.json",
+    "sceneTimestamps": ["G1-参考视频分析/scene_timestamps.txt", "G1-参考视频分析/scene_timestamps_clustered.txt"],
+    "fixedKeyframes": "G1-参考视频分析/frame-{0,40,80,120,160}s.jpg",
+    "sceneKeyframes": "G1-参考视频分析/场景帧/scene-*-start.jpg"
+  },
+  "warnings": [
+    "scene_analysis.json and technical report contain timeout entries; those scenes are not verified",
+    "Legacy run did not record provider, model, or promptVersion; values are intentionally unknown"
+  ],
+  "reuseRule": "Matching cacheKey means read this manifest and derivatives; do not rerun full reference analysis. Invalidate only on source hash, scope, model/prompt change, or explicit user request."
+}

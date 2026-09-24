@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "unicorn-gundam-transition-001",
+  "status": "assembled",
+  "manifest": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+  "timelineDurationMs": 38832,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-001.mp4",
+      "sha256": "CC7DEA6FBC99E122D6470F251FCAD97C9C99A499D017D3C817DA70A14B8C21F7"
+    },
+    {
+      "segmentId": "seg-02",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-002.mp4",
+      "sha256": "E5AF4582B7F59DBD9D0181EC6C05F405DCA7A5C63F928751AF489715FCB85486"
+    },
+    {
+      "segmentId": "seg-03",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-003.mp4",
+      "sha256": "261870194F20F0B0413E558D3E09CAD8E44891E01E556970D51489C0C0D90B83"
+    },
+    {
+      "segmentId": "seg-04",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-004.mp4",
+      "sha256": "5134CD56A0888B5EF39D01D189059DE5592646F1F9AD4FF26D36EF3180B6839E"
+    },
+    {
+      "segmentId": "seg-05",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-005.mp4",
+      "sha256": "9BA94CD48B1C3E95B9018E139D82D81E11F113371F7686A7DBF7FFB8C19520A9"
+    },
+    {
+      "segmentId": "seg-06",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-006.mp4",
+      "sha256": "42ADB1F80327D05CF2374A2A9CAB2A83ECE0D3199C3A1BE5492A683A1B2FC273"
+    },
+    {
+      "segmentId": "seg-07",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-007.mp4",
+      "sha256": "93E63279718EFE7A92D16B72AD7BB8067388ACF620BED9D72805FD72F9DDF8A0"
+    },
+    {
+      "segmentId": "seg-08",
+      "file": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/clean-segments/seg-008.mp4",
+      "sha256": "21B72E3314877C4AB953F86F6A96A694916BD12C6BB6DE0FE9829D41CD7FC43B"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-完整口播-yunyang-v0.3-short.mp3",
+    "sha256": "11938EEF193E6E93FC7F1D6B4B1A10176D2E5AF5773901689624BB16B1861D96",
+    "durationMs": 38832,
+    "loudness": {
+      "integratedLufs": -16.1,
+      "truePeakDbtp": -2.8,
+      "engine": "ffmpeg-ebur128",
+      "targetIntegratedLufs": -14.0,
+      "chain": "standard-narration-chain (acompressor+loudnorm, issue ㊌)",
+      "caveat": "measured on the assembled master including the BGM bed, not narration alone",
+      "note": "achieved loudness deviates from target by more than 1.5 LU — likely the source peak-to-loudness ratio ceiling (kshatriya-002: -23.9 LUFS/+0.5 TP TTS tops out near -15.2); treat as a review item, do not re-chain blindly"
+    }
+  },
+  "bgmMix": {
+    "audio": {
+      "path": "工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3",
+      "sha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11"
+    },
+    "contract": {
+      "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+      "sha256": "C44D275235D80DBAAD88C392520416C4EDC80A1037DEC43EC59F568016A03FEC"
+    },
+    "trackOffsetMs": 0,
+    "bedGainDb": -12.0,
+    "duckReductionDb": 6.0,
+    "duckSegments": [
+      {
+        "fromMs": 217,
+        "toMs": 4737,
+        "sentenceIds": [
+          "s01"
+        ]
+      },
+      {
+        "fromMs": 5498,
+        "toMs": 10505,
+        "sentenceIds": [
+          "s02"
+        ]
+      },
+      {
+        "fromMs": 11277,
+        "toMs": 16443,
+        "sentenceIds": [
+          "s03"
+        ]
+      },
+      {
+        "fromMs": 17274,
+        "toMs": 20932,
+        "sentenceIds": [
+          "s04"
+        ]
+      },
+      {
+        "fromMs": 21717,
+        "toMs": 23745,
+        "sentenceIds": [
+          "s05"
+        ]
+      },
+      {
+        "fromMs": 24514,
+        "toMs": 29816,
+        "sentenceIds": [
+          "s06"
+        ]
+      },
+      {
+        "fromMs": 30568,
+        "toMs": 38191,
+        "sentenceIds": [
+          "s07"
+        ]
+      }
+    ],
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 36832,
+      "fadeOutMs": 2000
+    },
+    "measuredInPlaceLufs": -23.3
+  },
+  "subtitleAss": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-字幕ASS-v0.2.ass",
+    "sha256": "34567FE654CDAD53998C02B911ADC4BC42147DF289CFD8507A1571330D113D49"
+  },
+  "output": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.2.mp4",
+  "outputSha256": "E55490707F603D4AA731D9A7FD2B345EB0CBBBE8AD73118E4B080F0FB5A99C62",
+  "probedDurationMs": 38833,
+  "fps": 24,
+  "fpsSource": "default-24",
+  "cover": null,
+  "chapterCards": null,
+  "titleBar": null,
+  "transitionDirective": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+    "sha256": "29D072A7BFE44E30CB819FFC3CEBA8931C773FC4FD206C99F9A863DE9CE39219",
+    "boundaries": 4,
+    "masterFades": {
+      "fadeInMs": 200,
+      "fadeOutMs": 600
+    }
+  },
+  "filterGraph": "[0:v]fps=fps=24,format=yuv420p,setsar=1[segv0];[1:v]fps=fps=24,format=yuv420p,setsar=1[segv1];[2:v]fps=fps=24,format=yuv420p,setsar=1[segv2];[3:v]fps=fps=24,format=yuv420p,setsar=1[segv3];[4:v]fps=fps=24,format=yuv420p,setsar=1[segv4];[5:v]fps=fps=24,format=yuv420p,setsar=1[segv5];[6:v]fps=fps=24,format=yuv420p,setsar=1[segv6];[7:v]fps=fps=24,format=yuv420p,setsar=1[segv7];[segv0][segv1]concat=n=2:v=1:a=0[vcat0];[vcat0]settb=AVTB[xc1m];[segv2]settb=AVTB[xc1s];[xc1m][xc1s]xfade=transition=fade:duration=0.300:offset=10.952[vcat1];[vcat1][segv3]concat=n=2:v=1:a=0[vcat2];[vcat2]settb=AVTB[xc3m];[segv4]settb=AVTB[xc3s];[xc3m][xc3s]xfade=transition=fade:duration=0.300:offset=21.355[vcat3];[vcat3]settb=AVTB[xc4m];[segv5]settb=AVTB[xc4s];[xc4m][xc4s]xfade=transition=fade:duration=0.300:offset=24.190[vcat4];[vcat4][segv6]concat=n=2:v=1:a=0[vcat5];[vcat5]settb=AVTB[xc6m];[segv7]settb=AVTB[xc6s];[xc6m][xc6s]xfade=transition=fade:duration=0.300:offset=30.226[vcat6];[vcat6]format=yuv420p,subtitles=captions.ass,fade=t=in:st=0:d=0.200,fade=t=out:st=38.232:d=0.600[v];[8:a]acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=9[narr];[9:a]volume=-12dB,volume=-6dB:enable='between(t,0.217,4.737)+between(t,5.498,10.505)+between(t,11.277,16.443)+between(t,17.274,20.932)+between(t,21.717,23.745)+between(t,24.514,29.816)+between(t,30.568,38.191)',afade=t=in:st=0:d=2.000,afade=t=out:st=36.832:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.2-assemble-work"
+}

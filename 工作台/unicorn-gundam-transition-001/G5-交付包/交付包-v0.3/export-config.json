@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G5",
+  "platform": "not_specified（distribution=internal_test，未上架）",
+  "distribution": "internal_test",
+  "authorization": "画面：用户提供素材《独角兽-名场面.mp4》（日升 IP 二创混剪），授权范围=仅内部预览、不得对外发布（见 G0-素材包/04_授权说明.md）；BGM：aji-yema-3only-indulgence（用户提供，登记 cleared-for-project）；源英文音频轨已排除；源画面自带水印，G4 遮蔽合同裁决=保留并披露",
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationActualMs": 38833,
+    "timelineDurationMs": 38832,
+    "frameCount": 1165,
+    "aspectRatioPolicy": "16:9 原生源，无裁切无填充"
+  },
+  "audio": {
+    "narrationLoudnessMeasured": "-16.1 LUFS / TP -2.8 dBTP（成片综合，含 BGM 垫底；目标 -14 LUFS，偏 2.1 LU 记复核项）",
+    "narrationTargetLufs": -14.0,
+    "bgm": "bed -12dB + 逐句 duck -6dB（7 句，BGM-混音合同-v0.1）",
+    "sourceAudio": "excluded"
+  },
+  "subtitles": {
+    "burned": true,
+    "deliveredSrt": "subtitles.srt",
+    "cueCount": 7,
+    "sourceCaptionMask": "seg-06 24.340–27.940 / seg-08 36.441–38.832 底部条带遮蔽（G4-源字幕遮蔽合同-v0.1）"
+  },
+  "cover": {
+    "file": "cover.jpg",
+    "frame": "源 218.500s 静帧（G3-剪辑计划/转场-证据帧-v0.1/cover-218500ms.jpg），不入正片"
+  }
+}

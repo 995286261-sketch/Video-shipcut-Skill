@@ -1,0 +1,94 @@
+{
+  "boundaries": [
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-02",
+      "offsetMs": 10952,
+      "toSegmentId": "seg-03",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-04",
+      "offsetMs": 21355,
+      "toSegmentId": "seg-05",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-05",
+      "offsetMs": 24190,
+      "toSegmentId": "seg-06",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 300,
+      "fromSegmentId": "seg-07",
+      "offsetMs": 30226,
+      "toSegmentId": "seg-08",
+      "transition": "fade"
+    }
+  ],
+  "evidenceSha256": "7F361EF265D705A7AD36CEA25B4EC9CA7B075130E697A126A95B22408592F056",
+  "gridInvariant": true,
+  "hostProfile": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-宿主能力档-v0.1.json",
+  "hostProfileSha256": "E75CF0712BE121E9AA413456598CF2AD62B01268945F91A11CD3AD3D60509672",
+  "inputEvidence": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+  "inputPlan": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "masterFades": {
+    "fadeInMs": 200,
+    "fadeOutMs": 600
+  },
+  "planSha256": "64CF3987154BCDC13CEAEA8231A84817E38CD55D16215D766C829FCD9E382A0E",
+  "purpose": "transition_directive",
+  "schemaVersion": "0.1",
+  "segments": [
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-01",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-02",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-03",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-04",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-05",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-06",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-07",
+      "tailExtraMs": 150
+    },
+    {
+      "headExtraMs": 150,
+      "segmentId": "seg-08",
+      "tailExtraMs": 0
+    }
+  ],
+  "skill": "transition-expert",
+  "timelineDurationMs": 38832,
+  "transitionVocabulary": [
+    "叠化",
+    "黑场入",
+    "黑场出"
+  ]
+}

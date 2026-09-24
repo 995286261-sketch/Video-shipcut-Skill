@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "completed",
+  "derivedFrom": [
+    "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+    "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/destroy-mode-75s-90s-dense.jpg",
+    "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/white-armor-120s-150s-dense.jpg",
+    "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/red-frame-165s-180s-dense.jpg"
+  ],
+  "sampling": {
+    "method": "local candidate contact sheets",
+    "intervalMs": 1000,
+    "selectionRule": "Observations describe only visible frames. Candidate eligibility still requires final local probe verification."
+  },
+  "entries": [
+    {
+      "sourceRange": {"startMs": 75000, "endMs": 85000},
+      "frameRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/destroy-mode-75s-90s-dense.jpg",
+      "subjectStatus": "unicorn_confirmed",
+      "observedVisuals": "白色机体处于红色精神感应框架外露的毁灭模式；可见机体头部、上身、红色发光结构和蓝色喷焰。该范围后部转入驾驶舱内人物画面。",
+      "usableForBeatIds": ["beat-003"],
+      "partiallyUsableForBeatIds": ["beat-004", "beat-007"],
+      "notSufficientForBeatIds": ["beat-002"],
+      "reason": "可证明已处于红框架毁灭模式，但没有证明闭合单角白色常态，也没有显示完整展开过程。",
+      "risks": ["channel_watermark", "state_transition_not_visible", "range_must_end_before_cockpit_cut"]
+    },
+    {
+      "sourceRange": {"startMs": 120000, "endMs": 150000},
+      "frameRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/white-armor-120s-150s-dense.jpg",
+      "subjectStatus": "mixed_or_uncertain",
+      "observedVisuals": "密集帧包含白色机体局部、其他红色机体、驾驶员和战斗画面；没有连续范围同时清楚展示闭合单角与纯白常态装甲。",
+      "usableForBeatIds": [],
+      "partiallyUsableForBeatIds": ["beat-001", "beat-007"],
+      "notSufficientForBeatIds": ["beat-002", "beat-004"],
+      "reason": "不能以局部白色装甲或混剪战斗画面替代外观主张。",
+      "risks": ["channel_watermark", "mixed_subject", "burned_subtitle_intermittent"]
+    },
+    {
+      "sourceRange": {"startMs": 165000, "endMs": 180000},
+      "frameRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-语义候选帧-v0.1/red-frame-165s-180s-dense.jpg",
+      "subjectStatus": "mixed_unicorn_and_other_mecha",
+      "observedVisuals": "可见独角兽高达的红色框架、V 字角、头部近景与动作；同一范围反复出现深色/紫色敌机、爆炸和高速遮挡。",
+      "usableForBeatIds": [],
+      "partiallyUsableForBeatIds": ["beat-003", "beat-004", "beat-007"],
+      "notSufficientForBeatIds": ["beat-002"],
+      "reason": "局部帧可证明毁灭模式特征，但整段不能直接作为单一独角兽镜头放行；需进一步缩短到无敌机探针的子段。",
+      "risks": ["channel_watermark", "mixed_subject", "motion_blur", "source_subtitle_risk"]
+    }
+  ],
+  "reusePolicy": "Later G3 revisions must read this index before extracting more candidate frames. Re-extract only when a candidate range is narrowed, source content changes, or a new visual claim is introduced."
+}

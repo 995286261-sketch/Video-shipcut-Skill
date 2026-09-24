@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-f1f08154",
+      "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "sourceProbe": {
+        "durationMs": 285977,
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRateHz": 44100,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        0,
+        4000
+      ],
+      "narrationStartMs": 217,
+      "narrationEndMs": 4737,
+      "mappingMode": "one_to_one",
+      "layoutTier": "留白",
+      "sourceStartMs": 70000,
+      "sourceEndMs": 74000,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "黑场入",
+        "durationMs": 200
+      }
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        4000,
+        11102
+      ],
+      "narrationStartMs": 5498,
+      "narrationEndMs": 10505,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "sourceStartMs": 156884,
+      "sourceEndMs": 163986,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "叠化",
+        "durationMs": 300
+      }
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        11102,
+        16400
+      ],
+      "narrationStartMs": 11277,
+      "narrationEndMs": 16443,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 164286,
+      "sourceEndMs": 169584,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "硬切",
+        "durationMs": 0
+      }
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        16400,
+        21505
+      ],
+      "narrationStartMs": 17274,
+      "narrationEndMs": 20932,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 171300,
+      "sourceEndMs": 176405,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "叠化",
+        "durationMs": 300
+      }
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        21505,
+        24340
+      ],
+      "narrationStartMs": 21717,
+      "narrationEndMs": 23745,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 197036,
+      "sourceEndMs": 199871,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "叠化",
+        "durationMs": 300
+      }
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        24340,
+        28340
+      ],
+      "narrationStartMs": 24514,
+      "narrationEndMs": 28240,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 208400,
+      "sourceEndMs": 212400,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "硬切",
+        "durationMs": 0
+      },
+      "sourceCaptionMask": {
+        "outputFromMs": 24340,
+        "outputToMs": 27940,
+        "bandYpx": [
+          907,
+          1080
+        ]
+      }
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        28340,
+        30376
+      ],
+      "narrationStartMs": 28240,
+      "narrationEndMs": 29816,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "sourceStartMs": 212400,
+      "sourceEndMs": 214436,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "叠化",
+        "durationMs": 300
+      }
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-f1f08154",
+      "outputRangeMs": [
+        30376,
+        38832
+      ],
+      "narrationStartMs": 30568,
+      "narrationEndMs": 38191,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "sourceStartMs": 215435,
+      "sourceEndMs": 223891,
+      "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+      "transition": {
+        "instruction": "黑场出",
+        "durationMs": 600
+      },
+      "sourceCaptionMask": {
+        "outputFromMs": 36441,
+        "outputToMs": 38832,
+        "bandYpx": [
+          907,
+          1080
+        ]
+      }
+    }
+  ],
+  "editPlan": {
+    "fps": 30,
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "order": 1,
+        "transitionInstruction": "黑场入",
+        "transitionDurationMs": 200
+      },
+      {
+        "segmentId": "seg-02",
+        "order": 2,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-03",
+        "order": 3,
+        "transitionInstruction": "硬切",
+        "transitionDurationMs": null
+      },
+      {
+        "segmentId": "seg-04",
+        "order": 4,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-05",
+        "order": 5,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-06",
+        "order": 6,
+        "transitionInstruction": "硬切",
+        "transitionDurationMs": null
+      },
+      {
+        "segmentId": "seg-07",
+        "order": 7,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-08",
+        "order": 8,
+        "transitionInstruction": "黑场出",
+        "transitionDurationMs": 600
+      }
+    ]
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "99CBF0629814F9CDFA33C8FAA96CF79D3EE55E16C851FFB789770C1BC2904CE6"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "5DDF393154958B3B627D409C9237726E4F8FBFDE6BC93F6800246C645E417504"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "593615DAFBDD1F57F4828C12FBC43D706C94EDC64B27A3735113544B920044B4"
+    },
+    "subtitleSrtCheck": {
+      "path": "subtitle-srt-check.json",
+      "sha256": "C9BEC7A166B302E7269FA602EFFB7812774B119B18D02AE72B725F8A51405B2D"
+    },
+    "transitionAudit": {
+      "path": "transition-audit.json",
+      "sha256": "BD66C7773110FE4657E868EF21D779A93DB1AE2B1111B812F44B1029A44F3401"
+    },
+    "bgmChainAudit": {
+      "path": "bgm-chain-audit.json",
+      "sha256": "67231E9A1120963657214B44A66300D0FF868366960AB3BECE6450466A43E128"
+    },
+    "sourceTimecodeList": {
+      "path": "source-timecode-list.json",
+      "sha256": "9878C4D27E466205EA64BC53724D2CD1EB9F8243B0B954A4871791AE45B5AB22"
+    },
+    "editPlan": {
+      "path": "edit-plan.json",
+      "sha256": "5464875DC503F58B1A58417D397BD73851E3AABC2F8BAA0263E56DE2307B059C"
+    },
+    "exportConfig": {
+      "path": "export-config.json",
+      "sha256": "167035B29958612A37CBE8434BB9340B5B22D0C6545A7B847C76C077BD21DC78"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch1-登场与装甲.mp4",
+        "sha256": "855B640439F277B387E49177EA2CF1C86D9506E67AAB50AFCB2F8CD6E37B09DA"
+      },
+      {
+        "path": "clips/ch2-毁灭模式标志.mp4",
+        "sha256": "5AEFDA0DF2C822B9B4A4583941DD7237BB0BC9DC8600E105EF8804BF75B70DCF"
+      },
+      {
+        "path": "clips/ch3-代价与驾驶员.mp4",
+        "sha256": "868E10B7FDFA30D517B6FA4DA14AAE556D3A8BF69B1717BB842B8550C9BE673F"
+      },
+      {
+        "path": "clips/ch4-收束.mp4",
+        "sha256": "19CE8C5F0BFEAA53D33524BE060F6727D6D5325CBFA7B0B89466150FFFE83E4F"
+      }
+    ],
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "98291BFC4804EAF8D26DB070E608420031C340CFBFA947311F489FC4E0A192DD"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "逐切点转场裁决（8 边界：黑场入/叠化×4/硬切×2/黑场出）",
+    "目标主体确认沿用",
+    "语义节拍与选镜重排确认（黑帧带剔除+seg5-8 换窗）",
+    "封面帧 218.5s 红机战斗",
+    "字幕沿用 7 句固定底部字幕条",
+    "BGM 对齐 offset=0、淡入淡出 2s"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json"
+  ],
+  "warnings": [
+    "左上角来源台标与 208-212/221-224 底部烧录对白字幕持续存在（旧项目已接受警告，G4 遮罩处理）",
+    "layoutTier 为机械草稿+人工修正：s05 快切→常规、s06a 快切→常规、s07 快切→常规（驾驶员特写与总结句不宜快切档）",
+    "seg-02 后向手柄 156.884-157.0 与 seg-03 前向手柄 164.136-164.286 恰在切点两侧相邻，深检以手柄余量规则为准",
+    "黑帧带 169.63-171.0 已从成片排除；若用户希望保留「压黑」观感可改切点（见终审卡）"
+  ],
+  "authorization": "画面：用户提供素材《独角兽-名场面.mp4》（日升 IP 二创混剪），授权范围=仅内部预览、不得对外发布（见 G0-素材包/04_授权说明.md）；BGM：aji-yema-3only-indulgence（用户提供，登记 cleared-for-project）；源英文音频轨已排除；源画面自带水印，G4 遮蔽合同裁决=保留并披露",
+  "distribution": "internal_test",
+  "status": "completed",
+  "finishedAt": "2026-09-24T18:05:00+08:00",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

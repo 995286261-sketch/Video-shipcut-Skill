@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "unicorn-gundam-transition-001",
+  "source": "G3-最终回显卡-v0.3 批准表 seg-06/seg-08 风险列「底部烧录对白字幕：G4 遮罩处理」；窗口换算依据 G3-视觉观察账本 obs-109 + 证据帧目检（seg-06-middle-210400ms.jpg「这样你我都会烧死在大气层」、seg-08-end-223841ms.jpg「巴纳吉 听见的话住手」，字幕带位于画面底部 84-100%）",
+  "watermarkDecision": "左上角「不省人事的阿伟 bilibili」水印：批准表其余六行口径为「保留（internal_test）」，且旧项目 G5 已接受该警告；逐段遮罩会造成水印忽隐忽现的观感断裂，故本跑保留水印、G5 交付边界如实披露（与 psycho-zaku-intro-002 口径一致）。",
+  "canvas": { "width": 1920, "height": 1080 },
+  "masks": [
+    {
+      "maskId": "mask-seg-06",
+      "segmentId": "seg-06",
+      "outputFromMs": 24340,
+      "outputToMs": 27940,
+      "bandYpx": [907, 1080],
+      "color": "black",
+      "basis": "G3批准表 seg-06：源 208.0-212.0 底部烧录对白字幕；本段源区间 208.4-212.4 → 遮罩取有字幕部分至源 212.0（输出 27940）"
+    },
+    {
+      "maskId": "mask-seg-08",
+      "segmentId": "seg-08",
+      "outputFromMs": 36441,
+      "outputToMs": 38832,
+      "bandYpx": [907, 1080],
+      "color": "black",
+      "basis": "G3批准表 seg-08：源 221.5-224 底部烧录对白字幕（obs-109）；本段源起点 215.435 → 输出窗口 36441-38832（尾端钳到成片边界）"
+    }
+  ]
+}

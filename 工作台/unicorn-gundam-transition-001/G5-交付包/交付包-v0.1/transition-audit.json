@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "skill": "transition-expert",
+  "purpose": "transition_check",
+  "generatedAt": "2026-09-24T15:11:30+08:00",
+  "checkedAt": "2026-09-24T15:11:30+08:00",
+  "transitions": [
+    {
+      "boundary": "seg-02→seg-03",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 10952
+    },
+    {
+      "boundary": "seg-04→seg-05",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 21355
+    },
+    {
+      "boundary": "seg-05→seg-06",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 24190
+    },
+    {
+      "boundary": "seg-07→seg-08",
+      "transition": "fade",
+      "durationMs": 300,
+      "offsetMs": 30226
+    }
+  ],
+  "masterFades": {
+    "fadeInMs": 200,
+    "fadeOutMs": 600
+  },
+  "gridInvariant": true,
+  "manifest": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+    "sha256": "3DAC6B33C6D9F53BADB1FBD6E16AD6DFD8B9FCCF18D550025D9AE22E5646928E"
+  },
+  "assemblyRecord": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json",
+    "sha256": "22E3B42CA2B684C94247FBC741BC46672DFB3C34FE2E221A76255EE8BD34AC17"
+  },
+  "directive": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "AE7E60A03167503FAA39C9979620E4D4A08EE7C7B5CC3C750769C29AF60008C5"
+  },
+  "master": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+    "sha256": "B5F33B42F52FB52B30DD09748E7D46CD2E698E19F7D4B6182C6A928B638FD4C3"
+  },
+  "errors": []
+}

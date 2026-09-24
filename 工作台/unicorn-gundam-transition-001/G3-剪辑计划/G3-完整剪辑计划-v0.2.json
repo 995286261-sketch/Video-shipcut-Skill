@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.2",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "review_required",
+  "durationMs": 105648,
+  "sourceAudioPolicy": "exclude",
+  "verificationPolicy": "Each segment is verified from local start/middle/end frames; user review remains required for the complete timeline.",
+  "sourceSubtitleDefault": {"strategy":"crop_or_mask","reason":"persistent channel watermark and intermittent burned subtitles; never rely on automatic avoidance","reviewRequired":true},
+  "segments": [
+    {"segmentId":"seg-001","sourceRange":{"startMs":68000,"endMs":72000},"outputRange":{"startMs":0,"endMs":4000},"chapter":"intro","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"驾驶员与独角兽机体关联开场","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-001/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-002","sourceRange":{"startMs":75000,"endMs":80600},"outputRange":{"startMs":4000,"endMs":9600},"chapter":"intro","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"白色装甲、红色框架与喷焰建立主体能量","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-002/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-003","sourceRange":{"startMs":120000,"endMs":126400},"outputRange":{"startMs":9600,"endMs":16000},"chapter":"rx0_appearance","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"白色机体躯干和绿色眼部主体建立","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-003/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-004","sourceRange":{"startMs":126400,"endMs":134400},"outputRange":{"startMs":16000,"endMs":24000},"chapter":"rx0_appearance","visualStatus":"verified","subjectStatus":"mixed_unicorn_and_pilot","reason":"连续白色机体与驾驶员关系展示","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-004/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-005","sourceRange":{"startMs":134400,"endMs":142400},"outputRange":{"startMs":24000,"endMs":32000},"chapter":"context","visualStatus":"verified","subjectStatus":"uncertain_context","reason":"机体动作和结构细节过渡，不承担独角兽身份新事实","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-005/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-006","sourceRange":{"startMs":142400,"endMs":150400},"outputRange":{"startMs":32000,"endMs":40000},"chapter":"ntd_system","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"白色红框架机体动作细节","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-006/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-007","sourceRange":{"startMs":165000,"endMs":173000},"outputRange":{"startMs":40000,"endMs":48000},"chapter":"ntd_system","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"红色发光框架与大型火器动作建立","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-007/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-008","sourceRange":{"startMs":173000,"endMs":179240},"outputRange":{"startMs":48000,"endMs":54240},"chapter":"ntd_system","visualStatus":"verified","subjectStatus":"confirmed_unicorn","reason":"承接同一武装动作的后续段","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-008/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-009","sourceRange":{"startMs":195000,"endMs":203760},"outputRange":{"startMs":54240,"endMs":63000},"chapter":"destroy_mode","visualStatus":"verified","subjectStatus":"pilot_only","reason":"改为驾驶员反应，避免把混合/不确定机体误认成独角兽","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-009/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-010","sourceRange":{"startMs":203760,"endMs":212760},"outputRange":{"startMs":63000,"endMs":72000},"chapter":"destroy_mode","visualStatus":"verified","subjectStatus":"pilot_only","reason":"动作后的驾驶员情绪段","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-010/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-011","sourceRange":{"startMs":212760,"endMs":224760},"outputRange":{"startMs":72000,"endMs":84000},"chapter":"pilot_cost","visualStatus":"verified","subjectStatus":"pilot_only_or_context","reason":"驾驶员关联与精神负荷段","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-011/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-012","sourceRange":{"startMs":224760,"endMs":236760},"outputRange":{"startMs":84000,"endMs":96000},"chapter":"laplace_context","visualStatus":"verified","subjectStatus":"mixed_pilot_and_energy","reason":"驾驶员关系与能量过渡段","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-012/{start,middle,end}-*.jpg"},
+    {"segmentId":"seg-013","sourceRange":{"startMs":255000,"endMs":264648},"outputRange":{"startMs":96000,"endMs":105648},"chapter":"summary","visualStatus":"verified","subjectStatus":"confirmed_unicorn_or_action_context","reason":"高速动作与能量画面收束；不新增未验证机体事实","sourceSubtitleTreatment":"crop_or_mask","verifiedFramesRef":"G3-画面验证帧/seg-013/{start,middle,end}-*.jpg"}
+  ],
+  "timeline": {"continuous":true,"nonOverlappingSourceRanges":true,"repeatedSourceRanges":false,"bgmDurationMatched":true},
+  "humanReviewPoints": ["review_complete_timeline_once","approve_source_subtitle_treatment","approve_g3_for_g4"]
+}

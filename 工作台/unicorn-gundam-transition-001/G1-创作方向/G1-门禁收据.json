@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-24T13:50:30+08:00",
+  "reviewCardRef": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向简报.json",
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向简报.md",
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向输入-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向确认记录.md",
+    "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json"
+  ],
+  "checklist": [
+    {
+      "id": "direction_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "claims_and_boundaries",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-方向简报.json"
+    },
+    {
+      "id": "direction_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G1-创作方向/G1-最终回显卡-v0.1.md"
+    }
+  ]
+}

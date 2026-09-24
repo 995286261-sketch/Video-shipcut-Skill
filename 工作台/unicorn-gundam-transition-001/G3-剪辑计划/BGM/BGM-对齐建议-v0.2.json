@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "0.2",
+  "purpose": "bgm_alignment",
+  "skill": "music-expert",
+  "inputs": {
+    "report": "工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/BGM-分析报告-aji-yema-3only-indulgence-9E0CE3B7.json",
+    "voiceBrief": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播句子-v0.2.json",
+    "reportCacheKey": {
+      "sha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11",
+      "analysisVersion": "music-expert-analysis-v0.2",
+      "sampleRate": 22050,
+      "mediaKind": "video-with-audio"
+    },
+    "briefProjectId": "unicorn-gundam-transition-001"
+  },
+  "alignment": {
+    "offsetMs": 0,
+    "rawOffsetMs": 0,
+    "clampedDeviationMs": 0,
+    "basis": "default: no --climax-sentence given, bed starts at track 0:00.000",
+    "topEnergySegment": {
+      "startMs": 63344,
+      "endMs": 86471,
+      "energyMean": 0.364639
+    },
+    "topSegmentOnTimeline": [
+      63344,
+      38832
+    ],
+    "climaxAnchorSentence": null,
+    "coveredSentences": [],
+    "trackMs": 105605,
+    "timelineMs": 38832,
+    "tempoBpm": 123.05,
+    "trackTitle": "aji-yema-3only-indulgence.mp3"
+  },
+  "boundaries": [
+    {
+      "sentenceId": "s01",
+      "startMs": 217,
+      "endMs": 4737
+    },
+    {
+      "sentenceId": "s02",
+      "startMs": 5498,
+      "endMs": 10505
+    },
+    {
+      "sentenceId": "s03",
+      "startMs": 11277,
+      "endMs": 16443
+    },
+    {
+      "sentenceId": "s04",
+      "startMs": 17274,
+      "endMs": 20932
+    },
+    {
+      "sentenceId": "s05",
+      "startMs": 21717,
+      "endMs": 23745
+    },
+    {
+      "sentenceId": "s06",
+      "startMs": 24514,
+      "endMs": 29816
+    },
+    {
+      "sentenceId": "s07",
+      "startMs": 30568,
+      "endMs": 38191
+    }
+  ],
+  "snapped": [
+    {
+      "sentenceId": "s01",
+      "boundary": "start",
+      "boundaryMs": 217,
+      "hitPointTrackMs": 70,
+      "hitPointTimelineMs": 70,
+      "deltaMs": -147
+    },
+    {
+      "sentenceId": "s01",
+      "boundary": "end",
+      "boundaryMs": 4737,
+      "hitPointTrackMs": 4853,
+      "hitPointTimelineMs": 4853,
+      "deltaMs": 116
+    },
+    {
+      "sentenceId": "s02",
+      "boundary": "end",
+      "boundaryMs": 10505,
+      "hitPointTrackMs": 10588,
+      "hitPointTimelineMs": 10588,
+      "deltaMs": 83
+    },
+    {
+      "sentenceId": "s03",
+      "boundary": "end",
+      "boundaryMs": 16443,
+      "hitPointTrackMs": 16370,
+      "hitPointTimelineMs": 16370,
+      "deltaMs": -73
+    },
+    {
+      "sentenceId": "s04",
+      "boundary": "start",
+      "boundaryMs": 17274,
+      "hitPointTrackMs": 17322,
+      "hitPointTimelineMs": 17322,
+      "deltaMs": 48
+    },
+    {
+      "sentenceId": "s04",
+      "boundary": "end",
+      "boundaryMs": 20932,
+      "hitPointTrackMs": 20921,
+      "hitPointTimelineMs": 20921,
+      "deltaMs": -11
+    },
+    {
+      "sentenceId": "s05",
+      "boundary": "start",
+      "boundaryMs": 21717,
+      "hitPointTrackMs": 21641,
+      "hitPointTimelineMs": 21641,
+      "deltaMs": -76
+    },
+    {
+      "sentenceId": "s05",
+      "boundary": "end",
+      "boundaryMs": 23745,
+      "hitPointTrackMs": 23800,
+      "hitPointTimelineMs": 23800,
+      "deltaMs": 55
+    },
+    {
+      "sentenceId": "s06",
+      "boundary": "start",
+      "boundaryMs": 24514,
+      "hitPointTrackMs": 24520,
+      "hitPointTimelineMs": 24520,
+      "deltaMs": 6
+    },
+    {
+      "sentenceId": "s06",
+      "boundary": "end",
+      "boundaryMs": 29816,
+      "hitPointTrackMs": 29814,
+      "hitPointTimelineMs": 29814,
+      "deltaMs": -2
+    },
+    {
+      "sentenceId": "s07",
+      "boundary": "start",
+      "boundaryMs": 30568,
+      "hitPointTrackMs": 30534,
+      "hitPointTimelineMs": 30534,
+      "deltaMs": -34
+    }
+  ],
+  "missed": [
+    {
+      "sentenceId": "s02",
+      "boundary": "start",
+      "boundaryMs": 5498,
+      "hitPointTrackMs": 5317,
+      "hitPointTimelineMs": 5317,
+      "deltaMs": -181,
+      "nearestDistanceMs": 181
+    },
+    {
+      "sentenceId": "s03",
+      "boundary": "start",
+      "boundaryMs": 11277,
+      "hitPointTrackMs": 11076,
+      "hitPointTimelineMs": 11076,
+      "deltaMs": -201,
+      "nearestDistanceMs": 201
+    }
+  ],
+  "layout": {
+    "tierVocabulary": [
+      "快切",
+      "推进",
+      "常规",
+      "留白"
+    ],
+    "rule": {
+      "kind": "segment-energy-quantile",
+      "quantiles": [
+        0.75,
+        0.5,
+        0.25
+      ],
+      "cutoffs": [
+        0.3077,
+        0.2558,
+        0.2039
+      ],
+      "flatFallback": null
+    },
+    "note": "layoutTier 是机械草稿（§6-④）：能量分位数定档，阈值由 --tier-quantiles 可调；最终档位以 G3 八列终审回显为准，用户可逐行改，改后即为计划事实",
+    "perSentence": [
+      {
+        "sentenceId": "s01",
+        "energyWeightedMean": 0.152,
+        "layoutTierDraft": "留白"
+      },
+      {
+        "sentenceId": "s02",
+        "energyWeightedMean": 0.2701,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "s03",
+        "energyWeightedMean": 0.3596,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s04",
+        "energyWeightedMean": 0.3596,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s05",
+        "energyWeightedMean": 0.3596,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s06",
+        "energyWeightedMean": 0.3596,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s07",
+        "energyWeightedMean": 0.3596,
+        "layoutTierDraft": "快切"
+      }
+    ],
+    "phrasesOnTimeline": [
+      {
+        "phraseId": "P1",
+        "trackStartMs": 0,
+        "trackEndMs": 7616,
+        "timelineStartMs": 0,
+        "timelineEndMs": 7616,
+        "energyMean": 0.152,
+        "layoutTierDraft": "留白",
+        "coversSentences": [
+          "s01",
+          "s02"
+        ]
+      },
+      {
+        "phraseId": "P2",
+        "trackStartMs": 7709,
+        "trackEndMs": 45697,
+        "timelineStartMs": 7709,
+        "timelineEndMs": 38832,
+        "energyMean": 0.3596,
+        "layoutTierDraft": "快切",
+        "coversSentences": [
+          "s02",
+          "s03",
+          "s04",
+          "s05",
+          "s06",
+          "s07"
+        ]
+      }
+    ]
+  },
+  "ducking": [
+    {
+      "sentenceId": "s01",
+      "fromMs": 217,
+      "toMs": 4737
+    },
+    {
+      "sentenceId": "s02",
+      "fromMs": 5498,
+      "toMs": 10505
+    },
+    {
+      "sentenceId": "s03",
+      "fromMs": 11277,
+      "toMs": 16443
+    },
+    {
+      "sentenceId": "s04",
+      "fromMs": 17274,
+      "toMs": 20932
+    },
+    {
+      "sentenceId": "s05",
+      "fromMs": 21717,
+      "toMs": 23745
+    },
+    {
+      "sentenceId": "s06",
+      "fromMs": 24514,
+      "toMs": 29816
+    },
+    {
+      "sentenceId": "s07",
+      "fromMs": 30568,
+      "toMs": 38191
+    }
+  ],
+  "fades": {
+    "fadeInMs": 2000,
+    "fadeOutStartMs": 36832,
+    "fadeOutMs": 2000
+  },
+  "discipline": "snapping is advisory only: narration durations are authoritative, never stretch or trim speech to hit accents",
+  "files": {
+    "json": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "echo": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/BGM/BGM-对齐回显-v0.2.md"
+  }
+}

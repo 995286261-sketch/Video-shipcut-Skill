@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "generatedAt": "2026-09-24T17:30:00+08:00",
+  "sourceAsset": {
+    "assetId": "source-02-f1f08154",
+    "path": "工作台/unicorn-gundam-transition-001/G0-素材包/02_原始素材/独角兽-名场面.mp4",
+    "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+    "durationMs": 285977,
+    "probe": { "video": { "codec": "h264", "width": 1920, "height": 1080, "fps": "30/1" }, "audio": { "codec": "aac", "sampleRateHz": 44100, "channels": 2 } }
+  },
+  "chapters": [
+    { "chapterId": "ch1-登场与装甲", "outputRangeMs": [0, 16400], "output": "clips/ch1-登场与装甲.mp4", "segments": ["seg-01", "seg-02", "seg-03"] },
+    { "chapterId": "ch2-毁灭模式标志", "outputRangeMs": [16400, 24340], "output": "clips/ch2-毁灭模式标志.mp4", "segments": ["seg-04", "seg-05"] },
+    { "chapterId": "ch3-代价与驾驶员", "outputRangeMs": [24340, 30376], "output": "clips/ch3-代价与驾驶员.mp4", "segments": ["seg-06", "seg-07"] },
+    { "chapterId": "ch4-收束", "outputRangeMs": [30376, 38832], "output": "clips/ch4-收束.mp4", "segments": ["seg-08"] }
+  ],
+  "segments": [
+    { "segmentId": "seg-01", "assetId": "source-02-f1f08154", "outputRangeMs": [0, 4000], "narrationStartMs": 217, "narrationEndMs": 4737, "mappingMode": "one_to_one", "layoutTier": "留白", "sourceStartMs": 70000, "sourceEndMs": 74000, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "黑场入", "durationMs": 200 } },
+    { "segmentId": "seg-02", "assetId": "source-02-f1f08154", "outputRangeMs": [4000, 11102], "narrationStartMs": 5498, "narrationEndMs": 10505, "mappingMode": "one_to_one", "layoutTier": "推进", "sourceStartMs": 156884, "sourceEndMs": 163986, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "叠化", "durationMs": 300 } },
+    { "segmentId": "seg-03", "assetId": "source-02-f1f08154", "outputRangeMs": [11102, 16400], "narrationStartMs": 11277, "narrationEndMs": 16443, "mappingMode": "one_to_one", "layoutTier": "快切", "sourceStartMs": 164286, "sourceEndMs": 169584, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "硬切", "durationMs": 0 } },
+    { "segmentId": "seg-04", "assetId": "source-02-f1f08154", "outputRangeMs": [16400, 21505], "narrationStartMs": 17274, "narrationEndMs": 20932, "mappingMode": "one_to_one", "layoutTier": "快切", "sourceStartMs": 171300, "sourceEndMs": 176405, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "叠化", "durationMs": 300 } },
+    { "segmentId": "seg-05", "assetId": "source-02-f1f08154", "outputRangeMs": [21505, 24340], "narrationStartMs": 21717, "narrationEndMs": 23745, "mappingMode": "one_to_one", "layoutTier": "常规", "sourceStartMs": 197036, "sourceEndMs": 199871, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "叠化", "durationMs": 300 } },
+    { "segmentId": "seg-06", "assetId": "source-02-f1f08154", "outputRangeMs": [24340, 28340], "narrationStartMs": 24514, "narrationEndMs": 28240, "mappingMode": "one_to_one", "layoutTier": "常规", "sourceStartMs": 208400, "sourceEndMs": 212400, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "硬切", "durationMs": 0 }, "sourceCaptionMask": { "outputFromMs": 24340, "outputToMs": 27940, "bandYpx": [907, 1080] } },
+    { "segmentId": "seg-07", "assetId": "source-02-f1f08154", "outputRangeMs": [28340, 30376], "narrationStartMs": 28240, "narrationEndMs": 29816, "mappingMode": "one_to_one", "layoutTier": "快切", "sourceStartMs": 212400, "sourceEndMs": 214436, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "叠化", "durationMs": 300 } },
+    { "segmentId": "seg-08", "assetId": "source-02-f1f08154", "outputRangeMs": [30376, 38832], "narrationStartMs": 30568, "narrationEndMs": 38191, "mappingMode": "one_to_one", "layoutTier": "常规", "sourceStartMs": 215435, "sourceEndMs": 223891, "sourceSha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB", "transition": { "instruction": "黑场出", "durationMs": 600 }, "sourceCaptionMask": { "outputFromMs": 36441, "outputToMs": 38832, "bandYpx": [907, 1080] } }
+  ]
+}

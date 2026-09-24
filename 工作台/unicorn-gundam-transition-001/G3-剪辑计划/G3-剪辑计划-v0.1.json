@@ -1,0 +1,546 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G3",
+  "status": "approved_for_g4",
+  "planVersion": "v0.1",
+  "sourceAudioPolicy": "exclude",
+  "narrationDraft": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播定稿-v0.3-short.md",
+  "narrationDecisionRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-审核决定-v0.6.json",
+  "timelineDurationMs": 38832,
+  "fps": 30,
+  "durationDecision": {
+    "targetDurationSec": 38.832,
+    "narrationEstimatedDurationSec": 33.304,
+    "resolution": "follow_narration_natural_duration",
+    "decisionReason": "沿用 G2 已批准短版口播自然时长（发声总长 33.304s，成片 38.832s 含句间静音与尾部留白）；转场手柄全部回填在段内，成片总长不变。口播区间采用 silencedetect 实测发声起止（voice_brief v0.2）",
+    "intentionalSilence": [],
+    "antiFillRule": {
+      "disallowRepeatedSegments": true,
+      "disallowLoops": true,
+      "disallowMeaninglessSlowMotion": true,
+      "disallowUnverifiedFactPadding": true
+    }
+  },
+  "semanticBeatRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-口播语义节拍-v0.3.json",
+  "subjectConfirmationRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+  "observationLedgerRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+  "visualAnalysisRefs": [
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉分析/G3-目标素材视觉分析-v0.2.json"
+  ],
+  "transitionRationale": "逐切点提案基于：口播停顿实测（silencedetect，句间停顿 752-832ms）+ 源片 2fps 手柄取证（转场-证据帧-v0.1，含 obs-111 补采）。cut2/4/5/7 叠化 300ms 窗口全部落在句间停顿内且两侧手柄素材经帧核验干净；cut3 因源片 169.63-171.0 黑帧带不可叠化（摊牌），改硬切并把黑帧带整体排除出成片（修复旧交付两处黑屏警告）；cut1 切点落在句一发声中、cut6 为句内逗号停顿且源区间相邻零手柄，维持硬切；片头黑场入 200ms（头部静音 217ms 内）、片尾黑场出 600ms（尾部静音 641ms 内）。",
+  "bgmPlan": {
+    "audioSha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11",
+    "reportSha256": "B5D607596907428693FA4FF302D69477EDAAB8EC683538EA0955C185F61266B8",
+    "alignmentSha256": "C5FEC1A31E5586F1007BAD2CD9CB75C6ECA97132CF6401E090F474DE487B1D4A",
+    "trackOffsetMs": 0,
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 36832,
+      "fadeOutMs": 2000
+    },
+    "duckingPolicy": "口播优先：按对齐产物 ducking 段压低 BGM，无口播处自然音量；BGM 不循环不延长（≤105.605s）",
+    "alignmentRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json"
+  },
+  "packagingDecisions": {
+    "coverSource": "工作台/unicorn-gundam-transition-001/G0-素材包/02_原始素材/独角兽-名场面.mp4@218500ms",
+    "coverFrameMs": 218500,
+    "chapterCards": [],
+    "subtitleLayout": "fixed_bottom_band",
+    "subtitleTimelineRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-字幕时间轴-v0.2.srt"
+  },
+  "warnings": [
+    "左上角来源台标与 208-212/221-224 底部烧录对白字幕持续存在（旧项目已接受警告，G4 遮罩处理）",
+    "layoutTier 为机械草稿+人工修正：s05 快切→常规、s06a 快切→常规、s07 快切→常规（驾驶员特写与总结句不宜快切档）",
+    "seg-02 后向手柄 156.884-157.0 与 seg-03 前向手柄 164.136-164.286 恰在切点两侧相邻，深检以手柄余量规则为准",
+    "黑帧带 169.63-171.0 已从成片排除；若用户希望保留「压黑」观感可改切点（见终审卡）"
+  ],
+  "humanReviewPoints": [
+    "逐切点转场裁决（8 边界：黑场入/叠化×4/硬切×2/黑场出）",
+    "目标主体确认沿用",
+    "语义节拍与选镜重排确认（黑帧带剔除+seg5-8 换窗）",
+    "封面帧 218.5s 红机战斗",
+    "字幕沿用 7 句固定底部字幕条",
+    "BGM 对齐 offset=0、淡入淡出 2s"
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-f1f08154",
+      "startMs": 70000,
+      "endMs": 74000,
+      "sourceDurationMs": 4000,
+      "outputStartMs": 0,
+      "outputEndMs": 4000,
+      "outputDurationMs": 4000,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 217,
+      "narrationEndMs": 4737,
+      "narrationText": "在宇宙世纪 0096 年，RX-0 独角兽高达登场。",
+      "semanticBeatIds": [
+        "beat-001"
+      ],
+      "layoutTier": "留白",
+      "purpose": "开场：毁灭模式正面与 V 字角近景，先声夺人",
+      "reason": "开场：毁灭模式正面与 V 字角近景，先声夺人",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-01-start-70050ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-01-middle-72000ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-01-end-73950ms.jpg"
+        ],
+        "observedVisuals": "70.0-74.0 独角兽毁灭模式正面与胸部特写，红色框架外露，头部过渡到清晰 V 字角；无烧录对白字幕（左上角台标在）",
+        "derivedFromObservationIds": [
+          "obs-001",
+          "obs-005",
+          "obs-101"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "object",
+        "minimumVisibleEvidence": "可辨认独角兽高达"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "画面直接呈现毁灭模式独角兽正面与 V 字角（obs-001 起点/中点/终点帧核验）"
+      },
+      "transitionInstruction": "黑场入",
+      "transitionDurationMs": 200
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 2,
+      "assetId": "source-02-f1f08154",
+      "startMs": 156884,
+      "endMs": 163986,
+      "sourceDurationMs": 7102,
+      "outputStartMs": 4000,
+      "outputEndMs": 11102,
+      "outputDurationMs": 7102,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 5498,
+      "narrationEndMs": 10505,
+      "narrationText": "白色装甲之下，是在 NT-D 激活后显露的红色精神感应框架。",
+      "semanticBeatIds": [
+        "beat-001",
+        "beat-002"
+      ],
+      "layoutTier": "推进",
+      "purpose": "白色常态装甲库内镜头承载「白色装甲之下」，尾段过渡到毁灭模式躯干近景",
+      "reason": "白色常态装甲库内镜头承载「白色装甲之下」，尾段过渡到毁灭模式躯干近景",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-02-start-156934ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-02-middle-160435ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-02-end-163936ms.jpg"
+        ],
+        "observedVisuals": "156.884-157.5 库内白色常态装甲躯干与臂部（红色结构线），157.5 绿色传感器头部特写，158-163.986 躯干近景延续",
+        "derivedFromObservationIds": [
+          "obs-004",
+          "obs-102",
+          "obs-103"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "appearance",
+        "minimumVisibleEvidence": "白色装甲与红色精神感应框架同框"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "白色装甲与红色结构线同框可见（obs-004/obs-102）；「闭合单角纯白常态」不作主张，仅呈现白色装甲主体"
+      },
+      "transitionInstruction": "叠化",
+      "transitionDurationMs": 300
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 3,
+      "assetId": "source-02-f1f08154",
+      "startMs": 164286,
+      "endMs": 169584,
+      "sourceDurationMs": 5298,
+      "outputStartMs": 11102,
+      "outputEndMs": 16400,
+      "outputDurationMs": 5298,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 11277,
+      "narrationEndMs": 16443,
+      "narrationText": "当系统启动，装甲展开，头部独角分裂为标志性的 V 字形。",
+      "semanticBeatIds": [
+        "beat-003"
+      ],
+      "layoutTier": "快切",
+      "purpose": "系统启动/装甲展开：库内全身+传送门光球→爆炸白光→红色光束战；收在 169.584 避开源片黑帧带",
+      "reason": "系统启动/装甲展开：库内全身+传送门光球→爆炸白光→红色光束战；收在 169.584 避开源片黑帧带",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-03-start-164336ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-03-middle-166935ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-03-end-169534ms.jpg"
+        ],
+        "observedVisuals": "164.286-164.5 毁灭模式躯干近景，165.0 库内全身+蓝色光球，166.0 爆炸白光，166.5-169.584 红色机体光束战",
+        "derivedFromObservationIds": [
+          "obs-103"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": "红色框架、V 字角、毁灭模式独角兽"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "装甲展开与系统启动的爆炸/光束画面直接承载（obs-103）；黑帧带 169.63-171.0 已排除在成片外（修复旧警告）"
+      }
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 4,
+      "assetId": "source-02-f1f08154",
+      "startMs": 171300,
+      "endMs": 176405,
+      "sourceDurationMs": 5105,
+      "outputStartMs": 16400,
+      "outputEndMs": 21505,
+      "outputDurationMs": 5105,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 17274,
+      "narrationEndMs": 20932,
+      "narrationText": "毁灭模式因此成为独角兽最鲜明的视觉标志。",
+      "semanticBeatIds": [
+        "beat-003"
+      ],
+      "layoutTier": "快切",
+      "purpose": "「毁灭模式成为视觉标志」：宇宙战绿色光束→光束军刀交锋特写",
+      "reason": "「毁灭模式成为视觉标志」：宇宙战绿色光束→光束军刀交锋特写",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-04-start-171350ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-04-middle-173852ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-04-end-176355ms.jpg"
+        ],
+        "observedVisuals": "171.3-172.5 宇宙空间战绿色光束，173.0-174.5 机体特写+军刀，174.5-176.4 军刀交锋（白刃红火花）",
+        "derivedFromObservationIds": [
+          "obs-104",
+          "obs-105",
+          "obs-106"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "state_change",
+        "minimumVisibleEvidence": "红色框架、V 字角、毁灭模式独角兽"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "毁灭模式独角兽战斗特写直接承载「最鲜明视觉标志」（obs-104/obs-105）"
+      },
+      "transitionInstruction": "叠化",
+      "transitionDurationMs": 300
+    },
+    {
+      "segmentId": "seg-05",
+      "order": 5,
+      "assetId": "source-02-f1f08154",
+      "startMs": 197036,
+      "endMs": 199871,
+      "sourceDurationMs": 2835,
+      "outputStartMs": 21505,
+      "outputEndMs": 24340,
+      "outputDurationMs": 2835,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 21717,
+      "narrationEndMs": 23745,
+      "narrationText": "但这种力量并非没有代价。",
+      "semanticBeatIds": [
+        "beat-004"
+      ],
+      "layoutTier": "常规",
+      "purpose": "「力量并非没有代价」：红机光束战与独角兽军刀闪光、头部特写",
+      "reason": "「力量并非没有代价」：红机光束战与独角兽军刀闪光、头部特写",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-05-start-197086ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-05-middle-198453ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-05-end-199821ms.jpg"
+        ],
+        "observedVisuals": "197.036-198.0 红机+蓝推进器爆发，197.5 独角兽军刀白光，198.0 独角兽头部特写（红色背景），198.5-199.871 暗转与战斗延续",
+        "derivedFromObservationIds": [
+          "obs-107",
+          "obs-108",
+          "obs-111"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "character_reaction",
+        "minimumVisibleEvidence": "巴纳吉驾驶舱反应、紧张或精神负荷"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "高强度战斗画面直接承载「代价」（obs-108）"
+      },
+      "transitionInstruction": "叠化",
+      "transitionDurationMs": 300
+    },
+    {
+      "segmentId": "seg-06",
+      "order": 6,
+      "assetId": "source-02-f1f08154",
+      "startMs": 208400,
+      "endMs": 212400,
+      "sourceDurationMs": 4000,
+      "outputStartMs": 24340,
+      "outputEndMs": 28340,
+      "outputDurationMs": 4000,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 24514,
+      "narrationEndMs": 28240,
+      "narrationText": "驾驶舱里的巴纳吉必须承受极高的精神负荷，才能驾驭这台机体。",
+      "semanticBeatIds": [
+        "beat-004"
+      ],
+      "layoutTier": "常规",
+      "purpose": "「驾驶舱里的巴纳吉承受精神负荷」：驾驶员特写",
+      "reason": "「驾驶舱里的巴纳吉承受精神负荷」：驾驶员特写",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-06-start-208450ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-06-middle-210400ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-06-end-212350ms.jpg"
+        ],
+        "observedVisuals": "208.4-212.4 巴纳吉驾驶舱特写，面部紧张有汗；208-212 底部有烧录对白字幕、左上角台标（G4 需遮罩处理）",
+        "derivedFromObservationIds": [
+          "obs-109",
+          "obs-003"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "character_reaction",
+        "minimumVisibleEvidence": "巴纳吉驾驶舱反应、紧张或精神负荷"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "驾驶员紧张反应直接承载口播（obs-003/obs-109）"
+      }
+    },
+    {
+      "segmentId": "seg-07",
+      "order": 7,
+      "assetId": "source-02-f1f08154",
+      "startMs": 212400,
+      "endMs": 214436,
+      "sourceDurationMs": 2036,
+      "outputStartMs": 28340,
+      "outputEndMs": 30376,
+      "outputDurationMs": 2036,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 28240,
+      "narrationEndMs": 29816,
+      "narrationText": "驾驶舱里的巴纳吉必须承受极高的精神负荷，才能驾驭这台机体。",
+      "semanticBeatIds": [
+        "beat-004"
+      ],
+      "layoutTier": "快切",
+      "purpose": "「才能驾驭这台机体」：驾驶舱尾端切向机体攻击、光束闪爆",
+      "reason": "「才能驾驭这台机体」：驾驶舱尾端切向机体攻击、光束闪爆",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-07-start-212450ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-07-middle-213418ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-07-end-214386ms.jpg"
+        ],
+        "observedVisuals": "212.4-213.0 驾驶舱尾段，213.0-214.436 光束闪爆与蓝白高能闪光",
+        "derivedFromObservationIds": [
+          "obs-109",
+          "obs-110"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "character_reaction",
+        "minimumVisibleEvidence": "巴纳吉驾驶舱反应、紧张或精神负荷"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "机体攻击画面直接承载「驾驭」（obs-109 尾端切向机体攻击）"
+      },
+      "transitionInstruction": "叠化",
+      "transitionDurationMs": 300
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 8,
+      "assetId": "source-02-f1f08154",
+      "startMs": 215435,
+      "endMs": 223891,
+      "sourceDurationMs": 8456,
+      "outputStartMs": 30376,
+      "outputEndMs": 38832,
+      "outputDurationMs": 8456,
+      "mappingMode": "one_to_one",
+      "narrationStartMs": 30568,
+      "narrationEndMs": 38191,
+      "narrationText": "这就是独角兽高达：一台将新人类力量、驾驶员意志与战斗代价同时写进画面的机体。",
+      "semanticBeatIds": [
+        "beat-005"
+      ],
+      "layoutTier": "常规",
+      "purpose": "总结蒙太奇：爆炸余波→红机→残骸场→驾驶员紧张面部收束",
+      "reason": "总结蒙太奇：爆炸余波→红机→残骸场→驾驶员紧张面部收束",
+      "evidenceRefs": [
+        "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+        "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+      ],
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json",
+        "frameRefs": [
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-08-start-215485ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-08-middle-219663ms.jpg",
+          "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/per-seg/seg-08-end-223841ms.jpg"
+        ],
+        "observedVisuals": "215.435-216.5 橙色爆炸团，216.5-221.0 暗红残骸场与红机，221.5-223.891 驾驶员紧张面部特写（烧录字幕\"这次不会射偏\"）",
+        "derivedFromObservationIds": [
+          "obs-109",
+          "obs-110"
+        ]
+      },
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "独角兽或驾驶员明确可见"
+      },
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "独角兽与驾驶员均明确可见（obs-109）"
+      },
+      "transitionInstruction": "黑场出",
+      "transitionDurationMs": 600
+    }
+  ],
+  "editPlan": {
+    "fps": 30,
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "order": 1,
+        "transitionInstruction": "黑场入",
+        "transitionDurationMs": 200
+      },
+      {
+        "segmentId": "seg-02",
+        "order": 2,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-03",
+        "order": 3,
+        "transitionInstruction": "硬切",
+        "transitionDurationMs": null
+      },
+      {
+        "segmentId": "seg-04",
+        "order": 4,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-05",
+        "order": 5,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-06",
+        "order": 6,
+        "transitionInstruction": "硬切",
+        "transitionDurationMs": null
+      },
+      {
+        "segmentId": "seg-07",
+        "order": 7,
+        "transitionInstruction": "叠化",
+        "transitionDurationMs": 300
+      },
+      {
+        "segmentId": "seg-08",
+        "order": 8,
+        "transitionInstruction": "黑场出",
+        "transitionDurationMs": 600
+      }
+    ]
+  },
+  "timelineReview": {
+    "status": "confirmed",
+    "confirmedBy": "用户（宿主会话回复，逐字口令见 g3Approval）",
+    "confirmedAt": "2026-09-24T17:05:00+08:00",
+    "feedback": "第三轮修订重批：接受把批准卡「30fps」落成计划机器字段（顶层 fps:30 + editPlan.fps:30，问题⑧⑨）；八列时间线/转场/字幕/BGM 与二轮批准逐字一致；批准对象=合规卡 v0.5。",
+    "basisRefs": [
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-回显数据-v0.1.json",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-帧率修订-v0.1.md"
+    ]
+  },
+  "g3Approval": {
+    "approvedBy": "用户",
+    "approvedAt": "2026-09-24T17:05:00+08:00",
+    "approvalTokenVerbatim": "确认G3",
+    "approvalRound": 3,
+    "basisRefs": [
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-门禁收据.json",
+      "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-批准记录-v0.3.md"
+    ]
+  },
+  "provenance": "克隆自 unicorn-gundam-intro-001 短版已批计划；按现行合同重建：切点全部落在句边界（narration 铺满校验）、源区间与输出一比一（修复旧 traceability 差异警告）、黑帧带排除、转场字段首次入计划。"
+}

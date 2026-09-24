@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "purpose": "bgm_chain_audit",
+  "projectId": "unicorn-gundam-transition-001",
+  "status": "failed",
+  "checks": [
+    {
+      "id": "bgmMixPresent",
+      "status": "passed",
+      "detail": "assembly record bgmMix found"
+    },
+    {
+      "id": "contractFileHash",
+      "status": "passed",
+      "detail": "contract sha C44D275235D8… vs assembly record C44D275235D8…"
+    },
+    {
+      "id": "contractPurpose",
+      "status": "passed",
+      "detail": "music-expert bgm_mix_contract v0.1"
+    },
+    {
+      "id": "bgmFileHash",
+      "status": "passed",
+      "detail": "delivered BGM bytes 9E0CE3B7DE8D… == contract == assembly record"
+    },
+    {
+      "id": "bgmPlanHash",
+      "status": "passed",
+      "detail": "contract BGM hash == approved G3 plan bgmPlan.audioSha256"
+    },
+    {
+      "id": "planFileHash",
+      "status": "failed",
+      "detail": "contract references the exact plan file presented to it"
+    },
+    {
+      "id": "alignmentFileHash",
+      "status": "passed",
+      "detail": "alignment file sha == contract == plan bgmPlan.alignmentSha256"
+    },
+    {
+      "id": "reportCacheKey",
+      "status": "passed",
+      "detail": "analysis report cacheKey == delivered BGM hash"
+    },
+    {
+      "id": "audibilityRecheck",
+      "status": "passed",
+      "detail": "report -7.0 + bed -12.0 - duck 6.0 = -25.0 LUFS (contract -25.0, window [-32.0, -20.0])"
+    },
+    {
+      "id": "executionFidelity",
+      "status": "passed",
+      "detail": "assembly bgmMix offset/bed/duck/fades/duckSegments == contract fields"
+    },
+    {
+      "id": "measuredInPlace",
+      "status": "passed",
+      "detail": "measured -23.3 vs predicted -25.0 LUFS — within drift"
+    },
+    {
+      "id": "registrationChain",
+      "status": "passed",
+      "detail": "candidate registration covers the delivered bytes (registration file hash == material-pack record)"
+    },
+    {
+      "id": "licenseCleared",
+      "status": "passed",
+      "detail": "license=cleared-for-project evidence=工作台/unicorn-gundam-transition-001/G0-素材包/04_授权说明.md"
+    },
+    {
+      "id": "distributionBoundary",
+      "status": "passed",
+      "detail": "boundary=internal_test matches material-pack registration"
+    },
+    {
+      "id": "sourceAudioExcluded",
+      "status": "passed",
+      "detail": "plan source-audio policy recorded: \"exclude\""
+    }
+  ],
+  "bgm": {
+    "audio": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3",
+    "sha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11",
+    "license": "cleared-for-project",
+    "licenseEvidence": "工作台/unicorn-gundam-transition-001/G0-素材包/04_授权说明.md",
+    "distributionBoundary": "internal_test",
+    "measuredInPlaceLufs": -23.3
+  },
+  "inputs": {
+    "assemblyRecord": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.3-装配记录-v0.1.json",
+    "plan": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "registration": "工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/BGM-候选登记-aji-yema-3only-indulgence-9E0CE3B7.json",
+    "materialPack": "工作台/unicorn-gundam-transition-001/G0-素材包/material-pack.json"
+  }
+}

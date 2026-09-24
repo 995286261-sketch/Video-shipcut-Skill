@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G4",
+  "cardType": "g4_candidate_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-24T17:15:00+08:00",
+  "reviewCardRef": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md",
+  "basisRefs": [
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-帧率修订-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-字幕时间轴-v0.2.srt",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-可编辑工程-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-转场执行指令-v0.3.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-源字幕遮蔽合同-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-字幕ASS-v0.2.ass",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.3.mp4",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.3-装配记录-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-渲染验证-v0.3.json",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md",
+    "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-批准记录-v0.3.md"
+  ],
+  "checklist": [
+    {
+      "id": "candidate_or_export",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-候选成片-v0.3.mp4"
+    },
+    {
+      "id": "render_validation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-渲染验证-v0.3.json"
+    },
+    {
+      "id": "playback_review_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-回放复核卡-v0.3.md"
+    }
+  ]
+}

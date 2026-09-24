@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G2",
+  "cardType": "g2_evidence_narration_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-24T14:05:00+08:00",
+  "reviewCardRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播定稿-v0.3-short.md",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-完整口播-yunyang-v0.3-short.mp3",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-审核决定-v0.5.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-审批留痕.md"
+  ],
+  "checklist": [
+    {
+      "id": "fact_citation",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json"
+    },
+    {
+      "id": "approved_narration",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播定稿-v0.3-short.md"
+    },
+    {
+      "id": "voice_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3"
+    },
+    {
+      "id": "g2_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-最终回显卡-v0.1.md"
+    }
+  ]
+}

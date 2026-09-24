@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "bgm": {
+    "decision": "provided",
+    "preference": null,
+    "libraryPending": false,
+    "clearCondition": null,
+    "history": [
+      {
+        "at": "2026-09-24T06:13:35Z",
+        "from": "unknown",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-aji-yema-3only-indulgence-9E0CE3B7.json",
+        "note": "\u6cbf\u7528 G0 \u5df2\u786e\u8ba4\u6388\u6743\u97f3\u9891\uff1b\u672c\u514b\u9686\u9879\u76ee\u8865\u5efa\u73b0\u884c\u5408\u540c\u8981\u6c42\u7684\u767b\u8bb0+\u5206\u6790\u62a5\u544a\u94fe"
+      }
+    ],
+    "evidence": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-aji-yema-3only-indulgence-9E0CE3B7.json"
+  },
+  "currentNode": "completed",
+  "status": "completed",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "g1_direction_user_confirm"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-09-24T13:50:30+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "A36BF980FD7186C0331964AE4E7B42293F52BB0269104A60E1AAD19577029D46",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json": "15F79C5E40B0285DF68BED22D602192D73766ACABA605F0AE54430C80AA8AE54",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md": "0A6B7FFD727C8928F2053E896A3174539301E021F8FC249B8AB33482AE06212A",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json": "F5C31284E288B826A2A3CC185FB6ECA85AD87F48308B5A74BA5896F377764215",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md": "408D3991EEA9800AA279146EF8D7BD6ED59C415D66D828C686BBAD25003A5A99",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json": "8A3518B900D34AE1B507B85BE724D9055E90E16745C32DC4D4F55B84F93800D8"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G1",
+        "approvalResponse": "\u786e\u8ba4 G1",
+        "approvalTokenVerbatim": "\u786e\u8ba4G1",
+        "approvalResponseVerbatim": "\u786e\u8ba4G1",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-24T05:51:55Z",
+        "approvalSource": "host-session"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "g2_narration_facts_voice_user_confirm"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5b8c\u6574\u53e3\u64ad-yunyang-v0.3-short.mp3",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/voice-audition-yunyang.mp3",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.5.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-24T14:05:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "2EFF93DA9E5142E76E6B0200CE0CAA4C89AD0A97A89225B40F50ECBBC03E4200",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json": "7F361EF265D705A7AD36CEA25B4EC9CA7B075130E697A126A95B22408592F056",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md": "C5DFFE42F9DAB6AE6A13FC07A598C7EEABD62D378220FA609037EBE1EA58F722",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5b8c\u6574\u53e3\u64ad-yunyang-v0.3-short.mp3": "11938EEF193E6E93FC7F1D6B4B1A10176D2E5AF5773901689624BB16B1861D96",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/voice-audition-yunyang.mp3": "DF19CC9D3A217D739E91F0BAFD5674A5D9E5D11B4875E7FCF93B42F917C6C96D",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.5.json": "24E71B87F4EBD8F8FF9AA89977A1C0A1D395C7986D136E2E97DB9068527DFDA1",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md": "1832D375FF08D1A887EEA33A66D2CB0D653711957E11352F7C0A91926C52F67A"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.5.json",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvalTokenVerbatim": "\u786e\u8ba4G2",
+        "approvalResponseVerbatim": "\u786e\u8ba4G2",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-24T05:58:31Z",
+        "approvalSource": "host-session",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/voice-audition-yunyang.mp3"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.6.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.5.md"
+      ],
+      "humanReviewPoints": [
+        "G3 \u7b2c\u4e09\u8f6e\uff1a\u8865 editPlan/\u9876\u5c42 fps:30\uff08\u95ee\u9898\u2467\u2468\uff09\uff0c\u9884\u89c8 v0.4 \u91cd\u8dd1\uff0c\u5361 v0.5"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.3.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5e27\u7387\u4fee\u8ba2-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74\u4fee\u8ba2-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.5.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u5361\u6570\u636e-v0.5.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790/G3-\u76ee\u6807\u7d20\u6750\u89c6\u89c9\u5206\u6790-v0.2.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.2.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.6.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u53e5\u5b50-v0.2.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.4.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u89c2\u770b\u9875-v0.4.html",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8bc1\u636e\u5e27-v0.1/manifest.json"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-24T16:50:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.5.md": "B0E0EF66E05227FC48D53BE64558C9A5B70D232F7B8A7A0A7BBBCC355D875548",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json": "C251E92EDB98F48D3801FF81586BDCB7CA4E6BB60B56EEECF87590D1D9BAE7BD",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.3.md": "612A29A2D1E28A53050C696293809C8BADEBA2737922DC3D18CA8E93A6879865",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5e27\u7387\u4fee\u8ba2-v0.1.md": "B6422861DF6DA597289AAD636588616C90CA65D14853EBBB673AF072F294EE62",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74\u4fee\u8ba2-v0.1.md": "5D903C93FE64695FADAA9B885453E1C9691574E75E131ECDE2B4126F00961E5E",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u5361\u6570\u636e-v0.5.json": "07D8CF0F5903B17CF2C42AC491395DAB814D091F1F86336965AB0E6471F6B330",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json": "D206A8A53929F9FB04198B9A56FDB295CBCDAE01420158B6A7A6017691F0D3BC",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.1.json": "6F6548C3A29D473780BB641E738AC4AA798A6C121E139A9E9C91539D5A4818D4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790/G3-\u76ee\u6807\u7d20\u6750\u89c6\u89c9\u5206\u6790-v0.2.json": "482F7367A58A6F3522C0F6092C30919F325EB9450CAE9D2611D0ADB20DD0CF97",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.3.json": "9B2A6FF7ABEB6731A654B997A63588404820E581E4710D3D22F3425EE21268D1",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.2.json": "BEBED64D38B4EAB80F812FD80319195353BF17E34FF07499A3C2D7318CBF9A84",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.3.json": "7F361EF265D705A7AD36CEA25B4EC9CA7B075130E697A126A95B22408592F056",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.6.json": "6126A3B398329FDEC5A3D71282A89E6709C1061F4FA03AE7E48B6BA1F475BAC5",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u53e5\u5b50-v0.2.json": "A0E4B17FDE71C2B43E7EBF63F38D6C1F316EE1BA04CB931ADF1B0D1857C3D089",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u5b9a\u7a3f-v0.3-short.md": "C5DFFE42F9DAB6AE6A13FC07A598C7EEABD62D378220FA609037EBE1EA58F722",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json": "C5FEC1A31E5586F1007BAD2CD9CB75C6ECA97132CF6401E090F474DE487B1D4A",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json": "E75CF0712BE121E9AA413456598CF2AD62B01268945F91A11CD3AD3D60509672",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json": "333B4888205821E2B7A0E3EF29C200D8F46AE969E4DEE324183888A2AA71E40E",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.4.json": "9E28299FAEB2DEE435E3F98128B83394C66117D09D1E875A3C26809A647919C4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u89c2\u770b\u9875-v0.4.html": "19B2DC2F2B2E69B39186BB6499CE4E649C304DF64BA03689DC5D21A7F8F24A3E",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt": "593615DAFBDD1F57F4828C12FBC43D706C94EDC64B27A3735113544B920044B4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8bc1\u636e\u5e27-v0.1/manifest.json": "BE515E4F13BAD2F06503D6F74091771B2A3C99ADFAF03C1BCB84FBCBF10A4B0D"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6279\u51c6\u8bb0\u5f55-v0.3.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvalTokenVerbatim": "\u786e\u8ba4G3",
+        "approvalResponseVerbatim": "\u786e\u8ba4G3",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-24T07:54:32Z",
+        "approvalSource": "host-session",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4"
+      ],
+      "humanReviewPoints": [
+        "G4 \u7b2c\u4e09\u8f6e\uff1a\u5019\u9009 v0.3 \u4ee5 30fps \u91cd\u6e32\uff08fpsSource=manifest-targetFps\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.5.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5e27\u7387\u4fee\u8ba2-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u853d\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5b57\u5e55ASS-v0.2.ass",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.3.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.3.md"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-24T17:15:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.3.md": "4D59BC5BBFCEE6A459EA18F9F1B7051CD5EF275B649A90C366C201C627F51FC5",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json": "C251E92EDB98F48D3801FF81586BDCB7CA4E6BB60B56EEECF87590D1D9BAE7BD",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.5.md": "B0E0EF66E05227FC48D53BE64558C9A5B70D232F7B8A7A0A7BBBCC355D875548",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5e27\u7387\u4fee\u8ba2-v0.1.md": "B6422861DF6DA597289AAD636588616C90CA65D14853EBBB673AF072F294EE62",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt": "593615DAFBDD1F57F4828C12FBC43D706C94EDC64B27A3735113544B920044B4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.1.json": "21DF3DCE5C7A730EF5847E4BD0AFD2F8B2CB9954984A974877761EDEBF073DD8",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.3.json": "D6F81FC6F2242BBE5115D2444270C45B9AAF04983C8D005B303B388430CF5474",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u853d\u5408\u540c-v0.1.json": "E718973ACF66D1A26A852DE591079C28549419407AAE82DA75E78F70BE61D497",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5b57\u5e55ASS-v0.2.ass": "34567FE654CDAD53998C02B911ADC4BC42147DF289CFD8507A1571330D113D49",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json": "C44D275235D80DBAAD88C392520416C4EDC80A1037DEC43EC59F568016A03FEC",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4": "99CBF0629814F9CDFA33C8FAA96CF79D3EE55E16C851FFB789770C1BC2904CE6",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3-\u88c5\u914d\u8bb0\u5f55-v0.1.json": "078E943DB4F34BDC994C30FC516CD467AE4E65BF67443A2ED61DC267B88BAA05",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json": "20BF2BB225987571096007074A7593D837DFCF5DF79FDA3CBFCD373CDC623B4D",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.3.md": "F2828DCFBE47F8B0F16E2BA83E34701C269179CFC9014E5F9BAECA54D46694BA"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.3.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G4",
+        "approvalResponse": "\u786e\u8ba4 G4",
+        "approvalTokenVerbatim": "\u786e\u8ba4G4",
+        "approvalResponseVerbatim": "\u786e\u8ba4G4",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-24T08:07:22Z",
+        "approvalSource": "host-session",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.3.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.3.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/metadata-validation-report.json",
+        "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u8d28\u68c0\u4e0e\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/cover.jpg",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/subtitles.srt",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/transition-audit.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/subtitle-srt-check.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/edit-timeline.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/export-config.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/human-review-decision.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/README.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/failure-samples/README.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u5305\u6821\u9a8c\u8bb0\u5f55-v0.3.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.3.md",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/\u95ee\u9898\u6e05\u5355-v0.1.md"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-24T17:55:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u8d28\u68c0\u4e0e\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md": "DF62887DC90D709D5BAD0DC1800667C5F5B71B9708F90426BDE882C32B56FF21",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/delivery-manifest.json": "C7943FED62483C07A0ED3C4AFFDC4B7AE5FECB540F091EA728FAD49840B19FFA",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/metadata-validation-report.json": "D0A5BC0EDCB94626E23D73011E5EBC789C4A63440CAD238CBDE69C990CD4245F",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/final-video.mp4": "99CBF0629814F9CDFA33C8FAA96CF79D3EE55E16C851FFB789770C1BC2904CE6",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/cover.jpg": "5DDF393154958B3B627D409C9237726E4F8FBFDE6BC93F6800246C645E417504",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/subtitles.srt": "593615DAFBDD1F57F4828C12FBC43D706C94EDC64B27A3735113544B920044B4",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/transition-audit.json": "BD66C7773110FE4657E868EF21D779A93DB1AE2B1111B812F44B1029A44F3401",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/subtitle-srt-check.json": "C9BEC7A166B302E7269FA602EFFB7812774B119B18D02AE72B725F8A51405B2D",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/bgm-chain-audit.json": "67231E9A1120963657214B44A66300D0FF868366960AB3BECE6450466A43E128",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/edit-timeline.md": "98291BFC4804EAF8D26DB070E608420031C340CFBFA947311F489FC4E0A192DD",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/source-timecode-list.json": "9878C4D27E466205EA64BC53724D2CD1EB9F8243B0B954A4871791AE45B5AB22",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/export-config.json": "167035B29958612A37CBE8434BB9340B5B22D0C6545A7B847C76C077BD21DC78",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/human-review-decision.json": "B9D16C99FE836567939F8F266EC0921FE1D33905070E91C8F0A8FE12769E389D",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/README.md": "BB108CC4356C6C440CF04B10D6259C497E37CAED159677388C92CA94F82E3571",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/failure-samples/README.md": "35942D3EE06181F7D8ABD1002C5D46F38D16EC8356D26E487EAED882EF668AE7",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u5305\u6821\u9a8c\u8bb0\u5f55-v0.3.json": "5A43D72892159A5E921076915CB497FC1F0F024CD383E6970D84782BB04ADEEF",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md": "6548E697F98E49CDEB1C1FA6C71140E1C32EEA1D481FE9DFB36662D371505545",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.3.md": "F2828DCFBE47F8B0F16E2BA83E34701C269179CFC9014E5F9BAECA54D46694BA",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.1.json": "C251E92EDB98F48D3801FF81586BDCB7CA4E6BB60B56EEECF87590D1D9BAE7BD",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/\u95ee\u9898\u6e05\u5355-v0.1.md": "E59CA0DDC02A1379ACAC86832FD8DA2931DBF745B9046AAA4ED3E466909DD2C2",
+          "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.3.md": "4D59BC5BBFCEE6A459EA18F9F1B7051CD5EF275B649A90C366C201C627F51FC5"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55-v0.1.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e-v0.1.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvalTokenVerbatim": "\u786e\u8ba4G5",
+        "approvalResponseVerbatim": "\u786e\u8ba4G5",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-24T08:29:14Z",
+        "approvalSource": "host-session",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.3/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-09-24T05:37:50Z",
+  "updatedAt": "2026-09-24T08:29:14Z",
+  "amendmentHistory": [
+    {
+      "fromNode": "G5",
+      "toNode": "G3",
+      "reason": "G5 \u5b57\u5e55\u590d\u68c0\u6293\u5230\u6279\u51c6\u8f74 cue1/cue2 \u91cd\u53e0 50ms\uff08\u95ee\u9898\u6e05\u5355\u2466\uff09\uff1aSRT \u4fee\u8ba2 v0.2\uff0c\u8054\u52a8\u91cd\u8dd1\u9884\u89c8/\u6307\u4ee4/ASS/\u5019\u9009",
+      "reworkRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5b57\u5e55\u65f6\u95f4\u8f74\u4fee\u8ba2-v0.1.md",
+      "reopenedAt": "2026-09-24T07:16:03Z"
+    },
+    {
+      "fromNode": "G5",
+      "toNode": "G3",
+      "reason": "G5 \u5168\u89e3\u7801\u6293\u5230\u4ea4\u4ed8\u7247 24fps \u4e0e\u6279\u51c6\u5361 30fps \u4e0d\u7b26\uff08\u95ee\u9898\u2467\uff1a\u8ba1\u5212\u7f3a editPlan.fps \u673a\u5668\u5b57\u6bb5\uff0c\u6e32\u67d3\u5668\u9759\u9ed8\u9ed8\u8ba4 24\uff09\uff1b\u8865 fps:30 \u91cd\u6e32",
+      "reworkRef": "\u5de5\u4f5c\u53f0/unicorn-gundam-transition-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5e27\u7387\u4fee\u8ba2-v0.1.md",
+      "reopenedAt": "2026-09-24T07:45:56Z"
+    }
+  ]
+}

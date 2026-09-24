@@ -1,0 +1,343 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "unicorn-gundam-transition-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+  "inputEvidence": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 8,
+  "timelineDurationMs": 38832,
+  "targetDurationMs": 38832,
+  "durationDeltaMs": 0,
+  "targetFps": null,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 70000,
+        "endMs": 74000,
+        "durationMs": 4000
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 4000,
+        "durationMs": 4000
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 70000,
+        "endMs": 74000,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 2,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 156884,
+        "endMs": 163986,
+        "durationMs": 7102
+      },
+      "timeline": {
+        "startMs": 4000,
+        "endMs": 11102,
+        "durationMs": 7102
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 156884,
+        "endMs": 163986,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 3,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 164286,
+        "endMs": 169584,
+        "durationMs": 5298
+      },
+      "timeline": {
+        "startMs": 11102,
+        "endMs": 16400,
+        "durationMs": 5298
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 164286,
+        "endMs": 169584,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 4,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 171300,
+        "endMs": 176405,
+        "durationMs": 5105
+      },
+      "timeline": {
+        "startMs": 16400,
+        "endMs": 21505,
+        "durationMs": 5105
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 171300,
+        "endMs": 176405,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05",
+      "order": 5,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 197036,
+        "endMs": 199871,
+        "durationMs": 2835
+      },
+      "timeline": {
+        "startMs": 21505,
+        "endMs": 24340,
+        "durationMs": 2835
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 197036,
+        "endMs": 199871,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06",
+      "order": 6,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 208400,
+        "endMs": 212400,
+        "durationMs": 4000
+      },
+      "timeline": {
+        "startMs": 24340,
+        "endMs": 28340,
+        "durationMs": 4000
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 208400,
+        "endMs": 212400,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07",
+      "order": 7,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 212400,
+        "endMs": 214436,
+        "durationMs": 2036
+      },
+      "timeline": {
+        "startMs": 28340,
+        "endMs": 30376,
+        "durationMs": 2036
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 212400,
+        "endMs": 214436,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 150
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 8,
+      "assetId": "source-02-f1f08154",
+      "source": {
+        "relativePath": "02_原始素材/独角兽-名场面.mp4",
+        "sha256": "C56585C9B898ED353C458A30899FA7759838C33021C2506A4343900D67D999CB",
+        "startMs": 215435,
+        "endMs": 223891,
+        "durationMs": 8456
+      },
+      "timeline": {
+        "startMs": 30376,
+        "endMs": 38832,
+        "durationMs": 8456
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 215435,
+        "endMs": 223891,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 150,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    }
+  ],
+  "transitionDirective": {
+    "path": "工作台/unicorn-gundam-transition-001/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "AE7E60A03167503FAA39C9979620E4D4A08EE7C7B5CC3C750769C29AF60008C5",
+    "boundaries": 4,
+    "masterFades": {
+      "fadeInMs": 200,
+      "fadeOutMs": 600
+    }
+  },
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

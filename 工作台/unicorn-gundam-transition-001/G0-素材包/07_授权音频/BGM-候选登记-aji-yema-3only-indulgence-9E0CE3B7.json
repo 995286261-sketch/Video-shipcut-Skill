@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "aji-yema-3only-indulgence",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/unicorn-gundam-transition-001/G0-素材包/07_授权音频/aji-yema-3only-indulgence.mp3",
+  "sha256": "9E0CE3B7DE8DBCEBA084A3431FA8503BDABBDA2073E34F2C45B2E03C1A534B11",
+  "byteSize": 4272007,
+  "fileExtension": ".mp3",
+  "sourceUrl": "用户提供（内部测试授权，禁止对外发布）",
+  "license": "cleared-for-project",
+  "licenseEvidence": "工作台/unicorn-gundam-transition-001/G0-素材包/04_授权说明.md",
+  "attribution": "none",
+  "styleTags": [],
+  "retrievedAt": "2026-09-24T14:12:59+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": null
+}

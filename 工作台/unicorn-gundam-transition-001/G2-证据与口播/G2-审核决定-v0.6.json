@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G2",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播定稿-v0.3-short.md",
+  "factCitationRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+  "voiceBriefRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/配音试听/voice-audition-yunyang.mp3",
+  "approvedAudioRef": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-完整口播-yunyang-v0.3-short.mp3",
+  "voiceName": "YunyangNeural",
+  "voiceDescription": "温和、沉稳；用户 G0 沿用确认卡与 G2 卡 D3 默认项确认沿用旧项目同内容音频（逐字节相同）",
+  "supersededDraftRefs": [
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/旧项目过程档案/G2-口播草案-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/旧项目过程档案/G2-口播草案-v0.2.md"
+  ],
+  "factHandling": "user_manually_verified_for_this_project",
+  "factHandlingNote": "卡 D2 默认项由用户以「确认G2」接受：沿用其在旧项目对同稿同素材的人工核证结论；转写草稿与用户确认事实均非一手可引证来源。",
+  "provenanceRule": "User-confirmed project facts are not first-party verified sources and may not be represented as such.",
+  "reapprovalReason": "转场测试克隆项目；G2 内容无实质变更，换发本项目 ID 后按单卡合同重呈并获用户确认。",
+  "approvalVerbatim": "确认G2",
+  "approvedBy": "user",
+  "approvedAt": "2026-09-24T06:10:00Z",
+  "permittedFactIds": [
+    "claim-001",
+    "claim-002",
+    "claim-003"
+  ],
+  "prohibitedTopics": [],
+  "userManuallyVerifiedClaims": [
+    "claim-001",
+    "claim-002",
+    "claim-003"
+  ],
+  "revisionNote": "v0.5→v0.6：按现行 validate_g2_decision 合同补登 permittedFactIds/prohibitedTopics/userManuallyVerifiedClaims 字段；语义与用户「确认G2」批准内容完全一致（三条主张=用户人工核证沿用，无禁止话题）。v0.5 原件保留（G2 门禁指纹对应旧件，差异即本注）。",
+  "supersedes": "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-审核决定-v0.5.json"
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G3",
+  "cardType": "g3_timeline_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-24T16:50:00+08:00",
+  "reviewCardRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md",
+  "basisRefs": [
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-批准记录-v0.3.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-帧率修订-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-字幕时间轴修订-v0.1.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-回显卡数据-v0.5.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-回显数据-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-视觉分析/G3-目标素材视觉分析-v0.2.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-口播语义节拍-v0.3.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-目标主体确认-v0.2.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-证据清单-v0.3.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-审核决定-v0.6.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播句子-v0.2.json",
+    "工作台/unicorn-gundam-transition-001/G2-证据与口播/G2-口播定稿-v0.3-short.md",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-宿主能力档-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-计划校验-v0.1.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/预览小样/转场-预览清单-v0.4.json",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/预览小样/转场-预览观看页-v0.4.html",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-字幕时间轴-v0.2.srt",
+    "工作台/unicorn-gundam-transition-001/G3-剪辑计划/转场-证据帧-v0.1/manifest.json"
+  ],
+  "checklist": [
+    {
+      "id": "approved_edit_plan",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json"
+    },
+    {
+      "id": "final_timeline_review",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-回显数据-v0.1.json"
+    },
+    {
+      "id": "subtitle_timeline",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-字幕时间轴-v0.2.srt"
+    },
+    {
+      "id": "bgm_decision",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json"
+    },
+    {
+      "id": "packaging_decisions",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-剪辑计划-v0.1.json"
+    },
+    {
+      "id": "g3_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/unicorn-gundam-transition-001/G3-剪辑计划/G3-最终回显卡-v0.5.md"
+    }
+  ]
+}

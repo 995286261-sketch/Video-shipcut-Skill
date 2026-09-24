@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "approved_for_g4",
+  "narrationDraft": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-口播草案-v0.3-short.md",
+  "narrationDecisionRef": "工作台/unicorn-gundam-intro-001/G2-证据与口播/G2-审核决定-v0.4-short.json",
+  "durationDecision": {
+    "targetDurationSec": 38.832,
+    "resolution": "follow_approved_short_narration",
+    "intentionalSilence": []
+  },
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "assetId": "source-02-f1f08154",
+      "startMs": 70000,
+      "endMs": 74000,
+      "outputStartMs": 0,
+      "outputEndMs": 4000,
+      "narrationText": "在宇宙世纪 0096 年，RX-0 独角兽高达登场。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-002",
+      "assetId": "source-02-f1f08154",
+      "startMs": 157000,
+      "endMs": 164000,
+      "outputStartMs": 4000,
+      "outputEndMs": 11102,
+      "narrationText": "白色装甲之下，是在 NT-D 激活后显露的红色精神感应框架。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-003",
+      "assetId": "source-02-f1f08154",
+      "startMs": 165000,
+      "endMs": 170000,
+      "outputStartMs": 11102,
+      "outputEndMs": 17016,
+      "narrationText": "当系统启动，装甲展开，头部独角分裂为标志性的 V 字形。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-004",
+      "assetId": "source-02-f1f08154",
+      "startMs": 170000,
+      "endMs": 175000,
+      "outputStartMs": 17016,
+      "outputEndMs": 21505,
+      "narrationText": "毁灭模式因此成为独角兽最鲜明的视觉标志。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-005",
+      "assetId": "source-02-f1f08154",
+      "startMs": 175000,
+      "endMs": 178000,
+      "outputStartMs": 21505,
+      "outputEndMs": 24340,
+      "narrationText": "但这种力量并非没有代价。",
+      "semanticAlignment": {
+        "status": "not_applicable"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-006",
+      "assetId": "source-02-f1f08154",
+      "startMs": 210000,
+      "endMs": 214000,
+      "outputStartMs": 24340,
+      "outputEndMs": 28340,
+      "narrationText": "驾驶舱里的巴纳吉必须承受极高的精神负荷。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-007",
+      "assetId": "source-02-f1f08154",
+      "startMs": 195000,
+      "endMs": 197036,
+      "outputStartMs": 28340,
+      "outputEndMs": 30376,
+      "narrationText": "才能驾驭这台机体。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    },
+    {
+      "segmentId": "seg-008",
+      "assetId": "source-02-f1f08154",
+      "startMs": 214000,
+      "endMs": 222456,
+      "outputStartMs": 30376,
+      "outputEndMs": 38832,
+      "narrationText": "这就是独角兽高达：一台将新人类力量、驾驶员意志与战斗代价同时写进画面的机体。",
+      "semanticAlignment": {
+        "status": "direct_match"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/unicorn-gundam-intro-001/G3-剪辑计划/G3-最终候选验证帧-v0.1",
+        "frameRefs": [
+          "start",
+          "middle",
+          "end"
+        ],
+        "observedVisuals": "短版 G3 已审核的实际画面观察。"
+      }
+    }
+  ],
+  "timelineReview": {
+    "status": "confirmed",
+    "confirmedBy": "user",
+    "feedback": "用户确认短版 G3 最终回显。"
+  },
+  "g3Approval": {
+    "approvedBy": "user"
+  },
+  "sourceAudioPolicy": "exclude",
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-001",
+        "timelineStartMs": 0,
+        "timelineEndMs": 4000
+      },
+      {
+        "segmentId": "seg-002",
+        "timelineStartMs": 4000,
+        "timelineEndMs": 11102
+      },
+      {
+        "segmentId": "seg-003",
+        "timelineStartMs": 11102,
+        "timelineEndMs": 17016
+      },
+      {
+        "segmentId": "seg-004",
+        "timelineStartMs": 17016,
+        "timelineEndMs": 21505
+      },
+      {
+        "segmentId": "seg-005",
+        "timelineStartMs": 21505,
+        "timelineEndMs": 24340
+      },
+      {
+        "segmentId": "seg-006",
+        "timelineStartMs": 24340,
+        "timelineEndMs": 28340
+      },
+      {
+        "segmentId": "seg-007",
+        "timelineStartMs": 28340,
+        "timelineEndMs": 30376
+      },
+      {
+        "segmentId": "seg-008",
+        "timelineStartMs": 30376,
+        "timelineEndMs": 38832
+      }
+    ]
+  },
+  "targetProfile": {
+    "targetDurationSec": 38.832
+  }
+}

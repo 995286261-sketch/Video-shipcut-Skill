@@ -1,0 +1,8 @@
+{
+  "note": "g5_validate_delivery.py --bundle 交付包-v0.3 --media 实跑输出留存（2026-09-24 第 3 轮封包）",
+  "status": "valid",
+  "projectId": "unicorn-gundam-transition-001",
+  "chapters": 4,
+  "segments": 8,
+  "errors": []
+}

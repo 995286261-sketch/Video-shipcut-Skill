@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-transition-001",
+  "node": "G3",
+  "purpose": "segment-verification-frames",
+  "sourceAsset": "source-02-f1f08154",
+  "note": "每段起点/中点/终点实际帧（源时间码），2026-09-24 转场测试重验",
+  "frames": [
+    {
+      "segmentId": "seg-01",
+      "role": "start",
+      "sourceMs": 70050,
+      "file": "转场-证据帧-v0.1/per-seg/seg-01-start-70050ms.jpg"
+    },
+    {
+      "segmentId": "seg-01",
+      "role": "middle",
+      "sourceMs": 72000,
+      "file": "转场-证据帧-v0.1/per-seg/seg-01-middle-72000ms.jpg"
+    },
+    {
+      "segmentId": "seg-01",
+      "role": "end",
+      "sourceMs": 73950,
+      "file": "转场-证据帧-v0.1/per-seg/seg-01-end-73950ms.jpg"
+    },
+    {
+      "segmentId": "seg-02",
+      "role": "start",
+      "sourceMs": 156934,
+      "file": "转场-证据帧-v0.1/per-seg/seg-02-start-156934ms.jpg"
+    },
+    {
+      "segmentId": "seg-02",
+      "role": "middle",
+      "sourceMs": 160435,
+      "file": "转场-证据帧-v0.1/per-seg/seg-02-middle-160435ms.jpg"
+    },
+    {
+      "segmentId": "seg-02",
+      "role": "end",
+      "sourceMs": 163936,
+      "file": "转场-证据帧-v0.1/per-seg/seg-02-end-163936ms.jpg"
+    },
+    {
+      "segmentId": "seg-03",
+      "role": "start",
+      "sourceMs": 164336,
+      "file": "转场-证据帧-v0.1/per-seg/seg-03-start-164336ms.jpg"
+    },
+    {
+      "segmentId": "seg-03",
+      "role": "middle",
+      "sourceMs": 166935,
+      "file": "转场-证据帧-v0.1/per-seg/seg-03-middle-166935ms.jpg"
+    },
+    {
+      "segmentId": "seg-03",
+      "role": "end",
+      "sourceMs": 169534,
+      "file": "转场-证据帧-v0.1/per-seg/seg-03-end-169534ms.jpg"
+    },
+    {
+      "segmentId": "seg-04",
+      "role": "start",
+      "sourceMs": 171350,
+      "file": "转场-证据帧-v0.1/per-seg/seg-04-start-171350ms.jpg"
+    },
+    {
+      "segmentId": "seg-04",
+      "role": "middle",
+      "sourceMs": 173852,
+      "file": "转场-证据帧-v0.1/per-seg/seg-04-middle-173852ms.jpg"
+    },
+    {
+      "segmentId": "seg-04",
+      "role": "end",
+      "sourceMs": 176355,
+      "file": "转场-证据帧-v0.1/per-seg/seg-04-end-176355ms.jpg"
+    },
+    {
+      "segmentId": "seg-05",
+      "role": "start",
+      "sourceMs": 197086,
+      "file": "转场-证据帧-v0.1/per-seg/seg-05-start-197086ms.jpg"
+    },
+    {
+      "segmentId": "seg-05",
+      "role": "middle",
+      "sourceMs": 198453,
+      "file": "转场-证据帧-v0.1/per-seg/seg-05-middle-198453ms.jpg"
+    },
+    {
+      "segmentId": "seg-05",
+      "role": "end",
+      "sourceMs": 199821,
+      "file": "转场-证据帧-v0.1/per-seg/seg-05-end-199821ms.jpg"
+    },
+    {
+      "segmentId": "seg-06",
+      "role": "start",
+      "sourceMs": 208450,
+      "file": "转场-证据帧-v0.1/per-seg/seg-06-start-208450ms.jpg"
+    },
+    {
+      "segmentId": "seg-06",
+      "role": "middle",
+      "sourceMs": 210400,
+      "file": "转场-证据帧-v0.1/per-seg/seg-06-middle-210400ms.jpg"
+    },
+    {
+      "segmentId": "seg-06",
+      "role": "end",
+      "sourceMs": 212350,
+      "file": "转场-证据帧-v0.1/per-seg/seg-06-end-212350ms.jpg"
+    },
+    {
+      "segmentId": "seg-07",
+      "role": "start",
+      "sourceMs": 212450,
+      "file": "转场-证据帧-v0.1/per-seg/seg-07-start-212450ms.jpg"
+    },
+    {
+      "segmentId": "seg-07",
+      "role": "middle",
+      "sourceMs": 213418,
+      "file": "转场-证据帧-v0.1/per-seg/seg-07-middle-213418ms.jpg"
+    },
+    {
+      "segmentId": "seg-07",
+      "role": "end",
+      "sourceMs": 214386,
+      "file": "转场-证据帧-v0.1/per-seg/seg-07-end-214386ms.jpg"
+    },
+    {
+      "segmentId": "seg-08",
+      "role": "start",
+      "sourceMs": 215485,
+      "file": "转场-证据帧-v0.1/per-seg/seg-08-start-215485ms.jpg"
+    },
+    {
+      "segmentId": "seg-08",
+      "role": "middle",
+      "sourceMs": 219663,
+      "file": "转场-证据帧-v0.1/per-seg/seg-08-middle-219663ms.jpg"
+    },
+    {
+      "segmentId": "seg-08",
+      "role": "end",
+      "sourceMs": 223841,
+      "file": "转场-证据帧-v0.1/per-seg/seg-08-end-223841ms.jpg"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "unicorn-gundam-intro-001",
+  "node": "G3",
+  "status": "review_required",
+  "sourceVerification": "39 local start/middle/end frames reviewed as candidate evidence; final approval remains pending",
+  "globalRisks": ["channel_watermark", "burned_subtitles_in_some_frames"],
+  "segments": [
+    {"segmentId":"seg-001","subjectStatus":"confirmed_unicorn","observed":"white mobile suit armor with red psycho-frame glow; pilot/mecha relation","risks":["channel_watermark"],"action":"keep_candidate; inspect crop for watermark"},
+    {"segmentId":"seg-002","subjectStatus":"confirmed_unicorn","observed":"white armor and red illuminated frame during energy/action beat","risks":["channel_watermark"],"action":"keep_candidate; verify burned subtitle at lower edge"},
+    {"segmentId":"seg-003","subjectStatus":"confirmed_unicorn","observed":"white armor, head/torso detail, green eye visible","risks":["channel_watermark"],"action":"keep_candidate"},
+    {"segmentId":"seg-004","subjectStatus":"mixed_unicorn_and_pilot","observed":"continuous white mobile suit and pilot relation shots","risks":["channel_watermark","burned_subtitle"],"action":"keep candidate; choose cleanest subrange after frame-level review"},
+    {"segmentId":"seg-005","subjectStatus":"uncertain_context","observed":"pilot/action detail and energy transition; full subject identity is not present in every frame","risks":["channel_watermark","burned_subtitle"],"action":"candidate only; replace if narration requires visible Unicorn"},
+    {"segmentId":"seg-006","subjectStatus":"confirmed_unicorn","observed":"white/red-frame mobile suit action detail","risks":["channel_watermark"],"action":"keep_candidate"},
+    {"segmentId":"seg-007","subjectStatus":"confirmed_unicorn","observed":"white mobile suit with red glowing frame and large weapon","risks":["channel_watermark","burned_subtitle"],"action":"keep_candidate; crop or mask lower subtitle"},
+    {"segmentId":"seg-008","subjectStatus":"confirmed_unicorn","observed":"continuation of weapon/action beat with white/red-frame subject","risks":["channel_watermark"],"action":"keep_candidate; preserve action continuity with seg-007"},
+    {"segmentId":"seg-009","subjectStatus":"mixed_or_uncertain","observed":"red-lit combat composition with possible second mobile suit; Unicorn identity is not stable across all three frames","risks":["channel_watermark","mixed_subject","burned_subtitle"],"action":"replace_candidate unless local frame review confirms Unicorn dominance"},
+    {"segmentId":"seg-010","subjectStatus":"pilot_only","observed":"pilot reaction close-up after action","risks":["channel_watermark","burned_subtitle"],"action":"keep only for pilot-cost narration; crop lower subtitle"},
+    {"segmentId":"seg-011","subjectStatus":"pilot_only_or_context","observed":"pilot/mental-load imagery with no stable full-body Unicorn view","risks":["channel_watermark","burned_subtitle"],"action":"keep for emotional section, not for machine-identity claim"},
+    {"segmentId":"seg-012","subjectStatus":"mixed_pilot_and_energy","observed":"pilot and energy/transition imagery","risks":["channel_watermark","burned_subtitle"],"action":"keep for transition only; replace if a direct mecha shot is required"},
+    {"segmentId":"seg-013","subjectStatus":"confirmed_unicorn_or_action_context","observed":"high-energy action and closing emotional imagery","risks":["channel_watermark","burned_subtitle"],"action":"keep_candidate; reserve cleanest hero frame for ending"}
+  ],
+  "nextGate": "Resolve seg-009 and any subtitle treatment, then produce one complete verified timeline for user review."
+}
