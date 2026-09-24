@@ -317,6 +317,14 @@ def main() -> int:
     plan_status = plan.get("status")
     check(plan_status in {"review_required", "approved_for_g4"}, "G3 plan status must be review_required or approved_for_g4")
     check(plan.get("sourceAudioPolicy") == "exclude", "G3 plan must exclude source audio")
+    # ⑧甲/⑨（转场实跑，用户 09-24 裁决）：帧率是单一机器事实=计划顶层 `fps` 正整数，
+    # editPlan.fps 第二位置废止。缺字段在 G3 就拒批，永不到 G4 被静默默认（24fps 事故链）。
+    plan_fps = plan.get("fps")
+    check(isinstance(plan_fps, int) and not isinstance(plan_fps, bool) and plan_fps > 0,
+          "plan requires a positive integer top-level fps machine field (⑧甲/⑨: single source of truth — G4 refuses to prepare without it)")
+    if isinstance(plan.get("editPlan"), dict):
+        check("fps" not in plan["editPlan"],
+              "editPlan.fps is the deprecated second location (⑨): fps lives ONLY at plan top level")
     for step in (lambda: validate_duration_decision(plan),
                  lambda: validate_visual_analysis(visual_analysis, plan["projectId"], evidence),
                  lambda: validate_subject_confirmation(subject_confirmation, plan["projectId"], args.subject_confirmation) if subject_confirmation is not None else None,
@@ -531,6 +539,38 @@ def validate_packaging(plan: dict) -> None:
     cover_ms = packaging.get("coverFrameMs")
     check(cover_ms is None or (isinstance(cover_ms, int) and not isinstance(cover_ms, bool) and cover_ms >= 0),
           "packagingDecisions.coverFrameMs must be a non-negative integer")
+    # ⑧甲镜像：卡上"成片包装决定"节的帧率行逐字=plan.fps（代码即规格，g3-choice-cards），
+    # 双式记账——card 说的与机器跑的必须同一字段，两处不一致=拒批。
+    fps_decision = packaging.get("fps")
+    plan_fps = plan.get("fps")
+    check(fps_decision is not None,
+          "packagingDecisions.fps is required (⑧甲: the card's declared frame rate must be machine-readable, verbatim = plan.fps)")
+    check(fps_decision == plan_fps and isinstance(plan_fps, int),
+          f"packagingDecisions.fps {fps_decision!r} must equal plan top-level fps {plan_fps!r} — 卡说 X，机器渲 X")
+    # ⑦甲（转场实跑，用户 09-24 裁决）：被 G3 批准的字幕轴必须带着 subtitle-expert 的
+    # 新鲜复检报告——只查文件存在从不查内容=⑦的病根（批准者不看检验单）。
+    subtitle_ref = packaging.get("subtitleTimelineRef")
+    if isinstance(subtitle_ref, str) and subtitle_ref.strip():
+        srt_path = Path(subtitle_ref)
+        check_ref = packaging.get("subtitleCheckRef")
+        if not srt_path.is_file():
+            check(False, f"packagingDecisions.subtitleTimelineRef does not exist on disk: {subtitle_ref}")
+        elif not isinstance(check_ref, str) or not check_ref.strip() or not Path(check_ref).is_file():
+            check(False, "⑦甲: approved subtitle timeline requires a fresh subtitle-expert check report "
+                         "(subtitle_check_srt.py 产物挂在 packagingDecisions.subtitleCheckRef) — 缺报告/报告不存在=拒批")
+        else:
+            try:
+                check_doc = json.loads(Path(check_ref).read_text(encoding="utf-8-sig"))
+            except (OSError, ValueError):
+                check_doc = None
+            check(isinstance(check_doc, dict) and check_doc.get("skill") == "subtitle-expert"
+                  and check_doc.get("purpose") == "subtitle_check_srt",
+                  "⑦甲: subtitle check report must be produced by subtitle_check_srt.py (skill/purpose 身份对不上=手填)")
+            check(isinstance(check_doc, dict) and check_doc.get("status") == "passed",
+                  f"⑦甲: subtitle timeline failed content recheck: status={check_doc.get('status') if isinstance(check_doc, dict) else None!r}")
+            if isinstance(check_doc, dict) and srt_path.is_file():
+                check(str(check_doc.get("sha256") or "").upper() == sha256_of(srt_path),
+                      "⑦甲: check report does not bind the current subtitle file (报告后字幕轴被改=过期，重跑复检)")
     cards = packaging.get("chapterCards", [])
     if not isinstance(cards, list):
         ERRORS.append("packagingDecisions.chapterCards must be a list")

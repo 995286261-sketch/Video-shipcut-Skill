@@ -59,7 +59,7 @@ class ValidateG3PlanTest(unittest.TestCase):
     def plan(self, decision_path, **changes):
         value = {
             "schemaVersion": "0.1", "projectId": "demo-001", "status": "review_required",
-            "sourceAudioPolicy": "exclude", "narrationDraft": str(self.narration),
+            "sourceAudioPolicy": "exclude", "fps": 30, "narrationDraft": str(self.narration),
             "narrationDecisionRef": str(decision_path), "semanticBeatRef": str(self.semantic_beats_path), "humanReviewPoints": ["review"],
             "durationDecision": {"targetDurationSec": 10, "narrationEstimatedDurationSec": 8, "resolution": "preserve_target_with_editorial_padding", "decisionReason": "fixture permits a short deliberate outro.", "intentionalSilence": [{"startMs": 8_000, "endMs": 10_000, "purpose": "outro", "bgmPolicy": "approved_bgm_fade_out"}], "antiFillRule": {"disallowRepeatedSegments": True, "disallowLoops": True, "disallowMeaninglessSlowMotion": True, "disallowUnverifiedFactPadding": True}},
             "segments": [{"segmentId": "s1", "assetId": "clip-1", "startMs": 0, "endMs": 1_000, "outputStartMs": 0, "outputEndMs": 1_000, "outputDurationMs": 1_000, "mappingMode": "one_to_one", "reason": "fixture", "evidenceRefs": ["f1"], "semanticBeatIds": ["beat-001"], "narrationStartMs": 0, "narrationEndMs": 1_000, "narrationText": "展示主体。", "narrativeClaim": {"type": "object", "minimumVisibleEvidence": "目标主体在画面内可辨认。"}, "semanticAlignment": {"status": "direct_match", "evidence": "起点、中点和终点帧均可辨认目标主体。"}, "visualVerification": {"status": "verified", "frameManifestRef": "G3-visual-verification-frames.json", "frameRefs": ["start.jpg", "middle.jpg", "end.jpg"], "observedVisuals": "已查看起点、中点和终点帧，主体位于画面中央。", "verifiedBy": "agent", "verifiedAt": "2026-08-20T00:00:00Z"}}],
@@ -582,6 +582,85 @@ class ValidateG3PlanTest(unittest.TestCase):
         joined = " ".join(payload["errors"])
         self.assertIn("end > start", joined)
         self.assertIn("requires a title", joined)
+
+    # ---- 转场实跑 ⑧甲/⑨/⑦甲（2026-09-24 用户裁决：帧率单一机器字段+字幕硬握手） ----
+
+    def test_plan_missing_top_level_fps_is_rejected(self):
+        decision = self.decision()
+        value = json.loads(self.plan(decision).read_text(encoding="utf-8"))
+        del value["fps"]
+        code, output = self.run_cli(self.write_json("plan-no-fps.json", value), decision)
+        self.assertEqual(2, code)
+        self.assertIn("top-level fps machine field", output)
+
+    def test_edit_plan_second_fps_location_is_rejected(self):
+        # ⑨: fps ONLY lives at plan top level — the second read location died here.
+        decision = self.decision()
+        plan_path = self.plan(decision, editPlan={"timeline": [{"segmentId": "s1"}], "fps": 30})
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("deprecated second location", output)
+
+    def test_packaging_fps_must_mirror_plan_fps(self):
+        decision = self.decision()
+        plan_path = self.plan(decision, timelineDurationMs=1_000,
+                              packagingDecisions={"fps": 24, "chapterCards": []})
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("must equal plan top-level fps", output)
+        plan_path = self.plan(decision, timelineDurationMs=1_000,
+                              packagingDecisions={"chapterCards": []})
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("packagingDecisions.fps is required", output)
+
+    def subtitle_axis_packaging(self, status="passed", stale=False):
+        """⑦甲 fixture: a real SRT axis + its subtitle_check_srt report (optionally
+        diverging status / stale identity hash)."""
+        srt = self.root / "G3-字幕时间轴.srt"
+        srt.write_text("1\n00:00:00,000 --> 00:00:01,000\n测试字幕\n", encoding="utf-8")
+        import hashlib
+        digest = hashlib.sha256(srt.read_bytes()).hexdigest().upper()
+        if stale:
+            digest = "F" * 64
+        report = self.write_json("subtitle-check.json", {
+            "status": status, "skill": "subtitle-expert", "purpose": "subtitle_check_srt",
+            "file": str(srt), "sha256": digest, "cues": 1,
+        })
+        return {"fps": 30, "subtitleTimelineRef": str(srt), "subtitleCheckRef": str(report)}
+
+    def test_approved_subtitle_axis_without_check_report_is_rejected(self):
+        decision = self.decision()
+        packaging = self.subtitle_axis_packaging()
+        del packaging["subtitleCheckRef"]
+        plan_path = self.plan(decision, timelineDurationMs=1_000, packagingDecisions=packaging)
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("subtitle-expert check report", output)
+
+    def test_failed_subtitle_check_report_blocks_approval(self):
+        decision = self.decision()
+        plan_path = self.plan(decision, timelineDurationMs=1_000,
+                              packagingDecisions=self.subtitle_axis_packaging(status="failed"))
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("failed content recheck", output)
+
+    def test_stale_subtitle_check_report_blocks_approval(self):
+        decision = self.decision()
+        plan_path = self.plan(decision, timelineDurationMs=1_000,
+                              packagingDecisions=self.subtitle_axis_packaging(stale=True))
+        code, output = self.run_cli(plan_path, decision)
+        self.assertEqual(2, code)
+        self.assertIn("does not bind the current subtitle file", output)
+
+    def test_fresh_passed_subtitle_check_allows_packaging(self):
+        decision = self.decision()
+        plan_path = self.plan(decision, timelineDurationMs=1_000,
+                              packagingDecisions=self.subtitle_axis_packaging())
+        code, output = self.run_cli(self.write_json("plan-srt-ok.json",
+                              json.loads(plan_path.read_text(encoding="utf-8"))), decision)
+        self.assertEqual(0, code, output)
 
     def test_fact_entry_in_sourceEvidence_is_batch_error_not_traceback(self):
         # Issue 002-⑤: a malformed evidence list must produce structured errors[],

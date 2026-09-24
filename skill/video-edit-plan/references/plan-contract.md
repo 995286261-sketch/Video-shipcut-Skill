@@ -32,6 +32,8 @@ G3 编辑计划已实现为人工审核规划，输入为已校验素材包、G2
 
 **连续网格（硬约束，issue ⑯）**：`approved_for_g4` 计划的段输出区间必须**连续覆盖成片**——首段 `outputStartMs=0`、末段 `outputEndMs=timelineDurationMs`、相邻段共端点零缝隙；`validate_g3_plan.py` 机器强制，缝隙不再只到转场校验才摊牌。留白归属规则：句间留白不悬空，切点取**留白中点**（段 i 输出=[上一切点, narrEnd_i+gapAfter_i/2)，示例：口播 0–4000、下句 5000 起 ⇒ 边界 4500，段 1 输出 0–4500）。转场窗口正是从这段归属画面里取手柄（见 transition-expert 合同"手柄回填"）。
 
+**顶层 fps 机器字段（硬约束，转场实跑⑧甲/⑨，2026-09-24 用户裁决）**：计划必须携带顶层 `fps`（正整数）且等于 `packagingDecisions.fps` 镜像；`editPlan.fps` 第二位置废止。G4 全链唯一继承路径=计划顶层 `fps` → `g4_prepare` 落 manifest `targetFps` → render/assemble 消费；manifest 无 `targetFps` 且无显式 `--fps` 时 G4 罢工（旧 `default-24` 静默兜底已删除）。`g5_validate --media` 另对 export-config `video.fps` 与成片实探帧率强制对账（⑧丙），缺声明即错。
+
 ## G3 BGM 计划（bgmPlan，机器化）
 
 素材包 `07_授权音频` 中存在带 `bgmRegistration` 的音频资产时，计划**必须**含 `bgmPlan`，且校验必须同时传 `--material-pack <material-pack.json> --bgm-alignment <BGM-对齐建议-v0.2.json>`。BGM 数字禁止手抄：002 的教训是"数字有出处，但人肉抄写让出处不可查证"。规格：
