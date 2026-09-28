@@ -9,6 +9,15 @@ rule reused here), and writes an auditable assembly record next to the master.
 BGM (N6, 2026-09-10): mixing executes a music-expert mix contract verbatim —
 this script never picks gains, ducking windows, or fades itself, and refuses a
 --bgm-audio without --bgm-mix-contract.
+
+Loudness (响度接线批三, 2026-09-28, 丙·分档口径用户拍板): narration normalization
+executes the loudness-expert loud_plan artifact verbatim — ready plans run the
+planned linear chain as-is, blocked plans run the approved standard compressor
+exit as an explicitly-recorded controlled-dynamic mode. This script never picks
+a target itself, and refuses a plan that drifted from the narration on disk or
+from the approved G3 packaging mirror. Deviation beyond contract tolerance
+strikes before the expensive render; --normalize-narration-lufs remains only
+for historical/manual runs without a plan (R3 non-retroactivity).
 """
 from __future__ import annotations
 
@@ -71,7 +80,16 @@ def concat_line(path: Path) -> str:
 # broadband compressor with makeup first, then loudnorm to the target. TTS
 # sources with a high peak-to-loudness ratio cannot reach -14 LUFS by
 # normalization alone — the compressor is what makes it reachable.
-NARRATION_STANDARD_CHAIN = "acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I={target:g}:TP=-1.5:LRA=9"
+# 响度批三：三元组参数从 loud_plan.targetProfile 展开（卡说 X，机器渲 X），
+# 压缩器参数是标准链本体、不是响度决策。TP/LRA 只在无计划的旧手动旗标下取
+# video 档常量。
+NARRATION_STANDARD_CHAIN = "acompressor=threshold=0.1:ratio=8:attack=15:release=250:makeup=2,loudnorm=I={target:g}:TP={tp:g}:LRA={lra:g}"
+
+# 合同 §3 验收闸常数（loudness-contract.md 唯一事实源，跨专员零 import、数值过境照抄；
+# 合同改这两个数时本文件必须同步改）。toleranceSource 如实落账：默认/CLI 覆盖。
+LOUDNESS_TOLERANCE_LU = 1.0
+LOUDNESS_TP_SLACK_DB = 0.3
+LEGACY_VIDEO_TP_DBTP, LEGACY_VIDEO_LRA_LU = -1.5, 9.0
 
 
 def audio_filter_chain(narration_index: int, bgm_index: int | None, mix_contract: dict | None,
@@ -101,13 +119,9 @@ def audio_filter_chain(narration_index: int, bgm_index: int | None, mix_contract
             + f"[bed];[bed]{narration}amix=inputs=2:duration=longest:normalize=0[aud]")
 
 
-def measure_ebur128(path: Path) -> dict:
-    """Post-render loudness truth (issue ㊌: measure, never improvise). Takes the LAST
-    ebur128 match and rejects silence-floor sentinels, same discipline as music-expert."""
-    result = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
-                             "-filter:a", "ebur128=peak=true", "-f", "null", "-"],
-                            capture_output=True, text=True, encoding="utf-8", errors="replace")
-    text = (result.stderr or "") + (result.stdout or "")
+def parse_ebur128_summary(text: str) -> dict:
+    """Takes the LAST ebur128 match and rejects silence-floor sentinels, same
+    discipline as loudness-expert (合同 §4 验收口径; 纯函数，单测无 ffmpeg 也锁)。"""
     integrated, true_peak = None, None
     matches = re.findall(r"I:\s+(-?\d+\.?\d*)\s*LUFS", text)
     if matches:
@@ -118,6 +132,112 @@ def measure_ebur128(path: Path) -> dict:
         value = float(matches[-1])
         true_peak = None if value <= -99.9 else value
     return {"integratedLufs": integrated, "truePeakDbtp": true_peak, "engine": "ffmpeg-ebur128"}
+
+
+def parse_loudnorm_stats(text: str) -> dict | None:
+    """loudnorm print_format=json 收尾块（执行 stats 落账，动态模式强制留痕的凭据）。"""
+    start, end = text.rfind("{"), text.rfind("}")
+    if start < 0 or end <= start:
+        return None
+    try:
+        return json.loads(text[start:end + 1])
+    except json.JSONDecodeError:
+        return None
+
+
+def measure_ebur128(path: Path) -> dict:
+    """Post-render loudness truth (issue ㊌: measure, never improvise)."""
+    result = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+                             "-filter:a", "ebur128=peak=true", "-f", "null", "-"],
+                            capture_output=True, text=True, encoding="utf-8", errors="replace")
+    return parse_ebur128_summary((result.stderr or "") + (result.stdout or ""))
+
+
+def load_loudness_plan(path: Path, narration_path: Path, manifest_project: str | None) -> dict:
+    """响度接线批三：loud_plan 产物握手。只认专员身份头与显式三元组；计划是对哪份
+    配音做的，用 sha 对账说死——文件换过=批准失效的延伸（合同 §5 成因③），罢工指路
+    重规划，不在 G4 补数（⑧乙/批二同型纪律）。"""
+    plan = load(require_file(path, "loudness plan"))
+    if plan.get("skill") != "loudness-expert" or plan.get("purpose") != "loud_plan":
+        fail("--loudness-plan 不是 loudness-expert loud_plan 产物——专员决策、节点执行，对账不许猜")
+    status = str(plan.get("status") or "")
+    if status != "ready" and not status.startswith("blocked_"):
+        fail(f"loudness plan status {status!r} 既非 ready 也非 blocked_*——重跑 loud_plan")
+    if manifest_project and plan.get("projectId") and str(plan["projectId"]) != str(manifest_project):
+        fail(f"响度计划属于项目 {plan['projectId']}，manifest 是 {manifest_project}——串项目罢工")
+    profile = plan.get("targetProfile")
+    if not isinstance(profile, dict):
+        fail("loudness plan 缺 targetProfile——重跑 loud_plan（目标必须显式，⑧ 口径）")
+    for field in ("integratedLufs", "truePeakDbtp", "lraTargetLu"):
+        value = profile.get(field)
+        if not isinstance(value, (int, float)) or isinstance(value, bool):
+            fail(f"loudness plan targetProfile.{field} 不是数——三元组不齐即罢工")
+    if status == "ready" and not (isinstance(plan.get("chain"), str) and plan["chain"].strip()):
+        fail("loudness plan status=ready 却没带执行 chain——产物损坏或过期，重跑 loud_plan")
+    if str(plan.get("sha256", "")).upper() != sha256(narration_path):
+        fail("响度批三: 口播文件 sha 与响度计划的规划源对不上——配音在规划后被换过；"
+             "重跑 loud_plan、按新计划回 G2 重确认试听卡，不在 G4 碰运气（合同 §5 成因③）")
+    return plan
+
+
+def narration_chain_from_plan(plan: dict) -> tuple[str, str]:
+    """丙·分档口径（用户 09-28 拍板）：
+    ready → 逐字执行专员两遍线性 chain（measured_* 同源数已内嵌，规划与执行零换算）；
+    blocked_* → 显式受控 dynamic：标准压缩链（卡5『先压缩』出路）按 targetProfile
+    三参数展开——这不是静默回退，是用户在 G2 出路卡上看过数字、选过出路的兑现，
+    mode 落账可审计。单遍动态强制带 print_format=json：stats 必须落账。"""
+    profile = plan["targetProfile"]
+    if plan["status"] == "ready":
+        return plan["chain"], "linear-verbatim"
+    chain = NARRATION_STANDARD_CHAIN.format(target=profile["integratedLufs"],
+                                            tp=profile["truePeakDbtp"], lra=profile["lraTargetLu"])
+    return chain + ":print_format=json", "controlled-dynamic"
+
+
+def measure_narration_through_chain(narration: Path, chain: str) -> dict:
+    """预闸实测（重渲染之前，fail fast）：执行链单独跑在口播源上、验收口径 ebur128
+    在链尾——闸必须闸在『纯口播』这个量纲上，主轨混 BGM 的读数≠纯口播（合同 §5 成因②）。
+    同一次运行顺带收 loudnorm stats（执行凭据）。"""
+    result = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(narration),
+                             "-filter:a", f"{chain},ebur128=peak=true", "-f", "null", "-"],
+                            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=600)
+    text = (result.stderr or "") + (result.stdout or "")
+    parsed = parse_ebur128_summary(text)
+    parsed["loudnormStats"] = parse_loudnorm_stats(text)
+    return parsed
+
+
+def loudness_deviation_gate(pure: dict, profile: dict, tolerance_lu: float, tolerance_source: str,
+                            strict: bool) -> dict:
+    """批三把『现 note 不拦』升级为闸（工单口径），strict 按档分（丙口径，2026-09-28 G4 彩排实测定标）：
+    - strict=True（ready/linear-verbatim）：|I−目标|>容差 = 罢工。linear 计划本应逐字落点，超差即
+      『静默回退 dynamic/链漂移』信号（合同 §4 回退视同违规），无豁免。
+    - strict=False（blocked/controlled-dynamic）：I 超差=如实落账 disclosed-exceedance，交 G4 回显卡
+      向用户摊开确认、永不静默；不许罢工——彩排实证高峰均比 TTS 源动态落点 −15.6 对目标 −14（差 1.6 LU），
+      出路本来就是 G2 出路卡上肉眼选过的让步，硬闸=一切真项目永久罢工=假闸。
+    两档共同硬闸（不受 strict 分档豁免）：实测 TP 超上限+余量=限幅链路坏、不是响度取舍；无读数=§7。
+    failNote 直指合同 §5 三成因排查顺序。"""
+    measured_i, measured_tp = pure.get("integratedLufs"), pure.get("truePeakDbtp")
+    if measured_i is None or measured_tp is None:
+        fail("响度批三: 归一化链跑完测不出响度读数（引擎异常或全静音源）——无实测不出数（合同 §7），罢工")
+    deviation = round(measured_i - float(profile["integratedLufs"]), 2)
+    tp_over = round(measured_tp - float(profile["truePeakDbtp"]), 2)
+    causes = ("按合同 §5 三成因排查：① 源天花板（看计划 ceilingLufs，出路=提TP上限/降目标/先压缩/换源）；"
+              "② 混音口径（本闸已按纯口播量纲实测，若仍超差查执行链）；"
+              "③ 回退/链漂移（对照计划 measured 与执行 stats）。")
+    if abs(deviation) > tolerance_lu:
+        if strict:
+            fail(f"响度批三: 纯口播实测 {measured_i:.1f} LUFS 偏离目标 {profile['integratedLufs']:.1f} LUFS "
+                 f"达 {abs(deviation):.2f} LU，超容差 {tolerance_lu} LU——罢工。{causes}")
+        verdict = "disclosed-exceedance"
+    else:
+        verdict = "within-tolerance"
+    if tp_over > LOUDNESS_TP_SLACK_DB:
+        fail(f"响度批三: 纯口播实测真峰 {measured_tp:.1f} dBTP 超上限 {profile['truePeakDbtp']:.1f} dBTP "
+             f"加 {LOUDNESS_TP_SLACK_DB} dB 余量——罢工。{causes}")
+    return {"engine": pure.get("engine"), "integratedLufs": measured_i, "truePeakDbtp": measured_tp,
+            "deviationLu": deviation, "truePeakOverDb": tp_over, "verdict": verdict,
+            "toleranceLu": tolerance_lu, "toleranceSource": tolerance_source}
 
 
 def measure_bgm_in_place(bgm_path: Path, contract: dict, timeline_ms: int) -> float | None:
@@ -435,7 +555,13 @@ def main() -> int:
     parser.add_argument("--chapter-cards", type=Path, help="chapter cards contract JSON: fontFile, fontsize, cards[{chapterId,title,startMs,endMs}]")
     parser.add_argument("--title-bar", type=Path, help="title bar contract JSON: fontFile, text, fontsize, marginPct")
     parser.add_argument("--normalize-narration-lufs", type=float, default=None,
-                        help="apply the standard narration loudness chain to this integrated-loudness target (e.g. -14); result is measured and recorded, never assumed")
+                        help="legacy/manual runs only: apply the standard narration loudness chain to this target. "
+                             "New projects pass --loudness-plan instead (响度批三: the approved loud_plan is the fact source)")
+    parser.add_argument("--loudness-plan", type=Path,
+                        help="loudness-expert《响度-归一化计划》artifact (run loud_plan.py against the approved narration; "
+                             "required by orchestration for narration normalization)")
+    parser.add_argument("--loudness-tolerance-lu", type=float, default=None,
+                        help=f"override the deviation gate tolerance (contract default {LOUDNESS_TOLERANCE_LU} LU); recorded as toleranceSource")
     parser.add_argument("--fps", type=int, default=None,
                         help="override; by default inherit the manifest targetFps from the approved plan (issue 002-⑨)")
     parser.add_argument("--duration-tolerance-ms", type=int, default=400)
@@ -501,11 +627,47 @@ def main() -> int:
     narration_ms = probe_duration_ms(narration)
     if narration_ms + args.duration_tolerance_ms < timeline_ms:
         fail(f"narration audio ({narration_ms}ms) is shorter than the timeline ({timeline_ms}ms); align audio before assembly")
+    # 响度接线批三（丙·分档口径，工单 docs/响度接线工单-v0.1.md）：计划=事实源，
+    # 预闸在重渲染之前 fail-fast。闸口径=纯口播量纲，主轨读数只记账。
     narration_pre = None
-    if args.normalize_narration_lufs is not None:
+    loudness_block = None
+    if args.loudness_plan and args.normalize_narration_lufs is not None:
+        fail("响度批三: --loudness-plan 与 --normalize-narration-lufs 二选一——计划口径下事实源是 loud_plan，"
+             "旧手动旗标只留给历史补跑（R3 不追溯）")
+    if args.loudness_plan:
+        loud_plan_doc = load_loudness_plan(args.loudness_plan, narration, manifest.get("projectId"))
+        mirror = manifest.get("loudnessTarget")
+        if not isinstance(mirror, dict):
+            fail("响度批三三口径对账: manifest 缺 loudnessTarget 镜像（缺一口）——用批三后的 g4_prepare 重出 manifest")
+        for field, value in loud_plan_doc["targetProfile"].items():
+            if mirror.get(field) != value:
+                fail(f"响度批三三口径对账: manifest.loudnessTarget.{field} {mirror.get(field)!r} != "
+                     f"G2 响度计划 targetProfile.{field} {value!r}——卡说 X，机器渲 X；"
+                     "换档回 G2/G3 重批，G4 不代换")
+        narration_pre, loudness_mode = narration_chain_from_plan(loud_plan_doc)
+        tolerance = args.loudness_tolerance_lu if args.loudness_tolerance_lu is not None else LOUDNESS_TOLERANCE_LU
+        tolerance_source = "CLI 显式覆盖" if args.loudness_tolerance_lu is not None else "合同 §3 默认"
+        pure_reading = measure_narration_through_chain(narration, narration_pre)
+        loudness_block = {
+            "planRef": {"path": str(args.loudness_plan), "sha256": sha256(args.loudness_plan)},
+            "planStatus": loud_plan_doc["status"], "mode": loudness_mode,
+            "targetProfile": loud_plan_doc["targetProfile"],
+            "threeWayCheck": "G2 loud_plan.targetProfile == manifest.loudnessTarget（G3 包装镜像）== 执行链参数",
+            "pureNarration": loudness_deviation_gate(pure_reading, loud_plan_doc["targetProfile"],
+                                                     tolerance, tolerance_source,
+                                                     strict=(loudness_mode == "linear-verbatim")),
+            "loudnormStats": pure_reading.get("loudnormStats"),
+        }
+        if loudness_block["pureNarration"]["verdict"] == "disclosed-exceedance":
+            loudness_block["pureNarration"]["reviewNote"] = (
+                f"受控动态落点 {loudness_block['pureNarration']['integratedLufs']:.1f} LUFS 超容差 "
+                f"{abs(loudness_block['pureNarration']['deviationLu']):.2f} LU——blocked 档的让步幅度"
+                "（G2 出路卡批准过压缩出路），必须在 G4 回显卡如实摊开并获用户确认，永不静默。")
+    elif args.normalize_narration_lufs is not None:
         if not -24.0 <= args.normalize_narration_lufs <= -8.0:
             fail("--normalize-narration-lufs must sit between -24 and -8 LUFS")
-        narration_pre = NARRATION_STANDARD_CHAIN.format(target=args.normalize_narration_lufs)
+        narration_pre = NARRATION_STANDARD_CHAIN.format(target=args.normalize_narration_lufs,
+                                                        tp=LEGACY_VIDEO_TP_DBTP, lra=LEGACY_VIDEO_LRA_LU)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     work = args.output.parent / f"{args.output.stem}-assemble-work"
@@ -586,14 +748,20 @@ def main() -> int:
     narration_loudness = None
     if narration_pre is not None:
         narration_loudness = measure_ebur128(args.output)
-        narration_loudness["targetIntegratedLufs"] = args.normalize_narration_lufs
-        narration_loudness["chain"] = "standard-narration-chain (acompressor+loudnorm, issue ㊌)"
+        if loudness_block:
+            # 批三：主轨读数只记账（含 BGM 量纲≠纯口播，合同 §5 成因②）；闸已在预渲染
+            # 按纯口播口径落账 loudness.pureNarration，超差根本到不了这一行。
+            narration_loudness["chain"] = f"loudness-plan verbatim ({loudness_block['mode']})"
+            narration_loudness["targetIntegratedLufs"] = loudness_block["targetProfile"]["integratedLufs"]
+        else:
+            narration_loudness["chain"] = "standard-narration-chain (acompressor+loudnorm, issue ㊌)"
+            narration_loudness["targetIntegratedLufs"] = args.normalize_narration_lufs
+            measured = narration_loudness["integratedLufs"]
+            if measured is not None and abs(measured - args.normalize_narration_lufs) > 1.5:
+                narration_loudness["note"] = ("achieved loudness deviates from target by more than 1.5 LU — likely the source peak-to-loudness "
+                                              "ratio ceiling (kshatriya-002: -23.9 LUFS/+0.5 TP TTS tops out near -15.2); treat as a review item, do not re-chain blindly")
         if args.bgm_audio:
             narration_loudness["caveat"] = "measured on the assembled master including the BGM bed, not narration alone"
-        measured = narration_loudness["integratedLufs"]
-        if measured is not None and abs(measured - args.normalize_narration_lufs) > 1.5:
-            narration_loudness["note"] = ("achieved loudness deviates from target by more than 1.5 LU — likely the source peak-to-loudness "
-                                          "ratio ceiling (kshatriya-002: -23.9 LUFS/+0.5 TP TTS tops out near -15.2); treat as a review item, do not re-chain blindly")
 
     cover_output = render_cover(args.cover, work) if args.cover else None
 
@@ -607,6 +775,8 @@ def main() -> int:
         "segments": [{"segmentId": seg.get("segmentId"), "file": str(path), "sha256": sha256(path)} for seg, path in zip(segments, ordered_files)],
         "narrationAudio": {"path": str(narration), "sha256": sha256(narration), "durationMs": narration_ms,
                            "loudness": narration_loudness},
+        # 响度批三：plan 引用+sha 绑定、mode 记账、三口径对账凭据、纯口播闸与执行 stats
+        "loudness": loudness_block,
         "bgmMix": {
             "audio": {"path": str(args.bgm_audio), "sha256": sha256(args.bgm_audio)},
             "contract": {"path": str(args.bgm_mix_contract), "sha256": sha256(args.bgm_mix_contract)},

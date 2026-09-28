@@ -64,6 +64,30 @@ class G4ContractTest(unittest.TestCase):
         blocked3=self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out4",code=2)
         self.assertIn("⑧乙",blocked3["error"])
 
+    def test_prepare_mirrors_packaging_loudness_target_into_manifest(self):
+        """响度接线批三（2026-09-28）：G3 包装决定响度三元组与 targetFps 同路镜像进
+        manifest——g4_assemble --loudness-plan 的三口径对账拿这一份对 G2 计划。"""
+        pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")
+        import hashlib; digest=hashlib.sha256(b"fixture").hexdigest().upper()
+        (pack/"material-pack.json").write_text(json.dumps({"sourceAssets":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest}]}))
+        visual={"status":"verified","frameManifestRef":"frames.json","frameRefs":["s.jpg","m.jpg","e.jpg"],"observedVisuals":"已核验。"}
+        loud={"integratedLufs":-14.0,"truePeakDbtp":-1.5,"lraTargetLu":9.0}
+        plan={"schemaVersion":"0.1","projectId":"p","status":"approved_for_g4","sourceAudioPolicy":"exclude","fps":30,
+              "packagingDecisions":{"fps":30,"loudnessTarget":loud},
+              "durationDecision":{"targetDurationSec":1,"narrationEstimatedDurationSec":1,"resolution":"follow_narration_natural_duration","decisionReason":"测试","intentionalSilence":[],"antiFillRule":{"disallowRepeatedSegments":True,"disallowLoops":True,"disallowMeaninglessSlowMotion":True,"disallowUnverifiedFactPadding":True}},
+              "segments":[{"segmentId":"one","assetId":"a","startMs":0,"endMs":1000,"mappingMode":"one_to_one","visualVerification":visual}],"editPlan":{"timeline":[{"segmentId":"one"}]}}
+        evidence={"projectId":"p","sourceEvidence":[{"assetId":"a","relativePath":"raw/a.mp4","sha256":digest,"sourceProbe":{"durationMs":3000}}]}
+        p=self.root/"plan.json"; e=self.root/"e.json"; p.write_text(json.dumps(plan)); e.write_text(json.dumps(evidence))
+        self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out")
+        manifest=json.loads((self.root/"out"/"G4-可编辑工程-v0.1.json").read_text(encoding="utf-8"))
+        self.assertEqual(loud, manifest["loudnessTarget"])
+        # 历史计划（批二前）无包装三元组：镜像如实落 null，批三罢工留给 assemble 判定。
+        old=json.loads(json.dumps(plan)); del old["packagingDecisions"]["loudnessTarget"]
+        p.write_text(json.dumps(old))
+        self.run_cli(PREPARE,"--plan",p,"--evidence",e,"--source-pack",pack,"--output-dir",self.root/"out2")
+        manifest2=json.loads((self.root/"out2"/"G4-可编辑工程-v0.1.json").read_text(encoding="utf-8"))
+        self.assertIsNone(manifest2["loudnessTarget"])
+
     def test_prepare_requires_a_positive_target_duration(self):
         """Issue 025: no durationDecision and no targetProfile must block, not emit 0ms."""
         pack=self.root/"pack"; (pack/"raw").mkdir(parents=True); media=pack/"raw"/"a.mp4"; media.write_bytes(b"fixture")

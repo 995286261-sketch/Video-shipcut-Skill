@@ -256,6 +256,147 @@ class G4AssembleTests(unittest.TestCase):
         self.assertTrue(record["titleBar"]["sha256"])
 
 
+    # --- 响度接线批三（2026-09-28，丙·分档口径用户拍板）--------------------------------
+    # 握手用产物对账：loud_plan 身份头、规划源 sha、三口径镜像（G2 targetProfile ==
+    # manifest.loudnessTarget == 执行链参数）；ready 逐字线性、blocked 显式受控 dynamic；
+    # 偏差闸在重渲染之前 fail-fast，超差罢工附合同 §5 三成因。
+
+    def loud_plan_doc(self, status="ready", chain="loudnorm=I=-14.0:TP=-1.5:LRA=9.0:measured_I=-22.8:measured_TP=-18.4:measured_LRA=4.1:measured_thresh=-27.0:offset=0.0:linear=true:print_format=json",
+                      profile=None, blocked_reasons=None, exits=None, skill="loudness-expert", purpose="loud_plan",
+                      project_id="demo-001", sha=None):
+        return {
+            "skill": skill, "purpose": purpose, "schemaVersion": "0.1", "projectId": project_id,
+            "source": str(self.narration), "version": "v0.1", "status": status,
+            "targetProfile": profile or {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0},
+            "measured": {"engine": "ffmpeg-loudnorm-pass1", "inputI": -22.8, "inputTp": -18.4, "inputLra": 4.1, "inputThresh": -27.0},
+            "gainDb": 8.8, "estimatedTruePeak": -9.6, "ceilingLufs": -14.0,
+            "blockedReasons": blocked_reasons or [], "exits": exits or [],
+            "chain": chain if status == "ready" else None, "chainNote": "…",
+            "sha256": sha or hashlib.sha256(self.narration.read_bytes()).hexdigest().upper(),
+            "plannedAt": "2026-09-28T00:00:00Z",
+        }
+
+    def write_loud_plan(self, doc):
+        path = self.root / "loud-plan.json"
+        path.write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+        return path
+
+    def set_manifest_loudness(self, value):
+        doc = json.loads(self.manifest.read_text(encoding="utf-8"))
+        if value is None:
+            doc.pop("loudnessTarget", None)
+        else:
+            doc["loudnessTarget"] = value
+        self.manifest.write_text(json.dumps(doc), encoding="utf-8")
+
+    def error_of(self, result):
+        # 主处理器 ensure_ascii 打印，中文断言必须先解码，不许拿转义串硬猜。
+        return json.loads(result.stdout)["error"]
+
+    def test_loudness_plan_ready_executes_expert_chain_verbatim(self):
+        # 正向走真专员 CLI：安静正弦源线性够得着 → ready；节点逐字执行、闸按纯口播落账。
+        quiet = self.root / "quiet-narration.wav"
+        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=440:duration=2,volume=-20dB", str(quiet)],
+                       check=True, capture_output=True)
+        expert = ROOT / "skill/loudness-expert/scripts/loud_plan.py"
+        plan_run = subprocess.run([PYTHON, str(expert), "--input", str(quiet), "--output-dir", str(self.root / "loud-plans"),
+                                   "--profile", "video", "--project-id", "demo-001"],
+                                  capture_output=True, text=True, encoding="utf-8")
+        if not plan_run.stdout.strip() or json.loads(plan_run.stdout).get("status") not in ("ready",):
+            self.skipTest("fixture source is not linear-feasible on this ffmpeg: " + plan_run.stdout)
+        plan = json.loads(plan_run.stdout)
+        self.narration = quiet
+        self.set_manifest_loudness(plan["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(plan["output"])))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        loud = record["loudness"]
+        self.assertEqual("linear-verbatim", loud["mode"])
+        self.assertEqual("ready", loud["planStatus"])
+        self.assertIn(plan["chain"], record["filterGraph"])
+        self.assertEqual(plan["targetProfile"], loud["targetProfile"])
+        self.assertTrue(loud["planRef"]["sha256"])
+        self.assertLessEqual(abs(loud["pureNarration"]["deviationLu"]), loud["pureNarration"]["toleranceLu"])
+        self.assertEqual("合同 §3 默认", loud["pureNarration"]["toleranceSource"])
+        self.assertIsNotNone(loud["loudnormStats"])
+        self.assertEqual(-14.0, record["narrationAudio"]["loudness"]["targetIntegratedLufs"])
+
+    def test_loudness_plan_blocked_runs_controlled_dynamic_with_profile_numbers(self):
+        # blocked → 显式受控 dynamic：标准压缩链按目标档三参数展开（podcast −16/−2/7
+        # 活证不许节点硬编码 video 常量），stats 强制落账。
+        doc = self.loud_plan_doc(status="blocked_true-peak",
+                                 profile={"integratedLufs": -16.0, "truePeakDbtp": -2.0, "lraTargetLu": 7.0},
+                                 blocked_reasons=["true-peak"], exits=["把 TP 上限提到至少 −0.5 dBTP"])
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        loud = record["loudness"]
+        self.assertEqual("controlled-dynamic", loud["mode"])
+        self.assertEqual("blocked_true-peak", loud["planStatus"])
+        self.assertIn("acompressor", record["filterGraph"])
+        self.assertIn("loudnorm=I=-16", record["filterGraph"])
+        self.assertIn(":TP=-2", record["filterGraph"])
+        self.assertIn(":LRA=7:print_format=json", record["filterGraph"])
+        self.assertIsNotNone(loud["loudnormStats"])
+        # blocked 档落点两态皆合法：够得着=within-tolerance，够不着=disclosed-exceedance+摊开注记。
+        pure = loud["pureNarration"]
+        self.assertIn(pure["verdict"], ("within-tolerance", "disclosed-exceedance"))
+        if pure["verdict"] == "disclosed-exceedance":
+            self.assertIn("永不静默", pure["reviewNote"])
+
+    def test_loudness_tolerance_override_recorded(self):
+        doc = self.loud_plan_doc(status="blocked_true-peak")
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc)), "--loudness-tolerance-lu", "5"))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        pure = self.read_record()["loudness"]["pureNarration"]
+        self.assertEqual(5.0, pure["toleranceLu"])
+        self.assertEqual("CLI 显式覆盖", pure["toleranceSource"])
+
+    def test_loudness_plan_foreign_header_is_refused(self):
+        doc = self.loud_plan_doc(skill="music-expert")
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("loud_plan", self.error_of(result))
+
+    def test_loudness_plan_source_sha_drift_is_refused(self):
+        # R2 同型延伸：规划后换配音=计划失效，罢工指路重规划+回 G2 重确认。
+        doc = self.loud_plan_doc(sha="F" * 64)
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("规划源", self.error_of(result))
+
+    def test_loudness_plan_mirror_mismatch_is_refused(self):
+        doc = self.loud_plan_doc()
+        self.set_manifest_loudness({"integratedLufs": -16.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0})
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("三口径对账", self.error_of(result))
+
+    def test_loudness_plan_without_manifest_mirror_is_refused(self):
+        doc = self.loud_plan_doc()
+        self.set_manifest_loudness(None)
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("loudnessTarget 镜像", self.error_of(result))
+
+    def test_loudness_plan_cross_project_artifact_is_refused(self):
+        doc = self.loud_plan_doc(project_id="zaku-intro-001")
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("串项目", self.error_of(result))
+
+    def test_loudness_plan_and_legacy_flag_are_mutually_exclusive(self):
+        doc = self.loud_plan_doc()
+        self.set_manifest_loudness(doc["targetProfile"])
+        result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc)), "--normalize-narration-lufs", "-14"))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("二选一", self.error_of(result))
+
     def test_normalize_narration_records_measured_loudness(self):
         result = self.run_assemble(("--normalize-narration-lufs", "-16"))
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
@@ -420,6 +561,78 @@ class VideoChainGraphTests(unittest.TestCase):
         graph = self.module.build_video_chain(["[0:v]", "[1:v]"], [], [], ["a", "b"], {}, 30, False)
         self.assertNotIn("settb", graph)
         self.assertNotIn("xfade", graph)
+
+
+class LoudnessWiringUnitTests(unittest.TestCase):
+    """批三单元层（零 ffmpeg 依赖）：偏差闸算术、分档链展开、口径解析纯函数。"""
+
+    PROFILE = {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0}
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("g4_assemble_loudness_under_test", SCRIPT)
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def gate(self, integrated, true_peak, tolerance=1.0, strict=True):
+        return self.module.loudness_deviation_gate(
+            {"integratedLufs": integrated, "truePeakDbtp": true_peak, "engine": "ffmpeg-ebur128"},
+            self.PROFILE, tolerance, "测试口径", strict)
+
+    def test_gate_passes_within_tolerance_and_tp_slack(self):
+        verdict = self.gate(-14.9, -1.7)
+        self.assertAlmostEqual(-0.9, verdict["deviationLu"])
+        self.assertEqual("within-tolerance", verdict["verdict"])
+        self.assertEqual(1.0, verdict["toleranceLu"])
+        self.assertEqual("测试口径", verdict["toleranceSource"])
+
+    def test_blocked_tier_discloses_exceedance_instead_of_striking(self):
+        # 长天彩排实数：高峰均比 TTS 源受控动态落点 −15.6 对目标 −14，超差 1.6 LU——
+        # blocked 档如实落账交人工确认（丙口径分档语义），罢工=一切真项目永久卡死=假闸。
+        verdict = self.gate(-15.6, -1.7, strict=False)
+        self.assertEqual("disclosed-exceedance", verdict["verdict"])
+        # TP 超差是两档共同硬闸（限幅链路坏≠响度取舍），不随 strict 豁免。
+        with self.assertRaises(ValueError):
+            self.gate(-15.6, -1.1, strict=False)
+
+    def test_gate_strikes_over_tolerance_with_three_causes(self):
+        with self.assertRaises(ValueError) as caught:
+            self.gate(-15.15, -1.7)
+        message = str(caught.exception)
+        self.assertIn("超容差", message)
+        for cause in ("源天花板", "混音口径", "回退/链漂移"):
+            self.assertIn(cause, message)
+
+    def test_gate_strikes_when_tp_beyond_slack(self):
+        with self.assertRaises(ValueError) as caught:
+            self.gate(-14.0, -1.1)  # 超上限 0.4 dB，余量只许 0.3
+        self.assertIn("dBTP", str(caught.exception))
+
+    def test_gate_strikes_without_reading_never_assumes(self):
+        with self.assertRaises(ValueError) as caught:
+            self.gate(None, -1.7)
+        self.assertIn("罢工", str(caught.exception))
+
+    def test_chain_selection_is_tiered_by_plan_status(self):
+        verbatim = self.module.narration_chain_from_plan({"status": "ready", "chain": "loudnorm=X:linear=true", "targetProfile": self.PROFILE})
+        self.assertEqual(("loudnorm=X:linear=true", "linear-verbatim"), verbatim)
+        chain, mode = self.module.narration_chain_from_plan(
+            {"status": "blocked_true-peak", "chain": None,
+             "targetProfile": {"integratedLufs": -16.0, "truePeakDbtp": -2.0, "lraTargetLu": 7.0}})
+        self.assertEqual("controlled-dynamic", mode)
+        self.assertIn("acompressor", chain)
+        self.assertIn("loudnorm=I=-16", chain)
+        self.assertIn(":TP=-2:LRA=7:print_format=json", chain)
+
+    def test_parse_helpers_take_last_block_and_reject_sentinels(self):
+        parsed = self.module.parse_ebur128_summary("I: -69.9 LUFS ... junk\nI: -14.2 LUFS\nTrue peak:\n Peak: -1.8 dBFS")
+        self.assertEqual(-14.2, parsed["integratedLufs"])
+        self.assertEqual(-1.8, parsed["truePeakDbtp"])
+        self.assertIsNone(self.module.parse_ebur128_summary("I: -70.0 LUFS")["integratedLufs"])
+        stats = self.module.parse_loudnorm_stats('noise {"input_i": -22.8, "target_i": -14.0} tail')
+        self.assertEqual(-22.8, stats["input_i"])
+        self.assertIsNone(self.module.parse_loudnorm_stats("no json here"))
 
 
 if __name__ == "__main__":

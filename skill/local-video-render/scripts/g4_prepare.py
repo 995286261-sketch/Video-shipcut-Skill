@@ -178,6 +178,10 @@ def main() -> int:
         "durationDecisionRef": "plan.durationDecision" if decision_target else "plan.targetProfile",
         "sourceAudioPolicy": "exclude", "segmentCount": len(rendered), "timelineDurationMs": cursor,
         "targetDurationMs": target_ms, "durationDeltaMs": cursor-target_ms, "targetFps": edit_fps,
+        # 响度接线批三（2026-09-28）：G3 包装决定的响度三元组镜像进 manifest，
+        # 与 targetFps 同路（卡说 X，机器渲 X 的 G4 侧）——g4_assemble --loudness-plan
+        # 的三口径对账（G2 targetProfile == G3 loudnessTarget == 执行）拿这一份对。
+        "loudnessTarget": (plan.get("packagingDecisions") or {}).get("loudnessTarget"),
         "segments": rendered,
         "transitionDirective": ({"path": str(args.transition_directive), "sha256": sha256(args.transition_directive),
                                  "boundaries": len(directive_doc["boundaries"]), "masterFades": directive_doc["masterFades"]}
