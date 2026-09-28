@@ -42,7 +42,7 @@
 
 ## 6. 产物形状
 
-所有产物带身份头：`{"skill":"loudness-expert","purpose":"loud_measure|loud_plan|loud_verify","schemaVersion":"0.1","projectId":…,"source":…}`。文件命名《响度-实测报告|响度-归一化计划|响度-验收审计-v0.N.json》，版本自增永不覆盖（㉘）。回显卡必须由 `loud_echo.py` 从产物渲染（呈现层零算术；卡尾出处行"此卡由通过校验的响度专员产物生成"——⑤ 先例，接线时 record-review 校验该行）。
+所有产物带身份头：`{"skill":"loudness-expert","purpose":"loud_measure|loud_plan|loud_verify","schemaVersion":"0.1","projectId":…,"source":…}`。source 字段落**解析后的绝对路径**（调用方从仓库根传相对路径时专员先行解析——09-28 zaku 实测彩排抓出：相对串在他处对账即失联；重规划与 G2 校验器均按此对账）。文件命名《响度-实测报告|响度-归一化计划|响度-验收审计-v0.N.json》，版本自增永不覆盖（㉘）。回显卡必须由 `loud_echo.py` 从产物渲染（呈现层零算术；卡尾出处行"此卡由通过校验的响度专员产物生成"——⑤ 先例，接线时 record-review 校验该行）。
 
 ## 7. 不编造纪律
 

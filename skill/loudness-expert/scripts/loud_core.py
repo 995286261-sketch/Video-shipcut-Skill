@@ -190,5 +190,7 @@ def emit(payload: dict, code: int = 0) -> None:
 
 
 def artifact_header(purpose: str, project_id, source: Path) -> dict:
+    # source 落盘为解析后的绝对路径：调用方传相对路径（真实编排层从仓库根起跑）
+    # 时，产物仍是自描述的可对账证据（09-28 zaku 实测彩排抓出）。
     return {"skill": SKILL_ID, "purpose": purpose, "schemaVersion": SCHEMA_VERSION,
-            "projectId": project_id, "source": str(source)}
+            "projectId": project_id, "source": str(Path(source).resolve())}
