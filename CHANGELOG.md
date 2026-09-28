@@ -1,5 +1,17 @@
 # 变更记录
 
+## v1.9.0 — 2026-09-28 — **响度接线版本**
+
+发布范围＝`skill/loudness-expert/` 专员产物接入 G2/G3/G4/G5 四节点全部生效（工单 `docs/响度接线工单-v0.1.md`，用户 09-28 "接"令开工、"全都弄完再说"定四批统一发版口径——本线豁免"更新即发版"新规一次；逐批提交：批一 `3ed285e`/`65eb85e`/`39d100c`/`8729187`、批二 `12d7414`、批三 `176c909`、批四见本版）。
+
+- **批一 G2 配音**：试听卡嵌入素材响度天花板披露（"最响可到 X LUFS（目标 −14）"，数字逐字取专员产物）、够不着同轮出路选项卡；`validate_g2_decision.py` 升 schema **0.2**——`loudnessPlanRef` 必带+产物身份+旁白源 sha256 对账，**批准后重合成配音=批准自动失效**（R2 同型）。历史 0.1 决定不追溯（R3）。
+- **批二 G3 剪辑计划**：目标档双式记账——`packagingDecisions.loudnessTarget` 三元组逐字对账 G2 所绑专员计划（帧率⑧甲同型"卡说 X 机器渲 X"）；`validate_g3_plan.py` 批量拒缺拒差；换档必须回 G2 重规划、机器不代换。
+- **批三 G4 装配（丙·分档口径，用户"走你推荐的"拍板）**：`g4_assemble.py --loudness-plan` 产物握手（身份头+规划源 sha+串项目罢工）；三口径对账 G2 targetProfile==manifest.loudnessTarget（`g4_prepare` 镜像自 G3 包装决定）==执行链参数，缺一拒装；**ready→逐字两遍线性**、预渲染纯口播量纲实测超容差=罢工（兜住 loudnorm 静默回退红线）；**blocked→显式受控 dynamic**（标准压缩链按 targetProfile 展开）+loudnorm stats 落账、I 超差=disclosed-exceedance+reviewNote 必进回显第③节摊开确认、永不静默不罢工；TP 超上限+0.3 余量两档共同硬闸；旧 `--normalize-narration-lufs` 仅历史补跑并与计划旗标互斥。定标事件①：彩排第一轮长天真口播落点 −15.6 超差 1.60 LU 证伪"一刀切硬闸"（=一切真项目永久罢工=假闸），语义随批入合同 §8.3。
+- **批四 G5 交付**：`loud_verify.py` 三态（passed/disclosed-exceedance/failed）——blocked 计划验收必 `--assembly-record` 绑定逐字对账装配记录 loudness 块（planRef sha/mode/targetProfile）；交付包**条件 REQUIRED**：时代写在产物里——edit-plan 带 `packagingDecisions.loudnessTarget` 即必交 `loudness-audit.json`（`g5_validate_delivery.py` 校验身份/状态/目标档一致/masterSha 新鲜），批二前历史封包（含 sinjuku 基线）零影响、无需新标记、严禁补件（R3）；disclosed-exceedance 关单须 `human-review-decision.acceptedWarnings` 点名"响度"（摊开必确认贯穿到交付人审闸）；`--media` 现测 ebur128 与报告复现对账 >0.3 LU/dBTP 拒（哈希抓字节变化、复测抓换件重渲漂移）。定标事件②：真成片 TP −1.2 踩 −1.5+0.3 浮点边界误判越限——合成信号全绿未暴露、真素材抓出，边界比较补 1e-9 容差，坐实"接一个、真跑验一个"。
+- **文档**：合同 `loudness-contract.md` §8 四批全部转"已接线生效"（唯一 as-built 口径）；g2/g3/g4/g5 各卡型响度行、`media-qa-delivery` SKILL/qa-contract/delivery-bundle-schema、花名册、交接文档、台账 ⑪ 行闭环（待决三点全部落地：闸口=G4 罢工+G5 必过；−14 维持为计划承诺、闸随承诺物理性分档；天花板披露提前到 G2 试听卡）。
+- **验证**：四批各带 WorkSpace 真素材彩排（项目目录与门禁零触碰）：G2 六源双形态卡+zaku 全链、G3 正反例过闸、G4 blocked/ready 两档装成+负向四案（含串项目实盘第一案）、G5 正案 valid+`--media` 原样复现、负三案全中（撤响度点名/抽审计/换成片字节双闸齐响）。**发版前全量回归 45 测试文件逐文件单跑全绿**；套件水位：专员 43 例（含端到端三态）、G4 本地渲染 38、G5 交付 21（含 sinjuku 基线 R3 锁例）、G3 61。
+- **已知限制**：Mimosa 完整扫描结论仍未取得（各 commit 带 library_source_unavailable 兼容放行提示），**不宣称项目安全**；omni"第二只耳朵"接入观察类环节仍未接线（加分轮单独议）；平台融入适配（sourceAsset 合同、gN 前缀改名）按 09-21 决定挂起。下一步：完整实际测试（新项目、素材由用户亲手提供）。
+
 ## v1.8.0 — 2026-09-28 — **响度专员版本**（独立建设，未接线）
 
 发布范围＝`skill/loudness-expert/` 第四插件专员独立建成（用户 09-28 裁决归属＝甲·独立专员，节奏定案**"先建成单独 skill、独立测试完毕后再考虑接入节点，后续遇到分贝问题能复用"**；出生证＝实片台账 ⑪ + loudnorm 静默回退 dynamic 调研，全程记录 `docs/响度专项-调研与方案讨论-v0.1.md`）：
