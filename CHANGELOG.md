@@ -1,5 +1,19 @@
 # 变更记录
 
+## v1.7.1 — 2026-09-24 — **帧率与合同真实性修补版本**
+
+发布范围＝转场实跑 `unicorn-gundam-transition-001` 测后台账 ⑦⑧⑨⑩ 修复批（`aa0609e`→`6525b84` 七笔，用户 09-24 裁决口径：**"有问题就卡住，或者跟随源素材，不要随便用一个默认值，不能偷偷干"**）＋⑪ 响度开放项入册。本版发版起执行用户新规：**主干有实质更新即发版打 tag，不攒未版本化批次**。
+
+- **⑧乙＋⑨ 帧率单一字段统一、静默默认全删**：编辑计划顶层 `fps` 为唯一机器位置（`editPlan.fps` 机械拒收）；`g4_prepare` 缺即罢工；`g4_render`/`g4_assemble` 的 default-24 分支删除，manifest 无 `targetFps` 且无显式 `--fps` 拒办；`g4_validate --fps` 死参数改活——段渲染文件实测 `r_frame_rate` 对账批准帧率（±0.1）。24fps 事故链的 G4 段闸门自此补齐。
+- **⑧甲＋⑨ G3 源头闸（双式记账）**：`validate_g3_plan` 强制顶层 fps 正整数 + `packagingDecisions.fps == plan.fps`——卡上说 X、机器渲 X，不等=拒批；卡片纪律=源帧率作建议预选值，非机器自动跟随（g3-choice-cards 新增「帧率双式记账」「字幕轴 G3 硬握手」两节，包装决定逐项清单补帧率行）。
+- **⑧丙 末道闸不可跳过**：`g5_validate --media` 帧率对账缺声明不再静默跳过——export-config 缺 `video.fps` 直接报错（旧代码 `if expected_fps and …` 正是 24fps 成片钻过的空子）；对账提为纯函数 `fps_reconciliation_error` 三态单元锁死（缺声明=错／容差通过／偏差或探测失败=错）。本跑当年靠人工发现的 24fps，自此机器自抓。
+- **⑦甲 字幕轴 G3 硬握手**：包装决定引用字幕轴必须带 `subtitleCheckRef`——报告 skill/purpose 身份（subtitle-expert / subtitle_check_srt）、`status=passed`、报告 `sha256`==现场重算轴文件哈希，缺／过期／未过三死路各一负例（G3 套件 52 例，含新 7 例）。
+- **⑦乙 继承产物重检规则**：material-pack-intake 边界规则 7——从旧项目克隆／沿用的任何产物，进入批准依据前必须按当前版本校验器／专员握手重跑落报告（洗 ID 不洗内容＝实跑照搬旧字幕轴 50ms 重叠直到 G5 才拦的出生证教训）。
+- **⑩ 修订轮合同重锁通道**：新唯一入口 `skill/music-expert/scripts/music_mix_contract_rebind.py`——reopen-g3 重批计划后、重跑 G4 前**再生同参数新版混音合同**：参数逐字段深拷贝无覆盖入口（机器自证 `comparable` 相等）、只重锁 `evidence.planSha256`、BGM 音频字节复验不符拒锁（变音乐就不是重锁场景）、版本自增永不覆盖（㉘）、`rebind` 出处块如实登记 from/reason/at；`g5_audit_bgm_chain` 零改动自然吃新版合同。合同 reopen 节钉死：**手改旧合同＝伪造，禁止；长期红灯披露不是稳态**。历史封包按 R3 政策不追溯。
+- **⑪ 响度开放项入册**：现行三层规则（口播目标 −14 LUFS／TP −1.5；BGM 垫床 −12dB＋句级 duck −6dB，窗口取对齐产物；amix `normalize=0`、源音频不进成片声轨）＋待决三点（偏差是否升级硬门禁、目标值口径、G2 素材天花板披露）记入项目问题清单；09-24 用户决定**立项响度专项**（归属调研与方案讨论见后续 docs 与交接文档）。
+- **验证**：发版前全量回归 **40 测试文件逐文件单跑全绿**（rebind 新套件 4 例、G3 52 例、G4 contract/assemble/render-profile 夹具随新合同迁移、G5 帧率三态新例）；两封存包在新闸下复验 `status=valid`——`unicorn 交付包-v0.3` 与 sinjuku 基线包，规则收紧不追红历史。
+- **已知限制**：⑪ 响度三点待决（专项设计轮进行中）；重锁通道暂只有单元夹具背书、未在真实修订轮实机走过；平台融入适配（sourceAsset 合同、gN 前缀改名）仍按 09-21 决定挂起；Mimosa 完整扫描结论仍未取得（各 commit 带 library_source_unavailable 兼容放行提示），**不宣称项目安全**。
+
 ## v1.7.0 — 2026-09-24 — **门禁真实性版本**
 
 发布范围＝Leader 反馈轮三件套 R1/R2/R3（`c344757`/`4bccc36`/`7158424`，台账回填 `c11c6e6`/`17ee32e`/`c2c7ad4`）＋⑤ G3 卡出处机械校验（`7273c80`）＋转场流程首次实跑收口入库（`unicorn-gundam-transition-001` 全产物）：
