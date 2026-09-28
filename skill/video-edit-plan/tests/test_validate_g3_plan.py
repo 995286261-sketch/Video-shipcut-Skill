@@ -31,6 +31,15 @@ class ValidateG3PlanTest(unittest.TestCase):
             "projectId": "demo-001",
             "sourceEvidence": [{"assetId": "clip-1", "relativePath": "clip.mp4", "sha256": "fixture-sha", "sourceProbe": {"durationMs": 10_000}}],
         })
+        # 响度接线批一：旁白源文件 + 响度专员计划产物（loudnessPlanRef 的合法指向）
+        self.narration_source = self.root / "narration-audio.wav"
+        self.narration_source.write_bytes(b"fixture-audio")
+        self.loud_plan = self.write_json("loud-plan.json", {
+            "skill": "loudness-expert", "purpose": "loud_plan", "schemaVersion": "0.1",
+            "projectId": "demo-001", "source": str(self.narration_source),
+            "sha256": hashlib.sha256(b"fixture-audio").hexdigest().upper(),
+            "status": "ready", "ceilingLufs": -14.0,
+        })
         self.visual_analysis_path = self.write_json("visual-analysis.json", {
             "schemaVersion": "0.1", "projectId": "demo-001", "node": "G3", "status": "completed", "analysisScope": "fixture",
             "targetAssets": [{"assetId": "clip-1", "sha256": "fixture-sha", "keyframes": [{"sourceMs": 0, "analysisStatus": "completed", "identityStatus": "uncertain", "observedVisuals": "fixture frame"}]}],
@@ -48,9 +57,10 @@ class ValidateG3PlanTest(unittest.TestCase):
 
     def decision(self, **changes):
         value = {
-            "schemaVersion": "0.1", "projectId": "demo-001", "node": "G2",
+            "schemaVersion": "0.2", "projectId": "demo-001", "node": "G2",
             "status": "approved_for_g3", "approvedNarrationRef": str(self.narration),
             "factCitationRef": str(self.facts), "voiceBriefRef": str(self.voice),
+            "loudnessPlanRef": str(self.loud_plan),
             "permittedFactIds": ["f1"], "prohibitedTopics": [], "supersededDraftRefs": ["old.md"],
         }
         value.update(changes)
@@ -158,14 +168,61 @@ class ValidateG3PlanTest(unittest.TestCase):
 
     def test_legacy_approval_field_names_are_rejected(self):
         value = {
-            "schemaVersion": "0.1", "projectId": "demo-001", "node": "G2", "status": "approved_for_g3",
+            "schemaVersion": "0.2", "projectId": "demo-001", "node": "G2", "status": "approved_for_g3",
             "approvedNarrationRef": str(self.narration), "factDecisionRef": str(self.facts),
-            "voiceDecisionRef": str(self.voice), "permittedFactIds": ["f1"], "prohibitedTopics": [],
+            "voiceDecisionRef": str(self.voice), "loudnessPlanRef": str(self.loud_plan),
+            "permittedFactIds": ["f1"], "prohibitedTopics": [],
         }
         decision = self.write_json("legacy-decision.json", value)
         code, output = self.run_cli(self.plan(decision), decision)
         self.assertNotEqual(0, code)
         self.assertIn("factCitationRef", output)
+
+    # ---- 响度接线批一（2026-09-28）：loudnessPlanRef 机验 ----
+
+    def test_missing_loudness_plan_reference_is_rejected(self):
+        path = self.decision()
+        value = json.loads(path.read_text(encoding="utf-8"))
+        del value["loudnessPlanRef"]
+        path.write_text(json.dumps(value), encoding="utf-8")
+        code, output = self.run_cli(self.plan(path), path)
+        self.assertNotEqual(0, code)
+        self.assertIn("loudnessPlanRef", output)
+
+    def test_legacy_schema_01_decision_is_rejected(self):
+        path = self.decision()
+        value = json.loads(path.read_text(encoding="utf-8"))
+        value["schemaVersion"] = "0.1"
+        path.write_text(json.dumps(value), encoding="utf-8")
+        code, output = self.run_cli(self.plan(path), path)
+        self.assertNotEqual(0, code)
+        self.assertIn("must be 0.2", output)
+
+    def test_foreign_skill_loudness_artifact_is_rejected(self):
+        fake = self.write_json("loud-plan-fake.json", {"skill": "music-expert", "purpose": "loud_plan"})
+        decision = self.decision(loudnessPlanRef=str(fake))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("loudness-expert loud_plan artifact", output)
+
+    def test_loudness_source_drift_invalidates_approval(self):
+        decision = self.decision()
+        self.narration_source.write_bytes(b"re-synthesized-different-audio")
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("sha256 mismatch", output)
+
+    def test_blocked_loudness_plan_is_a_valid_disclosure(self):
+        blocked = self.write_json("loud-plan-blocked.json", {
+            "skill": "loudness-expert", "purpose": "loud_plan", "schemaVersion": "0.1",
+            "projectId": "demo-001", "source": str(self.narration_source),
+            "sha256": hashlib.sha256(b"fixture-audio").hexdigest().upper(),
+            "status": "blocked_TP", "ceilingLufs": -18.0,
+            "exits": ["把 TP 上限提到至少 -0.5 dBTP", "接受带警告交付"],
+        })
+        decision = self.decision(loudnessPlanRef=str(blocked))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
 
     def test_directory_approval_reference_is_rejected(self):
         decision = self.decision(factCitationRef=str(self.root))

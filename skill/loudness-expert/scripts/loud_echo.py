@@ -39,20 +39,20 @@ def render(doc: dict) -> list:
     measured = doc.get("measured") or doc.get("masterMeasured") or {}
     if purpose == "loud_plan":
         lines.append("| 规划实测（loudnorm 口径） | I {0} LUFS ／ TP {1} dBTP ／ LRA {2} LU |".format(
-            fmt(measured.get("inputI")), fmt(measured.get("inputTp")), fmt(measured.get("inputLra"), " LU")))
+            fmt(measured.get("inputI")), fmt(measured.get("inputTp")), fmt(measured.get("inputLra"))))
         target = doc.get("targetProfile") or {}
         lines.append("| 目标 | I {0} LUFS ／ TP ≤ {1} dBTP ／ LRA {2} LU |".format(
             fmt(target.get("integratedLufs")), fmt(target.get("truePeakDbtp")),
-            fmt(target.get("lraTargetLu"), " LU")))
+            fmt(target.get("lraTargetLu"))))
         lines.append("| 线性增益 | {0} dB（估算后 TP {1} dBTP） |".format(
             fmt(doc.get("gainDb")), fmt(doc.get("estimatedTruePeak"))))
-        lines.append("| 天花板（现 TP 上限下最响可到） | {0} LUFS |".format(fmt(doc.get("ceilingLufs"), " LUFS")))
+        lines.append("| 天花板（现 TP 上限下最响可到） | {0} LUFS |".format(fmt(doc.get("ceilingLufs"))))
         if doc.get("exits"):
             lines.append("| 出路 | " + "；".join(doc["exits"]) + " |")
     else:
         lines.append("| 实测（ebur128 验收口径） | I {0} LUFS ／ TP {1} dBTP ／ LRA {2} LU |".format(
             fmt(measured.get("integratedLufs")), fmt(measured.get("truePeakDbtp")),
-            fmt(measured.get("loudnessRangeLu"), " LU")))
+            fmt(measured.get("loudnessRangeLu"))))
     for item in doc.get("checks") or []:
         lines.append("| 复核 {0} | {1}：{2} |".format(item["check"],
                                                      "过" if item["pass"] else "不过", item["detail"]))
