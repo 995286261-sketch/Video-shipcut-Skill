@@ -9,6 +9,7 @@
 交付包-v<版本>/
 ├── final-video.mp4  cover.jpg  subtitles.srt  subtitle-srt-check.json
 ├── transition-audit.json
+├── loudness-audit.json（条件必备：edit-plan 带 packagingDecisions.loudnessTarget 时；validator 按产物时代判定）
 ├── source-timecode-list.json  edit-plan.json  edit-timeline.md
 ├── export-config.json  metadata-validation-report.json
 ├── human-review-decision.json  delivery-manifest.json
@@ -22,6 +23,8 @@
 **`subtitle-srt-check.json`（2026-09-21 新增，㊍ 交付侧防线）**：由字幕专员 `skill/subtitle-expert/scripts/subtitle_check_srt.py` 对包内 `subtitles.srt` 运行后存档（stdout JSON）。validator 校验握手：`skill=="subtitle-expert"`、`purpose=="subtitle_check_srt"`、`status=="passed"`，且报告 `sha256` 与包内 `subtitles.srt` 实测哈希一致（报告必须是**这份文件**的，防止改稿后忘复检）。字幕格式规则本体（零填充时间戳、单调不重叠等）在专员侧，G5 不再自持正则。防线分工如实声明：本复检只保证**结构与单调**；时基正确性（10× 错位形态）由 G3 `subtitle_validate_layout.py --srt` 逐 cue 对时把关，交付包内没有批准 ASS，G5 单独看不可能发现整体重定时。旧封存包按当时合同有效、不追溯重验（Leader 反馈 R3 后升级：每个此类包内必须带机器可读的 `contract-era.json` 版本标记，见下节；仓内样例自洽测试强制标记在场）。
 
 **`transition-audit.json`（2026-09-21 批③ 新增，转场挂空合同防线）**：由转场专员 `skill/transition-expert/scripts/transition_report.py` 对 G4 装配记录与《G4-转场执行指令》复检后存档。validator 校验握手：`skill=="transition-expert"`、`purpose=="transition_check"`、`status=="passed"`、`gridInvariant==true`，且 `master.sha256` 与包内 `final-video.mp4` 实测哈希一致（报告必须指向**这支成片**，重渲后未复检即 stale）。无转场项目该报告照常存在（`transitions: []`、passed），路径与旧管线一致。防线分工如实声明：本复检只保证**滤镜参数==批准指令**（多做=未批准、缺做=静默丢失、黑场起点平移=网格事故）；观感（混合是否自然、黑场是否够味）仍须按 g5-choice-cards 转场中点必检帧目视，机器绿灯不背书观感（⑧纪律）。旧封存包同上，不追溯重验。
+
+**`loudness-audit.json`（2026-09-28 响度批四 新增，交付响度防线）**：由响度专员 `skill/loudness-expert/scripts/loud_verify.py` 对最终成片独立复测后存档（`--plan <响度-归一化计划> --master final-video.mp4`；blocked 计划**必须**加 `--assembly-record`，对账装配记录 `loudness` 块的 planRef sha / mode=controlled-dynamic / targetProfile——否则拿旧 ready 计划就能给动态让步成片开绿灯）。validator 校验握手：`skill=="loudness-expert"`、`purpose=="loud_verify"`、`targetProfile` 逐字等于计划 `packagingDecisions.loudnessTarget`（卡说 X 机器渲 X 贯穿到最后一跳）、`masterSha256` 与包内成片一致（重渲未复检即 stale）。三态语义：`passed` 干净入册；`disclosed-exceedance` 必须 `human-review-decision.acceptedWarnings` 点名"响度/loudness"才关单（丙口径摊开确认延伸到人审闸，永不静默）；`failed` 直接 invalid。`--media` 复测：现测 ebur128 整片/真峰与报告对账，>0.3 LU 或 >0.3 dB 即"封版后又动过媒体"，与哈希检查互补（哈希抓字节变化，复测抓换件重渲漂移）。**条件 REQUIRED 的时代写在产物里**：判定=包内 `edit-plan.json` 是否带 `packagingDecisions.loudnessTarget`（批二起机装必带）。批二前历史封包（含 sinjuku 基线）天然不触发、零影响，无需为响度新增任何标记（与字幕/转场那种一刀切 REQUIRED 不同，后者才需要 `contract-era.json`）；更严禁给旧包补生成响度审计——旧包不存在该计划口径，硬造即造假（R3）。边界比较纪律：容差判定带 1e-9 浮点容差（批四定标事件：真成片 TP −1.2 对 −1.5+0.3 曾被误判越限）。
 
 ## delivery-manifest.json（builder 产出，validator `CONTRACT_FIELDS` 逐项非空）
 

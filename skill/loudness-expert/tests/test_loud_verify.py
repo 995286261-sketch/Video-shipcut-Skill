@@ -116,14 +116,60 @@ class VerifyRejectionTests(unittest.TestCase):
             self.assertEqual(code, 1)
             self.assertIn("身份不符", doc["error"])
 
-    def test_blocked_plan_refused(self):
+    def test_blocked_plan_without_assembly_record_refused(self):
+        # 批四丙口径：blocked 验收不再"一概拒"，但没有 G4 记账对账照样拒——让步必须可对账。
         with tempfile.TemporaryDirectory() as tmp:
             plan_path = self._plan_doc(Path(tmp), status="blocked_true-peak")
             code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path),
                                                    "--master", str(plan_path),
                                                    "--output-dir", tmp])
             self.assertEqual(code, 1)
-            self.assertIn("重规划", doc["error"])
+            self.assertIn("--assembly-record", doc["error"])
+
+    def test_bogus_plan_status_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path = self._plan_doc(Path(tmp), status="half-baked")
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path),
+                                                   "--master", str(plan_path),
+                                                   "--output-dir", tmp])
+            self.assertEqual(code, 1)
+            self.assertIn("既非 ready 也非 blocked", doc["error"])
+
+    def _blocked_pair(self, tmp: Path, **assembly_overrides) -> "tuple[Path, Path]":
+        """blocked 计划 + 逐项对得上的 G4 装配记录（可整体覆写记账字段演负向）。"""
+        plan_path = self._plan_doc(tmp, status="blocked_true-peak")
+        loud_block = {"planRef": {"path": str(plan_path), "sha256": loud_core.sha256_file(plan_path)},
+                      "mode": "controlled-dynamic",
+                      "targetProfile": loud_core.PROFILES["video"]}
+        loud_block.update(assembly_overrides)
+        assembly = {"node": "G4", "loudness": loud_block}
+        assembly_path = tmp / "assembly.json"
+        assembly_path.write_text(json.dumps(assembly, ensure_ascii=False), encoding="utf-8")
+        return plan_path, assembly_path
+
+    def test_blocked_binding_plan_hash_drift_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path, assembly_path = self._blocked_pair(Path(tmp), planRef={"path": "x", "sha256": "F" * 64})
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(plan_path),
+                                                   "--output-dir", tmp, "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 1)
+            self.assertIn("绑定对账失败", doc["error"])
+
+    def test_blocked_binding_wrong_mode_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path, assembly_path = self._blocked_pair(Path(tmp), mode="linear-verbatim")
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(plan_path),
+                                                   "--output-dir", tmp, "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 1)
+            self.assertIn("controlled-dynamic", doc["error"])
+
+    def test_blocked_binding_profile_drift_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path, assembly_path = self._blocked_pair(Path(tmp), targetProfile=loud_core.PROFILES["podcast"])
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(plan_path),
+                                                   "--output-dir", tmp, "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 1)
+            self.assertIn("targetProfile", doc["error"])
 
     def test_missing_master_refused(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -133,6 +179,61 @@ class VerifyRejectionTests(unittest.TestCase):
                                                    "--output-dir", tmp])
             self.assertEqual(code, 1)
             self.assertIn("master", doc["error"])
+
+
+@unittest.skipUnless(HAS_FFMPEG, "ffmpeg 缺席——blocked 档端到端验收用例不适用（skip 非通过）")
+class BlockedTierE2ETests(unittest.TestCase):
+    """批四丙口径验收面：blocked 计划+合规 G4 记账 → passed/disclosed-exceedance 两态如实；
+    TP 超限即使 blocked 也 failed（两档共同硬闸，限幅链路坏≠响度取舍）。"""
+
+    def _pair(self, tmp: Path) -> "tuple[Path, Path]":
+        plan_doc = {"skill": "loudness-expert", "purpose": "loud_plan", "status": "blocked_true-peak",
+                    "targetProfile": dict(loud_core.PROFILES["video"]), "version": "v0.1",
+                    "ceilingLufs": -22.8}
+        plan_path = tmp / "plan.json"
+        plan_path.write_text(json.dumps(plan_doc, ensure_ascii=False), encoding="utf-8")
+        loud_block = {"planRef": {"path": str(plan_path), "sha256": loud_core.sha256_file(plan_path)},
+                      "mode": "controlled-dynamic", "targetProfile": dict(loud_core.PROFILES["video"])}
+        assembly_path = tmp / "assembly.json"
+        assembly_path.write_text(json.dumps({"node": "G4", "loudness": loud_block}, ensure_ascii=False), encoding="utf-8")
+        return plan_path, assembly_path
+
+    def test_blocked_plan_master_on_target_passes_with_assembly_trail(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path, work = Path(tmp), Path(tmp) / "work"
+            plan_path, assembly_path = self._pair(tmp_path)
+            src = make_sine(tmp_path, "src.wav", 0.02)
+            master = tmp_path / "master.wav"
+            self.assertTrue(loud_core.render_with_chain(src, "loudnorm=I=-14:TP=-1.5:LRA=9", master))
+            code, audit = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(master),
+                                                     "--output-dir", str(work), "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 0)
+            self.assertEqual(audit["status"], "passed")
+            self.assertEqual(audit["planStatus"], "blocked_true-peak")
+            self.assertEqual(audit["assemblyRef"]["sha256"], loud_core.sha256_file(assembly_path))
+            self.assertEqual(audit["targetProfile"], loud_core.PROFILES["video"])
+
+    def test_blocked_plan_master_exceeding_is_disclosed_not_failed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path, work = Path(tmp), Path(tmp) / "work"
+            plan_path, assembly_path = self._pair(tmp_path)
+            master = make_sine(tmp_path, "quiet.wav", 0.01)  # 安静正弦：I 远低于 −14，TP 合规
+            code, audit = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(master),
+                                                     "--output-dir", str(work), "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 1)
+            self.assertEqual(audit["status"], "disclosed-exceedance")
+            self.assertIsNotNone(audit["disclosureNote"])
+            self.assertIsNone(audit["failNote"])
+
+    def test_blocked_plan_master_over_tp_fails_even_in_blocked_tier(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path, work = Path(tmp), Path(tmp) / "work"
+            plan_path, assembly_path = self._pair(tmp_path)
+            master = make_sine(tmp_path, "loud.wav", 8.0)  # 削顶到满幅（本 lavfi 正弦默认电平低，×8 实测 TP≥−0.3）：超 −1.5+0.3 余量
+            code, audit = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(master),
+                                                     "--output-dir", str(work), "--assembly-record", str(assembly_path)])
+            self.assertEqual(code, 1)
+            self.assertEqual(audit["status"], "failed")
 
 
 if __name__ == "__main__":

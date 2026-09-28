@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -64,6 +65,68 @@ def check_transition_audit(bundle: Path, errors: list[str]) -> None:
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def parse_ebur128_summary(text: str) -> dict:
+    """合同 §4 验收口径解析（跨专员零 import，与 loudness-expert/g4_assemble 同源镜像、
+    合同改时三处同步）：取最后一次汇总、拒绝静音哨兵。"""
+    integrated, true_peak = None, None
+    matches = re.findall(r"I:\s+(-?\d+\.?\d*)\s*LUFS", text)
+    if matches:
+        value = float(matches[-1])
+        integrated = None if value <= -69.9 else value
+    matches = re.findall(r"True peak:\s*\n?\s*Peak:\s+(-?\d+\.?\d*)\s*dBFS", text)
+    if matches:
+        value = float(matches[-1])
+        true_peak = None if value <= -99.9 else value
+    return {"integratedLufs": integrated, "truePeakDbtp": true_peak, "engine": "ffmpeg-ebur128"}
+
+
+def measure_ebur128(path: Path) -> dict:
+    result = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+                             "-filter:a", "ebur128=peak=true", "-f", "null", "-"],
+                            capture_output=True, text=True, encoding="utf-8", errors="replace")
+    return parse_ebur128_summary((result.stderr or "") + (result.stdout or ""))
+
+
+def check_loudness_audit(bundle: Path, plan: dict, review: dict, errors: list[str]) -> None:
+    """响度接线批四（2026-09-28，丙口径交付侧收口）。条件 REQUIRED=时代编码在产物里：
+    包内 edit-plan.json 带 packagingDecisions.loudnessTarget（批二起新合同计划必带，
+    validate_g3_plan 机验）即必须交《响度-验收审计》入册；批二前封存的老包无此字段、
+    不追溯（R3）——sinjuku 基线不伤、也不许为老包补生成审计（补=造假）。
+    校验四件：身份头；status ∈ passed/disclosed-exceedance（failed 拒关单；disclosed
+    必须人工 acceptedWarnings 点名响度=知情接受留痕，永不静默）；审计对账的目标档==包内
+    计划镜像（三口径在交付侧闭合）；masterSha256==包内成片实测（报告必须说这一支片子）。"""
+    target = (plan.get("packagingDecisions") or {}).get("loudnessTarget")
+    report_path = bundle / "loudness-audit.json"
+    if not isinstance(target, dict):
+        return
+    if not report_path.is_file():
+        errors.append("missing loudness-audit.json — run loudness-expert/scripts/loud_verify.py "
+                      "(--plan 响度-归一化计划 --master final-video.mp4 --assembly-record G4装配记录) "
+                      "and file the report in the bundle (响度批四)")
+        return
+    report = load(report_path)
+    if report.get("skill") != "loudness-expert" or report.get("purpose") != "loud_verify":
+        errors.append("loudness-audit.json is not a loudness-expert verification report")
+        return
+    status = report.get("status")
+    if status == "failed":
+        errors.append(f"loudness audit failed: {json.dumps(report.get('checks', []), ensure_ascii=False)[:180]}")
+    elif status == "disclosed-exceedance":
+        accepted = review.get("acceptedWarnings") or []
+        if not any(("响度" in str(w)) or ("loudness" in str(w).lower()) for w in accepted):
+            errors.append("disclosed-exceedance needs explicit human acceptance: acceptedWarnings must name 响度/loudness "
+                          "(批四丙口径——超差摊开经人知情接受才关单，不静默)")
+    elif status != "passed":
+        errors.append(f"loudness-audit.json status={status!r} not accepted (only passed/disclosed-exceedance)")
+    if report.get("targetProfile") != target:
+        errors.append(f"loudness-audit.json targetProfile {report.get('targetProfile')!r} != edit-plan "
+                      f"packagingDecisions.loudnessTarget {target!r} — 验收拿的是另一档计划（卡说 X，机器渲 X）")
+    video = bundle / "final-video.mp4"
+    if video.is_file() and str(report.get("masterSha256", "")).upper() != digest(video):
+        errors.append("loudness-audit.json is stale: recorded masterSha256 does not match the bundle's "
+                      "final-video.mp4 (re-run loud_verify after any re-render)")
 
 
 def digest(path: Path) -> str:
@@ -134,6 +197,24 @@ def validate_media(bundle: Path, export: dict, errors: list[str]) -> None:
                 errors.append("final-video.mp4 duration does not match export-config")
         if audio_profile.get("codec") and (len(audio) != 1 or audio[0].get("codec_name") != audio_profile["codec"]):
             errors.append("final-video.mp4 audio does not match export-config")
+        # 响度批四：--media 复测对账——《响度-验收审计》记的数必须能在包内这一支成片上
+        # 用同口径（ebur128）复现（合同 §4 同文件双口径差 >0.5 LU=引擎异常；这里是同口径
+        # 复测，>0.3 即报告与成片不是同一份东西/引擎漂移，拒收）。哈希新鲜由主校验管，
+        # 数值可复现由本复测管——两层各拦各的病。
+        audit_path = bundle / "loudness-audit.json"
+        if audit_path.is_file() and visual:
+            try:
+                audit = load(audit_path)
+            except json.JSONDecodeError:
+                audit = {}
+            recorded = audit.get("masterMeasured") or {}
+            if audit.get("purpose") == "loud_verify" and recorded.get("integratedLufs") is not None:
+                remeasured = measure_ebur128(video)
+                if remeasured["integratedLufs"] is None or abs(remeasured["integratedLufs"] - recorded["integratedLufs"]) > 0.3:
+                    errors.append(f"loudness audit does not reproduce on --media re-measure: recorded {recorded['integratedLufs']} LUFS, re-measured {remeasured['integratedLufs']} LUFS (report is not about this file, or engine drift)")
+                elif recorded.get("truePeakDbtp") is not None and remeasured["truePeakDbtp"] is not None \
+                        and abs(remeasured["truePeakDbtp"] - recorded["truePeakDbtp"]) > 0.3:
+                    errors.append("loudness audit true-peak does not reproduce on --media re-measure — re-run loud_verify before sealing")
 
 
 def main() -> int:
@@ -182,6 +263,7 @@ def main() -> int:
     if not set(QA_CHECKS).issubset(qa.get("checks", {})): errors.append("qa report lacks required machine checks")
     check_delivery_srt(bundle, errors)
     check_transition_audit(bundle, errors)
+    check_loudness_audit(bundle, plan, review, errors)
     if manifest.get("status", "").startswith("completed") and not (review.get("status") == "approved" and review.get("decision") == "accepted"):
         errors.append("completed bundle lacks accepted human review")
     if manifest.get("authorization") in (None, "") or manifest.get("distribution") in (None, ""): errors.append("authorization or distribution boundary missing")

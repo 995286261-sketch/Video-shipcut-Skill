@@ -23,6 +23,8 @@ class G5DeliveryTest(unittest.TestCase):
         self.write("transition-audit.json", json.dumps({"skill": "transition-expert", "purpose": "transition_check", "status": "passed",
                                                         "gridInvariant": True, "transitions": [],
                                                         "master": {"path": "final-video.mp4", "sha256": hashlib.sha256(b"video").hexdigest().upper()}}).encode())
+        self.loud_target = {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0}
+        self.loud_audit()
         self.write("README.md", b"readme"); self.write("failure-samples/README.md", b"real failure\n")
         self.write("edit-timeline.md", b"| Segment | Output time | Source |\n| --- | --- | --- |\n")
         segments = []
@@ -32,7 +34,7 @@ class G5DeliveryTest(unittest.TestCase):
             segment = {"segmentId": f"s{index}", "assetId": "source-a", "sourceSha256": "A" * 64, "sourceStartMs": index * 1000, "sourceEndMs": (index + 1) * 1000}
             segments.append(segment); chapters.append({"chapterId": f"c{index}", "output": name, "segments": [segment["segmentId"]]})
         self.json("source-timecode-list.json", {"projectId": self.project, "chapters": chapters, "segments": segments})
-        self.json("edit-plan.json", {"projectId": self.project, "editPlan": {"timeline": ["s0", "s1", "s2"]}, "humanReviewPoints": ["full_playback"], "evidenceRefs": ["G2-evidence.json"], "warnings": ["practice"]})
+        self.json("edit-plan.json", {"projectId": self.project, "editPlan": {"timeline": ["s0", "s1", "s2"]}, "packagingDecisions": {"fps": 24, "loudnessTarget": dict(self.loud_target)}, "humanReviewPoints": ["full_playback"], "evidenceRefs": ["G2-evidence.json"], "warnings": ["practice"]})
         artifacts = {"finalVideo": self.artifact("final-video.mp4"), "cover": self.artifact("cover.jpg"), "subtitles": self.artifact("subtitles.srt"), "chapterClips": [self.artifact(f"clips/chapter-{i + 1:02d}.mp4") for i in range(3)]}
         checks = {key: {"status": "pass"} for key in ("decode", "videoCodec", "dimensions", "fps", "audio", "duration", "blackFrames", "silence", "duplicateSegments", "cover")}
         self.json("metadata-validation-report.json", {"projectId": self.project, "status": "completed", "finishedAt": "2026-08-19", "checks": checks, "artifacts": artifacts})
@@ -48,6 +50,19 @@ class G5DeliveryTest(unittest.TestCase):
 
     def artifact(self, name):
         data = (self.bundle / name).read_bytes(); return {"path": name, "sha256": hashlib.sha256(data).hexdigest().upper()}
+
+    def loud_audit(self, **overrides):
+        """响度批四夹具：合法 passed 审计一份（可逐项覆写演负向）。"""
+        doc = {"skill": "loudness-expert", "purpose": "loud_verify", "status": "passed",
+               "planStatus": "ready", "targetProfile": dict(self.loud_target),
+               "masterSha256": hashlib.sha256(b"video").hexdigest().upper(),
+               "masterMeasured": {"integratedLufs": -14.0, "truePeakDbtp": -1.2, "engine": "ffmpeg-ebur128"},
+               "checks": [{"check": "integratedWithinTolerance", "pass": True, "detail": "实测 -14.0 vs 目标 -14.0"},
+                          {"check": "truePeakWithinCeiling", "pass": True, "detail": "实测 TP -1.2"}],
+               "toleranceLu": 1.0, "toleranceSource": "合同默认"}
+        doc.update(overrides)
+        self.json("loudness-audit.json", doc)
+        return doc
 
     def run_cli(self, script, *args, code=0):
         result = subprocess.run([sys.executable, str(script), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
@@ -94,6 +109,57 @@ class G5DeliveryTest(unittest.TestCase):
                                             "master": {"path": "final-video.mp4", "sha256": hashlib.sha256(b"video").hexdigest().upper()}})
         result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
         self.assertIn("transition audit failed", " ".join(result["errors"]))
+
+    # ---- 响度接线批四（2026-09-28，丙口径交付侧收口）----
+
+    def test_rejects_missing_loudness_audit(self):
+        (self.bundle / "loudness-audit.json").unlink()
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("missing loudness-audit.json", " ".join(result["errors"]))
+
+    def test_rejects_foreign_or_stale_loudness_audit(self):
+        # 身份拦（外来产物不许冒充验收审计）+ 新鲜拦（报告说的是另一支片子=重渲未复检）。
+        self.loud_audit(skill="someone-else")
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("not a loudness-expert verification report", " ".join(result["errors"]))
+        self.loud_audit(masterSha256="F" * 64)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("loudness-audit.json is stale", " ".join(result["errors"]))
+
+    def test_rejects_failed_or_off_profile_loudness_audit(self):
+        self.loud_audit(status="failed", checks=[{"check": "integratedWithinTolerance", "pass": False, "detail": "偏差 +5.0"}])
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("loudness audit failed", " ".join(result["errors"]))
+        # 三口径交付侧闭合：审计对账档 != 包内计划镜像 → 拒（验收拿的是另一档计划）。
+        self.loud_audit(status="passed", targetProfile={"integratedLufs": -16.0, "truePeakDbtp": -2.0, "lraTargetLu": 7.0})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("packagingDecisions.loudnessTarget", " ".join(result["errors"]))
+
+    def test_disclosed_exceedance_needs_named_human_acceptance(self):
+        # blocked 档合法形态，但关单必须人点名接受响度让步——不静默。
+        self.loud_audit(status="disclosed-exceedance", planStatus="blocked_true-peak",
+                        masterMeasured={"integratedLufs": -15.6, "truePeakDbtp": -1.5, "engine": "ffmpeg-ebur128"})
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("acceptedWarnings must name", " ".join(result["errors"]))
+        self.json("human-review-decision.json", {"projectId": self.project, "status": "approved", "decision": "accepted",
+                                                 "acceptedWarnings": ["响度：整片实测 −15.6 LUFS 对目标 −14.0（blocked 档让步幅度，G4 已摊开）"]})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle)
+        self.assertEqual("valid", result["status"])
+
+    def test_pre_batch2_plan_era_needs_no_loudness_audit(self):
+        # R3 时代编码在产物：批二前计划无 packagingDecisions.loudnessTarget → 审计不强制
+        # （sinjuku 基线不伤；也不许为老包补生成审计——补=造假）。
+        (self.bundle / "loudness-audit.json").unlink()
+        plan = json.loads((self.bundle / "edit-plan.json").read_text(encoding="utf-8"))
+        del plan["packagingDecisions"]["loudnessTarget"]
+        self.json("edit-plan.json", plan)
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle)
+        self.assertEqual("valid", result["status"])
 
     def test_rejects_hash_or_human_review_failure(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
