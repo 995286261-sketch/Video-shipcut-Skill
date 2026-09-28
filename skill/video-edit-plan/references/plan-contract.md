@@ -34,6 +34,8 @@ G3 编辑计划已实现为人工审核规划，输入为已校验素材包、G2
 
 **顶层 fps 机器字段（硬约束，转场实跑⑧甲/⑨，2026-09-24 用户裁决）**：计划必须携带顶层 `fps`（正整数）且等于 `packagingDecisions.fps` 镜像；`editPlan.fps` 第二位置废止。G4 全链唯一继承路径=计划顶层 `fps` → `g4_prepare` 落 manifest `targetFps` → render/assemble 消费；manifest 无 `targetFps` 且无显式 `--fps` 时 G4 罢工（旧 `default-24` 静默兜底已删除）。`g5_validate --media` 另对 export-config `video.fps` 与成片实探帧率强制对账（⑧丙），缺声明即错。
 
+**响度目标档双式记账（硬约束，响度接线批二，2026-09-28 用户"接"令）**：计划必须携带 `packagingDecisions.loudnessTarget`（三元组 `integratedLufs`/`truePeakDbtp`/`lraTargetLu`），**逐字等于** G2 决定 `loudnessPlanRef` 所指向 loudness-expert 计划的 `targetProfile`——G2 按哪档实测与规划，包装决定就照哪档记账，终审卡"响度目标档"行逐字=本字段（代码即规格）。`validate_g3_plan.py` 批量拒缺拒差；历史 0.1 决定的已封项目不追溯（R3）。下游：批三 G4 的 `loud_plan` 重规划必须沿用本目标档（改档=回 G3 重批）；批四 G5 验收审计对账同此三元组。接线状态以 `skill/loudness-expert/references/loudness-contract.md` §8 为准。
+
 ## G3 BGM 计划（bgmPlan，机器化）
 
 素材包 `07_授权音频` 中存在带 `bgmRegistration` 的音频资产时，计划**必须**含 `bgmPlan`，且校验必须同时传 `--material-pack <material-pack.json> --bgm-alignment <BGM-对齐建议-v0.2.json>`。BGM 数字禁止手抄：002 的教训是"数字有出处，但人肉抄写让出处不可查证"。规格：

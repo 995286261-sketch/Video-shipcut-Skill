@@ -433,6 +433,7 @@ def main() -> int:
             except SoftFail:
                 pass
     validate_packaging(plan)
+    validate_loudness_target(plan, decision)
     validate_review_and_approval(plan, plan_status, args, subject_confirmation, ledger, segments)
     return report(plan_status, len(segments))
 
@@ -592,6 +593,35 @@ def validate_packaging(plan: dict) -> None:
             check(end <= timeline_total, f"packaging chapter card {index} [{start},{end}) exceeds timelineDurationMs {timeline_total}")
         if isinstance(end, int):
             previous_end = end
+
+
+def validate_loudness_target(plan: dict, decision: dict) -> None:
+    """响度接线批二（2026-09-28）：目标档双式记账——包装决定的响度三元组必须逐字等于
+    G2 决定 `loudnessPlanRef` 所指向专员计划的 `targetProfile`（帧率⑧甲同型：卡说 X，
+    机器渲 X）。G2 决定 0.2 起恒带 loudnessPlanRef，因此新计划必须带
+    packagingDecisions.loudnessTarget——缺字段/错数/读不到专员计划一律拒批，
+    不许"没测就先按 −14"式的猜测默认。"""
+    packaging = plan.get("packagingDecisions")
+    target = packaging.get("loudnessTarget") if isinstance(packaging, dict) else None
+    if not isinstance(target, dict):
+        check(False, "packagingDecisions.loudnessTarget is required (响度批二: 目标档进包装决定双式记账，"
+                     "逐字=G2 响度计划 targetProfile；卡说 X，机器渲 X)")
+        return
+    plan_ref = decision.get("loudnessPlanRef") if isinstance(decision, dict) else None
+    loud = None
+    if isinstance(plan_ref, str) and plan_ref.strip():
+        try:
+            loud = json.loads(Path(plan_ref).read_text(encoding="utf-8-sig"))
+        except (OSError, ValueError):
+            loud = None
+    if not isinstance(loud, dict) or loud.get("skill") != "loudness-expert" or loud.get("purpose") != "loud_plan":
+        check(False, "响度批二: decision loudnessPlanRef 读不到 loudness-expert loud_plan 产物——对账不许猜")
+        return
+    expected = loud.get("targetProfile") if isinstance(loud.get("targetProfile"), dict) else {}
+    for field in ("integratedLufs", "truePeakDbtp", "lraTargetLu"):
+        check(target.get(field) == expected.get(field),
+              f"packagingDecisions.loudnessTarget.{field} {target.get(field)!r} must equal G2 loudness plan "
+              f"targetProfile.{field} {expected.get(field)!r} — 卡说 X，机器渲 X")
 
 
 def validate_review_and_approval(plan: dict, plan_status: str, args, subject_confirmation, ledger, segments) -> None:

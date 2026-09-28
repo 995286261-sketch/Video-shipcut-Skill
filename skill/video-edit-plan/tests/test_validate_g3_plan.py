@@ -34,11 +34,12 @@ class ValidateG3PlanTest(unittest.TestCase):
         # 响度接线批一：旁白源文件 + 响度专员计划产物（loudnessPlanRef 的合法指向）
         self.narration_source = self.root / "narration-audio.wav"
         self.narration_source.write_bytes(b"fixture-audio")
+        self.loud_target = {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0}
         self.loud_plan = self.write_json("loud-plan.json", {
             "skill": "loudness-expert", "purpose": "loud_plan", "schemaVersion": "0.1",
             "projectId": "demo-001", "source": str(self.narration_source),
             "sha256": hashlib.sha256(b"fixture-audio").hexdigest().upper(),
-            "status": "ready", "ceilingLufs": -14.0,
+            "status": "ready", "ceilingLufs": -14.0, "targetProfile": dict(self.loud_target),
         })
         self.visual_analysis_path = self.write_json("visual-analysis.json", {
             "schemaVersion": "0.1", "projectId": "demo-001", "node": "G3", "status": "completed", "analysisScope": "fixture",
@@ -71,6 +72,9 @@ class ValidateG3PlanTest(unittest.TestCase):
             "schemaVersion": "0.1", "projectId": "demo-001", "status": "review_required",
             "sourceAudioPolicy": "exclude", "fps": 30, "narrationDraft": str(self.narration),
             "narrationDecisionRef": str(decision_path), "semanticBeatRef": str(self.semantic_beats_path), "humanReviewPoints": ["review"],
+            "timelineDurationMs": 1_000,
+            # 响度接线批二：包装决定携带镜像三元组（逐字=G2 专员计划 targetProfile）
+            "packagingDecisions": {"fps": 30, "loudnessTarget": dict(self.loud_target)},
             "durationDecision": {"targetDurationSec": 10, "narrationEstimatedDurationSec": 8, "resolution": "preserve_target_with_editorial_padding", "decisionReason": "fixture permits a short deliberate outro.", "intentionalSilence": [{"startMs": 8_000, "endMs": 10_000, "purpose": "outro", "bgmPolicy": "approved_bgm_fade_out"}], "antiFillRule": {"disallowRepeatedSegments": True, "disallowLoops": True, "disallowMeaninglessSlowMotion": True, "disallowUnverifiedFactPadding": True}},
             "segments": [{"segmentId": "s1", "assetId": "clip-1", "startMs": 0, "endMs": 1_000, "outputStartMs": 0, "outputEndMs": 1_000, "outputDurationMs": 1_000, "mappingMode": "one_to_one", "reason": "fixture", "evidenceRefs": ["f1"], "semanticBeatIds": ["beat-001"], "narrationStartMs": 0, "narrationEndMs": 1_000, "narrationText": "展示主体。", "narrativeClaim": {"type": "object", "minimumVisibleEvidence": "目标主体在画面内可辨认。"}, "semanticAlignment": {"status": "direct_match", "evidence": "起点、中点和终点帧均可辨认目标主体。"}, "visualVerification": {"status": "verified", "frameManifestRef": "G3-visual-verification-frames.json", "frameRefs": ["start.jpg", "middle.jpg", "end.jpg"], "observedVisuals": "已查看起点、中点和终点帧，主体位于画面中央。", "verifiedBy": "agent", "verifiedAt": "2026-08-20T00:00:00Z"}}],
             "editPlan": {"timeline": [{"segmentId": "s1"}]},
@@ -217,10 +221,46 @@ class ValidateG3PlanTest(unittest.TestCase):
             "skill": "loudness-expert", "purpose": "loud_plan", "schemaVersion": "0.1",
             "projectId": "demo-001", "source": str(self.narration_source),
             "sha256": hashlib.sha256(b"fixture-audio").hexdigest().upper(),
-            "status": "blocked_TP", "ceilingLufs": -18.0,
+            "status": "blocked_TP", "ceilingLufs": -18.0, "targetProfile": dict(self.loud_target),
             "exits": ["把 TP 上限提到至少 -0.5 dBTP", "接受带警告交付"],
         })
         decision = self.decision(loudnessPlanRef=str(blocked))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
+
+    # ---- 响度接线批二（2026-09-28）：目标档双式记账 ----
+
+    def test_missing_loudness_target_in_packaging_is_rejected(self):
+        decision = self.decision()
+        plan_path = self.plan(decision)
+        content = json.loads(plan_path.read_text(encoding="utf-8"))
+        del content["packagingDecisions"]["loudnessTarget"]
+        plan_path.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(plan_path, decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("loudnessTarget is required", output)
+
+    def test_loudness_target_mismatch_with_g2_plan_is_rejected(self):
+        decision = self.decision()
+        plan_path = self.plan(decision)
+        content = json.loads(plan_path.read_text(encoding="utf-8"))
+        content["packagingDecisions"]["loudnessTarget"]["integratedLufs"] = -16.0
+        plan_path.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(plan_path, decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("must equal G2 loudness plan", output)
+
+    def test_loudness_plan_pointer_to_foreign_skill_is_rejected_at_g3(self):
+        fake = self.write_json("loud-plan-fake.json", {"skill": "music-expert", "purpose": "loud_plan"})
+        decision = self.decision(loudnessPlanRef=str(fake))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        payload = json.loads(output.strip().splitlines()[-1])
+        self.assertTrue(any("decision loudnessPlanRef 读不到" in error for error in payload.get("errors", [])),
+                        output)
+
+    def test_packaging_loudness_target_match_passes(self):
+        decision = self.decision()
         code, output = self.run_cli(self.plan(decision), decision)
         self.assertEqual(0, code, output)
 
@@ -684,7 +724,8 @@ class ValidateG3PlanTest(unittest.TestCase):
             "status": status, "skill": "subtitle-expert", "purpose": "subtitle_check_srt",
             "file": str(srt), "sha256": digest, "cues": 1,
         })
-        return {"fps": 30, "subtitleTimelineRef": str(srt), "subtitleCheckRef": str(report)}
+        return {"fps": 30, "loudnessTarget": dict(self.loud_target),
+                "subtitleTimelineRef": str(srt), "subtitleCheckRef": str(report)}
 
     def test_approved_subtitle_axis_without_check_report_is_rejected(self):
         decision = self.decision()

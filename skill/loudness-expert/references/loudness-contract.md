@@ -50,12 +50,12 @@
 - 报告数字与盘上实测可复算（同文件重测必现，单测锁）；
 - 模型听感（omni 第二只耳朵，接线后属呈现层意见档案）**永不充当验收数值**——数字闸只认本专员实测。
 
-## 8. 接线说明书（工单 `docs/响度接线工单-v0.1.md` 2026-09-28 经用户"接"令开工；**批一 G2 已接线生效**，批二至批四为届时蓝本、各自批次兑现前不得引用）
+## 8. 接线说明书（工单 `docs/响度接线工单-v0.1.md` 2026-09-28 经用户"接"令开工；**批一 G2、批二 G3 已接线生效**，批三 G4／批四 G5 为届时蓝本、各自批次兑现前不得引用）
 
 用户定案节奏：独立测试完毕（本册 36 例绿）后另开接线工单；接一个、WorkSpace 实跑验一个、用户点头再下一个。挂接点：
 
 1. **G2 配音【已接线·批一 2026-09-28】**：每条候选配音源跑 `loud_measure`+`loud_plan`（目标档显式必给，现行 video）→ 试听卡逐字披露天花板（"整片平均响度最响可到 X LUFS（目标 −14）"，操作细则见 `skill/media-evidence-prep/references/g2-choice-cards.md` §3.5）；够不到时同轮选项卡（出路取自产物 `exits`），不得静默延到 G4。机验落点=`validate_g2_decision.py` **schema 0.2**：决策必带 `loudnessPlanRef`，校验器核对产物身份（skill/purpose 头）与旁白源 sha256——**批准后换配音=放行失效**（R2 同型）；blocked 计划是合法披露（用户在卡上选出路即留痕）。历史 0.1 决策不追溯（R3）。彩排实录：unicorn 真实口播源 TP 已贴上限、线性到不了 −14 → blocked_true-peak 如实摊开，出路"先压缩"正是当年 G4 实走链——披露在 G2 提前兑现；篡改彩排（拷贝上换字节）被 sha256 对账拦下。对应台账 ⑪-③ 裁决。
-2. **G3 包装决定**：响度目标档并入包装决定双式记账（同帧率先例：卡说 X 机器渲 X）。
+2. **G3 剪辑计划【已接线·批二 2026-09-28】**：目标档双式记账——计划必带 `packagingDecisions.loudnessTarget` 三元组，逐字等于决定 `loudnessPlanRef` 专员计划的 `targetProfile`（`validate_g3_plan.py` 批量拒缺拒差；用户换档=回 G2 重规划，机器不代换）；包装决定节"响度目标档"行卡样式与纪律见 `skill/video-edit-plan/references/g3-choice-cards.md`。彩排实录（zaku 链）：真决定+真专员计划 v0.5 装配计划过闸 exit 0；卡上改 −16 即拒（"must equal G2 loudness plan"）。
 3. **G4 装配**：口播归一化改用当日 `loud_plan.chain`（两遍线性），替代现行单遍动态；执行报告带 plan 引用+sha 绑定；偏差超容差→罢工（现 note 不拦升级为闸）。
 4. **G5 交付**：《响度-验收审计》产物入交付包 REQUIRED（`loudness-audit.json`，R1 解析指纹、R2 basisHashes 冻结自动覆盖）；`--media` 复测对账。
 5. **迁移**：整目录拷贝即用；依赖仅 PATH 的 ffmpeg/ffprobe；端到端测试在新宿主重跑物理阶梯锁验表。
