@@ -1,5 +1,15 @@
 # 变更记录
 
+## v1.12.0 — 2026-09-29 — **报告生成器版本**
+
+发布范围＝zaku-intro-003 测后批第三件 ⑭（G5 质检报告标准生成器）＋彩排当场抓出的同族缺陷 ⑮（builder 装配字段静默抬空），提交 `2a72106`。
+
+- **⑭ `--report-out`＝metadata-validation-report.json 唯一正道**：`g5_validate_delivery.py --bundle <包> --media --report-out <包>/metadata-validation-report.json`——机器跑完全部校验（任一不过=不落盘，报告只描述合格包）后，artifacts 对包内每个证据文件现算 `path`+大写 `sha256`（关单三件套合法除外：报告自身不能自指、manifest/decision 封版必改写，改由收据 basisRefs+R2 basisHashes 绑定）；checks 只写本轮实测事实（无 `--media` 拒生成；未跑项写死「待补」占位——能力可缺、事实不能编）；status 固定 `g5_pending_human_review`（机器无权宣告完成）；带 `generatedBy` 出处行；已存在报告拒绝覆盖（⑭/㉘ 同源纪律）。当年病根＝报告全程手搓 JSON，7 项握手产物漏登 sha256 拖到 R1 关单闸才拦、来回重冻一次。
+- **封版新序列（schema/SKILL 成文）**：组件齐 → builder 建 **pending manifest**（⑭ 配套缺席容错，002-⑬ finishedAt 豁免延续）→ 机器生成报告 → 编排替换待补占位为人话+回显卡 → 人审 → 封版改写（决策/manifest/report status）→ `--bundle --media` 终验 → record-review/approve。
+- **⑮ builder 罢工点名（彩排第一拍抓出）**：G3 计划合同只要求逐段 evidenceRefs、顶层 `evidenceRefs`/`humanReviewPoints` 从未入合同——老跑法封版段手补进 manifest 掩盖了缺口；新序列下 builder 不再静默抬空数组，缺字段当场罢工点名（补登责任=G5 装配步、来源=包内计划副本）。历史封链不追溯（R3）。
+- **验证**：G5 套 21→28 例（生成 6 例含真 lavfi 小媒体夹具、生成报告直喂 R1 `validate_g5_report` 活证、负例 5 案；builder 负例 1 例双断言）；**真 zaku-003 交付包 WorkSpace 副本全链彩排**：17 件全指纹、终验 valid、R1 一次通过、封存版 11 件手登指纹与机器重算逐一一致（项目原件零触碰）；发版前**全量回归 45 测试文件逐文件绿**、py3.9 编译零错。
+- **已知限制**：Mimosa 完整扫描结论仍未取得，**不宣称项目安全**；测后批余件（工具批②③⑤⑥⑦⑨⑫、表单批①④）继续逐条处理。
+
 ## v1.11.0 — 2026-09-29 — **放置轨重规划版本**
 
 发布范围＝zaku-intro-003 测后修复批第二件 ⑬（提交 `7ca35cc`）：G4 响度 sha 闸的"装配前对放置轨重规划一拍"补进合同与编排——G2 规划对象常为连续试听轨、装配输入是按声音简报放置的配音轨，sha 对不上是按设计必拦而非事故，标准出路从"条件反射回 G2"改为先重跑 loud_plan 再定性。
