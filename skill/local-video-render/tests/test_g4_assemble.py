@@ -185,18 +185,87 @@ class G4AssembleTests(unittest.TestCase):
         self.assertNotEqual(0, result.returncode)
         self.assertIn("shorter than the timeline", result.stdout)
 
-    def test_cover_is_composited_and_recorded(self):
-        font = self.any_font()
-        image = self.root / "cover-source.png"
-        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "color=c=gray:s=320x240", "-frames:v", "1", str(image)], check=True, capture_output=True)
-        cover_out = self.root / "final" / "cover.jpg"
+    def make_cover_pack(self):
+        # ⑫：封面帧源=登记件。迷你 material-pack：一个真实 1s 视频 + 登记清单。
+        pack = self.root / "material-pack"
+        raw = pack / "02_原始素材"
+        raw.mkdir(parents=True)
+        asset = raw / "hero.mp4"
+        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "color=c=blue:s=320x240:r=24", "-t", "1",
+                        "-c:v", "libx264", "-an", str(asset)], check=True, capture_output=True)
+        digest = hashlib.sha256(asset.read_bytes()).hexdigest().upper()
+        (pack / "material-pack.json").write_text(json.dumps(
+            {"sourceAssets": [{"assetId": "hero-001", "relativePath": "02_原始素材/hero.mp4", "sha256": digest}]},
+            ensure_ascii=False), encoding="utf-8")
+        return pack, digest
+
+    def cover_contract(self, pack, extra=None, drop=()):
+        payload = {"materialPack": str(pack / "material-pack.json"), "sourceAssetId": "hero-001",
+                   "sourceMs": 500, "fontFile": str(self.any_font()), "title": "装配封面测试",
+                   "output": str(self.root / "final" / "cover.jpg"), "fontsize": 28}
+        for field in drop:
+            payload.pop(field, None)
+        if extra:
+            payload.update(extra)
         contract = self.root / "cover.json"
-        contract.write_text(json.dumps({"imagePath": str(image), "fontFile": str(font), "title": "装配封面测试", "output": str(cover_out), "fontsize": 28}, ensure_ascii=False), encoding="utf-8")
+        contract.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        return contract
+
+    def test_cover_is_composited_and_recorded(self):
+        # ⑫：帧由装配器从登记件机抽——合同给 assetId+源内毫秒，路径与身份由装配器对账。
+        pack, digest = self.make_cover_pack()
+        contract = self.cover_contract(pack, extra={"sourceTimelineMs": 500})
         result = self.run_assemble(("--cover", str(contract)))
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        cover_out = Path(str(json.loads(result.stdout)["cover"]))
         self.assertTrue(cover_out.is_file() and cover_out.stat().st_size > 0)
         record = json.loads(Path(json.loads(result.stdout)["record"]).read_text(encoding="utf-8"))
         self.assertEqual(str(cover_out.resolve()), record["cover"])
+        prov = record["coverProvenance"]
+        self.assertEqual("hero-001", prov["sourceAssetId"])
+        self.assertEqual(500, prov["sourceMs"])
+        self.assertEqual(digest, prov["sourceAssetSha256"])
+        self.assertEqual(64, len(prov["frameSha256"]))
+        self.assertTrue(Path(prov["framePath"]).is_file())
+
+    def test_cover_rejects_image_path_channel(self):
+        pack, digest = self.make_cover_pack()
+        contract = self.cover_contract(pack, extra={"imagePath": str(self.root / "ghost.png")})
+        result = self.run_assemble(("--cover", str(contract)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("imagePath", result.stdout)
+
+    def test_cover_requires_source_fields(self):
+        pack, digest = self.make_cover_pack()
+        for field in ("materialPack", "sourceAssetId", "sourceMs"):
+            contract = self.cover_contract(pack, drop=(field,))
+            result = self.run_assemble(("--cover", str(contract)))
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn(field, result.stdout)
+
+    def test_cover_unregistered_asset_rejected(self):
+        pack, digest = self.make_cover_pack()
+        contract = self.cover_contract(pack, extra={"sourceAssetId": "冷战奇迹-风格参考"})
+        result = self.run_assemble(("--cover", str(contract)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("not a registered asset", result.stdout)
+
+    def test_cover_asset_sha_drift_rejected(self):
+        pack, digest = self.make_cover_pack()
+        (pack / "material-pack.json").write_text(json.dumps(
+            {"sourceAssets": [{"assetId": "hero-001", "relativePath": "02_原始素材/hero.mp4",
+                               "sha256": "F" * 64}]}, ensure_ascii=False), encoding="utf-8")
+        contract = self.cover_contract(pack)
+        result = self.run_assemble(("--cover", str(contract)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("sha256 mismatch", result.stdout)
+
+    def test_cover_source_ms_outside_asset_rejected(self):
+        pack, digest = self.make_cover_pack()
+        contract = self.cover_contract(pack, extra={"sourceMs": 99999})
+        result = self.run_assemble(("--cover", str(contract)))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("outside registered asset", result.stdout)
 
 
     # The ㉛ glyph preflight correctly refuses script-only fonts (e.g. NotoSansLepcha

@@ -522,9 +522,19 @@ def build_title_bar_filter(contract: dict, work: Path) -> str:
     return drawtext_filter(font, text_file, fontsize, f"y=h*{margin_pct / 100:.4f}", None)
 
 
-def render_cover(contract_path: Path, work: Path) -> Path:
+def render_cover(contract_path: Path, work: Path) -> dict:
+    """⑫（zaku-003）：封面帧由装配器按**登记件**机抽——编排方不再自选源文件。
+
+    事故：编排方用 shell 通配猜路径抽帧，同名多 mp4 时误抓 05_风格参考 的参考片，
+    参考画面险成封面（红线：参考视频画面不得入成片），目检才拦下。只要路径由编排方
+    拼，猜路径的失败模式就一直在。现在合同只给 materialPack + sourceAssetId +
+    sourceMs（源资产毫秒，取自批准计划的封面指令），装配器从 material-pack.json
+    解析精确路径、对登记 sha 逐字验明正身后抽帧；登记件之外的画面结构上进不来。
+    """
     contract = load(contract_path)
-    image = require_file(Path(str(contract.get("imagePath") or "")), "cover image")
+    if "imagePath" in contract:
+        fail("cover contract must not carry imagePath（⑫ 通道退役：改 materialPack/sourceAssetId/sourceMs "
+             "由装配器从登记件抽帧；编排方不许再自拼源文件路径——zaku-003 通配误抓参考片帧的事故入口已封死）")
     font = require_file(Path(str(contract.get("fontFile") or "")), "cover font")
     title = str(contract.get("title") or "").strip()
     if not title:
@@ -532,6 +542,37 @@ def render_cover(contract_path: Path, work: Path) -> Path:
     raw_output = str(contract.get("output") or "").strip()
     if not raw_output:
         fail("cover contract requires output")
+    for field in ("materialPack", "sourceAssetId", "sourceMs"):
+        if contract.get(field) in (None, ""):
+            fail(f"cover contract requires {field}（⑫ 登记件机抽帧：material-pack 路径、源 assetId、源内毫秒——时点与身份都取自批准计划/G3 封面指令）")
+    pack_path = require_file(Path(str(contract["materialPack"])), "cover material pack")
+    pack_root = pack_path.parent
+    manifest = load(pack_path)
+    asset_id = str(contract["sourceAssetId"])
+    asset = next((a for a in manifest.get("sourceAssets", []) if str(a.get("assetId")) == asset_id), None)
+    if asset is None:
+        known = ", ".join(str(a.get("assetId")) for a in manifest.get("sourceAssets", []))
+        fail(f"cover sourceAssetId {asset_id} is not a registered asset in {pack_path}（⑫ 只认登记件；在册：{known or '空'}）")
+    asset_file = pack_root / str(asset["relativePath"])
+    require_file(asset_file, "cover source asset")
+    registered_sha = str(asset.get("sha256", "")).upper()
+    if not registered_sha:
+        fail(f"cover source asset {asset_id} has no sha256 in the pack manifest（⑫ 无法验明正身）")
+    actual_sha = sha256(asset_file)
+    if actual_sha != registered_sha:
+        fail(f"cover source asset {asset_id} sha256 mismatch: on-disk {actual_sha} vs registered {registered_sha}（⑫ 帧源必须先验身份）")
+    source_ms = int(contract.get("sourceMs"))
+    if not 0 <= source_ms:
+        fail(f"cover sourceMs must be non-negative, got {source_ms}")
+    asset_duration_ms = probe_duration_ms(asset_file)
+    if source_ms > asset_duration_ms:
+        fail(f"cover sourceMs {source_ms}ms outside registered asset {asset_id} duration {asset_duration_ms}ms（⑫）")
+    frame = work / "cover-frame.jpg"
+    run_checked(
+        ["ffmpeg", "-y", "-ss", f"{source_ms / 1000:.3f}", "-i", str(asset_file.resolve()),
+         "-frames:v", "1", "-q:v", "2", str(frame)],
+        frame, "cover frame extraction（登记件抽帧）",
+    )
     output = Path(raw_output).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     require_glyph_coverage(font, title, "cover title")
@@ -548,8 +589,18 @@ def render_cover(contract_path: Path, work: Path) -> Path:
         f":fontsize={fontsize}:fontcolor={color}:borderw=2:bordercolor=black@0.6"
         ":x=(w-text_w)/2:y=h-text_h-" + str(margin_y)
     )
-    run_checked(["ffmpeg", "-y", "-i", str(image), "-vf", draw, "-frames:v", "1", "-q:v", "2", str(output)], output, "cover image")
-    return output
+    run_checked(["ffmpeg", "-y", "-i", str(frame), "-vf", draw, "-frames:v", "1", "-q:v", "2", str(output)], output, "cover image")
+    return {
+        "path": str(output),
+        "materialPack": str(pack_path),
+        "sourceAssetId": asset_id,
+        "sourceAssetPath": str(asset_file),
+        "sourceAssetSha256": actual_sha,
+        "sourceMs": source_ms,
+        "sourceTimelineMs": contract.get("sourceTimelineMs"),
+        "framePath": str(frame),
+        "frameSha256": sha256(frame),
+    }
 
 
 def main() -> int:
@@ -562,7 +613,7 @@ def main() -> int:
     parser.add_argument("--bgm-audio", type=Path)
     parser.add_argument("--bgm-mix-contract", type=Path,
                         help="music-expert BGM-混音合同-v0.1.json (required with --bgm-audio; run music_mix_plan.py first)")
-    parser.add_argument("--cover", type=Path, help="cover contract JSON: imagePath, fontFile, title, output")
+    parser.add_argument("--cover", type=Path, help="cover contract JSON: materialPack, sourceAssetId, sourceMs（源资产毫秒，⑫ 由装配器从登记件抽帧，imagePath 通道已退役）, fontFile, title, output")
     parser.add_argument("--chapter-cards", type=Path, help="chapter cards contract JSON: fontFile, fontsize, cards[{chapterId,title,startMs,endMs}]")
     parser.add_argument("--title-bar", type=Path, help="title bar contract JSON: fontFile, text, fontsize, marginPct")
     parser.add_argument("--normalize-narration-lufs", type=float, default=None,
@@ -804,7 +855,8 @@ def main() -> int:
         "probedDurationMs": output_ms,
         "fps": args.fps,
         "fpsSource": fps_source,
-        "cover": str(cover_output) if cover_output else None,
+        "cover": cover_output["path"] if cover_output else None,
+        "coverProvenance": cover_output,
         "chapterCards": {
             "path": str(args.chapter_cards), "sha256": sha256(args.chapter_cards),
             "cards": len(card_ranges), "subtitleCuesTrimmed": trimmed_cues,
@@ -823,7 +875,7 @@ def main() -> int:
     }
     record_path = args.output.parent / f"{args.output.stem}-装配记录-v0.1.json"
     record_path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"status": "assembled", "output": str(args.output), "durationMs": output_ms, "segments": len(segments), "record": str(record_path), "cover": str(cover_output) if cover_output else None}, ensure_ascii=True))
+    print(json.dumps({"status": "assembled", "output": str(args.output), "durationMs": output_ms, "segments": len(segments), "record": str(record_path), "cover": cover_output["path"] if cover_output else None}, ensure_ascii=True))
     return 0
 
 
