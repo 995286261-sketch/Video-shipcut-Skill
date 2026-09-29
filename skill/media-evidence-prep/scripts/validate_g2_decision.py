@@ -19,6 +19,9 @@ from pathlib import Path
 REQUIRED_REFERENCES = ("approvedNarrationRef", "factCitationRef", "voiceBriefRef", "loudnessPlanRef")
 LOUDNESS_SKILL = "loudness-expert"
 LOUDNESS_PURPOSE = "loud_plan"
+PREVIEW_TIER = "preview_only"
+PREVIEW_APPROVAL_FIELD = "previewTierProductionApproval"
+PREVIEW_DISCLOSURE_TOKEN = "预览级"
 
 
 def fail(message: str) -> None:
@@ -73,6 +76,30 @@ def validate_loudness_plan(decision: dict, project_root: Path) -> None:
         fail("narration changed after loudness planning (sha256 mismatch): re-synthesize, re-run loud_plan, and re-present the audition card before approval")
 
 
+def validate_voice_tier(decision: dict, project_root: Path) -> None:
+    """系统声成品绿灯（2026-09-29 用户拍板）：预览级配音登记为成品，必须带用户逐字批准。
+
+    机验只判机械事实：配音清单（voiceBriefRef，local_tts.py 产物）声明
+    voiceTier=preview_only 时，决策必须携带 previewTierProductionApproval——
+    非空字符串且含披露词"预览级"（证明批准发生在知情披露之后，不代批、不事后追认的
+    语义由卡片留痕纪律保证，见 g2-choice-cards §3.5）。清单非 JSON 或无 voiceTier
+    字段（神经 TTS/真人通道的历史手登清单）不触发本闸——机械判据只判在场的机械事实。
+    """
+    path = require_file(decision.get("voiceBriefRef"), "voiceBriefRef", project_root)
+    try:
+        manifest = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError):
+        return
+    if not isinstance(manifest, dict) or manifest.get("voiceTier") != PREVIEW_TIER:
+        return
+    approval = decision.get(PREVIEW_APPROVAL_FIELD)
+    if not isinstance(approval, str) or not approval.strip():
+        fail(f"{PREVIEW_APPROVAL_FIELD} required: 配音清单声明 voiceTier=preview_only（系统声预览级），"
+             "登记为正式配音必须携带用户在试听卡上的逐字批准原话（含'预览级'披露词）——见 g2-choice-cards §3.5")
+    if PREVIEW_DISCLOSURE_TOKEN not in approval:
+        fail(f"{PREVIEW_APPROVAL_FIELD} must quote the user's verbatim approval containing the disclosure word '{PREVIEW_DISCLOSURE_TOKEN}'")
+
+
 def validate(decision: dict, project_root: Path) -> None:
     if decision.get("schemaVersion") != "0.2":
         fail("G2 decision schemaVersion must be 0.2 (loudness wiring: decisions require loudnessPlanRef)")
@@ -85,6 +112,7 @@ def validate(decision: dict, project_root: Path) -> None:
     for field in REQUIRED_REFERENCES:
         require_file(decision.get(field), field, project_root)
     validate_loudness_plan(decision, project_root)
+    validate_voice_tier(decision, project_root)
     for field in ("permittedFactIds", "prohibitedTopics", "supersededDraftRefs"):
         value = decision.get(field, []) if field == "supersededDraftRefs" else decision.get(field)
         if not isinstance(value, list) or not all(isinstance(item, str) and item.strip() for item in value):

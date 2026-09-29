@@ -174,7 +174,7 @@ def main() -> int:
         "provider": "macos_say",
         "voice": args.voice,
         "voiceTier": "preview_only",
-        "tierNotice": "macOS system TTS is preview-tier only; production narration requires authorized neural TTS (e.g. Bailian CosyVoice) or a human voice (issue 028).",
+        "tierNotice": "macOS system TTS is preview-tier by default; production use requires authorized neural TTS (e.g. Bailian CosyVoice), a human voice, or the user's verbatim explicit approval recorded in the G2 decision field previewTierProductionApproval (green light, 2026-09-29; disclosure word 预览级 must appear in the quoted approval).",
         "measuredTotalDurationMs": total_ms,
         "sentences": items,
         "asrVerification": verification,

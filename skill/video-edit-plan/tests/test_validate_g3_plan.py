@@ -228,6 +228,35 @@ class ValidateG3PlanTest(unittest.TestCase):
         code, output = self.run_cli(self.plan(decision), decision)
         self.assertEqual(0, code, output)
 
+    # ---- 系统声成品绿灯（2026-09-29 用户拍板）：preview_only 清单必须带逐字批准 ----
+
+    def voice_manifest(self, tier):
+        return self.write_json("voice-manifest.json", {"provider": "macos_say", "voice": "Samantha", "voiceTier": tier})
+
+    def test_preview_tier_manifest_requires_verbatim_approval(self):
+        decision = self.decision(voiceBriefRef=str(self.voice_manifest("preview_only")))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("previewTierProductionApproval", output)
+
+    def test_preview_tier_approval_must_quote_disclosure_word(self):
+        decision = self.decision(voiceBriefRef=str(self.voice_manifest("preview_only")),
+                                 previewTierProductionApproval="接受这个声音用于正式成片")
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertNotEqual(0, code)
+        self.assertIn("must quote", output)
+
+    def test_preview_tier_with_verbatim_disclosed_approval_passes(self):
+        decision = self.decision(voiceBriefRef=str(self.voice_manifest("preview_only")),
+                                 previewTierProductionApproval="接受预览级用于正式成片")
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
+
+    def test_production_tier_manifest_needs_no_approval(self):
+        decision = self.decision(voiceBriefRef=str(self.voice_manifest("production")))
+        code, output = self.run_cli(self.plan(decision), decision)
+        self.assertEqual(0, code, output)
+
     # ---- 响度接线批二（2026-09-28）：目标档双式记账 ----
 
     def test_missing_loudness_target_in_packaging_is_rejected(self):
