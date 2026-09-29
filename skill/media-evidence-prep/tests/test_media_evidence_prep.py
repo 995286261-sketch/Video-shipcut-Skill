@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -161,6 +162,49 @@ class LocalTranscribeTest(unittest.TestCase):
         self.assertEqual(2, result.returncode)
         self.assertEqual("blocked", payload["status"])
         self.assertEqual("output_inside_material_pack", payload["blockers"][0]["type"])
+
+    def cache_key_for(self, media, initial_prompt=None):
+        digest = hashlib.sha256(media.read_bytes()).hexdigest().upper()
+        return {
+            "assetId": f"unregistered:{media.name}",
+            "sha256": digest,
+            "language": "zh",
+            "model": "small",
+            "device": "cpu",
+            "computeType": "int8",
+            "initialPrompt": initial_prompt,
+            "runtimeVersion": "local-transcribe-script-v0.3",
+        }
+
+    def seed_output(self, media, initial_prompt=None):
+        output = self.root / "out" / "transcript.json"
+        output.parent.mkdir(parents=True, exist_ok=True)
+        payload = {"cacheKey": self.cache_key_for(media, initial_prompt), "segments": [valid_segment()]}
+        output.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        return output
+
+    def test_initial_prompt_in_cache_key(self):
+        # ⑨：专名词表会改变转写结果——同词表才许复用，换词表必须重转。
+        media = self.root / "clip.mp4"
+        media.write_bytes(b"fixture")
+        output = self.seed_output(media, initial_prompt="吉翁, 鲁姆")
+        base = ["--input", str(media), "--output", str(output), "--model-dir", str(self.model_dir)]
+        code, result = run_script(TRANSCRIBE, *base)
+        self.assertEqual(2, code)
+        self.assertEqual("missing_cached_model", result["blockers"][0]["type"])
+        code, result = run_script(TRANSCRIBE, *base, "--initial-prompt", "吉翁, 鲁姆")
+        self.assertEqual(0, code)
+        self.assertEqual("reused", result["status"])
+
+    def test_blank_initial_prompt_is_none_key(self):
+        media = self.root / "clip.mp4"
+        media.write_bytes(b"fixture")
+        output = self.seed_output(media, initial_prompt=None)
+        run_args = ["--input", str(media), "--output", str(output), "--model-dir", str(self.model_dir),
+                    "--initial-prompt", ""]
+        code, result = run_script(TRANSCRIBE, *run_args)
+        self.assertEqual(0, code)
+        self.assertEqual("reused", result["status"])
 
 
 if __name__ == "__main__":

@@ -24,8 +24,8 @@ metadata:
 1. 读取 `references/evidence-contract.md`。
 2. 对照 `material-pack.json` 校验每个选中本地源文件的 SHA-256、授权字段和媒体探测信息；发现不一致时停止。
 3. 为每个视频源生成低成本联系表，文件命名为 `<asset-short-id>-contact-sheet.jpg`，只用于人工定位画面类别和下游精看片。
-4. 视频没有可用字幕/文稿时，用配置好的离线 Faster-Whisper 模型运行 `scripts/local_transcribe.py`，并传 `--source-pack` 指向素材包根目录以启用输出边界校验。脚本会从 `P0C_FASTER_WHISPER_HOME` 加载受控运行时，并优先使用 `P0C_FASTER_WHISPER_MODEL_HOME` 中唯一的缓存快照；禁止上传云端、下载模型或让运行时刷新模型缓存。缺少运行时或缓存模型时返回 `blocked`，报告给调用方。
-   在运行前先检查已有转写 JSON 的 `cacheKey`；源 assetId、SHA-256、语言、模型、设备、compute type 和运行时版本一致时直接复用，不得重复转写。
+4. 视频没有可用字幕/文稿时，用配置好的离线 Faster-Whisper 模型运行 `scripts/local_transcribe.py`，并传 `--source-pack` 指向素材包根目录以启用输出边界校验。内容专名密集（人名/机体名/地名）时加 `--initial-prompt <专名词表>`（⑨，zaku-003：无词表时 whisper small 把 吉翁/鲁姆/麦哲伦/乔尼/赤色彗星 全听成同音误字，逐词比对假阴性一片红）。脚本会从 `P0C_FASTER_WHISPER_HOME` 加载受控运行时，并优先使用 `P0C_FASTER_WHISPER_MODEL_HOME` 中唯一的缓存快照；禁止上传云端、下载模型或让运行时刷新模型缓存。缺少运行时或缓存模型时返回 `blocked`，报告给调用方。
+   在运行前先检查已有转写 JSON 的 `cacheKey`；源 assetId、SHA-256、语言、模型、设备、compute type、专名词表（`initialPrompt`）和运行时版本一致时直接复用，不得重复转写；换词表不许复用旧稿。
 5. 对每份转写运行 `scripts/write_transcript_artifacts.py`（同样传 `--source-pack`），生成 `transcript.srt`、`transcript.txt` 和 `manifest.json`，并校验时间轴单调、不重叠、`segmentId` 唯一。
 6. 汇总生成 `G2-证据准备报告-v0.1.md` 和 `G2-证据清单-v0.1.json`。报告给人看，JSON 给 G3 机器读取。随后读取 `references/g2-choice-cards.md`，用事实处理卡、口播方向卡和继承的音频策略生成自动回显；回显不是人工审批。
 7. 更新项目索引中的 G2 节点产物路径和状态；下一节点应指向 G3 编辑计划。

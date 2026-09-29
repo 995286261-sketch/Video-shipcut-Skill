@@ -77,6 +77,15 @@ def main() -> int:
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--compute-type", default="int8")
     parser.add_argument("--source-pack", type=Path, default=None, help="Material pack root; output must stay outside it")
+    parser.add_argument(
+        "--initial-prompt",
+        default="",
+        help=(
+            "专名词表/上下文提示，透传 faster-whisper initial_prompt（zaku-003 台账⑨：吉翁/鲁姆/"
+            "麦哲伦/乔尼/赤色彗星等专名小模型易听岔，回读逐词比对被假阴性淹没；与 local_tts 的 "
+            "--asr-initial-prompt 同义，补齐 bl 合成旁白的回读通道）"
+        ),
+    )
     args = parser.parse_args()
 
     if not args.input.is_file():
@@ -92,6 +101,7 @@ def main() -> int:
             emit({"status": "blocked", "blockers": [{"type": "output_inside_material_pack", "detail": f"{output} is inside {pack}"}]})
             return 2
 
+    initial_prompt = args.initial_prompt.strip() or None
     input_hash = sha256(args.input)
     cache_key = {
         "assetId": registered_asset_id(args.source_pack, args.input, input_hash),
@@ -100,7 +110,9 @@ def main() -> int:
         "model": args.model,
         "device": args.device,
         "computeType": args.compute_type,
-        "runtimeVersion": "local-transcribe-script-v0.2",
+        # ⑨：专名词表会改变转写结果，必须进缓存键——换词表不许复用旧稿。
+        "initialPrompt": initial_prompt,
+        "runtimeVersion": "local-transcribe-script-v0.3",
     }
     if args.output.is_file():
         try:
@@ -164,6 +176,7 @@ def main() -> int:
             beam_size=5,
             vad_filter=True,
             word_timestamps=True,
+            initial_prompt=initial_prompt,
         )
         result_segments = []
         for index, segment in enumerate(segments, start=1):
@@ -188,6 +201,7 @@ def main() -> int:
             "schemaVersion": "0.1",
             "producer": "local-faster-whisper",
             "model": args.model,
+            "initialPrompt": initial_prompt,
             "cacheKey": cache_key,
             "language": info.language,
             "languageProbability": info.language_probability,
