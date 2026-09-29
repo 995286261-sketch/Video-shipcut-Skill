@@ -28,6 +28,8 @@
 
 ## delivery-manifest.json（builder 产出，validator `CONTRACT_FIELDS` 逐项非空）
 
+**builder 抬取纪律（⑮，zaku-003 ⑭ 修复彩排当场抓出）**：manifest 的 `evidenceRefs`/`humanReviewPoints` 唯一来源=包内 `edit-plan.json` 顶层同名字段，builder 照抬——**G3 计划本身从不带顶层 `evidenceRefs`**（合同只逐段要求），所以 G5 装配步把计划复制进包时必须补登这两个顶层字段（可定位路径清单：G2 决定/各节点门禁收据/批准记录等）。builder 现在缺字段即罢工点名（旧行为=静默抬成空数组、拖到校验甚至关单段才爆，正是 ⑭ 同款反馈后置病）。zaku-003 当年 manifest 里 9 条 refs 系封版段手补，包内计划副本至今缺字段——已封链不追溯（R3），新跑必按本纪律走。
+
 `schemaVersion`（当前 `"0.1"`）、`projectId`、`sourceProbe`（数组，每项含 `assetId`+`sourceProbe`）、`segments`（顶层扁平数组，每项含 `segmentId`，必须与 source-timecode-list 的 segments **集合相等**）、`editPlan`、`artifacts`（含 `editTimeline`：`{path, sha256}`）、`qaReport`、`humanReviewPoints`、`evidenceRefs`、`warnings`、`status`、`finishedAt`（非空字符串；**语义=机器质检收口时刻，不是交付关单时刻**——关单以 pipeline-state 的 `确认G5` 审批为准。`status` 以 `pending` 开头时允许暂缺，质检收口后必须回填；002 问题⑬裁决）。`status` 以 `completed` 开头时，`human-review-decision.json` 必须已是 `approved`+`accepted`。`authorization`、`distribution` 两个边界字段必须非空。
 
 ## source-timecode-list.json
@@ -39,6 +41,8 @@
 
 ## metadata-validation-report.json
 
+- **机器生成＝唯一正道（⑭，zaku-intro-003 实测，用户 09-29 定案）**：本报告由 `g5_validate_delivery.py --bundle <包> --media --report-out <包>/metadata-validation-report.json` 生成，编排方**不再手搓**。生成器行为：跑完全部机器校验（校验不过=不落盘）后，artifacts＝包内**每个证据文件**现算 `path`+大写 `sha256`（报告自身+`delivery-manifest.json`+`human-review-decision.json` 三件除外——封版环节必被合法改写，指纹由收据 basisRefs+R2 basisHashes 通道绑定）；checks 只写本轮真正实测到的事实（无 `--media` 直接拒绝生成），没跑的键写死「待补（本轮机器未实测…）」占位；status 固定 `g5_pending_human_review`（机器无权宣告完成）；带 `generatedBy` 出处行。已存在报告=拒绝覆盖（删旧重跑）。编排方只许替换「待补」占位为人话实测文案并填 warnings/humanReview，**artifacts 不得手改**。当年病：报告全手写，7 项握手产物漏登 sha256，到 R1 关单闸才拦下、来回重冻一次。
+- **封版新序列**：组件齐 → `g5_build_delivery_manifest.py`（报告/决策缺席时合法：manifest status=`pending_human_review`、finishedAt 依 002-⑬ 允许暂缺）→ `--report-out` 生成报告 → 回显卡+人审 → 决策/manifest 改写+报告 status 升级 → `--bundle` 终验 → record-review/approve。
 - `checks`：必须**恰好覆盖**十个键（可多不可少）：`decode`、`videoCodec`、`dimensions`、`fps`、`audio`、`duration`、`blackFrames`、`silence`、`duplicateSegments`、`cover`；每项 `{status: "pass"}` 或带说明的失败项。
 - `artifacts`：固定键 `finalVideo`、`cover`、`subtitles`、`chapterClips`（数组，对应 clips/ 全部文件）；每项 `{path, sha256}`，`path` 相对包根、`sha256` 大写十六进制，validator 逐一重算比对。项目实际登记时可有额外键（如 subtitleSrtCheck、transitionAudit），同样入对账。
 - **审批入口解析（Leader 反馈 R1，2026-09-23 方案 A）**：`pipeline_state approve G5` 不再只查本报告文件存在——关单前解析 JSON：`status` 须在可批准集合 {`g5_pending_human_review`, `valid`, `completed*`}（`invalid`/`failed`/其余 `pending*`=机器质检未完成一律阻断）；`projectId` 须与 state 一致（张冠李戴报告不得过关）；`artifacts` 逐条（含 chapterClips 数组形态）按**报告所在目录**为基重算 sha256 对同包内实物——报告与其声称验过的交付包不是同一版=过期，逼重跑质检。实盘冒烟即因此抓到 sinjuku 报告登记哈希从未对同过 `source-timecode-list.json`（validator 历来不查该键，门禁只查存在性，故一直漏网）。

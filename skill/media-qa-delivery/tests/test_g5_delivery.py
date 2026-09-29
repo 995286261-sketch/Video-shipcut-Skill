@@ -1,5 +1,6 @@
 import hashlib
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -12,7 +13,7 @@ VALIDATE = ROOT / "skill" / "media-qa-delivery" / "scripts" / "g5_validate_deliv
 MIRROR = ROOT / "skill" / "media-qa-delivery" / "scripts" / "g5_mirror_audit_copy.py"
 
 
-class G5DeliveryTest(unittest.TestCase):
+class BundleFixture:
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.bundle = Path(self.temp.name) / "bundle"; self.bundle.mkdir(); (self.bundle / "clips").mkdir(); (self.bundle / "failure-samples").mkdir()
@@ -67,6 +68,22 @@ class G5DeliveryTest(unittest.TestCase):
     def run_cli(self, script, *args, code=0):
         result = subprocess.run([sys.executable, str(script), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(result.returncode, code, result.stdout + result.stderr); return json.loads(result.stdout)
+
+class G5DeliveryTest(BundleFixture, unittest.TestCase):
+    def test_builder_refuses_plan_missing_assembly_fields(self):
+        # ⑮（⑭ 修复彩排当场抓出）：G3 计划顶层从不带 evidenceRefs，装配步必须补登；
+        # builder 缺字段即罢工点名，不再静默抬空数组拖到关单段才爆（⑭ 同款反馈后置病）。
+        plan = json.loads((self.bundle / "edit-plan.json").read_text(encoding="utf-8"))
+        del plan["evidenceRefs"]
+        self.json("edit-plan.json", plan)
+        out = self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence, code=2)
+        self.assertIn("evidenceRefs", out["error"])
+        plan = json.loads((self.bundle / "edit-plan.json").read_text(encoding="utf-8"))
+        plan["evidenceRefs"] = ["G2-evidence.json"]
+        del plan["humanReviewPoints"]
+        self.json("edit-plan.json", plan)
+        out = self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence, code=2)
+        self.assertIn("humanReviewPoints", out["error"])
 
     def test_build_and_validate_bundle(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
@@ -252,6 +269,104 @@ class G5DeliveryTest(unittest.TestCase):
             self.assertEqual("contract-era-marker", marker["purpose"])
             self.assertEqual(project, marker["projectId"])
             self.assertTrue(marker.get("sealedUnderContract"))
+
+
+class ReportGeneratorTests(BundleFixture, unittest.TestCase):
+    """⑭（zaku-intro-003 实测，用户 09-29 定案）：质检报告标准生成器。假字节过不了
+    --media 实测，本类换 lavfi 真小样——报告的 checks 只能写机器真量过的数。"""
+
+    def setUp(self):
+        super().setUp()
+        if not shutil.which("ffmpeg"):
+            self.skipTest("ffmpeg required for real-media generator fixture")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=red:s=320x240:d=1:r=30",
+                        "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", "1",
+                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac",
+                        str(self.bundle / "final-video.mp4")], check=True)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=blue:s=320x240",
+                        "-frames:v", "1", str(self.bundle / "cover.jpg")], check=True)
+        video_sha = hashlib.sha256((self.bundle / "final-video.mp4").read_bytes()).hexdigest().upper()
+        self.write("transition-audit.json", json.dumps({"skill": "transition-expert", "purpose": "transition_check",
+                                                        "status": "passed", "gridInvariant": True, "transitions": [],
+                                                        "master": {"path": "final-video.mp4", "sha256": video_sha}}).encode())
+        self.json("export-config.json", {"projectId": self.project, "authorization": "fixture",
+                                         "distribution": "not_for_distribution",
+                                         "video": {"codec": "h264", "width": 320, "height": 240, "fps": 30},
+                                         "audio": {"codec": "aac"}})
+        self.loud_audit(masterSha256=video_sha,
+                        masterMeasured={"integratedLufs": None, "truePeakDbtp": None, "engine": "ffmpeg-ebur128"})
+        # ⑭ 新序列：组件 → pending manifest（builder 缺席容错）→ --report-out 机器报告 → 人审。
+        (self.bundle / "metadata-validation-report.json").unlink()
+        (self.bundle / "human-review-decision.json").unlink()
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+
+    def generate(self, *extra, code=0):
+        return self.run_cli(VALIDATE, "--bundle", self.bundle, "--media",
+                            "--report-out", self.bundle / "metadata-validation-report.json", *extra, code=code)
+
+    def test_report_out_binds_every_bundle_file(self):
+        result = self.generate()
+        self.assertEqual("report_written", result["status"])
+        report = json.loads((self.bundle / "metadata-validation-report.json").read_text(encoding="utf-8"))
+        self.assertEqual("g5_pending_human_review", report["status"])   # 机器无权宣告完成
+        self.assertEqual(self.project, report["projectId"])
+        registered = {}
+        for value in report["artifacts"].values():
+            for entry in (value if isinstance(value, list) else [value]):
+                self.assertTrue(entry.get("path") and entry.get("sha256"))   # ⑭ 病根：path/sha 成对，无一漏项
+                registered[entry["path"]] = entry["sha256"]
+        on_disk = {p.relative_to(self.bundle).as_posix() for p in self.bundle.rglob("*") if p.is_file()} \
+                  - {"metadata-validation-report.json", "delivery-manifest.json", "human-review-decision.json"}
+        self.assertEqual(on_disk, set(registered))                      # 证据文件一个不落；关单三件套合法除外（封版必改写，归收据/R2 绑定）
+        for rel, sha in registered.items():
+            self.assertEqual(hashlib.sha256((self.bundle / rel).read_bytes()).hexdigest().upper(), sha)
+        self.assertEqual({key for key in ("decode", "videoCodec", "dimensions", "fps", "audio",
+                                          "duration", "blackFrames", "silence", "duplicateSegments", "cover")},
+                         set(report["checks"]))
+        self.assertIn("h264", report["checks"]["videoCodec"])            # --media 实测事实逐字入册
+        self.assertIn("机器实测", report["checks"]["decode"])
+        self.assertIn("机器实算", report["checks"]["duplicateSegments"])
+        self.assertTrue(str(report["checks"]["blackFrames"]).startswith("待补"))  # 没跑的诚实待补，不编造
+
+    def test_generated_report_survives_validator_and_r1_gate(self):
+        # ⑭ 的最终验收：机器生成的报告回头过自己的校验器+审批门禁 R1（当年 sinjuku
+        # 漏 7 项 sha 就是在 R1 才拦下——生成器在场后这条路必须天然无雷）。
+        self.generate()
+        self.json("human-review-decision.json", {"projectId": self.project, "status": "approved",
+                                                 "decision": "accepted", "acceptedWarnings": []})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, "--media")
+        self.assertEqual("valid", result["status"])
+        sys.path.insert(0, str(ROOT / "skill" / "p0-c-pipeline" / "scripts"))
+        try:
+            import pipeline_state
+            pipeline_state.validate_g5_report(self.bundle / "metadata-validation-report.json", self.project)
+        finally:
+            sys.path.remove(str(ROOT / "skill" / "p0-c-pipeline" / "scripts"))
+
+    def test_refuses_to_overwrite_existing_report(self):
+        self.generate()
+        out = self.generate(code=2)
+        self.assertIn("拒绝覆盖", " ".join(out["errors"]))
+
+    def test_failing_bundle_never_writes_report(self):
+        # 报告只能描述合格的包：校验不过=不落盘（否则=给坏包发合格证书）。
+        (self.bundle / "subtitles.srt").unlink()
+        out = self.generate(code=2)
+        self.assertEqual("invalid", out["status"])
+        self.assertFalse((self.bundle / "metadata-validation-report.json").exists())
+
+    def test_report_out_without_media_is_refused(self):
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle,
+                              "--report-out", self.bundle / "metadata-validation-report.json", code=2)
+        self.assertIn("--media", " ".join(result["errors"]))
+
+    def test_report_out_must_sit_at_bundle_root(self):
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, "--media",
+                              "--report-out", self.bundle.parent / "elsewhere.json", code=2)
+        self.assertIn("唯一落盘位置", " ".join(result["errors"]))
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, "--media",
+                              "--report-out", self.bundle / "my-report.json", code=2)
+        self.assertIn("唯一落盘位置", " ".join(result["errors"]))
 
 
 class FpsReconciliationUnitTests(unittest.TestCase):

@@ -24,8 +24,13 @@ def main() -> int:
     bundle = args.bundle.resolve()
     trace = load(bundle / "source-timecode-list.json")
     plan = load(bundle / "edit-plan.json")
-    qa = load(bundle / "metadata-validation-report.json")
-    review = load(bundle / "human-review-decision.json")
+    # ⑭ 新序列=组件→manifest（pending）→--report-out 机器质检报告→人审→封版：
+    # 报告与决策文件此刻合法缺席，缺席时 status 落 pending_human_review、
+    # finishedAt 依 002-⑬ 裁决允许暂缺；两者在场则照常抬值（旧序列零影响）。
+    qa_path = bundle / "metadata-validation-report.json"
+    review_path = bundle / "human-review-decision.json"
+    qa = load(qa_path) if qa_path.is_file() else {}
+    review = load(review_path) if review_path.is_file() else {}
     export = load(bundle / "export-config.json")
     evidence = load(args.evidence)
     probes = [
@@ -43,9 +48,20 @@ def main() -> int:
         warning = "accepted_warning:" + json.dumps(item, ensure_ascii=True, sort_keys=True)
         if warning not in warnings:
             warnings.append(warning)
+    project_id = qa.get("projectId") or plan.get("projectId") or trace.get("projectId")
+    if not project_id:
+        raise ValueError("projectId 在 qa/edit-plan/source-timecode-list 三处均缺失，manifest 无所本（⑭ 缺席容错也要有出处）")
+    evidence_refs = plan.get("evidenceRefs") or []
+    if not evidence_refs:
+        raise ValueError("edit-plan.json 缺顶层 evidenceRefs——manifest 的审批依据清单只能从包内计划抬取；"
+                         "G5 装配步须在包内计划副本补登可定位路径（G2 决定/各节点门禁收据/批准记录等），"
+                         "不得留空等校验末段才点名（⑮，zaku-003 ⑭ 修复彩排当场抓出）")
+    review_points = plan.get("humanReviewPoints") or []
+    if not review_points:
+        raise ValueError("edit-plan.json 缺顶层 humanReviewPoints——人工审核点清单同样必须在 G5 装配步补登（⑮ 同款病）")
     manifest = {
         "schemaVersion": "0.1",
-        "projectId": qa["projectId"],
+        "projectId": project_id,
         "node": "G5",
         "sourceProbe": probes,
         "segments": trace.get("segments", []),
@@ -58,7 +74,7 @@ def main() -> int:
         "warnings": warnings,
         "authorization": export.get("authorization", "not_specified"),
         "distribution": export.get("distribution", "not_specified"),
-        "status": qa.get("status"),
+        "status": qa.get("status") or "pending_human_review",
         "finishedAt": qa.get("finishedAt"),
         "componentRefs": {
             "traceability": "source-timecode-list.json",
@@ -68,7 +84,8 @@ def main() -> int:
             "humanReview": "human-review-decision.json"
         }
     }
-    if plan.get("projectId") != manifest["projectId"] or review.get("projectId") != manifest["projectId"]:
+    if plan.get("projectId") != manifest["projectId"] or (review and review.get("projectId") != manifest["projectId"]) \
+            or (qa and qa.get("projectId") != manifest["projectId"]):
         raise ValueError("bundle component projectId mismatch")
     output = (args.output or bundle / "delivery-manifest.json").resolve()
     if output.parent != bundle:

@@ -42,7 +42,7 @@ The default review and audit bundle contains:
 - `cover.jpg`: selected cover.
 - `clips/`: 3–5 chapter-level clips. Preserve finer internal segments in the traceability map instead of exposing them as the default review entry point.
 - `source-timecode-list.json`: chapter -> internal segment -> original asset, source path, source SHA-256, source timecodes, and output timeline.
-- `edit-plan.json`: machine-readable operation, ordering, audio, subtitle, cover, artifact, and human-review fields.
+- `edit-plan.json`: machine-readable operation, ordering, audio, subtitle, cover, artifact, and human-review fields. ⑮: the G5 assembly step must add the top-level `evidenceRefs` and `humanReviewPoints` to the in-bundle plan copy (the G3 plan itself carries no top-level `evidenceRefs`); `g5_build_delivery_manifest.py` lifts them verbatim into the manifest and refuses to build when either is missing — no silent empty lists surfacing only at the close-out gate.
 - `edit-timeline.md`: the approved G3 row-by-row edit timeline. It must list each output time interval, source asset and source interval, crop/mask/replace treatment, motion, narration, on-screen text, and BGM or source-audio rule. This is a required delivery artifact, not a chat-only summary.
 - `subtitles.srt`: final narration subtitles.
 - `subtitle-srt-check.json`: required handshake from subtitle-expert — run `skill/subtitle-expert/scripts/subtitle_check_srt.py subtitles.srt` and file the JSON report in the bundle. G5 validates the handshake (status passed + sha256 matches the bundle file) and holds no subtitle format rules of its own (issue ㊍; the 10× timebase shape is caught at G3's per-cue ASS↔SRT match, not here).
@@ -67,6 +67,8 @@ The default review and audit bundle contains:
 ## Reproducible validation
 
 After the component records exist, create the contract entry point with `scripts/g5_build_delivery_manifest.py --bundle <delivery-bundle> --evidence <approved-g2-evidence.json>`. Run `scripts/g5_validate_delivery.py --bundle <delivery-bundle>` before requesting human G5 approval. Add `--media` to re-run FFmpeg decode/probe checks on the final export. A validation failure must keep G5 in `review_required` or `blocked`; do not infer completion from an old QA report.
+
+**QA report generator (⑭, zaku-003 lesson — the ONLY sanctioned way to produce `metadata-validation-report.json`)**: run `scripts/g5_validate_delivery.py --bundle <delivery-bundle> --media --report-out <bundle>/metadata-validation-report.json`. The machine recomputes `path`+`sha256` for every file in the bundle (the report itself excluded), fills `checks` only with facts it actually measured this run, writes `status=g5_pending_human_review`, and marks every unmeasured check `待补` — never fabricated. It refuses to run without `--media`, refuses an existing report (delete-then-regenerate; never silently overwrite), and writes nothing when any check fails. The orchestrator may then replace only the `待补` check lines with plain-language wording (and fill `warnings`/`humanReview` at close-out); `artifacts` is machine-owned and must never be hand-edited — a hand-written report is what let seven handshake artifacts ship without fingerprints in zaku-003.
 
 ## Pipeline Integration
 
