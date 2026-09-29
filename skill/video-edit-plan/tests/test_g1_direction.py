@@ -116,6 +116,26 @@ class G1DirectionTest(unittest.TestCase):
             self.assertEqual(0, code, result)
             self.assertTrue((workspace / "工作台" / "demo-001" / "G1-创作方向-v2" / "G1-方向简报.md").is_file())
 
+    def test_write_refuses_project_directory_as_workspace(self):
+        """⑤（zaku-003 实跑踩坑）：--workspace 语义＝仓库规范根；把 工作台/ 之下或本身
+        的路径传进来，语义闸当场拒并指路——绝不再拼出 工作台/<id>/工作台/<id>/ 嵌套产物。"""
+        temporary, pack = self.create_pack()
+        with temporary:
+            input_path = self.write_input(temporary.name, self.valid_direction())
+            project_dir = Path(temporary.name) / "workspace" / "工作台" / "demo-001"
+            code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(project_dir),
+                                        "--input", str(input_path), "--confirmed")
+            self.assertEqual(2, code, result)
+            self.assertEqual("blocked", result["status"])
+            self.assertEqual("workspace_semantics", result["blockers"][0]["type"])
+            self.assertIn("规范根", result["blockers"][0]["detail"])
+            self.assertFalse((project_dir / "工作台").exists())
+            code, result = self.run_cli("write", "--pack", str(pack),
+                                        "--workspace", str(Path(temporary.name) / "workspace" / "工作台"),
+                                        "--input", str(input_path), "--confirmed")
+            self.assertEqual(2, code, result)
+            self.assertEqual("workspace_semantics", result["blockers"][0]["type"])
+
     def test_title_must_declare_expression_type(self):
         temporary, pack = self.create_pack()
         with temporary:

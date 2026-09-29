@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Deterministic G1 gate, contract validation, and confirmed brief writer."""
+"""Deterministic G1 gate, contract validation, and confirmed brief writer.
+
+⑤（zaku-003 实跑踩坑）：write 的 --workspace 语义＝仓库规范根（工作台/ 的父目录），
+不是项目目录——把 工作台/<id> 传进来会拼出嵌套的 工作台/<id>/工作台/<id>/G1-创作方向/。
+workspace_semantics_issue() 对解析后的路径逐段检查"工作台"在场即 blocked 指路，
+机械判据只判机械事实，不猜意图。
+"""
 
 import argparse
 import datetime as dt
@@ -198,6 +204,20 @@ def markdown(data, pack):
     return "\n".join(lines) + "\n"
 
 
+def workspace_semantics_issue(workspace):
+    """⑤（zaku-003 实跑踩坑）：--workspace 的真实语义＝仓库规范根（工作台/ 目录的父目录），
+    正式简报由工具自行拼 <workspace>/工作台/<projectId>/G1-创作方向/。按直觉把项目目录
+    传进来会拼出 工作台/<id>/工作台/<id>/G1-创作方向 的嵌套产物。机械判据只判机械事实：
+    解析后的 workspace 绝对路径任何一段名叫"工作台"，说明它已在/就是规范目录之下，拒写并指路。"""
+    resolved = Path(workspace).resolve()
+    if "工作台" in [p.name for p in resolved.parents] or resolved.name == "工作台":
+        return (f"--workspace 传的是 工作台/ 之内或之下的路径（{workspace}）——该参数语义＝仓库规范根"
+                "（工作台/ 目录的父目录，通常是仓库根目录本身），正式简报由工具自行拼"
+                " <workspace>/工作台/<projectId>/G1-创作方向/；把项目目录再传进来会拼出嵌套的"
+                " 工作台/<id>/工作台/<id>/ 产物（⑤，zaku-003 实跑教训）。请改传规范根。")
+    return None
+
+
 def target_directory(workspace, project_id, on_conflict):
     # Project layout contract: formal artifacts live under 工作台/<projectId>/G1-创作方向/.
     base = Path(workspace).resolve() / "工作台" / project_id / "G1-创作方向"
@@ -218,7 +238,9 @@ def main():
         if name != "check-pack":
             command.add_argument("--input", required=True, type=Path)
         if name == "write":
-            command.add_argument("--workspace", required=True, type=Path)
+            command.add_argument("--workspace", required=True, type=Path,
+                                 help="仓库规范根（工作台/ 的父目录，通常是仓库根本身；不是项目目录！"
+                                      "简报自动拼 <workspace>/工作台/<projectId>/G1-创作方向/，⑤）")
             command.add_argument("--confirmed", action="store_true")
             command.add_argument("--on-conflict", choices=("stop", "version"), default="stop")
     args = parser.parse_args()
@@ -238,6 +260,10 @@ def main():
         return 0
     if not args.confirmed:
         emit({"status": "blocked", "blockers": [{"type": "missing_explicit_confirmation", "detail": "未传入 --confirmed，禁止写入方向简报"}], "finishedAt": now()})
+        return 2
+    workspace_issue = workspace_semantics_issue(args.workspace)
+    if workspace_issue:
+        emit({"status": "blocked", "blockers": [{"type": "workspace_semantics", "detail": workspace_issue}], "finishedAt": now()})
         return 2
     destination = target_directory(args.workspace, data["projectId"], args.on_conflict)
     # Conflict means "an existing direction brief would be overwritten" — not merely that

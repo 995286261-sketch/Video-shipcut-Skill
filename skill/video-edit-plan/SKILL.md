@@ -29,10 +29,10 @@ metadata:
 
 ```powershell
 python skill/video-edit-plan/scripts/g1_direction.py validate --pack <素材包路径> --input <方向输入.json>
-python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路径> --workspace <调用方工作区> --input <方向输入.json> --confirmed
+python skill/video-edit-plan/scripts/g1_direction.py write --pack <素材包路径> --workspace <仓库规范根=工作台/ 的父目录（不是项目目录！⑤）> --input <方向输入.json> --confirmed
 ```
 
-输出只写入调用方工作区的 `工作台/<projectId>/G1-创作方向/`，绝不回写素材包或修改原始媒体。`新工作区/` 是待验证提案，未明确启用前不得写入。输入 JSON、字段约束和简报格式见 [G1 引导规则](references/g1-direction-guide.md)。后续计划合同见 [计划合同](references/plan-contract.md)。
+输出只写入规范根的 `工作台/<projectId>/G1-创作方向/`，绝不回写素材包或修改原始媒体。**⑤ 语义闸**：`--workspace` 解析后路径任何一段名为 `工作台`（传了项目目录或工作台根本身）当场 `blocked` 点名指路——按直觉传项目目录会拼出 `工作台/<id>/工作台/<id>/` 嵌套产物，zaku-003 实跑踩坑后机器设防。`新工作区/` 是待验证提案，未明确启用前不得写入。输入 JSON、字段约束和简报格式见 [G1 引导规则](references/g1-direction-guide.md)。后续计划合同见 [计划合同](references/plan-contract.md)。
 
 ## G1 末：找乐编排（BGM 槽 pending 时）
 
