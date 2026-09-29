@@ -34,7 +34,7 @@
 - **每条候选写死** `license: uncleared-platform-catalog`、`distributionBoundary: internal_test` 与 `licenseNote`：平台曲库授权仅覆盖端内播放，不存在"用了 API 就等于有版权"。
 - **候选只能用于试听选型**：选中的歌要进剪辑计划，必须由人经官方渠道取得整轨文件，走轨道二登记真实许可证据（内测项目按 zaku 先例登记 `cleared-for-project` + 用户明示内部使用）。**试听件直接进成片 = 红线违规**，G0 三哈希链与 G5 审计会拒收。
 - 风控响应（-462/verifyType）与网络失败一律结构化 `blocked`，不静默换源、不重试轰炸。
-- **URL 白名单守卫（SSRF，Mimosa L3 2026-09-21）**：检索端点只允许 `music.163.com`（回环 http 例外仅供测试套件）；试听件下载允许网易系官方域（`*.163.com / *.126.net / *.netease.com`），302 逐跳重新校验主机、限 5 跳，越界即拒。
+- **URL 白名单守卫（SSRF，Mimosa L3 2026-09-21）**：检索端点只允许 `music.163.com`（回环 http 例外仅供测试套件）；试听件下载允许网易系官方域（`*.163.com / *.126.net / *.netease.com`），302 逐跳重新校验主机、限 5 跳，越界即拒。**scheme 升级（②，zaku-intro-003 实测，用户 09-29 定案）**：网易云预览 302 一律跳 `http://` 授权 CDN（`*.music.126.net` 支持 https），曾被 guard 按 https 规则整批拦死（检索命中、下载 0/120，通道实际不可用）——修法是**白名单域名在场才允许把 http 跳转升级为 https 再收 guard 检**：只动 scheme、主机逐跳照旧校验、名单外的 http 原样拒；guard 本身不许拆。升级发生在哪些主机记入候选 `previewSchemeUpgraded` 留痕。
 - 商用迁移路径：换带商用许可的来源适配器（Epidemic/Artlist/曲多多等）或 AI 生成音乐；候选 schema 与下游链路不变，换源只换这一个脚本。
 
 ## 登记产物

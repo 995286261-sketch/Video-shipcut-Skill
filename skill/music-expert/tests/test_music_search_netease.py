@@ -56,6 +56,43 @@ class PureFunctionTest(unittest.TestCase):
         self.assertIn("target_dir = args.output_dir", source)
 
 
+class SchemeUpgradeTests(unittest.TestCase):
+    """②（zaku-003 实测）：netease 预览 302 指 http CDN 被 guard 拦死→白名单域名
+    才允许 http→https 升级；名单外 http 原样交给 guard 拒——红线=guard 不许拆。"""
+
+    def test_allowlisted_cdn_http_upgrades_to_https(self):
+        url, upgraded = netease.upgrade_cdn_scheme("http://m10.music.126.net/2026/x.mp3?sig=1")
+        self.assertTrue(upgraded)
+        self.assertEqual("https://m10.music.126.net/2026/x.mp3?sig=1", url)
+        self.assertIsNone(netease.guard_url(url, netease.DOWNLOAD_ALLOWED_HOSTS))
+
+    def test_https_passes_through(self):
+        self.assertEqual(("https://m10.music.126.net/a.mp3", False),
+                         netease.upgrade_cdn_scheme("https://m10.music.126.net/a.mp3"))
+
+    def test_off_allowlist_http_never_upgraded_guard_still_refuses(self):
+        url, upgraded = netease.upgrade_cdn_scheme("http://evil.example.com/a.mp3")
+        self.assertFalse(upgraded)
+        self.assertEqual("http://evil.example.com/a.mp3", url)
+        refusal = netease.guard_url(url, netease.DOWNLOAD_ALLOWED_HOSTS)
+        self.assertIsNotNone(refusal)   # guard 先拒 scheme、名单外同拒——两条防线都在
+
+    def test_download_refuses_off_allowlist_without_network(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            failure = netease.download("http://evil.example.com/a.mp3", Path(tmp) / "a.mp3", [])
+        self.assertIsNotNone(failure)
+        self.assertIn("SSRF guard", failure)
+
+    def test_loopback_exception_not_upgraded(self):
+        # 既有测试套件的 discard-port http loopback 例外路径必须原样保留（09-21 guard 批锁例同款回归）。
+        url, upgraded = netease.upgrade_cdn_scheme("http://127.0.0.1:9/x.mp3")
+        self.assertFalse(upgraded)
+        self.assertIsNone(netease.guard_url(url, netease.DOWNLOAD_ALLOWED_HOSTS))
+
+    def test_preview_record_default_base_needs_no_upgrade(self):
+        self.assertFalse(netease.PREVIEW_BASE.startswith("http://"))
+
+
 class CliBlockedTest(unittest.TestCase):
     def run_script(self, args, env=None):
         tmp = tempfile.TemporaryDirectory()

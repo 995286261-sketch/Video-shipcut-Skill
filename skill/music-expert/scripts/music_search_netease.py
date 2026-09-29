@@ -161,9 +161,32 @@ def title_slug(title: str | None) -> str:
     return (cleaned[:48] or "untitled")
 
 
-def download(url: str, target: Path) -> str | None:
+def upgrade_cdn_scheme(url: str) -> tuple[str, bool]:
+    """②（zaku-intro-003 实测，用户 09-29 定案）：网易云预览 302 一律指向 http:// 的
+    授权 CDN（*.music.126.net 支持 https），被 guard 按 https 规则拦死、下载层全灭。
+    修法=**白名单域名在场才允许 http→https 升级**——升级只动 scheme，host 仍照过
+    DOWNLOAD_ALLOWED_HOSTS 校验；不在名单的 http 一律原样交给 guard 拒。
+    红线：guard 本身不许拆，这里不是放松校验而是把合法跳转送到 guard 认得的安全形态。"""
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except ValueError:
+        return url, False
+    if parts.scheme != "http":
+        return url, False
+    host = (parts.hostname or "").lower()
+    if not any(host == d or host.endswith("." + d) for d in DOWNLOAD_ALLOWED_HOSTS):
+        return url, False
+    return urllib.parse.urlunsplit(("https", *parts[1:])), True
+
+
+def download(url: str, target: Path, upgrades: list | None = None) -> str | None:
     current = url
     for _ in range(6):
+        current, upgraded = upgrade_cdn_scheme(current)
+        if upgraded and upgrades is not None:
+            host = (urllib.parse.urlsplit(current).hostname or "").lower()
+            if host not in upgrades:
+                upgrades.append(host)
         refusal = guard_url(current, DOWNLOAD_ALLOWED_HOSTS)
         if refusal:
             return f"download blocked by SSRF guard: {refusal}"
@@ -281,7 +304,8 @@ def main() -> int:
             target_dir = args.output_dir
             target_dir.mkdir(parents=True, exist_ok=True)
             target = target_dir / f"netease-{record['neteaseId']}-{title_slug(record.get('title'))}.mp3"
-            failure = download(record["previewUrl"], target)
+            upgrades: list = []
+            failure = download(record["previewUrl"], target, upgrades)
             if failure is not None:
                 excluded.append({"neteaseId": record["neteaseId"], "name": record["title"], "reason": failure})
                 continue
@@ -289,6 +313,8 @@ def main() -> int:
             record["previewPath"] = str(target.resolve())
             record["sha256"] = sha256(target)
             record["byteSize"] = target.stat().st_size
+            if upgrades:
+                record["previewSchemeUpgraded"] = upgrades  # ② 留痕：哪些授权 CDN 走了 http→https
             record["decodeProbe"] = {"status": "passed" if passed else "failed", "engine": "ffmpeg"}
             if not passed:
                 record["decodeProbe"]["error"] = detail or "undecodable"
