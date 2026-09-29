@@ -154,7 +154,12 @@ def render_echo(result: dict, path: Path) -> None:
                   "> 本文件不含任何曲目描述——没有真实听过，就不会有笔记；此处不编造。",
                   "> 配好音频模型（如 `bl auth login`）后重跑本层即可补全。", ""]
     else:
-        ref_part = f"｜参照曲：{result['reference']}" if result.get("reference") else "｜绝对属性模式（笔记可入库复用）"
+        if result.get("reference"):
+            # ⑥：卡上带参照身份——画像卡与 A/B 卡是否"同一只耳朵听同一参照"用 sha 对账
+            sha = result.get("referenceSha256")
+            ref_part = f"｜参照曲：{result['reference']}（sha {sha[:12]}…）" if sha else f"｜参照曲：{result['reference']}（sha 未记录）"
+        else:
+            ref_part = "｜绝对属性模式（笔记可入库复用）"
         lines += [f"- 模型：{capability['audioModel']}{ref_part}",
                   "- 本层只记录模型真实听到的输出；每条失败如实标注，未听曲目绝不配文字。", ""]
     note = result.get("referenceNote")
@@ -258,11 +263,12 @@ def main() -> int:
             audios = [excerpt(args.reference, workdir, int(ref_ms * s), args.excerpt_sec,
                               suffix=f"-ref{int(s * 100)}") for s in starts]
         text, error = listen(audio_binary, args.model, audios, REFERENCE_NOTE_TEMPLATE, args.timeout)
-        note = {"reference": str(args.reference), "promptVersion": PROMPT_VER, "mode": "reference-note",
+        note = {"reference": str(args.reference), "referenceSha256": file_sha(args.reference),
+                "promptVersion": PROMPT_VER, "mode": "reference-note",
                 "excerpts": [str(a) for a in audios], "notes": text, "error": error}
         result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes", "mode": "reference-note",
                   "capability": {"available": True, "audioModel": detail, "modelOverride": args.model},
-                  "reference": str(args.reference), "referenceNote": note,
+                  "reference": str(args.reference), "referenceSha256": note["referenceSha256"], "referenceNote": note,
                   "tracks": [], "partialFailures": [] if text else [{"title": args.reference.name, "error": error}],
                   "writebackFailures": [], "skippedWithoutPreview": [],
                   "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"}
@@ -280,6 +286,26 @@ def main() -> int:
         return 2
     tracks = tracks[: args.max_tracks]
     mode = "absolute" if args.absolute else "ab"
+    # ⑥（zaku-003 首轮 A/B 自锚退化）：参照曲与候选同一段字节时，"10/10 同曲"满分证明的
+    # 不是贴合参照、是耳朵认出了自己——一票否决，一耳都不开。机械判据：A/B 模式下参照曲
+    # 与任一候选预览件文件 sha256 相同即拒（参照曲=用户点名的感觉源，不得同时在候选池里）。
+    ref_sha = file_sha(args.reference) if mode == "ab" else None
+    if ref_sha:
+        self_hits = []
+        for track in tracks:
+            preview = Path(track["previewPath"])
+            try:
+                if file_sha(preview) == ref_sha:
+                    self_hits.append(str(track.get("title") or preview))
+            except OSError:
+                continue
+        if self_hits:
+            emit({"status": "invalid", "errors": [{"field": "reference",
+                  "rule": "reference_is_in_candidates（⑥ 自锚否决：参照曲 sha 与候选预览件 sha 相同）",
+                  "detail": f"A/B 参照曲与候选 {', '.join(self_hits)} 同字节——自比满分不证明贴合。"
+                            "把该曲从候选清单剔除后重跑；或确认真正的参照应是别的文件"
+                            "（参考片音轨／用户此前批准的曲目），参照曲=用户点名的感觉源。"}]})
+            return 2
     message = ABSOLUTE_TEMPLATE if args.absolute else PROMPT_TEMPLATE.format(role=args.project_brief)
     workdir = args.output.parent / "listen-excerpts"
     ref = None
@@ -299,7 +325,7 @@ def main() -> int:
             ab_cache = json.loads(ab_cache_path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
             ab_cache = {}
-    ref_sha = file_sha(args.reference) if (mode == "ab" and args.reference) else None
+    # ref_sha 已在⑥ 自锚闸处算好（A/B 模式必有，绝对模式为 None），此处直接复用
     notes, failures, writeback_failures = [], [], []
     for track in tracks:
         candidate = Path(track["previewPath"])
@@ -357,6 +383,8 @@ def main() -> int:
     result = {"schemaVersion": "0.1", "purpose": "bgm_audition_notes", "mode": mode,
               "capability": {"available": True, "audioModel": detail, "modelOverride": args.model},
               "reference": str(args.reference) if args.reference else None, "projectBrief": args.project_brief,
+              # ⑥：画像卡与 A/B 卡对同一参照的引用做成机器字段——两卡对账只认 sha 不认文件名
+              "referenceSha256": ref_sha,
               "library": str(library) if library else None,
               "tracks": notes, "partialFailures": failures, "writebackFailures": writeback_failures,
               "skippedWithoutPreview": skipped,

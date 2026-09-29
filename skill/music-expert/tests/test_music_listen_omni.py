@@ -150,6 +150,34 @@ class ListenTest(unittest.TestCase):
         payload = json.loads(result.stdout)
         self.assertEqual("referenceNote", payload["errors"][0]["field"])
 
+    def test_self_anchor_rejected_without_a_single_listen(self):
+        """⑥（zaku-003 自锚退化）：参照曲与候选同字节＝满分自比，一票否决、一耳不开。"""
+        self.reference.write_bytes(b"audio-bytes-good")  # 参照曲＝Good Phonk 本尊
+        result = self.run_script(["--bl", str(self.stub)])
+        self.assertEqual(2, result.returncode)
+        payload = json.loads(result.stdout)
+        self.assertEqual("reference", payload["errors"][0]["field"])
+        self.assertIn("reference_is_in_candidates", payload["errors"][0]["rule"])
+        self.assertIn("Good Phonk", payload["errors"][0]["detail"])
+        self.assertFalse((self.root / "calls.log").exists())      # 一次模型调用都没发生
+        self.assertFalse((self.root / "notes.json").exists())     # 也不落任何产物
+
+    def test_ab_result_carries_reference_sha_machine_field(self):
+        """⑥：A/B 与画像卡对同一参照的引用做成机器字段（referenceSha256），卡间对账不认文件名。"""
+        self.assertEqual(0, self.run_script(["--bl", str(self.stub)]).returncode)
+        data = json.loads((self.root / "notes.json").read_text(encoding="utf-8"))
+        self.assertEqual(hashlib.sha256(self.reference.read_bytes()).hexdigest().upper(),
+                         data["referenceSha256"])
+        echo = next(self.root.glob("BGM-试听笔记回显-*.md")).read_text(encoding="utf-8")
+        self.assertIn("sha " + data["referenceSha256"][:12], echo)
+        note_run = self.run_argv([str(LISTEN), "--reference", str(self.reference), "--reference-note",
+                                  "--excerpt-sec", "0", "--bl", str(self.stub),
+                                  "--output", str(self.root / "refnote.json")])
+        self.assertEqual(0, note_run.returncode, note_run.stdout)
+        ndata = json.loads((self.root / "refnote.json").read_text(encoding="utf-8"))
+        self.assertEqual(data["referenceSha256"], ndata["referenceSha256"])  # 两卡同一 sha＝同参照可对账
+        self.assertEqual(ndata["referenceSha256"], ndata["referenceNote"]["referenceSha256"])
+
     def test_ab_pairs_are_cached_by_anchor_and_track_sha(self):
         """验收003-⑥: an A/B re-rank must not re-burn identical (anchor, candidate) pairs."""
         pool = json.loads(self.manifest.read_text(encoding="utf-8"))

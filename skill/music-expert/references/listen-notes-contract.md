@@ -18,19 +18,21 @@
 
 ## 输入
 
-- `--reference`：用户确认 OK 的参照曲音频（锚；风格简报的宿主文件）。
+- `--reference`：用户确认 OK 的参照曲音频（锚；风格简报的宿主文件）。**参照身份红线（⑥，zaku-003 实跑）**：参照曲＝用户点名的感觉源（参考片音轨／用户此前批准的曲目），**永不与候选同文件**——A/B 模式机器自锚否决：参照曲 sha 与任一候选预览件 sha 相同当场 `reference_is_in_candidates` 拒绝、一耳不开（首轮把 LOW-PHONK 既当锚又留在池里，"10/10 同曲"实为退化自比，用户追问复验才暴露、结论随之改向）。
 - `--manifest`（可多次）：候选清单或推荐 JSON（读 `candidates`/`ranked`，需 `previewPath` 指向真实试听件）。
 - 可选：`--project-brief`（贴合度问法的角色描述）、`--model`、`--excerpt-sec`（默认 90 秒节选，跳过前奏；0 直发原文件）、`--max-tracks`（默认 10，**计费封顶**）、`--timeout`。
 
 ## 输出
 
-- `BGM-试听笔记-v0.1.json`：`capability`（available/audioModel）、`reference`、`tracks[]`（title/neteaseId/notes——notes 只来自模型真实回复）、`partialFailures[]`（title/error）、`disclaimer`。
+- `BGM-试听笔记-v0.1.json`：`capability`（available/audioModel）、`reference`、`referenceSha256`、`tracks[]`（title/neteaseId/notes——notes 只来自模型真实回复）、`partialFailures[]`（title/error）、`disclaimer`。
 - `BGM-试听笔记回显-v0.1.md`：人读卡片；能力缺失时**只有警告与说明，没有曲目段落**。
+- **参照引用机器字段（⑥）**：A/B 产物与 `--reference-note` 画像产物都写 `referenceSha256`，回显卡头带 `sha <前12位>…`——"画像卡与 A/B 卡是否听的是同一参照"只认 sha 对账，不认文件名（改名、拷贝、换目录都可能同名不同字节或同字节不同名）。
 
 ## 已知局限（首跑实测记录，2026-09-11）
 
 - 默认节选策略（20% 处起 90 秒）会**显著左右 A/B 结论**：同是 Devil Game，整曲单听判"完美契合"，带 LOW 参照的节选 A/B 判"过快过吵，2/10"——参照节选与候选节选落在不同能量段时，模型比的是节选片段而非两首完整的歌。在节选策略按能量峰对齐（复用分析报告 `energyCurve`）改进前，笔记结论必须与人的整曲试听对照使用，不得单独采信。
 - 这恰是"笔记不做门禁"的实据：两层意见冲突时，信息有价值（差异点=耳朵该重点检查的地方），裁决在人。
+- **换参照＝换考题，不是换答案（⑥ 第二轮教训）**：同一首 Gone Bad 对 LOW-PHONK 锚判"冷酷 Phonk·6/10 能用"、对参考片音轨锚判"明亮 Progressive House·4/10 不能用"——A/B 是相对评价，锚不同结论自然不同。两轮回显互斥时，编排方必须**并呈两轮原文（各带自己的参照曲与 referenceSha256）**、终审交人耳；免责条款从纸面变成刚需。
 
 ## 成本与隐私纪律
 
