@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-1080p-734dd167",
+      "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sourceKind": "local-file",
+      "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "byteSize": 47898887,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-devil-game-phonk-9787c297",
+      "relativePath": "07_授权音频/Devil_Game_(Phonk).mp3",
+      "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+      "byteSize": 2049715,
+      "fileExtension": ".mp3",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "bgmRegistration": {
+        "relativePath": "07_授权音频/BGM-候选登记-Devil-Game-Phonk-9F61EA0B.json",
+        "sha256": "4368481224866603B4A3DF7ABA11F949144A3F5FF9DB9F0050B5BA5664FCB164",
+        "licenseType": "cleared-for-project",
+        "distributionBoundary": "internal_test"
+      },
+      "bgmAnalysis": {
+        "relativePath": "07_授权音频/BGM-分析报告-netease-2679274856-Devil_Game_(Phonk)-9F61EA0B.json",
+        "sha256": "9B65F2E322C7B127EB883105BED197D364DDC438918F001D25E377DA6D96B717"
+      }
+    },
+    {
+      "assetId": "audio-07-low-phonk-d7d03f4a",
+      "relativePath": "07_授权音频/LOW-PHONK.mp3",
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "byteSize": 7132111,
+      "fileExtension": ".mp3",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "bgmRegistration": {
+        "relativePath": "07_授权音频/BGM-候选登记-LOW-PHONK-0B2F3018.json",
+        "sha256": "BE5F471136A2CCF605CC03270140CCC37A46FE664A7C53C53D09F29E0131896E",
+        "licenseType": "cleared-for-project",
+        "distributionBoundary": "internal_test"
+      },
+      "bgmAnalysis": {
+        "relativePath": "07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+        "sha256": "C3EB5BFCABAAE5D186D1CC1384F0FF78369DC13DB9DD8DB89DF1FE9AC0ECD03A"
+      }
+    }
+  ],
+  "bgm": {
+    "decision": "provided",
+    "preference": null,
+    "libraryPending": false,
+    "clearCondition": null
+  },
+  "packStatus": "complete",
+  "registeredAt": "2026-09-28T09:43:10.090100Z"
+}

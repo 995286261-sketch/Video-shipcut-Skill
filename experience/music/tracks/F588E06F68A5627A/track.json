@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "F588E06F68A5627AC7EFC628DC5897990135418130ACD6C3B4D95CD405E3B96F",
+  "aliases": [
+    {
+      "title": "Chorus music - Techno loop",
+      "sourceUrl": "https://freesound.org/s/407385/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:06:10Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-407385-preview.mp3",
+      "recordedAt": "2026-09-28T09:06:10Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:06:10Z",
+  "updatedAt": "2026-09-28T09:06:10Z"
+}

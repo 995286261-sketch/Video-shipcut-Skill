@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "node": "G3",
+  "status": "review_required",
+  "narrationDraft": "工作台/zaku-intro-003/G2-证据与口播/G2-口播草案-v0.1.md",
+  "narrationDecisionRef": "工作台/zaku-intro-003/G2-证据与口播/G2-审核决定-v0.1.json",
+  "timingBasis": "工作台/zaku-intro-003/G2-证据与口播/G2-配音清单-longtian-v0.2.json",
+  "beats": [
+    {
+      "beatId": "beat-001", "outputStartMs": 0, "outputEndMs": 6560,
+      "narrationText": "没有主角光环，没有神级装备——一年战争，你绕不开这台量产机。",
+      "claim": { "type": "abstract_conclusion", "minimumVisibleEvidence": ["扎古系量产机体出现在战斗语境"] },
+      "allowedVisualAlternatives": ["绿扎古持械/开火镜头", "多机混战镜头"]
+    },
+    {
+      "beatId": "beat-002", "outputStartMs": 6780, "outputEndMs": 13740,
+      "narrationText": "MS-06 扎古 II，吉翁公国军的主力量产机动战士。",
+      "claim": { "type": "object", "minimumVisibleEvidence": ["可辨认的扎古系机体（圆顶头部/单眼/肩盾任一组合）"] },
+      "allowedVisualAlternatives": ["扎古头部特写", "扎古全身/半身镜头"]
+    },
+    {
+      "beatId": "beat-003", "outputStartMs": 13793, "outputEndMs": 20113,
+      "narrationText": "光是 F 型就造了三千架以上——全吉翁的机动战士里，量产最多的就是它。",
+      "claim": { "type": "object", "minimumVisibleEvidence": ["扎古系机体连续作战画面（数量主张=已核事实陈述，画面承载量产机战斗而非字面三千架）"] },
+      "allowedVisualAlternatives": ["多段扎古镜头串联", "扎古开火+爆炸战果"]
+    },
+    {
+      "beatId": "beat-004", "outputStartMs": 20271, "outputEndMs": 26671,
+      "narrationText": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+      "claim": { "type": "weapon", "minimumVisibleEvidence": ["机体持握/使用实弹枪械", "近战光束/刀刃类武器"] },
+      "allowedVisualAlternatives": ["肩扛长管炮射击", "光束军刀/斧特写"]
+    },
+    {
+      "beatId": "beat-005", "outputStartMs": 26796, "outputEndMs": 35516,
+      "narrationText": "外露的动力管谈不上优雅，却给了它独一无二的士兵感——那是普通人的浪漫，不是测试机的浪漫。",
+      "claim": { "type": "appearance", "minimumVisibleEvidence": ["机体细节特写（动力管/管线/单眼/装甲），承载'士兵感'编辑观点"] },
+      "allowedVisualAlternatives": ["管线盘绕特写", "头部/独眼特写", "静立机体细节"]
+    },
+    {
+      "beatId": "beat-006", "outputStartMs": 35527, "outputEndMs": 46087,
+      "narrationText": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。",
+      "claim": { "type": "action", "minimumVisibleEvidence": ["红色扎古开火/突进", "战舰爆炸/被击沉战果画面"] },
+      "allowedVisualAlternatives": ["红扎古长镜头+爆炸链分切"]
+    },
+    {
+      "beatId": "beat-007", "outputStartMs": 46417, "outputEndMs": 49057,
+      "narrationText": "赤色彗星，从此得名。",
+      "claim": { "type": "object", "minimumVisibleEvidence": ["红色扎古（赤色彗星指代）"] },
+      "allowedVisualAlternatives": ["红扎古+爆炸背景"]
+    },
+    {
+      "beatId": "beat-008", "outputStartMs": 49273, "outputEndMs": 57113,
+      "narrationText": "同一个战场，乔尼·莱登驾着量产扎古，用 280 火箭筒击沉三艘麦哲伦级。",
+      "claim": { "type": "action", "minimumVisibleEvidence": ["扎古系机体射击", "战舰爆炸/被击沉画面（驾驶员身份=已核事实口播陈述，不作画面断言）"] },
+      "allowedVisualAlternatives": ["指挥官色扎古连射+爆炸链"]
+    },
+    {
+      "beatId": "beat-009", "outputStartMs": 57539, "outputEndMs": 64259,
+      "narrationText": "王牌没有挑机体——是量产机和王牌互相成就。这，就是男人的浪漫。",
+      "claim": { "type": "abstract_conclusion", "minimumVisibleEvidence": ["扎古系机体高燃战斗蒙太奇（开火/突进/指挥画面）"] },
+      "allowedVisualAlternatives": ["多镜头快切战斗序列"]
+    },
+    {
+      "beatId": "beat-010", "outputStartMs": 64528, "outputEndMs": 67488,
+      "narrationText": "你的扎古记忆是哪一台？评论区见。",
+      "claim": { "type": "editorial_hold", "minimumVisibleEvidence": ["扎古剪影/独眼收尾画面（互动钩子留白）"] },
+      "allowedVisualAlternatives": []
+    }
+  ]
+}

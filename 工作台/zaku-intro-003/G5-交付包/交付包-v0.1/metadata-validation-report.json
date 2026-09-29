@@ -1,0 +1,95 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G5",
+ "subject": "zaku-intro-003 交付包 v0.1 机器质检",
+ "reviewedAt": "2026-09-29T11:08:00+08:00",
+ "checks": {
+  "decode": "pass（完整解码零错误，质检证据/decode.log）",
+  "videoCodec": "pass（h264）",
+  "dimensions": "pass（1920x1080）",
+  "fps": "pass（30/1）",
+  "audio": "pass（aac 44100 立体声）",
+  "duration": "pass（67547ms=时间线）",
+  "blackFrames": "pass（blackdetect d=0.45 零命中；片尾近黑短于阈值=设计）",
+  "silence": "pass（silencedetect -45dB/0.5s 零命中=BGM 床基连续）",
+  "duplicateSegments": "pass（12 段源窗口两两不相交，机器比对）",
+  "cover": "pass（1920x1080 jpg，来源=登记件精确路径+目视确认）",
+  "subtitles": "pass（subtitle-expert 复检报告 passed）",
+  "transitionAudit": "pass（transition-expert 审计 passed，gridInvariant，主哈希=包内成片）",
+  "bgmChainAudit": "pass（N7 全链哈希+执行保真 passed）",
+  "checkFrames": "pass（G4 目检六帧+两处叠化中点双影，见 G4-回放复核卡-v0.1.md ④）"
+ },
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "0820C350B0C86EA686A240810E7444B3AF8B1D2F3B93A2944C7C3AD8BFFCB911"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "BC01D8A938BD46814862E1C901DFD2B0564AA9F20BE26DE69C802D8F778DF625"
+  },
+  "subtitleSrtCheck": {
+   "path": "subtitle-srt-check.json",
+   "sha256": "05032FCA128EC7D056FBBAB7BE6EAFABD8F40C62A0AD44E46D78F6D304ECF19F"
+  },
+  "transitionAudit": {
+   "path": "transition-audit.json",
+   "sha256": "8E4B5D994617878239A17BF524A84A6AE1B482B1A9E958C42F17CE80AF3FEF32"
+  },
+  "loudnessAudit": {
+   "path": "loudness-audit.json",
+   "sha256": "179EEC4027E2947AFB5CB35B13B0BE041AC7A89112A44F317EEE94C1AC0DF9EF"
+  },
+  "bgmChainAudit": {
+   "path": "bgm-chain-audit.json",
+   "sha256": "E0529E722E98C52DF611552CC8B1A470B25F9E6C52AA81EC7236293DC13433EC"
+  },
+  "sourceTimecodeList": {
+   "path": "source-timecode-list.json",
+   "sha256": "D2548E38C59FD7BC39F7331B5B872430374611CB9AA45C12763C7BF035690022"
+  },
+  "editPlan": {
+   "path": "edit-plan.json",
+   "sha256": "19BC911DEFCAF433E3E6A880E6B8C68CC3BF6115F657FAAEB4DF22F77A78A5FE"
+  },
+  "exportConfig": {
+   "path": "export-config.json",
+   "sha256": "F7E033B774F2BCF12991CDD1A6F3651DA8CD3DAD37632FBA4F68A23FAEFCEE10"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/ch-01.mp4",
+    "sha256": "B664E115AB9A2072B8469C7176DB7449128F372F39D9B84C81085531D7AE87A1"
+   },
+   {
+    "path": "clips/ch-02.mp4",
+    "sha256": "25DF187AD73CA963458CAE5D766CACD015D3BD602DD26AD79156BA15498C017B"
+   },
+   {
+    "path": "clips/ch-03.mp4",
+    "sha256": "0DB7620562B660CF3A3A3935E0E6A509522A2913544304492EA4CE7847B1D92E"
+   },
+   {
+    "path": "clips/ch-04.mp4",
+    "sha256": "27C78FF6C34D99F0B65F699CF2D2633820E5728209D44ACF718795770F0368B7"
+   },
+   {
+    "path": "clips/ch-05.mp4",
+    "sha256": "750ABE8847E29014DC4D72E868C796743997D7A9EE6FCE74BF5C3A64103A9C60"
+   }
+  ]
+ },
+ "warnings": [
+  "响度成片实测 -15.5 LUFS 对目标 -14.0 超容差 1.5 LU（disclosed-exceedance，需人工点名接受）",
+  "BGM 未清权：对外发布必须换曲重走 G4",
+  "全片 bilibili 水印+SUNRISE 台标不可裁除（internal_test 边界内保留）"
+ ],
+ "humanReview": "确认G5（逐字口令 2026-09-29T11:16+08:00）：选项2 接受列出的警告并交付；见 human-review-decision.json 与 G5-批准记录.md",
+ "status": "completed_with_accepted_warnings",
+ "finishedAt": "2026-09-29T11:16:50+08:00"
+}

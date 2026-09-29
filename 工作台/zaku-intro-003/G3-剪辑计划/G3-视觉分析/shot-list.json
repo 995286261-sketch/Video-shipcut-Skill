@@ -1,0 +1,560 @@
+[
+ {
+  "shotId": "S000",
+  "startMs": 0,
+  "endMs": 1544,
+  "midMs": 772
+ },
+ {
+  "shotId": "S001",
+  "startMs": 1544,
+  "endMs": 2477,
+  "midMs": 2010
+ },
+ {
+  "shotId": "S002",
+  "startMs": 2477,
+  "endMs": 3277,
+  "midMs": 2877
+ },
+ {
+  "shotId": "S003",
+  "startMs": 3277,
+  "endMs": 3544,
+  "midMs": 3410
+ },
+ {
+  "shotId": "S004",
+  "startMs": 3544,
+  "endMs": 6777,
+  "midMs": 5160
+ },
+ {
+  "shotId": "S005",
+  "startMs": 6777,
+  "endMs": 9711,
+  "midMs": 8244
+ },
+ {
+  "shotId": "S006",
+  "startMs": 9711,
+  "endMs": 10044,
+  "midMs": 9878
+ },
+ {
+  "shotId": "S007",
+  "startMs": 10044,
+  "endMs": 10244,
+  "midMs": 10144
+ },
+ {
+  "shotId": "S008",
+  "startMs": 10244,
+  "endMs": 10477,
+  "midMs": 10360
+ },
+ {
+  "shotId": "S009",
+  "startMs": 10477,
+  "endMs": 11644,
+  "midMs": 11061
+ },
+ {
+  "shotId": "S010",
+  "startMs": 11644,
+  "endMs": 12911,
+  "midMs": 12278
+ },
+ {
+  "shotId": "S011",
+  "startMs": 12911,
+  "endMs": 13077,
+  "midMs": 12994
+ },
+ {
+  "shotId": "S012",
+  "startMs": 13077,
+  "endMs": 14077,
+  "midMs": 13577
+ },
+ {
+  "shotId": "S013",
+  "startMs": 14077,
+  "endMs": 14244,
+  "midMs": 14160
+ },
+ {
+  "shotId": "S014",
+  "startMs": 14244,
+  "endMs": 14477,
+  "midMs": 14360
+ },
+ {
+  "shotId": "S015",
+  "startMs": 14477,
+  "endMs": 16411,
+  "midMs": 15444
+ },
+ {
+  "shotId": "S016",
+  "startMs": 16411,
+  "endMs": 16577,
+  "midMs": 16494
+ },
+ {
+  "shotId": "S017",
+  "startMs": 16577,
+  "endMs": 19711,
+  "midMs": 18144
+ },
+ {
+  "shotId": "S018",
+  "startMs": 19711,
+  "endMs": 21377,
+  "midMs": 20544
+ },
+ {
+  "shotId": "S019",
+  "startMs": 21377,
+  "endMs": 29711,
+  "midMs": 25544
+ },
+ {
+  "shotId": "S020",
+  "startMs": 29711,
+  "endMs": 30677,
+  "midMs": 30194
+ },
+ {
+  "shotId": "S021",
+  "startMs": 30677,
+  "endMs": 31677,
+  "midMs": 31177
+ },
+ {
+  "shotId": "S022",
+  "startMs": 31677,
+  "endMs": 32777,
+  "midMs": 32227
+ },
+ {
+  "shotId": "S023",
+  "startMs": 33177,
+  "endMs": 33344,
+  "midMs": 33260
+ },
+ {
+  "shotId": "S024",
+  "startMs": 33344,
+  "endMs": 33511,
+  "midMs": 33428
+ },
+ {
+  "shotId": "S025",
+  "startMs": 33677,
+  "endMs": 33844,
+  "midMs": 33760
+ },
+ {
+  "shotId": "S026",
+  "startMs": 34177,
+  "endMs": 34344,
+  "midMs": 34260
+ },
+ {
+  "shotId": "S027",
+  "startMs": 34511,
+  "endMs": 34677,
+  "midMs": 34594
+ },
+ {
+  "shotId": "S028",
+  "startMs": 34677,
+  "endMs": 34844,
+  "midMs": 34760
+ },
+ {
+  "shotId": "S029",
+  "startMs": 34844,
+  "endMs": 35011,
+  "midMs": 34928
+ },
+ {
+  "shotId": "S030",
+  "startMs": 35011,
+  "endMs": 36511,
+  "midMs": 35761
+ },
+ {
+  "shotId": "S031",
+  "startMs": 36511,
+  "endMs": 38744,
+  "midMs": 37628
+ },
+ {
+  "shotId": "S032",
+  "startMs": 38744,
+  "endMs": 39811,
+  "midMs": 39278
+ },
+ {
+  "shotId": "S033",
+  "startMs": 39811,
+  "endMs": 39977,
+  "midMs": 39894
+ },
+ {
+  "shotId": "S034",
+  "startMs": 39977,
+  "endMs": 40144,
+  "midMs": 40060
+ },
+ {
+  "shotId": "S035",
+  "startMs": 40144,
+  "endMs": 40311,
+  "midMs": 40228
+ },
+ {
+  "shotId": "S036",
+  "startMs": 40311,
+  "endMs": 40477,
+  "midMs": 40394
+ },
+ {
+  "shotId": "S037",
+  "startMs": 40477,
+  "endMs": 40644,
+  "midMs": 40560
+ },
+ {
+  "shotId": "S038",
+  "startMs": 40644,
+  "endMs": 40811,
+  "midMs": 40728
+ },
+ {
+  "shotId": "S039",
+  "startMs": 40811,
+  "endMs": 40977,
+  "midMs": 40894
+ },
+ {
+  "shotId": "S040",
+  "startMs": 40977,
+  "endMs": 41144,
+  "midMs": 41060
+ },
+ {
+  "shotId": "S041",
+  "startMs": 41144,
+  "endMs": 41311,
+  "midMs": 41228
+ },
+ {
+  "shotId": "S042",
+  "startMs": 41311,
+  "endMs": 41744,
+  "midMs": 41528
+ },
+ {
+  "shotId": "S043",
+  "startMs": 41744,
+  "endMs": 42977,
+  "midMs": 42360
+ },
+ {
+  "shotId": "S044",
+  "startMs": 42977,
+  "endMs": 43144,
+  "midMs": 43060
+ },
+ {
+  "shotId": "S045",
+  "startMs": 43244,
+  "endMs": 45811,
+  "midMs": 44528
+ },
+ {
+  "shotId": "S046",
+  "startMs": 45811,
+  "endMs": 49311,
+  "midMs": 47561
+ },
+ {
+  "shotId": "S047",
+  "startMs": 49311,
+  "endMs": 49477,
+  "midMs": 49394
+ },
+ {
+  "shotId": "S048",
+  "startMs": 49477,
+  "endMs": 49644,
+  "midMs": 49560
+ },
+ {
+  "shotId": "S049",
+  "startMs": 49644,
+  "endMs": 49811,
+  "midMs": 49728
+ },
+ {
+  "shotId": "S050",
+  "startMs": 49811,
+  "endMs": 50111,
+  "midMs": 49961
+ },
+ {
+  "shotId": "S051",
+  "startMs": 50111,
+  "endMs": 51811,
+  "midMs": 50961
+ },
+ {
+  "shotId": "S052",
+  "startMs": 51811,
+  "endMs": 57944,
+  "midMs": 54878
+ },
+ {
+  "shotId": "S053",
+  "startMs": 57944,
+  "endMs": 59644,
+  "midMs": 58794
+ },
+ {
+  "shotId": "S054",
+  "startMs": 59644,
+  "endMs": 59877,
+  "midMs": 59760
+ },
+ {
+  "shotId": "S055",
+  "startMs": 59877,
+  "endMs": 60477,
+  "midMs": 60177
+ },
+ {
+  "shotId": "S056",
+  "startMs": 60477,
+  "endMs": 60644,
+  "midMs": 60560
+ },
+ {
+  "shotId": "S057",
+  "startMs": 60644,
+  "endMs": 62044,
+  "midMs": 61344
+ },
+ {
+  "shotId": "S058",
+  "startMs": 62044,
+  "endMs": 62777,
+  "midMs": 62410
+ },
+ {
+  "shotId": "S059",
+  "startMs": 62777,
+  "endMs": 65877,
+  "midMs": 64327
+ },
+ {
+  "shotId": "S060",
+  "startMs": 65877,
+  "endMs": 68377,
+  "midMs": 67127
+ },
+ {
+  "shotId": "S061",
+  "startMs": 68377,
+  "endMs": 70877,
+  "midMs": 69627
+ },
+ {
+  "shotId": "S062",
+  "startMs": 70877,
+  "endMs": 73611,
+  "midMs": 72244
+ },
+ {
+  "shotId": "S063",
+  "startMs": 73611,
+  "endMs": 74577,
+  "midMs": 74094
+ },
+ {
+  "shotId": "S064",
+  "startMs": 74711,
+  "endMs": 79544,
+  "midMs": 77128
+ },
+ {
+  "shotId": "S065",
+  "startMs": 79544,
+  "endMs": 81777,
+  "midMs": 80660
+ },
+ {
+  "shotId": "S066",
+  "startMs": 81777,
+  "endMs": 81944,
+  "midMs": 81860
+ },
+ {
+  "shotId": "S067",
+  "startMs": 81944,
+  "endMs": 82211,
+  "midMs": 82078
+ },
+ {
+  "shotId": "S068",
+  "startMs": 82211,
+  "endMs": 82377,
+  "midMs": 82294
+ },
+ {
+  "shotId": "S069",
+  "startMs": 82377,
+  "endMs": 82877,
+  "midMs": 82627
+ },
+ {
+  "shotId": "S070",
+  "startMs": 82877,
+  "endMs": 83177,
+  "midMs": 83027
+ },
+ {
+  "shotId": "S071",
+  "startMs": 83177,
+  "endMs": 83377,
+  "midMs": 83277
+ },
+ {
+  "shotId": "S072",
+  "startMs": 83377,
+  "endMs": 83877,
+  "midMs": 83627
+ },
+ {
+  "shotId": "S073",
+  "startMs": 83877,
+  "endMs": 84044,
+  "midMs": 83960
+ },
+ {
+  "shotId": "S074",
+  "startMs": 84111,
+  "endMs": 84511,
+  "midMs": 84311
+ },
+ {
+  "shotId": "S075",
+  "startMs": 84511,
+  "endMs": 84711,
+  "midMs": 84611
+ },
+ {
+  "shotId": "S076",
+  "startMs": 84711,
+  "endMs": 85044,
+  "midMs": 84878
+ },
+ {
+  "shotId": "S077",
+  "startMs": 85177,
+  "endMs": 86411,
+  "midMs": 85794
+ },
+ {
+  "shotId": "S078",
+  "startMs": 86477,
+  "endMs": 86977,
+  "midMs": 86727
+ },
+ {
+  "shotId": "S079",
+  "startMs": 86977,
+  "endMs": 89711,
+  "midMs": 88344
+ },
+ {
+  "shotId": "S080",
+  "startMs": 90877,
+  "endMs": 93111,
+  "midMs": 91994
+ },
+ {
+  "shotId": "S081",
+  "startMs": 93111,
+  "endMs": 94111,
+  "midMs": 93611
+ },
+ {
+  "shotId": "S082",
+  "startMs": 94111,
+  "endMs": 95611,
+  "midMs": 94861
+ },
+ {
+  "shotId": "S083",
+  "startMs": 95611,
+  "endMs": 95777,
+  "midMs": 95694
+ },
+ {
+  "shotId": "S084",
+  "startMs": 95777,
+  "endMs": 96477,
+  "midMs": 96127
+ },
+ {
+  "shotId": "S085",
+  "startMs": 96611,
+  "endMs": 96944,
+  "midMs": 96778
+ },
+ {
+  "shotId": "S086",
+  "startMs": 96944,
+  "endMs": 98411,
+  "midMs": 97678
+ },
+ {
+  "shotId": "S087",
+  "startMs": 98411,
+  "endMs": 100211,
+  "midMs": 99311
+ },
+ {
+  "shotId": "S088",
+  "startMs": 100344,
+  "endMs": 100511,
+  "midMs": 100428
+ },
+ {
+  "shotId": "S089",
+  "startMs": 100511,
+  "endMs": 101777,
+  "midMs": 101144
+ },
+ {
+  "shotId": "S090",
+  "startMs": 101777,
+  "endMs": 107111,
+  "midMs": 104444
+ },
+ {
+  "shotId": "S091",
+  "startMs": 107111,
+  "endMs": 108511,
+  "midMs": 107811
+ },
+ {
+  "shotId": "S092",
+  "startMs": 108511,
+  "endMs": 117909,
+  "midMs": 113210
+ }
+]

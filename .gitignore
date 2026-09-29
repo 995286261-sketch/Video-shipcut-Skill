@@ -22,3 +22,8 @@ models/
 # 超过 GitHub 单文件上限（107MiB；SHA 已录 G0 manifest/素材包，凭证据可重取）
 工作台/psycho-zaku-intro-002/G0-素材包/02_原始素材/*.mp4
 .mimosa/
+
+# 网易云未清权音频（Devil Game 整轨/试听/截取）永不入库：SHA 已录候选登记与经验库，凭证据可重取（zaku-intro-003 入库时定，2026-09-29）
+工作台/*/G0-素材包/07_授权音频/Devil_Game_(Phonk).mp3
+工作台/*/G1-创作方向/G1-BGM找乐/试听件-库内批次/*netease*.mp3
+工作台/*/G1-创作方向/G1-BGM找乐/listen-excerpts/*netease*.mp3

@@ -1,0 +1,927 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "全片 scdet 镜头切点逐子镜头中帧探索层观察（93 帧）+ 12 个入选窗口起/中/终验证层探针（36 帧，见 G3-visual-verification-frames.json）",
+ "method": "ffmpeg scdet 切点检测 + 逐镜头中帧抽取（480x270）+ 主 agent 多模态目视（4 张带标号 6x4 拼版）；切点判定以实际抽帧为准（issue ⑱）",
+ "cacheKey": {
+  "assetId": "source-02-1080p-734dd167",
+  "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+  "detector": "scdet-0.3",
+  "model": "zcode-main-agent-vision",
+  "promptVersion": "g3-explore-verify-v0.2"
+ },
+ "targetAssets": [
+  {
+   "assetId": "source-02-1080p-734dd167",
+   "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "keyframes": [
+    {
+     "sourceMs": 772,
+     "frameRef": "G3-视觉分析/探索帧/S000.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "太空中红色机体远景，轮廓不可辨",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 2010,
+     "frameRef": "G3-视觉分析/探索帧/S001.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶员脸部特写（白红头盔，绿色调色）",
+     "identityStatus": "person_only"
+    },
+    {
+     "sourceMs": 2877,
+     "frameRef": "G3-视觉分析/探索帧/S002.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "瞄准十字线中的红色扎古剪影（单眼发光）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 3410,
+     "frameRef": "G3-视觉分析/探索帧/S003.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色高达持光束步枪横指",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 5160,
+     "frameRef": "G3-视觉分析/探索帧/S004.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色扎古半身，右手高举热能斧（蓝白刃光），粉色单眼",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 8244,
+     "frameRef": "G3-视觉分析/探索帧/S005.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深蓝灰扎古031号半身（肩盾+动力管）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 9878,
+     "frameRef": "G3-视觉分析/探索帧/S006.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰双联炮塔开火（蓝白光束）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 10144,
+     "frameRef": "G3-视觉分析/探索帧/S007.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色强光爆闪充满画面",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 10360,
+     "frameRef": "G3-视觉分析/探索帧/S008.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "蓝色光束掠过机体边缘",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 11061,
+     "frameRef": "G3-视觉分析/探索帧/S009.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色机体蓝色光束尾焰突进",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 12278,
+     "frameRef": "G3-视觉分析/探索帧/S010.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古头部大特写：粉色单眼+两侧动力管",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 12994,
+     "frameRef": "G3-视觉分析/探索帧/S011.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古与爆炸火球同框",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 13577,
+     "frameRef": "G3-视觉分析/探索帧/S012.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "带101号盾的联邦兵与扎古交火",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 14160,
+     "frameRef": "G3-视觉分析/探索帧/S013.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色机体被击中爆炸",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 14360,
+     "frameRef": "G3-视觉分析/探索帧/S014.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "交火中爆炸火球",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 15444,
+     "frameRef": "G3-视觉分析/探索帧/S015.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色GM头部特写（绿色护目镜）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 16494,
+     "frameRef": "G3-视觉分析/探索帧/S016.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古002号持盾半身",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 18144,
+     "frameRef": "G3-视觉分析/探索帧/S017.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄褐涂装机体持长枪开火（枪口焰），涂装非常规扎古绿",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 20544,
+     "frameRef": "G3-视觉分析/探索帧/S018.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "机体被粉紫色能量包裹爆裂",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 25544,
+     "frameRef": "G3-视觉分析/探索帧/S019.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "夏亚红色扎古长镜头：红色机体持步枪瞄准，背景粉色光束",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 30194,
+     "frameRef": "G3-视觉分析/探索帧/S020.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗光扎古头部特写（红色单眼）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 31177,
+     "frameRef": "G3-视觉分析/探索帧/S021.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色扎古持步枪，动力管轮廓可见",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 32227,
+     "frameRef": "G3-视觉分析/探索帧/S022.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫色扎古A06号半身（肩盾+蓝色推进焰）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 33260,
+     "frameRef": "G3-视觉分析/探索帧/S023.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆炸火球中机体残影",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 33428,
+     "frameRef": "G3-视觉分析/探索帧/S024.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "战舰上层建筑连环爆炸（火焰+破片）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 33760,
+     "frameRef": "G3-视觉分析/探索帧/S025.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "大火球吞噬舰体结构",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 34260,
+     "frameRef": "G3-视觉分析/探索帧/S026.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "舰桥窗格结构+爆炸",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 34594,
+     "frameRef": "G3-视觉分析/探索帧/S027.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "连环爆炸火光",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 34760,
+     "frameRef": "G3-视觉分析/探索帧/S028.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆炸碎片飞溅",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 34928,
+     "frameRef": "G3-视觉分析/探索帧/S029.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "桅杆结构+爆炸背景",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 35761,
+     "frameRef": "G3-视觉分析/探索帧/S030.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+     "identityStatus": "person_only"
+    },
+    {
+     "sourceMs": 37628,
+     "frameRef": "G3-视觉分析/探索帧/S031.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色手臂持蓝白色光束军刀特写",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 39278,
+     "frameRef": "G3-视觉分析/探索帧/S032.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色机体带05号与星徽标识，暗背景",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 39894,
+     "frameRef": "G3-视觉分析/探索帧/S033.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古头胸特写（圆顶+单眼+动力管）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40060,
+     "frameRef": "G3-视觉分析/探索帧/S034.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号持枪，橙色弹道线背景",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40228,
+     "frameRef": "G3-视觉分析/探索帧/S035.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号开火（蓝色光束）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40394,
+     "frameRef": "G3-视觉分析/探索帧/S036.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号连射+橙色弹幕",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40560,
+     "frameRef": "G3-视觉分析/探索帧/S037.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号射击姿态",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40728,
+     "frameRef": "G3-视觉分析/探索帧/S038.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号侧身开火（蓝色光束+爆炸）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 40894,
+     "frameRef": "G3-视觉分析/探索帧/S039.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号俯冲射击",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 41060,
+     "frameRef": "G3-视觉分析/探索帧/S040.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号射击+火球",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 41228,
+     "frameRef": "G3-视觉分析/探索帧/S041.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号射击姿态延续",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 41528,
+     "frameRef": "G3-视觉分析/探索帧/S042.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古02号+爆炸",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 42360,
+     "frameRef": "G3-视觉分析/探索帧/S043.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "联邦舰桥内部爆炸（火花四溅）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 43060,
+     "frameRef": "G3-视觉分析/探索帧/S044.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆炸闪光",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 44528,
+     "frameRef": "G3-视觉分析/探索帧/S045.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色GM开火+Ball球体",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 47561,
+     "frameRef": "G3-视觉分析/探索帧/S046.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古开火（粉色光束）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 49394,
+     "frameRef": "G3-视觉分析/探索帧/S047.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "WB102白色战舰+爆炸",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 49560,
+     "frameRef": "G3-视觉分析/探索帧/S048.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "WB102战舰被击中（火花）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 49728,
+     "frameRef": "G3-视觉分析/探索帧/S049.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "WB102战舰+乘员舱",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 49961,
+     "frameRef": "G3-视觉分析/探索帧/S050.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "WB102战舰爆炸",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 50961,
+     "frameRef": "G3-视觉分析/探索帧/S051.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑色扎古013号（吉翁徽+粉色单眼）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 54878,
+     "frameRef": "G3-视觉分析/探索帧/S052.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗背景机体持发光刃状武器长镜头（刃光蓝白）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 58794,
+     "frameRef": "G3-视觉分析/探索帧/S053.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古肩扛长管武器（火箭筒形态）瞄准",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 59760,
+     "frameRef": "G3-视觉分析/探索帧/S054.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古开火枪口焰",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 60177,
+     "frameRef": "G3-视觉分析/探索帧/S055.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "机体开火+粉色光束爆炸",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 60560,
+     "frameRef": "G3-视觉分析/探索帧/S056.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "粉色光束爆裂",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 61344,
+     "frameRef": "G3-视觉分析/探索帧/S057.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "粉色能量爆裂+机体剪影",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 62410,
+     "frameRef": "G3-视觉分析/探索帧/S058.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗夜中多点白色灯光（疑似编队）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 64327,
+     "frameRef": "G3-视觉分析/探索帧/S059.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色核心战机/炮架结构",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 67127,
+     "frameRef": "G3-视觉分析/探索帧/S060.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古独眼大特写（粉色发光）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 69627,
+     "frameRef": "G3-视觉分析/探索帧/S061.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙黄色装甲板块特写（形状不明）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 72244,
+     "frameRef": "G3-视觉分析/探索帧/S062.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "机体管线/动力管盘绕大特写（多色线缆）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 74094,
+     "frameRef": "G3-视觉分析/探索帧/S063.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古静立于灯光阵列中（全身剪影）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 77128,
+     "frameRef": "G3-视觉分析/探索帧/S064.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色核心战机爆炸",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 80660,
+     "frameRef": "G3-视觉分析/探索帧/S065.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "编队推进+烧录字幕「双方前进中 无异常」",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 81860,
+     "frameRef": "G3-视觉分析/探索帧/S066.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体群开火+烧录字幕「集弹状况良好 损伤在预测范围内」",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 82078,
+     "frameRef": "G3-视觉分析/探索帧/S067.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 82294,
+     "frameRef": "G3-视觉分析/探索帧/S068.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体开火+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 82627,
+     "frameRef": "G3-视觉分析/探索帧/S069.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 83027,
+     "frameRef": "G3-视觉分析/探索帧/S070.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 83277,
+     "frameRef": "G3-视觉分析/探索帧/S071.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 83627,
+     "frameRef": "G3-视觉分析/探索帧/S072.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 83960,
+     "frameRef": "G3-视觉分析/探索帧/S073.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 84311,
+     "frameRef": "G3-视觉分析/探索帧/S074.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 84611,
+     "frameRef": "G3-视觉分析/探索帧/S075.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 84878,
+     "frameRef": "G3-视觉分析/探索帧/S076.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机体+烧录字幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 85794,
+     "frameRef": "G3-视觉分析/探索帧/S077.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "云雾中白色机体",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 86727,
+     "frameRef": "G3-视觉分析/探索帧/S078.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "地面跑道/弹射轨道推进画面",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 88344,
+     "frameRef": "G3-视觉分析/探索帧/S079.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "地面机体残骸",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 91994,
+     "frameRef": "G3-视觉分析/探索帧/S080.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色机体持机枪开火",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 93611,
+     "frameRef": "G3-视觉分析/探索帧/S081.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "指挥席监视器（绿色屏幕+吉翁徽）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 94861,
+     "frameRef": "G3-视觉分析/探索帧/S082.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "灰色机体残骸堆",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 95694,
+     "frameRef": "G3-视觉分析/探索帧/S083.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色核心战机开火",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 96127,
+     "frameRef": "G3-视觉分析/探索帧/S084.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "模糊白色机体运动",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 96778,
+     "frameRef": "G3-视觉分析/探索帧/S085.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶舱内部（红色仪表+天线）",
+     "identityStatus": "person_only"
+    },
+    {
+     "sourceMs": 97678,
+     "frameRef": "G3-视觉分析/探索帧/S086.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色机体飞行开火",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 99311,
+     "frameRef": "G3-视觉分析/探索帧/S087.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "肩盾特写（扎古式圆盾+挂架）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 100428,
+     "frameRef": "G3-视觉分析/探索帧/S088.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗色机体光束对射",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 101144,
+     "frameRef": "G3-视觉分析/探索帧/S089.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古头部特写（发光单眼）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 104444,
+     "frameRef": "G3-视觉分析/探索帧/S090.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色机体与白色机体近身格斗",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 107811,
+     "frameRef": "G3-视觉分析/探索帧/S091.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古+右侧爆炸火球",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 113210,
+     "frameRef": "G3-视觉分析/探索帧/S092.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "太空中的扎古全身剪影（粉色单眼+粒子光点）长镜头",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 3540,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/start-0000003540ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色红蓝高达系联邦机体发射粉色光束（窗口起点落在上一镜头尾帧）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 6875,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/middle-0000006875ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深蓝灰扎古（031号+吉翁微标）半身，粉色单眼、肩盾",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 10209,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/end-0000010209ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "蓝白强光爆闪充满画面",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 11640,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/start-0000011640ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古头部大特写：粉色单眼光晕+两侧动力管",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 15188,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/middle-0000015188ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色联邦机体在烟尘中推进",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 18735,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/end-0000018735ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色联邦机体持枪开火（枪口焰）+橙色烟幕",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 29710,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/start-0000029710ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古持步枪开火（蓝色推进焰+红色光刃光晕入画）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 32923,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/middle-0000032923ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色爆炸火球+机体破片飞溅",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 36135,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/end-0000036135ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+     "identityStatus": "person_only"
+    },
+    {
+     "sourceMs": 52236,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/start-0000052236ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古持步枪射击，画面左下红色光刃（热能斧刃光）同框",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 53836,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/middle-0000053836ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄色爆炸碎片飞溅",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 55435,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/end-0000055435ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+     "identityStatus": "person_only"
+    },
+    {
+     "sourceMs": 57940,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/start-0000057940ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "两机扎古头部特写（灰色装甲+吉翁微标+粉色单眼）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 59610,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/middle-0000059610ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古肩扛长管火箭筒（炮口正对镜头）+盾，背景烟云",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 61280,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/end-0000061280ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "粉紫色能量爆裂吞没机体部件",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 65880,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/start-0000065880ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗红扎古头部特写（粉色单眼+格栅面罩）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 70274,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/middle-0000070274ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "机体装甲板块与黑色线缆（动力管）大特写",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 74667,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/end-0000074667ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "沙色装甲板特写（01号标识+管线）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 21380,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/start-0000021380ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "夏亚红色扎古持步枪，橙色爆炸火球背景（全身）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 25545,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/middle-0000025545ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红色扎古在太空中瞄准（粉色光束划过）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 29709,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/end-0000029709ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古持步枪开火（蓝色推进焰+红色光刃，窗口终点落入相邻镜头）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 49310,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/start-0000049310ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "VB102白色联邦机体持盾开火（绿色护目镜）",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 50510,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/middle-0000050510ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古06号头肩特写（吉翁微标+粉色单眼）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 51710,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/end-0000051710ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黄褐涂装机体发射实弹炮（枪口焰）+白色机体",
+     "identityStatus": "not_present"
+    },
+    {
+     "sourceMs": 107110,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/start-0000107110ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色机体在夕阳地表燃烧解体（火花+镜头光晕）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 108566,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/middle-0000108566ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古太空中持步枪开火（橙色枪口焰+粉色粒子）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 110022,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/end-0000110022ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古太空持长管步枪瞄准（全身）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 39980,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/start-0000039980ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫扎古头部特写（单眼+橙色弹道线掠过）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 44060,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/middle-0000044060ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "舰桥/结构顶部被多发光束击中爆炸（蓝色传感器阵列+火球）",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 48140,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/end-0000048140ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色扎古系机体（绿色胸甲）中弹起火",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 98410,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/start-0000098410ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗战场中圆形盾面/长管武器近景（身份不可辨）",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 101943,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/middle-0000101943ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机与白色机体近身格斗（火花四溅）",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 105476,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/end-0000105476ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "橙色量产机群推进（背景白色机体+烟尘）",
+     "identityStatus": "mixed"
+    },
+    {
+     "sourceMs": 114755,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/start-0000114755ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "扎古太空剪影持长管炮（粉色粒子漂浮）",
+     "identityStatus": "confirmed"
+    },
+    {
+     "sourceMs": 116332,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/middle-0000116332ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "两台机体太空远景+缆线+粉色光点",
+     "identityStatus": "uncertain"
+    },
+    {
+     "sourceMs": 117808,
+     "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/end-0000117908ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "近黑画面仅余粉色粒子光点（镜头渐暗）",
+     "identityStatus": "uncertain"
+    }
+   ]
+  }
+ ],
+ "analyzedAt": "2026-09-28T10:42:53Z"
+}

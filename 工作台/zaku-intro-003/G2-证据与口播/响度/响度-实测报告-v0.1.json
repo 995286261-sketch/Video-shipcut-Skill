@@ -1,0 +1,19 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_measure",
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G2-证据与口播/配音试听-longtian/整条旁白-longtian-v0.1.wav",
+  "version": "v0.1",
+  "output": "工作台/zaku-intro-003/G2-证据与口播/响度/响度-实测报告-v0.1.json",
+  "measured": {
+    "integratedLufs": -23.9,
+    "truePeakDbtp": -1.2,
+    "loudnessRangeLu": 4.4,
+    "engine": "ffmpeg-ebur128"
+  },
+  "sha256": "ACC71895654E5615E01DEA26C9B307443B23491E43D512C126A46833ACAC4638",
+  "status": "measured",
+  "measuredAt": "2026-09-28T10:01:23Z",
+  "unitsNote": "LUFS=集成响度（平均有多响）；dBTP=真峰值（会不会爆）；LU=动态范围宽度"
+}

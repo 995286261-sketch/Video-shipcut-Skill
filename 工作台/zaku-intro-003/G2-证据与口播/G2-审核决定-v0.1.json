@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G2",
+  "projectId": "zaku-intro-003",
+  "status": "approved_for_g3",
+  "approvedNarrationRef": "工作台/zaku-intro-003/G2-证据与口播/G2-口播草案-v0.1.md",
+  "factCitationRef": "工作台/zaku-intro-003/G2-证据与口播/事实依据/扎古公开资料摘录-v0.1.md",
+  "voiceBriefRef": "工作台/zaku-intro-003/G2-证据与口播/G2-配音清单-longtian-v0.2.json",
+  "loudnessPlanRef": "工作台/zaku-intro-003/G2-证据与口播/响度/响度-归一化计划-v0.1.json",
+  "permittedFactIds": [
+    "claim-001",
+    "claim-002",
+    "claim-003",
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "prohibitedTopics": [
+    "未核实的最强/无敌/碾压类绝对化断言（G1 表达边界）",
+    "贬损其他作品或其他机体抬高扎古（G1 表达边界）",
+    "参考片（冷战奇迹）原句、画面、音乐、Logo 带入输出（G1 边界第3条）",
+    "源片原声（英文版权歌，G0/G1 原声策略=排除）",
+    "机器转写文本升级为事实、字幕或口播",
+    "婷婷预览级配音入正式成片（成品级=龙天 longtian_v3）",
+    "把公开设定资料口径冒充官方一手（卡1=1A 本项目限定）"
+  ],
+  "supersededDraftRefs": [
+    "工作台/zaku-intro-003/G2-证据与口播/G2-口播句子-v0.1.json",
+    "工作台/zaku-intro-003/G2-证据与口播/G2-排版稿-v0.1.md",
+    "工作台/zaku-intro-003/G2-证据与口播/G2-配音清单-longtian-v0.1.json"
+  ],
+  "userManuallyVerifiedClaims": [],
+  "voiceDecision": {
+    "chosen": "longtian_v3",
+    "tier": "成品级",
+    "rejectedPreview": "婷婷（macOS say，preview_only，仅节奏对照）",
+    "asrSelfCheck": "pronunciation-consistent（同音一致，专名误字=无 initial-prompt 通道假阴性，台账⑨）"
+  },
+  "loudnessDecision": {
+    "ceilingDisclosure": "龙天整条旁白天花板 -24.3 LUFS（目标 -14），blocked_true-peak",
+    "exitChosen": "A 先压缩后测：源峰均比过高属素材天花板，先跑压缩链再对本产物重新规划",
+    "g4Implication": "G4 走丙分档 blocked→受控 dynamic，压缩链后重跑 loud_plan；若仍超容差须点名响度披露，禁止静默"
+  },
+  "n09Disposal": {
+    "choice": "甲 接受 +218ms 超差并如实披露",
+    "toleranceMs": 150,
+    "actualMs": 218,
+    "precedent": "zaku-001 以 -213ms 披露出厂",
+    "blockedAlternative": "乙微改重合成被百炼免费额度耗尽阻塞（台账⑧），留作后续可选"
+  },
+  "approvalTokens": {
+    "g2": "确认G2",
+    "voice": "确认G2（同轮）"
+  },
+  "beatBlueprintRef": "工作台/zaku-intro-003/G2-证据与口播/BGM/BGM-节拍蓝图-v0.3.json",
+  "layoutRef": "工作台/zaku-intro-003/G2-证据与口播/G2-排版稿-v0.2.md",
+  "narrationTimelineAuthorityMs": 67547,
+  "audioPolicy": {
+    "bgm": "Devil Game (Phonk) 9F61EA0B9802430B…（cleared-for-project / internal_test）",
+    "sourceAudio": "排除",
+    "distribution": "not_for_distribution / internal_test"
+  }
+}

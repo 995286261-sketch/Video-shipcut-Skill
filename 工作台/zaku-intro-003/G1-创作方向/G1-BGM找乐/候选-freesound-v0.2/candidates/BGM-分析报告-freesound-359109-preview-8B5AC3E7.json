@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "8B5AC3E74812A60DF6257F10C694D9B69E3787FB3322D02CB1E7E2489F251BCF",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359109-preview.mp3",
+    "sha256": "8B5AC3E74812A60DF6257F10C694D9B69E3787FB3322D02CB1E7E2489F251BCF",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 5.616,
+    "decodedDurationMs": 5573
+  },
+  "tempoBpm": 129.2,
+  "beatsMs": [
+    511,
+    975,
+    1416,
+    1881,
+    2345,
+    2810,
+    3251,
+    3715,
+    4180,
+    4644,
+    5085,
+    5550
+  ],
+  "onsetsMs": [
+    70,
+    163,
+    255,
+    395,
+    511,
+    836,
+    952,
+    1300,
+    1416,
+    1649,
+    1765,
+    1881,
+    1997,
+    2113,
+    2229,
+    2322,
+    2670,
+    2786,
+    2926,
+    3088,
+    3251,
+    3483,
+    3599,
+    3715,
+    3762,
+    3924,
+    4156,
+    4528,
+    4644,
+    4783,
+    4969,
+    5085,
+    5155,
+    5317,
+    5433,
+    5550
+  ],
+  "hitPoints": [
+    {
+      "tMs": 70,
+      "kind": "accent"
+    },
+    {
+      "tMs": 163,
+      "kind": "accent"
+    },
+    {
+      "tMs": 255,
+      "kind": "accent"
+    },
+    {
+      "tMs": 511,
+      "kind": "beat"
+    },
+    {
+      "tMs": 836,
+      "kind": "accent"
+    },
+    {
+      "tMs": 975,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1416,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1649,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1881,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2113,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2345,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2670,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2810,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3088,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3251,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3483,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3715,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3924,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4180,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4644,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4783,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5085,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5317,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5550,
+      "kind": "beat"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 5573,
+      "energyMean": 0.079386
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.040159
+    },
+    {
+      "tMs": 372,
+      "rms": 0.054902
+    },
+    {
+      "tMs": 743,
+      "rms": 0.113648
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.105621
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.095499
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.064487
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.06455
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.111153
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.098049
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.053485
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.051969
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.061103
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.117025
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.070002
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.055864
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.048142
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -17.9,
+    "loudnessRangeLu": 0.2,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

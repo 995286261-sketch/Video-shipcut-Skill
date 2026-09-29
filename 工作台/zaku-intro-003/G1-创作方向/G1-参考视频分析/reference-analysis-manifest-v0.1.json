@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "node": "G1",
+  "status": "completed_with_warnings",
+  "analysisOnly": true,
+  "source": {
+    "assetId": "reference-cold-war-miracle",
+    "path": "工作台/zaku-intro-003/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "durationSec": 163
+  },
+  "cacheKey": {
+    "assetId": "reference-cold-war-miracle",
+    "sha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+    "analysisScope": "scene-cut-points-and-style-only",
+    "sampling": {
+      "sceneDetection": "ffmpeg-select-gt-scene-0.3",
+      "sceneFramePolicy": "scene-start-frame",
+      "fixedFramesSec": [
+        0,
+        40,
+        80,
+        120,
+        160
+      ]
+    },
+    "provider": "legacy-recorded-unknown",
+    "model": "legacy-recorded-unknown",
+    "promptVersion": "legacy-recorded-unknown"
+  },
+  "canonical": {
+    "technicalReport": "G1-参考视频分析/冷战奇迹 - 逆羽雄鹰 -1080P-技术分析报告.json",
+    "sceneAnalysis": "G1-参考视频分析/scene_analysis.json",
+    "sceneTimestamps": [
+      "G1-参考视频分析/scene_timestamps.txt",
+      "G1-参考视频分析/scene_timestamps_clustered.txt"
+    ],
+    "fixedKeyframes": "G1-参考视频分析/frame-{0,40,80,120,160}s.jpg",
+    "sceneKeyframes": "G1-参考视频分析/场景帧/scene-*-start.jpg",
+    "bgmAnalysisReport": "G1-参考视频分析/BGM-分析报告-冷战奇迹-逆羽雄鹰-1080P-DF263D11.json",
+    "bgmEchoCard": "G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+    "bgmStyleBrief": "G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "warnings": [
+    "scene_analysis.json and technical report contain timeout entries; those scenes are not verified",
+    "Legacy run did not record provider, model, or promptVersion; values are intentionally unknown"
+  ],
+  "reuseRule": "Matching cacheKey means read this manifest and derivatives; do not rerun full reference analysis. Invalidate only on source hash, scope, model/prompt change, or explicit user request.",
+  "provenance": {
+    "reusedFrom": "工作台/sinjuku-intro-001/G1-创作方向/G1-参考视频分析（reference-analysis-manifest-v0.1.json，其 lineage 亦为跨项目复用：unicorn→tiger→sinjuku）",
+    "reusedAt": "2026-09-28",
+    "cacheKeyCheck": "源文件 SHA-256 实测比对一致（本包 05_风格参考 拷贝 vs 分析源）；scene detection 44 原始切点/29 聚类等价复现于本项目新鲜重跑",
+    "note": "provider/model/promptVersion 沿用旧记录 legacy-recorded-unknown，如实不补写；本层仅用于节奏/风格参考（zaku-intro-003 实测跑·响度接线后全流程 G1）。"
+  }
+}

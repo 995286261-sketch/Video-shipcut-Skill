@@ -1,0 +1,1807 @@
+{
+  "schemaVersion": "0.1",
+  "producer": "local-faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "assetId": "unregistered:整条旁白-longtian-v0.1.wav",
+    "sha256": "ACC71895654E5615E01DEA26C9B307443B23491E43D512C126A46833ACAC4638",
+    "language": "zh",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "local-transcribe-script-v0.2"
+  },
+  "language": "zh",
+  "languageProbability": 1,
+  "input": "工作台/zaku-intro-003/G2-证据与口播/配音试听-longtian/整条旁白-longtian-v0.1.wav",
+  "segments": [
+    {
+      "segmentId": "tr-0001",
+      "startMs": 0,
+      "endMs": 2820,
+      "text": "没有主角光环、没有神纪装备",
+      "words": [
+        {
+          "startMs": 0,
+          "endMs": 360,
+          "text": "没有",
+          "probability": 0.2411240190267563
+        },
+        {
+          "startMs": 360,
+          "endMs": 640,
+          "text": "主",
+          "probability": 0.853999137878418
+        },
+        {
+          "startMs": 640,
+          "endMs": 800,
+          "text": "角",
+          "probability": 0.9673241376876831
+        },
+        {
+          "startMs": 800,
+          "endMs": 980,
+          "text": "光",
+          "probability": 0.991203784942627
+        },
+        {
+          "startMs": 980,
+          "endMs": 1320,
+          "text": "环、",
+          "probability": 0.9956979751586914
+        },
+        {
+          "startMs": 1660,
+          "endMs": 2000,
+          "text": "没有",
+          "probability": 0.9925152659416199
+        },
+        {
+          "startMs": 2000,
+          "endMs": 2240,
+          "text": "神",
+          "probability": 0.9806753993034363
+        },
+        {
+          "startMs": 2240,
+          "endMs": 2420,
+          "text": "纪",
+          "probability": 0.4255163371562958
+        },
+        {
+          "startMs": 2420,
+          "endMs": 2580,
+          "text": "装",
+          "probability": 0.9947912693023682
+        },
+        {
+          "startMs": 2580,
+          "endMs": 2820,
+          "text": "备",
+          "probability": 0.9994572103023529
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0002",
+      "startMs": 2820,
+      "endMs": 6260,
+      "text": "《马尔一年战争》你照不开这台量产机",
+      "words": [
+        {
+          "startMs": 2820,
+          "endMs": 3360,
+          "text": "《",
+          "probability": 0.13452765345573425
+        },
+        {
+          "startMs": 3360,
+          "endMs": 3820,
+          "text": "马",
+          "probability": 0.22279253602027893
+        },
+        {
+          "startMs": 3820,
+          "endMs": 3920,
+          "text": "尔",
+          "probability": 0.7281130105257034
+        },
+        {
+          "startMs": 3920,
+          "endMs": 4020,
+          "text": "一",
+          "probability": 0.7075668573379517
+        },
+        {
+          "startMs": 4020,
+          "endMs": 4180,
+          "text": "年",
+          "probability": 0.9782224893569946
+        },
+        {
+          "startMs": 4180,
+          "endMs": 4360,
+          "text": "战",
+          "probability": 0.9995249807834625
+        },
+        {
+          "startMs": 4360,
+          "endMs": 4500,
+          "text": "争",
+          "probability": 0.9941987991333008
+        },
+        {
+          "startMs": 4500,
+          "endMs": 4940,
+          "text": "》",
+          "probability": 0.9796945452690125
+        },
+        {
+          "startMs": 4940,
+          "endMs": 5060,
+          "text": "你",
+          "probability": 0.5518676042556763
+        },
+        {
+          "startMs": 5060,
+          "endMs": 5240,
+          "text": "照",
+          "probability": 0.9170148372650146
+        },
+        {
+          "startMs": 5240,
+          "endMs": 5360,
+          "text": "不",
+          "probability": 0.9956457018852234
+        },
+        {
+          "startMs": 5360,
+          "endMs": 5500,
+          "text": "开",
+          "probability": 0.9960854053497314
+        },
+        {
+          "startMs": 5500,
+          "endMs": 5640,
+          "text": "这",
+          "probability": 0.9964069724082947
+        },
+        {
+          "startMs": 5640,
+          "endMs": 5760,
+          "text": "台",
+          "probability": 0.9931095838546753
+        },
+        {
+          "startMs": 5760,
+          "endMs": 5920,
+          "text": "量",
+          "probability": 0.6675800681114197
+        },
+        {
+          "startMs": 5920,
+          "endMs": 6080,
+          "text": "产",
+          "probability": 0.9585128128528595
+        },
+        {
+          "startMs": 6080,
+          "endMs": 6260,
+          "text": "机",
+          "probability": 0.9966570138931274
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0003",
+      "startMs": 6660,
+      "endMs": 9320,
+      "text": "MS-06、扎古、II",
+      "words": [
+        {
+          "startMs": 6660,
+          "endMs": 7060,
+          "text": "MS",
+          "probability": 0.30406901240348816
+        },
+        {
+          "startMs": 7060,
+          "endMs": 7360,
+          "text": "-",
+          "probability": 0.9656835198402405
+        },
+        {
+          "startMs": 7360,
+          "endMs": 7720,
+          "text": "06、",
+          "probability": 0.9866341352462769
+        },
+        {
+          "startMs": 8200,
+          "endMs": 8420,
+          "text": "扎",
+          "probability": 0.8630400896072388
+        },
+        {
+          "startMs": 8420,
+          "endMs": 8700,
+          "text": "古、",
+          "probability": 0.7585057616233826
+        },
+        {
+          "startMs": 9120,
+          "endMs": 9320,
+          "text": "II",
+          "probability": 0.31498587131500244
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0004",
+      "startMs": 9820,
+      "endMs": 13300,
+      "text": "吉翼翁公国军的主力量产机动战士",
+      "words": [
+        {
+          "startMs": 9820,
+          "endMs": 10220,
+          "text": "吉",
+          "probability": 0.048218581825494766
+        },
+        {
+          "startMs": 10220,
+          "endMs": 10360,
+          "text": "翼",
+          "probability": 0.8936938047409058
+        },
+        {
+          "startMs": 10360,
+          "endMs": 10460,
+          "text": "翁",
+          "probability": 0.8468526601791382
+        },
+        {
+          "startMs": 10460,
+          "endMs": 10700,
+          "text": "公",
+          "probability": 0.612332284450531
+        },
+        {
+          "startMs": 10700,
+          "endMs": 10900,
+          "text": "国",
+          "probability": 0.9916806817054749
+        },
+        {
+          "startMs": 10900,
+          "endMs": 11060,
+          "text": "军",
+          "probability": 0.996650755405426
+        },
+        {
+          "startMs": 11060,
+          "endMs": 11200,
+          "text": "的",
+          "probability": 0.9935491681098938
+        },
+        {
+          "startMs": 11200,
+          "endMs": 11440,
+          "text": "主",
+          "probability": 0.9938461184501648
+        },
+        {
+          "startMs": 11440,
+          "endMs": 11660,
+          "text": "力",
+          "probability": 0.9978079199790955
+        },
+        {
+          "startMs": 11660,
+          "endMs": 12120,
+          "text": "量",
+          "probability": 0.6943782567977905
+        },
+        {
+          "startMs": 12120,
+          "endMs": 12400,
+          "text": "产",
+          "probability": 0.9954701960086823
+        },
+        {
+          "startMs": 12400,
+          "endMs": 12660,
+          "text": "机",
+          "probability": 0.8695086240768433
+        },
+        {
+          "startMs": 12660,
+          "endMs": 12860,
+          "text": "动",
+          "probability": 0.9717077016830444
+        },
+        {
+          "startMs": 12860,
+          "endMs": 13060,
+          "text": "战",
+          "probability": 0.998656153678894
+        },
+        {
+          "startMs": 13060,
+          "endMs": 13300,
+          "text": "士",
+          "probability": 0.9754095673561096
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0005",
+      "startMs": 13300,
+      "endMs": 15800,
+      "text": "光是F型就造了三千架以上",
+      "words": [
+        {
+          "startMs": 13300,
+          "endMs": 13840,
+          "text": "光",
+          "probability": 0.7295267581939697
+        },
+        {
+          "startMs": 13840,
+          "endMs": 14080,
+          "text": "是",
+          "probability": 0.4203682839870453
+        },
+        {
+          "startMs": 14080,
+          "endMs": 14320,
+          "text": "F",
+          "probability": 0.8059157729148865
+        },
+        {
+          "startMs": 14320,
+          "endMs": 14540,
+          "text": "型",
+          "probability": 0.769443690776825
+        },
+        {
+          "startMs": 14540,
+          "endMs": 14760,
+          "text": "就",
+          "probability": 0.9624975323677063
+        },
+        {
+          "startMs": 14760,
+          "endMs": 14900,
+          "text": "造",
+          "probability": 0.8739389777183533
+        },
+        {
+          "startMs": 14900,
+          "endMs": 15060,
+          "text": "了",
+          "probability": 0.9973748922348022
+        },
+        {
+          "startMs": 15060,
+          "endMs": 15200,
+          "text": "三",
+          "probability": 0.7178067564964294
+        },
+        {
+          "startMs": 15200,
+          "endMs": 15360,
+          "text": "千",
+          "probability": 0.9822993874549866
+        },
+        {
+          "startMs": 15360,
+          "endMs": 15540,
+          "text": "架",
+          "probability": 0.990926593542099
+        },
+        {
+          "startMs": 15540,
+          "endMs": 15800,
+          "text": "以上",
+          "probability": 0.9807079434394836
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0006",
+      "startMs": 15800,
+      "endMs": 18160,
+      "text": "《马尔方全吉翼翁》的机动战士里",
+      "words": [
+        {
+          "startMs": 15800,
+          "endMs": 16360,
+          "text": "《",
+          "probability": 0.8405020236968994
+        },
+        {
+          "startMs": 16360,
+          "endMs": 16440,
+          "text": "马",
+          "probability": 0.9600374102592468
+        },
+        {
+          "startMs": 16440,
+          "endMs": 16520,
+          "text": "尔",
+          "probability": 0.9945196509361267
+        },
+        {
+          "startMs": 16520,
+          "endMs": 16600,
+          "text": "方",
+          "probability": 0.647689938545227
+        },
+        {
+          "startMs": 16600,
+          "endMs": 16880,
+          "text": "全",
+          "probability": 0.9857864379882812
+        },
+        {
+          "startMs": 16880,
+          "endMs": 17100,
+          "text": "吉",
+          "probability": 0.8549713492393494
+        },
+        {
+          "startMs": 17100,
+          "endMs": 17180,
+          "text": "翼",
+          "probability": 0.6463876217603683
+        },
+        {
+          "startMs": 17180,
+          "endMs": 17300,
+          "text": "翁",
+          "probability": 0.9886669218540192
+        },
+        {
+          "startMs": 17300,
+          "endMs": 17360,
+          "text": "》",
+          "probability": 0.8477657437324524
+        },
+        {
+          "startMs": 17360,
+          "endMs": 17380,
+          "text": "的",
+          "probability": 0.9935030341148376
+        },
+        {
+          "startMs": 17380,
+          "endMs": 17540,
+          "text": "机",
+          "probability": 0.9891220927238464
+        },
+        {
+          "startMs": 17540,
+          "endMs": 17660,
+          "text": "动",
+          "probability": 0.9978330731391907
+        },
+        {
+          "startMs": 17660,
+          "endMs": 17840,
+          "text": "战",
+          "probability": 0.9996132552623749
+        },
+        {
+          "startMs": 17840,
+          "endMs": 18000,
+          "text": "士",
+          "probability": 0.9722735285758972
+        },
+        {
+          "startMs": 18000,
+          "endMs": 18160,
+          "text": "里",
+          "probability": 0.9265269041061401
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0007",
+      "startMs": 18160,
+      "endMs": 19640,
+      "text": "量产最多的就是它",
+      "words": [
+        {
+          "startMs": 18160,
+          "endMs": 18540,
+          "text": "量",
+          "probability": 0.9026921391487122
+        },
+        {
+          "startMs": 18540,
+          "endMs": 18740,
+          "text": "产",
+          "probability": 0.9998099207878113
+        },
+        {
+          "startMs": 18740,
+          "endMs": 18960,
+          "text": "最",
+          "probability": 0.9929695725440979
+        },
+        {
+          "startMs": 18960,
+          "endMs": 19140,
+          "text": "多",
+          "probability": 0.999790608882904
+        },
+        {
+          "startMs": 19140,
+          "endMs": 19240,
+          "text": "的",
+          "probability": 0.9961600303649902
+        },
+        {
+          "startMs": 19240,
+          "endMs": 19440,
+          "text": "就是",
+          "probability": 0.997322142124176
+        },
+        {
+          "startMs": 19440,
+          "endMs": 19640,
+          "text": "它",
+          "probability": 0.971276581287384
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0008",
+      "startMs": 19640,
+      "endMs": 21160,
+      "text": "120毫米机枪",
+      "words": [
+        {
+          "startMs": 19640,
+          "endMs": 20300,
+          "text": "120",
+          "probability": 0.4508391320705414
+        },
+        {
+          "startMs": 20300,
+          "endMs": 20660,
+          "text": "毫",
+          "probability": 0.8811038434505463
+        },
+        {
+          "startMs": 20660,
+          "endMs": 20780,
+          "text": "米",
+          "probability": 0.9979104399681091
+        },
+        {
+          "startMs": 20780,
+          "endMs": 20960,
+          "text": "机",
+          "probability": 0.9493638277053833
+        },
+        {
+          "startMs": 20960,
+          "endMs": 21160,
+          "text": "枪",
+          "probability": 0.997814267873764
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0009",
+      "startMs": 21880,
+      "endMs": 23500,
+      "text": "280毫米火箭头",
+      "words": [
+        {
+          "startMs": 21880,
+          "endMs": 22280,
+          "text": "2",
+          "probability": 0.5941356420516968
+        },
+        {
+          "startMs": 22280,
+          "endMs": 22560,
+          "text": "80",
+          "probability": 0.9981215596199036
+        },
+        {
+          "startMs": 22560,
+          "endMs": 22820,
+          "text": "毫",
+          "probability": 0.9989956617355347
+        },
+        {
+          "startMs": 22820,
+          "endMs": 22940,
+          "text": "米",
+          "probability": 0.9992806315422058
+        },
+        {
+          "startMs": 22940,
+          "endMs": 23140,
+          "text": "火",
+          "probability": 0.9934565424919128
+        },
+        {
+          "startMs": 23140,
+          "endMs": 23280,
+          "text": "箭",
+          "probability": 0.994347095489502
+        },
+        {
+          "startMs": 23280,
+          "endMs": 23500,
+          "text": "头",
+          "probability": 0.9488101601600647
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0010",
+      "startMs": 23900,
+      "endMs": 26060,
+      "text": "热能斧、标准三件套",
+      "words": [
+        {
+          "startMs": 23900,
+          "endMs": 24300,
+          "text": "热",
+          "probability": 0.6521420180797577
+        },
+        {
+          "startMs": 24300,
+          "endMs": 24460,
+          "text": "能",
+          "probability": 0.8861053586006165
+        },
+        {
+          "startMs": 24460,
+          "endMs": 24680,
+          "text": "斧、",
+          "probability": 0.8559760451316833
+        },
+        {
+          "startMs": 25160,
+          "endMs": 25260,
+          "text": "标",
+          "probability": 0.9949454665184021
+        },
+        {
+          "startMs": 25260,
+          "endMs": 25440,
+          "text": "准",
+          "probability": 0.9999317526817322
+        },
+        {
+          "startMs": 25440,
+          "endMs": 25660,
+          "text": "三",
+          "probability": 0.9294145107269287
+        },
+        {
+          "startMs": 25660,
+          "endMs": 25800,
+          "text": "件",
+          "probability": 0.6252188086509705
+        },
+        {
+          "startMs": 25800,
+          "endMs": 26060,
+          "text": "套",
+          "probability": 0.999778687953949
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0011",
+      "startMs": 26060,
+      "endMs": 28260,
+      "text": "外露的动力管弹不上优雅",
+      "words": [
+        {
+          "startMs": 26060,
+          "endMs": 26600,
+          "text": "外",
+          "probability": 0.9752064347267151
+        },
+        {
+          "startMs": 26600,
+          "endMs": 26740,
+          "text": "露",
+          "probability": 0.5729789957404137
+        },
+        {
+          "startMs": 26740,
+          "endMs": 26880,
+          "text": "的",
+          "probability": 0.9989365935325623
+        },
+        {
+          "startMs": 26880,
+          "endMs": 27020,
+          "text": "动",
+          "probability": 0.9791390299797058
+        },
+        {
+          "startMs": 27020,
+          "endMs": 27180,
+          "text": "力",
+          "probability": 0.9975154399871826
+        },
+        {
+          "startMs": 27180,
+          "endMs": 27380,
+          "text": "管",
+          "probability": 0.7578873634338379
+        },
+        {
+          "startMs": 27380,
+          "endMs": 27580,
+          "text": "弹",
+          "probability": 0.7399756461381912
+        },
+        {
+          "startMs": 27580,
+          "endMs": 27720,
+          "text": "不",
+          "probability": 0.9747688174247742
+        },
+        {
+          "startMs": 27720,
+          "endMs": 27840,
+          "text": "上",
+          "probability": 0.9978628754615784
+        },
+        {
+          "startMs": 27840,
+          "endMs": 28040,
+          "text": "优",
+          "probability": 0.8788051605224609
+        },
+        {
+          "startMs": 28040,
+          "endMs": 28260,
+          "text": "雅",
+          "probability": 0.9965828061103821
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0012",
+      "startMs": 28260,
+      "endMs": 30700,
+      "text": "却给了它独一无二的士兵感",
+      "words": [
+        {
+          "startMs": 28260,
+          "endMs": 28900,
+          "text": "却",
+          "probability": 0.6361351013183594
+        },
+        {
+          "startMs": 28900,
+          "endMs": 29100,
+          "text": "给",
+          "probability": 0.9847389459609985
+        },
+        {
+          "startMs": 29100,
+          "endMs": 29240,
+          "text": "了",
+          "probability": 0.9930718541145325
+        },
+        {
+          "startMs": 29240,
+          "endMs": 29380,
+          "text": "它",
+          "probability": 0.06279660016298294
+        },
+        {
+          "startMs": 29380,
+          "endMs": 29580,
+          "text": "独",
+          "probability": 0.9532594978809357
+        },
+        {
+          "startMs": 29580,
+          "endMs": 29740,
+          "text": "一",
+          "probability": 0.9663333892822266
+        },
+        {
+          "startMs": 29740,
+          "endMs": 29900,
+          "text": "无",
+          "probability": 0.9287133812904358
+        },
+        {
+          "startMs": 29900,
+          "endMs": 30040,
+          "text": "二",
+          "probability": 0.9978631138801575
+        },
+        {
+          "startMs": 30040,
+          "endMs": 30160,
+          "text": "的",
+          "probability": 0.9770179986953735
+        },
+        {
+          "startMs": 30160,
+          "endMs": 30340,
+          "text": "士",
+          "probability": 0.6754629015922546
+        },
+        {
+          "startMs": 30340,
+          "endMs": 30500,
+          "text": "兵",
+          "probability": 0.9996437728404999
+        },
+        {
+          "startMs": 30500,
+          "endMs": 30700,
+          "text": "感",
+          "probability": 0.9649459719657898
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0013",
+      "startMs": 31420,
+      "endMs": 32980,
+      "text": "那是普通人的浪漫",
+      "words": [
+        {
+          "startMs": 31420,
+          "endMs": 31820,
+          "text": "那",
+          "probability": 0.7981531023979187
+        },
+        {
+          "startMs": 31820,
+          "endMs": 31980,
+          "text": "是",
+          "probability": 0.9901672601699829
+        },
+        {
+          "startMs": 31980,
+          "endMs": 32220,
+          "text": "普",
+          "probability": 0.9941315054893494
+        },
+        {
+          "startMs": 32220,
+          "endMs": 32360,
+          "text": "通",
+          "probability": 0.999618411064148
+        },
+        {
+          "startMs": 32360,
+          "endMs": 32500,
+          "text": "人",
+          "probability": 0.999936580657959
+        },
+        {
+          "startMs": 32500,
+          "endMs": 32600,
+          "text": "的",
+          "probability": 0.9985199570655823
+        },
+        {
+          "startMs": 32600,
+          "endMs": 32740,
+          "text": "浪",
+          "probability": 0.9967699646949768
+        },
+        {
+          "startMs": 32740,
+          "endMs": 32980,
+          "text": "漫",
+          "probability": 0.9992483854293823
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0014",
+      "startMs": 32980,
+      "endMs": 34880,
+      "text": "不是测试机的浪漫",
+      "words": [
+        {
+          "startMs": 32980,
+          "endMs": 33720,
+          "text": "不是",
+          "probability": 0.6483627557754517
+        },
+        {
+          "startMs": 33720,
+          "endMs": 33960,
+          "text": "测",
+          "probability": 0.9849513471126556
+        },
+        {
+          "startMs": 33960,
+          "endMs": 34160,
+          "text": "试",
+          "probability": 0.9937583208084106
+        },
+        {
+          "startMs": 34160,
+          "endMs": 34300,
+          "text": "机",
+          "probability": 0.9603529572486877
+        },
+        {
+          "startMs": 34300,
+          "endMs": 34460,
+          "text": "的",
+          "probability": 0.9985648989677429
+        },
+        {
+          "startMs": 34460,
+          "endMs": 34600,
+          "text": "浪",
+          "probability": 0.9998418092727661
+        },
+        {
+          "startMs": 34600,
+          "endMs": 34880,
+          "text": "漫",
+          "probability": 0.999906063079834
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0015",
+      "startMs": 34880,
+      "endMs": 36700,
+      "text": "但量产机招样出王牌",
+      "words": [
+        {
+          "startMs": 34880,
+          "endMs": 35280,
+          "text": "但",
+          "probability": 0.9254353642463684
+        },
+        {
+          "startMs": 35280,
+          "endMs": 35420,
+          "text": "量",
+          "probability": 0.5251160860061646
+        },
+        {
+          "startMs": 35420,
+          "endMs": 35580,
+          "text": "产",
+          "probability": 0.6173494011163712
+        },
+        {
+          "startMs": 35580,
+          "endMs": 35800,
+          "text": "机",
+          "probability": 0.9938762784004211
+        },
+        {
+          "startMs": 35800,
+          "endMs": 35960,
+          "text": "招",
+          "probability": 0.626661017537117
+        },
+        {
+          "startMs": 35960,
+          "endMs": 36080,
+          "text": "样",
+          "probability": 0.7102333307266235
+        },
+        {
+          "startMs": 36080,
+          "endMs": 36260,
+          "text": "出",
+          "probability": 0.9615047574043274
+        },
+        {
+          "startMs": 36260,
+          "endMs": 36440,
+          "text": "王",
+          "probability": 0.9584211707115173
+        },
+        {
+          "startMs": 36440,
+          "endMs": 36700,
+          "text": "牌",
+          "probability": 0.9990745186805725
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0016",
+      "startMs": 37200,
+      "endMs": 37960,
+      "text": "卢姆汇战",
+      "words": [
+        {
+          "startMs": 37200,
+          "endMs": 37400,
+          "text": "卢",
+          "probability": 0.5453518331050873
+        },
+        {
+          "startMs": 37400,
+          "endMs": 37560,
+          "text": "姆",
+          "probability": 0.7779624760150909
+        },
+        {
+          "startMs": 37560,
+          "endMs": 37760,
+          "text": "汇",
+          "probability": 0.7460796535015106
+        },
+        {
+          "startMs": 37760,
+          "endMs": 37960,
+          "text": "战",
+          "probability": 0.9780398309230804
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0017",
+      "startMs": 38480,
+      "endMs": 40300,
+      "text": "夏鸭的红色扎古单机",
+      "words": [
+        {
+          "startMs": 38480,
+          "endMs": 38880,
+          "text": "夏",
+          "probability": 0.1910269856452942
+        },
+        {
+          "startMs": 38880,
+          "endMs": 39020,
+          "text": "鸭",
+          "probability": 0.5794810156027476
+        },
+        {
+          "startMs": 39020,
+          "endMs": 39160,
+          "text": "的",
+          "probability": 0.9956238865852356
+        },
+        {
+          "startMs": 39160,
+          "endMs": 39300,
+          "text": "红",
+          "probability": 0.9943659901618958
+        },
+        {
+          "startMs": 39300,
+          "endMs": 39520,
+          "text": "色",
+          "probability": 0.9996907711029053
+        },
+        {
+          "startMs": 39520,
+          "endMs": 39720,
+          "text": "扎",
+          "probability": 0.8407779932022095
+        },
+        {
+          "startMs": 39720,
+          "endMs": 39880,
+          "text": "古",
+          "probability": 0.27407678961753845
+        },
+        {
+          "startMs": 39880,
+          "endMs": 40060,
+          "text": "单",
+          "probability": 0.729965329170227
+        },
+        {
+          "startMs": 40060,
+          "endMs": 40300,
+          "text": "机",
+          "probability": 0.9503896832466125
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0018",
+      "startMs": 40300,
+      "endMs": 42000,
+      "text": "基层五艘联邦战舰",
+      "words": [
+        {
+          "startMs": 40300,
+          "endMs": 40620,
+          "text": "基",
+          "probability": 0.3861149251461029
+        },
+        {
+          "startMs": 40620,
+          "endMs": 40780,
+          "text": "层",
+          "probability": 0.8570976853370667
+        },
+        {
+          "startMs": 40780,
+          "endMs": 40980,
+          "text": "五",
+          "probability": 0.9183375835418701
+        },
+        {
+          "startMs": 40980,
+          "endMs": 41140,
+          "text": "艘",
+          "probability": 0.924937903881073
+        },
+        {
+          "startMs": 41140,
+          "endMs": 41360,
+          "text": "联",
+          "probability": 0.9923177659511566
+        },
+        {
+          "startMs": 41360,
+          "endMs": 41520,
+          "text": "邦",
+          "probability": 0.9748243093490601
+        },
+        {
+          "startMs": 41520,
+          "endMs": 41740,
+          "text": "战",
+          "probability": 0.9242472648620605
+        },
+        {
+          "startMs": 41740,
+          "endMs": 42000,
+          "text": "舰",
+          "probability": 0.8830381333827972
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0019",
+      "startMs": 42000,
+      "endMs": 44100,
+      "text": "马尔文四艘巡洋舰",
+      "words": [
+        {
+          "startMs": 42000,
+          "endMs": 42680,
+          "text": "马",
+          "probability": 0.902946412563324
+        },
+        {
+          "startMs": 42680,
+          "endMs": 42820,
+          "text": "尔",
+          "probability": 0.9906682968139648
+        },
+        {
+          "startMs": 42820,
+          "endMs": 42940,
+          "text": "文",
+          "probability": 0.9441608786582947
+        },
+        {
+          "startMs": 42940,
+          "endMs": 43200,
+          "text": "四",
+          "probability": 0.9729334712028503
+        },
+        {
+          "startMs": 43200,
+          "endMs": 43420,
+          "text": "艘",
+          "probability": 0.9990393817424774
+        },
+        {
+          "startMs": 43420,
+          "endMs": 43660,
+          "text": "巡",
+          "probability": 0.8686988651752472
+        },
+        {
+          "startMs": 43660,
+          "endMs": 43820,
+          "text": "洋",
+          "probability": 0.8963618874549866
+        },
+        {
+          "startMs": 43820,
+          "endMs": 44100,
+          "text": "舰",
+          "probability": 0.9862090647220612
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0020",
+      "startMs": 44100,
+      "endMs": 45400,
+      "text": "一艘战列舰",
+      "words": [
+        {
+          "startMs": 44100,
+          "endMs": 44600,
+          "text": "一",
+          "probability": 0.9529594779014587
+        },
+        {
+          "startMs": 44600,
+          "endMs": 44800,
+          "text": "艘",
+          "probability": 0.9997946918010712
+        },
+        {
+          "startMs": 44800,
+          "endMs": 44980,
+          "text": "战",
+          "probability": 0.9983963072299957
+        },
+        {
+          "startMs": 44980,
+          "endMs": 45120,
+          "text": "列",
+          "probability": 0.5697871446609497
+        },
+        {
+          "startMs": 45120,
+          "endMs": 45400,
+          "text": "舰",
+          "probability": 0.998516321182251
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0021",
+      "startMs": 45400,
+      "endMs": 46720,
+      "text": "赤色汇心",
+      "words": [
+        {
+          "startMs": 45400,
+          "endMs": 45920,
+          "text": "赤",
+          "probability": 0.9268615543842316
+        },
+        {
+          "startMs": 45920,
+          "endMs": 46180,
+          "text": "色",
+          "probability": 0.9947499632835388
+        },
+        {
+          "startMs": 46180,
+          "endMs": 46420,
+          "text": "汇",
+          "probability": 0.5901068449020386
+        },
+        {
+          "startMs": 46420,
+          "endMs": 46720,
+          "text": "心",
+          "probability": 0.1809215098619461
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0022",
+      "startMs": 46720,
+      "endMs": 47860,
+      "text": "从此额名",
+      "words": [
+        {
+          "startMs": 46720,
+          "endMs": 47240,
+          "text": "从",
+          "probability": 0.8077946305274963
+        },
+        {
+          "startMs": 47240,
+          "endMs": 47460,
+          "text": "此",
+          "probability": 0.9999476671218872
+        },
+        {
+          "startMs": 47460,
+          "endMs": 47680,
+          "text": "额",
+          "probability": 0.7486828565597534
+        },
+        {
+          "startMs": 47680,
+          "endMs": 47860,
+          "text": "名",
+          "probability": 0.2981419563293457
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0023",
+      "startMs": 47860,
+      "endMs": 49120,
+      "text": "同一个战场",
+      "words": [
+        {
+          "startMs": 47860,
+          "endMs": 48500,
+          "text": "同",
+          "probability": 0.9888972640037537
+        },
+        {
+          "startMs": 48500,
+          "endMs": 48700,
+          "text": "一个",
+          "probability": 0.9952464699745178
+        },
+        {
+          "startMs": 48700,
+          "endMs": 48920,
+          "text": "战",
+          "probability": 0.9967474639415741
+        },
+        {
+          "startMs": 48920,
+          "endMs": 49120,
+          "text": "场",
+          "probability": 0.9953413009643555
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0024",
+      "startMs": 49120,
+      "endMs": 50180,
+      "text": "脚泥来登",
+      "words": [
+        {
+          "startMs": 49120,
+          "endMs": 49480,
+          "text": "脚",
+          "probability": 0.719422459602356
+        },
+        {
+          "startMs": 49480,
+          "endMs": 49660,
+          "text": "泥",
+          "probability": 0.7992881834506989
+        },
+        {
+          "startMs": 49660,
+          "endMs": 49940,
+          "text": "来",
+          "probability": 0.41423314809799194
+        },
+        {
+          "startMs": 49940,
+          "endMs": 50180,
+          "text": "登",
+          "probability": 0.811991274356842
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0025",
+      "startMs": 50180,
+      "endMs": 51540,
+      "text": "架着量产扎古",
+      "words": [
+        {
+          "startMs": 50180,
+          "endMs": 50540,
+          "text": "架",
+          "probability": 0.631842166185379
+        },
+        {
+          "startMs": 50540,
+          "endMs": 50700,
+          "text": "着",
+          "probability": 0.9968255758285522
+        },
+        {
+          "startMs": 50700,
+          "endMs": 50880,
+          "text": "量",
+          "probability": 0.9969454407691956
+        },
+        {
+          "startMs": 50880,
+          "endMs": 51080,
+          "text": "产",
+          "probability": 0.9998770952224731
+        },
+        {
+          "startMs": 51080,
+          "endMs": 51280,
+          "text": "扎",
+          "probability": 0.999544769525528
+        },
+        {
+          "startMs": 51280,
+          "endMs": 51540,
+          "text": "古",
+          "probability": 0.9693260788917542
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0026",
+      "startMs": 51540,
+      "endMs": 53940,
+      "text": "用280火箭头",
+      "words": [
+        {
+          "startMs": 51540,
+          "endMs": 52240,
+          "text": "用",
+          "probability": 0.9832421541213989
+        },
+        {
+          "startMs": 52240,
+          "endMs": 52560,
+          "text": "2",
+          "probability": 0.6748400330543518
+        },
+        {
+          "startMs": 52560,
+          "endMs": 52880,
+          "text": "80",
+          "probability": 0.9970585107803345
+        },
+        {
+          "startMs": 52880,
+          "endMs": 53540,
+          "text": "火",
+          "probability": 0.950050413608551
+        },
+        {
+          "startMs": 53540,
+          "endMs": 53740,
+          "text": "箭",
+          "probability": 0.9592030346393585
+        },
+        {
+          "startMs": 53740,
+          "endMs": 53940,
+          "text": "头",
+          "probability": 0.01198139600455761
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0027",
+      "startMs": 53940,
+      "endMs": 55860,
+      "text": "基层三艘迈辙轮机",
+      "words": [
+        {
+          "startMs": 53940,
+          "endMs": 54300,
+          "text": "基",
+          "probability": 0.8255745768547058
+        },
+        {
+          "startMs": 54300,
+          "endMs": 54500,
+          "text": "层",
+          "probability": 0.9890951216220856
+        },
+        {
+          "startMs": 54500,
+          "endMs": 54780,
+          "text": "三",
+          "probability": 0.9380163550376892
+        },
+        {
+          "startMs": 54780,
+          "endMs": 55040,
+          "text": "艘",
+          "probability": 0.9993636906147003
+        },
+        {
+          "startMs": 55040,
+          "endMs": 55240,
+          "text": "迈",
+          "probability": 0.6329646408557892
+        },
+        {
+          "startMs": 55240,
+          "endMs": 55420,
+          "text": "辙",
+          "probability": 0.6047817319631577
+        },
+        {
+          "startMs": 55420,
+          "endMs": 55600,
+          "text": "轮",
+          "probability": 0.937356024980545
+        },
+        {
+          "startMs": 55600,
+          "endMs": 55860,
+          "text": "机",
+          "probability": 0.8549051284790039
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0028",
+      "startMs": 55860,
+      "endMs": 57340,
+      "text": "王牌没有条计题",
+      "words": [
+        {
+          "startMs": 55860,
+          "endMs": 56320,
+          "text": "王",
+          "probability": 0.9583290815353394
+        },
+        {
+          "startMs": 56320,
+          "endMs": 56540,
+          "text": "牌",
+          "probability": 0.9987536072731018
+        },
+        {
+          "startMs": 56540,
+          "endMs": 56720,
+          "text": "没有",
+          "probability": 0.9973389506340027
+        },
+        {
+          "startMs": 56720,
+          "endMs": 56940,
+          "text": "条",
+          "probability": 0.66684889793396
+        },
+        {
+          "startMs": 56940,
+          "endMs": 57120,
+          "text": "计",
+          "probability": 0.6327594220638275
+        },
+        {
+          "startMs": 57120,
+          "endMs": 57340,
+          "text": "题",
+          "probability": 0.9323839545249939
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0029",
+      "startMs": 57340,
+      "endMs": 59900,
+      "text": "是量产机和王牌互相成就",
+      "words": [
+        {
+          "startMs": 57340,
+          "endMs": 58000,
+          "text": "是",
+          "probability": 0.3699505031108856
+        },
+        {
+          "startMs": 58000,
+          "endMs": 58160,
+          "text": "量",
+          "probability": 0.9580861926078796
+        },
+        {
+          "startMs": 58160,
+          "endMs": 58400,
+          "text": "产",
+          "probability": 0.6848018616437912
+        },
+        {
+          "startMs": 58400,
+          "endMs": 58560,
+          "text": "机",
+          "probability": 0.937006413936615
+        },
+        {
+          "startMs": 58560,
+          "endMs": 58720,
+          "text": "和",
+          "probability": 0.9670414924621582
+        },
+        {
+          "startMs": 58720,
+          "endMs": 58860,
+          "text": "王",
+          "probability": 0.7950589656829834
+        },
+        {
+          "startMs": 58860,
+          "endMs": 59100,
+          "text": "牌",
+          "probability": 0.9921273589134216
+        },
+        {
+          "startMs": 59100,
+          "endMs": 59300,
+          "text": "互",
+          "probability": 0.9873787462711334
+        },
+        {
+          "startMs": 59300,
+          "endMs": 59480,
+          "text": "相",
+          "probability": 0.9996902942657471
+        },
+        {
+          "startMs": 59480,
+          "endMs": 59640,
+          "text": "成",
+          "probability": 0.9109143018722534
+        },
+        {
+          "startMs": 59640,
+          "endMs": 59900,
+          "text": "就",
+          "probability": 0.9905861020088196
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0030",
+      "startMs": 60900,
+      "endMs": 62580,
+      "text": "这就是男人的浪漫",
+      "words": [
+        {
+          "startMs": 60900,
+          "endMs": 61260,
+          "text": "这",
+          "probability": 0.23262429237365723
+        },
+        {
+          "startMs": 61260,
+          "endMs": 61620,
+          "text": "就是",
+          "probability": 0.6780146360397339
+        },
+        {
+          "startMs": 61620,
+          "endMs": 61840,
+          "text": "男",
+          "probability": 0.8756936192512512
+        },
+        {
+          "startMs": 61840,
+          "endMs": 62000,
+          "text": "人",
+          "probability": 0.9969419836997986
+        },
+        {
+          "startMs": 62000,
+          "endMs": 62140,
+          "text": "的",
+          "probability": 0.9984022974967957
+        },
+        {
+          "startMs": 62140,
+          "endMs": 62260,
+          "text": "浪",
+          "probability": 0.9989111423492432
+        },
+        {
+          "startMs": 62260,
+          "endMs": 62580,
+          "text": "漫",
+          "probability": 0.9995526969432831
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0031",
+      "startMs": 62580,
+      "endMs": 64340,
+      "text": "你的扎古机仪是哪一台",
+      "words": [
+        {
+          "startMs": 62580,
+          "endMs": 63040,
+          "text": "你的",
+          "probability": 0.8189737200737
+        },
+        {
+          "startMs": 63040,
+          "endMs": 63300,
+          "text": "扎",
+          "probability": 0.5989693179726601
+        },
+        {
+          "startMs": 63300,
+          "endMs": 63480,
+          "text": "古",
+          "probability": 0.4614369571208954
+        },
+        {
+          "startMs": 63480,
+          "endMs": 63660,
+          "text": "机",
+          "probability": 0.1061321422457695
+        },
+        {
+          "startMs": 63660,
+          "endMs": 63780,
+          "text": "仪",
+          "probability": 0.6214385330677032
+        },
+        {
+          "startMs": 63780,
+          "endMs": 63880,
+          "text": "是",
+          "probability": 0.7718690037727356
+        },
+        {
+          "startMs": 63880,
+          "endMs": 64040,
+          "text": "哪",
+          "probability": 0.9894866943359375
+        },
+        {
+          "startMs": 64040,
+          "endMs": 64180,
+          "text": "一",
+          "probability": 0.9991471767425537
+        },
+        {
+          "startMs": 64180,
+          "endMs": 64340,
+          "text": "台",
+          "probability": 0.7511287331581116
+        }
+      ]
+    },
+    {
+      "segmentId": "tr-0032",
+      "startMs": 64340,
+      "endMs": 65420,
+      "text": "评论区件",
+      "words": [
+        {
+          "startMs": 64340,
+          "endMs": 64840,
+          "text": "评",
+          "probability": 0.668044313788414
+        },
+        {
+          "startMs": 64840,
+          "endMs": 65000,
+          "text": "论",
+          "probability": 0.9993614554405212
+        },
+        {
+          "startMs": 65000,
+          "endMs": 65200,
+          "text": "区",
+          "probability": 0.8395810425281525
+        },
+        {
+          "startMs": 65200,
+          "endMs": 65420,
+          "text": "件",
+          "probability": 0.2949785888195038
+        }
+      ]
+    }
+  ],
+  "status": "draft_requires_human_fact_review",
+  "finishedAt": "2026-09-28T10:02:57.159539Z"
+}

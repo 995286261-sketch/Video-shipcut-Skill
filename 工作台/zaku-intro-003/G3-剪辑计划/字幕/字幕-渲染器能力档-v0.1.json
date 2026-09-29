@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "subtitle-expert",
+  "purpose": "subtitle_renderer_profile",
+  "probedAt": "2026-09-28T18:48:47+08:00",
+  "host": {
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64"
+  },
+  "ffmpeg": {
+    "versionLine": "ffmpeg version 7.0 Copyright (c) 2000-2024 the FFmpeg developers",
+    "libass": "unknown (enabled at build, no version line)",
+    "libassEnabled": true
+  },
+  "font": null,
+  "autoWrap": {
+    "value": false,
+    "evidence": null,
+    "basis": "conservative default — CJK runs must carry explicit line breaks (002-⑧)"
+  }
+}

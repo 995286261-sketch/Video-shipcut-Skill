@@ -1,0 +1,60 @@
+{
+ "schemaVersion": "0.1",
+ "purpose": "bgm_candidate_manifest",
+ "project": "zaku-intro-003",
+ "source": "experience_library_first_batch",
+ "candidates": [
+  {
+   "title": "Devil Game (Phonk)",
+   "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2679274856-Devil_Game_(Phonk).mp3",
+   "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+   "provenance": "netease",
+   "sourceUrl": "https://music.163.com/song?id=2679274856",
+   "licenseType": "uncleared-platform-catalog",
+   "distributionBoundary": "internal_test",
+   "attributionRequired": false,
+   "reportPath": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/库内批次/analysis-9F61EA0B/BGM-分析报告-netease-2679274856-Devil_Game_(Phonk)-9F61EA0B.json",
+   "neteaseId": 2679274856,
+   "freesoundId": null
+  },
+  {
+   "title": "Gone Bad (Phonk)",
+   "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2627048583-Gone_Bad(Phonk).mp3",
+   "sha256": "EA2684893C898655EF018958BD61B61EB23C3C6C260AC0E689699EFC736E3E71",
+   "provenance": "netease",
+   "sourceUrl": "https://music.163.com/song?id=2627048583",
+   "licenseType": "uncleared-platform-catalog",
+   "distributionBoundary": "internal_test",
+   "attributionRequired": false,
+   "reportPath": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/库内批次/analysis-EA268489/BGM-分析报告-netease-2627048583-Gone_Bad(Phonk)-EA268489.json",
+   "neteaseId": 2627048583,
+   "freesoundId": null
+  },
+  {
+   "title": "弥渡山歌Phonk House",
+   "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2744664065-弥渡山歌Phonk_House.mp3",
+   "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+   "provenance": "netease",
+   "sourceUrl": "https://music.163.com/song?id=2744664065",
+   "licenseType": "uncleared-platform-catalog",
+   "distributionBoundary": "internal_test",
+   "attributionRequired": false,
+   "reportPath": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/库内批次/analysis-A24B461B/BGM-分析报告-netease-2744664065-弥渡山歌Phonk_House-A24B461B.json",
+   "neteaseId": 2744664065,
+   "freesoundId": null
+  },
+  {
+   "title": "LOW-PHONK",
+   "previewPath": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+   "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+   "provenance": "manual",
+   "sourceUrl": null,
+   "licenseType": "cleared-for-project",
+   "distributionBoundary": "internal_test",
+   "attributionRequired": false,
+   "reportPath": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/库内批次/analysis-0B2F3018/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+   "neteaseId": null,
+   "freesoundId": null
+  }
+ ]
+}

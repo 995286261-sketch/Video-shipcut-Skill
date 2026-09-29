@@ -1,0 +1,98 @@
+[
+  {
+    "frame": "scene-01-start.jpg",
+    "description": "{\n  \"scene_type\": \"opening title card\",\n  \"video_style\": \"military documentary\",\n  \"top_banner_text\": \"GLOBAL MILITARY PROGRAM\",\n  \"main_title_cn\": \"冷战奇迹\",\n  \"main_title_en\": \"COLD WAR MIRACLE\",\n  \"time_period\": \"1947-1991\",\n  \"flags\": [\"United States of America\", \"Soviet Union (USSR)\"],\n  \"background\": \"dark blurred cinematic image of a Soviet military aircraft with red star insignia\",\n  \"subtitle_cn\": \"在上个世纪90年代\",\n  \"subtitle_en\": \"IN THE 1990S\",\n  \"decorative_elements\": [\n    \"DVD Design Cinema logo\",\n    \"copyright notice lines\",\n    \"row of playback control icons\",\n    \"cursive slogan 'You have everything from A to Z'\",\n    \"film icons (camera, clapperboard, MOVIE badge, 3D)\",\n    \"award laurel wreaths (Best Global Film Awards, Academy Award, if. 57th Global Film Awards)\"\n  ],\n  \"color_palette\": {\n    \"chinese_title\": \"white\",\n    \"english_title\": \"yellow\",\n    \"english_subtitle\": \"blue\",\n    \"background\": \"dark gray / black\"\n  },\n  \"overall_mood\": \"epic, historical, confrontational Cold War atmosphere\"\n}"
+  },
+  {
+    "frame": "scene-02-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片片头/标题场景\",\n  \"main_title_cn\": \"冷战奇迹\",\n  \"main_title_en\": \"COLD WAR MIRACLE\",\n  \"era_label\": \"1947-\",\n  \"flags\": [\"美国国旗（左侧）\", \"苏联红旗（右侧）\"],\n  \"central_visual\": \"一架涂有红色星徽的深色苏联喷气式战斗机（米格系列风格）大角度爬升，发动机尾喷口喷出橘红色加力火焰，背景为灰白色云雾天空\",\n  \"subtitle_cn\": \"这不是科幻电影里的道具\",\n  \"subtitle_en\": \"THIS IS NOT A SCIENCE FICTION MOVIE PROP\",\n  \"header_text\": \"GLOBAL MILITARY PROGRAM\",\n  \"additional_text\": [\n    \"DVD Design Cinema\",\n    \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu\",\n    \"Any violation will be held liable\",\n    \"Please respect the designer's original design, thank you\",\n    \"You have everything from A to Z\",\n    \"BEST GLOBAL FILM AWARDS\",\n    \"ACADEMY AWARD - BEST PICTURE - BEST FILM EDITING - BEST SOUND EDITING - BEST SOUND MIXING\",\n    \"if. 57TH GLOBAL FILM AWARDS\"\n  ],\n  \"decorative_elements\": [\"摄像机图标\", \"场记板图标\", \"MOVIE标志\", \"3D字样\", \"奖项桂冠图案\"],\n  \"visual_style\": \"灰调雾状天空背景，白色描边中文大标题+黄色英文标题，底部中英双语字幕，典型纪录片式片头包装模板，突出美苏冷战对抗主题\"\n}"
+  },
+  {
+    "frame": "scene-03-start.jpg",
+    "description": "{\n  \"scene_type\": \"片头标题页\",\n  \"program_name\": \"GLOBAL MILITARY PROGRAM\",\n  \"main_title_cn\": \"冷战奇迹\",\n  \"main_title_en\": \"COLD WAR MIRACLE\",\n  \"time_period\": \"1947-1991\",\n  \"flags\": {\n    \"left\": \"美国\",\n    \"right\": \"苏联\"\n  },\n  \"subtitle_cn\": \"这就是未来战斗机的发展方向\",\n  \"subtitle_en\": \"THIS IS THE DIRECTION OF FUTURE FIGHTER PLANES\",\n  \"background\": \"棕褐色调的军用战斗机局部特写画面\",\n  \"visual_style\": \"军事纪录片风格\",\n  \"decorative_elements\": [\n    \"DVD Design Cinema 标识\",\n    \"版权提示小字\",\n    \"You have everything from A to Z 手写体文字\",\n    \"摄影机、场记板、MOVIE、3D 等电影图标\",\n    \"电影奖项桂冠装饰图案\"\n  ]\n}"
+  },
+  {
+    "frame": "scene-04-start.jpg",
+    "description": "{\n  \"video_style\": \"军事纪录片风格\",\n  \"header_text\": \"GLOBAL MILITARY PROGRAM\",\n  \"main_title_cn\": \"冷战奇迹\",\n  \"main_title_en\": \"COLD WAR MIRACLE\",\n  \"time_period\": \"1947-1991\",\n  \"left_flag\": \"美国国旗\",\n  \"right_flag\": \"苏联国旗\",\n  \"subtitle_cn\": \"击败了米高扬设计局\",\n  \"subtitle_en\": \"DEFEATED THE MIKOYAN DESIGN BUREAU\",\n  \"background_scene\": \"机库内一架战斗机正面停放，灰色金属板墙面，深色反光地面，左侧有检修梯架\",\n  \"decorative_elements\": [\n    \"DVD Design Cinema 标志\",\n    \"版权声明小字\",\n    \"播放器控制图标行\",\n    \"手写体文字 You have everything from A to Z\",\n    \"电影奖项桂冠标志（BEST GLOBAL FILM AWARDS、ACADEMY AWARD、if. 57TH GLOBAL FILM AWARDS）\"\n  ],\n  \"text_colors\": {\n    \"main_title_cn\": \"白色\",\n    \"main_title_en\": \"黄色\",\n    \"subtitle_cn\": \"白色\",\n    \"subtitle_en\": \"蓝色\"\n  },\n  \"theme\": \"冷战时期美苏军事对抗\"\n}"
+  },
+  {
+    "frame": "scene-05-start.jpg",
+    "description": "{\n  \"scene_type\": \"片头标题页\",\n  \"video_style\": \"军事纪录片风格\",\n  \"top_banner\": \"GLOBAL MILITARY PROGRAM\",\n  \"logo\": \"DVD Design Cinema\",\n  \"main_title_cn\": \"冷战奇迹\",\n  \"main_title_en\": \"COLD WAR MIRACLE\",\n  \"time_period\": \"1947-1991\",\n  \"flags\": [\"美国国旗\", \"苏联国旗\"],\n  \"background\": \"浅灰色渐变背景，标题后方隐约可见黑色军用飞机剪影\",\n  \"decorative_elements\": [\n    \"You have everything from A to Z 手写体英文\",\n    \"摄像机图标\",\n    \"场记板图标\",\n    \"MOVIE 标志\",\n    \"3D 字样\",\n    \"电影节桂冠奖项标志（BEST GLOBAL FILM AWARDS、ACADEMY AWARD、if. 57TH GLOBAL FILM AWARDS）\"\n  ],\n  \"subtitle_cn\": \"这是航空工业史上最大胆的尝试之一\",\n  \"subtitle_en\": \"THIS IS ONE OF THE MOST DARING ATTEMPTS IN THE AVIATION INDUSTRY\",\n  \"theme\": \"冷战时期美苏航空工业竞争\"\n}"
+  },
+  {
+    "frame": "scene-06-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-07-start.jpg",
+    "description": "{\n  \"scene_type\": \"夜间低光照观察/航拍镜头\",\n  \"style\": \"军事纪录片\",\n  \"environment\": {\n    \"setting\": \"户外夜间场景，可能为战场或行动区域\",\n    \"visibility\": \"极低，画面被黑暗与浓烟/雾气主导\",\n    \"lighting\": \"右侧大片灰白色烟雾被离屏光源照亮，左缘有微弱红色光晕，整体呈高噪点低照度质感\"\n  },\n  \"key_elements\": [\n    {\n      \"element\": \"一簇不规则的亮白色光斑\",\n      \"position\": \"画面中左部\",\n      \"interpretation\": \"可能为被照亮的碎片、火花、反光装备或小股人员\"\n    },\n    {\n      \"element\": \"单个微小亮点\",\n      \"position\": \"画面中右部\",\n      \"interpretation\": \"可能为照明弹、曳光弹或远处光源\"\n    },\n    {\n      \"element\": \"弥漫的烟雾/雾霭\",\n      \"position\": \"画面右半部\",\n      \"interpretation\": \"暗示爆炸余烟、搜索灯照射或夜雾环境\"\n    }\n  ],\n  \"camera\": \"固定或缓慢漂移的低光照镜头，颗粒感强，具夜视/战地实拍风格\",\n  \"atmosphere\": \"紧张、压抑、神秘\",\n  \"description\": \"一段军事纪录片风格的夜间画面：左侧几乎全黑并带微弱红光，右侧苍白光线透出浓烟；黑暗中闪烁一小簇白色亮斑与一个孤立光点，营造出秘密行动或爆炸 aftermath 的战场氛围。\"\n}"
+  },
+  {
+    "frame": "scene-08-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-09-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-10-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片\",\n  \"style\": \"二战历史题材，CG动画渲染，电影模板水印包装\",\n  \"aircraft\": {\n    \"name\": \"JU-287\",\n    \"type\": \"轰炸机\",\n    \"country\": \"德国\",\n    \"markings\": \"机翼上的德国空军十字标志（Balkenkreuz）\",\n    \"layout_features\": \"前掠翼布局，机身两侧发动机短舱\"\n  },\n  \"formation\": \"三机编队飞行（左、中、右各一架）\",\n  \"environment\": \"沙漠岩石地貌上空，白天晴朗光照\",\n  \"camera_angle\": \"后上方高空俯拍跟随镜头\",\n  \"visual_effects\": \"飞机尾部拖曳白色凝结尾迹\",\n  \"subtitles\": {\n    \"chinese\": \"这款轰炸机被称为JU-287\",\n    \"english\": \"THE BOMBER IS KNOWN AS THE JU-287\"\n  },\n  \"overlay_elements\": [\n    \"GLOBAL MILITARY PROGRAM 标题\",\n    \"DVD Design Cinema 标识\",\n    \"You have everything from A to Z\",\n    \"MOVIE / 3D 图标\",\n    \"ACADEMY AWARD / BEST PICTURE 等奖项月桂装饰图案\"\n  ]\n}"
+  },
+  {
+    "frame": "scene-11-start.jpg",
+    "description": "{\n  \"video_type\": \"军事纪录片\",\n  \"scene_description\": \"画面以一台老式CRT电视机为框架，屏幕中播放彩色化的历史影像：三名苏联海军水兵并排列队，头戴带有‘ФЛОТ’（舰队）字样飘带的水兵帽，身着条纹海魂衫与海军制服，神情庄重，背景隐约可见舰船设施。电视机置于昏暗的书架前，顶部有‘GLOBAL MILITARY PROGRAM’标题与DVD水印，底部带有电影奖项桂冠装饰图案。\",\n  \"time_period\": \"20世纪80年代\",\n  \"subject\": \"苏联海军\",\n  \"chinese_subtitle\": \"上个世纪80年代，苏联海军拥有许多宏大的梦想\",\n  \"english_subtitle\": \"IN THE 1980S, THE SOVIET NAVY HAD MANY BIG DREAMS\",\n  \"visual_style\": \"复古怀旧纪录片风格，老电视画框构图，彩色修复历史影像，叠加奖项桂冠与DVD设计水印\"\n}"
+  },
+  {
+    "frame": "scene-12-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片\",\n  \"visual_style\": \"复古DVD播放界面风格，暗调环境中老式CRT电视机播放画面\",\n  \"composition\": {\n    \"background\": \"昏暗的室内，电视机后方为摆满书籍的书架，整体低照度\",\n    \"main_subject\": \"一台老式CRT电视机/监视器，占据画面中心\",\n    \"screen_content\": \"深色天空背景中一架正在大仰角爬升的战斗机，具苏-27系列特征，红色垂直尾翼，机头朝左上方\"\n  },\n  \"on_screen_graphics\": {\n    \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo\": \"DVD Design Cinema\",\n    \"copyright_notice\": \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu / Any violation will be held liable / Please respect the designer's original design, thank you\",\n    \"playback_icons\": \"一排重复排列的DVD播放控制小图标（快进、暂停等）\",\n    \"slogan\": \"You have everything from A to Z\",\n    \"icons\": [\"摄像机\", \"场记板(爱心)\", \"MOVIE标志\", \"ACTION场记板\", \"3D\"],\n    \"award_laurels\": [\n      \"BEST GLOBAL FILM AWARDS 入围作品 2021\",\n      \"ACADEMY AWARD - BEST PICTURE - BEST FILM EDITING - BEST SOUND EDITING - BEST SOUND MIXING\",\n      \"if. 57TH GLOBAL FILM AWARDS\"\n    ]\n  },\n  \"subtitles\": {\n    \"chinese\": \"因此，苏联急需一款领先时代的战斗机\",\n    \"english\": \"THEREFORE, THE SU URGENTLY NEEDED A FIGHTER PLANE AHEAD OF THE TIMES\",\n    \"chinese_style\": \"白色粗体字，居中，位于画面底部\",\n    \"english_style\": \"蓝色粗体大写英文字体，居中，位于中文字幕下方\"\n  },\n  \"narrative_context\": \"讲述苏联为应对军事竞争，急需研发一款领先时代的战斗机（苏-27系列）的历史背景\",\n  \"color_palette\": \"整体暗黑色调，屏幕内为深青黑色天空，战机金属灰与红色尾翼形成对比，字幕为白+蓝配色\"\n}"
+  },
+  {
+    "frame": "scene-13-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-14-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-15-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-16-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片/历史档案影像\",\n  \"time_period_depicted\": \"约20世纪70-80年代\",\n  \"visual_content\": \"多人坐在成排的老式CRT计算机终端前工作，环境类似冷战时期的计算机房或指挥控制中心；前景为一名戴眼镜的中年男子俯身操作设备，背景有多名工作人员与木质墙面\",\n  \"camera_shot\": \"中景侧拍，机位基本固定，略带纪实感\",\n  \"on_screen_text\": {\n    \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo_watermark\": \"DVD Design Cinema\",\n    \"decorative_text\": \"You have everything from A to Z\",\n    \"subtitle_cn\": \"苏霍伊需要更优秀的战机证明自己的实力\",\n    \"subtitle_en\": \"SUKHOI NEEDS BETTER FIGHTERS TO PROVE HIS STRENGTH\"\n  },\n  \"visual_style\": {\n    \"color_grading\": \"低饱和度偏灰的复古胶片色调\",\n    \"film_effects\": \"老胶片颗粒、暗角、黑色边框，左侧有圆角矩形胶片孔装饰\",\n    \"overlays\": \"底部叠加多个电影节桂冠与奖项标识（BEST、ACADEMY AWARD、if. 57TH GLOBAL FILM AWARDS、3D等）\"\n  },\n  \"narrative_purpose\": \"以历史档案画面铺垫冷战背景，引出苏霍伊设计局研发更先进战机的主题\"\n}"
+  },
+  {
+    "frame": "scene-17-start.jpg",
+    "description": "TIMEOUT"
+  },
+  {
+    "frame": "scene-18-start.jpg",
+    "description": "{\n  \"video_style\": \"军事纪录片风格\",\n  \"scene_summary\": \"一架俄罗斯苏霍伊前掠翼战斗机在云雾缭绕的雪山上空飞行，背景左侧还有一架模糊的僚机。\",\n  \"aircraft\": {\n    \"type\": \"苏霍伊 Su-47（S-37）前掠翼战斗机\",\n    \"markings\": [\"机翼红色五角星徽记\", \"机身编号 01\", \"ОКБ СУХОГО 字样\"],\n    \"appearance\": \"深色/黑色涂装，白色雷达罩，双垂尾，前掠翼布局\"\n  },\n  \"background\": \"云雾与积雪覆盖的山地地形\",\n  \"text_overlays\": {\n    \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo\": \"DVD Design Cinema\",\n    \"tagline\": \"You have everything from A to Z\",\n    \"subtitle_chinese\": \"在不断努力下\",\n    \"subtitle_english\": \"WITH CONSTANT EFFORT\",\n    \"decorative_elements\": [\"胶片奖项桂冠图标\", \"MOVIE 标志\", \"3D 标志\", \"摄像机与场记板图标\"]\n  },\n  \"camera_shot\": \"侧方跟随镜头，战机带坡度飞行，电影感 CGI 渲染画面\",\n  \"narrative_tone\": \"纪录片解说式字幕，宣传/叙事语气\"\n}"
+  },
+  {
+    "frame": "scene-19-start.jpg",
+    "description": "{\n  \"video_style\": \"军事纪录片风格\",\n  \"scene_subject\": \"SU-47 金雕战斗机\",\n  \"scene_subject_en\": \"SU-47 BERKUT FIGHTER\",\n  \"visual_content\": {\n    \"main_object\": \"一架苏-47（SU-47 Berkut）前掠翼战斗机，灰色涂装，标志性前掠翼清晰可见\",\n    \"camera_angle\": \"从后下方仰视拍摄，展现机尾视角\",\n    \"engine_effect\": \"机尾两台发动机喷口喷出明亮的加力燃烧光焰\",\n    \"background\": \"灰白色阴沉天空，画面整体偏灰、略带模糊动感\",\n    \"lighting\": \"阴天漫射光，发动机喷口为画面主要亮点\"\n  },\n  \"text_overlays\": {\n    \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo\": \"DVD Design Cinema\",\n    \"copyright_notice\": \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu. Any violation will be held liable. Please respect the designer's original design, thank you\",\n    \"decorative_text\": \"You have everything from A to Z\",\n    \"decorative_elements\": [\"摄影机图标\", \"场记板图标\", \"MOVIE标志\", \"3D标志\", \"奖项桂冠标志（BEST GLOBAL FILM AWARDS、ACADEMY AWARD、if.）\"],\n    \"subtitle_cn\": \"SU-47 金雕战斗机\",\n    \"subtitle_en\": \"SU-47 BERKUT FIGHTER\"\n  },\n  \"overall_presentation\": \"纪录片式片头包装画面，灰调飞行镜头搭配双语字幕与电影奖项装饰元素，突出战机主题\"\n}"
+  },
+  {
+    "frame": "scene-20-start.jpg",
+    "description": "{\n  \"video_style\": \"军事纪录片风格\",\n  \"scene_subject\": {\n    \"name_cn\": \"SU-47 金雕战斗机\",\n    \"name_en\": \"SU-47 BERKUT FIGHTER\",\n    \"visual_description\": \"一架深灰色涂装的苏-47战斗机以正面迎面视角飞来，标志性的前掠翼清晰可见，背景为阴沉的灰色天空\"\n  },\n  \"top_overlay\": {\n    \"main_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo\": \"DVD Design Cinema\",\n    \"copyright_text\": [\n      \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu\",\n      \"Any violation will be held liable\",\n      \"Please respect the designer's original design, thank you\"\n    ],\n    \"icon_row\": \"播放器样式小图标（DVD、快进、音量、笑脸等重复排列）\"\n  },\n  \"middle_decorations\": {\n    \"slogan\": \"You have everything from A to Z\",\n    \"icons\": [\"场记板图标\", \"MOVIE标志\", \"OSCAR场记板图标\", \"3D标志\"],\n    \"award_laurels\": [\n      \"BEST GLOBAL FILM AWARDS 入围佳作 2021\",\n      \"ACADEMY AWARD - BEST PICTURE - BEST FILM EDITING - BEST SOUND EDITING - BEST SOUND MIXING\",\n      \"if. 57TH GLOBAL FILM AWARDS WINNING WORKS\"\n    ]\n  },\n  \"subtitles\": {\n    \"chinese\": \"SU-47 金雕战斗机\",\n    \"english\": \"SU-47 BERKUT FIGHTER\",\n    \"style\": \"中文白色粗体黑边大字，英文蓝色粗体黑边大字，居中排列于画面底部\"\n  }\n}"
+  },
+  {
+    "frame": "scene-21-start.jpg",
+    "description": "{\n  \"视频类型\": \"军事纪录片风格（电影包装式宣传片）\",\n  \"场景环境\": \"昏暗的室内机库，背景为弧形金属桁架结构墙体，顶部有聚光灯照明\",\n  \"主体对象\": \"SU-47 金雕（Berkut）战斗机，停机状态，起落架放下\",\n  \"主体细节\": {\n    \"涂装\": \"深灰色/低可视度涂装\",\n    \"标识\": [\"机翼上表面红色五角星\", \"机头侧面编号 01\", \"机头侧面 ОКБ СУХОГО 字样\"],\n    \"可见特征\": [\"前掠翼布局\", \"单座座舱\", \"尖锥形机头雷达罩\", \"前起落架与主起落架\"]\n  },\n  \"镜头语言\": \"低角度侧前方中景镜头，机头朝向画面左侧，画面偏暗、冷灰色调，CGI 渲染质感\",\n  \"文字叠加\": {\n    \"顶部标题\": \"GLOBAL MILITARY PROGRAM\",\n    \"标志与声明\": [\"DVD Design Cinema\", \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu\", \"Any violation will be held liable\", \"Please respect the designer's original design, thank you\"],\n    \"装饰文字\": \"You have everything from A to Z\",\n    \"奖项桂冠装饰\": [\"BEST GLOBAL FILM AWARDS\", \"ACADEMY AWARD - BEST PICTURE / BEST FILM EDITING / BEST SOUND EDITING / BEST SOUND MIXING\", \"if. 57TH GLOBAL FILM AWARDS WINNING WORKS\"],\n    \"中文字幕\": \"SU-47 金雕战斗机\",\n    \"英文字幕\": \"SU-47 BERKUT FIGHTER\"\n  },\n  \"整体风格\": \"暗调、电影感、纪录片片头包装风格，含播放器图标与奖项桂冠等装饰元素\"\n}"
+  },
+  {
+    "frame": "scene-22-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片风格视频场景\",\n  \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n  \"logo\": \"DVD Design Cinema\",\n  \"copyright_notice\": [\n    \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu\",\n    \"Any violation will be held liable\",\n    \"Please respect the designer's original design, thank you\"\n  ],\n  \"main_visual\": {\n    \"subject\": \"SU-47 战斗机（3D渲染）\",\n    \"appearance\": \"黑色涂装，白色机头雷达罩，前掠翼布局，双垂尾，尾喷口呈现加力燃烧火光\",\n    \"markings\": [\n      \"机翼与垂尾红色星徽\",\n      \"机身编号 01\",\n      \"机身文字 ОКБ СУХОГО\"\n    ],\n    \"background\": \"灰白色云雾天空，伴有白色凝结尾迹\"\n  },\n  \"decorative_texts\": [\n    \"You have everything from A to Z\",\n    \"MOVIE\",\n    \"3D\",\n    \"BEST GLOBAL FILM AWARDS\",\n    \"ACADEMY AWARD\",\n    \"BEST PICTURE - BEST FILM EDITING\",\n    \"BEST SOUND EDITING - BEST SOUND MIXING\",\n    \"if. 57TH GLOBAL FILM AWARDS WINNING WORKS\"\n  ],\n  \"subtitles\": {\n    \"chinese\": \"SU-47 金雕战斗机\",\n    \"english\": \"SU-47 BERKUT FIGHTER\"\n  },\n  \"aircraft_info\": {\n    \"model\": \"SU-47\",\n    \"name_cn\": \"金雕\",\n    \"name_en\": \"Berkut\",\n    \"origin\": \"俄罗斯（苏霍伊设计局）\",\n    \"key_feature\": \"前掠翼技术验证机\"\n  },\n  \"visual_style\": \"深灰色调、电影海报式排版、奖项桂冠装饰、纪录片字幕样式\"\n}"
+  },
+  {
+    "frame": "scene-23-start.jpg",
+    "description": "{\n  \"scene_type\": \"军事纪录片风格视频场景\",\n  \"main_subject\": \"SU-47 金雕战斗机（SU-47 Berkut Fighter）\",\n  \"subject_description\": \"一架深色涂装的SU-47前掠翼战斗机以侧后视角呈现，机头朝画面右侧飞行；垂尾涂有红色星徽及编号01，双发动机喷口喷出明亮的橙黄色加力火焰\",\n  \"background\": \"阴沉灰暗的厚重云层天空\",\n  \"text_overlays\": {\n    \"top_title\": \"GLOBAL MILITARY PROGRAM\",\n    \"logo\": \"DVD Design Cinema\",\n    \"copyright_notice\": \"This film cannot be stolen without permission, please indicate the source for reprinting: xingtu; Any violation will be held liable; Please respect the designer's original design, thank you\",\n    \"slogan\": \"You have everything from A to Z\",\n    \"subtitle_chinese\": \"SU-47 金雕战斗机\",\n    \"subtitle_english\": \"SU-47 BERKUT FIGHTER\"\n  },\n  \"decorative_elements\": \"底部多组电影节奖项风格徽标，包括BEST、ACADEMY AWARD、MOVIE、3D、if. 57TH等\",\n  \"visual_style\": \"暗色调电影质感，宽银幕构图，带播放器图标等装饰元素\",\n  \"camera_view\": \"侧后方跟随视角，突出机身线条与加力火焰特效\"\n}"
+  },
+  {
+    "frame": "scene-24-start.jpg",
+    "description": "{\n  \"scene_description\": \"画面完全漆黑，没有任何可见的人物、装备、地形或文字信息。\",\n  \"scene_type\": \"黑场镜头（转场/过渡）\",\n  \"visual_elements\": [],\n  \"lighting\": \"无可见光源，纯黑画面\",\n  \"camera_movement\": \"无（静态黑场）\",\n  \"atmosphere\": \"肃穆、压抑、带有悬念感\",\n  \"narrative_function\": \"常用于军事纪录片中的开场淡入、结尾淡出、章节分隔或场景切换，暗示时间推移，为旁白铺垫情绪。\"\n}"
+  }
+]

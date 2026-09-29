@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-09-28T17:31:00+08:00",
+  "reviewCardRef": "工作台/zaku-intro-003/G1-创作方向/G1-最终回显卡-v0.2.md",
+  "basisRefs": [
+    "工作台/zaku-intro-003/G1-创作方向/G1-方向简报.md",
+    "工作台/zaku-intro-003/G1-创作方向/G1-方向简报.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-方向输入-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-方向确认记录.md",
+    "工作台/zaku-intro-003/G1-创作方向/G1-最终回显卡-v0.2.md",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/AB试听笔记-库内对参考片-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-参考视频分析/BGM-分析回显-冷战奇迹-逆羽雄鹰-1080P-DF263D11.md",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/参照曲风格画像-冷战奇迹音轨-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/检索词卡-freesound-v0.1/BGM-检索词-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/BGM-需求画像-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/BGM-推荐排序-v0.2.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/AB试听笔记-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/AB试听笔记-库内-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/AB试听笔记-库内对参考片-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/库内批次/BGM-推荐排序-库内-v0.1.json",
+    "工作台/zaku-intro-003/G1-创作方向/G1-方向确认记录.md",
+    "工作台/zaku-intro-003/问题清单-v0.1.md",
+    "工作台/zaku-intro-003/G0-素材包/07_授权音频/BGM-候选登记-Devil-Game-Phonk-9F61EA0B.json",
+    "工作台/zaku-intro-003/G0-素材包/07_授权音频/BGM-分析报告-netease-2679274856-Devil_Game_(Phonk)-9F61EA0B.json",
+    "工作台/zaku-intro-003/G0-素材包/01_需求说明.md",
+    "工作台/zaku-intro-003/G0-素材包/04_授权说明.md"
+  ],
+  "checklist": [
+    {
+      "id": "direction_brief",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-003/G1-创作方向/G1-方向简报.md"
+    },
+    {
+      "id": "claims_and_boundaries",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-003/G1-创作方向/G1-方向简报.json"
+    },
+    {
+      "id": "direction_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/zaku-intro-003/G1-创作方向/G1-最终回显卡-v0.1.md"
+    }
+  ]
+}

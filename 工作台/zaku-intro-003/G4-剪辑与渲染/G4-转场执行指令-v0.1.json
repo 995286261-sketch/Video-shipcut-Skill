@@ -1,0 +1,98 @@
+{
+  "boundaries": [
+    {
+      "durationMs": 200,
+      "fromSegmentId": "seg-006b",
+      "offsetMs": 46152,
+      "toSegmentId": "seg-007",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 200,
+      "fromSegmentId": "seg-009",
+      "offsetMs": 64293,
+      "toSegmentId": "seg-010",
+      "transition": "fade"
+    }
+  ],
+  "evidenceSha256": "F70DB319E3F9DB764A87010A3F096475CFCFF8F6E48DC1C697791B7E486E259A",
+  "gridInvariant": true,
+  "hostProfile": "工作台/zaku-intro-003/G3-剪辑计划/转场-宿主能力档-v0.1.json",
+  "hostProfileSha256": "DFE842A8F5A0B0C7BA04C5D015E5DA7AFE9416541C2D05A0A715707D49C3733B",
+  "inputEvidence": "工作台/zaku-intro-003/G2-证据与口播/G2-证据清单-v0.1.json",
+  "inputPlan": "工作台/zaku-intro-003/G3-剪辑计划/G3-剪辑计划-v0.4.json",
+  "masterFades": {
+    "fadeInMs": 0,
+    "fadeOutMs": 0
+  },
+  "planSha256": "19BC911DEFCAF433E3E6A880E6B8C68CC3BF6115F657FAAEB4DF22F77A78A5FE",
+  "purpose": "transition_directive",
+  "schemaVersion": "0.1",
+  "segments": [
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-001",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-002",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-003",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-004a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-004b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-005",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-006a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-006b",
+      "tailExtraMs": 100
+    },
+    {
+      "headExtraMs": 100,
+      "segmentId": "seg-007",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-008",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-009",
+      "tailExtraMs": 100
+    },
+    {
+      "headExtraMs": 100,
+      "segmentId": "seg-010",
+      "tailExtraMs": 0
+    }
+  ],
+  "skill": "transition-expert",
+  "timelineDurationMs": 67547,
+  "transitionVocabulary": [
+    "叠化"
+  ]
+}

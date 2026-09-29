@@ -17,6 +17,10 @@
     {
       "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
       "recordedAt": "2026-09-11T03:27:54Z"
+    },
+    {
+      "path": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+      "recordedAt": "2026-09-28T09:07:55Z"
     }
   ],
   "roles": [
@@ -28,5 +32,5 @@
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-11T03:27:54Z",
-  "updatedAt": "2026-09-11T03:28:31Z"
+  "updatedAt": "2026-09-28T09:30:39Z"
 }

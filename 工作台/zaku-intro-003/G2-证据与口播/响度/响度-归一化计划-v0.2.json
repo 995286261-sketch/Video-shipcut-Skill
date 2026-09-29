@@ -1,0 +1,37 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_plan",
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/整条旁白-婷婷-v0.1.wav",
+  "version": "v0.2",
+  "output": "工作台/zaku-intro-003/G2-证据与口播/响度/响度-归一化计划-v0.2.json",
+  "status": "blocked_true-peak",
+  "targetProfile": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "measured": {
+    "engine": "ffmpeg-loudnorm-pass1",
+    "inputI": -18.36,
+    "inputTp": -2.34,
+    "inputLra": 1.1,
+    "inputThresh": -28.41
+  },
+  "gainDb": 4.36,
+  "estimatedTruePeak": 2.02,
+  "ceilingLufs": -17.5,
+  "blockedReasons": [
+    "true-peak"
+  ],
+  "exits": [
+    "把 TP 上限提到至少 2.0 dBTP（线性增益 4.36 dB 后估算 TP 将到 2.02）",
+    "把目标响度降到至多 -17.5 LUFS（保住现 TP 上限 -1.5）",
+    "先压缩后测：源峰均比过高属素材天花板，先跑压缩链再对本产物重新规划"
+  ],
+  "chain": null,
+  "chainNote": "linear=true 前提已在本文件对账通过；执行者逐字使用 chain、不许改参数。若执行环境实测与 inputI/inputTp 不符（源变了），chain 即作废必须重规划——回退 dynamic 视同违规。",
+  "sha256": "41FAA2CF78B11D109A45A4117A42CBF749524607ECEF3C470545BFF36CA87862",
+  "plannedAt": "2026-09-28T10:01:41Z"
+}

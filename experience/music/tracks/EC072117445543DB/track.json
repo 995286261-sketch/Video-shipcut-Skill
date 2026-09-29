@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+  "aliases": [
+    {
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "sourceUrl": "https://freesound.org/s/537272/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:05:57Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-537272-preview.mp3",
+      "recordedAt": "2026-09-28T09:05:57Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:05:57Z",
+  "updatedAt": "2026-09-28T09:05:57Z"
+}

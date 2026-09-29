@@ -1,0 +1,48 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G3",
+ "resolution": [
+  1920,
+  1080
+ ],
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "标题/章节卡（片头章节卡 0-4.0s，packagingDecisions.chapterCards）"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "信息卡（本项目未启用；G1 风格规则2 规格信息卡未落入机器合同，随终审卡呈报待用户裁决）"
+  },
+  "narration": {
+   "topPct": 70,
+   "bottomPct": 84,
+   "fontsize": 64,
+   "maxLines": 2,
+   "marginV": 173,
+   "marginL": 60,
+   "marginR": 60,
+   "autoWrap": false
+  },
+  "sourceExclusion": {
+   "topPct": 84,
+   "bottomPct": 100,
+   "usage": "源字幕排除区：本片入选窗口内无源烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "none": "12 个入选源窗口经逐段验证帧确认无烧录字幕，无需 crop/mask",
+  "watermark": "左上『大鼻子哈瑞 bilibili』水印+部分帧右下 SUNRISE 台标：16:9 构图不可裁除，保留并计入 G5 分发边界披露（internal_test）"
+ },
+ "rules": [
+  "一条口播一个排版块（10 cue 与 G2 批准稿逐句一一对应，逐字未改，仅显式 \\N 语义断行）",
+  "片头章节卡 0-4.0s 位于上部车道，与 N01 cue（主字幕车道）不冲突",
+  "口播主字幕永不进入 84-100% 源字幕排除区",
+  "渲染器能力档 autoWrap=false（探测于 字幕-渲染器能力档-v0.1.json）：长句必须显式 \\N，保守档绿灯才算绿灯",
+  "关键动作位于下方时允许临时上移 60-72% 车道+窄底板（G4 微调项）"
+ ],
+ "experienceBasis": "经验库命中 1920x1080 两条（zaku-intro-001 48px / psycho-zaku-intro-002 64px）；默认=推荐 64px（002 实车验收版），批准≠继承，本合同随终审卡重新请批"
+}

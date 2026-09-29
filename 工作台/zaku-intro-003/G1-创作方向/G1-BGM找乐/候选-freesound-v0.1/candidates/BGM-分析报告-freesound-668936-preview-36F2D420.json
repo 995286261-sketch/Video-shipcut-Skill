@@ -1,0 +1,1462 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "36F2D420BC51BF81C77408E4770FE41CBE6B5006D701FD65BAEEAE0492A6B5D2",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668936-preview.mp3",
+    "sha256": "36F2D420BC51BF81C77408E4770FE41CBE6B5006D701FD65BAEEAE0492A6B5D2",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 29.178776,
+    "decodedDurationMs": 29143
+  },
+  "tempoBpm": 0.0,
+  "beatsMs": [],
+  "onsetsMs": [
+    70,
+    209,
+    279,
+    418,
+    697,
+    859,
+    975,
+    1045,
+    1300,
+    1440,
+    1579,
+    1625,
+    1811,
+    1881,
+    2020,
+    2090,
+    2229,
+    2368,
+    2438,
+    2554,
+    2624,
+    2717,
+    2949,
+    3065,
+    3111,
+    3251,
+    3344,
+    3460,
+    3646,
+    3692,
+    3901,
+    4133,
+    4180,
+    4249,
+    4365,
+    4412,
+    4458,
+    4621,
+    4853,
+    4969,
+    5062,
+    5224,
+    5294,
+    5387,
+    5433,
+    5619,
+    5712,
+    5759,
+    5968,
+    6014,
+    6177,
+    6339,
+    6502,
+    6711,
+    6966,
+    7198,
+    7314,
+    7500,
+    7546,
+    7732,
+    7895,
+    7988,
+    8150,
+    8266,
+    8336,
+    8475,
+    8545,
+    8707,
+    8893,
+    9033,
+    9125,
+    9242,
+    9358,
+    9474,
+    9520,
+    9613,
+    9845,
+    9961,
+    10077,
+    10217,
+    10356,
+    10403,
+    10472,
+    10635,
+    10751,
+    10797,
+    10844,
+    10983,
+    11029,
+    11099,
+    11146,
+    11262,
+    11517,
+    11587,
+    11680,
+    11749,
+    11796,
+    11958,
+    12074,
+    12121,
+    12353,
+    12399,
+    12492,
+    12585,
+    12655,
+    12771,
+    12817,
+    13026,
+    13166,
+    13328,
+    13398,
+    13630,
+    13886,
+    14048,
+    14164,
+    14280,
+    14443,
+    14861,
+    14954,
+    15116,
+    15232,
+    15302,
+    15348,
+    15511,
+    15581,
+    15650,
+    15766,
+    15952,
+    16277,
+    16324,
+    16509,
+    16649,
+    16765,
+    16834,
+    16997,
+    17043,
+    17136,
+    17206,
+    17299,
+    17345,
+    17508,
+    17670,
+    17786,
+    17972,
+    18135,
+    18228,
+    18297,
+    18413,
+    18692,
+    18971,
+    19017,
+    19156,
+    19273,
+    19435,
+    19528,
+    19737,
+    20016,
+    20132,
+    20480,
+    20596,
+    20782,
+    20875,
+    20968,
+    21177,
+    21316,
+    21432,
+    21502,
+    21571,
+    21827,
+    21966,
+    22013,
+    22129,
+    22338,
+    22407,
+    22709,
+    22918,
+    23057,
+    23313,
+    23452,
+    23568,
+    23684,
+    23940,
+    24126,
+    24265,
+    24381,
+    24497,
+    24590,
+    24636,
+    24799,
+    25054,
+    25170,
+    25310,
+    25356,
+    25519,
+    25588,
+    25658,
+    25821,
+    25960,
+    26099,
+    26239,
+    26308,
+    26703,
+    26819,
+    26958,
+    27028,
+    27167,
+    27307,
+    27423,
+    27539,
+    27678,
+    27957,
+    28026,
+    28096,
+    28166,
+    28328
+  ],
+  "hitPoints": [
+    {
+      "tMs": 70,
+      "kind": "accent"
+    },
+    {
+      "tMs": 209,
+      "kind": "accent"
+    },
+    {
+      "tMs": 279,
+      "kind": "accent"
+    },
+    {
+      "tMs": 418,
+      "kind": "accent"
+    },
+    {
+      "tMs": 697,
+      "kind": "accent"
+    },
+    {
+      "tMs": 859,
+      "kind": "accent"
+    },
+    {
+      "tMs": 975,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1045,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1300,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1440,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1579,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1625,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1811,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1881,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2020,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2090,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2229,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2368,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2438,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2554,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2624,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2717,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2949,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3065,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3111,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3251,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3344,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3460,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3646,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3692,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3901,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4133,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4180,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4249,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4365,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4412,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4458,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4621,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4853,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4969,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5062,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5224,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5294,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5387,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5433,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5619,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5712,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5759,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5968,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6014,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6177,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6339,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6502,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6711,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6966,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7198,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7314,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7500,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7546,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7732,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7895,
+      "kind": "accent"
+    },
+    {
+      "tMs": 7988,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8150,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8266,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8336,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8475,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8545,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8707,
+      "kind": "accent"
+    },
+    {
+      "tMs": 8893,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9033,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9125,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9242,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9358,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9474,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9520,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9613,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9845,
+      "kind": "accent"
+    },
+    {
+      "tMs": 9961,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10077,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10217,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10356,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10403,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10472,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10635,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10751,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10797,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10844,
+      "kind": "accent"
+    },
+    {
+      "tMs": 10983,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11029,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11099,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11146,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11262,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11517,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11587,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11680,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11749,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11796,
+      "kind": "accent"
+    },
+    {
+      "tMs": 11958,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12074,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12121,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12353,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12399,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12492,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12585,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12655,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12771,
+      "kind": "accent"
+    },
+    {
+      "tMs": 12817,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13026,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13166,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13328,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13398,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13630,
+      "kind": "accent"
+    },
+    {
+      "tMs": 13886,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14048,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14164,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14280,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14443,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14861,
+      "kind": "accent"
+    },
+    {
+      "tMs": 14954,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15116,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15232,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15302,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15348,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15511,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15581,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15650,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15766,
+      "kind": "accent"
+    },
+    {
+      "tMs": 15952,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16277,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16324,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16509,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16649,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16765,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16834,
+      "kind": "accent"
+    },
+    {
+      "tMs": 16997,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17043,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17136,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17206,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17299,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17345,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17508,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17670,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17786,
+      "kind": "accent"
+    },
+    {
+      "tMs": 17972,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18135,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18228,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18297,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18413,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18692,
+      "kind": "accent"
+    },
+    {
+      "tMs": 18971,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19017,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19156,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19273,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19435,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19528,
+      "kind": "accent"
+    },
+    {
+      "tMs": 19737,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20016,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20132,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20480,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20596,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20782,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20875,
+      "kind": "accent"
+    },
+    {
+      "tMs": 20968,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21177,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21316,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21432,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21502,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21571,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21827,
+      "kind": "accent"
+    },
+    {
+      "tMs": 21966,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22013,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22129,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22338,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22407,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22709,
+      "kind": "accent"
+    },
+    {
+      "tMs": 22918,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23057,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23313,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23452,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23568,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23684,
+      "kind": "accent"
+    },
+    {
+      "tMs": 23940,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24126,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24265,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24381,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24497,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24590,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24636,
+      "kind": "accent"
+    },
+    {
+      "tMs": 24799,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25054,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25170,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25310,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25356,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25519,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25588,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25658,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25821,
+      "kind": "accent"
+    },
+    {
+      "tMs": 25960,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26099,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26239,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26308,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26703,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26819,
+      "kind": "accent"
+    },
+    {
+      "tMs": 26958,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27028,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27167,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27307,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27423,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27539,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27678,
+      "kind": "accent"
+    },
+    {
+      "tMs": 27957,
+      "kind": "accent"
+    },
+    {
+      "tMs": 28026,
+      "kind": "accent"
+    },
+    {
+      "tMs": 28096,
+      "kind": "accent"
+    },
+    {
+      "tMs": 28166,
+      "kind": "accent"
+    },
+    {
+      "tMs": 28328,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 3994,
+      "energyMean": 0.072693
+    },
+    {
+      "startMs": 4087,
+      "endMs": 8638,
+      "energyMean": 0.145345
+    },
+    {
+      "startMs": 8731,
+      "endMs": 14211,
+      "energyMean": 0.147681
+    },
+    {
+      "startMs": 14303,
+      "endMs": 18297,
+      "energyMean": 0.133253
+    },
+    {
+      "startMs": 18390,
+      "endMs": 22384,
+      "energyMean": 0.103368
+    },
+    {
+      "startMs": 22477,
+      "endMs": 29071,
+      "energyMean": 0.020996
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.000282
+    },
+    {
+      "tMs": 372,
+      "rms": 0.011631
+    },
+    {
+      "tMs": 743,
+      "rms": 0.034989
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.055556
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.061782
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.081985
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.093142
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.116732
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.078629
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.13802
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.145112
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.144082
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.166785
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.132816
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.155857
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.149289
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.132978
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.130517
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.148456
+    },
+    {
+      "tMs": 7059,
+      "rms": 0.151227
+    },
+    {
+      "tMs": 7430,
+      "rms": 0.14282
+    },
+    {
+      "tMs": 7802,
+      "rms": 0.167718
+    },
+    {
+      "tMs": 8173,
+      "rms": 0.170514
+    },
+    {
+      "tMs": 8545,
+      "rms": 0.13724
+    },
+    {
+      "tMs": 8916,
+      "rms": 0.140081
+    },
+    {
+      "tMs": 9288,
+      "rms": 0.136823
+    },
+    {
+      "tMs": 9660,
+      "rms": 0.150728
+    },
+    {
+      "tMs": 10031,
+      "rms": 0.147468
+    },
+    {
+      "tMs": 10403,
+      "rms": 0.151442
+    },
+    {
+      "tMs": 10774,
+      "rms": 0.137162
+    },
+    {
+      "tMs": 11146,
+      "rms": 0.153378
+    },
+    {
+      "tMs": 11517,
+      "rms": 0.140522
+    },
+    {
+      "tMs": 11889,
+      "rms": 0.127345
+    },
+    {
+      "tMs": 12260,
+      "rms": 0.145353
+    },
+    {
+      "tMs": 12632,
+      "rms": 0.156172
+    },
+    {
+      "tMs": 13003,
+      "rms": 0.136522
+    },
+    {
+      "tMs": 13375,
+      "rms": 0.160124
+    },
+    {
+      "tMs": 13746,
+      "rms": 0.147609
+    },
+    {
+      "tMs": 14118,
+      "rms": 0.163759
+    },
+    {
+      "tMs": 14489,
+      "rms": 0.146968
+    },
+    {
+      "tMs": 14861,
+      "rms": 0.143393
+    },
+    {
+      "tMs": 15232,
+      "rms": 0.127852
+    },
+    {
+      "tMs": 15604,
+      "rms": 0.154683
+    },
+    {
+      "tMs": 15975,
+      "rms": 0.127438
+    },
+    {
+      "tMs": 16347,
+      "rms": 0.135224
+    },
+    {
+      "tMs": 16718,
+      "rms": 0.126036
+    },
+    {
+      "tMs": 17090,
+      "rms": 0.126258
+    },
+    {
+      "tMs": 17461,
+      "rms": 0.138606
+    },
+    {
+      "tMs": 17833,
+      "rms": 0.12261
+    },
+    {
+      "tMs": 18204,
+      "rms": 0.126872
+    },
+    {
+      "tMs": 18576,
+      "rms": 0.119248
+    },
+    {
+      "tMs": 18947,
+      "rms": 0.130571
+    },
+    {
+      "tMs": 19319,
+      "rms": 0.116288
+    },
+    {
+      "tMs": 19691,
+      "rms": 0.113954
+    },
+    {
+      "tMs": 20062,
+      "rms": 0.109483
+    },
+    {
+      "tMs": 20434,
+      "rms": 0.106993
+    },
+    {
+      "tMs": 20805,
+      "rms": 0.114383
+    },
+    {
+      "tMs": 21177,
+      "rms": 0.088857
+    },
+    {
+      "tMs": 21548,
+      "rms": 0.067647
+    },
+    {
+      "tMs": 21920,
+      "rms": 0.073547
+    },
+    {
+      "tMs": 22291,
+      "rms": 0.077243
+    },
+    {
+      "tMs": 22663,
+      "rms": 0.065649
+    },
+    {
+      "tMs": 23034,
+      "rms": 0.054713
+    },
+    {
+      "tMs": 23406,
+      "rms": 0.051899
+    },
+    {
+      "tMs": 23777,
+      "rms": 0.039212
+    },
+    {
+      "tMs": 24149,
+      "rms": 0.037631
+    },
+    {
+      "tMs": 24520,
+      "rms": 0.030063
+    },
+    {
+      "tMs": 24892,
+      "rms": 0.023977
+    },
+    {
+      "tMs": 25263,
+      "rms": 0.0168
+    },
+    {
+      "tMs": 25635,
+      "rms": 0.015762
+    },
+    {
+      "tMs": 26006,
+      "rms": 0.009026
+    },
+    {
+      "tMs": 26378,
+      "rms": 0.00715
+    },
+    {
+      "tMs": 26749,
+      "rms": 0.004837
+    },
+    {
+      "tMs": 27121,
+      "rms": 0.002703
+    },
+    {
+      "tMs": 27492,
+      "rms": 0.001806
+    },
+    {
+      "tMs": 27864,
+      "rms": 0.000925
+    },
+    {
+      "tMs": 28235,
+      "rms": 0.000416
+    },
+    {
+      "tMs": 28607,
+      "rms": 0.000179
+    },
+    {
+      "tMs": 28979,
+      "rms": 6.2e-05
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -13.6,
+    "loudnessRangeLu": 10.5,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

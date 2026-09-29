@@ -1,0 +1,33 @@
+{
+ "projectId": "zaku-intro-003",
+ "node": "G5",
+ "platform": "B站画幅 16:9（G0 登记；分发=internal_test 未上架）",
+ "distribution": "internal_test",
+ "authorization": "画面：用户提供的第三方混剪素材（日升 IP 二创，UP 主 大鼻子哈瑞），仅限内部测试；BGM：Devil Game (Phonk) netease-2679274856，个人/内测轨 uncleared——对外发布必须换曲重走 G4；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+ "video": {
+  "codec": "h264",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationActualMs": 67547,
+  "timelineDurationMs": 67547,
+  "durationTargetMs": 60000,
+  "durationDeltaMs": 7547,
+  "aspectRatioPolicy": "preserve_source"
+ },
+ "audio": {
+  "narrationLoudnessMeasured": "-15.5 LUFS / TP -2.8 dBTP（成片综合，含 BGM 垫底）",
+  "narrationTargetLufs": -14.0,
+  "bgm": "bed -12dB + 逐句 duck -6dB（10 句）+ 淡入 2s/淡出 2s",
+  "sourceAudio": "excluded"
+ },
+ "subtitles": {
+  "burned": true,
+  "deliveredSrt": "subtitles.srt",
+  "cueCount": 10
+ },
+ "cover": {
+  "file": "cover.jpg",
+  "frame": "成片 40.0s（源 25.859s）夏亚红扎古太空持枪瞄准"
+ }
+}

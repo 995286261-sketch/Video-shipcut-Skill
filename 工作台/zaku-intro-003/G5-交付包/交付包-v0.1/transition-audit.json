@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "skill": "transition-expert",
+  "purpose": "transition_check",
+  "generatedAt": "2026-09-29T11:06:10+08:00",
+  "checkedAt": "2026-09-29T11:06:10+08:00",
+  "transitions": [
+    {
+      "boundary": "seg-006b→seg-007",
+      "transition": "fade",
+      "durationMs": 200,
+      "offsetMs": 46152
+    },
+    {
+      "boundary": "seg-009→seg-010",
+      "transition": "fade",
+      "durationMs": 200,
+      "offsetMs": 64293
+    }
+  ],
+  "masterFades": {
+    "fadeInMs": 0,
+    "fadeOutMs": 0
+  },
+  "gridInvariant": true,
+  "manifest": {
+    "path": "工作台/zaku-intro-003/G4-剪辑与渲染/G4-可编辑工程-v0.4.json",
+    "sha256": "1EAA89517EED67F3729D5AED2BE40D517D092012B815E94F25B944C4A99E5F0C"
+  },
+  "assemblyRecord": {
+    "path": "工作台/zaku-intro-003/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json",
+    "sha256": "470EA82A2280DBF815E3B09780B216BE8E88B3FDC5821C6C08CFA7DDBCBDBD7A"
+  },
+  "directive": {
+    "path": "工作台/zaku-intro-003/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "7C92E4FF11DF4D1DF3972261A411C399366E2A145F7D6598298CD087DCB256B4"
+  },
+  "master": {
+    "path": "工作台/zaku-intro-003/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+    "sha256": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D"
+  },
+  "errors": []
+}

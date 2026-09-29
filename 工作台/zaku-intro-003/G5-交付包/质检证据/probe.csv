@@ -1,0 +1,3 @@
+stream,0,h264,H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10,High,video,avc1,0x31637661,1920,1080,1920,1080,0,0,2,1:1,16:9,yuv420p,40,tv,bt709,bt709,unknown,left,progressive,1,true,4,0x1,30/1,30/1,1/15360,0,0.000000,1037312,67.533333,5053424,N/A,8,2026,N/A,N/A,50,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,und,VideoHandler,[0][0][0][0],Lavc61.3.100 libx264
+stream,1,aac,AAC (Advanced Audio Coding),LC,audio,mp4a,0x6134706d,fltp,44100,2,stereo,0,0,0x2,0/0,0/0,1/44100,0,0.000000,2978823,67.547007,196917,N/A,N/A,2911,N/A,N/A,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,und,SoundHandler,[0][0][0][0]
+format,交付包-v0.1/final-video.mp4,2,0,0,"mov,mp4,m4a,3gp,3g2,mj2",QuickTime / MOV,0.000000,67.547007,44395109,5257980,100,isom,512,isomiso2avc1mp41,Lavf61.1.100,Packed by Bilibili XCoder v2.0.2

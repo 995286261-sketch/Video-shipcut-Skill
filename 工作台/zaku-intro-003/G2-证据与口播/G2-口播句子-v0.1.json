@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "beatBlueprintRef": "G2-证据与口播/BGM/BGM-节拍蓝图-v0.2.json",
+  "revisionNote": "v0.1 初稿：文本+目标时间码（设计意图，栅格吸附自 v0.2 蓝图，语速校准=longtian_v3 实测 4.83 cps，issue ⑬）；TTS 后出 v0.2 回填实测码",
+  "timelineMs": 63042,
+  "sentences": [
+    { "sentenceId": "N01", "phraseId": "P1/P2", "layoutTier": "留白", "text": "没有主角光环，没有神级装备——一年战争，你绕不开这台量产机。", "factRefs": ["编辑表达"], "targetStartMs": 0, "targetDurMs": 6293 },
+    { "sentenceId": "N02", "phraseId": "P2", "layoutTier": "常规", "text": "MS-06 扎古 II，吉翁公国军的主力量产机动战士。", "factRefs": ["S1"], "targetStartMs": 6293, "targetDurMs": 5503 },
+    { "sentenceId": "N03", "phraseId": "P2/P3", "layoutTier": "常规/推进", "text": "光是 F 型就造了三千架以上——全吉翁的机动战士里，量产最多的就是它。", "factRefs": ["S1"], "targetStartMs": 11796, "targetDurMs": 7244 },
+    { "sentenceId": "N04", "phraseId": "P3", "layoutTier": "推进", "text": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。", "factRefs": ["S2"], "targetStartMs": 19040, "targetDurMs": 6247 },
+    { "sentenceId": "N05", "phraseId": "P3", "layoutTier": "推进", "text": "外露的动力管谈不上优雅，却给了它独一无二的士兵感——那是普通人的浪漫，不是测试机的浪漫。", "factRefs": ["S2", "编辑观点"], "targetStartMs": 25287, "targetDurMs": 9009 },
+    { "sentenceId": "N06", "phraseId": "P3", "layoutTier": "推进", "text": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。", "factRefs": ["S3"], "targetStartMs": 34296, "targetDurMs": 9497 },
+    { "sentenceId": "N07", "phraseId": "P3", "layoutTier": "推进", "text": "赤色彗星，从此得名。", "factRefs": ["S3"], "targetStartMs": 43793, "targetDurMs": 2066 },
+    { "sentenceId": "N08", "phraseId": "P3/P4", "layoutTier": "推进/快切", "text": "同一个战场，乔尼·莱登驾着量产扎古，用 280 火箭筒击沉三艘麦哲伦级。", "factRefs": ["S3"], "targetStartMs": 45859, "targetDurMs": 7431 },
+    { "sentenceId": "N09", "phraseId": "P4", "layoutTier": "快切", "text": "王牌没有挑机体——是量产机和王牌互相成就。这，就是男人的浪漫。", "factRefs": ["编辑表达"], "targetStartMs": 53290, "targetDurMs": 6501, "climax": true },
+    { "sentenceId": "N10", "phraseId": "P4", "layoutTier": "快切", "text": "你的扎古记忆是哪一台？评论区见。", "factRefs": ["编辑表达（互动钩子）"], "targetStartMs": 59791, "targetDurMs": 3251 }
+  ]
+}

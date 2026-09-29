@@ -1,0 +1,2126 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommendation",
+  "profile": {
+    "schemaVersion": "0.1",
+    "purpose": "bgm_recommend_profile",
+    "project": "zaku-intro-003",
+    "targetDurationSec": 60,
+    "bpmRange": [
+      110.7,
+      135.4
+    ],
+    "minSegments": 3,
+    "styleTags": [
+      "electronic",
+      "dark",
+      "driving",
+      "building",
+      "mysterious"
+    ],
+    "distributionBoundary": "internal_test",
+    "styleBrief": {
+      "schemaVersion": "0.1",
+      "purpose": "reference_music_style_brief",
+      "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+      "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+      "bpm": 123.05,
+      "bpmRange": [
+        110.7,
+        135.4
+      ],
+      "durationMs": 163029,
+      "energyShape": [
+        0.894,
+        0.795,
+        0.74,
+        0.989,
+        0.848,
+        0.925,
+        0.843,
+        0.769,
+        0.956,
+        0.815,
+        0.907,
+        0.915,
+        1.0,
+        0.968,
+        0.924,
+        0.584
+      ],
+      "shapeBuckets": 16,
+      "shapeBucketMs": 10189,
+      "segmentCount": 8,
+      "usage": "检索与推荐输入；energyShape 为 16 桶均值曲线（消除解说音轨逐句 ducking 周期噪声，保留宏观能量形状）；suggestedQueryTerms 由 Agent 依情绪/风格补写，本文件只承载机器事实",
+      "suggestedQueryTerms": []
+    },
+    "earsPortrait": "1) 曲风流派：Industrial Techno / EBM (电子身体音乐)。\n2) BPM区间：125-135。\n3) 主要乐器与音色：强劲的四四拍鼓机、失真且富有侵略性的合成器贝斯线、带有金属质感的工业打击乐采样。\n4) 节奏型：具有非常持续和强烈的驱动感，节奏是音乐的核心，充满向前推进的能量。\n5) 情绪与气质：紧张、冷酷、充满力量感和未来主义色彩，营造出一种机械、严肃且高压的氛围。\n6) 英文检索词：Industrial, Techno, Driving, Dark, Aggressive。",
+    "note": "styleTags 逐词=《参照曲风格画像》耳朵证据原词（003-④/⑤ 纪律：禁裸脑补）；zaku-intro-003 实测跑·响度接线全流程",
+    "tagMapping": {
+      "industrial techno": "genre=electronic",
+      "EBM": "genre=electronic",
+      "dark": "mood=dark",
+      "driving": "energy=driving",
+      "aggressive synth": "energy=building/mood=mysterious（词表无 aggressive，就近映射并留原词于 earsPortrait）"
+    }
+  },
+  "minScore": 0.7,
+  "ranked": [
+    {
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "freesoundId": 537272,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/537272/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-537272-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 1897557,
+      "tempoBpm": 123.05,
+      "integratedLufs": -15.1,
+      "hitPointCount": 4552,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+      "score": 0.8487,
+      "notes": [
+        "bpm_proximity=1.0",
+        "energy_similarity=0.4715",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "31:37.557"
+    },
+    {
+      "title": "motorcycles driving around revving nearby or distant echo urban nice.flac",
+      "freesoundId": 454091,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/454091/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-454091-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 176625,
+      "tempoBpm": 117.45,
+      "integratedLufs": -34.4,
+      "hitPointCount": 383,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "2F636709026E81E80B1DC03EDD3797A18CE99EFF574B3A0EFD9FF8FFF4C4DEE9",
+      "score": 0.8211,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.5708",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:56.625"
+    },
+    {
+      "title": "Techno Lite Drums 130 BPM",
+      "freesoundId": 701528,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/701528/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-701528-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 182769,
+      "tempoBpm": 129.2,
+      "integratedLufs": -18.3,
+      "hitPointCount": 744,
+      "styleTags": [
+        "percussive",
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "187FF295C9494B684E530F70BD8507278CB8BF7621E01203A79E991E51709182",
+      "score": 0.7801,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.2971",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "3:02.769"
+    },
+    {
+      "title": "Chorus music - Techno loop",
+      "freesoundId": 407385,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/407385/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-407385-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 104002,
+      "tempoBpm": 117.45,
+      "integratedLufs": -15.4,
+      "hitPointCount": 338,
+      "styleTags": [
+        "electronic",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "F588E06F68A5627AC7EFC628DC5897990135418130ACD6C3B4D95CD405E3B96F",
+      "score": 0.7445,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.616",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:44.002"
+    },
+    {
+      "title": "Techno bass drum and loco lead.",
+      "freesoundId": 320499,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/320499/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-320499-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 144000,
+      "tempoBpm": 117.45,
+      "integratedLufs": -12.1,
+      "hitPointCount": 399,
+      "styleTags": [
+        "electronic",
+        "driving",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "128BCC02CCC67763E3D817F0B91CCAC5E465FB47909C57948D16A9352F766017",
+      "score": 0.7388,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.4214",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:24.000"
+    },
+    {
+      "title": "Axon 01 - Techno track loop",
+      "freesoundId": 377540,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/377540/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-377540-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 103385,
+      "tempoBpm": 129.2,
+      "integratedLufs": -15.0,
+      "hitPointCount": 496,
+      "styleTags": [
+        "electronic",
+        "driving",
+        "steady",
+        "orchestral",
+        "percussive"
+      ],
+      "sha256": "2E5622A7CDB571A35C9A0AFCAFD29FB69B945D9139D681225D8DFCA8D625F49D",
+      "score": 0.7369,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.4351",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:43.385"
+    },
+    {
+      "title": "Interior Neighborhood Drive Brentwood TN - 2015 Mazda CX-5 T2",
+      "freesoundId": 847648,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/847648/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847648-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 227000,
+      "tempoBpm": 215.33,
+      "integratedLufs": -23.2,
+      "hitPointCount": 743,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "F87A8D2369E63223C9574E8136A7405268B972883687691762B82AE8081BA1B0",
+      "score": 0.7207,
+      "notes": [
+        "bpm_proximity=0.5832",
+        "energy_similarity=0.3575",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "3:47.000"
+    },
+    {
+      "title": "custom_electrical_lance_charging_loop_02162026",
+      "freesoundId": 845520,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/845520/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-845520-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 64572,
+      "tempoBpm": 136.0,
+      "integratedLufs": -14.6,
+      "hitPointCount": 229,
+      "styleTags": [
+        "dark",
+        "building",
+        "electronic",
+        "steady",
+        "driving"
+      ],
+      "sha256": "B0A927A9BD92840FD4A81CFB2AA4F9E9815C321222EE4054CDC2DBBF8CC921F0",
+      "score": 0.6968,
+      "notes": [
+        "bpm_proximity=0.6492",
+        "energy_similarity=0.1775",
+        "tags 4/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:04.572"
+    },
+    {
+      "title": "Hillbilly Techno Rock Loop.wav",
+      "freesoundId": 565044,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/565044/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-565044-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 88241,
+      "tempoBpm": 143.55,
+      "integratedLufs": -9.2,
+      "hitPointCount": 246,
+      "styleTags": [
+        "percussive",
+        "steady",
+        "orchestral",
+        "rock",
+        "electronic"
+      ],
+      "sha256": "95A788879AF6F40903C41EECE8E8E0FFD4AB3C64C41165C3F2704434C72E68FF",
+      "score": 0.6798,
+      "notes": [
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3316",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:28.241"
+    },
+    {
+      "title": "Dance Lofi Minimal Techno - 60 BPM",
+      "freesoundId": 579576,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/579576/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-579576-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 29796,
+      "tempoBpm": 123.05,
+      "integratedLufs": -12.6,
+      "hitPointCount": 113,
+      "styleTags": [
+        "epic",
+        "electronic",
+        "orchestral",
+        "ambient-low"
+      ],
+      "sha256": "1BF79B1F5EB6447539814187A6E5FE0518C4BCF7DBF527F148D36DB94256F5B3",
+      "score": 0.6772,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=1.0",
+        "energy_similarity=0.544",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:29.796"
+    },
+    {
+      "title": "In Car Driving with Open Window.wav",
+      "freesoundId": 50911,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/50911/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-50911-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 147370,
+      "tempoBpm": 143.55,
+      "integratedLufs": -19.7,
+      "hitPointCount": 387,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "51729C8673D47D005CED8EF3F0D1FE98703276722940CBF5D2A158E7F6169AA7",
+      "score": 0.6632,
+      "notes": [
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.2082",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:27.370"
+    },
+    {
+      "title": "In Car Driving.aif",
+      "freesoundId": 50910,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/50910/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-50910-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 52342,
+      "tempoBpm": 143.55,
+      "integratedLufs": -19.0,
+      "hitPointCount": 99,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "284520CFD68BAF158831BBC9FA005C2C514077AE6E91C0D37023C0B67B7A4582",
+      "score": 0.65,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.4512",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:52.342"
+    },
+    {
+      "title": "auto real Pontiac G5 int driving various medium speed with potholes cycles accelerate decelerate to idle on boulevard with traffic lights.flac",
+      "freesoundId": 453744,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/453744/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-453744-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 841507,
+      "tempoBpm": 152.0,
+      "integratedLufs": -21.8,
+      "hitPointCount": 2167,
+      "styleTags": [
+        "driving",
+        "mysterious"
+      ],
+      "sha256": "7BFF10A97EFB3D439D04824D23DE167FABB57718C6F1CA82C2A3BF8986456139",
+      "score": 0.6465,
+      "notes": [
+        "bpm_proximity=0.2158",
+        "energy_similarity=0.3944",
+        "tags 2/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "14:01.507"
+    },
+    {
+      "title": "Interior Car Drive Night Nolensville Pk to Old Hickory Blvd Brentwood TN - 2015 Mazda CX-5 T3",
+      "freesoundId": 847650,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/847650/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847650-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 701269,
+      "tempoBpm": 184.57,
+      "integratedLufs": -25.4,
+      "hitPointCount": 1916,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "C4433A94046DF657803A24873FD8988D45C349688FF58C2E53A083FB2CC2C11E",
+      "score": 0.6349,
+      "notes": [
+        "bpm_proximity=0.1666",
+        "energy_similarity=0.5553",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "11:41.269"
+    },
+    {
+      "title": "DSGNSynth_Creeping Intensity Shredder 01",
+      "freesoundId": 730113,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/730113/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-730113-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 41013,
+      "tempoBpm": 117.45,
+      "integratedLufs": -12.0,
+      "hitPointCount": 118,
+      "styleTags": [
+        "dark",
+        "epic",
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "FD183556BA35F76863FA1D2F31F49133D75C56F84D3FF5A916493BD2AB3821D4",
+      "score": 0.6137,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.2351",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:41.013"
+    },
+    {
+      "title": "City parking lot ambience with techno music from box training room, road traffic and city hum at night",
+      "freesoundId": 690472,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/690472/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-690472-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 209031,
+      "tempoBpm": 152.0,
+      "integratedLufs": -29.2,
+      "hitPointCount": 593,
+      "styleTags": [
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "DBDC65019C380C2FCC9613F360AA5E03E0A9D299A0F72BB3673B3807CA73A736",
+      "score": 0.5939,
+      "notes": [
+        "bpm_proximity=0.2158",
+        "energy_similarity=0.1527",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "3:29.031"
+    },
+    {
+      "title": "Dark Mystery Theme 80s inspired - track 02",
+      "freesoundId": 685325,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/685325/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685325-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 34286,
+      "tempoBpm": 112.35,
+      "integratedLufs": -22.5,
+      "hitPointCount": 90,
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "sha256": "7640823A66D0877DB3C481D27E28DB156366D710E80752595F0C829343C60428",
+      "score": 0.5937,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.7101",
+        "energy_similarity=0.4982",
+        "tags 3/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:34.286"
+    },
+    {
+      "title": "Driving, traffic, construction.wav",
+      "freesoundId": 207441,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/207441/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-207441-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 80000,
+      "tempoBpm": 161.5,
+      "integratedLufs": -22.3,
+      "hitPointCount": 245,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "BBD25820725C8F6AA74C3A39EF61A9C017EE9D6E71D141C3E4156F5D5ADA84FE",
+      "score": 0.546,
+      "notes": [
+        "bpm_proximity=0.0",
+        "energy_similarity=0.2298",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:20.000"
+    },
+    {
+      "title": "Roland Tekno Lead 4 C.wav",
+      "freesoundId": 573084,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/573084/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-573084-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 19011,
+      "tempoBpm": 66.26,
+      "integratedLufs": -8.4,
+      "hitPointCount": 36,
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "sha256": "385A2B62FF7B3CA65BD4A40CA71020E84467EF3002597B7F3BE852021737CF6A",
+      "score": 0.5394,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.7435",
+        "energy_similarity=0.367",
+        "tags 2/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:19.011"
+    },
+    {
+      "title": "Inside The Core Drone.wav",
+      "freesoundId": 262433,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/262433/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-262433-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 48639,
+      "tempoBpm": 95.7,
+      "integratedLufs": -17.1,
+      "hitPointCount": 105,
+      "styleTags": [
+        "dark",
+        "ambient-low",
+        "electronic"
+      ],
+      "sha256": "53B4CD91690538253D344A08B277D507C9E117AFB6C4DD4357B0816EADCF83AF",
+      "score": 0.5338,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.2591",
+        "energy_similarity=0.4174",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:48.639"
+    },
+    {
+      "title": "Dark_Emptiness_030",
+      "freesoundId": 728942,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/728942/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-728942-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 57423,
+      "tempoBpm": 172.27,
+      "integratedLufs": -9.3,
+      "hitPointCount": 422,
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "sha256": "917E2CF42A324400270F231BDD9E8D8FCBF7F9C87EB3FF9ABBB7FBAC51937858",
+      "score": 0.5266,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.6339",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:57.423"
+    },
+    {
+      "title": "Dark Mystery Theme 80s inspired - track 01",
+      "freesoundId": 685324,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/685324/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685324-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 34286,
+      "tempoBpm": 143.55,
+      "integratedLufs": -25.3,
+      "hitPointCount": 77,
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "sha256": "C37164873318EDD9699366326760E581E39AD9F76964F0662505F76F01073EB2",
+      "score": 0.5186,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.4105",
+        "tags 3/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:34.286"
+    },
+    {
+      "title": "Dark Mystery Theme 80s inspired - Wav mix",
+      "freesoundId": 685323,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/685323/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685323-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 34286,
+      "tempoBpm": 143.55,
+      "integratedLufs": -13.1,
+      "hitPointCount": 121,
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "sha256": "52C80A01ECD50EF97B0633930B2D42020CFD1C36B96D6D87197927EC52B4993D",
+      "score": 0.509,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3312",
+        "tags 3/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:34.286"
+    },
+    {
+      "title": "Dark Mystery Theme 80s inspired - Mp3 mix",
+      "freesoundId": 685322,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/685322/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685322-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 34339,
+      "tempoBpm": 143.55,
+      "integratedLufs": -13.2,
+      "hitPointCount": 121,
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "sha256": "DB394147AF5535F1F6D9698BE734173E829BA03E3CDFB0062E129E9365672540",
+      "score": 0.5062,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3065",
+        "tags 3/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:34.339"
+    },
+    {
+      "title": "Aggressive Electronic Rap Beat",
+      "freesoundId": 698100,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/698100/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-698100-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 36121,
+      "tempoBpm": 161.5,
+      "integratedLufs": -15.2,
+      "hitPointCount": 120,
+      "styleTags": [
+        "dark",
+        "driving",
+        "percussive",
+        "steady",
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "5DD9E67C842EB38CE1D48238C522DAA0D188163C18DB300C81FED64027A083B2",
+      "score": 0.4289,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.4803",
+        "tags 3/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:36.121"
+    },
+    {
+      "title": "Synth Loop 2.wav",
+      "freesoundId": 360310,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360310/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360310-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 13166,
+      "tempoBpm": 107.67,
+      "integratedLufs": -12.1,
+      "hitPointCount": 70,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "2275E79F8B0D43DCA3EED3F5F923ADD7906612D3D161A09F3FD67195C1DCC7D8",
+      "score": 0.4115,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.5834",
+        "energy_similarity=0.4862",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:13.166"
+    },
+    {
+      "title": "Dark_Emptiness_028",
+      "freesoundId": 686136,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/686136/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-686136-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 39744,
+      "tempoBpm": 86.13,
+      "integratedLufs": -13.3,
+      "hitPointCount": 278,
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "sha256": "2ADB0F2EBA4E1B308DAE9D48DD576918B6F23175813C3977A914ED17FFF87095",
+      "score": 0.4089,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.4506",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:39.744"
+    },
+    {
+      "title": "techno loop 2.wav",
+      "freesoundId": 53281,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/53281/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-53281-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 8005,
+      "tempoBpm": 117.45,
+      "integratedLufs": -21.2,
+      "hitPointCount": 31,
+      "styleTags": [
+        "driving",
+        "steady",
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "9AD9613FEDDAABFBAF9AEEF7B23E5A2903C9F4E96DF0C3140D120F247283ACA2",
+      "score": 0.3977,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.2582",
+        "fewer_segments_than_requested",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:08.005"
+    },
+    {
+      "title": "Synth Loop 17.wav",
+      "freesoundId": 360313,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360313/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360313-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 13671,
+      "tempoBpm": 107.67,
+      "integratedLufs": -14.4,
+      "hitPointCount": 30,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "3B076DEEF0AF0E4A5DC885E94C79FBADBE6B63503B3CAD906DE937B49D2EE9D1",
+      "score": 0.3952,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.5834",
+        "energy_similarity=0.3301",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:13.671"
+    },
+    {
+      "title": "Dark_Emptiness_026.wav",
+      "freesoundId": 668937,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/668937/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668937-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 8994,
+      "tempoBpm": 258.4,
+      "integratedLufs": -9.1,
+      "hitPointCount": 18,
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "sha256": "875696E11BA595BAF53F7002A27AFB8012D6AB19B2D898C5C9878C153EA0E4C0",
+      "score": 0.3927,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.3504",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:08.994"
+    },
+    {
+      "title": "Industrial Wack1.wav",
+      "freesoundId": 16161,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16161/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16161-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 112.35,
+      "integratedLufs": -17.2,
+      "hitPointCount": 38,
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "sha256": "AE4C6303EFDE9667993A0D082A6AA9B8AAD6C44382A9F13323005050C1BDD7D4",
+      "score": 0.3898,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.7101",
+        "energy_similarity=0.3477",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "1000hz aggressive harsh censor beep",
+      "freesoundId": 871996,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/871996/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-871996-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 598,
+      "tempoBpm": 117.45,
+      "integratedLufs": -2.1,
+      "hitPointCount": 3,
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "sha256": "810093CA428FD1B6DE6706376742A08AB2A9F1857F539E487F094F8D597C4D2C",
+      "score": 0.3734,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.0799",
+        "fewer_segments_than_requested",
+        "tags 2/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.598"
+    },
+    {
+      "title": "Synth Loop 6.wav",
+      "freesoundId": 360315,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360315/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360315-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 4516,
+      "tempoBpm": 123.05,
+      "integratedLufs": -16.3,
+      "hitPointCount": 11,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "7AC3EDEDFD89B365A973E9797FB657534CD2572561930FD30E8CD019DAF549AB",
+      "score": 0.3718,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=1.0",
+        "energy_similarity=0.0448",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:04.516"
+    },
+    {
+      "title": "Industrial Wack2.wav",
+      "freesoundId": 16162,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16162/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16162-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 136.0,
+      "integratedLufs": -17.7,
+      "hitPointCount": 33,
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "sha256": "C03D8FB04D8A7BF421EEAAD834F35AC937E49BB3131A3F8E34D61F1C452A5A6B",
+      "score": 0.3683,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.6492",
+        "energy_similarity=0.31",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "TECHNO PERCUSSION LOOPS 130 BPM.wav",
+      "freesoundId": 505102,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/505102/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-505102-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 14769,
+      "tempoBpm": 103.36,
+      "integratedLufs": -17.5,
+      "hitPointCount": 82,
+      "styleTags": [
+        "steady",
+        "orchestral",
+        "percussive",
+        "electronic"
+      ],
+      "sha256": "9CE4D8A52A323C593B3CFD36C755E9F88157F40F81C4268B31F2C3E049B625CA",
+      "score": 0.3661,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4666",
+        "energy_similarity=0.2753",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:14.769"
+    },
+    {
+      "title": "FriendlyTechno.mp3",
+      "freesoundId": 360406,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360406/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360406-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 8021,
+      "tempoBpm": 117.45,
+      "integratedLufs": -13.0,
+      "hitPointCount": 39,
+      "styleTags": [
+        "electronic",
+        "orchestral"
+      ],
+      "sha256": "B5D10847B9767E1EE17D30F89A6706DC21101B0A018B8D67FF0A7663C5CC83E1",
+      "score": 0.365,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.1355",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:08.021"
+    },
+    {
+      "title": "Music Loop 2.wav",
+      "freesoundId": 359109,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/359109/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359109-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 5573,
+      "tempoBpm": 129.2,
+      "integratedLufs": -17.9,
+      "hitPointCount": 24,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral",
+        "percussive"
+      ],
+      "sha256": "8B5AC3E74812A60DF6257F10C694D9B69E3787FB3322D02CB1E7E2489F251BCF",
+      "score": 0.3611,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.2429",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:05.573"
+    },
+    {
+      "title": "Synth Loop 7.wav",
+      "freesoundId": 360314,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360314/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360314-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 9290,
+      "tempoBpm": 112.35,
+      "integratedLufs": -12.6,
+      "hitPointCount": 36,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "348251BB8668C4529F11E094C60115003C8D4CC9433F4E7F5B6BD03EB2237D07",
+      "score": 0.3515,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.7101",
+        "energy_similarity=0.2456",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:09.290"
+    },
+    {
+      "title": "Synth Loop 18.wav",
+      "freesoundId": 360312,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360312/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360312-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 3752,
+      "tempoBpm": 129.2,
+      "integratedLufs": -12.8,
+      "hitPointCount": 18,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "5ABAB841DF64B7EBB2975598FB47151DC4744C23E5343EB306B688D9BECDD201",
+      "score": 0.3407,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.1551",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:03.752"
+    },
+    {
+      "title": "Dark_Emptiness_027.wav",
+      "freesoundId": 668936,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/668936/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668936-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 29143,
+      "tempoBpm": 0.0,
+      "integratedLufs": -13.6,
+      "hitPointCount": 215,
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "sha256": "36F2D420BC51BF81C77408E4770FE41CBE6B5006D701FD65BAEEAE0492A6B5D2",
+      "score": 0.3403,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.3573",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:29.143"
+    },
+    {
+      "title": "Synth Loop 15.wav",
+      "freesoundId": 359163,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/359163/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359163-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 5669,
+      "tempoBpm": 112.35,
+      "integratedLufs": -13.0,
+      "hitPointCount": 20,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "AD826C139DCAFE603C0C3FD727D396EF3273ECA89F4CD61B49059BF158265451",
+      "score": 0.3386,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.7101",
+        "energy_similarity=0.3",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:05.669"
+    },
+    {
+      "title": "Synth Loop 16.wav",
+      "freesoundId": 359162,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/359162/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359162-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 6164,
+      "tempoBpm": 58.73,
+      "integratedLufs": -15.0,
+      "hitPointCount": 20,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "CE8711430B401FA8EF41D095AA0D86A3A60F431916FF3C41D089C873BA50787C",
+      "score": 0.3385,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8486",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.164"
+    },
+    {
+      "title": "Industrial Season A11.wav",
+      "freesoundId": 16160,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16160/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16160-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 2143,
+      "tempoBpm": 136.0,
+      "integratedLufs": -18.5,
+      "hitPointCount": 9,
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "sha256": "4701AE3E665CB2C52717A9F9FF6F6AA62BD8C0F43AE52599B2D4FBA4AA55BBCA",
+      "score": 0.3333,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.6492",
+        "energy_similarity=0.2602",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:02.143"
+    },
+    {
+      "title": "Industrial Wack4.wav",
+      "freesoundId": 16163,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16163/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16163-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 143.55,
+      "integratedLufs": -18.6,
+      "hitPointCount": 34,
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "sha256": "DC5B93D74643C8829B791DA0B04DF9198C2156B56257139F075F8E26D359EF54",
+      "score": 0.3253,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.4003",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "Industrial Wack5.wav",
+      "freesoundId": 16164,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16164/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16164-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 143.55,
+      "integratedLufs": -17.8,
+      "hitPointCount": 33,
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "sha256": "B69FB05C7DB5C69E812F8898429C7660595BF9035C55500CA8832F3A3D8515B8",
+      "score": 0.3239,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3905",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "Industrial Wack6.wav",
+      "freesoundId": 16165,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16165/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16165-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 143.55,
+      "integratedLufs": -17.8,
+      "hitPointCount": 34,
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "sha256": "448F6C34206BD0FE7968DDC325BCE675C6BA4AB68A8B924079B44D1FB7724356",
+      "score": 0.3238,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3899",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "Roland Tekno Lead 3 C.wav",
+      "freesoundId": 573085,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/573085/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-573085-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 15049,
+      "tempoBpm": 152.0,
+      "integratedLufs": -13.1,
+      "hitPointCount": 24,
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "sha256": "89C48013AFBA64650E95D280FC2B02345461D59EB9F3AC50A89A23D7737732AF",
+      "score": 0.3236,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.2158",
+        "energy_similarity=0.0",
+        "tags 2/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:15.049"
+    },
+    {
+      "title": "Industrial Wack7.wav",
+      "freesoundId": 16166,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16166/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16166-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 6857,
+      "tempoBpm": 143.55,
+      "integratedLufs": -14.9,
+      "hitPointCount": 34,
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "sha256": "C5113CDB7F368F9E5094C334A745D4A42D7A7AD8D6A6F2F3F5C3F0F7A89117E1",
+      "score": 0.3187,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3517",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:06.857"
+    },
+    {
+      "title": "C3 - Atari Kick.WAV",
+      "freesoundId": 443191,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443191/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443191-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 295,
+      "tempoBpm": 117.45,
+      "integratedLufs": null,
+      "hitPointCount": 1,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "FAE8B4A3D89A76EBB10A732497872703450F82D541060D3188F07C93035CF2A1",
+      "score": 0.3067,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.295"
+    },
+    {
+      "title": "Industrial Wack8.wav",
+      "freesoundId": 16167,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/16167/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16167-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 5143,
+      "tempoBpm": 143.55,
+      "integratedLufs": -15.4,
+      "hitPointCount": 27,
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "sha256": "DF4992D9EE1DD9516815AECEC12514B8ECE4EFF60A27EC8479AE730C0E99628D",
+      "score": 0.3015,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.3004",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:05.143"
+    },
+    {
+      "title": "Synth Loop 10.wav",
+      "freesoundId": 359158,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/359158/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359158-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 4058,
+      "tempoBpm": 143.55,
+      "integratedLufs": -11.0,
+      "hitPointCount": 15,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "2ADA356D739FFEF02BA7A23955CD768FA06874B813927BA01386AC2009DCBF3F",
+      "score": 0.2841,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.4447",
+        "energy_similarity=0.4537",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:04.058"
+    },
+    {
+      "title": "Synth Loop 19.wav",
+      "freesoundId": 360311,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/360311/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360311-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 15670,
+      "tempoBpm": 161.5,
+      "integratedLufs": -16.1,
+      "hitPointCount": 59,
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "B08C3DDD749B8F096FAAA877660DCC594084D9FE60406E83798121C438562611",
+      "score": 0.2702,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.3794",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:15.670"
+    },
+    {
+      "title": "Guitar-Chord Ebm",
+      "freesoundId": 202405,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/202405/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-202405-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 12040,
+      "tempoBpm": 95.7,
+      "integratedLufs": -13.0,
+      "hitPointCount": 31,
+      "styleTags": [
+        "acoustic"
+      ],
+      "sha256": "61EC3300EA0025F7C9F50859C1019B8CFAA23B059A3723E2452E3073249903A3",
+      "score": 0.2344,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.2591",
+        "energy_similarity=0.0163",
+        "fewer_segments_than_requested",
+        "tags 0/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:12.040"
+    },
+    {
+      "title": "Ominous_Synth.wav",
+      "freesoundId": 231846,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/231846/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-231846-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 11761,
+      "tempoBpm": 89.1,
+      "integratedLufs": -14.5,
+      "hitPointCount": 26,
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "sha256": "37948472B40CED5C1AD0672B397208E1F3F59014B9BC438B149A2B2A0B2B45F3",
+      "score": 0.2308,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0803",
+        "energy_similarity=0.2527",
+        "fewer_segments_than_requested",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:11.761"
+    },
+    {
+      "title": "EBM drum loop.mp3",
+      "freesoundId": 100351,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/100351/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-100351-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 7707,
+      "tempoBpm": 83.35,
+      "integratedLufs": -7.2,
+      "hitPointCount": 38,
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "sha256": "3AF584D9A33FF7BA3D0A90218CACC9D4A0F08B0477D1A1DD9C5AACDBC92B0A1B",
+      "score": 0.1833,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.2005",
+        "fewer_segments_than_requested",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:07.707"
+    },
+    {
+      "title": "C3 - Low Noisy Bass Kick.WAV",
+      "freesoundId": 443193,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443193/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443193-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 600,
+      "tempoBpm": 172.27,
+      "integratedLufs": -14.3,
+      "hitPointCount": 3,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "A2613F71E680D420638E259A8C53E22279A80AB566F686AFBCC0C63A26671334",
+      "score": 0.1022,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.600"
+    },
+    {
+      "title": "C3 - Low Bass Kick.WAV",
+      "freesoundId": 443190,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443190/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443190-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 600,
+      "tempoBpm": 0.0,
+      "integratedLufs": -14.0,
+      "hitPointCount": 2,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "119041B2E8F972DD8DB3CD2B69B32467B2FAAB9F3DE5ABE342378FDC09BD94F7",
+      "score": 0.1022,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.600"
+    },
+    {
+      "title": "C2 - Low Bass Kick.WAV",
+      "freesoundId": 443188,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443188/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443188-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 600,
+      "tempoBpm": 0.0,
+      "integratedLufs": -14.7,
+      "hitPointCount": 3,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "E13F8D9213559ADF67D178E0A8F4923958633B4465F3A5D672A9A689243C0CBB",
+      "score": 0.1022,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.600"
+    },
+    {
+      "title": "C4 - Low 909.WAV",
+      "freesoundId": 443194,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443194/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443194-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 200,
+      "tempoBpm": 0.0,
+      "integratedLufs": null,
+      "hitPointCount": 1,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "7AB81823D2B9745D32E25D5187896B341ED076C7C4F9CFD4A4EF5E0B50F1C29F",
+      "score": 0.1001,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.200"
+    },
+    {
+      "title": "Evils Toy Kick.WAV",
+      "freesoundId": 443187,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/443187/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443187-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 200,
+      "tempoBpm": 0.0,
+      "integratedLufs": null,
+      "hitPointCount": 2,
+      "styleTags": [
+        "electronic"
+      ],
+      "sha256": "05D2E2CE2B9B71E1A3C5F2F2C50F23DBFCE3501FF460AE8BF4517D573145F525",
+      "score": 0.1001,
+      "notes": [
+        "shorter_than_target",
+        "bpm_proximity=0.0",
+        "energy_similarity=0.0",
+        "fewer_segments_than_requested",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "0:00.200"
+    }
+  ],
+  "passing": [
+    {
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "freesoundId": 537272,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/537272/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-537272-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 1897557,
+      "tempoBpm": 123.05,
+      "integratedLufs": -15.1,
+      "hitPointCount": 4552,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+      "score": 0.8487,
+      "notes": [
+        "bpm_proximity=1.0",
+        "energy_similarity=0.4715",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "31:37.557"
+    },
+    {
+      "title": "motorcycles driving around revving nearby or distant echo urban nice.flac",
+      "freesoundId": 454091,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/454091/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-454091-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 176625,
+      "tempoBpm": 117.45,
+      "integratedLufs": -34.4,
+      "hitPointCount": 383,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "2F636709026E81E80B1DC03EDD3797A18CE99EFF574B3A0EFD9FF8FFF4C4DEE9",
+      "score": 0.8211,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.5708",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:56.625"
+    },
+    {
+      "title": "Techno Lite Drums 130 BPM",
+      "freesoundId": 701528,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/701528/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-701528-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 182769,
+      "tempoBpm": 129.2,
+      "integratedLufs": -18.3,
+      "hitPointCount": 744,
+      "styleTags": [
+        "percussive",
+        "orchestral",
+        "electronic"
+      ],
+      "sha256": "187FF295C9494B684E530F70BD8507278CB8BF7621E01203A79E991E51709182",
+      "score": 0.7801,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.2971",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "3:02.769"
+    },
+    {
+      "title": "Chorus music - Techno loop",
+      "freesoundId": 407385,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/407385/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-407385-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 104002,
+      "tempoBpm": 117.45,
+      "integratedLufs": -15.4,
+      "hitPointCount": 338,
+      "styleTags": [
+        "electronic",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "F588E06F68A5627AC7EFC628DC5897990135418130ACD6C3B4D95CD405E3B96F",
+      "score": 0.7445,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.616",
+        "tags 1/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:44.002"
+    },
+    {
+      "title": "Techno bass drum and loco lead.",
+      "freesoundId": 320499,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/320499/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-320499-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 144000,
+      "tempoBpm": 117.45,
+      "integratedLufs": -12.1,
+      "hitPointCount": 399,
+      "styleTags": [
+        "electronic",
+        "driving",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "sha256": "128BCC02CCC67763E3D817F0B91CCAC5E465FB47909C57948D16A9352F766017",
+      "score": 0.7388,
+      "notes": [
+        "bpm_proximity=0.8483",
+        "energy_similarity=0.4214",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:24.000"
+    },
+    {
+      "title": "Axon 01 - Techno track loop",
+      "freesoundId": 377540,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/377540/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-377540-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 103385,
+      "tempoBpm": 129.2,
+      "integratedLufs": -15.0,
+      "hitPointCount": 496,
+      "styleTags": [
+        "electronic",
+        "driving",
+        "steady",
+        "orchestral",
+        "percussive"
+      ],
+      "sha256": "2E5622A7CDB571A35C9A0AFCAFD29FB69B945D9139D681225D8DFCA8D625F49D",
+      "score": 0.7369,
+      "notes": [
+        "bpm_proximity=0.8334",
+        "energy_similarity=0.4351",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:43.385"
+    },
+    {
+      "title": "Interior Neighborhood Drive Brentwood TN - 2015 Mazda CX-5 T2",
+      "freesoundId": 847648,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/847648/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847648-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 227000,
+      "tempoBpm": 215.33,
+      "integratedLufs": -23.2,
+      "hitPointCount": 743,
+      "styleTags": [
+        "driving"
+      ],
+      "sha256": "F87A8D2369E63223C9574E8136A7405268B972883687691762B82AE8081BA1B0",
+      "score": 0.7207,
+      "notes": [
+        "bpm_proximity=0.5832",
+        "energy_similarity=0.3575",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "3:47.000"
+    }
+  ],
+  "unanalyzed": [],
+  "sufficiency": {
+    "passing": 7,
+    "minExpected": 3,
+    "enough": true,
+    "gapAction": null
+  }
+}

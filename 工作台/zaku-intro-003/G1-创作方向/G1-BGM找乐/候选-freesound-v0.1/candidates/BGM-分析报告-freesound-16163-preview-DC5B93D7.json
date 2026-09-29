@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "DC5B93D74643C8829B791DA0B04DF9198C2156B56257139F075F8E26D359EF54",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16163-preview.mp3",
+    "sha256": "DC5B93D74643C8829B791DA0B04DF9198C2156B56257139F075F8E26D359EF54",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 6.896327,
+    "decodedDurationMs": 6857
+  },
+  "tempoBpm": 143.55,
+  "beatsMs": [
+    464,
+    906,
+    1324,
+    1741,
+    2159,
+    2601,
+    3042,
+    3460,
+    3878,
+    4319,
+    4760,
+    5178,
+    5596
+  ],
+  "onsetsMs": [
+    139,
+    232,
+    441,
+    673,
+    882,
+    998,
+    1091,
+    1324,
+    1440,
+    1533,
+    1741,
+    1858,
+    1950,
+    2159,
+    2392,
+    2601,
+    2717,
+    2810,
+    3042,
+    3135,
+    3251,
+    3460,
+    3576,
+    3669,
+    3878,
+    4110,
+    4319,
+    4435,
+    4528,
+    4737,
+    4853,
+    4969,
+    5178,
+    5271,
+    5387,
+    5596,
+    5828,
+    6037,
+    6130,
+    6246,
+    6455,
+    6571,
+    6687
+  ],
+  "hitPoints": [
+    {
+      "tMs": 139,
+      "kind": "accent"
+    },
+    {
+      "tMs": 232,
+      "kind": "accent"
+    },
+    {
+      "tMs": 464,
+      "kind": "beat"
+    },
+    {
+      "tMs": 673,
+      "kind": "accent"
+    },
+    {
+      "tMs": 906,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1091,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1324,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1533,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1741,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1950,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2159,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2392,
+      "kind": "accent"
+    },
+    {
+      "tMs": 2601,
+      "kind": "beat"
+    },
+    {
+      "tMs": 2810,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3042,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3251,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3460,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3669,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3878,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4110,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4319,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4528,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4760,
+      "kind": "beat"
+    },
+    {
+      "tMs": 4969,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5178,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5387,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5596,
+      "kind": "beat"
+    },
+    {
+      "tMs": 5828,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6037,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6130,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6246,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6455,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6571,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6687,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 6780,
+      "energyMean": 0.093272
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.100369
+    },
+    {
+      "tMs": 372,
+      "rms": 0.007632
+    },
+    {
+      "tMs": 743,
+      "rms": 0.118373
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.12453
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.119292
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.098135
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.120169
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.111393
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.09253
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.031436
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.016048
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.1049
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.118979
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.122711
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.113767
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.094997
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.085256
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.117507
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.091389
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -18.6,
+    "loudnessRangeLu": 0.5,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": null,
+    "themeRef": "工作台/zaku-intro-003/G1-创作方向/G1-方向输入-v0.1.json",
+    "themeText": null,
+    "styleBriefRef": "工作台/zaku-intro-003/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "industrial techno",
+      "rationale": "画像①曲风流派原词",
+      "source": "theme"
+    },
+    {
+      "term": "EBM",
+      "rationale": "画像①曲风流派原词",
+      "source": "theme"
+    },
+    {
+      "term": "driving",
+      "rationale": "画像④节奏型（持续强推进）",
+      "source": "theme"
+    },
+    {
+      "term": "dark",
+      "rationale": "画像⑤气质（紧张冷酷）",
+      "source": "theme"
+    },
+    {
+      "term": "aggressive synth",
+      "rationale": "画像⑥英文检索词+③侵略性合成器贝斯",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 60,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-09-28T16:27:09+08:00"
+}

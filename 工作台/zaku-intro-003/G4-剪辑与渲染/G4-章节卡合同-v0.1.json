@@ -1,0 +1,14 @@
+{
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "fontsize": 60,
+ "yRatio": 0.1,
+ "cards": [
+  {
+   "chapterId": "title-01",
+   "title": "扎古——男人的浪漫｜ZAKU: A MAN'S ROMANCE",
+   "startMs": 0,
+   "endMs": 4000
+  }
+ ],
+ "note": "G3 批准 packagingDecisions.chapterCards 原样（0-4.0s 上部标题车道）；水平居中为装配器唯一档位，不压左上水印"
+}

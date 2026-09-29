@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "B0A927A9BD92840FD4A81CFB2AA4F9E9815C321222EE4054CDC2DBBF8CC921F0",
+  "aliases": [
+    {
+      "title": "custom_electrical_lance_charging_loop_02162026",
+      "sourceUrl": "https://freesound.org/s/845520/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:06:27Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-845520-preview.mp3",
+      "recordedAt": "2026-09-28T09:06:27Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:06:27Z",
+  "updatedAt": "2026-09-28T09:06:27Z"
+}

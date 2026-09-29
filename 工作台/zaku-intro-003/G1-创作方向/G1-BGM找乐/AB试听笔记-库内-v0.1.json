@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.0.1",
+    "modelOverride": null
+  },
+  "reference": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Devil Game (Phonk)",
+      "neteaseId": 2679274856,
+      "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+      "reused": false,
+      "notes": "1) 参照曲是旋律驱动的Phonk，气质冷酷神秘；候选曲是人声主导的Hardstyle，气质狂热躁动，节奏更硬。\n2) 能。其强劲鼓点和重复吼叫非常适合高燃卡点。\n3) 6分。能量达标但风格迥异，缺乏参照曲的旋律氛围与酷感。"
+    },
+    {
+      "title": "Gone Bad (Phonk)",
+      "neteaseId": 2627048583,
+      "sha256": "EA2684893C898655EF018958BD61B61EB23C3C6C260AC0E689699EFC736E3E71",
+      "reused": false,
+      "notes": "1) 差距显著。参照曲是史诗感电子，用弦乐营造宏大氛围；候选曲是冷酷的Phonk/Drift风格，以失真808和牛铃为主，气质更街头、暗黑。\n2) 能。其强劲节奏和侵略性音色非常适合高燃卡点，但呈现的是“狂拽”而非“宏伟”的燃。\n3) 6分。节奏动力达标，但乐器与氛围美学与参照曲完全不同。"
+    },
+    {
+      "title": "弥渡山歌Phonk House",
+      "neteaseId": 2744664065,
+      "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+      "reused": false,
+      "notes": "1) 差距显著：参照曲是史诗感电子，靠合成器与弦乐营造宏大氛围；候选曲是国风人声切片House，核心是高亢戏曲唱腔与强节奏。\n2) 能。其BPM更高、鼓点更密，非常适合高燃卡点。\n3) 贴合度5分。虽能量足够，但独特的国风人声与参照曲的纯器乐史诗气质冲突过大。"
+    },
+    {
+      "title": "LOW-PHONK",
+      "neteaseId": null,
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "reused": false,
+      "notes": "1) 差距为零。候选曲与参照曲实为同一首作品，其流派（史诗电子）、乐器（弦乐、重鼓、合成器）、气质（宏大激昂）及节奏型完全一致。\n2) 完全可以。强烈的鼓点和层层递进的旋律极具张力，是完美的高燃卡点BGM。\n3) 10分。两曲完全相同，精准匹配所有风格需求。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

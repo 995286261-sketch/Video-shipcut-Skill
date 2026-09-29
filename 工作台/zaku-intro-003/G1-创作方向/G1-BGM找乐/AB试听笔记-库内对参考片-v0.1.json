@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.0.1",
+    "modelOverride": null
+  },
+  "reference": "工作台/zaku-intro-003/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Devil Game (Phonk)",
+      "neteaseId": 2679274856,
+      "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+      "reused": false,
+      "notes": "1. 差距：参照曲是叙事性强的Techno，节奏沉稳；候选曲是 aggressive 的Hardstyle/Trap，人声采样密集、鼓点极具爆发力。\n2. 结论：能。其强烈的重拍和“Bounce”等人声指令天生为卡点而生，高燃度满分。\n3. 评分：9分。虽氛围不同，但其强劲的律动完美契合“高燃卡点”的核心需求。"
+    },
+    {
+      "title": "Gone Bad (Phonk)",
+      "neteaseId": 2627048583,
+      "sha256": "EA2684893C898655EF018958BD61B61EB23C3C6C260AC0E689699EFC736E3E71",
+      "reused": false,
+      "notes": "1. 差距：参照曲是硬核Techno，音色工业感强、气质压迫；候选曲是旋律化Progressive House，氛围明亮流行，缺少攻击性。\n2. 结论：不能。其柔和的旋律会削弱军事题材的硬核张力，无法制造“高燃”听感。\n3. 评分：4/10。理由：风格过于轻快流行，缺乏项目所需的厚重机械感与紧张氛围。"
+    },
+    {
+      "title": "弥渡山歌Phonk House",
+      "neteaseId": 2744664065,
+      "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+      "reused": false,
+      "notes": "1) 差距显著。参照曲是冷峻硬核的Techno，以强劲鼓机和合成器营造紧张叙事感；候选曲则是欢快喜庆的国风电子舞曲，使用民乐采样，气质截然不同。\n2) 不能。候选曲的“喜庆”氛围与军事历史的严肃主题严重冲突，无法塑造高燃卡点所需的压迫感和史诗感。\n3) 贴合度：2分。理由：音乐风格与项目主题南辕北辙，氛围完全不合。"
+    },
+    {
+      "title": "LOW-PHONK",
+      "neteaseId": null,
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "reused": false,
+      "notes": "1. **差距**：参照曲是硬核Techno，鼓点刚硬、气质冷峻工业；候选曲是旋律化Progressive House，音色圆润、氛围史诗感强。\n2. **可行性**：能当高燃BGM，但缺乏参照曲那种“机械咬合”的硬朗卡点感，更偏向情绪渲染。\n3. **评分**：6/10。理由：氛围到位但骨架偏软，缺了那股硬核的冲击力。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

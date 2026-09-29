@@ -1,0 +1,2348 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G3",
+ "sourceMedia": {
+  "assetId": "source-02-1080p-734dd167",
+  "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335"
+ },
+ "purpose": "G3 视觉观察账本（探索层 93 帧 + 验证层 36 帧）",
+ "analysisMethod": "scdet 切点+中帧抽取+主 agent 目视拼版",
+ "provenance": "zaku-intro-003 实际运行产物（2026-09-28）",
+ "records": [
+  {
+   "recordId": "obs-S000",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 772,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S000.jpg",
+   "observedVisuals": "太空中红色机体远景，轮廓不可辨",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S001",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 2010,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S001.jpg",
+   "observedVisuals": "驾驶员脸部特写（白红头盔，绿色调色）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S002",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 2877,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S002.jpg",
+   "observedVisuals": "瞄准十字线中的红色扎古剪影（单眼发光）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S003",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 3410,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S003.jpg",
+   "observedVisuals": "白色高达持光束步枪横指",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S004",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 5160,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S004.jpg",
+   "observedVisuals": "绿色扎古半身，右手高举热能斧（蓝白刃光），粉色单眼",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S005",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 8244,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S005.jpg",
+   "observedVisuals": "深蓝灰扎古031号半身（肩盾+动力管）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S006",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 9878,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S006.jpg",
+   "observedVisuals": "战舰双联炮塔开火（蓝白光束）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S007",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 10144,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S007.jpg",
+   "observedVisuals": "白色强光爆闪充满画面",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S008",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 10360,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S008.jpg",
+   "observedVisuals": "蓝色光束掠过机体边缘",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S009",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 11061,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S009.jpg",
+   "observedVisuals": "暗色机体蓝色光束尾焰突进",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S010",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 12278,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S010.jpg",
+   "observedVisuals": "扎古头部大特写：粉色单眼+两侧动力管",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S011",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 12994,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S011.jpg",
+   "observedVisuals": "扎古与爆炸火球同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S012",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 13577,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S012.jpg",
+   "observedVisuals": "带101号盾的联邦兵与扎古交火",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S013",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 14160,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S013.jpg",
+   "observedVisuals": "白色机体被击中爆炸",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S014",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 14360,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S014.jpg",
+   "observedVisuals": "交火中爆炸火球",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S015",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 15444,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S015.jpg",
+   "observedVisuals": "白色GM头部特写（绿色护目镜）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S016",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 16494,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S016.jpg",
+   "observedVisuals": "深色扎古002号持盾半身",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S017",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 18144,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S017.jpg",
+   "observedVisuals": "黄褐涂装机体持长枪开火（枪口焰），涂装非常规扎古绿",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S018",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 20544,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S018.jpg",
+   "observedVisuals": "机体被粉紫色能量包裹爆裂",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S019",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 25544,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S019.jpg",
+   "observedVisuals": "夏亚红色扎古长镜头：红色机体持步枪瞄准，背景粉色光束",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S020",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 30194,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S020.jpg",
+   "observedVisuals": "暗光扎古头部特写（红色单眼）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S021",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 31177,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S021.jpg",
+   "observedVisuals": "暗色扎古持步枪，动力管轮廓可见",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S022",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 32227,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S022.jpg",
+   "observedVisuals": "紫色扎古A06号半身（肩盾+蓝色推进焰）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S023",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 33260,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S023.jpg",
+   "observedVisuals": "爆炸火球中机体残影",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S024",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 33428,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S024.jpg",
+   "observedVisuals": "战舰上层建筑连环爆炸（火焰+破片）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S025",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 33760,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S025.jpg",
+   "observedVisuals": "大火球吞噬舰体结构",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S026",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 34260,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S026.jpg",
+   "observedVisuals": "舰桥窗格结构+爆炸",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S027",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 34594,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S027.jpg",
+   "observedVisuals": "连环爆炸火光",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S028",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 34760,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S028.jpg",
+   "observedVisuals": "爆炸碎片飞溅",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S029",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 34928,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S029.jpg",
+   "observedVisuals": "桅杆结构+爆炸背景",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S030",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 35761,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S030.jpg",
+   "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S031",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 37628,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S031.jpg",
+   "observedVisuals": "白色手臂持蓝白色光束军刀特写",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S032",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 39278,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S032.jpg",
+   "observedVisuals": "深色机体带05号与星徽标识，暗背景",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S033",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 39894,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S033.jpg",
+   "observedVisuals": "紫扎古头胸特写（圆顶+单眼+动力管）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S034",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40060,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S034.jpg",
+   "observedVisuals": "紫扎古02号持枪，橙色弹道线背景",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S035",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40228,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S035.jpg",
+   "observedVisuals": "紫扎古02号开火（蓝色光束）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S036",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40394,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S036.jpg",
+   "observedVisuals": "紫扎古02号连射+橙色弹幕",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S037",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40560,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S037.jpg",
+   "observedVisuals": "紫扎古02号射击姿态",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S038",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40728,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S038.jpg",
+   "observedVisuals": "紫扎古02号侧身开火（蓝色光束+爆炸）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S039",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 40894,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S039.jpg",
+   "observedVisuals": "紫扎古02号俯冲射击",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S040",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 41060,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S040.jpg",
+   "observedVisuals": "紫扎古02号射击+火球",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S041",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 41228,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S041.jpg",
+   "observedVisuals": "紫扎古02号射击姿态延续",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S042",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 41528,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S042.jpg",
+   "observedVisuals": "紫扎古02号+爆炸",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S043",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 42360,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S043.jpg",
+   "observedVisuals": "联邦舰桥内部爆炸（火花四溅）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S044",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 43060,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S044.jpg",
+   "observedVisuals": "爆炸闪光",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S045",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 44528,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S045.jpg",
+   "observedVisuals": "白色GM开火+Ball球体",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S046",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 47561,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S046.jpg",
+   "observedVisuals": "深色扎古开火（粉色光束）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S047",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 49394,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S047.jpg",
+   "observedVisuals": "WB102白色战舰+爆炸",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S048",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 49560,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S048.jpg",
+   "observedVisuals": "WB102战舰被击中（火花）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S049",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 49728,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S049.jpg",
+   "observedVisuals": "WB102战舰+乘员舱",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S050",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 49961,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S050.jpg",
+   "observedVisuals": "WB102战舰爆炸",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S051",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 50961,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S051.jpg",
+   "observedVisuals": "黑色扎古013号（吉翁徽+粉色单眼）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S052",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 54878,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S052.jpg",
+   "observedVisuals": "暗背景机体持发光刃状武器长镜头（刃光蓝白）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S053",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 58794,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S053.jpg",
+   "observedVisuals": "扎古肩扛长管武器（火箭筒形态）瞄准",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S054",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 59760,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S054.jpg",
+   "observedVisuals": "扎古开火枪口焰",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S055",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 60177,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S055.jpg",
+   "observedVisuals": "机体开火+粉色光束爆炸",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S056",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 60560,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S056.jpg",
+   "observedVisuals": "粉色光束爆裂",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S057",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 61344,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S057.jpg",
+   "observedVisuals": "粉色能量爆裂+机体剪影",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S058",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 62410,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S058.jpg",
+   "observedVisuals": "暗夜中多点白色灯光（疑似编队）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S059",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 64327,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S059.jpg",
+   "observedVisuals": "白色核心战机/炮架结构",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S060",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 67127,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S060.jpg",
+   "observedVisuals": "扎古独眼大特写（粉色发光）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S061",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 69627,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S061.jpg",
+   "observedVisuals": "橙黄色装甲板块特写（形状不明）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S062",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 72244,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S062.jpg",
+   "observedVisuals": "机体管线/动力管盘绕大特写（多色线缆）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S063",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 74094,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S063.jpg",
+   "observedVisuals": "扎古静立于灯光阵列中（全身剪影）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S064",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 77128,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S064.jpg",
+   "observedVisuals": "白色核心战机爆炸",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S065",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 80660,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S065.jpg",
+   "observedVisuals": "编队推进+烧录字幕「双方前进中 无异常」",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S066",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 81860,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S066.jpg",
+   "observedVisuals": "橙色量产机体群开火+烧录字幕「集弹状况良好 损伤在预测范围内」",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S067",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 82078,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S067.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S068",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 82294,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S068.jpg",
+   "observedVisuals": "橙色量产机体开火+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S069",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 82627,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S069.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S070",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 83027,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S070.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S071",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 83277,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S071.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S072",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 83627,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S072.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S073",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 83960,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S073.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S074",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 84311,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S074.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S075",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 84611,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S075.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S076",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 84878,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S076.jpg",
+   "observedVisuals": "橙色量产机体+烧录字幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "烧录字幕",
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S077",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 85794,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S077.jpg",
+   "observedVisuals": "云雾中白色机体",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S078",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 86727,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S078.jpg",
+   "observedVisuals": "地面跑道/弹射轨道推进画面",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S079",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 88344,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S079.jpg",
+   "observedVisuals": "地面机体残骸",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S080",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 91994,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S080.jpg",
+   "observedVisuals": "橙色机体持机枪开火",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S081",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 93611,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S081.jpg",
+   "observedVisuals": "指挥席监视器（绿色屏幕+吉翁徽）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S082",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 94861,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S082.jpg",
+   "observedVisuals": "灰色机体残骸堆",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S083",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 95694,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S083.jpg",
+   "observedVisuals": "白色核心战机开火",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S084",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 96127,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S084.jpg",
+   "observedVisuals": "模糊白色机体运动",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S085",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 96778,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S085.jpg",
+   "observedVisuals": "驾驶舱内部（红色仪表+天线）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S086",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 97678,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S086.jpg",
+   "observedVisuals": "橙色机体飞行开火",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S087",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 99311,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S087.jpg",
+   "observedVisuals": "肩盾特写（扎古式圆盾+挂架）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S088",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 100428,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S088.jpg",
+   "observedVisuals": "暗色机体光束对射",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S089",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 101144,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S089.jpg",
+   "observedVisuals": "扎古头部特写（发光单眼）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S090",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 104444,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S090.jpg",
+   "observedVisuals": "橙色机体与白色机体近身格斗",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S091",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 107811,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S091.jpg",
+   "observedVisuals": "红色扎古+右侧爆炸火球",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-S092",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 113210,
+   "frameExtractionSpec": "scdet(0.3) 子镜头中帧, 480x270 jpg",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索帧/S092.jpg",
+   "observedVisuals": "太空中的扎古全身剪影（粉色单眼+粒子光点）长镜头",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:42:53Z"
+  },
+  {
+   "recordId": "obs-v-seg-001-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 3540,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/start-0000003540ms.jpg",
+   "observedVisuals": "白色红蓝高达系联邦机体发射粉色光束（窗口起点落在上一镜头尾帧）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-001-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 6875,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/middle-0000006875ms.jpg",
+   "observedVisuals": "深蓝灰扎古（031号+吉翁微标）半身，粉色单眼、肩盾",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-001-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 10209,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-001/end-0000010209ms.jpg",
+   "observedVisuals": "蓝白强光爆闪充满画面",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-002-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 11640,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/start-0000011640ms.jpg",
+   "observedVisuals": "扎古头部大特写：粉色单眼光晕+两侧动力管",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-002-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 15188,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/middle-0000015188ms.jpg",
+   "observedVisuals": "白色联邦机体在烟尘中推进",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-002-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 18735,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-002/end-0000018735ms.jpg",
+   "observedVisuals": "白色联邦机体持枪开火（枪口焰）+橙色烟幕",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-003-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 29710,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/start-0000029710ms.jpg",
+   "observedVisuals": "深色扎古持步枪开火（蓝色推进焰+红色光刃光晕入画）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-003-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 32923,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/middle-0000032923ms.jpg",
+   "observedVisuals": "黄色爆炸火球+机体破片飞溅",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-003-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 36135,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-003/end-0000036135ms.jpg",
+   "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004a-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 52236,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/start-0000052236ms.jpg",
+   "observedVisuals": "深色扎古持步枪射击，画面左下红色光刃（热能斧刃光）同框",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004a-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 53836,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/middle-0000053836ms.jpg",
+   "observedVisuals": "黄色爆炸碎片飞溅",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004a-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 55435,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004a/end-0000055435ms.jpg",
+   "observedVisuals": "驾驶员怒吼特写（黄色头盔）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004b-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 57940,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/start-0000057940ms.jpg",
+   "observedVisuals": "两机扎古头部特写（灰色装甲+吉翁微标+粉色单眼）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004b-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 59610,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/middle-0000059610ms.jpg",
+   "observedVisuals": "扎古肩扛长管火箭筒（炮口正对镜头）+盾，背景烟云",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-004b-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 61280,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-004b/end-0000061280ms.jpg",
+   "observedVisuals": "粉紫色能量爆裂吞没机体部件",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-005-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 65880,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/start-0000065880ms.jpg",
+   "observedVisuals": "暗红扎古头部特写（粉色单眼+格栅面罩）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-005-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 70274,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/middle-0000070274ms.jpg",
+   "observedVisuals": "机体装甲板块与黑色线缆（动力管）大特写",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-005-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 74667,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-005/end-0000074667ms.jpg",
+   "observedVisuals": "沙色装甲板特写（01号标识+管线）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006a-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 21380,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/start-0000021380ms.jpg",
+   "observedVisuals": "夏亚红色扎古持步枪，橙色爆炸火球背景（全身）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006a-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 25545,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/middle-0000025545ms.jpg",
+   "observedVisuals": "红色扎古在太空中瞄准（粉色光束划过）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006a-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 29709,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006a/end-0000029709ms.jpg",
+   "observedVisuals": "深色扎古持步枪开火（蓝色推进焰+红色光刃，窗口终点落入相邻镜头）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006b-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 49310,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/start-0000049310ms.jpg",
+   "observedVisuals": "VB102白色联邦机体持盾开火（绿色护目镜）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006b-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 50510,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/middle-0000050510ms.jpg",
+   "observedVisuals": "深色扎古06号头肩特写（吉翁微标+粉色单眼）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-006b-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 51710,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-006b/end-0000051710ms.jpg",
+   "observedVisuals": "黄褐涂装机体发射实弹炮（枪口焰）+白色机体",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-007-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 107110,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/start-0000107110ms.jpg",
+   "observedVisuals": "橙色机体在夕阳地表燃烧解体（火花+镜头光晕）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-007-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 108566,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/middle-0000108566ms.jpg",
+   "observedVisuals": "深色扎古太空中持步枪开火（橙色枪口焰+粉色粒子）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-007-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 110022,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-007/end-0000110022ms.jpg",
+   "observedVisuals": "深色扎古太空持长管步枪瞄准（全身）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-008-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 39980,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/start-0000039980ms.jpg",
+   "observedVisuals": "紫扎古头部特写（单眼+橙色弹道线掠过）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-008-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 44060,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/middle-0000044060ms.jpg",
+   "observedVisuals": "舰桥/结构顶部被多发光束击中爆炸（蓝色传感器阵列+火球）",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-008-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 48140,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-008/end-0000048140ms.jpg",
+   "observedVisuals": "深色扎古系机体（绿色胸甲）中弹起火",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-009-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 98410,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/start-0000098410ms.jpg",
+   "observedVisuals": "暗战场中圆形盾面/长管武器近景（身份不可辨）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-009-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 101943,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/middle-0000101943ms.jpg",
+   "observedVisuals": "橙色量产机与白色机体近身格斗（火花四溅）",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-009-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 105476,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-009/end-0000105476ms.jpg",
+   "observedVisuals": "橙色量产机群推进（背景白色机体+烟尘）",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-010-start",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 114755,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/start-0000114755ms.jpg",
+   "observedVisuals": "扎古太空剪影持长管炮（粉色粒子漂浮）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-010-middle",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 116332,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/middle-0000116332ms.jpg",
+   "observedVisuals": "两台机体太空远景+缆线+粉色光点",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  },
+  {
+   "recordId": "obs-v-seg-010-end",
+   "sourceAssetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceMs": 117808,
+   "frameExtractionSpec": "g3_extract_verification_frames 窗口起/中/终探针, 1920x1080 jpg",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/seg-010/end-0000117908ms.jpg",
+   "observedVisuals": "近黑画面仅余粉色粒子光点（镜头渐暗）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "全帧左上 bilibili 水印+部分帧 SUNRISE 台标"
+   ],
+   "createdAt": "2026-09-28T10:48:34Z"
+  }
+ ]
+}

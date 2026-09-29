@@ -1,0 +1,665 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G3",
+ "status": "review_required",
+ "sourceAudioPolicy": "exclude",
+ "fps": 30,
+ "timelineDurationMs": 67547,
+ "narrationDraft": "工作台/zaku-intro-003/G2-证据与口播/G2-口播草案-v0.1.md",
+ "narrationDecisionRef": "工作台/zaku-intro-003/G2-证据与口播/G2-审核决定-v0.1.json",
+ "semanticBeatRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+ "visualAnalysisRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-视觉分析-v0.1.json",
+ "subjectConfirmationRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+ "durationDecision": {
+  "targetDurationSec": 60,
+  "narrationEstimatedDurationSec": 67.547,
+  "resolution": "follow_narration_natural_duration",
+  "decisionReason": "G1 目标 50-70s 区间，实测旁白 67.547s 落在区间内，按口播自然时长成片（G2 门禁已批准该时长，无需用户再选压缩或改目标）。",
+  "intentionalSilence": [],
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "bgmPlan": {
+  "audioSha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+  "reportSha256": "9B65F2E322C7B127EB883105BED197D364DDC438918F001D25E377DA6D96B717",
+  "alignmentRef": "工作台/zaku-intro-003/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+  "alignmentSha256": "C9A910CFAD8C51801D9558E101CBEFF252610D0E3DF937A95875EB620D53CA99",
+  "trackOffsetMs": 0,
+  "fades": {
+   "fadeInMs": 2000,
+   "fadeOutStartMs": 65547,
+   "fadeOutMs": 2000
+  },
+  "duckingPolicy": "口播活跃区间 BGM 压低（对齐产物 ducking 10 段）；深度参数 G4 执行前按专员合同拍板"
+ },
+ "packagingDecisions": {
+  "coverFrameMs": 40000,
+  "fps": 30,
+  "loudnessTarget": {
+   "integratedLufs": -14.0,
+   "truePeakDbtp": -1.5,
+   "lraTargetLu": 9.0
+  },
+  "subtitleTimelineRef": "工作台/zaku-intro-003/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.srt",
+  "subtitleCheckRef": "工作台/zaku-intro-003/G3-剪辑计划/字幕/G3-字幕复检报告-v0.1.json",
+  "chapterCards": [
+   {
+    "startMs": 0,
+    "endMs": 4000,
+    "title": "扎古——男人的浪漫｜ZAKU: A MAN'S ROMANCE"
+   }
+  ]
+ },
+ "segments": [
+  {
+   "segmentId": "seg-001",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 3540,
+   "endMs": 10210,
+   "outputStartMs": 0,
+   "outputEndMs": 6670,
+   "outputDurationMs": 6670,
+   "mappingMode": "one_to_one",
+   "layoutTier": "留白",
+   "narrationStartMs": 0,
+   "narrationEndMs": 6560,
+   "narrationText": "没有主角光环，没有神级装备——一年战争，你绕不开这台量产机。",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "扎古系量产机体出现在战斗语境"
+   },
+   "semanticBeatIds": [
+    "beat-001"
+   ],
+   "reason": "开场钩子：绿扎古举热能斧→031号半身→战舰炮火，建立\"量产机卷入一年战争\"语境",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S004,obs-S005,obs-S006"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S004",
+     "obs-S005",
+     "obs-S006"
+    ]
+   },
+   "transitionInstruction": "黑场入",
+   "transitionDurationMs": 600
+  },
+  {
+   "segmentId": "seg-002",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 11640,
+   "endMs": 18736,
+   "outputStartMs": 6670,
+   "outputEndMs": 13766,
+   "outputDurationMs": 7096,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "narrationStartMs": 6780,
+   "narrationEndMs": 13740,
+   "narrationText": "MS-06 扎古 II，吉翁公国军的主力量产机动战士。",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "可辨认的扎古系机体（头部特写+动力管）"
+   },
+   "semanticBeatIds": [
+    "beat-002"
+   ],
+   "reason": "主体身份句：扎古头部特写开场（S010 粉色单眼+动力管），后续交火画面承载\"主力量产机\"",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S010,obs-S011,obs-S012,obs-S013,obs-S014,obs-S015,obs-S016,obs-S017"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S010",
+     "obs-S011",
+     "obs-S012",
+     "obs-S013",
+     "obs-S014",
+     "obs-S015",
+     "obs-S016",
+     "obs-S017"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-003",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 29710,
+   "endMs": 36136,
+   "outputStartMs": 13766,
+   "outputEndMs": 20192,
+   "outputDurationMs": 6426,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "narrationStartMs": 13793,
+   "narrationEndMs": 20113,
+   "narrationText": "光是 F 型就造了三千架以上——全吉翁的机动战士里，量产最多的就是它。",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "扎古系机体连续作战画面（数量主张=已核事实陈述）"
+   },
+   "semanticBeatIds": [
+    "beat-003"
+   ],
+   "reason": "量产规模句：双头部特写→A06号→连环爆炸战果，承载\"量产最多\"的战争密度",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S020,obs-S021,obs-S022,obs-S023,obs-S024,obs-S025,obs-S026,obs-S027,obs-S028,obs-S029,obs-S030"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S020",
+     "obs-S021",
+     "obs-S022",
+     "obs-S023",
+     "obs-S024",
+     "obs-S025",
+     "obs-S026",
+     "obs-S027",
+     "obs-S028",
+     "obs-S029",
+     "obs-S030"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-004a",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 52236,
+   "endMs": 55436,
+   "outputStartMs": 20192,
+   "outputEndMs": 23392,
+   "outputDurationMs": 3200,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 20271,
+   "narrationEndMs": 23471,
+   "narrationText": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "机体持握/使用近战光刃类武器"
+   },
+   "semanticBeatIds": [
+    "beat-004"
+   ],
+   "reason": "武器句前段：暗背景持发光刃长镜头（S052），对应\"热能斧\"（刃色待验证帧裁决）",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S052"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S052"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-004b",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 57940,
+   "endMs": 61281,
+   "outputStartMs": 23392,
+   "outputEndMs": 26733,
+   "outputDurationMs": 3341,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 23471,
+   "narrationEndMs": 26671,
+   "narrationText": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+   "narrativeClaim": {
+    "type": "weapon",
+    "minimumVisibleEvidence": "机体持实弹枪械开火"
+   },
+   "semanticBeatIds": [
+    "beat-004"
+   ],
+   "reason": "武器句后段：肩扛长管炮（S053 火箭筒形态）→开火枪口焰（S054）→连射，对应\"机枪/火箭筒\"",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S053,obs-S054,obs-S055,obs-S056"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S053",
+     "obs-S054",
+     "obs-S055",
+     "obs-S056"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-005",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 65880,
+   "endMs": 74668,
+   "outputStartMs": 26733,
+   "outputEndMs": 35521,
+   "outputDurationMs": 8788,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 26796,
+   "narrationEndMs": 35516,
+   "narrationText": "外露的动力管谈不上优雅，却给了它独一无二的士兵感——那是普通人的浪漫，不是测试机的浪漫。",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "机体细节特写（管线/独眼/静立全身）"
+   },
+   "semanticBeatIds": [
+    "beat-005"
+   ],
+   "reason": "士兵感句：独眼大特写→管线盘绕特写（S062）→灯光阵列静立全身，细节蒙太奇承载\"动力管/士兵感\"编辑观点",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S060,obs-S061,obs-S062,obs-S063"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S060",
+     "obs-S061",
+     "obs-S062",
+     "obs-S063"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-006a",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 21380,
+   "endMs": 29710,
+   "outputStartMs": 35521,
+   "outputEndMs": 43851,
+   "outputDurationMs": 8330,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 35527,
+   "narrationEndMs": 43857,
+   "narrationText": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "红色扎古开火/突进"
+   },
+   "semanticBeatIds": [
+    "beat-006"
+   ],
+   "reason": "夏亚句前段：红色扎古长镜头（S019 持枪瞄准+粉色光束）",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S019"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S019"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-006b",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 49310,
+   "endMs": 51711,
+   "outputStartMs": 43851,
+   "outputEndMs": 46252,
+   "outputDurationMs": 2401,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 43857,
+   "narrationEndMs": 46087,
+   "narrationText": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "战舰爆炸/被击沉画面"
+   },
+   "semanticBeatIds": [
+    "beat-006"
+   ],
+   "reason": "夏亚句后段：WB102 战舰连环被击（S047-S050），承载\"击沉五艘联邦战舰\"战果",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S047,obs-S048,obs-S049,obs-S050"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S047",
+     "obs-S048",
+     "obs-S049",
+     "obs-S050"
+    ]
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-007",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 107110,
+   "endMs": 110023,
+   "outputStartMs": 46252,
+   "outputEndMs": 49165,
+   "outputDurationMs": 2913,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 46417,
+   "narrationEndMs": 49057,
+   "narrationText": "赤色彗星，从此得名。",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "红色扎古（赤色彗星指代）"
+   },
+   "semanticBeatIds": [
+    "beat-007"
+   ],
+   "reason": "得名句：红扎古+爆炸火球（S091）接太空剪影起幅（S092）",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S091,obs-S092"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S091",
+     "obs-S092"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-008",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 39980,
+   "endMs": 48141,
+   "outputStartMs": 49165,
+   "outputEndMs": 57326,
+   "outputDurationMs": 8161,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 49273,
+   "narrationEndMs": 57113,
+   "narrationText": "同一个战场，乔尼·莱登驾着量产扎古，用 280 火箭筒击沉三艘麦哲伦级。",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "扎古系机体射击+战舰爆炸画面"
+   },
+   "semanticBeatIds": [
+    "beat-008"
+   ],
+   "reason": "乔尼句：紫扎古02号连射序列（S034-S042）+爆炸链，驾驶员身份=已核事实口播陈述不作画面断言",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S034,obs-S035,obs-S036,obs-S037,obs-S038,obs-S039,obs-S040,obs-S041,obs-S042,obs-S043,obs-S044,obs-S045"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S034",
+     "obs-S035",
+     "obs-S036",
+     "obs-S037",
+     "obs-S038",
+     "obs-S039",
+     "obs-S040",
+     "obs-S041",
+     "obs-S042",
+     "obs-S043",
+     "obs-S044",
+     "obs-S045"
+    ]
+   }
+  },
+  {
+   "segmentId": "seg-009",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 98410,
+   "endMs": 105477,
+   "outputStartMs": 57326,
+   "outputEndMs": 64393,
+   "outputDurationMs": 7067,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 57539,
+   "narrationEndMs": 64259,
+   "narrationText": "王牌没有挑机体——是量产机和王牌互相成就。这，就是男人的浪漫。",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "扎古系机体战斗蒙太奇（盾/对射/头部/格斗）"
+   },
+   "semanticBeatIds": [
+    "beat-009"
+   ],
+   "reason": "高潮收束句：肩盾特写→光束对射→头部特写→近身格斗快切蒙太奇，落\"量产机和王牌互相成就\"",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S087,obs-S088,obs-S089,obs-S090"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S087",
+     "obs-S088",
+     "obs-S089",
+     "obs-S090"
+    ]
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-010",
+   "assetId": "source-02-1080p-734dd167",
+   "startMs": 114755,
+   "endMs": 117909,
+   "outputStartMs": 64393,
+   "outputEndMs": 67547,
+   "outputDurationMs": 3154,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 64528,
+   "narrationEndMs": 67488,
+   "narrationText": "你的扎古记忆是哪一台？评论区见。",
+   "narrativeClaim": {
+    "type": "editorial_hold",
+    "minimumVisibleEvidence": "扎古太空剪影收尾"
+   },
+   "semanticBeatIds": [
+    "beat-010"
+   ],
+   "reason": "互动钩子：太空扎古剪影长镜头（S092 尾段）+黑场出",
+   "evidenceRefs": [
+    "G3-剪辑计划/G3-视觉观察账本-v0.1.json:obs-S092"
+   ],
+   "status": "verified_candidate",
+   "sourceCaptionTreatment": {
+    "mode": "not_needed",
+    "note": "窗口内无烧录字幕（烧录字幕集中在 79.5-85s 集弹段，未入选）；全帧左上 bilibili 水印+部分帧 SUNRISE 台标=分发边界风险（internal_test），非字幕冲突"
+   },
+   "visualVerification": {
+    "status": "pending",
+    "frameManifestRef": "工作台/zaku-intro-003/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [],
+    "observedVisuals": "",
+    "verifiedBy": "",
+    "verifiedAt": "",
+    "derivedFromObservationIds": [
+     "obs-S092"
+    ]
+   },
+   "transitionInstruction": "黑场出",
+   "transitionDurationMs": 800
+  }
+ ],
+ "editPlan": {
+  "timeline": [
+   {
+    "segmentId": "seg-001",
+    "order": 1
+   },
+   {
+    "segmentId": "seg-002",
+    "order": 2
+   },
+   {
+    "segmentId": "seg-003",
+    "order": 3
+   },
+   {
+    "segmentId": "seg-004a",
+    "order": 4
+   },
+   {
+    "segmentId": "seg-004b",
+    "order": 5
+   },
+   {
+    "segmentId": "seg-005",
+    "order": 6
+   },
+   {
+    "segmentId": "seg-006a",
+    "order": 7
+   },
+   {
+    "segmentId": "seg-006b",
+    "order": 8
+   },
+   {
+    "segmentId": "seg-007",
+    "order": 9
+   },
+   {
+    "segmentId": "seg-008",
+    "order": 10
+   },
+   {
+    "segmentId": "seg-009",
+    "order": 11
+   },
+   {
+    "segmentId": "seg-010",
+    "order": 12
+   }
+  ]
+ },
+ "humanReviewPoints": [
+  "八列终审表逐行：切点/画面观察/语义匹配/BGM 乐句/转场指令",
+  "目标主体确认卡（扎古家族识别/排除规则）随终审再呈报",
+  "N09 句尾 +218ms 超容差=G2 门禁已批\"甲 接受披露\"，本卡复核",
+  "未落入机器合同的风格规则：规格/数据信息卡（G1 规则2）——本片以字幕信息层承载，是否补独立信息卡由用户裁决",
+  "封面候选=成片 40.0s 红扎古长镜头帧（含 bilibili 水印，internal_test 边界内）"
+ ],
+ "timelineReview": {
+  "status": "pending"
+ }
+}

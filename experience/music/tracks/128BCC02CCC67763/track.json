@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "128BCC02CCC67763E3D817F0B91CCAC5E465FB47909C57948D16A9352F766017",
+  "aliases": [
+    {
+      "title": "Techno bass drum and loco lead.",
+      "sourceUrl": "https://freesound.org/s/320499/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:06:15Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-320499-preview.mp3",
+      "recordedAt": "2026-09-28T09:06:15Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:06:15Z",
+  "updatedAt": "2026-09-28T09:06:15Z"
+}

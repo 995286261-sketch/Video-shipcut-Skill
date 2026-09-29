@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "status": "completed",
+  "evidencePolicy": "public-canon-secondary-sources（G0 03_事实依据为空；核证通道 bl search web 降级链①一次跑通；本项目限定采用，不冒充官方一手；内部测试分发）",
+  "sourceEvidence": [
+    {
+      "assetId": "source-02-1080p-734dd167",
+      "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+      "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+      "sourceProbe": {
+        "durationMs": 117909,
+        "video": { "codec": "h264", "width": 1920, "height": 1080, "frameRate": "30/1" },
+        "audio": { "codec": "aac", "sampleRate": 48000, "channels": 2 }
+      },
+      "probeRef": "G2-证据与口播/source-02-probe.json",
+      "contactSheetRef": "G2-证据与口播/联系表/source-02-1080p-contact-sheet.jpg",
+      "transcriptRef": "G2-证据与口播/转写/source-02-1080p-transcript.json",
+      "transcriptArtifactsRef": "G2-证据与口播/转写/source-02-1080p/manifest.json",
+      "cacheKey": {
+        "assetId": "source-02-1080p-734dd167",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "language": "zh",
+        "model": "small",
+        "device": "cpu",
+        "computeType": "int8",
+        "runtimeVersion": "local-transcribe-script-v0.2"
+      },
+      "transcriptInheritance": {
+        "reusedFrom": "工作台/zaku-intro-001/G2-证据与口播/转写/source-02-1080p-transcript.json",
+        "reason": "cacheKey 全字段一致（同片同模型同运行时），evidence-contract 缓存复用条款",
+        "revalidatedWith": "write_transcript_artifacts.py（当前版校验器重验=⑦乙），status=completed",
+        "provenanceRef": "G2-证据与口播/转写/继承复用溯源-v0.1.json"
+      },
+      "warnings": [
+        "机器转写=草稿证据，不升级为事实/字幕/口播",
+        "源音轨为英文版权歌曲（转写片段可证）；原声策略=排除（G0/G1 继承），取舍归 G3",
+        "画面左上角全帧含 bilibili 频道水印「大鼻子哈瑞」，部分帧含 SUNRISE 台标（联系表目视确认）→ 分发锁 internal_test",
+        "存在烧录字幕镜头（如「集弹状况良好，损伤在预测范围内」）→ G3 选镜时注意信息层冲突",
+        "画面含夏亚红色扎古/乔尼相关战例镜头，剧透边界按 G1 表达边界执行（不剧透 UC 正剧关键转折）"
+      ]
+    }
+  ],
+  "factEvidenceRefs": [
+    "G2-证据与口播/事实依据/扎古公开资料摘录-v0.1.md",
+    "G2-证据与口播/核证快照/S1-claim001-blsearch-zaku003.json",
+    "G2-证据与口播/核证快照/S2-claim002-blsearch-zaku003.json",
+    "G2-证据与口播/核证快照/S3-claim003-blsearch-zaku003.json"
+  ],
+  "claimDispositions": [
+    { "claimId": "claim-001", "disposition": "supported", "citation": "S1（百度百科 MS-06F 扎古Ⅱ：F型量产 3000 架以上、吉翁军量产最多）" },
+    { "claimId": "claim-002", "disposition": "supported_with_qualifier", "citation": "S2（120mm 机枪/280mm 火箭筒/热能斧/动力管=设定事实；'士兵感来源'为编辑观点，不得写成官方定论）" },
+    { "claimId": "claim-003", "disposition": "supported", "citation": "S3（夏亚红扎古单机击沉 5 艘：4 萨拉米斯级巡洋舰+1 麦哲伦级战列舰；乔尼·莱登鲁姆会战 280mm 火箭炮击沉 3 艘麦哲伦级）" }
+  ],
+  "handoff": {
+    "nextNode": "G3",
+    "approvedNarrationRef": null,
+    "factCitationRef": "G2-证据与口播/事实依据/扎古公开资料摘录-v0.1.md",
+    "voiceBriefRef": null,
+    "loudnessPlanRef": null,
+    "beatBlueprintRef": null,
+    "distributionBoundary": "not_for_distribution / internal_test",
+    "notes": "口播稿/配音/响度产物在门禁前补齐后回填 handoff；G3 只读 approved_for_g3 稿"
+  }
+}

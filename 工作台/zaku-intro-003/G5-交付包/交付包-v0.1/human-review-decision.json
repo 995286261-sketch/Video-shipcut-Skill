@@ -1,0 +1,16 @@
+{
+ "projectId": "zaku-intro-003",
+ "node": "G5",
+ "status": "approved",
+ "decision": "accepted",
+ "acceptedWarnings": [
+  "响度：成片实测 -15.5 LUFS 对目标 -14.0 超容差 1.5 LU（disclosed-exceedance）——G2 出路A（先压缩后测）批准的让步幅度，真峰 -2.8 dBTP 未越上限，人工知情接受",
+  "BGM Devil Game (Phonk) 未清权：个人/内测轨，对外发布必须换曲重走 G4；分发边界维持 internal_test / not_for_distribution 不升级",
+  "全片左上 bilibili「大鼻子哈瑞」水印+部分帧右下 SUNRISE 台标不可裁除，internal_test 边界内保留"
+ ],
+ "reviewCardRef": "工作台/zaku-intro-003/G5-交付包/G5-播放审核卡-v0.1.md",
+ "recordedAt": "2026-09-29T11:16:50+08:00",
+ "note": "用户逐字口令 确认G5（默认预选=选项2 接受列出的警告并交付，09-22 选项卡默认纪律）；响度点名接受=批四丙口径关单前提",
+ "option": "2 接受列出的警告并交付（卡默认预选=推荐）",
+ "approvalTokenVerbatim": "确认G5"
+}

@@ -1,0 +1,625 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/检索词卡-v0.1/BGM-检索词-v0.1.json",
+    "terms": [
+      "industrial techno",
+      "EBM",
+      "driving",
+      "dark",
+      "aggressive synth"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-09-28T16:27:44+08:00",
+  "candidates": [],
+  "excluded": [
+    {
+      "neteaseId": 26369529,
+      "name": "Chained to a Dead Camel (Edit Select Rave Mix)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1316233942,
+      "name": "Ratu",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3360091592,
+      "name": "Heretic",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2081975327,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3393593164,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2160795358,
+      "name": "Da Fonk",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2658243112,
+      "name": "industrial techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3352990253,
+      "name": "Don't panic",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2669966592,
+      "name": "刘德华 - 恭喜发财（TG小辉Hyper Techno Mix）",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1380434470,
+      "name": "Lost in this world (original mix)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2160794346,
+      "name": "Overdrive",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2058408719,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1853196709,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2162056008,
+      "name": "Dies Irae",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2674848047,
+      "name": "Karma",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3336269806,
+      "name": "Puppet",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3360089708,
+      "name": "Death Dance",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3422777372,
+      "name": "SICK!",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2114793623,
+      "name": "I Like It Harder",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1814783785,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3398178887,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2646614968,
+      "name": "Kill",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1948627974,
+      "name": "Industrial Techno",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2677186295,
+      "name": "Still Not Over It",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 27984401,
+      "name": "EBM",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1491840554,
+      "name": "EBM",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1884547271,
+      "name": "EBM",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1438009554,
+      "name": "Ebm",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1941414557,
+      "name": "We Are Dumb",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 17273109,
+      "name": "Night Electric Night",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 524941642,
+      "name": "Ebm",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 542966945,
+      "name": "Ebm",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1388223976,
+      "name": "EBM",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 4385000,
+      "name": "Tirehtööri",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 17596443,
+      "name": "Feuer Frei",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2146555555,
+      "name": "PASSO BEM SOLTO",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 16312330,
+      "name": "Seducción Es Mi Placer",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 21721324,
+      "name": "Die Mother****er Die",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3357350285,
+      "name": "Freak On A Leash",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1436833876,
+      "name": "Ebm",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1941418103,
+      "name": "Go To Hell",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1919070686,
+      "name": "Revolt Resist (Riot Legion Remix)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 862099538,
+      "name": "第五人格",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 29415489,
+      "name": "The Split Flesh",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2724791369,
+      "name": "Montagem Nada",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3343491652,
+      "name": "TRUE♥LOVE（Clubstar's True Club Mix）",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3341486374,
+      "name": "NO BATIDÃO",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 17596481,
+      "name": "Sklave",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1450984976,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2063989904,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1300015774,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1391918,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3406909021,
+      "name": "ドライビングライディングダイビングダイ",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2033014399,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 31152538,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1997268,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 589227,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 34509939,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 22808552,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 31654186,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 17652997,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2531528,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2026186642,
+      "name": "driving (sonata 2011)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 427139313,
+      "name": "Driving (Ash Remix)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2092427095,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1996329,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 26118389,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 71964,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1833070288,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 18209424,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1463898826,
+      "name": "Driving",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2729158051,
+      "name": "DRIVING",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1407789513,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1467844720,
+      "name": "Dark (Extended) (Extended)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3429065900,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2106513285,
+      "name": "Dark (slowed + reverbed)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 563177709,
+      "name": "Broken Brain",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2161442674,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3421835583,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 34892790,
+      "name": "Dark Light",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2135119319,
+      "name": "Dark (superslowed + reverbed)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3422458178,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3346058346,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2083458328,
+      "name": "Y&H",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1377331596,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3390161802,
+      "name": "Dark（英文版）",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1297605386,
+      "name": "730Freestyle",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2045946954,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3397163804,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2115850185,
+      "name": "Dark(黑暗)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2756019215,
+      "name": "新月的摇篮曲（其一）：伴月同眠 Lullaby of the New Moon (I): Somnias a Luna",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3366611181,
+      "name": "Dark",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1840458629,
+      "name": "Do My Best (Prod. Way Ched)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 420134488,
+      "name": "WE SURVIVED",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 1461177376,
+      "name": "DARK",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2047277348,
+      "name": "Xin Đừng Nhấc Máy (Remix)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3316161779,
+      "name": "Aggressive Synths",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2614095649,
+      "name": "Aggressive Synth",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3401862927,
+      "name": "Fire Drop (Aggressive Synth)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2073848369,
+      "name": "Aggressive Synthesizer",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2611143168,
+      "name": "Aggressive Synthesis",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2726394346,
+      "name": "Aggressive Synthesis",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2743598939,
+      "name": "Drone Swarm – A thousand buzzing, aggressive synths all attacking at once.",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2606759447,
+      "name": "Aggressive Synth Phonk",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2609307305,
+      "name": "Aggressive Synthwave Swing",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2612071903,
+      "name": "Aggressive Synth Vibes Attack Under the Stars",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3429046157,
+      "name": "Level Up.wav",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3342894030,
+      "name": "Andy jvs-Sanctuary（Andy jvs remix）",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2628899725,
+      "name": "Electric Temptation (Deluxe)",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3410245041,
+      "name": "Voltage",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3439549670,
+      "name": "神秘宝藏",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3410478985,
+      "name": "Run Wild",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2708185703,
+      "name": "格式化",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3375734613,
+      "name": "DLe",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2748675710,
+      "name": "808 bass",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2687013717,
+      "name": "EVOLUCIÓN GALAXIA",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2748675708,
+      "name": "downpour",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3396151918,
+      "name": "废墟上跳舞",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 3339854940,
+      "name": "夜明けの幻",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    },
+    {
+      "neteaseId": 2629436863,
+      "name": "Unbreakable",
+      "reason": "download blocked by SSRF guard: scheme http is not https"
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

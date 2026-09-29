@@ -1,0 +1,6 @@
+{
+  "note": "转写复用自 zaku-intro-001（cacheKey 全字段一致：assetId source-02-1080p / sha AA6DFCCC… / small zh cpu int8 / script-v0.2），符合 evidence-contract 缓存复用条款；继承产物按 ⑦乙 用当前版校验器重验，见 manifest.json",
+  "inheritedFrom": "工作台/zaku-intro-001/G2-证据与口播/转写/source-02-1080p-transcript.json",
+  "sourcePackSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+  "recordedAt": "2026-09-28"
+}

@@ -1,0 +1,8 @@
+{
+ "imagePath": "工作台/zaku-intro-003/G4-剪辑与渲染/cover/cover-source.jpg",
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "title": "扎古——男人的浪漫",
+ "fontsize": 64,
+ "output": "工作台/zaku-intro-003/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+ "note": "封面帧=计划 coverFrameMs 40000（成片 40.0s 落在 seg-006a，源 25.859s 夏亚红扎古太空持枪瞄准+粉色光束光晕）；来源=登记件 02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4（sha AA6DFCCC…）精确路径抽取并目视确认；左上 bilibili 水印+右下 SUNRISE 台标保留（internal_test 边界披露）；首次误抽参考片已废弃重抽（台账⑫）"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "F87A8D2369E63223C9574E8136A7405268B972883687691762B82AE8081BA1B0",
+  "aliases": [
+    {
+      "title": "Interior Neighborhood Drive Brentwood TN - 2015 Mazda CX-5 T2",
+      "sourceUrl": "https://freesound.org/s/847648/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:06:24Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847648-preview.mp3",
+      "recordedAt": "2026-09-28T09:06:24Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:06:24Z",
+  "updatedAt": "2026-09-28T09:06:24Z"
+}

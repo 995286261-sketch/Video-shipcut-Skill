@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.0.1",
+    "modelOverride": null
+  },
+  "reference": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "neteaseId": null,
+      "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏强劲、旋律抓耳的EDM电子舞曲；候选曲则是无旋律、纯环境音的汽车行驶实录，缺乏音乐性。\n2) 完全不能。它没有节拍和结构，无法进行卡点剪辑。\n3) 贴合度：0分。这是环境音效而非音乐，与项目所需的风格完全不符。"
+    },
+    {
+      "title": "motorcycles driving around revving nearby or distant echo urban nice.flac",
+      "neteaseId": null,
+      "sha256": "2F636709026E81E80B1DC03EDD3797A18CE99EFF574B3A0EFD9FF8FFF4C4DEE9",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏规整、能量充沛的电子舞曲（EDM），使用合成器，气质现代高燃；候选曲是机械感强烈的摩托车引擎声，无旋律与固定节拍，气质粗犷原始。\n2) 不能。候选曲缺乏音乐所需的稳定节奏和旋律，无法进行有效卡点。\n3) 贴合度：1分。这是音效素材而非音乐，与项目所需的风格完全不符。"
+    },
+    {
+      "title": "Techno Lite Drums 130 BPM",
+      "neteaseId": null,
+      "sha256": "187FF295C9494B684E530F70BD8507278CB8BF7621E01203A79E991E51709182",
+      "reused": false,
+      "notes": "1) 差距显著：参照曲是旋律驱动的Phonk，合成器音色突出；候选曲是纯鼓点House/Techno，缺乏旋律。\n2) 不能。候选曲虽有节奏感，但缺少参照曲标志性的记忆点和氛围，无法营造“高燃”情绪。\n3) 贴合度2分。仅有节拍相似，核心的旋律与风格完全不符，无法作为替代。"
+    },
+    {
+      "title": "Chorus music - Techno loop",
+      "neteaseId": null,
+      "sha256": "F588E06F68A5627AC7EFC628DC5897990135418130ACD6C3B4D95CD405E3B96F",
+      "reused": false,
+      "notes": "1) 差距：参照曲是史诗感强的Cinematic EDM，用宏大弦乐和强力鼓点营造紧张氛围；候选曲是律动感的Deep House，乐器简约、气质松弛。\n2) 不能。候选曲缺乏爆发力和戏剧张力，无法胜任高燃卡点。\n3) 贴合度：3/10。理由：候选曲的松弛律动与参照曲的宏大史诗感完全相反。"
+    },
+    {
+      "title": "Techno bass drum and loco lead.",
+      "neteaseId": null,
+      "sha256": "128BCC02CCC67763E3D817F0B91CCAC5E465FB47909C57948D16A9352F766017",
+      "reused": false,
+      "notes": "1) 差距：参照曲是旋律化的史诗电子（Epic EDM），有宏大弦乐与清晰鼓点；候选曲是极简工业Techno，只有冰冷机械的循环节拍，缺乏旋律层次。\n2) 能否使用：不能。它缺乏情绪起伏和记忆点，无法营造“高燃”氛围。\n3) 贴合度：2/10。理由：气质过于阴冷压抑，完全偏离了参照曲热血激昂的核心风格。"
+    },
+    {
+      "title": "Axon 01 - Techno track loop",
+      "neteaseId": null,
+      "sha256": "2E5622A7CDB571A35C9A0AFCAFD29FB69B945D9139D681225D8DFCA8D625F49D",
+      "reused": false,
+      "notes": "1) 差距：参照曲是史诗感强的旋律型EDM，有宏大弦乐；候选曲是极简循环的Techno，气质冰冷机械。\n2) 能否使用：不能。候选曲缺乏情绪起伏和记忆点，无法支撑“高燃”氛围。\n3) 贴合度：2/10。理由：仅有速度相似，但完全缺失了参照曲核心的史诗旋律与情感爆发力。"
+    },
+    {
+      "title": "Interior Neighborhood Drive Brentwood TN - 2015 Mazda CX-5 T2",
+      "neteaseId": null,
+      "sha256": "F87A8D2369E63223C9574E8136A7405268B972883687691762B82AE8081BA1B0",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的电子舞曲，气质高燃；候选曲是慢速、无明确旋律的环境音效（车内声），气质沉静。\n2) 不能。候选曲缺乏节奏和旋律，无法制造高燃氛围或进行卡点剪辑。\n3) 贴合度：1分。两者在风格和功能上完全不同，候选曲无法作为该项目的BGM。"
+    },
+    {
+      "title": "custom_electrical_lance_charging_loop_02162026",
+      "neteaseId": null,
+      "sha256": "B0A927A9BD92840FD4A81CFB2AA4F9E9815C321222EE4054CDC2DBBF8CC921F0",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏强劲、旋律清晰的现代电子舞曲（EDM）；候选曲则是无旋律、无固定节拍的火灾环境音效，只有嘈杂的燃烧声。\n2) 完全不能。候选曲缺乏音乐所需的节奏和结构，无法进行卡点剪辑，更无法营造“高燃”氛围。\n3) 贴合度：0分。理由：这是灾难现场录音而非音乐，与项目需求完全背道而驰。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

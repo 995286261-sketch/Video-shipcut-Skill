@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "Devil Game (Phonk)",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G0-素材包/07_授权音频/Devil_Game_(Phonk).mp3",
+  "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+  "byteSize": 2049715,
+  "fileExtension": ".mp3",
+  "sourceUrl": "https://music.163.com/song?id=2679274856",
+  "license": "cleared-for-project",
+  "licenseEvidence": "用户 2026-09-28 在 G1 终审卡 v0.2 红标披露（网易云试听件·未清权·仅内部预览，对外发布违反权益）下逐字选择『A』=直接以该试听件进片、版权风险自担（同 tiger-intro-001《Infinity》先例口径）；边界=internal_test 不变",
+  "attribution": "none",
+  "styleTags": [
+    "driving"
+  ],
+  "retrievedAt": "2026-09-28T17:42:47+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": null
+}

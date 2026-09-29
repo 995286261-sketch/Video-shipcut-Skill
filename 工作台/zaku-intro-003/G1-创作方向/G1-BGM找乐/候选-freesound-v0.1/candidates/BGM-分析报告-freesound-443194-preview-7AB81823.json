@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "7AB81823D2B9745D32E25D5187896B341ED076C7C4F9CFD4A4EF5E0B50F1C29F",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443194-preview.mp3",
+    "sha256": "7AB81823D2B9745D32E25D5187896B341ED076C7C4F9CFD4A4EF5E0B50F1C29F",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 1,
+    "durationSecProbe": 0.261224,
+    "decodedDurationMs": 200
+  },
+  "tempoBpm": 0.0,
+  "beatsMs": [],
+  "onsetsMs": [
+    70
+  ],
+  "hitPoints": [
+    {
+      "tMs": 70,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 186,
+      "energyMean": 0.528369
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.484009
+    }
+  ],
+  "loudness": {
+    "integratedLufs": null,
+    "loudnessRangeLu": 0.0,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

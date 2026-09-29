@@ -1,0 +1,1789 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": null,
+    "similarTo": null,
+    "termsFile": "工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/检索词卡-freesound-v0.1/BGM-检索词-v0.1.json",
+    "terms": [
+      "industrial techno",
+      "EBM",
+      "driving",
+      "dark",
+      "aggressive synth"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 60.0,
+    "appliedMinSec": 60.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-09-28T16:52:41+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16167,
+      "title": "Industrial Wack8.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16167/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 5.14286,
+      "tags": [
+        "bass",
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:28:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16167-preview.mp3",
+      "sha256": "DF4992D9EE1DD9516815AECEC12514B8ECE4EFF60A27EC8479AE730C0E99628D",
+      "byteSize": 120752
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16166,
+      "title": "Industrial Wack7.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16166/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "bass",
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:28:53+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16166-preview.mp3",
+      "sha256": "C5113CDB7F368F9E5094C334A745D4A42D7A7AD8D6A6F2F3F5C3F0F7A89117E1",
+      "byteSize": 161147
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16165,
+      "title": "Industrial Wack6.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16165/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:28:55+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16165-preview.mp3",
+      "sha256": "448F6C34206BD0FE7968DDC325BCE675C6BA4AB68A8B924079B44D1FB7724356",
+      "byteSize": 162292
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16164,
+      "title": "Industrial Wack5.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16164/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:28:58+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16164-preview.mp3",
+      "sha256": "B69FB05C7DB5C69E812F8898429C7660595BF9035C55500CA8832F3A3D8515B8",
+      "byteSize": 160776
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16163,
+      "title": "Industrial Wack4.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16163/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:29:00+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16163-preview.mp3",
+      "sha256": "DC5B93D74643C8829B791DA0B04DF9198C2156B56257139F075F8E26D359EF54",
+      "byteSize": 163970
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16162,
+      "title": "Industrial Wack2.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16162/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:29:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16162-preview.mp3",
+      "sha256": "C03D8FB04D8A7BF421EEAAD834F35AC937E49BB3131A3F8E34D61F1C452A5A6B",
+      "byteSize": 163428
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16161,
+      "title": "Industrial Wack1.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16161/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:29:04+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16161-preview.mp3",
+      "sha256": "AE4C6303EFDE9667993A0D082A6AA9B8AAD6C44382A9F13323005050C1BDD7D4",
+      "byteSize": 160458
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16160,
+      "title": "Industrial Season A11.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16160/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:29:06+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-16160-preview.mp3",
+      "sha256": "4701AE3E665CB2C52717A9F9FF6F6AA62BD8C0F43AE52599B2D4FBA4AA55BBCA",
+      "byteSize": 51036
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 202405,
+      "title": "Guitar-Chord Ebm",
+      "author": "lennartgreen",
+      "sourceUrl": "https://freesound.org/s/202405/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 12.04,
+      "tags": [
+        "D",
+        "Ebm",
+        "Guitar",
+        "Guitar-Chord",
+        "m"
+      ],
+      "styleTags": [
+        "acoustic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:08+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-202405-preview.mp3",
+      "sha256": "61EC3300EA0025F7C9F50859C1019B8CFAA23B059A3723E2452E3073249903A3",
+      "byteSize": 280224
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 100351,
+      "title": "EBM drum loop.mp3",
+      "author": "Vilgotsky",
+      "sourceUrl": "https://freesound.org/s/100351/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 7.72025,
+      "tags": [
+        "drums",
+        "ebm",
+        "electronic",
+        "industrial",
+        "loop"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-09-28T16:29:12+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-100351-preview.mp3",
+      "sha256": "3AF584D9A33FF7BA3D0A90218CACC9D4A0F08B0477D1A1DD9C5AACDBC92B0A1B",
+      "byteSize": 193515
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443194,
+      "title": "C4 - Low 909.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443194/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"C4 - Low 909.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.2,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:15+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443194-preview.mp3",
+      "sha256": "7AB81823D2B9745D32E25D5187896B341ED076C7C4F9CFD4A4EF5E0B50F1C29F",
+      "byteSize": 2501
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443193,
+      "title": "C3 - Low Noisy Bass Kick.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443193/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"C3 - Low Noisy Bass Kick.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.6,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:16+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443193-preview.mp3",
+      "sha256": "A2613F71E680D420638E259A8C53E22279A80AB566F686AFBCC0C63A26671334",
+      "byteSize": 12373
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443191,
+      "title": "C3 - Atari Kick.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443191/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"C3 - Atari Kick.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.294966,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443191-preview.mp3",
+      "sha256": "FAE8B4A3D89A76EBB10A732497872703450F82D541060D3188F07C93035CF2A1",
+      "byteSize": 6446
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443190,
+      "title": "C3 - Low Bass Kick.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443190/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"C3 - Low Bass Kick.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.6,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443190-preview.mp3",
+      "sha256": "119041B2E8F972DD8DB3CD2B69B32467B2FAAB9F3DE5ABE342378FDC09BD94F7",
+      "byteSize": 5649
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443188,
+      "title": "C2 - Low Bass Kick.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443188/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"C2 - Low Bass Kick.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.6,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:18+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443188-preview.mp3",
+      "sha256": "E13F8D9213559ADF67D178E0A8F4923958633B4465F3A5D672A9A689243C0CBB",
+      "byteSize": 5182
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 443187,
+      "title": "Evils Toy Kick.WAV",
+      "author": "resofactor",
+      "sourceUrl": "https://freesound.org/s/443187/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Evils Toy Kick.WAV\" by resofactor (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 0.2,
+      "tags": [
+        "ebm",
+        "electronic",
+        "generated",
+        "industrial",
+        "synthetic"
+      ],
+      "styleTags": [
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:29:19+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-443187-preview.mp3",
+      "sha256": "05D2E2CE2B9B71E1A3C5F2F2C50F23DBFCE3501FF460AE8BF4517D573145F525",
+      "byteSize": 3074
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 847648,
+      "title": "Interior Neighborhood Drive Brentwood TN - 2015 Mazda CX-5 T2",
+      "author": "tickle_feet_frida",
+      "sourceUrl": "https://freesound.org/s/847648/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 227.0,
+      "tags": [
+        "2015",
+        "acceleration",
+        "body-movement",
+        "brakes",
+        "brentwood",
+        "bridge",
+        "car",
+        "clicker",
+        "cx5",
+        "deceleration",
+        "driving",
+        "engine"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:29:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847648-preview.mp3",
+      "sha256": "F87A8D2369E63223C9574E8136A7405268B972883687691762B82AE8081BA1B0",
+      "byteSize": 5226000
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 50910,
+      "title": "In Car Driving.aif",
+      "author": "RutgerMuller",
+      "sourceUrl": "https://freesound.org/s/50910/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 52.3416,
+      "tags": [
+        "bumps",
+        "car",
+        "city",
+        "drive",
+        "driving",
+        "engine",
+        "highway",
+        "inside",
+        "interstate",
+        "road",
+        "roadtrip",
+        "traffic"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:30:28+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-50910-preview.mp3",
+      "sha256": "284520CFD68BAF158831BBC9FA005C2C514077AE6E91C0D37023C0B67B7A4582",
+      "byteSize": 1139161
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 847650,
+      "title": "Interior Car Drive Night Nolensville Pk to Old Hickory Blvd Brentwood TN - 2015 Mazda CX-5 T3",
+      "author": "tickle_feet_frida",
+      "sourceUrl": "https://freesound.org/s/847650/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 701.269,
+      "tags": [
+        "2015",
+        "acceleration",
+        "automatic-transmission",
+        "backing-out",
+        "body-movement",
+        "brentwood",
+        "buzz",
+        "car",
+        "cars-passing",
+        "clicker",
+        "cx5",
+        "deceleration"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:30:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-847650-preview.mp3",
+      "sha256": "C4433A94046DF657803A24873FD8988D45C349688FF58C2E53A083FB2CC2C11E",
+      "byteSize": 16114464
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 207441,
+      "title": "Driving, traffic, construction.wav",
+      "author": "hatchetgirl",
+      "sourceUrl": "https://freesound.org/s/207441/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 80.0,
+      "tags": [
+        "construction",
+        "driving",
+        "traffic"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:34:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-207441-preview.mp3",
+      "sha256": "BBD25820725C8F6AA74C3A39EF61A9C017EE9D6E71D141C3E4156F5D5ADA84FE",
+      "byteSize": 1707839
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 537272,
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "author": "jrmeyer",
+      "sourceUrl": "https://freesound.org/s/537272/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 1897.56,
+      "tags": [
+        "car",
+        "cars",
+        "drive",
+        "driving",
+        "highway",
+        "manual-transmission",
+        "road",
+        "street",
+        "traffic"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:34:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-537272-preview.mp3",
+      "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+      "byteSize": 41590944
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 50911,
+      "title": "In Car Driving with Open Window.wav",
+      "author": "RutgerMuller",
+      "sourceUrl": "https://freesound.org/s/50911/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 147.37,
+      "tags": [
+        "bumps",
+        "car",
+        "city",
+        "drive",
+        "driving",
+        "highway",
+        "inside",
+        "interstate",
+        "open",
+        "opened",
+        "opened-windows",
+        "road"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:43:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-50911-preview.mp3",
+      "sha256": "51729C8673D47D005CED8EF3F0D1FE98703276722940CBF5D2A158E7F6169AA7",
+      "byteSize": 3310620
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 454091,
+      "title": "motorcycles driving around revving nearby or distant echo urban nice.flac",
+      "author": "kyles",
+      "sourceUrl": "https://freesound.org/s/454091/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 176.625,
+      "tags": [
+        "around",
+        "distant",
+        "driving",
+        "echo",
+        "motorcycles",
+        "nearby",
+        "or",
+        "revving"
+      ],
+      "styleTags": [
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:44:37+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-454091-preview.mp3",
+      "sha256": "2F636709026E81E80B1DC03EDD3797A18CE99EFF574B3A0EFD9FF8FFF4C4DEE9",
+      "byteSize": 3914544
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 453744,
+      "title": "auto real Pontiac G5 int driving various medium speed with potholes cycles accelerate decelerate to idle on boulevard with traffic lights.flac",
+      "author": "kyles",
+      "sourceUrl": "https://freesound.org/s/453744/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 841.507,
+      "tags": [
+        "G5",
+        "Pontiac",
+        "accelerate",
+        "auto",
+        "cycles",
+        "decelerate",
+        "driving",
+        "idle",
+        "int",
+        "medium",
+        "potholes",
+        "real"
+      ],
+      "styleTags": [
+        "driving",
+        "mysterious"
+      ],
+      "retrievedAt": "2026-09-28T16:45:38+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-453744-preview.mp3",
+      "sha256": "7BFF10A97EFB3D439D04824D23DE167FABB57718C6F1CA82C2A3BF8986456139",
+      "byteSize": 19045440
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 686136,
+      "title": "Dark_Emptiness_028",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/686136/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark_Emptiness_028\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 39.7435,
+      "tags": [
+        "Ambient",
+        "Atmosphere",
+        "Cinematic",
+        "Dark",
+        "Drone",
+        "Film",
+        "Horror",
+        "Movie",
+        "trap"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T16:49:48+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-686136-preview.mp3",
+      "sha256": "2ADB0F2EBA4E1B308DAE9D48DD576918B6F23175813C3977A914ED17FFF87095",
+      "byteSize": 921928
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685325,
+      "title": "Dark Mystery Theme 80s inspired - track 02",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685325/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark Mystery Theme 80s inspired - track 02\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 34.2857,
+      "tags": [
+        "80s",
+        "TV",
+        "atmosphere",
+        "atmospheric",
+        "bass",
+        "dark",
+        "drone",
+        "film",
+        "free",
+        "game",
+        "haunting",
+        "key"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:50:01+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685325-preview.mp3",
+      "sha256": "7640823A66D0877DB3C481D27E28DB156366D710E80752595F0C829343C60428",
+      "byteSize": 816350
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685324,
+      "title": "Dark Mystery Theme 80s inspired - track 01",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685324/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark Mystery Theme 80s inspired - track 01\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 34.2857,
+      "tags": [
+        "80s",
+        "TV",
+        "atmosphere",
+        "atmospheric",
+        "bass",
+        "dark",
+        "drone",
+        "film",
+        "free",
+        "game",
+        "haunting",
+        "key"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:50:12+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685324-preview.mp3",
+      "sha256": "C37164873318EDD9699366326760E581E39AD9F76964F0662505F76F01073EB2",
+      "byteSize": 718883
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685323,
+      "title": "Dark Mystery Theme 80s inspired - Wav mix",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685323/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark Mystery Theme 80s inspired - Wav mix\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 34.2857,
+      "tags": [
+        "80s",
+        "TV",
+        "atmosphere",
+        "atmospheric",
+        "bass",
+        "dark",
+        "drone",
+        "film",
+        "free",
+        "game",
+        "haunting",
+        "key"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:50:22+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685323-preview.mp3",
+      "sha256": "52C80A01ECD50EF97B0633930B2D42020CFD1C36B96D6D87197927EC52B4993D",
+      "byteSize": 846371
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685322,
+      "title": "Dark Mystery Theme 80s inspired - Mp3 mix",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685322/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark Mystery Theme 80s inspired - Mp3 mix\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 34.339,
+      "tags": [
+        "80s",
+        "TV",
+        "atmosphere",
+        "atmospheric",
+        "bass",
+        "dark",
+        "drone",
+        "film",
+        "free",
+        "game",
+        "haunting",
+        "key"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "dark",
+        "orchestral",
+        "playful",
+        "mysterious",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:50:33+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-685322-preview.mp3",
+      "sha256": "DB394147AF5535F1F6D9698BE734173E829BA03E3CDFB0062E129E9365672540",
+      "byteSize": 841362
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 728942,
+      "title": "Dark_Emptiness_030",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/728942/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark_Emptiness_030\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 57.4226,
+      "tags": [
+        "Ambient",
+        "Atmosphere",
+        "Cinematic",
+        "Dark",
+        "Drone",
+        "Film",
+        "Horror",
+        "Movie",
+        "trap"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T16:50:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-728942-preview.mp3",
+      "sha256": "917E2CF42A324400270F231BDD9E8D8FCBF7F9C87EB3FF9ABBB7FBAC51937858",
+      "byteSize": 1364348
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 668937,
+      "title": "Dark_Emptiness_026.wav",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/668937/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark_Emptiness_026.wav\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 8.99401,
+      "tags": [
+        "Ambient",
+        "Atmosphere",
+        "Cinematic",
+        "Dark",
+        "Drone",
+        "Film",
+        "Horror",
+        "Movie",
+        "trap"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T16:51:03+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668937-preview.mp3",
+      "sha256": "875696E11BA595BAF53F7002A27AFB8012D6AB19B2D898C5C9878C153EA0E4C0",
+      "byteSize": 204016
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 668936,
+      "title": "Dark_Emptiness_027.wav",
+      "author": "jalastram",
+      "sourceUrl": "https://freesound.org/s/668936/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Dark_Emptiness_027.wav\" by jalastram (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 29.1429,
+      "tags": [
+        "Ambient",
+        "Atmosphere",
+        "Cinematic",
+        "Dark",
+        "Drone",
+        "Film",
+        "Horror",
+        "Movie",
+        "trap"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "epic",
+        "dark",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T16:51:07+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668936-preview.mp3",
+      "sha256": "36F2D420BC51BF81C77408E4770FE41CBE6B5006D701FD65BAEEAE0492A6B5D2",
+      "byteSize": 644808
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 231846,
+      "title": "Ominous_Synth.wav",
+      "author": "AlienXXX",
+      "sourceUrl": "https://freesound.org/s/231846/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Ominous_Synth.wav\" by AlienXXX (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 11.7609,
+      "tags": [
+        "aggressive",
+        "dare-26",
+        "data-bending",
+        "databending",
+        "harsh",
+        "image-to-sound",
+        "ominous",
+        "synth"
+      ],
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:51:15+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-231846-preview.mp3",
+      "sha256": "37948472B40CED5C1AD0672B397208E1F3F59014B9BC438B149A2B2A0B2B45F3",
+      "byteSize": 323362
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 730113,
+      "title": "DSGNSynth_Creeping Intensity Shredder 01",
+      "author": "Riley_Garinger",
+      "sourceUrl": "https://freesound.org/s/730113/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"DSGNSynth_Creeping Intensity Shredder 01\" by Riley_Garinger (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 41.0133,
+      "tags": [
+        "Aggressive",
+        "Buzz",
+        "Cinematic",
+        "Design",
+        "Movie",
+        "Riser",
+        "Rumble",
+        "Score",
+        "Synth",
+        "Tension"
+      ],
+      "styleTags": [
+        "dark",
+        "epic",
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:51:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-730113-preview.mp3",
+      "sha256": "FD183556BA35F76863FA1D2F31F49133D75C56F84D3FF5A916493BD2AB3821D4",
+      "byteSize": 936288
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 871996,
+      "title": "1000hz aggressive harsh censor beep",
+      "author": "Sadiquecat",
+      "sourceUrl": "https://freesound.org/s/871996/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 0.597483,
+      "tags": [
+        "1000hz",
+        "aggressive",
+        "audacity",
+        "beep",
+        "censor",
+        "harsh",
+        "synth"
+      ],
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:51:38+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-871996-preview.mp3",
+      "sha256": "810093CA428FD1B6DE6706376742A08AB2A9F1857F539E487F094F8D597C4D2C",
+      "byteSize": 17011
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 262433,
+      "title": "Inside The Core Drone.wav",
+      "author": "complex_waveform",
+      "sourceUrl": "https://freesound.org/s/262433/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Inside The Core Drone.wav\" by complex_waveform (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 48.6386,
+      "tags": [
+        "aggressive",
+        "ambient",
+        "dark",
+        "drone",
+        "feedback",
+        "noise",
+        "pad",
+        "sci-fi",
+        "soundscape",
+        "static",
+        "synth"
+      ],
+      "styleTags": [
+        "dark",
+        "ambient-low",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:51:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-262433-preview.mp3",
+      "sha256": "53B4CD91690538253D344A08B277D507C9E117AFB6C4DD4357B0816EADCF83AF",
+      "byteSize": 1144272
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 845520,
+      "title": "custom_electrical_lance_charging_loop_02162026",
+      "author": "Artninja",
+      "sourceUrl": "https://freesound.org/s/845520/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"custom_electrical_lance_charging_loop_02162026\" by Artninja (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 64.5725,
+      "tags": [
+        "aggressive",
+        "anime",
+        "build-up",
+        "charge",
+        "electric",
+        "electrical",
+        "electricity",
+        "electronic",
+        "evil",
+        "fate",
+        "hum",
+        "lance"
+      ],
+      "styleTags": [
+        "dark",
+        "building",
+        "electronic",
+        "steady",
+        "driving"
+      ],
+      "retrievedAt": "2026-09-28T16:51:57+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-845520-preview.mp3",
+      "sha256": "B0A927A9BD92840FD4A81CFB2AA4F9E9815C321222EE4054CDC2DBBF8CC921F0",
+      "byteSize": 1525366
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 698100,
+      "title": "Aggressive Electronic Rap Beat",
+      "author": "TheoJT",
+      "sourceUrl": "https://freesound.org/s/698100/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Aggressive Electronic Rap Beat\" by TheoJT (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 36.1208,
+      "tags": [
+        "aggressive",
+        "bass",
+        "beat",
+        "buildup",
+        "clap",
+        "drop",
+        "drum",
+        "drums",
+        "hip",
+        "hop",
+        "instrumental",
+        "loop"
+      ],
+      "styleTags": [
+        "dark",
+        "driving",
+        "percussive",
+        "steady",
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:52:18+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-698100-preview.mp3",
+      "sha256": "5DD9E67C842EB38CE1D48238C522DAA0D188163C18DB300C81FED64027A083B2",
+      "byteSize": 938972
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 573084,
+      "title": "Roland Tekno Lead 4 C.wav",
+      "author": "Sorinious_Genious",
+      "sourceUrl": "https://freesound.org/s/573084/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 19.0107,
+      "tags": [
+        "aggressive",
+        "analog",
+        "analogue",
+        "digital",
+        "electronic",
+        "jd-xi",
+        "lead",
+        "mono",
+        "monophonic",
+        "one",
+        "poly",
+        "polyphonic"
+      ],
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:52:30+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-573084-preview.mp3",
+      "sha256": "385A2B62FF7B3CA65BD4A40CA71020E84467EF3002597B7F3BE852021737CF6A",
+      "byteSize": 462723
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 573085,
+      "title": "Roland Tekno Lead 3 C.wav",
+      "author": "Sorinious_Genious",
+      "sourceUrl": "https://freesound.org/s/573085/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 15.049,
+      "tags": [
+        "aggressive",
+        "analog",
+        "analogue",
+        "digital",
+        "electronic",
+        "jd-xi",
+        "lead",
+        "mono",
+        "monophonic",
+        "one",
+        "poly",
+        "polyphonic"
+      ],
+      "styleTags": [
+        "dark",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:52:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-573085-preview.mp3",
+      "sha256": "89C48013AFBA64650E95D280FC2B02345461D59EB9F3AC50A89A23D7737732AF",
+      "byteSize": 343325
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 111256,
+      "name": "PLP-EBM_S06_Key_A_145BPM_EBM_Arpegg_03.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111255,
+      "name": "PLP-EBM_S06_Key_A_145BPM_EBM_Arpegg_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111254,
+      "name": "PLP-EBM_S05_Key_A_120BPM_EBM_Synth_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111250,
+      "name": "PLP-EBM_S03_Key_A#_120BPM_EBM_Lead_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111249,
+      "name": "PLP-EBM_S02_K_F_120BPM_EBM_Arp_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111257,
+      "name": "PLP-EBM_S07_Key_D_120BPM_Bass_Arpegg_02.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111253,
+      "name": "PLP-EBM_S05_Key_A_120BPM_Distorted_Groove.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111252,
+      "name": "PLP-EBM_S04_Key_A_130BPM_Harsh_Pad_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111251,
+      "name": "PLP-EBM_S04_Key_A_130BPM_Bass_03.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111248,
+      "name": "PLP-EBM_S01_Key_C_130BPM_Noise_Hits.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111247,
+      "name": "PLP-EBM_S01_Key_C_130BPM_Harsh_Pad_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111246,
+      "name": "PLP-EBM_S01_Key_C_130BPM_Bass_02.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111245,
+      "name": "PLP-EBM_S01_Key_C_130BPM_Arpegg_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 111258,
+      "name": "PLP-EBM_S10_Key_F#_110BPM_Arpegg_01.wav",
+      "license": "http://creativecommons.org/licenses/by-nc/3.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 685638,
+      "name": "DarkHit001.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870354,
+      "name": "an alarm sounds on a distant space station",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870360,
+      "name": "serious intergalactic warships",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870358,
+      "name": "noisy engine room in a distand star ship",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870357,
+      "name": "face to face with a superior intelligence",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870356,
+      "name": "extreme ship wide system failures",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870355,
+      "name": "charging the photon disruptors",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870353,
+      "name": "alien screams in the void",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870364,
+      "name": "this nebula is full of life",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870361,
+      "name": "sustained alien attack leads to total destruction",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870366,
+      "name": "we are hurtling towards the sun",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870365,
+      "name": "this space station is full of dread",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870359,
+      "name": "radiation is burning my skin",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870352,
+      "name": "a deep throbbing at the heart of the warp drive",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 870363,
+      "name": "the hive mind reacts",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "perQuery": [
+    {
+      "query": "industrial techno",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    },
+    {
+      "query": "EBM",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    },
+    {
+      "query": "driving",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    },
+    {
+      "query": "dark",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    },
+    {
+      "query": "aggressive synth",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    }
+  ],
+  "sufficiency": {
+    "count": 40,
+    "minimumExpected": 3
+  }
+}

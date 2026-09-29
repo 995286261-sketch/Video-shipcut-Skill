@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "2E5622A7CDB571A35C9A0AFCAFD29FB69B945D9139D681225D8DFCA8D625F49D",
+  "aliases": [
+    {
+      "title": "Axon 01 - Techno track loop",
+      "sourceUrl": "https://freesound.org/s/377540/",
+      "provenance": "freesound_api",
+      "project": "zaku-intro-003",
+      "seenAt": "2026-09-28T09:06:19Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-377540-preview.mp3",
+      "recordedAt": "2026-09-28T09:06:19Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-09-28T09:06:19Z",
+  "updatedAt": "2026-09-28T09:06:19Z"
+}

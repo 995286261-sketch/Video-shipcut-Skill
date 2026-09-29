@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "875696E11BA595BAF53F7002A27AFB8012D6AB19B2D898C5C9878C153EA0E4C0",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.1/candidates/freesound-668937-preview.mp3",
+    "sha256": "875696E11BA595BAF53F7002A27AFB8012D6AB19B2D898C5C9878C153EA0E4C0",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 9.038367,
+    "decodedDurationMs": 8994
+  },
+  "tempoBpm": 258.4,
+  "beatsMs": [
+    232,
+    464,
+    697,
+    929,
+    1161,
+    1393,
+    1625
+  ],
+  "onsetsMs": [
+    93,
+    139,
+    209,
+    720,
+    882,
+    1045,
+    1161,
+    1625,
+    1718,
+    3088,
+    3529,
+    4017,
+    4783,
+    4969,
+    5178,
+    5294,
+    5410,
+    6316,
+    6664
+  ],
+  "hitPoints": [
+    {
+      "tMs": 93,
+      "kind": "accent"
+    },
+    {
+      "tMs": 232,
+      "kind": "beat"
+    },
+    {
+      "tMs": 464,
+      "kind": "beat"
+    },
+    {
+      "tMs": 697,
+      "kind": "beat"
+    },
+    {
+      "tMs": 929,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1161,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1393,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1625,
+      "kind": "beat"
+    },
+    {
+      "tMs": 3088,
+      "kind": "accent"
+    },
+    {
+      "tMs": 3529,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4017,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4783,
+      "kind": "accent"
+    },
+    {
+      "tMs": 4969,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5178,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5294,
+      "kind": "accent"
+    },
+    {
+      "tMs": 5410,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6316,
+      "kind": "accent"
+    },
+    {
+      "tMs": 6664,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 4830,
+      "energyMean": 0.165534
+    },
+    {
+      "startMs": 4923,
+      "endMs": 8916,
+      "energyMean": 0.071746
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.001461
+    },
+    {
+      "tMs": 372,
+      "rms": 0.103432
+    },
+    {
+      "tMs": 743,
+      "rms": 0.178363
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.202387
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.215597
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.192524
+    },
+    {
+      "tMs": 2229,
+      "rms": 0.186304
+    },
+    {
+      "tMs": 2601,
+      "rms": 0.169834
+    },
+    {
+      "tMs": 2972,
+      "rms": 0.151773
+    },
+    {
+      "tMs": 3344,
+      "rms": 0.150552
+    },
+    {
+      "tMs": 3715,
+      "rms": 0.148357
+    },
+    {
+      "tMs": 4087,
+      "rms": 0.139741
+    },
+    {
+      "tMs": 4458,
+      "rms": 0.151308
+    },
+    {
+      "tMs": 4830,
+      "rms": 0.176206
+    },
+    {
+      "tMs": 5201,
+      "rms": 0.149271
+    },
+    {
+      "tMs": 5573,
+      "rms": 0.172318
+    },
+    {
+      "tMs": 5944,
+      "rms": 0.124195
+    },
+    {
+      "tMs": 6316,
+      "rms": 0.086461
+    },
+    {
+      "tMs": 6687,
+      "rms": 0.072139
+    },
+    {
+      "tMs": 7059,
+      "rms": 0.050624
+    },
+    {
+      "tMs": 7430,
+      "rms": 0.029577
+    },
+    {
+      "tMs": 7802,
+      "rms": 0.011965
+    },
+    {
+      "tMs": 8173,
+      "rms": 0.006616
+    },
+    {
+      "tMs": 8545,
+      "rms": 0.000795
+    },
+    {
+      "tMs": 8916,
+      "rms": 0.0
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -9.1,
+    "loudnessRangeLu": 8.6,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "projectId": "zaku-intro-003",
+  "coreQuestion": "扎古到底有什么资格被称为'男人的浪漫'？",
+  "audience": "自己看（高达/机甲同好自赏，B站格式横版）",
+  "title": "扎古——男人的浪漫",
+  "titleExpressionType": "editorial_expression",
+  "coreViewpoint": "浪漫不靠主角光环：一台量产机用规格、战绩名场面和'普通士兵也能驾驶'的设定，撑起了整部作品的重量感。",
+  "outputPreferences": {
+    "aspectRatio": "16:9",
+    "targetDurationSec": [
+      50,
+      70
+    ],
+    "usagePurpose": "personal_internal_preview"
+  },
+  "bgmDecision": "provided",
+  "directionChoice": {
+    "id": "recommended-spec",
+    "label": "数据流浪漫：用规格与名场面讲一台量产机",
+    "source": "agent_recommendation"
+  },
+  "styleRules": [
+    "顶部双语大标题栏：中文主标+英文副标（沿参考片开场标题卡形态）",
+    "暗色底+白色粗体信息层，规格/数据以信息卡呈现（参考片军事纪录片式信息密度）",
+    "剪辑节奏：常规段平均镜长约 6-7 秒，高潮段（音乐能量峰）缩短切点、跟拍不硬凑卡点",
+    "口播语言中文、快节奏燃系；AI 配音（声线到 G2 试听卡逐项确认）"
+  ],
+  "expressionBoundaries": [
+    "不使用未核实的'最强/无敌/碾压'类绝对化断言，战绩表述以公开剧情为限",
+    "不贬损其他作品或其他机体来抬高扎古",
+    "参考片原句、画面、音乐、Logo 一律不带入输出，只借鉴抽象节奏与信息层形态",
+    "本片给自己看：仅内部预览，不对外发布；改发布须重新确认授权与 BGM 清权通道"
+  ],
+  "claims": [
+    {
+      "claimId": "claim-001",
+      "text": "MS-06 扎古 II 是吉翁公国军的主力量产机动战士",
+      "status": "pending"
+    },
+    {
+      "claimId": "claim-002",
+      "text": "扎古配备动力管与 120mm 机枪/火箭炮等实弹武器，是'士兵感'设计的来源",
+      "status": "pending"
+    },
+    {
+      "claimId": "claim-003",
+      "text": "扎古在一年战争战纪中留下了以弱胜强的名场面（具体战例 G2 核实）",
+      "status": "pending"
+    }
+  ]
+}

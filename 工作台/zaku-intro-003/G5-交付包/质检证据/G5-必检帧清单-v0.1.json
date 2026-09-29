@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "node": "G5",
+  "purpose": "G5 必检帧清单（issue ㉙：收据 check_frames 单一 evidenceRef 指向本清单）",
+  "frames": [
+    {"frameId": "cover-check", "kind": "封面检查帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/cover/封面合成-v0.1.jpg", "note": "标题叠字可读、无豆腐块、来源=登记件 02_原始素材 @25.859s 目视确认"},
+    {"frameId": "subtitle-check", "kind": "字幕检查帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t20.0s.jpg", "note": "N03 两行车道正确、与实际旁白同步（cue=实测音频码）"},
+    {"frameId": "opening-check", "kind": "开头检查帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t1.5s.jpg", "note": "章节卡 0-4.0s 上部车道、N01 字幕按合同隐藏、语音起音未被截（口播 0ms 起）"},
+    {"frameId": "transition-mid-1", "kind": "转场窗口中点帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t46.25s.jpg", "note": "seg-006b→seg-007 叠化中点：两画面真实混合（非纯黑非单源）"},
+    {"frameId": "transition-mid-2", "kind": "转场窗口中点帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t64.39s.jpg", "note": "seg-009→seg-010 叠化中点：两画面真实混合"},
+    {"frameId": "ending-check", "kind": "结尾检查帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t67.2s.jpg", "note": "N10 钩子字幕+近黑收尾（黑场出被深检否决后的硬切收法）"},
+    {"frameId": "climax-check", "kind": "关键镜头帧", "path": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/t57.8s.jpg", "note": "N09 金句字幕+格斗蒙太奇"}
+  ],
+  "tileSheet": "工作台/zaku-intro-003/G4-剪辑与渲染/目检帧/目检拼版.jpg",
+  "recordedAt": "2026-09-29T11:12:00+08:00"
+}

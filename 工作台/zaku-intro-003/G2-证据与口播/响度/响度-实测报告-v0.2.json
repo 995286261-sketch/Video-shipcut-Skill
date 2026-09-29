@@ -1,0 +1,19 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_measure",
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/整条旁白-婷婷-v0.1.wav",
+  "version": "v0.2",
+  "output": "工作台/zaku-intro-003/G2-证据与口播/响度/响度-实测报告-v0.2.json",
+  "measured": {
+    "integratedLufs": -18.3,
+    "truePeakDbtp": -2.3,
+    "loudnessRangeLu": 1.2,
+    "engine": "ffmpeg-ebur128"
+  },
+  "sha256": "41FAA2CF78B11D109A45A4117A42CBF749524607ECEF3C470545BFF36CA87862",
+  "status": "measured",
+  "measuredAt": "2026-09-28T10:01:41Z",
+  "unitsNote": "LUFS=集成响度（平均有多响）；dBTP=真峰值（会不会爆）；LU=动态范围宽度"
+}

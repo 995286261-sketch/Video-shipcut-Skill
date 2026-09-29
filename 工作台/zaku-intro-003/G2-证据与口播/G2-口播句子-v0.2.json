@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "0.2",
+  "projectId": "zaku-intro-003",
+  "beatBlueprintRef": "G2-证据与口播/BGM/BGM-节拍蓝图-v0.3.json",
+  "revisionNote": "v0.2：回填实测码（配音清单-longtian-v0.2）；文本与 v0.1 一致（N09 微改提案未执行=额度阻塞）",
+  "timelineMs": 67547,
+  "sentences": [
+    {
+      "sentenceId": "N01",
+      "phraseId": "P1/P2",
+      "layoutTier": "留白",
+      "text": "没有主角光环，没有神级装备——一年战争，你绕不开这台量产机。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 0,
+      "targetDurMs": 6293,
+      "measuredStartMs": 0,
+      "measuredDurMs": 6560,
+      "measuredEndMs": 6560
+    },
+    {
+      "sentenceId": "N02",
+      "phraseId": "P2",
+      "layoutTier": "常规",
+      "text": "MS-06 扎古 II，吉翁公国军的主力量产机动战士。",
+      "factRefs": [
+        "S1"
+      ],
+      "targetStartMs": 6293,
+      "targetDurMs": 5503,
+      "measuredStartMs": 6780,
+      "measuredDurMs": 6960,
+      "measuredEndMs": 13740
+    },
+    {
+      "sentenceId": "N03",
+      "phraseId": "P2/P3",
+      "layoutTier": "常规/推进",
+      "text": "光是 F 型就造了三千架以上——全吉翁的机动战士里，量产最多的就是它。",
+      "factRefs": [
+        "S1"
+      ],
+      "targetStartMs": 11796,
+      "targetDurMs": 7244,
+      "measuredStartMs": 13793,
+      "measuredDurMs": 6320,
+      "measuredEndMs": 20113
+    },
+    {
+      "sentenceId": "N04",
+      "phraseId": "P3",
+      "layoutTier": "推进",
+      "text": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+      "factRefs": [
+        "S2"
+      ],
+      "targetStartMs": 19040,
+      "targetDurMs": 6247,
+      "measuredStartMs": 20271,
+      "measuredDurMs": 6400,
+      "measuredEndMs": 26671
+    },
+    {
+      "sentenceId": "N05",
+      "phraseId": "P3",
+      "layoutTier": "推进",
+      "text": "外露的动力管谈不上优雅，却给了它独一无二的士兵感——那是普通人的浪漫，不是测试机的浪漫。",
+      "factRefs": [
+        "S2",
+        "编辑观点"
+      ],
+      "targetStartMs": 25287,
+      "targetDurMs": 9009,
+      "measuredStartMs": 26796,
+      "measuredDurMs": 8720,
+      "measuredEndMs": 35516
+    },
+    {
+      "sentenceId": "N06",
+      "phraseId": "P3",
+      "layoutTier": "推进",
+      "text": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。",
+      "factRefs": [
+        "S3"
+      ],
+      "targetStartMs": 34296,
+      "targetDurMs": 9497,
+      "measuredStartMs": 35527,
+      "measuredDurMs": 10560,
+      "measuredEndMs": 46087
+    },
+    {
+      "sentenceId": "N07",
+      "phraseId": "P3",
+      "layoutTier": "推进",
+      "text": "赤色彗星，从此得名。",
+      "factRefs": [
+        "S3"
+      ],
+      "targetStartMs": 43793,
+      "targetDurMs": 2066,
+      "measuredStartMs": 46417,
+      "measuredDurMs": 2640,
+      "measuredEndMs": 49057
+    },
+    {
+      "sentenceId": "N08",
+      "phraseId": "P3/P4",
+      "layoutTier": "推进/快切",
+      "text": "同一个战场，乔尼·莱登驾着量产扎古，用 280 火箭筒击沉三艘麦哲伦级。",
+      "factRefs": [
+        "S3"
+      ],
+      "targetStartMs": 45859,
+      "targetDurMs": 7431,
+      "measuredStartMs": 49273,
+      "measuredDurMs": 7840,
+      "measuredEndMs": 57113
+    },
+    {
+      "sentenceId": "N09",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "王牌没有挑机体——是量产机和王牌互相成就。这，就是男人的浪漫。",
+      "factRefs": [
+        "编辑表达"
+      ],
+      "targetStartMs": 53290,
+      "targetDurMs": 6501,
+      "climax": true,
+      "measuredStartMs": 57539,
+      "measuredDurMs": 6720,
+      "measuredEndMs": 64259
+    },
+    {
+      "sentenceId": "N10",
+      "phraseId": "P4",
+      "layoutTier": "快切",
+      "text": "你的扎古记忆是哪一台？评论区见。",
+      "factRefs": [
+        "编辑表达（互动钩子）"
+      ],
+      "targetStartMs": 59791,
+      "targetDurMs": 3251,
+      "measuredStartMs": 64528,
+      "measuredDurMs": 2960,
+      "measuredEndMs": 67488
+    }
+  ],
+  "version": "v0.2"
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "0.2",
+  "projectId": "zaku-intro-003",
+  "voice": "longtian_v3",
+  "voiceDisplayName": "龙天（CosyVoice v3-flash）",
+  "model": "cosyvoice-v3-flash",
+  "voiceTier": "成品级",
+  "format": "wav",
+  "sampleRate": 24000,
+  "sentenceManifestRef": "G2-证据与口播/G2-口播句子-v0.1.json",
+  "beatBlueprintRef": "G2-证据与口播/BGM/BGM-节拍蓝图-v0.2.json",
+  "fieldNote": "startMs/durationMs 为下游合同字段（issue ⑭），measured* 同值别名；devMs=累计实测终点-目标终点",
+  "totalMeasuredMs": 67547,
+  "sentences": [
+    {
+      "sentenceId": "N01",
+      "startMs": 0,
+      "durationMs": 6560,
+      "measuredStartMs": 0,
+      "measuredDurMs": 6560,
+      "measuredEndMs": 6560,
+      "targetStartMs": 0,
+      "intentDriftMs": 0,
+      "boundaryToBeatMs": 12,
+      "gapAfterMs": 220
+    },
+    {
+      "sentenceId": "N02",
+      "startMs": 6780,
+      "durationMs": 6960,
+      "measuredStartMs": 6780,
+      "measuredDurMs": 6960,
+      "measuredEndMs": 13740,
+      "targetStartMs": 6293,
+      "intentDriftMs": 487,
+      "boundaryToBeatMs": 53,
+      "gapAfterMs": 53
+    },
+    {
+      "sentenceId": "N03",
+      "startMs": 13793,
+      "durationMs": 6320,
+      "measuredStartMs": 13793,
+      "measuredDurMs": 6320,
+      "measuredEndMs": 20113,
+      "targetStartMs": 11796,
+      "intentDriftMs": 1997,
+      "boundaryToBeatMs": 74,
+      "gapAfterMs": 158
+    },
+    {
+      "sentenceId": "N04",
+      "startMs": 20271,
+      "durationMs": 6400,
+      "measuredStartMs": 20271,
+      "measuredDurMs": 6400,
+      "measuredEndMs": 26671,
+      "targetStartMs": 19040,
+      "intentDriftMs": 1231,
+      "boundaryToBeatMs": 125,
+      "gapAfterMs": 125
+    },
+    {
+      "sentenceId": "N05",
+      "startMs": 26796,
+      "durationMs": 8720,
+      "measuredStartMs": 26796,
+      "measuredDurMs": 8720,
+      "measuredEndMs": 35516,
+      "targetStartMs": 25287,
+      "intentDriftMs": 1509,
+      "boundaryToBeatMs": 11,
+      "gapAfterMs": 11
+    },
+    {
+      "sentenceId": "N06",
+      "startMs": 35527,
+      "durationMs": 10560,
+      "measuredStartMs": 35527,
+      "measuredDurMs": 10560,
+      "measuredEndMs": 46087,
+      "targetStartMs": 34296,
+      "intentDriftMs": 1231,
+      "boundaryToBeatMs": 42,
+      "gapAfterMs": 330
+    },
+    {
+      "sentenceId": "N07",
+      "startMs": 46417,
+      "durationMs": 2640,
+      "measuredStartMs": 46417,
+      "measuredDurMs": 2640,
+      "measuredEndMs": 49057,
+      "targetStartMs": 43793,
+      "intentDriftMs": 2624,
+      "boundaryToBeatMs": 16,
+      "gapAfterMs": 216
+    },
+    {
+      "sentenceId": "N08",
+      "startMs": 49273,
+      "durationMs": 7840,
+      "measuredStartMs": 49273,
+      "measuredDurMs": 7840,
+      "measuredEndMs": 57113,
+      "targetStartMs": 45859,
+      "intentDriftMs": 3414,
+      "boundaryToBeatMs": 62,
+      "gapAfterMs": 426
+    },
+    {
+      "sentenceId": "N09",
+      "startMs": 57539,
+      "durationMs": 6720,
+      "measuredStartMs": 57539,
+      "measuredDurMs": 6720,
+      "measuredEndMs": 64259,
+      "targetStartMs": 53290,
+      "intentDriftMs": 4249,
+      "boundaryToBeatMs": 218,
+      "gapAfterMs": 269
+    },
+    {
+      "sentenceId": "N10",
+      "startMs": 64528,
+      "durationMs": 2960,
+      "measuredStartMs": 64528,
+      "measuredDurMs": 2960,
+      "measuredEndMs": 67488,
+      "targetStartMs": 59791,
+      "intentDriftMs": 4737,
+      "boundaryToBeatMs": 59,
+      "gapAfterMs": 59
+    }
+  ],
+  "version": "v0.2",
+  "revisionNote": "v0.2：按实测时长+正向气口重排边界（栅格=BGM-节拍蓝图-v0.3，68s）；v0.1 连续拼接版留存。N09 尾偏差 +218ms 为全片唯一超容差（±150ms），微改方案被百炼免费额度耗尽阻塞（台账⑧），处置留门禁裁决",
+  "supersededRefs": [
+    "G2-证据与口播/G2-配音清单-longtian-v0.1.json"
+  ],
+  "asrSelfCheck": {
+    "method": "faster-whisper small 本地回读（无 initial-prompt 通道，专名同音误字属已知假阴性，台账⑨）",
+    "result": "pronunciation-consistent",
+    "ref": "G2-证据与口播/转写/narration-longtian-transcript.json"
+  }
+}

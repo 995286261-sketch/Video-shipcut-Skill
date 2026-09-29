@@ -1,0 +1,503 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "not_for_distribution",
+  "bgm": {
+    "decision": "provided",
+    "preference": null,
+    "libraryPending": false,
+    "clearCondition": "G1 \u672b\u51fa\u68c0\u7d22\u8bcd\u5361\u627e\u4e50 \u2192 \u7528\u6237\u6311\u66f2 \u2192 \u7ecf\u5b98\u65b9\u6e20\u9053\u53d6\u5f97\u6574\u8f68\u5e76\u767b\u8bb0\u56de\u586b 07_\u6388\u6743\u97f3\u9891/ \u540e\u6539 provided",
+    "history": [
+      {
+        "at": "2026-09-28T09:14:01Z",
+        "from": "use_library_later",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-LOW-PHONK-0B2F3018.json",
+        "note": null
+      },
+      {
+        "at": "2026-09-28T09:43:10Z",
+        "from": "provided",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json",
+        "note": null
+      }
+    ],
+    "evidence": "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json"
+  },
+  "currentNode": "completed",
+  "status": "completed_with_accepted_warnings",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "G1 \u65b9\u5411+\u9009\u66f2\u7ec8\u5ba1\uff1a\u5f85\u7528\u6237\u53e3\u4ee4 \u786e\u8ba4G1"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.2.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185\u5bf9\u53c2\u8003\u7247-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/BGM-\u5206\u6790\u56de\u663e-\u51b7\u6218\u5947\u8ff9-\u9006\u7fbd\u96c4\u9e70-1080P-DF263D11.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u53c2\u7167\u66f2\u98ce\u683c\u753b\u50cf-\u51b7\u6218\u5947\u8ff9\u97f3\u8f68-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-freesound-v0.1/BGM-\u68c0\u7d22\u8bcd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u9700\u6c42\u753b\u50cf-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185\u5bf9\u53c2\u8003\u7247-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5e93\u5185\u6279\u6b21/BGM-\u63a8\u8350\u6392\u5e8f-\u5e93\u5185-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5206\u6790\u62a5\u544a-netease-2679274856-Devil_Game_(Phonk)-9F61EA0B.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-09-28T17:31:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.2.md": "0B40D9A0CEDE03CAFC6580EAC05DD485B00E7DCEEFC99B5E0F1AD292ADB7A9FA",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md": "2CFC0F6E6DBE28ACC0E24CEE561395C7CE33BF6C3EF5E14A59295888662FCC4F",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json": "B709107E850A1200EEB4DEE7211074C9FAC91269A21B142B2ADA4333CA5C9D1C",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json": "C86B0D6C9896BB90B653BF9EA177C04BDDD2F6712B85F42C53F7A60511ADC54D",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md": "56D5CA05F4956D3518E35488174492FF8A0FB92BD2B6A9391AEB670916C17DAA",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185\u5bf9\u53c2\u8003\u7247-v0.1.json": "7773C6B86012DC79F5BB865A9FBAD8E15C237411D6159804822999D19ADE6E14",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json": "F7EC256485ADCA6D92938CD4495A992237C629EC957936C4BF7211ACB11A8943",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/BGM-\u5206\u6790\u56de\u663e-\u51b7\u6218\u5947\u8ff9-\u9006\u7fbd\u96c4\u9e70-1080P-DF263D11.md": "E9A756C9D5F0C03554731A19C41967732C7B64421343D82676AA89633CDFEA5A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u53c2\u7167\u66f2\u98ce\u683c\u753b\u50cf-\u51b7\u6218\u5947\u8ff9\u97f3\u8f68-v0.1.json": "CAD19353C22474CE154988D4FA1B11A7B238548549BB2A6E5072136058FF2070",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-freesound-v0.1/BGM-\u68c0\u7d22\u8bcd-v0.1.json": "60C42EFCFB24CE5E67F3C811E58ABAC4FE113DD33D06F5FDAD69F9A53D269967",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u9700\u6c42\u753b\u50cf-v0.1.json": "9EFE5E6936FD2BB7B25A50F13280A823BD91A7E0EE4D1D42EC56082A8E37C21A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.2.json": "646B8465EC117511451D373B5482566231A9F6CD1C13E1B77ED7CCB1F19EF083",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-v0.1.json": "9DB90B04D9503C758781512CAFD0F1D8E8445D62D6425413DCD10B151D5D21BA",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-\u5e93\u5185-v0.1.json": "9BD9E24DB6B472C7B1A952514C925147F222A1B83F4B53B365E3538EFA4FC1E7",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5e93\u5185\u6279\u6b21/BGM-\u63a8\u8350\u6392\u5e8f-\u5e93\u5185-v0.1.json": "A8BFFC2FE68309CB86F364625F2BC942E53972AAFE4CACB3EECFC4640477467C",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md": "54955446F825F48C797E38CAA39A8BA7E4806200C7CD2773974CFCA7990B2D76",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json": "4368481224866603B4A3DF7ABA11F949144A3F5FF9DB9F0050B5BA5664FCB164",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5206\u6790\u62a5\u544a-netease-2679274856-Devil_Game_(Phonk)-9F61EA0B.json": "9B65F2E322C7B127EB883105BED197D364DDC438918F001D25E377DA6D96B717",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md": "A29EE2AB4BB82717374199BE764296F1465F1EF21415FC88C0280CBEEEC731CA",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md": "5B4DA018DCDF59577E24A703710D3A0F596DCC64CAB6351B0064F50E8BB557C0",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "C796CF47605881DA40C02D09D21A993ABBC8E94F57EEF74699B475A4106D1B0E"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G1",
+        "approvalResponse": "\u786e\u8ba4 G1",
+        "approvalTokenVerbatim": "\u786e\u8ba4G1",
+        "approvalResponseVerbatim": "\u786e\u8ba4G1",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-28T09:48:30Z",
+        "approvalSource": "host-session"
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe-v0.3.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.2.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.2.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "\u53611 \u4e8b\u5b9e\u5904\u7406\uff08\u9ed8\u8ba41A \u672c\u9879\u76ee\u9650\u5b9a\u68c0\u7d22\u8d44\u6599\uff09",
+        "\u53612 \u53e3\u64ad\u65b9\u5411\uff08\u9ed8\u8ba42A \u91cf\u4ea7\u673a\u2192\u6218\u4f8b\u2192\u4e92\u76f8\u6210\u5c31\uff09",
+        "\u53613 \u97f3\u9891\u7b56\u7565\u7ee7\u627f\uff08BGM Devil Game/\u539f\u58f0\u6392\u9664/\u5185\u90e8\uff09",
+        "\u53614 \u914d\u97f3\uff08\u9ed8\u8ba44A \u9f99\u5929\u6210\u54c1\u7ea7\uff1b4B \u5a77\u5a77\u9884\u89c8\u7ea7\uff1b\u4e24\u5019\u9009\u5929\u82b1\u677f\u5747\u591f\u4e0d\u7740-14\uff09",
+        "\u51fa\u8def\u5361\uff08\u9ed8\u8ba4A \u5148\u538b\u7f29\u540e\u6d4b\uff09",
+        "N09 \u53e5\u5c3e+218ms \u5904\u7f6e\uff08\u9ed8\u8ba4\u7532 \u63a5\u53d7\u62ab\u9732\uff1b\u4e59\u88ab\u989d\u5ea6\u2467\u963b\u585e\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u53e5\u5b50-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.2.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe-v0.3.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe\u56de\u663e-v0.3.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/\u8bd5\u542c-longtian_v3-8s.wav",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/\u8bd5\u542c-\u5a77\u5a77-8s.wav",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/source-02-1080p/manifest.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8054\u7cfb\u8868/source-02-1080p-contact-sheet.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-09-28T18:20:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "A1C44C2DC0D476D625DB5077E0C4AAA857EDDED0A31FE9EBA1240361BD1234A4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md": "44632B287A84C2B423B9241C6ACDA5DDB8FD4248EEBB04F4A5B734B32CBA7039",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md": "A349DB1F86C0FA58F82E7C18FABB9AC2816600CA48012B5F58D60707883D9C52",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json": "F70DB319E3F9DB764A87010A3F096475CFCFF8F6E48DC1C697791B7E486E259A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md": "73D33C829E8B260BA1B70A138C3B71F67F868804A3B6914558467CB99FFA1D62",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md": "DD1E98695C9F1BA2037DAF3279483837F8DF0CC6A132CC42152813D11DC54B61",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u53e5\u5b50-v0.2.json": "BEE2846CDF2C5407A4CE2763B28B58977B465912B5C33C38E0BE22306EDEFC96",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6392\u7248\u7a3f-v0.2.md": "F1930B331B1C1995E8D22AD38F6D91658D533DD1E78F0E9AF4323C3491E51F7B",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.2.json": "8FD1146118573EF0C348AC09C16D203CA773B9D1439A386BD0BBAA4040880731",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe-v0.3.json": "A99646934F9F1C5CB28D98140CDF79C275784AB8E2842273027E0388D4E7394B",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/BGM/BGM-\u8282\u62cd\u84dd\u56fe\u56de\u663e-v0.3.md": "767FE99B9F51D748E4C943F95ACB35B49595B761F6A79C64BC09E0F7CCB83BB0",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json": "01E44798802BD50BC45E12548099F59F0556C8D6243E80B9F0DF39F39EE26010",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json": "A44766866B7660557FACF4DB78368E7FEFBB48F0C59E5D7BA552C7BDC71AF478",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json": "A62DDA15FEF6108BC8AF485158C3ACFF50871CA89CBAF4B97CB418CB1FF08059",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/\u8bd5\u542c-longtian_v3-8s.wav": "91E5ABE261969B16410137BED5E649EF63132F63174AF4A83F163C0DF000CB09",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c/\u8bd5\u542c-\u5a77\u5a77-8s.wav": "3C4DCC7D8B13855D4C9BE79F72C065963E9066021EBD67AD651992B2F25E04A7",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8f6c\u5199/source-02-1080p/manifest.json": "079469763082EF577E471B795EFDA0453B0B5D8AC94057E679B65748702424B3",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8054\u7cfb\u8868/source-02-1080p-contact-sheet.jpg": "69CE95E530915C9CA7BB5A36A4B06CF8F88B669F0DE8D8DDF362DFDB7C46F508",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md": "85791DFD57F4466849B1E5BD608F137038A020B6DEB00E8998BA23BDF1F8AA6E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Devil-Game-Phonk-9F61EA0B.json": "4368481224866603B4A3DF7ABA11F949144A3F5FF9DB9F0050B5BA5664FCB164"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6279\u7559\u75d5.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G2",
+        "approvalResponse": "\u786e\u8ba4 G2",
+        "approvalTokenVerbatim": "\u786e\u8ba4G2",
+        "approvalResponseVerbatim": "\u786e\u8ba4G2",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-28T10:25:42Z",
+        "approvalSource": "host-session",
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u53e3\u64ad\u8349\u6848-v0.1.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u4e8b\u5b9e\u4f9d\u636e/\u624e\u53e4\u516c\u5f00\u8d44\u6599\u6458\u5f55-v0.1.md",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u914d\u97f3\u6e05\u5355-longtian-v0.2.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790-v0.2.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "\u516b\u5217\u7ec8\u5ba1\u886812\u6bb5\u9010\u884c\u6279\u51c6\uff08\u542b\u9010\u6bb5\u51b3\u7b56\u4f9d\u636e\u8868\u968f\u7559\u75d5\u5b58\u6863\uff09",
+        "\u53e3\u64ad\u56de\u7089\u88c1\u51b3=\u4e19 \u63a5\u53d7\u73b0\u7a3f\uff08\u53f0\u8d26\u2469\u77e5\u60c5\uff09",
+        "\u4e24\u5904\u53e0\u53160.2s\u7ecf\u8bd5\u88c5\u9884\u89c8\u6279\u51c6\uff1b\u9ed1\u573a\u5165/\u51fa\u88ab\u6df1\u68c0\u5426\u51b3\u7684\u62ab\u9732\u5df2\u9605",
+        "\u5305\u88c5\u51b3\u5b9a\uff1a\u54cd\u5ea6\u6863-14/-1.5/9\uff08G4\u538b\u7f29\u540e\u91cd\u6d4b\u91cd\u89c4\u5212\uff09\u3001\u5c01\u976240.0s\u5e27\u3001\u7ae0\u8282\u53610-4s\u3001\u5b57\u5e5564px\u9ed8\u8ba4\u7248",
+        "\u672a\u843d\u5165\u5408\u540c\u98ce\u683c\u89c4\u5219\uff1a\u89c4\u683c\u4fe1\u606f\u5361\u9ed8\u8ba4=\u4e0d\u8865"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6279\u7559\u75d5.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.srt",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/\u5b57\u5e55-\u6e32\u67d3\u5668\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-09-29T10:32:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "B75D7C592A3070ABC7DA1752C9C7C76E2E5E6D2B455F78E138CCB54B5C7CA806",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6279\u7559\u75d5.md": "4AFFD004BA801E102D3042256059849B1558839043BCD792731066CA6DAD3BB4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json": "0EF9C87A3AFCC34A316DB3D4EDFA68A1768DF73A3A0148A78654C5D92A678C09",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json": "19BC911DEFCAF433E3E6A880E6B8C68CC3BF6115F657FAAEB4DF22F77A78A5FE",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json": "502E0A393CF4E5E82E3486625DA2FF630C5A2CEDAAFEB7CCBCDCF4578AB9A973",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790-v0.2.json": "01B4455AE893E0126B0113FFA011F02BEC34A132CE77D25BC589E084B48C3392",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json": "06C4770AD891235D7287FFA987ACD34E26BFE41D358EBC6B07EAEE84C63CA500",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json": "98D4D0B739E772473DCF2A88E2DBB1129398496108D4D10713A5E05721A0771E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json": "FF41F6FBB3950CA5A190202C012A247FBCE3820954F0CF768BB5AFD2C745E88A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json": "DFE842A8F5A0B0C7BA04C5D015E5DA7AFE9416541C2D05A0A715707D49C3733B",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json": "962F581AE3CB08FFB655B32F0CF1B1488E9655CBF3D60C028426555C0C012B85",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.1.json": "EA701A8AD40AE225D5BBA8144D32A467C72525CDB0FFFE636166FB01F8D69F0B",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json": "C9A910CFAD8C51801D9558E101CBEFF252610D0E3DF937A95875EB620D53CA99",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u56de\u663e-v0.2.md": "16F04C1D8FEBDA231A793A7A343D731C0964221D822B1B9A80D0EFAF08E41C91",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json": "9EA1E8966E01D10D61ED3E820033B455416F598320A321633BC76C9A4E04A18E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass": "9D146AD55DBF0BBE4750CD26A6C8E38983DB402C1C975CB57D6821A4A44C9EA1",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.srt": "BC01D8A938BD46814862E1C901DFD2B0564AA9F20BE26DE69C802D8F778DF625",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.1.json": "23B08A889A2EBFD39ED28A4025B30171B4C225ADE4E48439C888D6CFADEF56BF",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/\u5b57\u5e55-\u6e32\u67d3\u5668\u80fd\u529b\u6863-v0.1.json": "307EEC72C0B23DCB4EAB9F3B6A247D74FCD82E39D758CD6144850DDFDDD2F1EB",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u5ba1\u6838\u51b3\u5b9a-v0.1.json": "453B2B8FBB2F86212594C82132F0CDB4E122258E5D4F526E8FF019E0A552AEC4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json": "F70DB319E3F9DB764A87010A3F096475CFCFF8F6E48DC1C697791B7E486E259A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md": "C28827C1C093E2227768F3BAB9D3C3B38299AB2EDC70B7D48E942B73E3C3117E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json": "8CE65AF506AA0648D72C8E8E6DE3AA65EBB87B8EE285B75EE1C1B654A8398DA5"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u5ba1\u6279\u7559\u75d5.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G3",
+        "approvalResponse": "\u786e\u8ba4 G3",
+        "approvalTokenVerbatim": "\u786e\u8ba4G3",
+        "approvalResponseVerbatim": "\u786e\u8ba4G3",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-29T02:33:16Z",
+        "approvalSource": "host-session",
+        "editPlanRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.4.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "\u2462-1 \u54cd\u5ea6\u8d85\u5dee\u62ab\u9732\uff1acontrolled-dynamic \u843d\u70b9 -15.6 \u5bf9\u76ee\u6807 -14.0\uff08\u8d85\u5bb9\u5dee 1.6 LU\uff09\uff0cG2 \u51fa\u8def A \u8ba9\u6b65\u5e45\u5ea6\uff0c\u9ed8\u8ba4=\u63a5\u53d7",
+        "\u2462-2 \u653e\u7f6e\u8f68\u91cd\u89c4\u5212\u8bb0\u8d26\uff08\u53f0\u8d26\u246c\uff09\uff1a\u51fa\u8def\u51b3\u5b9a\u8f93\u5165\u672a\u53d8\uff0c\u672a\u91cd\u5f00 G2",
+        "\u2462-3 \u5c01\u9762\u5e27\u8bef\u62bd\u81ea\u7ea0\u62ab\u9732\uff08\u53f0\u8d26\u246b\uff09\uff1a\u65e0\u6c61\u67d3\u4ea7\u7269",
+        "\u2464 \u542c\u89c9\u590d\u6838=\u7528\u6237\u4eb2\u8033\uff08\u80fd\u529b\u58f0\u660e\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.4.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-09-29T10:54:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md": "579E9CBBFEE446175450DDF47429FEBA5EB28ECF8C6C13708E76680FDBD0DE82",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md": "9628EA84956C766295FFCEDC77AD3AFD3243C4ADF0DA76D6B5FA8738C0670FAA",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json": "4A782F076BF18C08D5E9ADA8FF3C3270E0196771C9FE288D90FEA6804A0C0F26",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json": "470EA82A2280DBF815E3B09780B216BE8E88B3FDC5821C6C08CFA7DDBCBDBD7A",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.4.json": "1EAA89517EED67F3729D5AED2BE40D517D092012B815E94F25B944C4A99E5F0C",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.1.json": "7C92E4FF11DF4D1DF3972261A411C399366E2A145F7D6598298CD087DCB256B4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav": "2D647A4D4A11CA1BC41CC67DC1552D7E524AF98F23CA011C4FD2B8256819CD26",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json": "E68ACDDEB6C5987D53957735460D9C84D58F723902AA4BA67BAF815597FB5222",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json": "6A7B16094A2F52789FF926CD33D1E83791E8D56968FA2937A32D0320B6834F28",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json": "290770FB2EA4AD75BA0609C0BE279EF784B5421BABFFE69653DAD1B8F3D17222",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json": "6168212EC2876E438D0244C02B27ED10DAC7F975038C2262C0057EEDDE85FF9B",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.4.json": "19BC911DEFCAF433E3E6A880E6B8C68CC3BF6115F657FAAEB4DF22F77A78A5FE",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json": "8CE65AF506AA0648D72C8E8E6DE3AA65EBB87B8EE285B75EE1C1B654A8398DA5",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json": "01E44798802BD50BC45E12548099F59F0556C8D6243E80B9F0DF39F39EE26010",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md": "5DF489CC0BD28B5AFD06AF457FCECA5716488B9F0D6B8816E96FCD977C2E9493",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json": "35C7B2C6F3017DDC0EEEC1465B04AB08585BAE370D62C54260F820BF2D983ED5"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G4",
+        "approvalResponse": "\u786e\u8ba4 G4",
+        "approvalTokenVerbatim": "\u786e\u8ba4G4",
+        "approvalResponseVerbatim": "\u786e\u8ba4G4",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-29T02:53:23Z",
+        "approvalSource": "host-session",
+        "localRenderRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed_with_accepted_warnings",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/loudness-audit.json",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/G5-\u5fc5\u68c0\u5e27\u6e05\u5355-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "\u54cd\u5ea6\u8d85\u5dee\u70b9\u540d\u63a5\u53d7\uff08\u6279\u56db\u4e19\u53e3\u5f84\uff1aacceptedWarnings \u5fc5\u987b\u70b9\u540d\u54cd\u5ea6\u624d\u5173\u5355\uff09",
+        "BGM \u672a\u6e05\u6743\uff1a\u5bf9\u5916\u53d1\u5e03\u5fc5\u987b\u6362\u66f2\u91cd\u8d70 G4\uff08internal_test \u8fb9\u754c\u4e0d\u5347\u7ea7\uff09",
+        "\u542c\u89c9\u590d\u6838=\u7528\u6237\u4eb2\u8033\uff08\u80fd\u529b\u58f0\u660e\uff09\uff1a\u5b8c\u6574\u64ad\u653e final-video.mp4 \u540e\u518d\u7ed9\u53e3\u4ee4 \u786e\u8ba4G5"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/G5-\u5fc5\u68c0\u5e27\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/human-review-decision.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/cover.jpg",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitles.srt",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitle-srt-check.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/transition-audit.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/loudness-audit.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/edit-plan.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/export-config.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-09-29T11:16:50+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md": "F4AB7DC359D545FB909D36A273838E94D444FC433973EC0356B9EB17BA4902CB",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md": "A5335BFCB6DD28D329A5A52C3A97D0D3EED8421E569E8D56BE11E419441C649E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/G5-\u5fc5\u68c0\u5e27\u6e05\u5355-v0.1.json": "3165C8F0C6758D7324B08B3D71E96F8DB56E265D6C4ADCF671719BD72E6777B5",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json": "B5AD7F43E99C25C68899BCE62E53445BEB8F59741BD4BF10B512E5AE1BBBBC30",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/human-review-decision.json": "4767F3AADFB99A0778F951007C84507C79F6655C4C3E956482450CECB377D287",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json": "F9EF6E3998A66ACAC1A3D8C72835D8FBB6E1FF9D70850BE6BB61FFD773F49B9E",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/cover.jpg": "0820C350B0C86EA686A240810E7444B3AF8B1D2F3B93A2944C7C3AD8BFFCB911",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitles.srt": "BC01D8A938BD46814862E1C901DFD2B0564AA9F20BE26DE69C802D8F778DF625",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitle-srt-check.json": "05032FCA128EC7D056FBBAB7BE6EAFABD8F40C62A0AD44E46D78F6D304ECF19F",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/transition-audit.json": "8E4B5D994617878239A17BF524A84A6AE1B482B1A9E958C42F17CE80AF3FEF32",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/loudness-audit.json": "179EEC4027E2947AFB5CB35B13B0BE041AC7A89112A44F317EEE94C1AC0DF9EF",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json": "E0529E722E98C52DF611552CC8B1A470B25F9E6C52AA81EC7236293DC13433EC",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/edit-plan.json": "19BC911DEFCAF433E3E6A880E6B8C68CC3BF6115F657FAAEB4DF22F77A78A5FE",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json": "D2548E38C59FD7BC39F7331B5B872430374611CB9AA45C12763C7BF035690022",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/export-config.json": "F7E033B774F2BCF12991CDD1A6F3651DA8CD3DAD37632FBA4F68A23FAEFCEE10",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json": "35C7B2C6F3017DDC0EEEC1465B04AB08585BAE370D62C54260F820BF2D983ED5",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md": "5B4DA018DCDF59577E24A703710D3A0F596DCC64CAB6351B0064F50E8BB557C0",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/\u95ee\u9898\u6e05\u5355-v0.1.md": "5DF489CC0BD28B5AFD06AF457FCECA5716488B9F0D6B8816E96FCD977C2E9493",
+          "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json": "FD7DB58E3CB0F4707B94CEE0EFBB836C15D1BCD24EBCDA6B04A113A496229CFE"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "\u786e\u8ba4 G5",
+        "approvalResponse": "\u786e\u8ba4 G5",
+        "approvalTokenVerbatim": "\u786e\u8ba4G5",
+        "approvalResponseVerbatim": "\u786e\u8ba4G5",
+        "normalizedFromVariant": true,
+        "approvedAt": "2026-09-29T03:21:19Z",
+        "approvalSource": "host-session",
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/zaku-intro-003/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [
+    "\u54cd\u5ea6\u6210\u7247\u5b9e\u6d4b -15.5 LUFS \u5bf9\u76ee\u6807 -14.0 \u8d85\u5bb9\u5dee 1.5 LU\uff08disclosed-exceedance\uff0cG2 \u51fa\u8defA \u8ba9\u6b65\u5e45\u5ea6\uff0c\u4eba\u5de5\u70b9\u540d\u63a5\u53d7\uff09",
+    "BGM Devil Game (Phonk) \u672a\u6e05\u6743\uff1a\u5bf9\u5916\u53d1\u5e03\u5fc5\u987b\u6362\u66f2\u91cd\u8d70 G4",
+    "bilibili \u6c34\u5370+SUNRISE \u53f0\u6807\u4e0d\u53ef\u88c1\u9664\uff08internal_test \u8fb9\u754c\u5185\u4fdd\u7559\uff09"
+  ],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-09-28T08:20:21Z",
+  "updatedAt": "2026-09-29T03:21:19Z"
+}

@@ -1,0 +1,916 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "techno",
+    "tags": "music",
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "techno"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 60.0,
+    "appliedMinSec": 60.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-09-28T17:05:04+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 690472,
+      "title": "City parking lot ambience with techno music from box training room, road traffic and city hum at night",
+      "author": "felix.blume",
+      "sourceUrl": "https://freesound.org/s/690472/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 209.031,
+      "tags": [
+        "29Palms",
+        "Blume",
+        "California",
+        "Felix",
+        "Felixblume",
+        "USA",
+        "ambience",
+        "box",
+        "cars",
+        "city",
+        "field-recording",
+        "fitness"
+      ],
+      "styleTags": [
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T16:59:40+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-690472-preview.mp3",
+      "sha256": "DBDC65019C380C2FCC9613F360AA5E03E0A9D299A0F72BB3673B3807CA73A736",
+      "byteSize": 4682640
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 359163,
+      "title": "Synth Loop 15.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/359163/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 15.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 5.66887,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:45+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359163-preview.mp3",
+      "sha256": "AD826C139DCAFE603C0C3FD727D396EF3273ECA89F4CD61B49059BF158265451",
+      "byteSize": 131520
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 359162,
+      "title": "Synth Loop 16.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/359162/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 16.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 6.16431,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:47+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359162-preview.mp3",
+      "sha256": "CE8711430B401FA8EF41D095AA0D86A3A60F431916FF3C41D089C873BA50787C",
+      "byteSize": 144000
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 359158,
+      "title": "Synth Loop 10.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/359158/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 10.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 4.05837,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:49+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359158-preview.mp3",
+      "sha256": "2ADA356D739FFEF02BA7A23955CD768FA06874B813927BA01386AC2009DCBF3F",
+      "byteSize": 122784
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 359109,
+      "title": "Music Loop 2.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/359109/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Music Loop 2.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 5.57275,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "granular",
+        "groovy",
+        "improvised",
+        "loop",
+        "music",
+        "rhythmic",
+        "sound",
+        "stabs",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-28T17:00:51+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-359109-preview.mp3",
+      "sha256": "8B5AC3E74812A60DF6257F10C694D9B69E3787FB3322D02CB1E7E2489F251BCF",
+      "byteSize": 153984
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360406,
+      "title": "FriendlyTechno.mp3",
+      "author": "Deathstardude",
+      "sourceUrl": "https://freesound.org/s/360406/",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"FriendlyTechno.mp3\" by Deathstardude (http://creativecommons.org/licenses/by/3.0/)",
+      "durationSecProbe": 8.02066,
+      "tags": [
+        "bounce",
+        "club",
+        "dance",
+        "drop",
+        "dub-step",
+        "dubstep",
+        "effect",
+        "electronic",
+        "friendly",
+        "glitch-hop",
+        "house",
+        "music"
+      ],
+      "styleTags": [
+        "electronic",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:54+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360406-preview.mp3",
+      "sha256": "B5D10847B9767E1EE17D30F89A6706DC21101B0A018B8D67FF0A7663C5CC83E1",
+      "byteSize": 191348
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360315,
+      "title": "Synth Loop 6.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360315/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 6.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 4.51625,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:57+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360315-preview.mp3",
+      "sha256": "7AC3EDEDFD89B365A973E9797FB657534CD2572561930FD30E8CD019DAF549AB",
+      "byteSize": 108480
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360314,
+      "title": "Synth Loop 7.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360314/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 7.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 9.28973,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:00:59+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360314-preview.mp3",
+      "sha256": "348251BB8668C4529F11E094C60115003C8D4CC9433F4E7F5B6BD03EB2237D07",
+      "byteSize": 205056
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360313,
+      "title": "Synth Loop 17.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360313/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 17.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 13.6707,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:01:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360313-preview.mp3",
+      "sha256": "3B076DEEF0AF0E4A5DC885E94C79FBADBE6B63503B3CAD906DE937B49D2EE9D1",
+      "byteSize": 320448
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360311,
+      "title": "Synth Loop 19.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360311/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 19.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 15.6699,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:01:11+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360311-preview.mp3",
+      "sha256": "B08C3DDD749B8F096FAAA877660DCC594084D9FE60406E83798121C438562611",
+      "byteSize": 372096
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360310,
+      "title": "Synth Loop 2.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360310/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 2.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 13.1657,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:01:16+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360310-preview.mp3",
+      "sha256": "2275E79F8B0D43DCA3EED3F5F923ADD7906612D3D161A09F3FD67195C1DCC7D8",
+      "byteSize": 322224
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 505102,
+      "title": "TECHNO PERCUSSION LOOPS 130 BPM.wav",
+      "author": "Cyclez",
+      "sourceUrl": "https://freesound.org/s/505102/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"TECHNO PERCUSSION LOOPS 130 BPM.wav\" by Cyclez (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 14.7693,
+      "tags": [
+        "130",
+        "bpm",
+        "loop",
+        "music",
+        "percussion",
+        "sample",
+        "techno"
+      ],
+      "styleTags": [
+        "steady",
+        "orchestral",
+        "percussive",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T17:01:21+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-505102-preview.mp3",
+      "sha256": "9CE4D8A52A323C593B3CFD36C755E9F88157F40F81C4268B31F2C3E049B625CA",
+      "byteSize": 349471
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 53281,
+      "title": "techno loop 2.wav",
+      "author": "THE_bizniss",
+      "sourceUrl": "https://freesound.org/s/53281/",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"techno loop 2.wav\" by THE_bizniss (http://creativecommons.org/licenses/by/3.0/)",
+      "durationSecProbe": 8.00522,
+      "tags": [
+        "door",
+        "file",
+        "fl",
+        "front",
+        "fruity",
+        "hard",
+        "loop",
+        "loops",
+        "music",
+        "my",
+        "opening",
+        "sample"
+      ],
+      "styleTags": [
+        "driving",
+        "steady",
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T17:01:26+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-53281-preview.mp3",
+      "sha256": "9AD9613FEDDAABFBAF9AEEF7B23E5A2903C9F4E96DF0C3140D120F247283ACA2",
+      "byteSize": 222443
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 377540,
+      "title": "Axon 01 - Techno track loop",
+      "author": "frankum",
+      "sourceUrl": "https://freesound.org/s/377540/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Axon 01 - Techno track loop\" by frankum (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 103.385,
+      "tags": [
+        "Techno",
+        "beat",
+        "club",
+        "dance",
+        "electro",
+        "electronic",
+        "house",
+        "kick",
+        "leads",
+        "loop",
+        "music",
+        "original"
+      ],
+      "styleTags": [
+        "electronic",
+        "driving",
+        "steady",
+        "orchestral",
+        "percussive"
+      ],
+      "retrievedAt": "2026-09-28T17:01:30+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-377540-preview.mp3",
+      "sha256": "2E5622A7CDB571A35C9A0AFCAFD29FB69B945D9139D681225D8DFCA8D625F49D",
+      "byteSize": 3046658
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 320499,
+      "title": "Techno bass drum and loco lead.",
+      "author": "frankum",
+      "sourceUrl": "https://freesound.org/s/320499/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Techno bass drum and loco lead.\" by frankum (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 144.0,
+      "tags": [
+        "Techno",
+        "bass",
+        "beat",
+        "bounce",
+        "club",
+        "dance",
+        "disco",
+        "drum",
+        "effect",
+        "electro",
+        "electronic",
+        "frankumjay"
+      ],
+      "styleTags": [
+        "electronic",
+        "driving",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:02:11+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-320499-preview.mp3",
+      "sha256": "128BCC02CCC67763E3D817F0B91CCAC5E465FB47909C57948D16A9352F766017",
+      "byteSize": 3400647
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360312,
+      "title": "Synth Loop 18.wav",
+      "author": "BConstructSound",
+      "sourceUrl": "https://freesound.org/s/360312/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Synth Loop 18.wav\" by BConstructSound (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 3.75171,
+      "tags": [
+        "design",
+        "electronic",
+        "experimental",
+        "line",
+        "loop",
+        "music",
+        "oneshot",
+        "pack",
+        "sample",
+        "sound",
+        "stab",
+        "synth"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:02:56+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360312-preview.mp3",
+      "sha256": "5ABAB841DF64B7EBB2975598FB47151DC4744C23E5343EB306B688D9BECDD201",
+      "byteSize": 92976
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 407385,
+      "title": "Chorus music - Techno loop",
+      "author": "frankum",
+      "sourceUrl": "https://freesound.org/s/407385/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Chorus music - Techno loop\" by frankum (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 104.002,
+      "tags": [
+        "Chorus",
+        "Techno",
+        "bass",
+        "dance",
+        "drum-loop",
+        "electronic",
+        "groovy",
+        "kick",
+        "loop",
+        "music",
+        "original",
+        "percs"
+      ],
+      "styleTags": [
+        "electronic",
+        "percussive",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-09-28T17:02:57+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-407385-preview.mp3",
+      "sha256": "F588E06F68A5627AC7EFC628DC5897990135418130ACD6C3B4D95CD405E3B96F",
+      "byteSize": 2468686
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 565044,
+      "title": "Hillbilly Techno Rock Loop.wav",
+      "author": "BaDoink",
+      "sourceUrl": "https://freesound.org/s/565044/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 88.241,
+      "tags": [
+        "Backing",
+        "Bass",
+        "Drums",
+        "Effects",
+        "Hillbilly",
+        "Loop",
+        "Music",
+        "Rock",
+        "Techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "steady",
+        "orchestral",
+        "rock",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T17:03:29+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-565044-preview.mp3",
+      "sha256": "95A788879AF6F40903C41EECE8E8E0FFD4AB3C64C41165C3F2704434C72E68FF",
+      "byteSize": 2023042
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 701528,
+      "title": "Techno Lite Drums 130 BPM",
+      "author": "carloseton",
+      "sourceUrl": "https://freesound.org/s/701528/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 182.769,
+      "tags": [
+        "Drums",
+        "dance",
+        "music",
+        "rhythm",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-09-28T17:03:55+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-701528-preview.mp3",
+      "sha256": "187FF295C9494B684E530F70BD8507278CB8BF7621E01203A79E991E51709182",
+      "byteSize": 4445280
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 579576,
+      "title": "Dance Lofi Minimal Techno - 60 BPM",
+      "author": "szegvari",
+      "sourceUrl": "https://freesound.org/s/579576/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 29.7964,
+      "tags": [
+        "Cinematic",
+        "Club",
+        "Dance",
+        "EDM",
+        "Electric",
+        "Electro",
+        "Electronic",
+        "Film",
+        "Lead",
+        "Lofi",
+        "Minimal",
+        "Movie"
+      ],
+      "styleTags": [
+        "epic",
+        "electronic",
+        "orchestral",
+        "ambient-low"
+      ],
+      "retrievedAt": "2026-09-28T17:04:54+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-579576-preview.mp3",
+      "sha256": "1BF79B1F5EB6447539814187A6E5FE0518C4BCF7DBF527F148D36DB94256F5B3",
+      "byteSize": 750121
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 530492,
+      "name": "Dark Techno Kick.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 353897,
+      "name": "Synth Loop 1.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 222797,
+      "name": "Berlin techno loop.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 353896,
+      "name": "Synth Loop 5.wav",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "perQuery": [
+    {
+      "query": "techno",
+      "returned": 60,
+      "cap": 20,
+      "kept": 20
+    }
+  ],
+  "sufficiency": {
+    "count": 20,
+    "minimumExpected": 3
+  }
+}

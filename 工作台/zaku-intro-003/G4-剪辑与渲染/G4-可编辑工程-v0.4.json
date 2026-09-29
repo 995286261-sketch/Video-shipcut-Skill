@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "zaku-intro-003",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/zaku-intro-003/G3-剪辑计划/G3-剪辑计划-v0.4.json",
+  "inputEvidence": "工作台/zaku-intro-003/G2-证据与口播/G2-证据清单-v0.1.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 12,
+  "timelineDurationMs": 67547,
+  "targetDurationMs": 60000,
+  "durationDeltaMs": 7547,
+  "targetFps": 30,
+  "loudnessTarget": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "segments": [
+    {
+      "segmentId": "seg-001",
+      "order": 1,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 3540,
+        "endMs": 10210,
+        "durationMs": 6670
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 6670,
+        "durationMs": 6670
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 3540,
+        "endMs": 10210,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-002",
+      "order": 2,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 11640,
+        "endMs": 18736,
+        "durationMs": 7096
+      },
+      "timeline": {
+        "startMs": 6670,
+        "endMs": 13766,
+        "durationMs": 7096
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 11640,
+        "endMs": 18736,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-003",
+      "order": 3,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 29710,
+        "endMs": 36136,
+        "durationMs": 6426
+      },
+      "timeline": {
+        "startMs": 13766,
+        "endMs": 20192,
+        "durationMs": 6426
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 29710,
+        "endMs": 36136,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-004a",
+      "order": 4,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 52236,
+        "endMs": 55436,
+        "durationMs": 3200
+      },
+      "timeline": {
+        "startMs": 20192,
+        "endMs": 23392,
+        "durationMs": 3200
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 52236,
+        "endMs": 55436,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-004b",
+      "order": 5,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 57940,
+        "endMs": 61281,
+        "durationMs": 3341
+      },
+      "timeline": {
+        "startMs": 23392,
+        "endMs": 26733,
+        "durationMs": 3341
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 57940,
+        "endMs": 61281,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-005",
+      "order": 6,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 65880,
+        "endMs": 74668,
+        "durationMs": 8788
+      },
+      "timeline": {
+        "startMs": 26733,
+        "endMs": 35521,
+        "durationMs": 8788
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 65880,
+        "endMs": 74668,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-006a",
+      "order": 7,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 21380,
+        "endMs": 29710,
+        "durationMs": 8330
+      },
+      "timeline": {
+        "startMs": 35521,
+        "endMs": 43851,
+        "durationMs": 8330
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 21380,
+        "endMs": 29710,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-006b",
+      "order": 8,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 49310,
+        "endMs": 51711,
+        "durationMs": 2401
+      },
+      "timeline": {
+        "startMs": 43851,
+        "endMs": 46252,
+        "durationMs": 2401
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 49310,
+        "endMs": 51711,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 100
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-007",
+      "order": 9,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 107110,
+        "endMs": 110023,
+        "durationMs": 2913
+      },
+      "timeline": {
+        "startMs": 46252,
+        "endMs": 49165,
+        "durationMs": 2913
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 107110,
+        "endMs": 110023,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 100,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-008",
+      "order": 10,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 39980,
+        "endMs": 48141,
+        "durationMs": 8161
+      },
+      "timeline": {
+        "startMs": 49165,
+        "endMs": 57326,
+        "durationMs": 8161
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 39980,
+        "endMs": 48141,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-009",
+      "order": 11,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 98410,
+        "endMs": 105477,
+        "durationMs": 7067
+      },
+      "timeline": {
+        "startMs": 57326,
+        "endMs": 64393,
+        "durationMs": 7067
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 98410,
+        "endMs": 105477,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 100
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-010",
+      "order": 12,
+      "assetId": "source-02-1080p-734dd167",
+      "source": {
+        "relativePath": "02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+        "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+        "startMs": 114755,
+        "endMs": 117909,
+        "durationMs": 3154
+      },
+      "timeline": {
+        "startMs": 64393,
+        "endMs": 67547,
+        "durationMs": 3154
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 114755,
+        "endMs": 117909,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 100,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    }
+  ],
+  "transitionDirective": {
+    "path": "工作台/zaku-intro-003/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "7C92E4FF11DF4D1DF3972261A411C399366E2A145F7D6598298CD087DCB256B4",
+    "boundaries": 2,
+    "masterFades": {
+      "fadeInMs": 0,
+      "fadeOutMs": 0
+    }
+  },
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

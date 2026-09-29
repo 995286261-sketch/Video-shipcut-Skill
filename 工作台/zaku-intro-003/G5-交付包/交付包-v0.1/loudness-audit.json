@@ -1,0 +1,48 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_verify",
+  "schemaVersion": "0.1",
+  "projectId": "zaku-intro-003",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G5-交付包/交付包-v0.1/final-video.mp4",
+  "version": "v0.1",
+  "output": "工作台/zaku-intro-003/G5-交付包/交付包-v0.1/响度-验收审计-v0.1.json",
+  "status": "disclosed-exceedance",
+  "planRef": "工作台/zaku-intro-003/G4-剪辑与渲染/响度/响度-归一化计划-v0.1.json",
+  "planVersion": "v0.1",
+  "planStatus": "blocked_true-peak",
+  "planRefSha256": "6A7B16094A2F52789FF926CD33D1E83791E8D56968FA2937A32D0320B6834F28",
+  "assemblyRef": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/zaku-intro-003/G4-剪辑与渲染/G4-候选成片-v0.1-装配记录-v0.1.json",
+    "sha256": "470EA82A2280DBF815E3B09780B216BE8E88B3FDC5821C6C08CFA7DDBCBDBD7A"
+  },
+  "targetProfile": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "toleranceLu": 1.0,
+  "toleranceSource": "合同默认",
+  "tpSlackDb": 0.3,
+  "masterMeasured": {
+    "integratedLufs": -15.5,
+    "truePeakDbtp": -2.8,
+    "loudnessRangeLu": 2.6,
+    "engine": "ffmpeg-ebur128"
+  },
+  "checks": [
+    {
+      "check": "integratedWithinTolerance",
+      "pass": false,
+      "detail": "实测 -15.5 vs 目标 -14.0，偏差 -1.5 LU（容差 ±1.0 LU）"
+    },
+    {
+      "check": "truePeakWithinCeiling",
+      "pass": true,
+      "detail": "实测 TP -2.8 vs 上限 -1.5 dBTP（防回退余量 0.3）"
+    }
+  ],
+  "masterSha256": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D",
+  "disclosureNote": "blocked 档合法交付形态：整片实测超容差=G2 出路卡批准过的让步幅度（G4 记账已摊开并经用户确认）。G5 卡必须人话摊开本数字，人工 acceptedWarnings 点名响度后方可关单——永不静默。",
+  "failNote": null,
+  "verifiedAt": "2026-09-29T03:06:21Z"
+}

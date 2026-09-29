@@ -1,0 +1,320 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G5",
+ "sourceProbe": [
+  {
+   "assetId": "source-02-1080p-734dd167",
+   "sha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceProbe": {
+    "durationMs": 117909,
+    "video": {
+     "codec": "h264",
+     "width": 1920,
+     "height": 1080,
+     "frameRate": "30/1"
+    },
+    "audio": {
+     "codec": "aac",
+     "sampleRate": 48000,
+     "channels": 2
+    }
+   }
+  }
+ ],
+ "segments": [
+  {
+   "segmentId": "seg-001",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 3540,
+   "sourceEndMs": 10210,
+   "outputStartMs": 0,
+   "outputEndMs": 6670,
+   "layoutTier": "留白",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-002",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 11640,
+   "sourceEndMs": 18736,
+   "outputStartMs": 6670,
+   "outputEndMs": 13766,
+   "layoutTier": "常规",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-003",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 29710,
+   "sourceEndMs": 36136,
+   "outputStartMs": 13766,
+   "outputEndMs": 20192,
+   "layoutTier": "常规",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-004a",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 52236,
+   "sourceEndMs": 55436,
+   "outputStartMs": 20192,
+   "outputEndMs": 23392,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-004b",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 57940,
+   "sourceEndMs": 61281,
+   "outputStartMs": 23392,
+   "outputEndMs": 26733,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-005",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 65880,
+   "sourceEndMs": 74668,
+   "outputStartMs": 26733,
+   "outputEndMs": 35521,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-006a",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 21380,
+   "sourceEndMs": 29710,
+   "outputStartMs": 35521,
+   "outputEndMs": 43851,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-006b",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 49310,
+   "sourceEndMs": 51711,
+   "outputStartMs": 43851,
+   "outputEndMs": 46252,
+   "layoutTier": "推进",
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-007",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 107110,
+   "sourceEndMs": 110023,
+   "outputStartMs": 46252,
+   "outputEndMs": 49165,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-008",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 39980,
+   "sourceEndMs": 48141,
+   "outputStartMs": 49165,
+   "outputEndMs": 57326,
+   "layoutTier": "快切",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-009",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 98410,
+   "sourceEndMs": 105477,
+   "outputStartMs": 57326,
+   "outputEndMs": 64393,
+   "layoutTier": "快切",
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-010",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 114755,
+   "sourceEndMs": 117909,
+   "outputStartMs": 64393,
+   "outputEndMs": 67547,
+   "layoutTier": "快切",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  }
+ ],
+ "editPlan": {
+  "timeline": [
+   {
+    "segmentId": "seg-001",
+    "order": 1
+   },
+   {
+    "segmentId": "seg-002",
+    "order": 2
+   },
+   {
+    "segmentId": "seg-003",
+    "order": 3
+   },
+   {
+    "segmentId": "seg-004a",
+    "order": 4
+   },
+   {
+    "segmentId": "seg-004b",
+    "order": 5
+   },
+   {
+    "segmentId": "seg-005",
+    "order": 6
+   },
+   {
+    "segmentId": "seg-006a",
+    "order": 7
+   },
+   {
+    "segmentId": "seg-006b",
+    "order": 8
+   },
+   {
+    "segmentId": "seg-007",
+    "order": 9
+   },
+   {
+    "segmentId": "seg-008",
+    "order": 10
+   },
+   {
+    "segmentId": "seg-009",
+    "order": 11
+   },
+   {
+    "segmentId": "seg-010",
+    "order": 12
+   }
+  ]
+ },
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "BCC087A42B18E94E899ED7A6BBB07377B94C5244324C93F23EAC6530E0A5715D"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "0820C350B0C86EA686A240810E7444B3AF8B1D2F3B93A2944C7C3AD8BFFCB911"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "BC01D8A938BD46814862E1C901DFD2B0564AA9F20BE26DE69C802D8F778DF625"
+  },
+  "subtitleSrtCheck": {
+   "path": "subtitle-srt-check.json"
+  },
+  "transitionAudit": {
+   "path": "transition-audit.json"
+  },
+  "loudnessAudit": {
+   "path": "loudness-audit.json"
+  },
+  "bgmChainAudit": {
+   "path": "bgm-chain-audit.json"
+  },
+  "sourceTimecodeList": {
+   "path": "source-timecode-list.json"
+  },
+  "editPlan": {
+   "path": "edit-plan.json"
+  },
+  "exportConfig": {
+   "path": "export-config.json"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/ch-01.mp4",
+    "sha256": "B664E115AB9A2072B8469C7176DB7449128F372F39D9B84C81085531D7AE87A1"
+   },
+   {
+    "path": "clips/ch-02.mp4",
+    "sha256": "25DF187AD73CA963458CAE5D766CACD015D3BD602DD26AD79156BA15498C017B"
+   },
+   {
+    "path": "clips/ch-03.mp4",
+    "sha256": "0DB7620562B660CF3A3A3935E0E6A509522A2913544304492EA4CE7847B1D92E"
+   },
+   {
+    "path": "clips/ch-04.mp4",
+    "sha256": "27C78FF6C34D99F0B65F699CF2D2633820E5728209D44ACF718795770F0368B7"
+   },
+   {
+    "path": "clips/ch-05.mp4",
+    "sha256": "750ABE8847E29014DC4D72E868C796743997D7A9EE6FCE74BF5C3A64103A9C60"
+   }
+  ],
+  "editTimeline": {
+   "path": "edit-timeline.md",
+   "sha256": "0F6C7E759CF82C30C4D3D5D42A863040A5D344DACEA8B54EFCFAD1DC943F6F3F"
+  }
+ },
+ "qaReport": "metadata-validation-report.json",
+ "humanReviewPoints": [
+  "八列终审表逐行：切点/画面观察/语义匹配/BGM 乐句/转场指令",
+  "目标主体确认卡（扎古家族识别/排除规则）随终审再呈报",
+  "N09 句尾 +218ms 超容差=G2 门禁已批\"甲 接受披露\"，本卡复核",
+  "未落入机器合同的风格规则：规格/数据信息卡（G1 规则2）——本片以字幕信息层承载，是否补独立信息卡由用户裁决",
+  "封面候选=成片 40.0s 红扎古长镜头帧（含 bilibili 水印，internal_test 边界内）"
+ ],
+ "humanReviewDecision": "human-review-decision.json",
+ "evidenceRefs": [
+  "工作台/zaku-intro-003/G2-证据与口播/G2-审核决定-v0.1.json",
+  "工作台/zaku-intro-003/G3-剪辑计划/G3-门禁收据.json",
+  "工作台/zaku-intro-003/G4-剪辑与渲染/G4-门禁收据.json",
+  "工作台/zaku-intro-003/G4-剪辑与渲染/G4-渲染验证-v0.1.json",
+  "工作台/zaku-intro-003/G5-交付包/交付包-v0.1/subtitle-srt-check.json",
+  "工作台/zaku-intro-003/G5-交付包/交付包-v0.1/transition-audit.json",
+  "工作台/zaku-intro-003/G5-交付包/交付包-v0.1/loudness-audit.json",
+  "工作台/zaku-intro-003/G5-交付包/交付包-v0.1/bgm-chain-audit.json",
+  "工作台/zaku-intro-003/问题清单-v0.1.md"
+ ],
+ "warnings": [
+  "响度成片实测 -15.5 LUFS 对目标 -14.0 超容差 1.5 LU（disclosed-exceedance，需人工点名接受）",
+  "BGM Devil Game 未清权：对外发布必须换曲重走 G4",
+  "全片 bilibili 水印+SUNRISE 台标不可裁除（internal_test 边界内保留）"
+ ],
+ "authorization": "画面：用户提供的第三方混剪素材（日升 IP 二创，UP 主 大鼻子哈瑞），仅限内部测试；BGM：Devil Game (Phonk) netease-2679274856，个人/内测轨 uncleared——对外发布必须换曲重走 G4；源英文歌音轨已排除。详见 G0/04_授权说明.md",
+ "distribution": "internal_test",
+ "status": "completed",
+ "finishedAt": "2026-09-29T11:16:50+08:00",
+ "componentRefs": {
+  "traceability": "source-timecode-list.json",
+  "editPlan": "edit-plan.json",
+  "exportConfig": "export-config.json",
+  "qa": "metadata-validation-report.json",
+  "humanReview": "human-review-decision.json"
+ }
+}

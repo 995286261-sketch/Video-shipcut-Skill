@@ -1,0 +1,217 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "zaku-intro-003",
+ "node": "G5",
+ "sourceAssets": [
+  {
+   "assetId": "source-02-1080p-734dd167",
+   "sourcePath": "工作台/zaku-intro-003/G0-素材包/02_原始素材/扎古才是男人的浪漫-混剪源-1080P.mp4",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335"
+  }
+ ],
+ "segments": [
+  {
+   "segmentId": "seg-001",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 3540,
+   "sourceEndMs": 10210,
+   "outputStartMs": 0,
+   "outputEndMs": 6670,
+   "layoutTier": "留白",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-002",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 11640,
+   "sourceEndMs": 18736,
+   "outputStartMs": 6670,
+   "outputEndMs": 13766,
+   "layoutTier": "常规",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-003",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 29710,
+   "sourceEndMs": 36136,
+   "outputStartMs": 13766,
+   "outputEndMs": 20192,
+   "layoutTier": "常规",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-004a",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 52236,
+   "sourceEndMs": 55436,
+   "outputStartMs": 20192,
+   "outputEndMs": 23392,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-004b",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 57940,
+   "sourceEndMs": 61281,
+   "outputStartMs": 23392,
+   "outputEndMs": 26733,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-005",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 65880,
+   "sourceEndMs": 74668,
+   "outputStartMs": 26733,
+   "outputEndMs": 35521,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-006a",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 21380,
+   "sourceEndMs": 29710,
+   "outputStartMs": 35521,
+   "outputEndMs": 43851,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-006b",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 49310,
+   "sourceEndMs": 51711,
+   "outputStartMs": 43851,
+   "outputEndMs": 46252,
+   "layoutTier": "推进",
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-007",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 107110,
+   "sourceEndMs": 110023,
+   "outputStartMs": 46252,
+   "outputEndMs": 49165,
+   "layoutTier": "推进",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-008",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 39980,
+   "sourceEndMs": 48141,
+   "outputStartMs": 49165,
+   "outputEndMs": 57326,
+   "layoutTier": "快切",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  },
+  {
+   "segmentId": "seg-009",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 98410,
+   "sourceEndMs": 105477,
+   "outputStartMs": 57326,
+   "outputEndMs": 64393,
+   "layoutTier": "快切",
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 200
+  },
+  {
+   "segmentId": "seg-010",
+   "assetId": "source-02-1080p-734dd167",
+   "sourceSha256": "AA6DFCCCB1B27CEB4DA523561FAEF8A04EDE82F221A1F10181781492AADAA335",
+   "sourceStartMs": 114755,
+   "sourceEndMs": 117909,
+   "outputStartMs": 64393,
+   "outputEndMs": 67547,
+   "layoutTier": "快切",
+   "transitionInstruction": "硬切",
+   "transitionDurationMs": null
+  }
+ ],
+ "chapters": [
+  {
+   "chapterId": "ch-01",
+   "title": "开场：绕不开的量产机",
+   "output": "clips/ch-01.mp4",
+   "outputStartMs": 0,
+   "outputEndMs": 13766,
+   "segments": [
+    "seg-001",
+    "seg-002"
+   ]
+  },
+  {
+   "chapterId": "ch-02",
+   "title": "量产规模与三件套",
+   "output": "clips/ch-02.mp4",
+   "outputStartMs": 13766,
+   "outputEndMs": 35521,
+   "segments": [
+    "seg-003",
+    "seg-004a",
+    "seg-004b",
+    "seg-005"
+   ]
+  },
+  {
+   "chapterId": "ch-03",
+   "title": "夏亚：量产机出王牌",
+   "output": "clips/ch-03.mp4",
+   "outputStartMs": 35521,
+   "outputEndMs": 49165,
+   "segments": [
+    "seg-006a",
+    "seg-006b",
+    "seg-007"
+   ]
+  },
+  {
+   "chapterId": "ch-04",
+   "title": "乔尼与高潮收束",
+   "output": "clips/ch-04.mp4",
+   "outputStartMs": 49165,
+   "outputEndMs": 64393,
+   "segments": [
+    "seg-008",
+    "seg-009"
+   ]
+  },
+  {
+   "chapterId": "ch-05",
+   "title": "互动收尾",
+   "output": "clips/ch-05.mp4",
+   "outputStartMs": 64393,
+   "outputEndMs": 67547,
+   "segments": [
+    "seg-010"
+   ]
+  }
+ ]
+}

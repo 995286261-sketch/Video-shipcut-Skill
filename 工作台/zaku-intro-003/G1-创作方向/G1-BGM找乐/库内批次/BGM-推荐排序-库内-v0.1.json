@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommendation",
+  "profile": {
+    "schemaVersion": "0.1",
+    "purpose": "bgm_recommend_profile",
+    "project": "zaku-intro-003",
+    "targetDurationSec": 60,
+    "bpmRange": [
+      110.7,
+      135.4
+    ],
+    "minSegments": 3,
+    "styleTags": [
+      "electronic",
+      "dark",
+      "driving",
+      "building",
+      "mysterious"
+    ],
+    "distributionBoundary": "internal_test",
+    "styleBrief": {
+      "schemaVersion": "0.1",
+      "purpose": "reference_music_style_brief",
+      "sourceTitle": "冷战奇迹-逆羽雄鹰-1080P",
+      "sourceReport": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+      "bpm": 123.05,
+      "bpmRange": [
+        110.7,
+        135.4
+      ],
+      "durationMs": 163029,
+      "energyShape": [
+        0.894,
+        0.795,
+        0.74,
+        0.989,
+        0.848,
+        0.925,
+        0.843,
+        0.769,
+        0.956,
+        0.815,
+        0.907,
+        0.915,
+        1.0,
+        0.968,
+        0.924,
+        0.584
+      ],
+      "shapeBuckets": 16,
+      "shapeBucketMs": 10189,
+      "segmentCount": 8,
+      "usage": "检索与推荐输入；energyShape 为 16 桶均值曲线（消除解说音轨逐句 ducking 周期噪声，保留宏观能量形状）；suggestedQueryTerms 由 Agent 依情绪/风格补写，本文件只承载机器事实",
+      "suggestedQueryTerms": []
+    },
+    "earsPortrait": "1) 曲风流派：Industrial Techno / EBM (电子身体音乐)。\n2) BPM区间：125-135。\n3) 主要乐器与音色：强劲的四四拍鼓机、失真且富有侵略性的合成器贝斯线、带有金属质感的工业打击乐采样。\n4) 节奏型：具有非常持续和强烈的驱动感，节奏是音乐的核心，充满向前推进的能量。\n5) 情绪与气质：紧张、冷酷、充满力量感和未来主义色彩，营造出一种机械、严肃且高压的氛围。\n6) 英文检索词：Industrial, Techno, Driving, Dark, Aggressive。",
+    "note": "styleTags 逐词=《参照曲风格画像》耳朵证据原词（003-④/⑤ 纪律：禁裸脑补）；zaku-intro-003 实测跑·响度接线全流程",
+    "tagMapping": {
+      "industrial techno": "genre=electronic",
+      "EBM": "genre=electronic",
+      "dark": "mood=dark",
+      "driving": "energy=driving",
+      "aggressive synth": "energy=building/mood=mysterious（词表无 aggressive，就近映射并留原词于 earsPortrait）"
+    }
+  },
+  "minScore": 0.7,
+  "ranked": [
+    {
+      "title": "Devil Game (Phonk)",
+      "freesoundId": null,
+      "neteaseId": 2679274856,
+      "provenance": "netease",
+      "sourceUrl": "https://music.163.com/song?id=2679274856",
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2679274856-Devil_Game_(Phonk).mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": false,
+      "durationMs": 128036,
+      "tempoBpm": 117.45,
+      "integratedLufs": -6.3,
+      "hitPointCount": 536,
+      "styleTags": [],
+      "sha256": "9F61EA0B9802430B7A92932AD194D41F9DA5F6C35BD7E233CD9E1ACFC812D0E7",
+      "score": 0.0,
+      "notes": [
+        "decode_probe_not_passed"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:08.036"
+    },
+    {
+      "title": "Gone Bad (Phonk)",
+      "freesoundId": null,
+      "neteaseId": 2627048583,
+      "provenance": "netease",
+      "sourceUrl": "https://music.163.com/song?id=2627048583",
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2627048583-Gone_Bad(Phonk).mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": false,
+      "durationMs": 148000,
+      "tempoBpm": 117.45,
+      "integratedLufs": -7.1,
+      "hitPointCount": 532,
+      "styleTags": [],
+      "sha256": "EA2684893C898655EF018958BD61B61EB23C3C6C260AC0E689699EFC736E3E71",
+      "score": 0.0,
+      "notes": [
+        "decode_probe_not_passed"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:28.000"
+    },
+    {
+      "title": "弥渡山歌Phonk House",
+      "freesoundId": null,
+      "neteaseId": 2744664065,
+      "provenance": "netease",
+      "sourceUrl": "https://music.163.com/song?id=2744664065",
+      "previewPath": "/Users/chuanzhangbigye/工作/WorkSpace/N10-专员自测-zaku/candidates/netease-2744664065-弥渡山歌Phonk_House.mp3",
+      "licenseType": "uncleared-platform-catalog",
+      "attributionRequired": false,
+      "durationMs": 125735,
+      "tempoBpm": 123.05,
+      "integratedLufs": -6.0,
+      "hitPointCount": 497,
+      "styleTags": [],
+      "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+      "score": 0.0,
+      "notes": [
+        "decode_probe_not_passed"
+      ],
+      "infringementRisk": true,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:05.735"
+    },
+    {
+      "title": "LOW-PHONK",
+      "freesoundId": null,
+      "neteaseId": null,
+      "provenance": "manual",
+      "sourceUrl": null,
+      "previewPath": "工作台/zaku-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+      "licenseType": "cleared-for-project",
+      "attributionRequired": false,
+      "durationMs": 177875,
+      "tempoBpm": 112.35,
+      "integratedLufs": -10.2,
+      "hitPointCount": 594,
+      "styleTags": [],
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "score": 0.0,
+      "notes": [
+        "decode_probe_not_passed"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:57.875"
+    }
+  ],
+  "passing": [],
+  "unanalyzed": [],
+  "sufficiency": {
+    "passing": 0,
+    "minExpected": 3,
+    "enough": false,
+    "gapAction": "候选不足：向用户呈现 补检索 / 放宽画像 / 缩短成品 三项，不得自行拼凑"
+  },
+  "licenseWarning": "⚠ 侵权风险：3/4 条候选未清权（uncleared-platform-catalog，网易云试听选型）。平台曲库授权仅覆盖端内播放——未登记而将其用于成片即构成侵权。本池仅限 internal_test 选型；挑曲后整轨必须经官方渠道取得并经 music_register_candidate.py 登记真实许可后方可进剪辑计划。对外分发项目在任何清权完成前不得使用这些曲目。"
+}

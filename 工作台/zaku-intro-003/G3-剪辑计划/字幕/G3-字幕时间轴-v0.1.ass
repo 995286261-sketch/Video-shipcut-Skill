@@ -1,0 +1,24 @@
+[Script Info]
+Title: zaku-intro-003 G3 口播主字幕（v0.1 十句实测码）
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,PingFang SC,64,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,2,60,60,173,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:06.56,Narration,,0,0,0,,没有主角光环，没有神级装备——\N一年战争，你绕不开这台量产机。
+Dialogue: 0,0:00:06.78,0:00:13.74,Narration,,0,0,0,,MS-06 扎古 II，吉翁公国军的主力量产机动战士。
+Dialogue: 0,0:00:13.79,0:00:20.11,Narration,,0,0,0,,光是 F 型就造了三千架以上——\N全吉翁的机动战士里，量产最多的就是它。
+Dialogue: 0,0:00:20.27,0:00:26.67,Narration,,0,0,0,,120 毫米机枪、280 毫米火箭筒、\N热能斧，标准三件套。
+Dialogue: 0,0:00:26.79,0:00:35.51,Narration,,0,0,0,,外露的动力管谈不上优雅，却给了它独一无二的士兵感——\N那是普通人的浪漫，不是测试机的浪漫。
+Dialogue: 0,0:00:35.52,0:00:46.08,Narration,,0,0,0,,但量产机照样出王牌。鲁姆会战，夏亚的红色扎古\N单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。
+Dialogue: 0,0:00:46.41,0:00:49.05,Narration,,0,0,0,,赤色彗星，从此得名。
+Dialogue: 0,0:00:49.27,0:00:57.11,Narration,,0,0,0,,同一个战场，乔尼·莱登驾着量产扎古，\N用 280 火箭筒击沉三艘麦哲伦级。
+Dialogue: 0,0:00:57.53,0:01:04.25,Narration,,0,0,0,,王牌没有挑机体——是量产机和王牌互相成就。\N这，就是男人的浪漫。
+Dialogue: 0,0:01:04.52,0:01:07.48,Narration,,0,0,0,,你的扎古记忆是哪一台？评论区见。

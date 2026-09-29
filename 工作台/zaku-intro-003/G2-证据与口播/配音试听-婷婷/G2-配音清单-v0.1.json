@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G2",
+  "purpose": "narration_synthesis_measured_durations",
+  "provider": "macos_say",
+  "voice": "Tingting",
+  "voiceTier": "preview_only",
+  "tierNotice": "macOS system TTS is preview-tier only; production narration requires authorized neural TTS (e.g. Bailian CosyVoice) or a human voice (issue 028).",
+  "measuredTotalDurationMs": 65110,
+  "sentences": [
+    {
+      "sentenceId": "N01",
+      "text": "没有主角光环，没有神级装备——一年战争，你绕不开这台量产机。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N01.wav",
+      "durationMs": 6389
+    },
+    {
+      "sentenceId": "N02",
+      "text": "MS-06 扎古 II，吉翁公国军的主力量产机动战士。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N02.wav",
+      "durationMs": 5412
+    },
+    {
+      "sentenceId": "N03",
+      "text": "光是 F 型就造了三千架以上——全吉翁的机动战士里，量产最多的就是它。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N03.wav",
+      "durationMs": 7383
+    },
+    {
+      "sentenceId": "N04",
+      "text": "120 毫米机枪、280 毫米火箭筒、热能斧，标准三件套。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N04.wav",
+      "durationMs": 6888
+    },
+    {
+      "sentenceId": "N05",
+      "text": "外露的动力管谈不上优雅，却给了它独一无二的士兵感——那是普通人的浪漫，不是测试机的浪漫。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N05.wav",
+      "durationMs": 8560
+    },
+    {
+      "sentenceId": "N06",
+      "text": "但量产机照样出王牌。鲁姆会战，夏亚的红色扎古单机击沉五艘联邦战舰——四艘巡洋舰，一艘战列舰。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N06.wav",
+      "durationMs": 10105
+    },
+    {
+      "sentenceId": "N07",
+      "text": "赤色彗星，从此得名。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N07.wav",
+      "durationMs": 2493
+    },
+    {
+      "sentenceId": "N08",
+      "text": "同一个战场，乔尼·莱登驾着量产扎古，用 280 火箭筒击沉三艘麦哲伦级。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N08.wav",
+      "durationMs": 8083
+    },
+    {
+      "sentenceId": "N09",
+      "text": "王牌没有挑机体——是量产机和王牌互相成就。这，就是男人的浪漫。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N09.wav",
+      "durationMs": 6540
+    },
+    {
+      "sentenceId": "N10",
+      "text": "你的扎古记忆是哪一台？评论区见。",
+      "file": "工作台/zaku-intro-003/G2-证据与口播/配音试听-婷婷/N10.wav",
+      "durationMs": 3257
+    }
+  ],
+  "asrVerification": null,
+  "cacheKey": "6B44A9C285F5FAB2BFE9711EC8EBBC17209761157049BCA7C26AFDAE4C16D4E1"
+}
