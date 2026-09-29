@@ -39,7 +39,7 @@
 
 ## 登记产物
 
-各轨道产出的候选记录共享字段（`provenance` 区分 `freesound_api` / `manual_registration` / `netease_search`），都带 `decodeProbe`、`retrievedAt`、`license`、`distributionBoundary`。候选不是源素材，可被下游 `music_analyze.py` 进一步分析后交 `music_recommend.py` 打分。打分许可语义（2026-09-10 专员自测定案）：`uncleared-platform-catalog` 候选在 **internal_test 画像内不压分**（按声学原分排，标 `uncleared_internal_test_only`——"进剪辑计划前必须登记"由链子把关，不由打分假装），在**更严边界画像下重罚排除**（×0.3，未清权音乐不得为对外分发背书）。
+各轨道产出的候选记录共享字段（`provenance` 区分 `freesound_api` / `manual_registration` / `netease_search`），带 `retrievedAt`、`license`、`distributionBoundary`；检索/下载轨道当场跑 `decodeProbe`，手动登记与库内导出记录可以没有该字段。候选不是源素材，可被下游 `music_analyze.py` 进一步分析后交 `music_recommend.py` 打分。**解码证据两层合同（③，zaku-003 库内批次全 0 分修复）：打分门槛认两种证据——候选自带 `decodeProbe: passed`，或候选匹配到分析报告且报告 `source.sha256` 与候选身份 sha 逐字相同（报告由分析器真解码成功才落盘，在场即作证，标 `decode_via_analysis`）；两者皆无、或候选显式记 `failed`（机器失败事实不被旧报告翻案），维持零分 `decode_probe_not_passed`。**打分许可语义（2026-09-10 专员自测定案）：`uncleared-platform-catalog` 候选在 **internal_test 画像内不压分**（按声学原分排，标 `uncleared_internal_test_only`——"进剪辑计划前必须登记"由链子把关，不由打分假装），在**更严边界画像下重罚排除**（×0.3，未清权音乐不得为对外分发背书）。
 
 锚定打分（同日晚，专员自测第二轮）：画像带 `styleBrief`（用户"感觉对了"的参照曲风格简报，含 `bpm` 与 `energyShape`）时，BPM 与能量形状不再"区间内即满分"——BPM 亲缘度（半速/倍速折叠容差，30% 窗宽）占 0.30、能量曲线相似度（双曲线重采样 16 桶、min-max 归一、1−平均绝对差/0.5，动态范围 <0.02 视为平坦）占 0.15，段落数压到 0.05；时长 0.40、响度 0.10 不变。无简报时保持旧区间打分。zaku 复测：旧打分 10 首全部并列 1.000，锚定后拉开 0.896–0.738 梯度，能量形状离异的古筝曲（敌众·十面埋伏）与半速氛围曲（生龙）被降位——机器只排适配度，最终取舍在人耳。
 

@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -102,6 +103,66 @@ class MusicRecommendTests(unittest.TestCase):
         )
         self.assertEqual(2, result.returncode)
         self.assertEqual("blocked", json.loads(result.stdout)["status"])
+
+    # ---- Issue ③ (zaku-003 库内批次全 0 分) ----
+    # 库内导出/手动登记的候选没有 decodeProbe 字段。报告在场 = 分析器真解码成功的证据，
+    # 但必须按 source.sha256 逐字对上候选身份才作数；显式 failed 的探针记录是机器失败
+    # 事实，不被旧报告翻案。以下四例复用既有 run_recommend()，不新增任何子进程调用。
+
+    def rewrite_pool(self, candidates):
+        self.pool.write_text(json.dumps({"candidates": candidates}), encoding="utf-8")
+
+    def test_missing_probe_scores_via_matched_report(self):
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool[0].pop("decodeProbe")
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        top = [item for item in payload["ranked"] if item["title"] == "good-track"][0]
+        self.assertEqual(1.0, top["score"])
+        self.assertIn("decode_via_analysis", top["notes"])
+
+    def test_explicit_failed_probe_not_overridden_by_report(self):
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool[0]["decodeProbe"] = {"status": "failed", "error": "undecodable"}
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        top = [item for item in payload["ranked"] if item["title"] == "good-track"][0]
+        self.assertEqual(0.0, top["score"])
+        self.assertIn("decode_probe_not_passed", top["notes"])
+        self.assertNotIn("decode_via_analysis", top["notes"])
+
+    def test_no_probe_and_no_report_still_unanalyzed(self):
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        item = candidate("C" * 64, "no-probe-no-report", "cc0")
+        item.pop("decodeProbe")
+        pool.append(item)
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        self.assertEqual(["no-probe-no-report"], [x["title"] for x in payload["unanalyzed"]])
+        self.assertEqual(2, len(payload["ranked"]))
+
+    def test_byte_identity_scores_without_sha_field(self):
+        # 候选只带 audioPath 文件、无 sha256 字段：按文件字节算身份 sha，报告同 sha 在场 → 作证成立
+        audio = self.root / "track.mp3"
+        audio.write_bytes(b"fake-audio-bytes-for-identity")
+        sha = hashlib.sha256(audio.read_bytes()).hexdigest().upper()
+        (self.reports / f"BGM-分析报告-{sha[:8]}.json").write_text(
+            json.dumps(report(sha, 200000, 90, 4, -12)), encoding="utf-8")
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool.append({"title": "file-only-candidate", "licenseType": "cc0", "audioPath": str(audio)})
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        top = [item for item in payload["ranked"] if item["title"] == "file-only-candidate"][0]
+        self.assertEqual(1.0, top["score"])
+        self.assertIn("decode_via_analysis", top["notes"])
 
 
 if __name__ == "__main__":

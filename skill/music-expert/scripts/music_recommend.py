@@ -131,8 +131,18 @@ def score(candidate: dict, report: dict | None, profile: dict) -> tuple[float, l
     notes = []
     if report is None:
         return 0.0, ["no_analysis"]
-    if (candidate.get("decodeProbe") or {}).get("status") != "passed":
-        return 0.0, ["decode_probe_not_passed"]
+    probe_status = str((candidate.get("decodeProbe") or {}).get("status") or "").lower()
+    if probe_status != "passed":
+        # ③（zaku-003 库内批次全 0 分）：库内导出/手动登记的候选没有 decodeProbe 字段，
+        # 但分析报告在场本身就是解码证据——music_analyze 只有真解码成功才落报告，
+        # 且报告按 source.sha256 与候选身份 sha 逐字对上才会被匹配到这里。
+        # 显式 failed 的探针仍然一票零分：机器失败记录不许被旧报告翻案（保守红线）。
+        identity = (candidate_sha(candidate) or "").upper()
+        report_sha = str((report.get("source") or {}).get("sha256") or "").upper()
+        if probe_status != "failed" and identity and report_sha == identity:
+            notes.append("decode_via_analysis")
+        else:
+            return 0.0, ["decode_probe_not_passed"]
 
     style = profile.get("styleBrief") or {}
     anchor_bpm, anchor_curve = style.get("bpm"), style.get("energyShape")
