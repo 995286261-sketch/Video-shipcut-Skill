@@ -17,7 +17,14 @@ exit as an explicitly-recorded controlled-dynamic mode. This script never picks
 a target itself, and refuses a plan that drifted from the narration on disk or
 from the approved G3 packaging mirror. Deviation beyond contract tolerance
 strikes before the expensive render; --normalize-narration-lufs remains only
-for historical/manual runs without a plan (R3 non-retroactivity).
+for historical/manual runs without a plan (R3 non-retroactivity). The source-sha
+strike message carries the zaku-003 lesson (ledger item 13): the G2 plan was
+often made against the continuous audition track while assembly feeds the
+placed timeline track, so the guidance is re-plan against the placed track
+first — a re-plan whose status and targetProfile are verbatim-unchanged means
+the decision input is intact (G4 bookkeeping with old/new exit numbers shown
+side by side, no G2 reopen); only a flipped status or changed profile goes
+back to G2.
 """
 from __future__ import annotations
 
@@ -175,8 +182,12 @@ def load_loudness_plan(path: Path, narration_path: Path, manifest_project: str |
     if status == "ready" and not (isinstance(plan.get("chain"), str) and plan["chain"].strip()):
         fail("loudness plan status=ready 却没带执行 chain——产物损坏或过期，重跑 loud_plan")
     if str(plan.get("sha256", "")).upper() != sha256(narration_path):
-        fail("响度批三: 口播文件 sha 与响度计划的规划源对不上——配音在规划后被换过；"
-             "重跑 loud_plan、按新计划回 G2 重确认试听卡，不在 G4 碰运气（合同 §5 成因③）")
+        fail("响度批三: 口播文件 sha 与响度计划的规划源对不上（合同 §5 成因③）——"
+             "先对该放置轨重跑 loud_plan 再定性，不在 G4 碰运气："
+             "status 档与 targetProfile 三元组逐字不变＝试听轨→放置轨的正常一拍"
+             "（出路内嵌实测数字随轨毫分漂移如实新旧并陈记账，合同 §8.3 装配前重规划），"
+             "G4 记账换用新计划继续、不回 G2；"
+             "status 翻转／targetProfile 变／出路条数种类变＝决定输入真变了，回 G2 重确认试听卡")
     return plan
 
 

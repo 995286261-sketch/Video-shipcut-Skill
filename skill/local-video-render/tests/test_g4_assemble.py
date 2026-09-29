@@ -362,12 +362,17 @@ class G4AssembleTests(unittest.TestCase):
         self.assertIn("loud_plan", self.error_of(result))
 
     def test_loudness_plan_source_sha_drift_is_refused(self):
-        # R2 同型延伸：规划后换配音=计划失效，罢工指路重规划+回 G2 重确认。
+        # R2 同型延伸+台账⑬：换配音/放置轨进装配=计划失效罢工；
+        # 文案两情形指路——先对放置轨重跑 loud_plan，逐字一致不回 G2、有变才回 G2。
         doc = self.loud_plan_doc(sha="F" * 64)
         self.set_manifest_loudness(doc["targetProfile"])
         result = self.run_assemble(("--loudness-plan", str(self.write_loud_plan(doc))))
         self.assertEqual(2, result.returncode)
-        self.assertIn("规划源", self.error_of(result))
+        err = self.error_of(result)
+        self.assertIn("规划源", err)
+        self.assertIn("重跑 loud_plan", err)   # ⑬：第一拍=对放置轨重规划，非条件反射回 G2
+        self.assertIn("不回 G2", err)          # ⑬：决定输入未变情形的出路必须点名
+        self.assertIn("决定输入", err)         # ⑬：回 G2 仅限"任何一项变了"
 
     def test_loudness_plan_mirror_mismatch_is_refused(self):
         doc = self.loud_plan_doc()
