@@ -1,5 +1,15 @@
 # 变更记录
 
+## v1.19.0 — 2026-09-29 — **登记件机抽版本**
+
+发布范围＝zaku-intro-003 测后批工具组末件 ⑫（提交 `f38ba9b`）：封面帧来源无机器校验——`G4-封面合同` 只有 `imagePath`，抽帧入口在编排方手里；实跑 shell 通配 fallback 误抓 `05_风格参考/冷战奇迹` mp4，参考片画面险成封面（红线：参考视频画面不得入成片），目检才拦下。
+
+- **抽帧收进装配器**：封面合同改 `materialPack`+`sourceAssetId`+`sourceMs`（源内毫秒，时点与身份取自批准计划/G3 封面指令）+`fontFile/title/output`；`g4_assemble` 从登记 material-pack 反查精确路径→对在册 sha256 逐字验明正身（不符 `sha256 mismatch` 罢工）→ffprobe 实测源时长钳 `sourceMs`→机抽帧+叠标题；装配记录落 `coverProvenance`（assetId/资产路径/在册哈希/sourceMs/sourceTimelineMs/帧文件/帧 sha256）。
+- **`imagePath` 通道退役**：合同出现即罢工（硬切：全部项目 completed、已封版旧合同留作审计记录，R3 不追溯）。定性：只要路径由编排方拼，通配猜的失败模式就一直在——登记件之外的画面（含参考片）结构上进不来封面，不靠目检。
+- **四处成文**：render-contract《封面合同（⑫ 登记件机抽帧）》、SKILL 客户演示成片节（自选帧文件＝违规）、demo-quality-patch §3、G4 回显卡封面项写明登记件出处。
+- **验证**：g4 套 38→43 例（正案机抽+provenance 落账；负例 imagePath 罢工／三必填各缺即拒／未登记 assetId 拒／在册 sha 漂移拒／sourceMs 超时长拒）；**活体彩排**（zaku-003 真登记件、项目只读、产物落 WorkSpace/cover-机抽复验-v0.1/）：sourceMs 25859 机抽帧→资产 sha AA6DFCCC… 逐字对上登记件、帧 sha 落账、目视确认＝夏亚红扎古太空持枪帧（非参考片）；假 assetId「style-ref-05-冷战奇迹」当场 `not a registered asset` 拒。py3.9 编译零错；发版前全量回归 45 测试文件逐文件绿。
+- **已知限制**：Mimosa 完整扫描结论仍未取得，**不宣称项目安全**；测后批仅剩表单批（①④），逐条处理。
+
 ## v1.18.0 — 2026-09-29 — **专名词表版本**
 
 发布范围＝zaku-intro-003 测后批工具组第六件 ⑨（提交 `c1f5155`）：bl 合成旁白的 ASR 回读无专名词表通道——`local_tts.py --verify-asr --asr-initial-prompt` 只覆盖自家 say 路径；bl（CosyVoice）产物回读走 `local_transcribe.py`，该脚本无词表参数，whisper small 把 吉翁/鲁姆/麦哲伦/乔尼/赤色彗星 全听成同音误字（吉翼翁/卢姆/迈辙轮/脚泥/赤色汇心），逐词比对假阴性一片红，等于没有自检（本轮靠人工判读兜住）。
