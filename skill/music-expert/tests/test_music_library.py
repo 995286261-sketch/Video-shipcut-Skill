@@ -81,6 +81,37 @@ class LibraryTest(unittest.TestCase):
         _, q = self.run_lib("query", "--sha", self.sha)
         self.assertTrue(q["tracks"][0]["hasAcoustic"])
 
+    def test_verdict_rejects_ghost_sha_and_creates_no_directory(self):
+        """⑦（zaku-003 幽灵目录险成案）：凭记忆写的 sha 不许被库照单全收、静默建目录。"""
+        ghost = "A" * 63 + "9"  # 从未 ingest 的 sha
+        self.assertFalse((self.lib / "tracks" / ghost[:16]).exists())
+        rc, payload = self.run_lib("verdict", "--sha", ghost, "--text", "用户判决：就用它", "--who", "user")
+        self.assertEqual(2, rc)
+        self.assertIn("track_not_registered", payload["errors"][0]["rule"])
+        self.assertFalse((self.lib / "tracks" / ghost[:16]).exists())  # 一字节不落盘
+
+    def test_derived_writers_require_full_sha_match_not_just_16_prefix(self):
+        """⑦ 深案：前 16 位撞车但尾段不同（当年 …430B vs …D291）＝串档，同样逐字拒。"""
+        self.run_lib("ingest", "--audio", str(self.audio), "--title", "X")
+        # wrong 与在册曲同 16 位前 缀（目录同档），但全量 sha 尾段不同＝另一条真曲的判决
+        wrong = self.sha[:16] + ("0" * (len(self.sha) - 16) if self.sha[16] != "0" else "1" * (len(self.sha) - 16))
+        track_dir = self.lib / "tracks" / self.sha[:16]
+        for action, extra in [("verdict", ["--text", "判决", "--who", "user"]),
+                              ("listen", ["--notes-text", "绝对笔记", "--model", "stub", "--prompt-ver", "v1"]),
+                              ("grant", ["--license", "cleared-for-project", "--evidence", "凭据"]),
+                              ("anchor", ["--brief", str(self.audio)])]:
+            rc, payload = self.run_lib(action, "--sha", wrong, *extra)
+            self.assertEqual(2, rc, f"{action} 放行了撞前缀假 sha")
+            self.assertFalse((track_dir / "verdicts.jsonl").exists())
+            self.assertFalse((track_dir / "listen.md").exists())
+            self.assertFalse((track_dir / "style-brief.json").exists())
+            self.assertEqual("X", json.loads((track_dir / "track.json").read_text(encoding="utf-8"))["aliases"][-1]["title"])
+            self.assertNotIn("anchor", json.loads((track_dir / "track.json").read_text(encoding="utf-8"))["roles"])
+        # 真 sha 照旧通过（大写小写归一也不误伤）
+        rc, _ = self.run_lib("verdict", "--sha", self.sha.lower(), "--text", "判决", "--who", "user")
+        self.assertEqual(0, rc)
+        self.assertTrue((track_dir / "verdicts.jsonl").exists())
+
     def test_relative_notes_are_rejected_as_library_facts(self):
         self.run_lib("ingest", "--audio", str(self.audio), "--title", "X")
         rc, payload = self.run_lib("listen", "--sha", self.sha, "--notes-text", "贴合度 2/10",

@@ -120,7 +120,11 @@ def put_listen(root: Path, sha: str, notes_text: str, model: str, prompt_ver: st
                reference: str | None = None) -> Path:
     if reference:
         raise SystemExit("拒绝写入：相对评价（A/B）不是库事实，只有绝对属性笔记可入库")
-    path = track_dir(root, sha) / "listen.md"
+    registered = require_registered(root, sha)
+    if registered is None:
+        # ⑦ 同族防复发：绝对笔记也是派生层，不许先于身份卡建目录（幽灵目录第二入口）
+        raise FileNotFoundError(f"sha {sha} 未在库中命中在册身份卡——先 ingest 再录笔记（⑦）")
+    path = track_dir(root, registered) / "listen.md"
     header = "# 听觉模型绝对属性笔记\n\n" if not path.is_file() else path.read_text(encoding="utf-8")
     section = f"\n---\n\n> heardAt {now()}｜model={model}｜prompt={prompt_ver}\n\n{notes_text.strip()}\n"
     path.write_text(header + section, encoding="utf-8")
@@ -152,6 +156,21 @@ def latest_listen_note(root: Path, sha: str, model: str, prompt_ver: str) -> tup
         if meta.get("model") == model and meta.get("prompt") == prompt_ver:
             best = (heard_at, "\n".join(lines[1:]).strip())
     return best
+
+
+def require_registered(root: Path, sha: str) -> str | None:
+    """⑦（zaku-003 幽灵目录险成案）：派生层（判决等）只许挂在已建身份卡的曲目上。
+    凭记忆写的 sha 曾被库照单全收、静默新建只含 verdicts.jsonl 的幽灵目录——红线
+    "哈希绝不凭记忆"要靠工具兜住：目录前 16 位命中还不够，track.json 里的全量 sha
+    必须逐字（大小写归一后）对上才放行；未命中/撞前缀不符一律拒，指路先 ingest。"""
+    wanted = str(sha).strip().upper()
+    for raw in dict.fromkeys([str(sha).strip(), wanted]):  # 大写优先，兼容历史小写入册
+        card_path = track_dir(root, raw) / "track.json"
+        if card_path.is_file():
+            stored = str(read_json(card_path).get("sha256", "")).strip()
+            if stored.upper() == wanted:
+                return stored  # 返回在册原形：派生层与身份卡必须同目录
+    return None
 
 
 def append_verdict(root: Path, sha: str, text: str, project: str | None, who: str, event: str | None = None) -> None:
@@ -290,39 +309,51 @@ def main() -> int:
             text = args.notes_text
         else:
             return fail([{"field": "notes", "rule": "--notes-file or --notes-text required"}])
+        if require_registered(root, args.sha) is None:
+            return fail([{"field": "sha",
+                          "rule": "track_not_registered（⑦：绝对笔记同属派生层，不许先于身份卡建目录）",
+                          "detail": f"sha {args.sha} 未命中在册身份卡——先 ingest（哈希现读不凭记忆），再录笔记"}])
         path = put_listen(root, args.sha, text, args.model, args.prompt_ver)
         emit({"status": "ok", "action": "listen", "path": str(path)})
         return 0
 
     if args.action == "verdict":
-        append_verdict(root, args.sha, args.text, args.project, args.who)
-        emit({"status": "ok", "action": "verdict"})
+        registered = require_registered(root, args.sha)
+        if registered is None:
+            return fail([{"field": "sha",
+                          "rule": "track_not_registered（⑦ 幽灵目录防复发：派生层不许先于身份卡）",
+                          "detail": f"sha {args.sha} 未在库中命中在册身份卡（track.json 不存在，或前 16 位撞车但全量 sha 逐字不符）——"
+                                    "哈希绝不凭记忆：从登记件/分析报告现读全串；该曲未入库就先 `ingest`，再录 verdict。"}])
+        append_verdict(root, registered, args.text, args.project, args.who)
+        emit({"status": "ok", "action": "verdict", "sha": registered})
         return 0
 
     if args.action == "grant":
-        card_path = track_dir(root, args.sha) / "track.json"
-        if not card_path.is_file():
-            return fail([{"field": "sha", "rule": "no track record; ingest first"}])
+        registered = require_registered(root, args.sha)
+        if registered is None:
+            return fail([{"field": "sha", "rule": "no track record; ingest first（⑦：全量 sha 逐字对账）"}])
+        card_path = track_dir(root, registered) / "track.json"
         card = read_json(card_path)
         card["license"] = args.license
         card["licenseEvidence"].append({"evidence": args.evidence, "at": now(), "project": args.project})
         if args.audio:
             card["audioRefs"].append({"path": str(args.audio), "role": "cleared", "recordedAt": now()})
         write_json(card_path, card)
-        append_verdict(root, args.sha, f"许可登记：{args.license}｜证据：{args.evidence}", args.project, "user",
+        append_verdict(root, registered, f"许可登记：{args.license}｜证据：{args.evidence}", args.project, "user",
                        event="license_granted")
         emit({"status": "ok", "action": "grant", "license": args.license})
         return 0
 
     if args.action == "anchor":
-        card_path = track_dir(root, args.sha) / "track.json"
-        if not card_path.is_file():
-            return fail([{"field": "sha", "rule": "no track record; ingest first"}])
+        registered = require_registered(root, args.sha)
+        if registered is None:
+            return fail([{"field": "sha", "rule": "no track record; ingest first（⑦：全量 sha 逐字对账）"}])
+        card_path = track_dir(root, registered) / "track.json"
         card = read_json(card_path)
         if "anchor" not in card["roles"]:
             card["roles"].append("anchor")
         write_json(card_path, card)
-        (track_dir(root, args.sha) / "style-brief.json").write_bytes(args.brief.read_bytes())
+        (track_dir(root, registered) / "style-brief.json").write_bytes(args.brief.read_bytes())
         emit({"status": "ok", "action": "anchor"})
         return 0
 
