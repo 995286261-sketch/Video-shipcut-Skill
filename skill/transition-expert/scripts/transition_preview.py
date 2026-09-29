@@ -151,6 +151,8 @@ def build_preview_items(plan: dict, directive: dict, context_ms: int) -> list:
         b_end = seg_b["endMs"] if isinstance(seg_b.get("endMs"), int) else seg_b["source"]["endMs"]
         items.append({
             "boundary": f"{a}→{b}", "type": "叠化", "durationMs": duration,
+            # ⑪ 观看页逐字露出切点依据（来源=计划段 transitionReason，机器已验在场）
+            "transitionReason": seg_a.get("transitionReason"),
             "windowMs": window, "clipLenMs": clip_len,
             "parts": [
                 {"role": "from", "assetId": seg_a["assetId"],
@@ -173,6 +175,7 @@ def build_preview_items(plan: dict, directive: dict, context_ms: int) -> list:
         context = context_of_full(first["segmentId"], duration)
         start = first["startMs"] if isinstance(first.get("startMs"), int) else first["source"]["startMs"]
         items.append({"boundary": "成片首", "type": "黑场入", "durationMs": duration,
+                      "transitionReason": first.get("transitionReason"),
                       "windowMs": [0, duration + context], "clipLenMs": duration + context,
                       "parts": [{"role": "only", "assetId": first["assetId"],
                                  "startMs": start, "lenMs": duration + context}],
@@ -182,6 +185,7 @@ def build_preview_items(plan: dict, directive: dict, context_ms: int) -> list:
         context = context_of_full(last["segmentId"], duration)
         end = last["endMs"] if isinstance(last.get("endMs"), int) else last["source"]["endMs"]
         items.append({"boundary": "成片尾", "type": "黑场出", "durationMs": duration,
+                      "transitionReason": last.get("transitionReason"),
                       "windowMs": [total - duration - context, total], "clipLenMs": duration + context,
                       "parts": [{"role": "only", "assetId": last["assetId"],
                                  "startMs": end - duration - context, "lenMs": duration + context}],
@@ -270,6 +274,7 @@ def render_item(item: dict, sources: dict, ffmpeg: str, ffprobe: str, out_dir: P
     for temp in temps:
         temp.unlink()  # 中间件不入库：renderArgs 已全量入册，可逐字重建
     return {"boundary": item["boundary"], "type": item["type"],
+            "transitionReason": item.get("transitionReason"),
             "durationMs": item["durationMs"], "windowMs": item["windowMs"],
             "file": output.name,  # 相对清单所在目录（门禁对账按此拼接）
             "probedLenMs": probe_duration_ms(ffprobe, output),
@@ -296,9 +301,12 @@ def build_viewer_html(manifest: dict) -> str:
         heading = (f"{marker} {entry['boundary']} ｜ {entry['type']} · {mmss(entry['durationMs'])} ｜ "
                    f"成片窗口 {mmss(window[0])}–{mmss(window[1])}")
         video = entry["file"]
+        # ⑪ 每一步有所依据：切点理由逐字显示（旧清单无此字段时该行不出现、不编造）
+        reason = str(entry.get("transitionReason") or "").strip()
+        basis = f'<p class="basis">依据：{reason}</p>\n' if reason else ""
         note = (f"实测时长 {mmss(entry['probedLenMs'])}（批准窗口 {mmss(window[1] - window[0])}）"
                 f"｜ 无声小样，混合公式与成片逐字同式")
-        entries.append(f'<div class="card"><h2>{heading}</h2>\n'
+        entries.append(f'<div class="card"><h2>{heading}</h2>\n{basis}'
                        f'<video controls preload="metadata" src="{video}"></video>\n'
                        f'<p class="note">{note}</p></div>')
     page_version = manifest.get("version", "")
@@ -307,7 +315,8 @@ def build_viewer_html(manifest: dict) -> str:
             " body{font-family:-apple-system,\"PingFang SC\",sans-serif;background:#101418;color:#e8eaed;"
             "margin:24px auto;max-width:960px}\n h1{font-size:20px}\n .note{color:#9aa0a6;font-size:13px;line-height:1.6}\n"
             " .card{margin:18px 0;padding:14px;background:#1a1f26;border-radius:10px}\n"
-            " .card h2{font-size:15px;margin:0 0 8px}\n video{width:100%;border-radius:6px;background:#000}\n"
+            " .card h2{font-size:15px;margin:0 0 8px}\n .basis{color:#8ab4f8;font-size:13px;margin:0 0 8px}\n"
+            " video{width:100%;border-radius:6px;background:#000}\n"
             "</style>\n</head>\n<body>\n"
             f"<h1>转场试装预览 · 观看页 {page_version}</h1>\n<p class=\"note\">{manifest['disclaimer']}</p>\n"
             + "\n".join(entries) + "\n"

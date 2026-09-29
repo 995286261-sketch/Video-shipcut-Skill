@@ -108,6 +108,31 @@ class WindowArithmeticTests(unittest.TestCase):
         self.assertEqual([12200 - 800 - 1200, 12200], tail["windowMs"])
         self.assertEqual({"t": "out", "stMs": 1200, "dMs": 800}, tail["fade"])
 
+    # ---- ⑪ 每一步有所依据：切点理由从计划逐字进清单与观看页 ----
+    def test_transition_reason_carried_into_items(self):
+        plan = base_plan()
+        plan["segments"][0]["transitionReason"] = "战场语境渐入"
+        plan["segments"][2]["transitionReason"] = "收尾入黑"
+        items = preview_script.build_preview_items(plan, directive_of(plan), 1200)
+        self.assertEqual("战场语境渐入", items[0]["transitionReason"])
+        self.assertIsNone(items[1]["transitionReason"])          # seg-002 无登记→None，不编造
+        self.assertEqual("收尾入黑", items[-1]["transitionReason"])
+
+
+class ViewerBasisTests(unittest.TestCase):
+    def test_viewer_shows_basis_only_for_registered_reasons(self):
+        manifest = {"projectId": "p", "version": "v0.1", "disclaimer": "无声小样",
+                    "planSha256": "X" * 64, "previews": [
+                        {"boundary": "seg-001→seg-002", "type": "叠化", "durationMs": 500,
+                         "windowMs": [2550, 5450], "probedLenMs": 2900, "file": "clip.mp4",
+                         "transitionReason": "战场语境渐入"},
+                        {"boundary": "成片尾", "type": "黑场出", "durationMs": 800,
+                         "windowMs": [12200, 13000], "probedLenMs": 800, "file": "tail.mp4",
+                         "transitionReason": None}]}
+        html = preview_script.build_viewer_html(manifest)
+        self.assertIn("依据：战场语境渐入", html)
+        self.assertEqual(1, html.count('<p class="basis">'))      # 旧条目缺理由→该行不出现
+
 
 class BlockedPathTests(unittest.TestCase):
     def setUp(self):

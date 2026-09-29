@@ -513,6 +513,14 @@ def validate_segment(segment: dict, ids: set, known: dict, beat_index: dict, sou
             duration = segment.get("transitionDurationMs")
             check(isinstance(duration, int) and not isinstance(duration, bool) and 100 <= duration <= 1500,
                   f"segment {segment_id} transition {transition} requires integer transitionDurationMs between 100 and 1500")
+            # ⑪（zaku-intro-003 实测，用户 09-29 定案"每一步都要有所依据"）：
+            # 选动效必须带结构化理由——理由一次登记在计划、机器验在场、
+            # 卡与观看页自动逐字露出；不给理由选动效=拒批。硬切是默认档不强制。
+            reason = segment.get("transitionReason")
+            check(isinstance(reason, str) and reason.strip(),
+                  f"segment {segment_id} 选 {transition} 必须携带非空 transitionReason"
+                  f"（为什么用动效而不是默认硬切；卡『转场依据区』与观看页逐字显示——"
+                  f"没登记理由不许动效）")
         else:
             check(segment.get("transitionDurationMs") is None,
                   f"segment {segment_id} 硬切 must not carry transitionDurationMs")

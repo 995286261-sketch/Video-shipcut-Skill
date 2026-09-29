@@ -132,6 +132,8 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 
 `final_review` 必须使用固定八列的 `columns`，并有一行且仅一行对应计划中的每个 `seg-xxx`。每行须含精确输出/源片毫秒切点、逐字口播、实际观察、语义状态、主体/风险、BGM 乐句和转场。校验器会拒绝缺列、错序、候选 ID、`未生成/无/待缩窄/候选/待定` 等占位文本、漏行、非连续输出时间、未验证画面及非 `direct_match/not_applicable` 语义。`semantic_selection_review` 使用另一份固定七列合同，不能与 `--plan` 同时使用，也不能称为最终审核。
 
+**⑪ 依据上卡（zaku-intro-003 实测，用户 2026-09-29 定案"每一步都要有所依据"）**：渲染器 `render_g3_review_card.py --plan` 从计划逐字搬运两处——第 5 列 `用途：<段级 reason>｜画面观察：<observedVisuals>`；八列表下『转场依据区』逐切点 `边界｜指令·时长｜依据：<transitionReason>`（无转场不出区；旧计划缺字段如实标"未登记"、不编造）。理由的唯一登记处=计划字段（transitionReason 由 `validate_g3_plan.py` 强制非空，缺=拒批），聊天口头理由不再是出处。
+
 口播介绍机体外观时，画面必须有可见的对应外观；口播介绍 NT-D 的激活或形态时，画面必须有对应的变形、红色精神感应框架或毁灭模式特征。仅因画面同属独角兽/驾驶员/战斗场景而通过，一律视为 `semantic_mismatch`。带此状态的片段不得进入 G4。
 
 回显中的每一项必须能回链到 G3 计划、视觉验证 manifest、BGM 槽位或 G1 参考分析；创作建议必须标为候选，不能伪装成计划事实。回显不是 G4 输入。

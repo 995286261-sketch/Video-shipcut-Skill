@@ -95,8 +95,37 @@ def waiver_block(waiver: dict) -> list[str]:
     ]
 
 
+def transition_basis_lines(plan: dict) -> list[str]:
+    """⑪ 转场依据区（zaku-intro-003 实测，用户 09-29 定案"每一步都要有所依据"）：
+    逐切点一行，指令/时长/理由全部逐字取自计划段字段——理由一次登记
+    （validate_g3_plan 已强制 transitionReason 在场），卡片只搬运、不转述。"""
+    ordered = sorted(plan.get("segments", []), key=lambda s: (s.get("outputStartMs") or 0))
+    lines = []
+    for position, segment in enumerate(ordered):
+        mode = segment.get("transitionInstruction")
+        if mode in (None, "硬切"):
+            continue
+        if mode == "叠化" and position + 1 < len(ordered):
+            label = f"{segment.get('segmentId')}→{ordered[position + 1].get('segmentId')}"
+        elif mode == "黑场入" and position == 0:
+            label = "成片首"
+        elif mode == "黑场出" and position == len(ordered) - 1:
+            label = "成片尾"
+        else:
+            continue
+        reason = str(segment.get("transitionReason") or "").strip() or "（旧版计划未登记 transitionReason）"
+        duration = segment.get("transitionDurationMs")
+        lines.append(f"- {label} ｜ {mode} · {mmss(duration)} ｜ 依据：{reason}"
+                     if isinstance(duration, int) else f"- {label} ｜ {mode} ｜ 依据：{reason}")
+    if not lines:
+        return []
+    return ["## 转场依据区", "",
+            "为什么动效而不是默认硬切——逐切点理由，取自通过校验的计划（改理由=改计划=预览与批准全部重走）：",
+            "", *lines, ""]
+
+
 def render(callback: dict, manifest: dict | None = None, manifest_path: Path | None = None,
-           card_path: Path | None = None) -> str:
+           card_path: Path | None = None, plan: dict | None = None) -> str:
     has_basis = isinstance(callback.get("bgmBasis"), dict)
     has_transitions = any(row.get("transitionInstruction") not in (None, "硬切") for row in callback.get("rows", []))
     lines = [
@@ -111,20 +140,27 @@ def render(callback: dict, manifest: dict | None = None, manifest_path: Path | N
         "| " + " | ".join(validator.FINAL_HEADERS) + " |",
         "|" + "|".join("---" for _ in validator.FINAL_HEADERS) + "|",
     ]
+    plan_by_id = {segment.get("segmentId"): segment for segment in (plan or {}).get("segments", [])}
     for row in callback["rows"]:
         bgm_cell = f"{row['bgmPhrase']} · {row['layoutTier']}档" if "layoutTier" in row else row["bgmPhrase"]
+        # ⑪ 第 5 列表头本就承诺"用途 / 实际画面观察"：用途=段级 reason 逐字（计划搬运），
+        # 旧数据无 reason 时退回只显观察、不编造。
+        purpose = str(plan_by_id.get(row["segmentId"], {}).get("reason") or "").strip()
+        observed = f"用途：{purpose}｜画面观察：{row['observedVisuals']}" if purpose else row["observedVisuals"]
         values = [
             row["segmentId"],
             row["outputTimecode"],
             row["narrationText"],
             row["sourceTimecode"],
-            row["observedVisuals"],
+            observed,
             f"{row['semanticStatus']} / {row['subjectStatus']} / {row['riskSummary']}",
             bgm_cell,
             transition_cell(row),
         ]
         lines.append("| " + " | ".join(cell(value) for value in values) + " |")
     lines.append("")
+    if has_transitions:
+        lines += transition_basis_lines(plan or {})
     if has_transitions and isinstance(callback.get("transitionPreviewWaiver"), dict):
         lines += waiver_block(callback["transitionPreviewWaiver"])
     elif has_transitions and manifest is not None and manifest_path is not None and card_path is not None:
@@ -147,7 +183,7 @@ def main() -> int:
     validator.validate_final(callback, plan, alignment,
                              plan_path=args.plan, preview_path=args.preview, preview=preview)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render(callback, preview, args.preview, args.output), encoding="utf-8")
+    args.output.write_text(render(callback, preview, args.preview, args.output, plan=plan), encoding="utf-8")
     print(json.dumps({"status": "completed", "output": str(args.output), "rows": len(callback["rows"])}, ensure_ascii=True))
     return 0
 
