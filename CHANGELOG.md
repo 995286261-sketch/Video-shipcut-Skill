@@ -1,5 +1,14 @@
 # 变更记录
 
+## v1.13.0 — 2026-09-29 — **下载通道复活版本**
+
+发布范围＝zaku-intro-003 测后批工具组第一件 ②（提交 `51b9c11`）：网易云检索通道下载层全灭（0/120）修复。病根＝预览 302 一律跳 `http://` 授权 CDN，被 09-21 收紧的 SSRF 白名单守卫按 https 规则拦死——检索命中、排除原因全在工具层，个人/内测选型通道自此不可用。
+
+- **修法（用户 09-29 定案口径：红线是 guard 本身不许拆）**：`upgrade_cdn_scheme` 只在**白名单域名在场**时把 http 跳转升级为 https 再交 guard 逐跳校验——只动 scheme、主机校验原样、名单外 http 原样拒、测试套件 loopback http 例外不被动；升级主机逐候选记 `previewSchemeUpgraded` 留痕；sourcing-contract 轨道三守卫条成文。
+- **验证**：netease 套 9→15 例（名单内升级过 guard、https 原样、名单外不升级、无网络即拒、loopback 例外保留、默认 base 本为 https）；**活体复验**=真检索 3/3 试听件下载成功、decode passed、license/boundary 字段原样（升级实发 m801/m701.music.126.net）；发版前全量回归 45 测试文件逐文件绿、py3.9 编译零错。
+- **边界不变**：netease 候选仍 `uncleared-platform-catalog`/internal_test，进成片必须官方渠道整轨+登记（轨道三纪律一字未动）；对外项目主轨仍是 Freesound。
+- **已知限制**：Mimosa 完整扫描结论仍未取得，**不宣称项目安全**；工具批余件（③⑤⑥⑦⑨⑫）与表单批（①④）继续逐条处理。
+
 ## v1.12.0 — 2026-09-29 — **报告生成器版本**
 
 发布范围＝zaku-intro-003 测后批第三件 ⑭（G5 质检报告标准生成器）＋彩排当场抓出的同族缺陷 ⑮（builder 装配字段静默抬空），提交 `2a72106`。
