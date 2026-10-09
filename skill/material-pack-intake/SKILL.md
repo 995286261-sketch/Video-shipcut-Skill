@@ -11,7 +11,7 @@ metadata:
 
 ## 对话式引导
 
-必须主动带用户完成素材包。先展示 `references/g0-start-form.md` 的**核心五问**（做什么、给谁看、发哪个平台、素材在哪、想要什么感觉、BGM），接受自然语言回答，不要要求用户写技术字段。
+必须主动带用户完成素材包。先展示 `references/g0-start-form.md` 的**开工单九问**（做什么、给谁看、发哪个平台、素材在哪、想要什么感觉、BGM、旁白配音、品牌素材、片子去向、审批方式——一卡问完，固定追问项不另开第二张卡），接受自然语言回答，不要要求用户写技术字段。
 
 收到核心回答后：
 1. 根据平台自动推导画幅和时长建议。
@@ -48,7 +48,7 @@ python scripts/material_pack.py validate --pack <素材包目录>
 
 ## G0 Fixed Start Form
 
-Before receiving files for every new project, present `references/g0-start-form.md` 的**核心五问**。用户可以自然语言回答，不需要写技术字段。BGM 必须明确记录为 `provided`、`use library later` 或 `no BGM`；选"你来配"时可随口收集音乐偏好（**可选、原话记录、不得代填**）。`register` 会把 BGM 声明落为素材包的 `bgm` 槽（decision/preference/libraryPending），由 `pipeline_state.py init` 带入项目状态，找乐编排归 G1（见开工单规则 4）。后补音乐必须创建或更新素材包版本记录，注明使用范围，不得静默合并。
+Before receiving files for every new project, present `references/g0-start-form.md` 的**开工单九问**（一卡问完）。用户可以自然语言回答，不需要写技术字段。BGM 必须明确记录为 `provided`、`use library later` 或 `no BGM`；选"你来配"时可随口收集音乐偏好（**可选、原话记录、不得代填**）。`register` 会把 BGM 声明落为素材包的 `bgm` 槽（decision/preference/libraryPending），由 `pipeline_state.py init` 带入项目状态，找乐编排归 G1（见开工单规则 4）。后补音乐必须创建或更新素材包版本记录，注明使用范围，不得静默合并。
 
 **BGM=`provided` 时的登记链（music-expert 人工轨，N1 接线）**：用户音频文件放入 `07_授权音频/` 后、`register` 之前，执行 `music-expert` 的 `music_register_candidate.py --audio <文件> --license-type … --license-evidence … [--tags 词表标签] --output-dir <素材包>/07_授权音频/`（不联网、不改源文件）。**初次分析统一由 G1 执行（用户 2026-09-10 定案），G0 不做分析、不依赖 DSP 运行时**；已有历史报告在位则 register 一并入册（zaku 等旧项目保持 G0 形态不回改）。`material-pack.json` 的 `audioAssets[].bgmRegistration/bgmAnalysis` 记录文档路径与哈希，`validate` 会检出登记后的篡改。
 
