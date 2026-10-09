@@ -12,7 +12,19 @@ from project_layout import CHATCUT_DIRECTORY, require_g4_file, require_g5_file, 
 from review_gate import load_review_gate, require_basis_references, reviewed_file_hashes, sha256_file
 
 NODES = ("G0", "G1", "G2", "G3", "G4", "G5")
-STATES = {"pending", "in_progress", "review_required", "blocked", "completed", "completed_with_accepted_warnings"}
+STATES = {"pending", "in_progress", "review_required", "blocked", "completed", "completed_with_accepted_warnings",
+          # v1.22.0 自动确认模式：G5 经 auto-policy 关单的项目终态（人工听感验收未执行、如实披露）。
+          "completed_auto_reviewed", "completed_auto_reviewed_with_accepted_warnings"}
+APPROVAL_MODES = ("human", "auto")
+# 预授权受控词表（七类）。词表外的类别写进策略文件=当场拒——
+# 未清权×对外、授权不明×对外、人工背书断言（userManuallyVerifiedClaims）
+# 属永久 fail-stop，不可预授权，词表里根本没有它们。
+AUTO_PREAUTH_CATEGORIES = (
+    "preview_voice_production", "loudness_blocked_exit", "transition_preview_waiver",
+    "subject_policy", "warning_acceptance", "sufficiency_shorten", "music_delegated_selection",
+)
+INWARD_DISTRIBUTION = {"internal_test", "local_only", "not_for_distribution"}
+UNCLEARED_LICENSES = {"uncleared-platform-catalog", "unverified", ""}
 
 
 def now() -> str:
@@ -109,6 +121,12 @@ def validate_state(state: dict) -> None:
         emit({"status": "invalid", "error": "invalid currentNode"}, 2)
     if state["status"] not in STATES:
         emit({"status": "invalid", "error": "invalid project status"}, 2)
+    # v1.22.0：历史 state 无 approvalMode 字段 = human（R3 不追溯，旧项目零影响）。
+    mode = state.get("approvalMode", "human")
+    if mode not in APPROVAL_MODES:
+        emit({"status": "invalid", "error": f"unsupported approvalMode: {mode!r} (human|auto)"}, 2)
+    if mode == "auto" and not str(state.get("autoPolicyRef") or "").strip():
+        emit({"status": "invalid", "error": "approvalMode=auto requires autoPolicyRef (无策略不自动——fail-stop 而非放行)"}, 2)
     for node in NODES:
         value = state["nodes"].get(node)
         if not isinstance(value, dict) or value.get("status") not in STATES:
@@ -198,6 +216,261 @@ def require_approval_token(node: str, token: str | None, response: str | None) -
     return token_norm[0], response_norm[0], str(token).strip(), str(response).strip(), token_norm[1] or response_norm[1]
 
 
+# ---- v1.22.0 自动确认模式（approvalMode=auto）----
+# 批准人从"宿主会话真人口令"换成"输入端策略"：机器验收链（收据对账/basisHashes/
+# 节点 validator/R1 报告解析）全部照跑，只是口令段被信任类预检替代。红线：绝不伪造
+# 人类原话——auto 留痕写 approvalSource=auto-policy、verbatim=策略条款原文；
+# 未被预授权覆盖的信任类事项一律 fail-stop（宁可停不可猜）。
+
+def validate_policy_doc(policy: object, project_id: str) -> dict:
+    if not isinstance(policy, dict):
+        raise ValueError("auto-approval 策略必须是 JSON 对象")
+    if policy.get("schemaVersion") != "0.1" or policy.get("kind") != "auto-approval-policy":
+        raise ValueError("auto-approval 策略要求 schemaVersion 0.1 / kind auto-approval-policy")
+    if policy.get("projectId") != project_id:
+        raise ValueError(f"auto-approval 策略 projectId={policy.get('projectId')!r} 与当前项目 {project_id!r} 不符（别项目的策略不得管本项目）")
+    if not isinstance(policy.get("statement"), str) or not policy["statement"].strip():
+        raise ValueError("auto-approval 策略缺 statement（自动批准的逐字依据：人话写明批准语义与范围）")
+    entries = policy.get("preAuthorizations", [])
+    if not isinstance(entries, list):
+        raise ValueError("preAuthorizations 必须是列表")
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("每条 preAuthorization 必须是对象")
+        category = entry.get("category")
+        if category not in AUTO_PREAUTH_CATEGORIES:
+            raise ValueError(f"预授权类别 {category!r} 不在受控词表 {list(AUTO_PREAUTH_CATEGORIES)}——未清权×对外分发、授权不明×对外、人工背书断言永久不可预授权，词表不可扩展")
+        for field in ("basis", "authorizedBy", "authorizedAt"):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                raise ValueError(f"预授权 {category} 缺 {field}（依据/授权人/时间三件必须齐）")
+        params = entry.get("parameters")
+        if params is not None and not isinstance(params, dict):
+            raise ValueError(f"预授权 {category} 的 parameters 必须是对象")
+        params = params or {}
+        if category == "preview_voice_production" and "预览级" not in str(params.get("disclosure") or "") + str(entry.get("basis") or ""):
+            raise ValueError("preview_voice_production 预授权必须在 basis 或 parameters.disclosure 含披露词'预览级'（绿灯通道的披露词在自动模式一字不松）")
+        if category == "loudness_blocked_exit" and not str(params.get("exit") or "").strip():
+            raise ValueError("loudness_blocked_exit 预授权必须用 parameters.exit 指明走哪条出路（不得概括放行）")
+        if category == "warning_acceptance":
+            scopes = params.get("scopes")
+            if not isinstance(scopes, list) or not scopes or not all(isinstance(item, str) and item.strip() for item in scopes):
+                raise ValueError("warning_acceptance 预授权必须带 parameters.scopes（警告关键词列表，不得概括放行）")
+    return policy
+
+
+def load_policy_file(raw_path: object, project_id: str) -> tuple[Path, dict]:
+    path = Path(str(raw_path).strip())
+    if not path.is_absolute():
+        path = Path.cwd() / path
+    if not path.is_file():
+        raise ValueError(f"auto-policy 文件不存在：{path}")
+    try:
+        policy = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError) as error:
+        raise ValueError(f"auto-policy 不是可解析 JSON：{error}") from error
+    return path, validate_policy_doc(policy, project_id)
+
+
+def load_auto_policy(state_path: Path, state: dict) -> dict:
+    path = require_project_file(state_path, str(state.get("autoPolicyRef") or ""), "autoPolicyRef")
+    try:
+        policy = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError) as error:
+        raise ValueError(f"auto-approval 策略不是可解析 JSON：{error}") from error
+    return validate_policy_doc(policy, state["projectId"])
+
+
+def validate_distribution_rights(state: dict) -> list:
+    """auto 模式专属永久闸（v1.22.0 补上现存缺口）：对外分发 × 未清权音频/授权不明。
+    human 模式行为不变（R3 不追溯；人审 distribution_boundary 项照旧覆盖）。
+    分布值不在已知内向词表=按对外处理（保守）。"""
+    distribution = str(state.get("distribution") or "").strip()
+    if distribution.lower() in INWARD_DISTRIBUTION:
+        return []
+    problems = []
+    authorization = str(state.get("authorization") or "")
+    if re.search(r"unknown|unclear|待确认|pending", authorization, re.I):
+        problems.append(f"授权不明（{authorization!r}）× 对外分发（{distribution!r}）：不得对外（永久不可预授权）")
+    pack_path = Path(state.get("sourcePackRef") or "")
+    pack = {}
+    if pack_path.is_file():
+        try:
+            pack = json.loads(pack_path.read_text(encoding="utf-8-sig"))
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+            pack = {}
+    assets = pack.get("audioAssets") if isinstance(pack.get("audioAssets"), list) else []
+    for asset in assets:
+        if not isinstance(asset, dict):
+            continue
+        license_value = str(asset.get("licenseType") or asset.get("license") or "").strip()
+        if license_value.lower() in UNCLEARED_LICENSES or "uncleared" in license_value.lower():
+            label = asset.get("assetId") or asset.get("path") or asset.get("relativePath") or "未标注音频"
+            problems.append(f"音频资产 {label} 许可 {license_value!r} 未清权 × 对外分发（{distribution!r}）：未清权音频不得对外（永久不可预授权）")
+    return problems
+
+
+def _resolve_ref(state_path: Path, ref: object):
+    """与 require_project_file 同语义的宽容解析：先按调用方 CWD，再按项目根。
+    解析不到返回 None——机械判据只判在场的机械事实。"""
+    if not isinstance(ref, str) or not ref.strip():
+        return None
+    candidate = Path(ref)
+    if candidate.is_file():
+        return candidate
+    fallback = state_path.parent / ref
+    return fallback if fallback.is_file() else None
+
+
+def _json_docs(state_path: Path, refs):
+    docs = []
+    for ref in refs or []:
+        path = _resolve_ref(state_path, ref)
+        if path is None or path.suffix.lower() != ".json":
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8-sig"))
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+            continue
+        if isinstance(doc, dict):
+            docs.append((str(ref), doc))
+    return docs
+
+
+def scan_trust_markers(state_path: Path, state: dict, record: dict, args) -> dict:
+    """从被审面（收据 basisRefs + 本次批准载荷）收集信任类标记。
+    标记不在场不触发；在场而策略未预授权覆盖 = fail-stop。"""
+    refs = list(record["reviewGate"].get("basisRefs") or [])
+    for extra in (getattr(args, "voice_brief_ref", None), getattr(args, "edit_plan_ref", None)):
+        if extra:
+            refs.append(extra)
+    markers = {"preview_voice": False, "loudness_blocked": None, "transition_waiver": False,
+               "sufficiency_shorten": False, "disclosed_exceedance": False, "permanent": []}
+    for _ref, doc in _json_docs(state_path, refs):
+        if doc.get("voiceTier") == "preview_only":
+            markers["preview_voice"] = True
+        if doc.get("skill") == "loudness-expert" and doc.get("purpose") == "loud_plan" \
+                and str(doc.get("status") or "").startswith("blocked"):
+            markers["loudness_blocked"] = doc.get("exits") if isinstance(doc.get("exits"), list) else []
+        if "transitionPreviewWaiver" in doc:
+            markers["transition_waiver"] = True
+        subject = doc.get("targetSubject")
+        if isinstance(subject, dict) and isinstance(subject.get("sufficiencyFallback"), dict):
+            markers["sufficiency_shorten"] = True
+        claims = doc.get("userManuallyVerifiedClaims")
+        if isinstance(claims, list) and claims:
+            markers["permanent"].append("userManuallyVerifiedClaims 非空：人工背书断言属人工批准的项目，自动模式项目不得携带（永久不可预授权）")
+        pure = doc.get("pureNarration")
+        if isinstance(pure, dict) and pure.get("verdict") == "disclosed-exceedance":
+            markers["disclosed_exceedance"] = True
+        if doc.get("skill") == "loudness-expert" and doc.get("status") == "disclosed-exceedance":
+            markers["disclosed_exceedance"] = True
+    markers["permanent"].extend(validate_distribution_rights(state))
+    return markers
+
+
+def require_auto_approval(state_path: Path, state: dict, node: str, record: dict, args) -> dict:
+    """自动批准：机器验收已在本链上游全部通过，此处只做信任类预检。
+    返回写进 approval 记录的字段（approvalSource=auto-policy，verbatim=策略条款原文）。"""
+    policy = load_auto_policy(state_path, state)
+    markers = scan_trust_markers(state_path, state, record, args)
+    if node == "G5":
+        # 响度验收审计在交付包目录（不在收据引用面），按合同固定名补读。
+        manifest_path = _resolve_ref(state_path, getattr(args, "delivery_manifest_ref", None))
+        audit_path = manifest_path.parent / "loudness-audit.json" if manifest_path else None
+        if audit_path and audit_path.is_file():
+            try:
+                audit = json.loads(audit_path.read_text(encoding="utf-8-sig"))
+            except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+                audit = None
+            if isinstance(audit, dict) and audit.get("status") == "disclosed-exceedance":
+                markers["disclosed_exceedance"] = True
+    missing, used = [], []
+
+    def cover(category, reason, decision, entry_check=None):
+        entries = [entry for entry in policy.get("preAuthorizations", []) if entry.get("category") == category]
+        if not entries:
+            missing.append({"category": category, "reason": reason, "decisionNeeded": decision})
+        elif entry_check is not None and not any(entry_check(entry) for entry in entries):
+            missing.append({"category": category, "reason": reason, "decisionNeeded": decision,
+                            "note": "策略已有该预授权但参数与现场事实对不上（机械判据只判在场事实，参数不得概括放行）"})
+        elif category not in used:
+            used.append(category)
+
+    if markers["preview_voice"]:
+        cover("preview_voice_production",
+              "配音清单声明 voiceTier=preview_only（系统声预览级）：升成品级必须知情批准",
+              "人工试听后口令裁决本闸，或在策略中补 preview_voice_production 预授权（披露词'预览级'必须在场）")
+    if markers["loudness_blocked"] is not None:
+        def exit_matches(entry):
+            choice = str((entry.get("parameters") or {}).get("exit") or "").strip()
+            exits = markers["loudness_blocked"]
+            if not choice:
+                return False
+            if not exits or not all(isinstance(item, str) for item in exits):
+                return True
+            return any(choice in item or item in choice for item in exits)
+        cover("loudness_blocked_exit",
+              "响度计划为 blocked_*（现天花板够不到目标）：出路必须显式选择，不得自动放行",
+              "人工在出路卡上选择，或在策略中补 loudness_blocked_exit 预授权（parameters.exit 指明出路）",
+              entry_check=exit_matches)
+    if markers["transition_waiver"]:
+        cover("transition_preview_waiver",
+              "转场试装预览 blocked_previews（本机无法生成预览）：你批准的是未见过的效果，必须知情批准",
+              "人工阅读披露后裁决，或在策略中补 transition_preview_waiver 预授权")
+    if markers["sufficiency_shorten"]:
+        cover("sufficiency_shorten",
+              "计划出现充分性缩短兜底（sufficiencyFallback）：缩短成片是委托方可见的决定",
+              "人工裁决，或在策略中补 sufficiency_shorten 预授权")
+    if node == "G3":
+        cover("subject_policy",
+              "G3 目标主体确认（身份判定政策）属信任类授权：自动模式必须由输入工单+策略预授权承载",
+              "人工确认主体政策后口令裁决本闸，或在策略中补 subject_policy 预授权（附主体定义）")
+    warnings = []
+    if markers["disclosed_exceedance"]:
+        warnings.append("响度超差（disclosed-exceedance）")
+    accepted = list(getattr(args, "accepted_warning", None) or [])
+    if getattr(args, "accepted_warnings", None):
+        try:
+            parsed = json.loads(args.accepted_warnings)
+            if isinstance(parsed, list):
+                warnings.extend(str(item) for item in parsed)
+        except json.JSONDecodeError:
+            pass
+    if warnings:
+        def scopes_cover(entry):
+            scopes = (entry.get("parameters") or {}).get("scopes") or []
+            return all(any(str(scope) in warning for scope in scopes) for warning in warnings)
+        cover("warning_acceptance",
+              "存在需知情接受的警告：" + "；".join(warnings),
+              "人工逐条点名接受，或在策略中补 warning_acceptance 预授权（parameters.scopes 覆盖每条警告关键词）",
+              entry_check=scopes_cover)
+    if markers["permanent"]:
+        emit({"status": "blocked",
+              "error": "自动批准永久拒绝（不可预授权）：" + "；".join(markers["permanent"]),
+              "autoApprovalBlocked": {"node": node, "permanent": markers["permanent"],
+                                      "missingPreAuthorizations": missing,
+                                      "resolution": "永久项没有预授权通道——修正输入（换已清权资产/明确授权/移除人工背书断言）或把本项目转人工模式"}}, 2)
+    if missing:
+        emit({"status": "blocked",
+              "error": "自动确认受阻（宁可停不可猜）：" + "；".join(
+                  f"[{item['category']}] {item['reason']}" + (f"（{item['note']}）" if item.get("note") else "")
+                  for item in missing),
+              "autoApprovalBlocked": {"node": node, "permanent": [], "missingPreAuthorizations": missing,
+                                      "resolution": "人工裁决后以精确口令关闭本闸（本闸如实记 host-session，后续闸恢复自动），或在策略文件补预授权后重试"}}, 2)
+    statement = str(policy["statement"]).strip()
+    if used:
+        applied = "；".join(
+            f"{category}: {next(entry['basis'].strip() for entry in policy['preAuthorizations'] if entry.get('category') == category)}"
+            for category in used)
+        verbatim = f"{statement}｜适用预授权 → {applied}"
+    else:
+        verbatim = statement
+    return {"approvalToken": f"auto-policy:{node}", "approvalResponse": f"auto-policy:{node}",
+            "approvalTokenVerbatim": verbatim, "approvalResponseVerbatim": verbatim,
+            "approvalSource": "auto-policy", "autoPolicyRef": state.get("autoPolicyRef"),
+            "preAuthorizationsUsed": used}
+
+
 def next_action(node: str) -> str:
     actions = {
         "G1": "Run G1 direction confirmation.",
@@ -223,18 +496,32 @@ def command_init(args: argparse.Namespace) -> None:
     destination = Path(args.state)
     if destination.exists():
         emit({"status": "blocked", "error": "state file already exists", "path": str(destination)}, 2)
+    # v1.22.0 输入端选模式：auto 必须带策略文件（当场校验，坏策略不开工）。
+    mode = getattr(args, "approval_mode", "human") or "human"
+    policy_ref = None
+    if mode == "auto":
+        if not getattr(args, "auto_policy", None) or not str(args.auto_policy).strip():
+            emit({"status": "blocked", "error": "--approval-mode auto 必须携带 --auto-policy（预授权策略文件）——无策略不自动"}, 2)
+        try:
+            policy_path, _policy = load_policy_file(args.auto_policy, args.project_id)
+        except ValueError as error:
+            emit({"status": "blocked", "error": f"auto-policy 无效：{error}"}, 2)
+        policy_ref = str(policy_path)
     timestamp = now()
     bgm = pack.get("bgm") or {"decision": "unknown", "preference": None, "libraryPending": False, "clearCondition": None}
     bgm = {**bgm, "history": []}
     state = {
         "schemaVersion": "0.1", "projectId": args.project_id, "sourcePackRef": str(source),
         "authorization": args.authorization, "distribution": args.distribution, "bgm": bgm,
+        "approvalMode": mode,
         "currentNode": "G1", "status": "in_progress",
         "nodes": {"G0": {"status": "completed", "artifactRefs": [str(source)], "inputRefs": [], "humanReviewPoints": [], "approval": None}, **{node: node_record("in_progress" if node == "G1" else "pending") for node in NODES if node != "G0"}},
         "acceptedWarnings": [], "nextAction": next_action("G1"), "createdAt": timestamp, "updatedAt": timestamp,
     }
+    if policy_ref:
+        state["autoPolicyRef"] = policy_ref
     write_state(destination, state)
-    emit({"status": "created", "state": str(destination), "currentNode": "G1", "nextAction": state["nextAction"]})
+    emit({"status": "created", "state": str(destination), "currentNode": "G1", "approvalMode": mode, "nextAction": state["nextAction"]})
 
 
 def command_status(args: argparse.Namespace) -> None:
@@ -245,7 +532,7 @@ def command_status(args: argparse.Namespace) -> None:
     bgm = state.get("bgm") or {}
     if bgm.get("libraryPending"):
         bgm = {**bgm, "reminder": "BGM 待找乐：G1 末出检索词卡 → 找乐 → 用户挑曲 → 官方渠道取得整轨并登记 → `bgm-choice` 翻槽；G3 批准前槽必须已清"}
-    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
+    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "approvalMode": state.get("approvalMode", "human"), "autoPolicyRef": state.get("autoPolicyRef"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
 
 
 
@@ -255,6 +542,14 @@ def command_bgm_choice(args: argparse.Namespace) -> None:
     clears by a registered file (provided) or the user's deliberate no-BGM call."""
     state_path = Path(args.state)
     state = read_state(state_path)
+    # v1.22.0：auto 模式下翻 BGM 槽=系统受托选曲（挑曲是人耳偏好），必须有预授权在场。
+    if str(state.get("approvalMode") or "human") == "auto":
+        try:
+            policy = load_auto_policy(state_path, state)
+        except ValueError as error:
+            emit({"status": "blocked", "error": f"auto 模式下 BGM 翻槽被拦：{error}"}, 2)
+        if not any(entry.get("category") == "music_delegated_selection" for entry in policy.get("preAuthorizations", [])):
+            emit({"status": "blocked", "error": "自动确认模式下 BGM 翻槽=系统受托选曲（挑曲属人耳偏好）：策略需带 music_delegated_selection 预授权，或 set-approval-mode 转人工处理本项目"}, 2)
     bgm = state.get("bgm") or {"decision": "unknown", "preference": None, "libraryPending": False, "clearCondition": None}
     if args.decision == "provided" and not (args.evidence and args.evidence.strip()):
         emit({"status": "blocked", "error": "翻槽到 provided 必须携带登记证据（music-expert 登记记录路径 + 许可说明）"}, 2)
@@ -392,6 +687,32 @@ def command_reopen_g3(args: argparse.Namespace) -> None:
     emit({"status": "reopened", "currentNode": "G3", "nextAction": state["nextAction"], "amendment": history[-1]})
 
 
+def command_set_approval_mode(args: argparse.Namespace) -> None:
+    """显式模式切换（v1.22.0）：只此一个入口，必须带理由，切换历史 append-only。
+    隐式切换不存在——fail-stop 不切模式，人裁决单闸走口令（该闸记 host-session）。"""
+    state_path = Path(args.state)
+    state = read_state(state_path)
+    current = str(state.get("approvalMode") or "human")
+    if args.mode == current:
+        emit({"status": "unchanged", "approvalMode": current, "note": "模式未变；切换必须显式带理由，本次未写入"})
+    if args.mode == "auto":
+        if getattr(args, "auto_policy", None) and str(args.auto_policy).strip():
+            try:
+                policy_path, _policy = load_policy_file(args.auto_policy, state["projectId"])
+            except ValueError as error:
+                emit({"status": "blocked", "error": f"auto-policy 无效：{error}"}, 2)
+            state["autoPolicyRef"] = str(policy_path)
+        try:
+            load_auto_policy(state_path, state)
+        except ValueError as error:
+            emit({"status": "blocked", "error": f"切自动被拦（--auto-policy 缺失或既有策略无效）：{error}"}, 2)
+    history = state.setdefault("approvalModeHistory", [])
+    history.append({"from": current, "to": args.mode, "reason": args.reason, "at": now()})
+    state["approvalMode"] = args.mode
+    write_state(state_path, state)
+    emit({"status": "recorded", "action": "set-approval-mode", "approvalMode": args.mode, "change": history[-1]})
+
+
 def command_approve(args: argparse.Namespace) -> None:
     state_path = Path(args.state)
     state = read_state(state_path)
@@ -428,19 +749,50 @@ def command_approve(args: argparse.Namespace) -> None:
         emit({"status": "blocked", "error": "被审文件已在登记审核后变更（同路径替换/修改内容=真人所批版本不存在，旧批准不可复用）：" + "、".join(changed) + "；请重渲染审核卡 → 重新 record-review → 重新取得人工确认后再批准"}, 2)
     if node in ("G2", "G3") and (state.get("bgm") or {}).get("libraryPending"):
         emit({"status": "blocked", "error": f"{node} 批准被 BGM 待找乐槽拦住：音乐须在首个消费节点前在场（N9 顺序）。挑曲→官方渠道取得整轨→登记→bgm-choice 翻槽后再批"}, 2)
+    # ---- v1.22.0 批准来源分支：human=口令（原逻辑逐字保留）；auto=策略批准（--auto）。
+    # 一次批准只有一个来源：--auto 与口令参数同传=拒（防审计混乱）。auto 项目里
+    # 人依然可以口令裁决某一闸（fail-stop 的处理通道），该闸如实记 host-session。----
+    mode = str(state.get("approvalMode") or "human")
+    auto_flag = bool(getattr(args, "auto", False))
+    token_given = args.approval_token is not None or args.approval_response is not None
+    if auto_flag and token_given:
+        emit({"status": "blocked", "error": "--auto 不得与 --approval-token/--approval-response 混用（一次批准只有一个来源：策略自动 或 人工口令）"}, 2)
+    if auto_flag and mode != "auto":
+        emit({"status": "blocked", "error": "本项目 approvalMode=human：不存在自动批准通道（要切换用 set-approval-mode 并留理由）"}, 2)
+    if mode == "auto" and not auto_flag and not token_given:
+        emit({"status": "blocked", "error": "自动模式下 approve 二选一：--auto（策略自动批准）或 --approval-token/--approval-response（人工裁决本闸，如实记 host-session）"}, 2)
+    if not auto_flag and (args.approval_token is None or args.approval_response is None):
+        emit({"status": "blocked", "error": f"人工批准必须携带 --approval-token 与 --approval-response（精确口令：确认 {node}）"}, 2)
+    if auto_flag:
+        try:
+            load_auto_policy(state_path, state)  # fail-fast：策略文件本身无效就别进预检
+        except ValueError as error:
+            emit({"status": "blocked", "error": f"自动批准被拦：{error}"}, 2)
+        approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"],
+                    "approvalToken": f"auto-policy:{node}", "approvalResponse": f"auto-policy:{node}",
+                    "approvalTokenVerbatim": "", "approvalResponseVerbatim": "",
+                    "normalizedFromVariant": False, "approvedAt": now(),
+                    "approvalSource": "auto-policy", "autoPolicyRef": state.get("autoPolicyRef"),
+                    "preAuthorizationsUsed": []}
+    else:
+        try:
+            approval_token, approval_response, token_verbatim, response_verbatim, normalized = require_approval_token(
+                node, args.approval_token, args.approval_response)
+        except ValueError as error:
+            emit({"status": "blocked", "error": str(error)}, 2)
+        approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response,
+                    "approvalTokenVerbatim": token_verbatim, "approvalResponseVerbatim": response_verbatim,
+                    "normalizedFromVariant": normalized, "approvedAt": now(),
+                    # R2 信任边界（见 pipeline-state-contract）：本地阶段确认来源=宿主会话真人回复，
+                    # Agent 可代录、不可制造；接 Proxima 后由宿主审核入口提供可信审批事件。
+                    "approvalSource": "host-session"}
+        if mode == "auto":
+            approval["autoModeOverride"] = True  # auto 项目里的人工裁决闸，如实双记
     try:
-        approval_token, approval_response, token_verbatim, response_verbatim, normalized = require_approval_token(
-            node, args.approval_token, args.approval_response)
         require_project_file(state_path, args.approval_ref, "approvalRef")
         require_basis_references(record["reviewGate"], [args.approval_ref])
     except ValueError as error:
         emit({"status": "blocked", "error": str(error)}, 2)
-    approval = {"approvalRef": args.approval_ref, "reviewGateRef": record["reviewGate"]["reviewGateRef"], "approvalToken": approval_token, "approvalResponse": approval_response,
-                "approvalTokenVerbatim": token_verbatim, "approvalResponseVerbatim": response_verbatim,
-                "normalizedFromVariant": normalized, "approvedAt": now(),
-                # R2 信任边界（见 pipeline-state-contract）：本地阶段确认来源=宿主会话真人回复，
-                # Agent 可代录、不可制造；接 Proxima 后由宿主审核入口提供可信审批事件。
-                "approvalSource": "host-session"}
     if node == "G2":
         if not args.approved_narration_ref or not args.fact_citation_ref or not args.voice_brief_ref:
             emit({"status": "blocked", "error": "G2 approval requires approvedNarrationRef, factCitationRef, and voiceBriefRef"}, 2)
@@ -524,8 +876,29 @@ def command_approve(args: argparse.Namespace) -> None:
                 state["acceptedWarnings"] = json.loads(args.accepted_warnings)
             except json.JSONDecodeError:
                 emit({"status": "invalid", "error": "acceptedWarnings must be JSON"}, 2)
+        # v1.22.0 人审决策文件形状对账（诚实披露闸，双向都拦）：
+        # auto 关单必须带 performed:false + replacedBy auto-policy:（缺文件/冒充人审=拒）；
+        # 人工关单不接受 performed:false（免审声明是自动模式专属，人批了却说没人审=矛盾）。
+        decision_path = manifest.parent / "human-review-decision.json"
+        decision_doc = None
+        if decision_path.is_file():
+            try:
+                decision_doc = json.loads(decision_path.read_text(encoding="utf-8-sig"))
+            except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+                decision_doc = None
+        if approval.get("approvalSource") == "auto-policy":
+            if not (isinstance(decision_doc, dict) and decision_doc.get("performed") is False
+                    and str(decision_doc.get("replacedBy") or "").startswith("auto-policy:")):
+                emit({"status": "blocked", "error": "自动确认 G5 要求 human-review-decision.json 以披露形状在场（performed:false + replacedBy 以 auto-policy: 开头）——缺此文件不得宣称免审，自动模式也不得声称做过人工审"}, 2)
+        elif isinstance(decision_doc, dict) and decision_doc.get("performed") is False:
+            emit({"status": "blocked", "error": "人工关单不接受 performed:false 免审声明（该形状是自动确认模式专属）：完成人工播放审核后关单，或 set-approval-mode 留痕转自动"}, 2)
+    if approval.get("approvalSource") == "auto-policy":
+        approval.update(require_auto_approval(state_path, state, node, record, args))
     record["approval"] = approval
-    record["status"] = "completed_with_accepted_warnings" if node == "G5" and state["acceptedWarnings"] else "completed"
+    if node == "G5" and approval.get("approvalSource") == "auto-policy":
+        record["status"] = "completed_auto_reviewed_with_accepted_warnings" if state["acceptedWarnings"] else "completed_auto_reviewed"
+    else:
+        record["status"] = "completed_with_accepted_warnings" if node == "G5" and state["acceptedWarnings"] else "completed"
     index = NODES.index(node)
     if node == "G5":
         state["currentNode"] = "completed"
@@ -545,7 +918,11 @@ def parser() -> argparse.ArgumentParser:
     sub = result.add_subparsers(dest="command", required=True)
     init = sub.add_parser("init")
     init.add_argument("--project-id", required=True); init.add_argument("--source-pack", required=True); init.add_argument("--state", required=True)
-    init.add_argument("--authorization", required=True); init.add_argument("--distribution", required=True); init.set_defaults(func=command_init)
+    init.add_argument("--authorization", required=True); init.add_argument("--distribution", required=True)
+    init.add_argument("--approval-mode", choices=APPROVAL_MODES, default="human",
+                      help="输入端选审批模式（v1.22.0）：human=每节点真人口令（默认）；auto=策略自动确认（必带 --auto-policy）")
+    init.add_argument("--auto-policy", help="auto 模式必带：预授权策略 JSON（kind=auto-approval-policy，schemaVersion 0.1）")
+    init.set_defaults(func=command_init)
     status = sub.add_parser("status"); status.add_argument("--state", required=True); status.set_defaults(func=command_status)
     record = sub.add_parser("record"); record.add_argument("--state", required=True); record.add_argument("--node", choices=NODES, required=True)
     record.add_argument("--node-status", choices=sorted(STATES), required=True); record.add_argument("--input-ref", action="append"); record.add_argument("--artifact-ref", action="append"); record.add_argument("--review-point", action="append"); record.set_defaults(func=command_record)
@@ -554,11 +931,18 @@ def parser() -> argparse.ArgumentParser:
     bgm.add_argument("--decision", required=True, choices=("provided", "use_library_later", "no_bgm"))
     bgm.add_argument("--preference"); bgm.add_argument("--evidence"); bgm.add_argument("--note")
     bgm.set_defaults(func=command_bgm_choice)
-    approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True); approve.add_argument("--approval-token", required=True); approve.add_argument("--approval-response", required=True)
+    approve = sub.add_parser("approve"); approve.add_argument("--state", required=True); approve.add_argument("--node", choices=NODES, required=True); approve.add_argument("--approval-ref", required=True)
+    # v1.22.0：口令参数改由代码按模式校验（human 必带；auto 走 --auto；混用即拒）。
+    approve.add_argument("--approval-token"); approve.add_argument("--approval-response")
+    approve.add_argument("--auto", action="store_true", help="自动确认模式：按策略批准本闸（要求项目 approvalMode=auto；不得与口令参数同传）")
     approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)
     reopen_g3 = sub.add_parser("reopen-g3"); reopen_g3.add_argument("--state", required=True); reopen_g3.add_argument("--reason", required=True); reopen_g3.add_argument("--rework-ref", required=True); reopen_g3.set_defaults(func=command_reopen_g3)
-    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3):
+    sam = sub.add_parser("set-approval-mode")
+    sam.add_argument("--state", required=True); sam.add_argument("--mode", choices=APPROVAL_MODES, required=True)
+    sam.add_argument("--reason", required=True, help="切换理由（append-only 历史，禁隐式切换）"); sam.add_argument("--auto-policy")
+    sam.set_defaults(func=command_set_approval_mode)
+    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3, sam):
         command.add_argument("--unicode", action="store_true", help="Emit readable Unicode JSON for UTF-8 terminals")
     return result
 

@@ -129,3 +129,5 @@ G0 中的语言、口音、声线、语气和语速是偏好记录，不等于�
 ```
 
 自动回显只用于发现遗漏。事实裁决、已批准口播、试听/声音决定和固定 G2 卡必须先完成并登记为机器可验证的 G2 门禁收据；只有用户精确回复 `确认 G2` 时，才记录 `approvedNarrationRef`、`factCitationRef` 与 `voiceBriefRef` 并放行 G3。
+
+**自动确认模式（v1.22.0，approvalMode=auto）**：本卡照出、照绑指纹，操作区按 final-echo-style-guide v1.4 双形态渲染。本节点信任类事项两项，未被策略预授权覆盖即 fail-stop：①预览级配音升成品（`preview_voice_production`，预授权条款必须含披露词"预览级"；决定文件 `previewTierProductionApproval` 由编排填入预授权条款原文——禁代批禁事后追认的语义不变，只是批准人从口令换成策略）；②响度 blocked 计划出路（`loudness_blocked_exit`，预授权必须指明走哪条出路且与计划 `exits` 对得上）。`userManuallyVerifiedClaims` 非空=永久 fail-stop（人工背书断言属人工批准的项目）。

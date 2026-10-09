@@ -55,6 +55,8 @@
 
 `{projectId, status: "approved", decision: "accepted", acceptedWarnings: [...]}`；人工 QA 停靠点不可由机器检查代签。
 
+**自动确认模式披露形状（v1.22.0，approvalMode=auto 项目专用）**：`{projectId, status: "approved", decision: "accepted", performed: false, replacedBy: "auto-policy:<策略引用>", acceptedWarnings: [...]}`——`performed:false` 必须携带 `auto-policy:` 前缀的来源（validator 硬校验：无来源的免审声明不成立）；pipeline_state 双向对账：auto 关单必须正是这个形状（缺文件/`performed:true` 均拒——自动不得声称做过人工审），human 关单拒 `performed:false`（免审声明是自动模式专属）。auto 项目终态 `completed_auto_reviewed*`，交付包 README 固定披露"人工听感验收未执行、由策略自动确认替代"。
+
 ## contract-era.json（历史封存包版本标记，Leader 反馈 R3，2026-09-24）
 
 合同加严（v1.4.0 起 REQUIRED `subtitle-srt-check.json`、v1.5.0 起再增 `transition-audit.json`）之前封存的 G5 包，按当时合同有效、不追溯重验——但**必须在包内放机器可读的 `contract-era.json`** 声明这一点，不许裸奔让新用户拿当前校验器一跑出满屏 invalid 还以为产品坏了。字段：`purpose=="contract-era-marker"`、`projectId`、`bundle`、`sealedAt`（取自封存报告 finishedAt）、`sealedUnderContract`、`missingCurrentRequirements`、`policy`（禁止删校验项绕开；禁止补生成检查报告冒充迁移——旧项目封存时不存在对应指令/复检链，硬造即造假）、`currentVersionBaseline`（本版完整成功基线= `工作台/sinjuku-intro-001/G5-交付包/交付包-v0.1`，2026-09-24 经当前校验器含 `--media` 全片解码 0 错误）。该标记不是 REQUIRED 文件、validator 不读它；仓内样例自洽测试（test_g5_delivery）负责两件事：基线包必须通过当前校验（合同演进弄烂基线当场红）、六个历史包必须带标记。首批六包：zaku-001 / kshatriya-001 / kshatriya-002 / tiger-001 / psycho-zaku-002 / unicorn-001（内部验收草案）。

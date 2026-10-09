@@ -27,6 +27,8 @@ For a new project, start G0 with `$material-pack-intake`. Before accepting files
 python skill/p0-c-pipeline/scripts/pipeline_state.py init --project-id <projectId> --source-pack <material-pack.json> --state <pipeline-state.json> --authorization <value> --distribution <value>
 ```
 
+Approval mode is chosen at the input side (v1.22.0): add `--approval-mode human|auto` (default `human` — an undeclared project is always human-gated). `auto` additionally requires `--auto-policy <策略 JSON>`: a pre-authorization policy (`kind: auto-approval-policy`, seven-category controlled vocabulary) that the gate consumes at approve time. In auto mode each gate's human token is replaced by a policy approval event (`approve --auto`, recorded as `approvalSource: "auto-policy"` with the policy clause as verbatim — never a fabricated human reply); trust-class items not covered by pre-authorizations fail-stop with a structured `autoApprovalBlocked` record and wait for a human, who may close that single gate with the exact token (recorded `host-session` + `autoModeOverride`). Review cards are still rendered at every node boundary. Full semantics: [pipeline-state-contract](references/pipeline-state-contract.md)《Auto-approval semantics》.
+
 Use `status` when the user says "project status", "continue", or "next step". It returns the current node, valid inputs, warnings, human-review items, and the next conversational action.
 
 ## Routing
@@ -51,8 +53,8 @@ Per operator-dialogue's single-echo contract (用户 2026-09-11 定案): a node 
 - A `use_library_later` BGM slot cannot stay pending through G2 or G3 approval: clear it with `bgm-choice` plus real registration evidence, or record an explicit `no_bgm`. Never let chat context pretend the slot is cleared.
 - **选曲关单时长比对（issue ⑫，sinjuku 实测：177.875s 曲配 180s 目标拖到 G2 才爆）**：`bgm-choice --decision provided` 关单时，编排必须用登记件里的 `trackDurationMs` 机器比对 G0 目标时长下限；轨短于下限时确认卡/回显必须亮 warning 并给出两条出路（缩 timeline 或换更长曲），**禁止静默放行到 G2**。分析报告里时长字段有值而不比对=编排漏步。
 - G4 local-direct branch can advance with a validated local candidate and explicit user review. When ChatCut is selected, G4 cannot advance without a real ChatCut export reference; a flattened preview is not an editable handoff.
-- G5 cannot complete until human QA is recorded. Accepted warnings remain visible.
-- `not_for_distribution`, unknown authorization, or `user_manually_verified` claims cannot be silently upgraded or bypassed.
+- G5 cannot complete until human QA is recorded. Accepted warnings remain visible. **Auto mode exception (v1.22.0)**: human playback QA is replaced by machine QA + honest disclosure — `human-review-decision.json` must carry `performed:false` + `replacedBy:"auto-policy:<ref>"`, the project closes as `completed_auto_reviewed*`, and the delivery README discloses the substitution. Claiming `performed:true` in auto mode (or `performed:false` in human mode) is refused both ways.
+- `not_for_distribution`, unknown authorization, or `user_manually_verified` claims cannot be silently upgraded or bypassed. In auto mode these are permanent fail-stops with no pre-authorization channel: uncleared-license audio × external distribution, unknown authorization × external distribution, and non-empty `userManuallyVerifiedClaims` block every `approve --auto` outright (`validate_distribution_rights`).
 
 ## Delivery boundary
 

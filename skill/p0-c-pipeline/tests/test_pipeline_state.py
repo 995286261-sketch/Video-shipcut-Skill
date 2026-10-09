@@ -678,5 +678,344 @@ class PipelineStateTest(unittest.TestCase):
         self.assertIn(str(self.files["G3"]["card"]), gates["basisHashes"])
 
 
+    # ---- v1.22.0 自动确认模式（approvalMode=auto）：机器验收链照跑，口令段换成
+    # 策略预检；信任类事项未被预授权覆盖一律 fail-stop；留痕如实写 auto-policy，
+    # 绝不伪造人类原话；auto 项目里人工口令裁决单闸=如实双记（host-session+override）。 ----
+
+    AUTO_STATEMENT = "本项目以自动确认模式运行：各闸由机器验收+策略自动批准；信任类事项按预授权清单执行，未覆盖一律停下等人。"
+
+    def preauth(self, category, basis=None, **params):
+        entry = {"category": category,
+                 "basis": basis or f"{category}：委托方于输入端预授权（测试夹具）",
+                 "authorizedBy": "委托方（输入端）", "authorizedAt": "2026-09-30T00:00:00Z"}
+        if params:
+            entry["parameters"] = params
+        return entry
+
+    def write_policy(self, preauths=None, project_id="fixture", statement=None):
+        policy = {"schemaVersion": "0.1", "kind": "auto-approval-policy", "projectId": project_id,
+                  "statement": self.AUTO_STATEMENT if statement is None else statement,
+                  "preAuthorizations": list(preauths or [])}
+        path = self.root / "auto-policy.json"
+        path.write_text(json.dumps(policy, ensure_ascii=False), encoding="utf-8")
+        return path
+
+    def init_auto(self, preauths=None, authorization="authorized", distribution="local_only"):
+        policy = self.write_policy(preauths)
+        return self.run_cli("init", "--project-id", "fixture", "--source-pack", self.pack, "--state", self.state,
+                            "--authorization", authorization, "--distribution", distribution,
+                            "--approval-mode", "auto", "--auto-policy", policy)
+
+    def approve_auto(self, node, code=0, accepted=None):
+        args = ["approve", "--state", self.state, "--node", node, "--auto",
+                "--approval-ref", self.files[node]["approval"]]
+        if node == "G2":
+            args += ["--approved-narration-ref", self.narration, "--fact-citation-ref", self.facts, "--voice-brief-ref", self.voice]
+        elif node == "G3":
+            args += ["--edit-plan-ref", self.plan, "--timeline-review-ref", self.timeline]
+        elif node == "G4":
+            args += ["--local-render-ref", self.render, "--g4-validation-ref", self.g4_validation]
+        elif node == "G5":
+            args += ["--delivery-manifest-ref", self.delivery, "--g5-validation-ref", self.g5_validation]
+            for warning in accepted or []:
+                args += ["--accepted-warning", warning]
+        return self.run_cli(*args, code=code)
+
+    def run_auto_to(self, node, preauths=None):
+        self.init_auto(preauths=preauths)
+        for step in ("G1", "G2", "G3", "G4", "G5"):
+            if step == node:
+                return
+            self.prepare_node(step)
+            self.approve_auto(step)
+
+    def write_g5_decision(self, performed=False, replaced="auto-policy:auto-policy.json"):
+        doc = {"projectId": "fixture", "status": "approved", "decision": "accepted",
+               "performed": performed, "acceptedWarnings": []}
+        if replaced is not None:
+            doc["replacedBy"] = replaced
+        return self.json_file("G5-交付包/交付包-v0.1/human-review-decision.json", doc)
+
+    def test_auto_init_requires_policy_and_records_mode(self):
+        blocked = self.run_cli("init", "--project-id", "fixture", "--source-pack", self.pack, "--state", self.state,
+                               "--authorization", "authorized", "--distribution", "local_only",
+                               "--approval-mode", "auto", code=2)
+        self.assertIn("--auto-policy", blocked["error"])
+        result = self.init_auto()
+        self.assertEqual("auto", result["approvalMode"])
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("auto", state["approvalMode"])
+        self.assertTrue(state["autoPolicyRef"])
+        # 不声明模式=human（安全兜底），字段显式落盘
+        self.state.unlink()
+        self.init()
+        self.assertEqual("human", json.loads(self.state.read_text(encoding="utf-8"))["approvalMode"])
+
+    def test_auto_policy_rejects_unknown_category_and_foreign_project(self):
+        # 词表外类别当场拒——永久项（未清权×对外等）没有预授权通道，词表不可扩展
+        self.write_policy([{"category": "distribution_rights_override", "basis": "试图绕过权益闸",
+                            "authorizedBy": "x", "authorizedAt": "2026-09-30T00:00:00Z"}])
+        blocked = self.run_cli("init", "--project-id", "fixture", "--source-pack", self.pack, "--state", self.state,
+                               "--authorization", "authorized", "--distribution", "local_only",
+                               "--approval-mode", "auto", "--auto-policy", self.root / "auto-policy.json", code=2)
+        self.assertIn("受控词表", blocked["error"])
+        self.write_policy(project_id="other-project")
+        blocked = self.run_cli("init", "--project-id", "fixture", "--source-pack", self.pack, "--state", self.state,
+                               "--authorization", "authorized", "--distribution", "local_only",
+                               "--approval-mode", "auto", "--auto-policy", self.root / "auto-policy.json", code=2)
+        self.assertIn("不符", blocked["error"])
+
+    def test_auto_full_chain_records_policy_source(self):
+        self.init_auto(preauths=[self.preauth("subject_policy", basis="主体政策由输入工单承载：目标主体=fixture 机体")])
+        for node in ("G1", "G2", "G3", "G4"):
+            self.prepare_node(node)
+            self.approve_auto(node)
+        self.write_g5_decision()
+        self.prepare_node("G5")
+        self.approve_auto("G5")
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("completed", state["currentNode"])
+        self.assertEqual("completed_auto_reviewed", state["status"])
+        self.assertEqual("completed_auto_reviewed", state["nodes"]["G5"]["status"])
+        for node in ("G1", "G2", "G3", "G4", "G5"):
+            approval = state["nodes"][node]["approval"]
+            self.assertEqual("auto-policy", approval["approvalSource"])
+            self.assertEqual(f"auto-policy:{node}", approval["approvalToken"])
+            self.assertIn("自动确认模式", approval["approvalTokenVerbatim"])
+            self.assertFalse(approval["normalizedFromVariant"])
+        self.assertEqual(["subject_policy"], state["nodes"]["G3"]["approval"]["preAuthorizationsUsed"])
+
+    def test_auto_mixing_token_and_flag_rejected(self):
+        self.init_auto()
+        self.prepare_node("G1")
+        blocked = self.run_cli("approve", "--state", self.state, "--node", "G1", "--auto",
+                               "--approval-ref", self.files["G1"]["approval"],
+                               "--approval-token", "确认 G1", "--approval-response", "确认 G1", code=2)
+        self.assertIn("混用", blocked["error"])
+
+    def test_auto_flag_on_human_project_rejected(self):
+        self.init()
+        self.prepare_node("G1")
+        blocked = self.run_cli("approve", "--state", self.state, "--node", "G1", "--auto",
+                               "--approval-ref", self.files["G1"]["approval"], code=2)
+        self.assertIn("approvalMode=human", blocked["error"])
+
+    def test_human_mode_still_requires_token(self):
+        self.init()
+        self.prepare_node("G1")
+        blocked = self.run_cli("approve", "--state", self.state, "--node", "G1",
+                               "--approval-ref", self.files["G1"]["approval"], code=2)
+        self.assertIn("人工批准必须携带", blocked["error"])
+
+    def test_auto_failstop_preview_voice_and_preauth_cures(self):
+        self.init_auto()
+        self.prepare_node("G1")
+        self.approve_auto("G1")
+        self.voice.write_text(json.dumps({"voiceTier": "preview_only", "lines": 3}), encoding="utf-8")
+        self.prepare_node("G2")
+        blocked = self.approve_auto("G2", code=2)
+        self.assertIn("preview_voice_production", blocked["error"])
+        self.assertIn("自动确认受阻", blocked["error"])
+        self.assertTrue(blocked["autoApprovalBlocked"]["missingPreAuthorizations"])
+        # 预授权缺披露词'预览级' → 策略校验当场拒
+        self.write_policy([self.preauth("preview_voice_production", basis="系统声直接进成片")])
+        blocked = self.approve_auto("G2", code=2)
+        self.assertIn("预览级", blocked["error"])
+        self.write_policy([self.preauth("preview_voice_production", basis="委托方知情接受预览级系统声用于成片")])
+        result = self.approve_auto("G2")
+        self.assertEqual("G3", result["currentNode"])
+        approval = json.loads(self.state.read_text(encoding="utf-8"))["nodes"]["G2"]["approval"]
+        self.assertEqual(["preview_voice_production"], approval["preAuthorizationsUsed"])
+        self.assertIn("预览级", approval["approvalTokenVerbatim"])
+
+    def test_auto_failstop_loudness_blocked_exit(self):
+        self.init_auto()
+        self.prepare_node("G1")
+        self.approve_auto("G1")
+        loud = self.json_file("G2-证据与口播/响度-归一化计划-v0.1.json", {
+            "skill": "loudness-expert", "purpose": "loud_plan", "status": "blocked_true-peak",
+            "exits": ["先压缩后测：先跑压缩链再重新规划", "把目标响度降到 -24.3 LUFS"]})
+        self.prepare_node("G2", basis_refs=[self.narration, self.facts, self.voice, loud])
+        blocked = self.approve_auto("G2", code=2)
+        self.assertIn("loudness_blocked_exit", blocked["error"])
+        # 预授权指了不存在的出路 → 参数与现场事实对不上，仍拦
+        self.write_policy([self.preauth("loudness_blocked_exit", exit="放弃响度控制")])
+        blocked = self.approve_auto("G2", code=2)
+        self.assertIn("参数与现场事实对不上", blocked["error"])
+        self.write_policy([self.preauth("loudness_blocked_exit", exit="先压缩后测")])
+        result = self.approve_auto("G2")
+        self.assertEqual("G3", result["currentNode"])
+
+    def test_auto_failstop_transition_waiver_and_sufficiency(self):
+        self.init_auto(preauths=[self.preauth("subject_policy")])
+        self.prepare_node("G1")
+        self.approve_auto("G1")
+        self.prepare_node("G2")
+        self.approve_auto("G2")
+        waiver = self.json_file("G3-剪辑计划/转场-预览清单-v0.1.json", {
+            "transitionPreviewWaiver": {"status": "blocked_previews", "disclosure": "你批准的是未见过的效果"}})
+        self.prepare_node("G3", basis_refs=[self.plan, self.timeline, waiver])
+        blocked = self.approve_auto("G3", code=2)
+        categories = [item["category"] for item in blocked["autoApprovalBlocked"]["missingPreAuthorizations"]]
+        self.assertIn("transition_preview_waiver", categories)
+        # 计划带充分性缩短兜底 → sufficiency_shorten 也上缺口清单
+        self.plan.write_text(json.dumps({"targetSubject": {"userConfirmed": True,
+                                                           "sufficiencyFallback": {"preApproved": "shorten_output"}}}), encoding="utf-8")
+        self.prepare_node("G3", basis_refs=[self.plan, self.timeline, waiver])
+        blocked = self.approve_auto("G3", code=2)
+        categories = [item["category"] for item in blocked["autoApprovalBlocked"]["missingPreAuthorizations"]]
+        self.assertIn("transition_preview_waiver", categories)
+        self.assertIn("sufficiency_shorten", categories)
+        self.write_policy([self.preauth("subject_policy"), self.preauth("transition_preview_waiver"),
+                           self.preauth("sufficiency_shorten")])
+        result = self.approve_auto("G3")
+        self.assertEqual("G4", result["currentNode"])
+
+    def test_auto_failstop_warning_acceptance_g4_and_g5(self):
+        self.run_auto_to("G4", preauths=[self.preauth("subject_policy")])
+        assembly = self.json_file("G4-剪辑与渲染/装配记录.json", {
+            "pureNarration": {"verdict": "disclosed-exceedance", "measuredLufs": -15.6}})
+        self.prepare_node("G4", basis_refs=[self.render, self.g4_validation, assembly])
+        blocked = self.approve_auto("G4", code=2)
+        self.assertIn("warning_acceptance", blocked["error"])
+        self.write_policy([self.preauth("subject_policy"), self.preauth("warning_acceptance", scopes=["响度"])])
+        result = self.approve_auto("G4")
+        self.assertEqual("G5", result["currentNode"])
+        # G5：包内响度审计 disclosed-exceedance + 接受警告点名响度
+        self.json_file("G5-交付包/交付包-v0.1/loudness-audit.json", {
+            "skill": "loudness-expert", "purpose": "loud_verify", "status": "disclosed-exceedance"})
+        self.write_g5_decision()
+        self.write_policy([self.preauth("subject_policy")])
+        self.prepare_node("G5")
+        blocked = self.approve_auto("G5", code=2)
+        self.assertIn("warning_acceptance", blocked["error"])
+        # scope 不覆盖现场警告 → 仍拦
+        self.write_policy([self.preauth("subject_policy"), self.preauth("warning_acceptance", scopes=["水印"])])
+        blocked = self.approve_auto("G5", accepted=["响度：实测 −15.5 超容差"], code=2)
+        self.assertIn("参数与现场事实对不上", blocked["error"])
+        self.write_policy([self.preauth("subject_policy"), self.preauth("warning_acceptance", scopes=["响度"])])
+        self.approve_auto("G5", accepted=["响度：实测 −15.5 超容差"])
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("completed_auto_reviewed_with_accepted_warnings", state["status"])
+
+    def test_auto_permanent_failstop_uncleared_external(self):
+        self.pack.write_text(json.dumps({"packStatus": "complete", "audioAssets": [
+            {"assetId": "bgm-001", "licenseType": "uncleared-platform-catalog"}]}), encoding="utf-8")
+        self.init_auto(preauths=[self.preauth("subject_policy")], distribution="public_bilibili")
+        self.prepare_node("G1")
+        blocked = self.approve_auto("G1", code=2)
+        self.assertIn("永久不可预授权", blocked["error"])
+        self.assertIn("uncleared", blocked["error"])
+        self.assertTrue(blocked["autoApprovalBlocked"]["permanent"])
+
+    def test_auto_permanent_failstop_unknown_authorization_external(self):
+        self.init_auto(authorization="unknown", distribution="public_bilibili")
+        self.prepare_node("G1")
+        blocked = self.approve_auto("G1", code=2)
+        self.assertIn("授权不明", blocked["error"])
+
+    def test_auto_permanent_failstop_manual_claims(self):
+        self.init_auto()
+        self.prepare_node("G1")
+        self.approve_auto("G1")
+        decision = self.json_file("G2-证据与口播/G2-审批决定-v0.1.json", {
+            "schemaVersion": "0.2", "node": "G2", "projectId": "fixture", "status": "approved_for_g3",
+            "userManuallyVerifiedClaims": ["委托方口头背书某主张"], "provenanceRule": "not first-party verified"})
+        self.prepare_node("G2", basis_refs=[self.narration, self.facts, self.voice, decision])
+        blocked = self.approve_auto("G2", code=2)
+        self.assertIn("userManuallyVerifiedClaims", blocked["error"])
+
+    def test_auto_bgm_flip_requires_delegated_selection(self):
+        self.pack.write_text(json.dumps({"packStatus": "complete", "bgm": {
+            "decision": "use_library_later", "preference": None, "libraryPending": True,
+            "clearCondition": "G1 末检索"}}, ensure_ascii=False), encoding="utf-8")
+        self.init_auto()
+        blocked = self.run_cli("bgm-choice", "--state", self.state, "--decision", "no_bgm",
+                               "--note", "系统想代拍", code=2)
+        self.assertIn("music_delegated_selection", blocked["error"])
+        self.write_policy([self.preauth("music_delegated_selection")])
+        result = self.run_cli("bgm-choice", "--state", self.state, "--decision", "no_bgm",
+                              "--note", "输入端预授权委托选定")
+        self.assertEqual("recorded", result["status"])
+
+    def test_auto_failstop_then_human_resolves_single_gate_and_auto_resumes(self):
+        self.init_auto()  # 无任何预授权
+        self.prepare_node("G1")
+        self.approve_auto("G1")
+        self.prepare_node("G2")
+        self.approve_auto("G2")
+        self.prepare_node("G3")
+        blocked = self.approve_auto("G3", code=2)
+        self.assertIn("subject_policy", blocked["error"])
+        # 人工裁决本闸：口令路径，如实记 host-session + override 双记
+        result = self.approve("G3")
+        self.assertEqual("G4", result["currentNode"])
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("host-session", state["nodes"]["G3"]["approval"]["approvalSource"])
+        self.assertTrue(state["nodes"]["G3"]["approval"]["autoModeOverride"])
+        # 后续闸恢复自动
+        self.prepare_node("G4")
+        self.approve_auto("G4")
+        self.write_g5_decision()
+        self.prepare_node("G5")
+        self.approve_auto("G5")
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("completed_auto_reviewed", state["status"])
+        self.assertEqual("auto-policy", state["nodes"]["G5"]["approval"]["approvalSource"])
+
+    def test_auto_r2_tamper_still_blocks(self):
+        self.init_auto()
+        self.prepare_node("G1")
+        self.files["G1"]["basis"].write_text("tampered", encoding="utf-8")
+        blocked = self.approve_auto("G1", code=2)
+        self.assertIn("被审文件已在登记审核后变更", blocked["error"])
+        self.prepare_node("G1")
+        result = self.approve_auto("G1")
+        self.assertEqual("G2", result["currentNode"])
+
+    def test_auto_g5_requires_disclosed_decision_shape(self):
+        self.run_auto_to("G5", preauths=[self.preauth("subject_policy")])
+        self.prepare_node("G5")
+        blocked = self.approve_auto("G5", code=2)
+        self.assertIn("human-review-decision.json", blocked["error"])
+        self.write_g5_decision(performed=True, replaced=None)
+        blocked = self.approve_auto("G5", code=2)
+        self.assertIn("不得声称做过人工审", blocked["error"])
+        self.write_g5_decision()
+        result = self.approve_auto("G5")
+        self.assertEqual("completed", result["currentNode"])
+
+    def test_human_g5_rejects_exempt_shape(self):
+        self.init()
+        self.advance_through("G4")
+        self.write_g5_decision()  # performed:false 的自动披露形状
+        self.prepare_node("G5")
+        blocked = self.approve("G5", code=2)
+        self.assertIn("performed:false 免审声明", blocked["error"])
+        self.write_g5_decision(performed=True, replaced=None)
+        result = self.approve("G5")
+        self.assertEqual("completed", result["currentNode"])
+
+    def test_set_approval_mode_requires_reason_and_policy(self):
+        self.init()
+        blocked = self.run_cli("set-approval-mode", "--state", self.state, "--mode", "auto",
+                               "--reason", "想试试自动", code=2)
+        self.assertIn("auto-policy", blocked["error"])
+        policy = self.write_policy([self.preauth("subject_policy")])
+        self.run_cli("set-approval-mode", "--state", self.state, "--mode", "auto",
+                     "--reason", "输入端授权自动跑", "--auto-policy", policy)
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("auto", state["approvalMode"])
+        self.assertEqual(1, len(state["approvalModeHistory"]))
+        self.assertEqual("输入端授权自动跑", state["approvalModeHistory"][0]["reason"])
+        unchanged = self.run_cli("set-approval-mode", "--state", self.state, "--mode", "auto", "--reason", "重复")
+        self.assertEqual("unchanged", unchanged["status"])
+        self.assertEqual(1, len(json.loads(self.state.read_text(encoding="utf-8"))["approvalModeHistory"]))
+        self.run_cli("set-approval-mode", "--state", self.state, "--mode", "human", "--reason", "转回人工")
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual("human", state["approvalMode"])
+        self.assertEqual(2, len(state["approvalModeHistory"]))
+
+
 if __name__ == "__main__":
     unittest.main()

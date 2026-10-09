@@ -411,6 +411,10 @@ def main() -> int:
     check_loudness_audit(bundle, plan, review, errors, allow_pending_acceptance=generating)
     if not generating and manifest.get("status", "").startswith("completed") and not (review.get("status") == "approved" and review.get("decision") == "accepted"):
         errors.append("completed bundle lacks accepted human review")
+    # v1.22.0 自动确认模式的如实披露形状：performed:false 必须携带 auto-policy 来源——
+    # 无来源的"免审声明"不成立；performed:false 时 status/decision 仍按上面 completed 检查。
+    if review.get("performed") is False and not str(review.get("replacedBy") or "").startswith("auto-policy:"):
+        errors.append("human-review-decision.json performed:false 必须携带 replacedBy 且以 'auto-policy:' 开头（自动确认模式专属披露形状——无来源不得宣称免审）")
     if manifest.get("authorization") in (None, "") or manifest.get("distribution") in (None, ""): errors.append("authorization or distribution boundary missing")
     measured = validate_media(bundle, export, errors) if args.media else {}
     if generating and not errors:

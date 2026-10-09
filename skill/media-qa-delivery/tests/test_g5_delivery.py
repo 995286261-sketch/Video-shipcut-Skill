@@ -190,6 +190,21 @@ class G5DeliveryTest(BundleFixture, unittest.TestCase):
         result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
         self.assertIn("completed bundle lacks accepted human review", result["errors"])
 
+    def test_auto_review_decision_shape_requires_policy_source(self):
+        # v1.22.0 自动确认模式披露形状：performed:false 必须携带 auto-policy 来源——
+        # 无来源的"免审声明"不成立；带来源则合法（人工听感验收未执行、如实披露）。
+        self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
+        self.json("human-review-decision.json", {"projectId": self.project, "status": "approved",
+                                                 "decision": "accepted", "performed": False, "acceptedWarnings": []})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle, code=2)
+        self.assertIn("auto-policy:", " ".join(result["errors"]))
+        self.json("human-review-decision.json", {"projectId": self.project, "status": "approved",
+                                                 "decision": "accepted", "performed": False,
+                                                 "replacedBy": "auto-policy:G0-素材包/自动批准策略-v0.1.json",
+                                                 "acceptedWarnings": []})
+        result = self.run_cli(VALIDATE, "--bundle", self.bundle)
+        self.assertEqual("valid", result["status"])
+
     def test_rejects_invalid_chapter_count(self):
         self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence)
         trace = json.loads((self.bundle / "source-timecode-list.json").read_text(encoding="utf-8"))
