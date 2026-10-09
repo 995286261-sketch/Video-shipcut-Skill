@@ -1,5 +1,18 @@
 # 变更记录
 
+## v1.22.0 — 2026-09-30 — **自动确认模式版本**
+
+发布范围＝平台（connector）融入的前置改造（用户 09-30 拍板："中途确认功能保留，确认交给系统自动做，回显卡照出"；三项裁决=信任类走输入预授权白名单／G5 人审由机检替代+如实披露／先做 skill 侧骨架等公司输入输出规格）。提交 `024f219`（`feat/auto-approval-mode` 分支合回 main）。**本地人机交互模式零行为变化**（默认 human，历史项目不追溯）。
+
+- **输入端选模式**：`init --approval-mode human|auto`（不声明=human 安全兜底）；auto 必带 `--auto-policy <策略 JSON>`（schemaVersion 0.1 / kind auto-approval-policy / projectId 相符 / statement 非空，坏策略当场拒不开工）。切换唯一入口 `set-approval-mode --mode --reason`（append-only `approvalModeHistory`，禁隐式切换；fail-stop 不切模式）。
+- **预授权受控词表（七类，不可扩展，未知类别当场拒）**：`preview_voice_production`（条款必含披露词"预览级"）｜`loudness_blocked_exit`（parameters.exit 必须指明且与计划 exits 对得上）｜`transition_preview_waiver`｜`subject_policy`（G3 auto 必备）｜`warning_acceptance`（parameters.scopes 逐条覆盖现场警告）｜`sufficiency_shorten`｜`music_delegated_selection`（auto 下 bgm-choice 翻槽唯一入口）。
+- **永久 fail-stop（无预授权通道）**：未清权音频×对外分发、授权不明×对外分发（distribution 不在内向词表 {internal_test, local_only, not_for_distribution} 即按对外处理，保守）、`userManuallyVerifiedClaims` 非空。新增 `validate_distribution_rights` **补上现存缺口**——此前"未清权×对外"无端到端机器闸（g5_audit 的 licenseCleared 判法有洞：`uncleared-platform-catalog`≠`unverified` 会放行）；仅 auto 模式生效，human 模式行为不变（R3 不追溯）。
+- **approve --auto**：机器验收链**全部照跑**（002-⑦ 收据对账／R2 basisHashes／BGM 槽／节点载荷／R1 报告解析），口令段替换为信任类预检——扫描被审面标记（voiceTier=preview_only、loudness blocked_*、transitionPreviewWaiver、sufficiencyFallback、disclosed-exceedance、acceptedWarnings），未被预授权覆盖＝blocked + `autoApprovalBlocked` 结构化记录（category/reason/decisionNeeded/出路），节点停 review_required 等人。放行＝`approvalSource:"auto-policy"`、`approvalToken:"auto-policy:<node>"`、verbatim=策略 statement＋适用预授权条款原文（**绝不伪造人类原话**）、`preAuthorizationsUsed[]` 留痕。
+- **混合审计**：auto 项目人工可口令裁决单闸——如实记 `host-session` + `autoModeOverride:true`，后续闸恢复自动；`--auto` 与口令参数同传＝拒（一次批准只有一个来源）；human 项目传 `--auto`＝拒；口令参数 parser 层放宽为可选、由代码按模式强制（human 缺口令报错语义不变）。
+- **G5 披露形状（双向诚实闸）**：auto 关单要求 `human-review-decision.json` 为 `performed:false` + `replacedBy:"auto-policy:<ref>"`（缺文件/`performed:true` 均拒——自动不得声称做过人工审）；人工关单拒 `performed:false`（免审声明是自动模式专属）。`g5_validate_delivery.py` 同步校验。auto 终态 `completed_auto_reviewed`（带已接受警告 `_with_accepted_warnings`），`completed` 前缀兼容既有 manifest 检查。
+- **卡片照出、流式不减**：每节点回显卡仍在节点边界当场弹出，style-guide **v1.4** 操作区双形态（通过＝「系统已自动确认·依据」；受阻＝「自动确认受阻·需你拍板」）；operator-dialogue 规则 2 补 auto 例外通道、规则 4 改写为"**无授权不得默认放行**"（顺带裁决 v1.2 全卡默认推荐与旧"永不预选"条款的文档张力）、新规则 9 自动模式对话纪律；六份 g*-choice-cards 各补 auto 措辞段；g0-start-form 追问项补"审批方式"（没提就默认人工，**不得替用户选自动**）；pipeline-state-contract 新增《Auto-approval semantics》章；delivery-bundle-schema 补披露形状。
+- **测试 +21**：`test_pipeline_state` 40→59（策略校验/七类 fail-stop 负例/预授权正例/参数不匹配仍拦/永久闸三案/混合模式单闸人工裁决/set-approval-mode/R2 指纹对 auto 同样生效/G5 形状双向/混用拒绝），`test_g5_delivery` 28→29。全量回归 45 文件逐文件绿，py3.9 编译零错。
+
 ## v1.21.0 — 2026-09-29 — **配音绿灯版本**
 
 发布范围＝zaku-intro-003 测后批末件 ⑧（提交 `8eba71e`）：用户 09-29 裁决"就只用这三个（Samantha/Daniel/Karen），其他的我已经pass掉了"——英文成片直接用 macOS 系统声，百炼成品级 TTS 额度耗尽自此**不再卡点**；原"额度预检+403 结构化上报"修法随通道 pass 缓行（将来转付费通道再议）。zaku-003 问题清单 ①–⑮ 至此零开放。
