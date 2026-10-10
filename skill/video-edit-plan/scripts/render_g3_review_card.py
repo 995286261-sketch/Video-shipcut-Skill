@@ -173,7 +173,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--callback", required=True, type=Path)
     parser.add_argument("--plan", required=True, type=Path)
-    parser.add_argument("--alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json for card v0.2 verification")
+    parser.add_argument("--alignment", type=Path, help="music-expert BGM-对齐建议-vN.json for card v0.2 verification")
     parser.add_argument("--preview", type=Path, help="《转场-预览清单-vM.N.json》；计划含转场时必传（豁免披露除外）")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()

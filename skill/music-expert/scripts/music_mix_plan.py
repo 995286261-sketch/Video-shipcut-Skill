@@ -12,8 +12,11 @@ cache key == sha256 of the file being mixed). Any mismatch is a hard block:
 G4 can only render what G3 approved, and the ducking depth that §6-② deferred
 to pre-G4 decision becomes an explicit, echoed parameter here.
 
-Outputs `BGM-混音合同-v0.1.json` (machine, consumed by g4_assemble.py
---bgm-mix-contract) and `BGM-混音合同回显-v0.1.md` (human echo card).
+Outputs `BGM-混音合同-vN.json` (machine, consumed by g4_assemble.py
+--bgm-mix-contract) and `BGM-混音合同回显-vN.md` (human echo card). Version
+suffix auto-increments via versioned_output and never overwrites an earlier
+run (⑭小2, banshee-001 ledger); the format generation lives in
+`schemaVersion`, the artifact round in `artifactVersion`.
 Deterministic, pure-stdlib.
 """
 from __future__ import annotations
@@ -133,7 +136,7 @@ def build_card(contract: dict, source: dict) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", required=True, type=Path, help="approved G3 剪辑计划 JSON (bgmPlan consumer)")
-    parser.add_argument("--alignment", required=True, type=Path, help="music-expert BGM-对齐建议-v0.2.json")
+    parser.add_argument("--alignment", required=True, type=Path, help="music-expert BGM-对齐建议-vN.json")
     parser.add_argument("--bgm-audio", required=True, type=Path, help="physical BGM file to be mixed")
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--bed-gain-db", type=float, default=-12.0, help="steady BGM bed gain (default -12; zaku lesson: -18+12 stacked to inaudibility)")
@@ -242,8 +245,16 @@ def main() -> int:
         "predictedLufs": predicted,
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    contract_path = args.output_dir / "BGM-混音合同-v0.1.json"
-    card_path = args.output_dir / "BGM-混音合同回显-v0.1.md"
+    # ⑭小2（banshee-001 台账，2026-10-10 用户拍板甲案）：合同与回显卡走 next_versioned 自增
+    # 版本、重跑永不覆盖（banshee 当天靠手工"首轮留档"目录才敢重跑）；格式代际在 schemaVersion，
+    # 文件名只表达"第几次跑"；两件套共用同一版本，合同与卡不漂移（⑧ 检索词卡同规）。
+    from versioned_output import next_versioned
+    _, json_version = next_versioned(args.output_dir, "BGM-混音合同", ".json")
+    _, card_probe_version = next_versioned(args.output_dir, "BGM-混音合同回显", ".md")
+    version = f"v0.{max(int(json_version.split('.')[-1]), int(card_probe_version.split('.')[-1]))}"
+    contract_path = args.output_dir / f"BGM-混音合同-{version}.json"
+    card_path = args.output_dir / f"BGM-混音合同回显-{version}.md"
+    contract["artifactVersion"] = version
     contract_path.write_text(json.dumps(contract, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     card_path.write_text(build_card(contract, {"contractPath": str(contract_path), "cardPath": str(card_path)}), encoding="utf-8")
     emit({"status": "completed", "contract": str(contract_path), "card": str(card_path),

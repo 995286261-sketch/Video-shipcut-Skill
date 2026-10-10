@@ -167,5 +167,25 @@ class MusicMixPlanTests(unittest.TestCase):
         self.assertIn("bedGainDb", fields)
 
 
+    def test_rerun_contract_appends_version_and_keeps_old(self):
+        # ⑭小2（banshee-001 台账，甲案）：合同与卡走自增版本——banshee 当天重跑前
+        # 只能手工建"首轮留档"目录手抄旧合同，本例把"不用手抄"锁成机械保证。
+        first = self.run_plan()
+        self.assertEqual(0, first.returncode, first.stdout + first.stderr)
+        p1 = json.loads(first.stdout)
+        old_bytes = Path(p1["contract"]).read_bytes()
+        old_card = Path(p1["card"]).read_bytes()
+        self.assertIn("-v0.1", Path(p1["contract"]).name)
+        second = self.run_plan()
+        self.assertEqual(0, second.returncode, second.stdout + second.stderr)
+        p2 = json.loads(second.stdout)
+        self.assertIn("-v0.2.json", Path(p2["contract"]).name)
+        self.assertIn("-v0.2.md", Path(p2["card"]).name)  # 合同与卡同版本（⑧ 同规）
+        self.assertEqual(old_bytes, Path(p1["contract"]).read_bytes())  # 旧合同一字未动
+        self.assertEqual(old_card, Path(p1["card"]).read_bytes())
+        doc2 = json.loads(Path(p2["contract"]).read_text(encoding="utf-8"))
+        self.assertEqual("v0.2", doc2["artifactVersion"])
+
+
 if __name__ == "__main__":
     unittest.main()

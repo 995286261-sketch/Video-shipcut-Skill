@@ -60,7 +60,11 @@ class MusicAlignTests(unittest.TestCase):
         )
 
     def load_result(self):
-        return json.loads((self.out / "BGM-对齐建议-v0.2.json").read_text(encoding="utf-8"))
+        # ⑭小2：文件名版本改自增（永不覆盖），按"最高版本"读取而非焊死名字。
+        files = sorted(self.out.glob("BGM-对齐建议-v0.*.json"),
+                       key=lambda p: int(p.stem.rsplit("v0.", 1)[-1]))
+        self.assertTrue(files, "未产出对齐建议")
+        return json.loads(files[-1].read_text(encoding="utf-8"))
 
     def test_climax_sentence_places_top_energy_segment(self):
         # top segment center 140000, S03 center 80000 -> offset 60000, window [60000,100000]
@@ -114,12 +118,14 @@ class MusicAlignTests(unittest.TestCase):
     def test_echo_card_written_with_timecodes(self):
         result = self.run_align(("--climax-sentence", "S03",))
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
-        echo = Path(json.loads(result.stdout)["echo"])
+        payload = json.loads(result.stdout)
+        echo = Path(payload["echo"])
         text = echo.read_text(encoding="utf-8")
         self.assertIn("# BGM 对齐回显 — track.mp3", text)
         self.assertIn("从音轨 1:00.000 起铺", text)
         self.assertIn("S03", text)
-        self.assertIn("BGM-对齐建议-v0.2.json", text)
+        # ⑭小2：卡上引用机器件的真实路径（版本随自增），不再焊死文件名
+        self.assertIn(Path(payload["json"]).name, text)
         self.assertIn("## 乐句表（机器版", text)
         self.assertIn("## 逐句排版档位（机械草稿", text)
 
@@ -191,7 +197,11 @@ class LayoutTierTests(unittest.TestCase):
         )
 
     def load_result(self):
-        return json.loads((self.out / "BGM-对齐建议-v0.2.json").read_text(encoding="utf-8"))
+        # ⑭小2：文件名版本改自增（永不覆盖），按"最高版本"读取而非焊死名字。
+        files = sorted(self.out.glob("BGM-对齐建议-v0.*.json"),
+                       key=lambda p: int(p.stem.rsplit("v0.", 1)[-1]))
+        self.assertTrue(files, "未产出对齐建议")
+        return json.loads(files[-1].read_text(encoding="utf-8"))
 
     def test_segment_quantile_rule_drafts_all_four_tiers(self):
         # used energies [0.1,0.3,0.5,0.9]: q75=0.6 q50=0.4 q25=0.25
@@ -275,7 +285,11 @@ class BlueprintTests(unittest.TestCase):
         return subprocess.run(cmd + list(extra), capture_output=True, text=True, encoding="utf-8")
 
     def load_result(self):
-        return json.loads((self.out / "BGM-节拍蓝图-v0.1.json").read_text(encoding="utf-8"))
+        # ⑭小2：蓝图产物同走自增版本。
+        files = sorted(self.out.glob("BGM-节拍蓝图-v0.*.json"),
+                       key=lambda p: int(p.stem.rsplit("v0.", 1)[-1]))
+        self.assertTrue(files, "未产出节拍蓝图")
+        return json.loads(files[-1].read_text(encoding="utf-8"))
 
     def test_mode_exclusivity_enforced(self):
         neither = subprocess.run(
@@ -340,6 +354,72 @@ class BlueprintTests(unittest.TestCase):
         self.assertIn("每句预算", text)
         self.assertIn("建议句边界", text)
         self.assertIn("禁止拉伸音频踩点", text)
+
+
+class RerunNoOverwriteTests(unittest.TestCase):
+    """⑭小2（banshee-001 台账，甲案）：重跑=版本自增，上一版字节一字不动。
+    旧实现把格式代际焊进文件名（对齐建议恒 -v0.2、蓝图恒 -v0.1），重跑直接盖掉给你看过的件。"""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name)
+        self.out = self.root / "out"
+        self.report = self.root / "report.json"
+        self.report.write_text(json.dumps(report_json()), encoding="utf-8")
+        self.brief = self.root / "brief.json"
+        self.brief.write_text(json.dumps(brief_json()), encoding="utf-8")
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def _run(self, extra, with_brief=True):
+        # 模式互斥：--blueprint 不配 voice-brief（两分支各写字面量参数表，仿本文件既有风格）
+        if with_brief:
+            return subprocess.run(
+                [PYTHON, str(SCRIPT), "--report", str(self.report), "--voice-brief", str(self.brief),
+                 "--timeline-ms", "100000", "--output-dir", str(self.out), *extra],
+                capture_output=True, text=True, encoding="utf-8",
+            )
+        return subprocess.run(
+            [PYTHON, str(SCRIPT), "--report", str(self.report),
+             "--timeline-ms", "100000", "--output-dir", str(self.out), *extra],
+            capture_output=True, text=True, encoding="utf-8",
+        )
+
+    def _assert_pair(self, payload, version):
+        json_path, echo_path = Path(payload["json"]), Path(payload["echo"])
+        self.assertIn(f"-{version}.json", json_path.name)
+        self.assertIn(f"-{version}.md", echo_path.name)  # 机器件与卡同版本（⑧ 同规）
+        doc = json.loads(json_path.read_text(encoding="utf-8"))
+        self.assertEqual(version, doc["artifactVersion"])  # 文档字段与文件名锁步
+
+    def test_alignment_rerun_appends_version_and_keeps_old_bytes(self):
+        first = self._run(())
+        self.assertEqual(0, first.returncode, first.stdout + first.stderr)
+        p1 = json.loads(first.stdout)
+        self._assert_pair(p1, "v0.1")
+        old_bytes = Path(p1["json"]).read_bytes()
+        old_echo = Path(p1["echo"]).read_bytes()
+        second = self._run(())
+        self.assertEqual(0, second.returncode, second.stdout + second.stderr)
+        p2 = json.loads(second.stdout)
+        self._assert_pair(p2, "v0.2")
+        self.assertEqual(old_bytes, Path(p1["json"]).read_bytes())  # 旧版未被盖
+        self.assertEqual(old_echo, Path(p1["echo"]).read_bytes())
+        self.assertNotEqual(Path(p1["json"]).name, Path(p2["json"]).name)
+
+    def test_blueprint_rerun_appends_version(self):
+        first = self._run(("--blueprint",), with_brief=False)
+        self.assertEqual(0, first.returncode, first.stdout + first.stderr)
+        p1 = json.loads(first.stdout)
+        self.assertIn("-v0.1.json", Path(p1["json"]).name)
+        self.assertIn("BGM-节拍蓝图", Path(p1["json"]).name)
+        old_bytes = Path(p1["json"]).read_bytes()
+        second = self._run(("--blueprint",), with_brief=False)
+        self.assertEqual(0, second.returncode, second.stdout + second.stderr)
+        p2 = json.loads(second.stdout)
+        self.assertIn("-v0.2.json", Path(p2["json"]).name)
+        self.assertEqual(old_bytes, Path(p1["json"]).read_bytes())
 
 
 if __name__ == "__main__":

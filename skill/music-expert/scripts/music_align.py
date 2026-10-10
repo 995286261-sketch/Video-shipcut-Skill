@@ -313,8 +313,17 @@ def run_blueprint(args, report: dict, track_ms: int) -> int:
                       "G3 验证模式对账，偏差超限回 G2 改稿，禁止拉伸音频踩点",
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    json_path = args.output_dir / "BGM-节拍蓝图-v0.1.json"
-    echo_path = args.output_dir / "BGM-节拍蓝图回显-v0.1.md"
+    # ⑭小2（banshee-001 台账，2026-10-10 用户拍板甲案）：文件名版本走 next_versioned 自增、
+    # 永不覆盖——旧实现把格式代际焊进文件名（重跑直接盖掉给你看过的那份）。格式代际本就如实
+    # 记在 schemaVersion，文件名只表达"第几次跑"；json 与回显共用同一版本（⑧ 检索词卡同规），
+    # 机器件与卡不漂移。
+    from versioned_output import next_versioned
+    _, json_version = next_versioned(args.output_dir, "BGM-节拍蓝图", ".json")
+    _, echo_probe_version = next_versioned(args.output_dir, "BGM-节拍蓝图回显", ".md")
+    version = f"v0.{max(int(json_version.split('.')[-1]), int(echo_probe_version.split('.')[-1]))}"
+    json_path = args.output_dir / f"BGM-节拍蓝图-{version}.json"
+    echo_path = args.output_dir / f"BGM-节拍蓝图回显-{version}.md"
+    result["artifactVersion"] = version
     result["files"] = {"json": str(json_path), "echo": str(echo_path)}
     json_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     echo_path.write_text(build_blueprint_card(args.report, result), encoding="utf-8")
@@ -442,8 +451,15 @@ def main() -> int:
         "discipline": "snapping is advisory only: narration durations are authoritative, never stretch or trim speech to hit accents",
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    json_path = args.output_dir / "BGM-对齐建议-v0.2.json"
-    echo_path = args.output_dir / "BGM-对齐回显-v0.2.md"
+    # ⑭小2（banshee-001 台账，2026-10-10 用户拍板甲案）：同上——对齐建议与回显走自增版本，
+    # 重跑不盖上一版；代际在 schemaVersion，文件名只说"第几次跑"。
+    from versioned_output import next_versioned
+    _, json_version = next_versioned(args.output_dir, "BGM-对齐建议", ".json")
+    _, echo_probe_version = next_versioned(args.output_dir, "BGM-对齐回显", ".md")
+    version = f"v0.{max(int(json_version.split('.')[-1]), int(echo_probe_version.split('.')[-1]))}"
+    json_path = args.output_dir / f"BGM-对齐建议-{version}.json"
+    echo_path = args.output_dir / f"BGM-对齐回显-{version}.md"
+    result["artifactVersion"] = version
     result["files"] = {"json": str(json_path), "echo": str(echo_path)}
     json_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     echo_path.write_text(build_echo_card(args.report, brief, result, args), encoding="utf-8")

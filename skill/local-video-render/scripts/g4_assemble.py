@@ -682,7 +682,7 @@ def main() -> int:
     parser.add_argument("--subtitle-ass", type=Path)
     parser.add_argument("--bgm-audio", type=Path)
     parser.add_argument("--bgm-mix-contract", type=Path,
-                        help="music-expert BGM-混音合同-v0.1.json (required with --bgm-audio; run music_mix_plan.py first)")
+                        help="music-expert BGM-混音合同-vN.json (required with --bgm-audio; run music_mix_plan.py first)")
     parser.add_argument("--cover", type=Path, help="cover contract JSON: materialPack, sourceAssetId, sourceMs（源资产毫秒，⑫ 由装配器从登记件抽帧，imagePath 通道已退役）, fontFile, title, output")
     parser.add_argument("--chapter-cards", type=Path, help="chapter cards contract JSON: fontFile, fontsize, cards[{chapterId,title,startMs,endMs}]")
     parser.add_argument("--title-bar", type=Path, help="title bar contract JSON: fontFile, text, fontsize, marginPct")
@@ -820,7 +820,7 @@ def main() -> int:
             fail("BGM mixing requires a music-expert mix contract (--bgm-mix-contract): run music_mix_plan.py against the approved plan; node skills execute, specialists decide (N6)")
         mix_contract = load(require_file(args.bgm_mix_contract, "BGM mix contract"))
         if mix_contract.get("purpose") != "bgm_mix_contract" or mix_contract.get("schemaVersion") != "0.1":
-            fail("--bgm-mix-contract is not a music-expert BGM-混音合同-v0.1 artifact")
+            fail("--bgm-mix-contract is not a music-expert BGM-混音合同 artifact (schema 0.1 expected)")
         if mix_contract.get("bgmAudio", {}).get("sha256") != sha256(args.bgm_audio):
             fail("BGM file hash does not match the mix contract — regenerate the contract with music_mix_plan.py")
         if int(mix_contract.get("timelineMs") or 0) != timeline_ms:

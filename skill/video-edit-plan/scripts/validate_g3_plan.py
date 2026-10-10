@@ -301,7 +301,7 @@ def main() -> int:
     parser.add_argument("--subject-confirmation", type=Path)
     parser.add_argument("--ledger", type=Path)
     parser.add_argument("--material-pack", type=Path, help="G0 material-pack.json; enables the BGM hash-chain checks")
-    parser.add_argument("--bgm-alignment", type=Path, help="music-expert BGM-对齐建议-v0.2.json consumed by the plan")
+    parser.add_argument("--bgm-alignment", type=Path, help="music-expert BGM-对齐建议-vN.json consumed by the plan")
     args = parser.parse_args()
     ERRORS.clear()  # same-process repeat runs (tests) must not inherit violations
     # Windows editors commonly write UTF-8 with a BOM. Accept it at every JSON boundary.
