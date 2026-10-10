@@ -14,6 +14,12 @@ Key contract points:
   or a human voice (issue 028).
 - `--verify-asr` transcribes each sentence with the controlled Faster-Whisper runtime
   and compares normalized text; a silent fallback voice is detected and blocked.
+- Synthesis failures leave a trace (issue ⑭小6, banshee Daniel incident): a failed run
+  writes a failure manifest recording which sentence died, the error verbatim, and the
+  sentences already completed — a failed run used to leave nothing on disk.
+- Manifest names auto-increment `G2-配音清单-vN.json` and never overwrite (㉘/⑭小2
+  family; the welded `v0.1` + blind overwrite is retired). Failure manifests share the
+  same version series so the attempt timeline stays visible.
 
 Exit codes match the G2 tooling convention: 0 ok, 2 invalid/blocked, 1 runtime failure.
 """
@@ -48,6 +54,46 @@ def probe_duration_ms(path: Path) -> int:
         capture_output=True, text=True, encoding="utf-8", errors="replace", check=True,
     )
     return round(float(json.loads(result.stdout)["format"]["duration"]) * 1000)
+
+
+MANIFEST_PATTERN = re.compile(r"^G2-配音清单-v0\.(\d+)\.json$")
+
+
+def next_manifest_path(output_dir: Path) -> tuple[Path, str]:
+    """Auto-increment G2-配音清单-vN.json (㉘/⑭小2 family; never overwrite, ⑭小6)."""
+    highest = 0
+    for path in output_dir.glob("G2-配音清单-v0.*.json"):
+        match = MANIFEST_PATTERN.match(path.name)
+        if match:
+            highest = max(highest, int(match.group(1)))
+    version = f"v0.{highest + 1}"
+    return output_dir / f"G2-配音清单-{version}.json", version
+
+
+def fail_with_trace(args, items: list[dict], failed_at: str, message: str, requested: int) -> int:
+    """Write the failure manifest, then emit the structured failure (⑭小6)."""
+    manifest = {
+        "schemaVersion": "0.1",
+        "node": "G2",
+        "status": "failed",
+        "purpose": "narration_synthesis_failure_record",
+        "provider": "macos_say",
+        "voice": args.voice,
+        "rate": args.rate or None,
+        "voiceTier": "preview_only",
+        "failedAt": failed_at,
+        "error": message,
+        "sentencesRequested": requested,
+        "sentencesCompleted": items,
+        "note": ("合成失败留痕（⑭小6）：本文件不是可用配音清单"
+                 "（purpose≠narration_synthesis_measured_durations），只记录失败停在第几句、"
+                 "错误原文与已完成句；重跑成功另出新版清单，本留痕永不覆盖。"),
+    }
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    path, version = next_manifest_path(args.output_dir)
+    path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    emit({"status": "failed", "error": message, "failureManifest": str(path), "manifestVersion": version})
+    return 1
 
 
 def available_voices() -> set[str]:
@@ -151,25 +197,32 @@ def main() -> int:
         base = str(item["sentenceId"])
         caf = work / f"{base}.caf"
         wav = args.output_dir / f"{base}.wav"
-        command = ["say", "-v", args.voice, "--data-format", "LEI16@22050", "-o", str(caf)]
-        if args.rate:
-            command += ["-r", str(args.rate)]
-        command.append(item["text"])
-        subprocess.run(command, check=True, capture_output=True)
+        rate_args = ["-r", str(args.rate)] if args.rate else []
+        try:
+            subprocess.run(["say", "-v", args.voice, "--data-format", "LEI16@22050", "-o", str(caf), *rate_args, item["text"]], check=True, capture_output=True)
+        except subprocess.CalledProcessError as error:
+            detail = (error.stderr or b"").decode("utf-8", "replace").strip()[:500]
+            message = f"say exited {error.returncode} on sentence {base}" + (f": {detail}" if detail else "")
+            return fail_with_trace(args, items, base, message, len(sentences))
         if not caf.is_file() or caf.stat().st_size == 0:
-            emit({"status": "failed", "error": f"say exited without producing {caf.name}"})
-            return 1
-        subprocess.run(["ffmpeg", "-y", "-i", str(caf), "-ar", "22050", "-ac", "1", str(wav)], check=True, capture_output=True)
+            return fail_with_trace(args, items, base, f"say exited without producing {caf.name}", len(sentences))
+        try:
+            subprocess.run(["ffmpeg", "-y", "-i", str(caf), "-ar", "22050", "-ac", "1", str(wav)], check=True, capture_output=True)
+        except subprocess.CalledProcessError as error:
+            detail = (error.stderr or b"").decode("utf-8", "replace").strip()[:500]
+            message = f"ffmpeg exited {error.returncode} converting {caf.name}" + (f": {detail}" if detail else "")
+            return fail_with_trace(args, items, base, message, len(sentences))
         if not wav.is_file() or wav.stat().st_size == 0:
-            emit({"status": "failed", "error": f"ffmpeg exited without producing {wav.name}"})
-            return 1
+            return fail_with_trace(args, items, base, f"ffmpeg exited without producing {wav.name}", len(sentences))
         items.append({"sentenceId": base, "text": item["text"], "file": str(wav), "durationMs": probe_duration_ms(wav)})
 
     verification = verify_with_asr(items, args) if args.verify_asr else None
     total_ms = sum(item["durationMs"] for item in items)
+    manifest_path, manifest_version = next_manifest_path(args.output_dir)
     manifest = {
         "schemaVersion": "0.1",
         "node": "G2",
+        "artifactVersion": manifest_version,
         "purpose": "narration_synthesis_measured_durations",
         "provider": "macos_say",
         "voice": args.voice,
@@ -180,11 +233,11 @@ def main() -> int:
         "asrVerification": verification,
         "cacheKey": hashlib.sha256(json.dumps({"voice": args.voice, "rate": args.rate, "items": [(item["sentenceId"], item["text"]) for item in items]}, sort_keys=True).encode("utf-8")).hexdigest().upper(),
     }
-    manifest_path = args.output_dir / "G2-配音清单-v0.1.json"
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     emit({
         "status": "completed",
         "manifest": str(manifest_path),
+        "manifestVersion": manifest_version,
         "sentences": len(items),
         "measuredTotalDurationMs": total_ms,
         "voiceTier": "preview_only",

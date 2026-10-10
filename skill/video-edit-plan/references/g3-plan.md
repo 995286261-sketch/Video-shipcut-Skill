@@ -110,7 +110,9 @@ Agent 必须查看这些实际帧，再为每段填写 `visualVerification`：`s
 
 已有获准配音时，先用 `scripts/g3_align_narration_audio.py --audio <approved-audio> --output <alignment.json> --model-dir <本地模型缓存目录> --language zh --initial-prompt <专名词表>` 生成本地时间码，再将节拍范围对齐到该产物。`--model-dir` 缺省时读取 `P0C_FASTER_WHISPER_MODEL_HOME`；运行时包从 `P0C_FASTER_WHISPER_HOME` 加载。脚本只使用本地缓存快照，缺目录、缺快照或缺依赖均返回结构化 `blocked`（不 traceback、不下载），同一音频+模型+语言的既有对齐结果按 `cacheKey` 直接复用；不得以阅读速度估计冒充实际时间码。
 
-使用 `scripts/validate_g3_plan.py --plan <plan> --evidence <g2-evidence> --g2-decision <decision>` 校验结构。验证通过不代表内容审核通过；人工批准后才能交给渲染器。
+使用 `scripts/validate_g3_plan.py --plan <plan> --evidence <g2-evidence> --g2-decision <decision>` 校验结构（**注意住址：本校验器在 `skill/video-edit-plan/scripts/`，不在任何 g3 命名目录下——gN 前缀改名批次落地前以本句与 `目录规范.md` 花名册"节点↔工具住址"为准，⑭小7**）。验证通过不代表内容审核通过；人工批准后才能交给渲染器。
+
+**平铺不拢时的收敛操作段（⑭小3，banshee 首轮多轮才收敛的操作成文）**：连续网格/口播区间报错时**按报错给出的期望值逐处修**（报错自带"你在哪、该在哪"两个数），不要整表重排；两大病根对照——①口播区间数值来自 TTS 声轨累计而非成片网格＝轴病（⑭大口径：报错会点名"成片网格/声轨累计轴"，用 `music_voice_brief.py` 从批准落位机械推导，禁止手填）；②窗口与实测时长不相等＝没走推导件或句长被改动（句内切分合法，但每个片段必须被实测句完整认领，缝合规则见 music-expert SKILL 第 5 条）。同一处报错修两轮仍不拢＝停下重读 plan-contract《口播区间的轴口径》与《连续网格》两节，不硬试。
 
 G3 必须包含一次计划级人工交互：先展示完整、连续、无重叠的时间线和每行实际观察，用户整体确认或按 `segmentId` 指出局部修改，并记录计划级 `humanReviewFeedback` 与 `timelineReview`。候选时间码不是最终裁剪点；未完成最终镜头验证和一次计划确认，不得进入 G4。所有产物路径必须写成可点击的 Markdown 超链接 `[文件名](相对路径)`，包括验证帧、逐段时间表、字幕文件、BGM 卡点表等。
 

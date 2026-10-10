@@ -204,6 +204,26 @@ class SubtitleLayoutTests(unittest.TestCase):
         self.assertNotEqual(0, code)
         self.assertIn("overlap in time", output)
 
+    def test_event_referencing_undefined_style_is_rejected(self):
+        # ⑭小5: an undefined style (banshee chapter-card Title) used to be silently
+        # measured against the first defined style — a false green light while libass
+        # renders the oversized built-in Default. Substitution is retired: reject and name.
+        ass = self.write("captions.ass", (ASS_HEADER.format(fontsize=14)
+            + "Dialogue: 0,0:00:00.00,0:00:02.00,NarrMain,,0,0,0,,正文。\n"
+            + "Dialogue: 0,0:00:03.00,0:00:05.00,Title,,0,0,0,,章节卡标题。\n"))
+        code, output = self.run_validator(ass, self.layout())
+        self.assertNotEqual(0, code)
+        self.assertIn("undefined ASS style 'Title'", output)
+        self.assertIn("NarrMain", output)  # defined styles listed for the operator
+
+    def test_empty_style_field_requires_explicit_default(self):
+        # Empty Style means "Default"; it must be explicitly defined too (⑭小5).
+        ass = self.write("captions.ass", (ASS_HEADER.format(fontsize=14)
+            + "Dialogue: 0,0:00:00.00,0:00:02.00,,,0,0,0,,正文。\n"))
+        code, output = self.run_validator(ass, self.layout())
+        self.assertNotEqual(0, code)
+        self.assertIn("undefined ASS style 'Default'", output)
+
 
 if __name__ == "__main__":
     unittest.main()

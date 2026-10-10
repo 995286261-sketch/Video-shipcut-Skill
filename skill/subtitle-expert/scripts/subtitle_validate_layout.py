@@ -241,9 +241,16 @@ def main() -> int:
     violations: list[str] = []
     observed = 0
     for event in events:
-        style = styles.get(event.get("Style", "")) or next(iter(styles.values()), None)
+        # ⑭小5: an event referencing an undefined style used to be silently measured
+        # against whichever style happened to be first — the validator then green-lit
+        # a timeline libass would render with the oversized built-in Default (the
+        # banshee chapter-card Title incident). Referenced styles must be explicit.
+        style_name = str(event.get("Style", "")).strip() or "Default"
+        style = styles.get(style_name)
         if not style:
-            fail("subtitle timeline has no ASS style to measure")
+            fail(f"event at {event.get('Start', '?')} references undefined ASS style {style_name!r} "
+                 f"(defined styles: {', '.join(sorted(styles)) or 'none'}) — every referenced style "
+                 "must be explicitly defined with its own Fontsize; silent substitution retired (⑭小5)")
         try:
             style_fontsize = float(style["Fontsize"])
         except (KeyError, TypeError, ValueError):
