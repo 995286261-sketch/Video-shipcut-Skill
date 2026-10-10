@@ -640,14 +640,17 @@ def command_reopen(args: argparse.Namespace) -> None:
     g2["status"] = "in_progress"
     clear_review_gate(g2)
     g2["approval"] = None
-    g2["humanReviewPoints"] = list(dict.fromkeys(g2.get("humanReviewPoints", []) + ["reapprove_g2_amendment"]))
+    # ⑫（banshee-001 台账，2026-10-10 用户拍板甲案）：注入文案随本次必传的 reason 逐字生成，
+    # 工具手里拿着真相就不再写死句子——审计读账本看到的就是回炉原因本身。
+    g2["humanReviewPoints"] = list(dict.fromkeys(
+        g2.get("humanReviewPoints", []) + ["reopen-g2 返工并重批 G2（按回炉原因）：" + args.reason]))
     g3["status"] = "pending"
     clear_review_gate(g3)
     g3["humanReviewPoints"] = []
     g3["approval"] = None
     state["currentNode"] = "G2"
     state["status"] = "in_progress"
-    state["nextAction"] = "Amend G2 evidence or approved narration, then request renewed G2 approval."
+    state["nextAction"] = "按本次回炉原因完成返工后，重新申请 G2 批准——原因：" + args.reason
     write_state(state_path, state)
     emit({"status": "reopened", "currentNode": "G2", "nextAction": state["nextAction"], "amendment": history[-1]})
 
@@ -674,7 +677,10 @@ def command_reopen_g3(args: argparse.Namespace) -> None:
     g3["status"] = "in_progress"
     clear_review_gate(g3)
     g3["approval"] = None
-    g3["humanReviewPoints"] = list(dict.fromkeys(g3.get("humanReviewPoints", []) + ["rebuild_semantic_alignment_and_reapprove_g3"]))
+    # ⑫（banshee-001 台账，2026-10-10 用户拍板甲案）：注入文案随本次必传的 reason 逐字生成——
+    # banshee 那次纯混音参数回炉被写死句子说成"重建语义对齐"，账面失真；真相以后不再靠人事后覆盖。
+    g3["humanReviewPoints"] = list(dict.fromkeys(
+        g3.get("humanReviewPoints", []) + ["reopen-g3 返工并重批 G3（按回炉原因）：" + args.reason]))
     g4["status"] = "pending"
     clear_review_gate(g4)
     g4["approval"] = None
@@ -682,7 +688,7 @@ def command_reopen_g3(args: argparse.Namespace) -> None:
     g4["humanReviewPoints"] = []
     state["currentNode"] = "G3"
     state["status"] = "in_progress"
-    state["nextAction"] = "Rebuild narration-to-visual semantic alignment, then request renewed G3 approval."
+    state["nextAction"] = "按本次回炉原因完成返工后，重新申请 G3 批准——原因：" + args.reason
     write_state(state_path, state)
     emit({"status": "reopened", "currentNode": "G3", "nextAction": state["nextAction"], "amendment": history[-1]})
 

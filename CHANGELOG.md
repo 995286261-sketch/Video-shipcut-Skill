@@ -1,5 +1,14 @@
 # 变更记录
 
+## v1.28.0 — 2026-10-10 — **回炉文案如实版本**
+
+发布范围＝banshee-intro-001 问题清单 **⑫** 处置，用户 2026-10-10 拍板**甲案**（注入文案随 reason 逐字生成）。已封存项目账面不回改（R3，历史 token 属当时事实）。
+
+- **病根**：`pipeline_state.py` 两条回炉命令（`reopen` G3→G2、`reopen-g3` G4/G5→G3）往状态账本注入**写死的句子**——无论真实回炉原因为何，nextAction 恒称"Rebuild narration-to-visual semantic alignment…"、审核点恒塞 `rebuild_semantic_alignment_and_reapprove_g3`（g2 侧同款 "Amend G2 evidence…"）。banshee 那次纯混音参数回炉被说成"要重建语义对齐"，账面失真，真实原因只在 amendmentHistory.reason（而 reason 本就是 CLI 必传参数——工具拿着真相却写假话），编排方事后覆盖 review-point 才救回、nextAction 仍留旧文案。
+- **修复**：两条命令的 nextAction 与 humanReviewPoints 均逐字携带本次 reason（"按本次回炉原因完成返工后，重新申请 <Gn> 批准——原因：<reason 原文>"/"reopen-g3 返工并重批 G3（按回炉原因）：<reason 原文>"），写死宣称返工内容的句子全部退役；审计以注入即真实的账面为准。未采乙案（再加自定义注入参数=自动确认模式下的新幻觉面）、丙案（只文档承认=失真照旧先落账）。
+- 测试：两条既有 reopen 用例加逐字断言+旧句 notIn，新增 reopen-g2 文案正例，pipeline_state 套件 60 例绿；reopen 属改状态命令不对 completed 项目实跑，单测即真 CLI 子进程+真实 state 端到端。文档：pipeline-state-contract 回炉段成文。
+- 发版前全量回归 46 测试文件逐文件绿、py3.9 编译零错。
+
 ## v1.27.0 — 2026-10-10 — **验收入包副本版本**
 
 发布范围＝banshee-intro-001 问题清单 **⑩** 处置，用户 2026-10-10 拍板**甲案**（机械入包副本，人肉 cp 改名搬运退役）。已封存项目不追溯（R3）。

@@ -378,6 +378,10 @@ class PipelineStateTest(unittest.TestCase):
         self.assertIsNone(state["nodes"]["G3"]["reviewGate"])
         self.assertIsNone(state["nodes"]["G3"]["approval"])
         self.assertIsNone(state["nodes"]["G4"]["reviewGate"])
+        # ⑫ 甲案：注入文案逐字带上本次 reason，写死句子（"Rebuild narration-to-visual…"）退役
+        self.assertIn("plan defect", state["nextAction"])
+        self.assertNotIn("Rebuild narration", state["nextAction"])
+        self.assertTrue(any("plan defect" in point for point in state["nodes"]["G3"]["humanReviewPoints"]))
 
     def test_reopen_g3_from_g5_resets_g5_and_g4_approval(self):
         # Issue ㉗（sinjuku ㉖ 事故现场）：G4 关单进入 G5 后发现 G3 批准范围分歧，
@@ -394,6 +398,19 @@ class PipelineStateTest(unittest.TestCase):
         self.assertIsNone(state["nodes"]["G4"]["reviewGate"])
         self.assertIsNone(state["nodes"]["G5"]["reviewGate"])
         self.assertEqual("pending", state["nodes"]["G5"]["status"])
+
+    def test_reopen_g2_injects_reason_verbatim(self):
+        # ⑫ 甲案（reopen-g2 同款病同批修）：回炉 G2 的审核点与 nextAction 逐字带 reason，
+        # 旧写死句子（"Amend G2 evidence or approved narration…"）退役。
+        self.init()
+        self.advance_through("G2")  # currentNode=G3，reopen（G3→G2）的合法起点
+        result = self.run_cli("reopen", "--state", self.state, "--reason", "旁白第 3 句证据过期",
+                              "--rework-ref", self.file("rework-g2.md"))
+        self.assertEqual("G2", result["currentNode"])
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertIn("旁白第 3 句证据过期", state["nextAction"])
+        self.assertNotIn("Amend G2 evidence", state["nextAction"])
+        self.assertTrue(any("旁白第 3 句证据过期" in point for point in state["nodes"]["G2"]["humanReviewPoints"]))
 
     def test_full_five_node_review_gate_chain(self):
         self.init()
