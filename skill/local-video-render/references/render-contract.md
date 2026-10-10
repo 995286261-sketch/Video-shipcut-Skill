@@ -38,6 +38,19 @@ Reject changed source hashes and unregistered music, fonts, reference-video asse
 
 **红线（zaku-003 台账⑫）**：`imagePath` 通道已退役——合同里出现即罢工。事故根因是编排方自行选帧文件：shell 通配 fallback 误抓 `05_风格参考/` 的参考片 mp4 抽帧，参考片画面险成封面（参考视频画面不得入成片），全靠目检拦下。现在时点与身份都来自批准计划/G3 封面指令（`assetId`+源内毫秒），路径由装配器从登记件反查，登记件之外的画面（含参考片）结构上进不来；`relativePath` 猜路径、`find | head -1` 之类通配选源自此非法。若日后需要成片之外的画面做封面，只能走另一条**已登记**素材通道并同批对账，不在本合同开口子。
 
+### 混音预检闸（banshee-001 台账⑦·甲案，用户 2026-10-10 拍板）
+
+床深/duck 深度属 §6-② 授权 G4 执行层自定参数，但 banshee 首跑证明：**没有任何工序预检"这组参数混完主轨落在哪"，问题就会拖到全片渲染后的 G5 才暴露，回炉=整条 G3–G4 重做**。此闸把判定前移到真渲染之前，且预检与装配**同源**——`scripts/g4_mix_precheck.py` 直接调用 `g4_assemble.audio_filter_chain` 与合同 §3 闸常数，只混音频（每种组合几秒），不复刻平行链（复刻=第二事实源）。
+
+合同：
+
+- **必带条件**：装配混 BGM（`--bgm-mix-contract`）即必须携带 `--mix-precheck-report`，或 `--mix-precheck-waiver` 如实披露文本（唯一豁免，落账 `waived` 并摊回显卡；历史无响度计划的手动旗标补跑只许走豁免通道）。
+- **绑定对账**（任一不符=过期罢工）：口播轨／BGM 文件／混音合同／响度计划四件 sha256、`timelineMs`、`gateLines.targetProfile`、`toleranceLu`、`strictness`、合同组合行（`isContractCombination`）参数逐字在场。R2 同型：内容漂移=批准失效的延伸。
+- **判定口径与 G5 同源**（防"预检过了 G5 又挂"）：综合响度对目标档 ±1.0 LU（合同 §3；容差入参可覆盖，两侧必须逐字一致）；真峰上限+0.3 dB 余量两档共同硬闸。分档纪律与纯口播闸对称：ready（linear-verbatim）超差=failed 不许渲染；blocked（controlled-dynamic）超差=disclosed-exceedance 可进装配但必须摊 G4 回显卡。LRA 只记录不判（验收闸领地归 G5 不变）。
+- **failed 出路**：§6-② 范围内调床/duck 用 music_mix_plan 重出**新版本**合同（不覆盖旧合同——台账⑥同版覆盖教训）、以新合同重跑预检；调参可用候选组合入参做网格搜索（机器只测量判定，选参数永远是编排的决策）。改目标档本身属 G2 领地，不在本闸出路。
+- **留痕**：预检报告拒绝同版覆盖；每组合滤镜图留盘（`combinations[].graphFile`）；装配记录新增 `mixPrecheck` 块（bound／bound-disclosed／waived + 报告 sha + 实测主轨读数），G5 审计与门禁收据可复对账。
+- **回显**：G4 卡片固定行样式与待确认摊开规则见 `g4-choice-cards.md`《混音预检记账》。
+
 ### 图形文字字体红线（N8 ㉛）
 
 `fontFile` 直接喂 `drawtext` 的路线（章节卡、顶部标题栏、封面标题）有一个静默陷阱：**TTC 字体集合里 drawtext 只渲染第一个 face**。活测：`/System/Library/Fonts/PingFang.ttc` 首 face 不含简体「战/场/对/手/队」等字形，渲成豆腐块且 ffmpeg 退出码照常是 0；同字体同文字走 libass（`subtitles` 滤镜）完全正常。因此 `g4_assemble` 在三条 drawtext 路线进入 ffmpeg 之前做字形覆盖预检（纯 stdlib 解析 cmap，逐 face 计算码位覆盖）：任何字符在所有 face 里都没有 → blocked；只有后面的 face 有 → 同样 blocked 并提示 TTC 首-face 陷阱。合同口径：优先为图形文字选**单 face 的 .ttf/.otf**；确实只有 ttc 可用时，改走 libass 烧录路线（字幕布局合同同款）。预检失败属于 blocked，不是 warning，不得 `--force` 绕过。

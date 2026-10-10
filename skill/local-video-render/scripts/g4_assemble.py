@@ -25,6 +25,19 @@ first — a re-plan whose status and targetProfile are verbatim-unchanged means
 the decision input is intact (G4 bookkeeping with old/new exit numbers shown
 side by side, no G2 reopen); only a flipped status or changed profile goes
 back to G2.
+
+Mix pre-check (banshee-001 台账⑦, 甲案用户 2026-10-10 拍板): an assembly that
+mixes BGM may not enter rendering with an untested master. g4_assemble refuses
+unless --mix-precheck-report carries the《混音预检》artifact produced by
+g4_mix_precheck.py — audio-only, built from THIS module's own filter functions —
+and the full reconciliation matches (narration/BGM/contract/plan hashes, timeline,
+target profile, tolerance, mode, and the contract-combination row verbatim).
+Verdict failed strikes with the §6-② exit path spelled out (re-pick bed/duck,
+regenerate a NEW version contract, re-run the pre-check); disclosed-exceedance is
+accepted only for the controlled-dynamic tier and must surface on the review card;
+the sole exemption --mix-precheck-waiver requires an honest disclosure text and is
+recorded as waived. banshee lesson: without this gate the master loudness problem
+survives until G5 after a full video render, and the rework costs a whole G3–G4 loop.
 """
 from __future__ import annotations
 
@@ -250,6 +263,62 @@ def loudness_deviation_gate(pure: dict, profile: dict, tolerance_lu: float, tole
     return {"engine": pure.get("engine"), "integratedLufs": measured_i, "truePeakDbtp": measured_tp,
             "deviationLu": deviation, "truePeakOverDb": tp_over, "verdict": verdict,
             "toleranceLu": tolerance_lu, "toleranceSource": tolerance_source}
+
+
+def check_mix_precheck(report: dict, *, contract: dict, profile: dict, mode: str, tolerance_lu: float,
+                       timeline_ms: int, contract_sha: str, narration_sha: str, bgm_sha: str, plan_sha: str) -> dict:
+    """台账⑦（banshee-001 实跑，甲案 2026-10-10 用户拍板）：混 BGM 不许带着没预检过的
+    主轨进渲染。报告=绑定凭证，对账不过即罢工——R2 同型纪律（内容漂移=过期批准）。
+    合同组合行判定 passed 直收；disclosed-exceedance 只许 controlled-dynamic 档
+    （与纯口播闸分档对称，且必须摊回显卡）；failed 罢工并点名 §6-② 出路。
+    闸只判机械事实，选参数永远是编排的 §6-② 决策。"""
+    if report.get("tool") != "g4_mix_precheck" or report.get("schemaVersion") != "0.1":
+        fail("混音预检报告不是 g4_mix_precheck v0.1 产物——专员产物对账，不许拿手补件冒充")
+    inputs = report.get("inputs", {})
+    for field, expected, label in (("narrationAudio", narration_sha, "口播轨"),
+                                   ("bgmAudio", bgm_sha, "BGM 文件"),
+                                   ("mixContract", contract_sha, "混音合同"),
+                                   ("loudnessPlan", plan_sha, "响度计划")):
+        got = str(inputs.get(field, {}).get("sha256", "")).upper()
+        if got != expected:
+            fail(f"混音预检报告里的{label}哈希与本次装配输入不符（报告 {got[:12]}… ≠ 在盘 {expected[:12]}…）"
+                 "——报告过期或换了输入文件，重跑 g4_mix_precheck 再装配")
+    if int(report.get("timelineMs") or 0) != timeline_ms:
+        fail(f"预检报告时间轴 {report.get('timelineMs')}ms ≠ 本次装配 {timeline_ms}ms——不同时间线的报告不许串用")
+    gate = report.get("gateLines", {})
+    if gate.get("targetProfile") != profile:
+        fail(f"预检报告目标档 {gate.get('targetProfile')} ≠ 响度计划 targetProfile {profile}"
+             "——卡说 X，机器渲 X（三口径同型）")
+    if gate.get("strictness") != mode:
+        fail(f"预检报告档位 {gate.get('strictness')!r} ≠ 本次执行档 {mode!r}——计划换档后报告即过期，重跑预检")
+    tolerance_reported = gate.get("toleranceLu")
+    if not isinstance(tolerance_reported, (int, float)) or abs(float(tolerance_reported) - float(tolerance_lu)) > 1e-9:
+        fail(f"预检报告容差 {tolerance_reported!r} ≠ 本次装配容差 {tolerance_lu}——两侧口径必须逐字一致")
+    combo = next((c for c in report.get("combinations", []) if c.get("isContractCombination")), None)
+    if combo is None:
+        fail("预检报告缺合同组合行（isContractCombination）——那不是拿本合同跑的预检")
+    if (float(combo.get("bedGainDb", float("nan"))) != float(contract["bedGainDb"])
+            or float(combo.get("duckReductionDb", float("nan"))) != float(contract["duckReductionDb"])):
+        fail(f"预检报告合同组合行 床 {combo.get('bedGainDb')}／duck {combo.get('duckReductionDb')} ≠ 当前合同 "
+             f"床 {contract['bedGainDb']}／duck {contract['duckReductionDb']}——合同换版=报告过期，重跑预检")
+    verdict = str(combo.get("verdict"))
+    block = {"status": None, "verdict": verdict,
+             "contractCombination": {"bedGainDb": combo.get("bedGainDb"), "duckReductionDb": combo.get("duckReductionDb")},
+             "measuredMaster": combo.get("measuredMaster"), "deviationLu": combo.get("deviationLu"),
+             "truePeakOverDb": combo.get("truePeakOverDb")}
+    if verdict == "passed":
+        block["status"] = "bound"
+    elif verdict == "disclosed-exceedance":
+        if mode != "controlled-dynamic":
+            fail(f"预检合同组合行 disclosed-exceedance 只许 blocked 档（controlled-dynamic）进装配——本次是 {mode}。"
+                 f"出路：{report.get('guidance')}")
+        block["status"] = "bound-disclosed"
+        block["reviewNote"] = str(combo.get("reviewNote") or
+                                  "主轨超容差属 blocked 档让步幅度——必须摊上 G4 回显卡待确认，永不静默")
+    else:
+        fail(f"混音预检判定 {verdict}——不许带着未过闸的主轨进渲染（台账⑦）。组合行细节：{combo.get('failReason')}。"
+             f"出路：{report.get('guidance')}")
+    return block
 
 
 def measure_bgm_in_place(bgm_path: Path, contract: dict, timeline_ms: int) -> float | None:
@@ -625,6 +694,10 @@ def main() -> int:
                              "required by orchestration for narration normalization)")
     parser.add_argument("--loudness-tolerance-lu", type=float, default=None,
                         help=f"override the deviation gate tolerance (contract default {LOUDNESS_TOLERANCE_LU} LU); recorded as toleranceSource")
+    parser.add_argument("--mix-precheck-report", type=Path,
+                        help="台账⑦：g4_mix_precheck.py 的《混音预检报告》（混 BGM 装配必备——主轨响度在渲染前已过闸）")
+    parser.add_argument("--mix-precheck-waiver", type=str,
+                        help="台账⑦唯一豁免：如实披露文本（跳过了什么、为什么），落账 waived 并摊上回显卡")
     parser.add_argument("--fps", type=int, default=None,
                         help="override; by default inherit the manifest targetFps from the approved plan (issue 002-⑨)")
     parser.add_argument("--duration-tolerance-ms", type=int, default=400)
@@ -693,6 +766,7 @@ def main() -> int:
     # 响度接线批三（丙·分档口径，工单 docs/响度接线工单-v0.1.md）：计划=事实源，
     # 预闸在重渲染之前 fail-fast。闸口径=纯口播量纲，主轨读数只记账。
     narration_pre = None
+    loudness_mode = None
     loudness_block = None
     if args.loudness_plan and args.normalize_narration_lufs is not None:
         fail("响度批三: --loudness-plan 与 --normalize-narration-lufs 二选一——计划口径下事实源是 loud_plan，"
@@ -752,6 +826,35 @@ def main() -> int:
         if int(mix_contract.get("timelineMs") or 0) != timeline_ms:
             fail(f"mix contract timeline {mix_contract.get('timelineMs')}ms does not match manifest {timeline_ms}ms")
         inputs.append(args.bgm_audio)
+
+    # 台账⑦混音预检闸（甲案，2026-10-10 用户拍板）：混 BGM 的装配必须持绑定预检报告进场，
+    # 主轨响度先过几秒的 audio-only 预检——banshee 首跑把超差拖到全片渲染后的 G5 才暴露、
+    # 整轮 G3–G4 返工；此闸让同类问题在 G4 内部点名，且必须在真渲染之前 fail-fast。
+    if (args.mix_precheck_report or args.mix_precheck_waiver) and mix_contract is None:
+        fail("混音预检入参只对带 BGM 的装配有意义——本次没有混音合同，去掉它")
+    mix_precheck_block = None
+    if mix_contract is not None:
+        if args.mix_precheck_report and args.mix_precheck_waiver:
+            fail("--mix-precheck-report 与 --mix-precheck-waiver 互斥——要么持绑定报告，要么如实披露，不许既要又要")
+        if args.mix_precheck_waiver:
+            if not str(args.mix_precheck_waiver).strip():
+                fail("预检豁免必须携带如实披露文本（跳过了什么、为什么）——静默闸门不允许（台账⑦唯一豁免）")
+            mix_precheck_block = {"status": "waived", "reason": str(args.mix_precheck_waiver).strip(),
+                                  "disclosure": "混音预检未执行，如实披露；必须摊上 G4 回显卡"}
+        else:
+            if not args.loudness_plan:
+                fail("混 BGM 装配需要响度计划（--loudness-plan）作为预检目标档——台账⑦；"
+                     "历史手动旗标补跑只许走 --mix-precheck-waiver 如实披露")
+            if not args.mix_precheck_report:
+                fail("台账⑦：混 BGM 的装配必须携带混音预检报告（--mix-precheck-report，g4_mix_precheck.py 产物）"
+                     "或 --mix-precheck-waiver 如实披露——先跑几秒的 audio-only 预检，不把整片结果赌到 G5")
+            precheck_report = load(require_file(args.mix_precheck_report, "混音预检报告"))
+            mix_precheck_block = check_mix_precheck(
+                precheck_report, contract=mix_contract, profile=loud_plan_doc["targetProfile"], mode=loudness_mode,
+                tolerance_lu=args.loudness_tolerance_lu if args.loudness_tolerance_lu is not None else LOUDNESS_TOLERANCE_LU,
+                timeline_ms=timeline_ms, contract_sha=sha256(args.bgm_mix_contract), narration_sha=sha256(narration),
+                bgm_sha=sha256(args.bgm_audio), plan_sha=sha256(args.loudness_plan))
+            mix_precheck_block["report"] = {"path": str(args.mix_precheck_report), "sha256": sha256(args.mix_precheck_report)}
     card_filters: list[str] = []
     card_ranges: list[tuple[int, int]] = []
     if args.chapter_cards:
@@ -850,6 +953,8 @@ def main() -> int:
                            "loudness": narration_loudness},
         # 响度批三：plan 引用+sha 绑定、mode 记账、三口径对账凭据、纯口播闸与执行 stats
         "loudness": loudness_block,
+        # 台账⑦：主轨混音预检绑定凭证（bound / bound-disclosed / waived），G5 审计可复对账
+        "mixPrecheck": mix_precheck_block,
         "bgmMix": {
             "audio": {"path": str(args.bgm_audio), "sha256": sha256(args.bgm_audio)},
             "contract": {"path": str(args.bgm_mix_contract), "sha256": sha256(args.bgm_mix_contract)},

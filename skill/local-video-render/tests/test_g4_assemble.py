@@ -117,7 +117,7 @@ class G4AssembleTests(unittest.TestCase):
         self.assertEqual(25, record["fps"])
         self.assertEqual("explicit-override", record["fpsSource"])
 
-    def make_bgm_and_contract(self, tamper_hash=False):
+    def make_bgm_and_contract(self, tamper_hash=False, bed=-6.0, duck=3.0):
         import hashlib
         bgm = self.root / "bgm.wav"
         subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=220:duration=1", str(bgm)], check=True, capture_output=True)
@@ -128,7 +128,7 @@ class G4AssembleTests(unittest.TestCase):
         contract.write_text(json.dumps({
             "schemaVersion": "0.1", "skill": "music-expert", "purpose": "bgm_mix_contract", "projectId": "demo-001",
             "bgmAudio": {"path": str(bgm), "sha256": sha}, "evidence": {},
-            "timelineMs": 2000, "trackOffsetMs": 0, "bedGainDb": -6.0, "duckReductionDb": 3.0,
+            "timelineMs": 2000, "trackOffsetMs": 0, "bedGainDb": bed, "duckReductionDb": duck,
             "fades": {"fadeInMs": 200, "fadeOutStartMs": 1800, "fadeOutMs": 200},
             "ducking": [], "duckSegments": [{"fromMs": 0, "toMs": 1900, "sentenceIds": ["N01"]}],
             "mixMode": "duck-table",
@@ -142,11 +142,16 @@ class G4AssembleTests(unittest.TestCase):
         bgm, contract = self.make_bgm_and_contract()
         ass = self.root / "captions.ass"
         ass.write_text(CAPTIONS_ASS, encoding="utf-8")
-        result = self.run_assemble(("--subtitle-ass", str(ass), "--bgm-audio", str(bgm), "--bgm-mix-contract", str(contract)))
+        # 台账⑦后混 BGM 装配必须持预检报告或如实豁免——本例走豁免路径（fixture 无响度计划，
+        # 历史手动/合成源唯一合法通道），绑定路径见下方专组用例。
+        result = self.run_assemble(("--subtitle-ass", str(ass), "--bgm-audio", str(bgm), "--bgm-mix-contract", str(contract),
+                                    "--mix-precheck-waiver", "fixture：合成正弦源、无响度计划，如实豁免预检"))
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
         self.assertEqual({"video", "audio"}, self.stream_kinds(self.output))
         summary = json.loads(result.stdout)
         record = json.loads(Path(summary["record"]).read_text(encoding="utf-8"))
+        self.assertEqual("waived", record["mixPrecheck"]["status"])
+        self.assertIn("如实豁免", record["mixPrecheck"]["reason"])
         self.assertTrue(record["subtitleAss"]["sha256"])
         self.assertEqual(-6.0, record["bgmMix"]["bedGainDb"])
         self.assertEqual(1, len(record["bgmMix"]["duckSegments"]))
@@ -487,6 +492,99 @@ class G4AssembleTests(unittest.TestCase):
         self.assertNotEqual(0, result.returncode)
         self.assertIn("-24 and -8", result.stdout + result.stderr)
 
+    # --- 台账⑦混音预检闸（banshee-001 回炉一案的反制，甲案用户 2026-10-10 拍板）---
+    # 预检脚本与装配同源（import g4_assemble 的混音图与闸常数），audio-only 实测主轨；
+    # 装配闸要绑定新鲜 passed 报告——banshee 首跑的 −15.3 若在当年有这道闸，几秒即拦。
+
+    PRECHECK = ROOT / "skill/local-video-render/scripts/g4_mix_precheck.py"
+
+    def quiet_plan_setup(self):
+        quiet = self.root / "quiet-narration.wav"
+        subprocess.run([self.ffmpeg, "-y", "-f", "lavfi", "-i", "sine=frequency=440:duration=2,volume=-20dB", str(quiet)],
+                       check=True, capture_output=True)
+        expert = ROOT / "skill/loudness-expert/scripts/loud_plan.py"
+        plan_run = subprocess.run([PYTHON, str(expert), "--input", str(quiet),
+                                   "--output-dir", str(self.root / "loud-plans"),
+                                   "--profile", "video", "--project-id", "demo-001"],
+                                  capture_output=True, text=True, encoding="utf-8")
+        if not plan_run.stdout.strip() or json.loads(plan_run.stdout).get("status") != "ready":
+            self.skipTest("fixture source is not linear-feasible on this ffmpeg: " + plan_run.stdout)
+        plan = json.loads(plan_run.stdout)
+        self.narration = quiet
+        self.set_manifest_loudness(plan["targetProfile"])
+        return plan
+
+    def run_precheck(self, bgm, contract, plan_path, report_path, extra=()):
+        return subprocess.run([PYTHON, str(self.PRECHECK), "--narration-audio", str(self.narration),
+                               "--bgm-audio", str(bgm), "--mix-contract", str(contract),
+                               "--loudness-plan", str(plan_path), "--output", str(report_path), *extra],
+                              capture_output=True, text=True, encoding="utf-8")
+
+    def test_mix_precheck_reports_contract_and_trial_and_refuses_overwrite(self):
+        plan = self.quiet_plan_setup()
+        bgm, contract = self.make_bgm_and_contract(bed=-20.0, duck=0.0)
+        report = self.root / "混音预检-v0.1.json"
+        run = self.run_precheck(bgm, contract, plan["output"], report, ("--trial=-24:0",))
+        self.assertEqual(0, run.returncode, run.stdout + run.stderr)
+        doc = json.loads(report.read_text(encoding="utf-8"))
+        self.assertEqual(("g4_mix_precheck", "passed"), (doc["tool"], doc["status"]))
+        self.assertEqual(2, len(doc["combinations"]))
+        contract_row = doc["combinations"][0]
+        self.assertTrue(contract_row["isContractCombination"])
+        self.assertEqual(-20.0, contract_row["bedGainDb"])
+        self.assertTrue(Path(contract_row["graphFile"]).is_file(), "滤镜图留盘=每组合可审计")
+        self.assertEqual(hashlib.sha256(contract.read_bytes()).hexdigest().upper(),
+                         doc["inputs"]["mixContract"]["sha256"])
+        rerun = self.run_precheck(bgm, contract, plan["output"], report)
+        self.assertEqual(2, rerun.returncode)
+        self.assertIn("同版覆盖", json.loads(rerun.stdout)["error"])
+
+    def test_assemble_bgm_with_plan_without_precheck_strikes(self):
+        plan = self.quiet_plan_setup()
+        bgm, contract = self.make_bgm_and_contract(bed=-20.0, duck=0.0)
+        result = self.run_assemble(("--loudness-plan", str(plan["output"]),
+                                    "--bgm-audio", str(bgm), "--bgm-mix-contract", str(contract)))
+        self.assertEqual(2, result.returncode, result.stdout + result.stderr)
+        err = self.error_of(result)
+        self.assertIn("台账⑦", err)
+        self.assertIn("g4_mix_precheck", err)
+
+    def test_assemble_binds_fresh_passed_precheck_report(self):
+        plan = self.quiet_plan_setup()
+        # bed −6/duck 0：主轨落点达标（预检 passed）且 bed 就位电平高于 −33 可闻下界
+        # （zaku 可闻性闸是既有防线，fixture 电平必须同时喂饱两道闸，才测得到绑定路径本身）。
+        bgm, contract = self.make_bgm_and_contract(bed=-6.0, duck=0.0)
+        report = self.root / "混音预检-v0.1.json"
+        run = self.run_precheck(bgm, contract, plan["output"], report)
+        self.assertEqual(0, run.returncode, run.stdout + run.stderr)
+        result = self.run_assemble(("--loudness-plan", str(plan["output"]), "--bgm-audio", str(bgm),
+                                    "--bgm-mix-contract", str(contract), "--mix-precheck-report", str(report)))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = self.read_record()
+        block = record["mixPrecheck"]
+        self.assertEqual("bound", block["status"])
+        self.assertEqual("passed", block["verdict"])
+        self.assertIsNotNone(block["measuredMaster"]["integratedLufs"])
+        self.assertEqual(hashlib.sha256(report.read_bytes()).hexdigest().upper(), block["report"]["sha256"])
+
+    def test_assemble_rejects_stale_report_after_contract_edit(self):
+        plan = self.quiet_plan_setup()
+        bgm, contract = self.make_bgm_and_contract(bed=-20.0, duck=0.0)
+        report = self.root / "混音预检-v0.1.json"
+        self.assertEqual(0, self.run_precheck(bgm, contract, plan["output"], report).returncode)
+        doc = json.loads(contract.read_text(encoding="utf-8"))
+        doc["bedGainDb"] = -18.0  # 合同改参=报告过期（R2 同型：内容漂移=批准失效延伸）
+        contract.write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+        result = self.run_assemble(("--loudness-plan", str(plan["output"]), "--bgm-audio", str(bgm),
+                                    "--bgm-mix-contract", str(contract), "--mix-precheck-report", str(report)))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("混音合同", self.error_of(result))
+
+    def test_precheck_flags_without_bgm_are_refused(self):
+        result = self.run_assemble(("--mix-precheck-waiver", "no bgm here"))
+        self.assertEqual(2, result.returncode)
+        self.assertIn("没有混音合同", self.error_of(result))
+
     # --- xfade 链实装（transition-expert 指令经 prepare 透传）。夹具：两个 1000ms
     # 段文件 + 2s 口播。网格 750+750、边界 D=500 ⇒ 段文件恰为网格+250 手柄的扩切
     # 产物，成片总长必须仍是 1500——重叠掉的就是手柄，网格零位移是本批宪法验收。
@@ -707,6 +805,143 @@ class LoudnessWiringUnitTests(unittest.TestCase):
         stats = self.module.parse_loudnorm_stats('noise {"input_i": -22.8, "target_i": -14.0} tail')
         self.assertEqual(-22.8, stats["input_i"])
         self.assertIsNone(self.module.parse_loudnorm_stats("no json here"))
+
+
+class MixPrecheckGateUnitTests(unittest.TestCase):
+    """台账⑦单元层（零 ffmpeg）：装配闸 check_mix_precheck 的全部分支——绑定对账、
+    分档语义、罢工文案指路。真素材正反双案另在 WorkSpace 彩排（banshee 留档合同
+    判 failed −15.3、定稿合同判 passed −14.8）。"""
+
+    CONTRACT = {"bedGainDb": -8.0, "duckReductionDb": 12.0, "timelineMs": 124000}
+    PROFILE = {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0}
+    SHAS = {"narrationAudio": "A" * 64, "bgmAudio": "B" * 64, "mixContract": "C" * 64, "loudnessPlan": "D" * 64}
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("g4_assemble_gate_under_test", SCRIPT)
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def report(self, verdict="passed", bed=-8.0, duck=12.0):
+        return {"schemaVersion": "0.1", "tool": "g4_mix_precheck", "timelineMs": 124000,
+                "inputs": {field: {"path": "/x", "sha256": sha} for field, sha in self.SHAS.items()},
+                "gateLines": {"targetProfile": dict(self.PROFILE), "toleranceLu": 1.0, "tpSlackDb": 0.3,
+                              "strictness": "linear-verbatim"},
+                "combinations": [{"bedGainDb": bed, "duckReductionDb": duck, "isContractCombination": True,
+                                  "verdict": verdict,
+                                  "measuredMaster": {"integratedLufs": -14.9, "truePeakDbtp": -1.7},
+                                  "deviationLu": -0.9, "truePeakOverDb": -0.2}],
+                "guidance": "出路示例"}
+
+    def check(self, doc, mode="linear-verbatim"):
+        return self.module.check_mix_precheck(doc, contract=dict(self.CONTRACT), profile=dict(self.PROFILE),
+                                              mode=mode, tolerance_lu=1.0, timeline_ms=124000,
+                                              contract_sha=self.SHAS["mixContract"],
+                                              narration_sha=self.SHAS["narrationAudio"],
+                                              bgm_sha=self.SHAS["bgmAudio"], plan_sha=self.SHAS["loudnessPlan"])
+
+    def test_passed_binds(self):
+        block = self.check(self.report())
+        self.assertEqual(("bound", "passed"), (block["status"], block["verdict"]))
+        self.assertEqual(-14.9, block["measuredMaster"]["integratedLufs"])
+
+    def test_foreign_tool_refused(self):
+        doc = self.report()
+        doc["tool"] = "hand-typed-note"
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("g4_mix_precheck", str(caught.exception))
+
+    def test_input_sha_drift_refused(self):
+        doc = self.report()
+        doc["inputs"]["narrationAudio"]["sha256"] = "E" * 64
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("口播轨", str(caught.exception))
+
+    def test_timeline_gate_and_tolerance_drift_refused(self):
+        doc = self.report()
+        doc["timelineMs"] = 99000
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("时间轴", str(caught.exception))
+        doc = self.report()
+        doc["gateLines"]["targetProfile"] = dict(self.PROFILE, integratedLufs=-16.0)
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("目标档", str(caught.exception))
+        doc = self.report()
+        doc["gateLines"]["toleranceLu"] = 2.0
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("容差", str(caught.exception))
+
+    def test_combination_row_identity_enforced(self):
+        doc = self.report(bed=-6.0)
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        self.assertIn("重跑预检", str(caught.exception))
+
+    def test_failed_verdict_strikes_with_exit_path(self):
+        doc = self.report(verdict="failed")
+        with self.assertRaises(ValueError) as caught:
+            self.check(doc)
+        message = str(caught.exception)
+        self.assertIn("不许带着未过闸", message)
+        self.assertIn("出路示例", message)
+
+    def test_disclosed_exceedance_only_for_blocked_tier(self):
+        with self.assertRaises(ValueError) as caught:
+            self.check(self.report(verdict="disclosed-exceedance"))
+        self.assertIn("blocked 档", str(caught.exception))
+        doc = self.report(verdict="disclosed-exceedance")
+        doc["gateLines"]["strictness"] = "controlled-dynamic"
+        block = self.check(doc, mode="controlled-dynamic")
+        self.assertEqual("bound-disclosed", block["status"])
+        self.assertIn("永不静默", block["reviewNote"])
+
+
+class MixPrecheckJudgeUnitTests(unittest.TestCase):
+    """台账⑦预检脚本判定层（零 ffmpeg）：主轨两闸与分档纪律——与装配纯口播闸同源常数。
+    预检脚本 import g4_assemble，加载时自带同源依赖。"""
+
+    PROFILE = {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0}
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "g4_mix_precheck_under_test", ROOT / "skill/local-video-render/scripts/g4_mix_precheck.py")
+        cls.module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.module)
+
+    def judge(self, i, tp, tolerance=1.0, strict=True):
+        return self.module.judge_combination({"integratedLufs": i, "truePeakDbtp": tp}, self.PROFILE, tolerance, strict)
+
+    def test_banshee_first_case_fails_and_final_passes(self):
+        self.assertEqual("passed", self.judge(-14.9, -1.7)["verdict"])
+        failed = self.judge(-15.3, -1.4)
+        self.assertEqual(("failed", "integrated"), (failed["verdict"], failed["failReason"][0]))
+
+    def test_tp_is_common_hard_gate_for_both_tiers(self):
+        for strict in (True, False):
+            row = self.judge(-14.0, -1.1, strict=strict)
+            self.assertEqual(("failed", "true-peak"), (row["verdict"], row["failReason"][0]))
+
+    def test_blocked_tier_discloses_exceedance(self):
+        row = self.judge(-15.3, -1.7, strict=False)
+        self.assertEqual("disclosed-exceedance", row["verdict"])
+        self.assertIn("永不静默", row["reviewNote"])
+
+    def test_no_reading_never_assumes(self):
+        with self.assertRaises(ValueError):
+            self.judge(None, -1.7)
+
+    def test_parse_trial_shape(self):
+        self.assertEqual((-8.0, 12.0), self.module.parse_trial("-8:12"))
+        with self.assertRaises(ValueError):
+            self.module.parse_trial("only-one")
 
 
 if __name__ == "__main__":
