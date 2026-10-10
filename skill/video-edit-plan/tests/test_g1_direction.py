@@ -114,7 +114,29 @@ class G1DirectionTest(unittest.TestCase):
             self.assertFalse((workspace / "创作方向").exists())
             code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(workspace), "--input", str(input_path), "--confirmed", "--on-conflict", "version")
             self.assertEqual(0, code, result)
-            self.assertTrue((workspace / "工作台" / "demo-001" / "G1-创作方向-v2" / "G1-方向简报.md").is_file())
+            # 台账①（甲案）：版本化只作用于简报文件名，目录 工作台/<id>/G1-创作方向/ 永不加 -vN
+            self.assertTrue((destination / "G1-方向简报-v2.md").is_file())
+            self.assertTrue((destination / "G1-方向简报-v2.json").is_file())
+            self.assertFalse((workspace / "工作台" / "demo-001" / "G1-创作方向-v2").exists())
+            self.assertEqual(str(destination.resolve()), result["output"])
+
+    def test_conflict_version_does_not_split_existing_dir(self):
+        """台账①：找乐链预建子目录使 G1-创作方向/ 已存在但简报缺席，write（stop）应写进既有目录、
+        不得另建 -v2 壳致产物树分裂（banshee-001 手工 mv 合并的反面）。"""
+        temporary, pack = self.create_pack()
+        with temporary:
+            input_path = self.write_input(temporary.name, self.valid_direction())
+            workspace = Path(temporary.name) / "workspace"
+            prebuilt = workspace / "工作台" / "demo-001" / "G1-创作方向" / "G1-参考视频分析"
+            prebuilt.mkdir(parents=True)
+            (prebuilt / "note.txt").write_text("existing", encoding="utf-8")
+            code, result = self.run_cli("write", "--pack", str(pack), "--workspace", str(workspace),
+                                        "--input", str(input_path), "--confirmed")
+            self.assertEqual(0, code, result)
+            base = workspace / "工作台" / "demo-001" / "G1-创作方向"
+            self.assertTrue((base / "G1-方向简报.json").is_file())
+            self.assertTrue((base / "G1-参考视频分析" / "note.txt").is_file())
+            self.assertFalse((workspace / "工作台" / "demo-001" / "G1-创作方向-v2").exists())
 
     def test_write_refuses_project_directory_as_workspace(self):
         """⑤（zaku-003 实跑踩坑）：--workspace 语义＝仓库规范根；把 工作台/ 之下或本身

@@ -218,15 +218,26 @@ def workspace_semantics_issue(workspace):
     return None
 
 
-def target_directory(workspace, project_id, on_conflict):
+def target_directory(workspace, project_id):
     # Project layout contract: formal artifacts live under 工作台/<projectId>/G1-创作方向/.
-    base = Path(workspace).resolve() / "工作台" / project_id / "G1-创作方向"
-    if not base.exists() or on_conflict == "stop":
-        return base
+    # banshee-001 台账①（甲案，2026-10-10 用户拍板）：**目录永不版本化**——找乐链
+    # 预先在本目录建 G1-参考视频分析/、BGM找乐/ 等子目录是合同内合法布局，不构成冲突；
+    # 冲突唯一来源是"同名方向简报已存在"，此时版本化只作用于简报文件名（㉘ 专员产物同纪律）。
+    return Path(workspace).resolve() / "工作台" / project_id / "G1-创作方向"
+
+
+def brief_paths(destination, on_conflict):
+    json_path = destination / "G1-方向简报.json"
+    md_path = destination / "G1-方向简报.md"
+    if on_conflict != "version" or not (json_path.exists() or md_path.exists()):
+        return json_path, md_path
     version = 2
-    while (base.parent / f"G1-创作方向-v{version}").exists():
+    while True:
+        candidate_json = destination / f"G1-方向简报-v{version}.json"
+        candidate_md = destination / f"G1-方向简报-v{version}.md"
+        if not candidate_json.exists() and not candidate_md.exists():
+            return candidate_json, candidate_md
         version += 1
-    return base.parent / f"G1-创作方向-v{version}"
 
 
 def main():
@@ -265,7 +276,7 @@ def main():
     if workspace_issue:
         emit({"status": "blocked", "blockers": [{"type": "workspace_semantics", "detail": workspace_issue}], "finishedAt": now()})
         return 2
-    destination = target_directory(args.workspace, data["projectId"], args.on_conflict)
+    destination = target_directory(args.workspace, data["projectId"])
     # Conflict means "an existing direction brief would be overwritten" — not merely that
     # the directory exists: G1-参考视频分析/ artifacts are legitimately written before it.
     brief_exists = (destination / "G1-方向简报.json").exists() or (destination / "G1-方向简报.md").exists()
@@ -273,9 +284,11 @@ def main():
         emit({"status": "blocked", "blockers": [{"type": "project_id_conflict", "detail": str(destination)}], "finishedAt": now()})
         return 2
     destination.mkdir(parents=True, exist_ok=True)
-    (destination / "G1-方向简报.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (destination / "G1-方向简报.md").write_text(markdown(data, args.pack), encoding="utf-8")
-    emit({"status": "written", "projectId": data["projectId"], "output": str(destination), "finishedAt": now()})
+    json_path, md_path = brief_paths(destination, args.on_conflict)
+    json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    md_path.write_text(markdown(data, args.pack), encoding="utf-8")
+    emit({"status": "written", "projectId": data["projectId"], "output": str(destination),
+          "briefJson": str(json_path), "briefMarkdown": str(md_path), "finishedAt": now()})
     return 0
 
 
