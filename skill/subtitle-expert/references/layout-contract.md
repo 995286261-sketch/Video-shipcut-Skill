@@ -36,7 +36,7 @@ python skill/subtitle-expert/scripts/subtitle_trim_cues.py --ass <批准.ass> --
 ## 生成规则（G3 写 ASS/SRT 时执行）
 
 1. **一条口播一排版块**；超一行宽度时在**自然语义边界**插显式 `\N`，两行均衡，单行 ≤27.5 全角当量（002 实测绕法转正）。**宽度模型算法（issue ⑲，唯一权威=`subtitle_validate_layout.py` 的 `char_units/token_width/wrap_line`，编排断行必须复用该式、禁止凭"26 字/行"直觉）**：字符宽=全角（unicodedata east_asian_width ∈ F/W）1.0em、其余 0.55em；可用宽像素=画布宽 − MarginL − MarginR；autoWrap=false 下空格是唯一合法断点、无空格连续段超宽即违规，`\N` 为显式硬断。
-2. ASS 为样式母版，SRT 为交付副本，**同一数据源派生**：SRT 时基=ASS 百分秒 ×10 零填充，`\N` 转真实换行（㊍的根治）。
+2. ASS 为样式母版，SRT 为交付副本，**同一数据源派生**：SRT 时基=ASS 百分秒 ×10 零填充，`\N` 转真实换行（㊍的根治）。**本条的唯一机械入口=`subtitle_convert.py`（⑭小4，2026-10-10 用户拍板甲案）**：cue 按 [Events] 书写序、文字逐字搬运（剥 `{...}` 标签）、缺省落同名 `.srt`、报告带源指纹；交付 SRT 手写通道退役——banshee 当天 ASS/SRT 两份皆手抄，机械派生后 `--srt` 逐 cue 对时检查（本节机验）成为复验而非第一道防线。
 3. 关键词强调用同一字幕块内的富文本 tag，禁止拆独立图层。
 4. 校验未通过必须重新语义断行，不得靠渲染器自动折行兜底、不得缩字号救。
 

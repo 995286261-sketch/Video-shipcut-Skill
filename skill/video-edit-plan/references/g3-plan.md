@@ -182,7 +182,7 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 
 在 `工作台/<projectId>/G3-剪辑计划/` 交付：
 
-1. `G3-字幕时间轴-*.ass` 与同内容 `*.srt`；
+1. `G3-字幕时间轴-*.ass` 与同内容 `*.srt`（**SRT 不许手写**：由字幕专员 `subtitle_convert.py` 从 ASS 机械派生，同名同版本，⑭小4）；
 2. `G3-字幕布局合同-*.json`；
 3. `G3-源字幕处理表-*.md`，含最终时间码与像素处理范围；
 4. BGM 对齐产物（`BGM/BGM-对齐建议-v0.2.json` + `BGM/BGM-对齐回显-v0.2.md`，含机器乐句表与档位草稿；有 BGM 时替代手工卡点表）、封面候选和最终切点表。
@@ -192,6 +192,7 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 ```powershell
 python skill/subtitle-expert/scripts/subtitle_experience.py query --kind layout --resolution <宽x高>   # 先查经验库拿推荐默认（建议层：命中项作【默认=推荐】候选、依据写"经验库+来源项目"；未命中依据必须写"经验库未命中（含 resolutionMiss），回落模板默认"——查询结果二选一在回显卡上必显，不得让用户看不出查没查；批准≠继承）
 python skill/subtitle-expert/scripts/subtitle_probe_renderer.py --output-dir <G3-剪辑计划/字幕/>   # 探能力档（默认保守 autoWrap=false）
+python skill/subtitle-expert/scripts/subtitle_convert.py --ass <G3-字幕时间轴.ass>   # SRT 交付副本唯一机械派生（手写通道退役，⑭小4）
 python skill/subtitle-expert/scripts/subtitle_validate_layout.py --ass <G3-字幕时间轴.ass> --layout <G3-字幕布局合同.json> --srt <subtitles.srt> --source <G2-口播句子.json>
 ```
 
