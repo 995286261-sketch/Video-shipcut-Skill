@@ -47,6 +47,36 @@ def load_reports(index_dir_candidates: list[Path]) -> dict:
     return reports
 
 
+def load_self_report(candidate: dict, sha: str | None) -> tuple[dict | None, str | None]:
+    """banshee-001 台账②（甲案，2026-10-10 用户拍板）：候选自带 reportPath 的采信通道。
+
+    09-29 ③ 已定"报告在场＋源指纹对账"两层证据合同，但当时只接通了 `--reports-dir`
+    目录扫描这一路；库内导出/登记候选本就带 `reportPath`（报告在盘的位置随候选走），
+    机器却不读=文档字段有、工具不消费（banshee 首跑 14 候选全 0 分、靠手工补目录重跑）。
+    本函数只把已有的两层合同接到这条路上，不新增判定：报告须真在场、可解析，且其
+    `source.sha256` 与候选身份 sha 逐字相同（大小写归一）才作证；否则回 (None, reason)，
+    reason 供上层如实标为 reportPath 失效、与"从未分析"区分（不得混在一起静默清零）。
+    """
+    if not sha:
+        return None, "no_candidate_sha"
+    declared = candidate.get("reportPath")
+    if not declared or not str(declared).strip():
+        return None, "no_reportPath"
+    path = Path(str(declared).strip())
+    if not path.is_file():
+        return None, "missing"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None, "unreadable"
+    report_sha = str(((data.get("source") or {}).get("sha256")) or "").upper()
+    if not report_sha:
+        return None, "report_sha_absent"
+    if report_sha != str(sha).upper():
+        return None, "sha_mismatch"
+    return data, None
+
+
 def collect_candidates(paths: list[Path]) -> list[dict]:
     candidates = []
     for path in paths:
@@ -269,11 +299,25 @@ def main() -> int:
     for candidate in candidates:
         sha = candidate_sha(candidate)
         report = report_index.get(sha) if sha else None
+        via_self_path = False
         if report is None:
-            unanalyzed.append({"title": candidate.get("title"), "freesoundId": candidate.get("freesoundId"),
-                               "hint": "run music_analyze.py on this candidate to make it rankable"})
-            continue
+            report, self_reason = load_self_report(candidate, sha)
+            via_self_path = report is not None
+            if report is None and self_reason not in ("no_reportPath", "no_candidate_sha"):
+                # ②：reportPath 声明在案但证据失效——如实点名原因，绝不与"从未分析"混记。
+                unanalyzed.append({"title": candidate.get("title"), "freesoundId": candidate.get("freesoundId"),
+                                   "neteaseId": candidate.get("neteaseId"),
+                                   "reportPathStatus": self_reason,
+                                   "reportPath": candidate.get("reportPath"),
+                                   "hint": "候选登记了报告路径但证据失效（见 reportPathStatus）——修正路径或重跑 music_analyze，勿当作未分析直接放弃"})
+                continue
+            if report is None:
+                unanalyzed.append({"title": candidate.get("title"), "freesoundId": candidate.get("freesoundId"),
+                                   "hint": "run music_analyze.py on this candidate to make it rankable"})
+                continue
         total, notes = score(candidate, report, profile)
+        if via_self_path and "decode_via_analysis" in notes:
+            notes = notes + ["decode_via_reportPath"]
         scored.append({
             "title": candidate.get("title"),
             "freesoundId": candidate.get("freesoundId"),

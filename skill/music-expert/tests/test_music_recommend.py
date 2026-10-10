@@ -165,5 +165,81 @@ class MusicRecommendTests(unittest.TestCase):
         self.assertIn("decode_via_analysis", top["notes"])
 
 
+    # ---- 台账②（banshee-001，甲案）：候选自带 reportPath 采信通道 ----
+
+    def test_self_report_path_rescues_pool_when_dir_scan_misses(self):
+        # banshee 实况：报告在别的节点目录、--reports-dir 扫不到；候选自带路径必须被读
+        elsewhere = self.root / "G1-创作方向" / "analysis-C0C0C0C0"
+        elsewhere.mkdir(parents=True)
+        sha = "C" * 64
+        (elsewhere / "BGM-分析报告-self.json").write_text(
+            json.dumps(report(sha, 200000, 90, 4, -12)), encoding="utf-8")
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        item = {"sha256": sha, "title": "self-path-track", "licenseType": "cc0",
+                "reportPath": str(elsewhere / "BGM-分析报告-self.json")}
+        pool.append(item)
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        self.assertEqual([], payload["unanalyzed"])
+        top = [x for x in payload["ranked"] if x["title"] == "self-path-track"][0]
+        self.assertEqual(1.0, top["score"])
+        self.assertIn("decode_via_analysis", top["notes"])
+        self.assertIn("decode_via_reportPath", top["notes"])
+
+    def test_dir_scan_preferred_no_double_stamp(self):
+        # 报告同时在扫描目录与 reportPath：走目录通道，不重复盖 reportPath 戳
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool[0].pop("decodeProbe")
+        pool[0]["reportPath"] = str(self.reports / "BGM-分析报告-good.json")
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        top = [x for x in payload["ranked"] if x["title"] == "good-track"][0]
+        self.assertIn("decode_via_analysis", top["notes"])
+        self.assertNotIn("decode_via_reportPath", top["notes"])
+
+    def test_report_path_missing_file_named_not_silently_zeroed(self):
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool.append({"sha256": "D" * 64, "title": "ghost-report", "licenseType": "cc0",
+                     "reportPath": str(self.root / "nowhere" / "BGM-分析报告-x.json")})
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        entry = [x for x in payload["unanalyzed"] if x["title"] == "ghost-report"][0]
+        self.assertEqual("missing", entry["reportPathStatus"])
+
+    def test_report_path_sha_mismatch_named(self):
+        stray = self.root / "stray-report.json"
+        stray.write_text(json.dumps(report("E" * 64, 200000, 90, 4, -12)), encoding="utf-8")
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool.append({"sha256": "F" * 64, "title": "mismatched-report", "licenseType": "cc0",
+                     "reportPath": str(stray)})
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        entry = [x for x in payload["unanalyzed"] if x["title"] == "mismatched-report"][0]
+        self.assertEqual("sha_mismatch", entry["reportPathStatus"])
+
+    def test_report_path_failed_probe_red_line_still_holds(self):
+        # ③ 保守红线不因新通道松动：显式 failed 探针不许被自带报告翻案
+        elsewhere = self.root / "rescue"
+        elsewhere.mkdir()
+        sha = "9" * 64
+        (elsewhere / "r.json").write_text(json.dumps(report(sha, 200000, 90, 4, -12)), encoding="utf-8")
+        pool = json.loads(self.pool.read_text(encoding="utf-8"))["candidates"]
+        pool.append({"sha256": sha, "title": "failed-probe", "licenseType": "cc0",
+                     "decodeProbe": {"status": "failed", "error": "undecodable"},
+                     "reportPath": str(elsewhere / "r.json")})
+        self.rewrite_pool(pool)
+        result = self.run_recommend()
+        payload = json.loads(self.output.read_text(encoding="utf-8"))
+        item = [x for x in payload["ranked"] if x["title"] == "failed-probe"][0]
+        self.assertEqual(0.0, item["score"])
+        self.assertIn("decode_probe_not_passed", item["notes"])
+        self.assertNotIn("decode_via_reportPath", item["notes"])
+
+
 if __name__ == "__main__":
     unittest.main()
