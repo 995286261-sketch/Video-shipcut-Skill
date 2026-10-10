@@ -637,6 +637,9 @@ class ValidateG3PlanTest(unittest.TestCase):
         code, output = self.run_cli(bgm_plan, decision, bgm=(pack, alignment))
         self.assertNotEqual(0, code)
         self.assertIn("frozen", output)
+        # 台账⑭甲案：报错必须点名轴口径（成片网格 vs 声轨累计轴），不靠跑的人反推
+        self.assertIn("finished-video grid", output)
+        self.assertIn("narration-audio cumulative-axis", output)
 
     def test_segment_missing_layout_tier_is_blocked(self):
         decision = self.decision()

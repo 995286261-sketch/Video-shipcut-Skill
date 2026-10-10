@@ -113,7 +113,7 @@ def validate_bgm_plan(plan: dict, segments: list, material_pack: Path, alignment
         start, end = segment.get("narrationStartMs"), segment.get("narrationEndMs")
         owners = [b for b in boundaries if b["startMs"] <= start and end <= b["endMs"]]
         if len(owners) != 1:
-            fail(f"segment {segment.get('segmentId')} narration interval must sit inside exactly one G2 voice-brief sentence (sentence durations are frozen; splitting within a sentence is allowed)")
+            fail(f"segment {segment.get('segmentId')} narration interval must sit inside exactly one G2 voice-brief sentence (sentence durations are frozen; splitting within a sentence is allowed; narration intervals are on the finished-video grid, same axis as outputStartMs/outputEndMs — narration-audio cumulative-axis values cause this mismatch, banshee-001 ledger ⑭)")
         per_sentence.setdefault(owners[0]["sentenceId"], []).append((start, end, segment.get("segmentId")))
     for sentence in boundaries:
         pieces = sorted(per_sentence.get(sentence["sentenceId"], []))

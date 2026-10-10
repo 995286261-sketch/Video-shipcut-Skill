@@ -32,6 +32,8 @@ G3 编辑计划已实现为人工审核规划，输入为已校验素材包、G2
 
 **连续网格（硬约束，issue ⑯）**：`approved_for_g4` 计划的段输出区间必须**连续覆盖成片**——首段 `outputStartMs=0`、末段 `outputEndMs=timelineDurationMs`、相邻段共端点零缝隙；`validate_g3_plan.py` 机器强制，缝隙不再只到转场校验才摊牌。留白归属规则：句间留白不悬空，切点取**留白中点**（段 i 输出=[上一切点, narrEnd_i+gapAfter_i/2)，示例：口播 0–4000、下句 5000 起 ⇒ 边界 4500，段 1 输出 0–4500）。转场窗口正是从这段归属画面里取手柄（见 transition-expert 合同"手柄回填"）。
 
+**口播区间的轴口径（硬约束，banshee-001 台账⑭·大，2026-10-10 用户拍板甲案）**：计划片段的 `narrationStartMs/narrationEndMs` 一律按**成片时间轴（输出轴）**记——与 `outputStartMs/outputEndMs` 同一张 0→`timelineDurationMs` 网格；G2 口播简要的句边界产物（`music_align` 的 `boundaries`）机械判据本就在此轴（句子终点对 `timelineMs` 校验、卡点吸附直接拿边界与成片时间线数值比对），本条只把口径写死成字。派生清单**禁止填旁白纯音频轨的累计时长**：无静场时两轴恰好相等、错位不可见，一有静场声轴累计值系统性偏小，句边界归属、转场窗口、平铺覆盖这些按输出轴判的检查整链错位（banshee 前半程多轮才收敛、zaku 先例同坑——口径此前只靠跑的人反推，无文档依据）。`validate_g3_plan.py` 归属类报错点名"疑填了声轴累计值"负责指路；判定逻辑零改动（机器判据只判机械事实，罢工文案负责说人话）。
+
 **顶层 fps 机器字段（硬约束，转场实跑⑧甲/⑨，2026-09-24 用户裁决）**：计划必须携带顶层 `fps`（正整数）且等于 `packagingDecisions.fps` 镜像；`editPlan.fps` 第二位置废止。G4 全链唯一继承路径=计划顶层 `fps` → `g4_prepare` 落 manifest `targetFps` → render/assemble 消费；manifest 无 `targetFps` 且无显式 `--fps` 时 G4 罢工（旧 `default-24` 静默兜底已删除）。`g5_validate --media` 另对 export-config `video.fps` 与成片实探帧率强制对账（⑧丙），缺声明即错。
 
 **响度目标档双式记账（硬约束，响度接线批二，2026-09-28 用户"接"令）**：计划必须携带 `packagingDecisions.loudnessTarget`（三元组 `integratedLufs`/`truePeakDbtp`/`lraTargetLu`），**逐字等于** G2 决定 `loudnessPlanRef` 所指向 loudness-expert 计划的 `targetProfile`——G2 按哪档实测与规划，包装决定就照哪档记账，终审卡"响度目标档"行逐字=本字段（代码即规格）。`validate_g3_plan.py` 批量拒缺拒差；历史 0.1 决定的已封项目不追溯（R3）。下游：批三 G4 的 `loud_plan` 重规划必须沿用本目标档（改档=回 G3 重批）；批四 G5 验收审计对账同此三元组。接线状态以 `skill/loudness-expert/references/loudness-contract.md` §8 为准。
