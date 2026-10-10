@@ -1,5 +1,7 @@
 # P0-C Local Video Workflow
 
+> **冻结登记（2026-10-10，用户令）**：本仓库自 **v1.33.0（`3f5f7ea`）** 起进入平台融入冻结期——只收两类改动：① connector 联调暴露的引擎缺陷修复（出新版本+tag，由 connector 升钉引用）；② 两笔平台挂账（sourceAsset 合同、gN- 前缀改名，均随平台命名/合同层一次成批）。**新功能一律不加。** 公司 connector 开发工作区＝`/Users/chuanzhangbigye/工作/MySpace/videocut-connector/`（独立目录，公司内容永不进本公开仓库=红线）；connector 侧以 tag 钉住本仓库版本为引擎。视频制作请求照常走下方路由。
+
 This repository contains a six-stage local video production workflow. Before responding to any request involving video, images, documents, transcripts, reference videos, brand assets, music, clips, editing, transitions, rendering, subtitles, covers, or delivery packages, read `skill/p0-c-pipeline/SKILL.md` and follow it.
 
 Do not ask the user to name a skill or prepare technical artifacts. Infer the request is a new or continuing P0-C project and route through `p0-c-pipeline`.
