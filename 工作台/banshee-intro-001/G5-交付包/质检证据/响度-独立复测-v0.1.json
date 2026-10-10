@@ -1,0 +1,19 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_measure",
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2.mp4",
+  "version": "v0.1",
+  "output": "/Users/chuanzhangbigye/工作/WorkSpace/banshee-预检-v0.1/master-v02/响度-实测报告-v0.1.json",
+  "measured": {
+    "integratedLufs": -14.9,
+    "truePeakDbtp": -1.7,
+    "loudnessRangeLu": 5.9,
+    "engine": "ffmpeg-ebur128"
+  },
+  "sha256": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+  "status": "measured",
+  "measuredAt": "2026-10-09T10:52:57Z",
+  "unitsNote": "LUFS=集成响度（平均有多响）；dBTP=真峰值（会不会爆）；LU=动态范围宽度"
+}

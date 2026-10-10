@@ -1,0 +1,45 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_verify",
+  "schemaVersion": "0.1",
+  "projectId": null,
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G5-交付包/交付包-v0.1/final-video.mp4",
+  "version": "v0.1",
+  "output": "工作台/banshee-intro-001/G5-交付包/交付包-v0.1/响度-验收审计-v0.1.json",
+  "status": "failed",
+  "planRef": "工作台/banshee-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+  "planVersion": "v0.2",
+  "planStatus": "ready",
+  "planRefSha256": "7125266A60422E0BD91CBC2415D6ACBFD6292258641DFF1F8C0E06E51D95AE12",
+  "assemblyRef": null,
+  "targetProfile": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "toleranceLu": 1.0,
+  "toleranceSource": "合同默认",
+  "tpSlackDb": 0.3,
+  "masterMeasured": {
+    "integratedLufs": -15.3,
+    "truePeakDbtp": -1.4,
+    "loudnessRangeLu": 8.7,
+    "engine": "ffmpeg-ebur128"
+  },
+  "checks": [
+    {
+      "check": "integratedWithinTolerance",
+      "pass": false,
+      "detail": "实测 -15.3 vs 目标 -14.0，偏差 -1.3 LU（容差 ±1.0 LU）"
+    },
+    {
+      "check": "truePeakWithinCeiling",
+      "pass": true,
+      "detail": "实测 TP -1.4 vs 上限 -1.5 dBTP（防回退余量 0.3）"
+    }
+  ],
+  "masterSha256": "D67F3A817F26A670B222F76EE2E59C16F04ADA7DA0FAD4F74E1EAB8E7197D98B",
+  "disclosureNote": null,
+  "failNote": "failed 不是重跑一次碰运气——偏差来自源天花板/混音口径/回退三成因，逐条排查见合同 §5",
+  "verifiedAt": "2026-10-09T10:38:46Z"
+}

@@ -15,6 +15,10 @@
     {
       "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3404986486-相对论_(工业电子版).mp3",
       "recordedAt": "2026-09-11T06:24:11Z"
+    },
+    {
+      "path": "工作台/tiger-intro-001/G1-创作方向/G1-音乐检索/candidates2/candidates/netease-3404986486-相对论_(工业电子版).mp3",
+      "recordedAt": "2026-10-09T08:48:22Z"
     }
   ],
   "roles": [
@@ -25,5 +29,5 @@
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-11T06:24:11Z",
-  "updatedAt": "2026-09-11T06:24:11Z"
+  "updatedAt": "2026-10-09T08:48:22Z"
 }

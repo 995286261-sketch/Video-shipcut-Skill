@@ -1,0 +1,753 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "derivedFrom": "G3-视觉分析-v0.1.json",
+ "entries": [
+  {
+   "sourceRange": {
+    "startMs": 0,
+    "endMs": 20000
+   },
+   "subjectStatus": "person_only",
+   "observed": "两台舱内白衣乘员（正面+侧面），烧录中日字幕",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G00"
+  },
+  {
+   "sourceRange": {
+    "startMs": 20000,
+    "endMs": 40000
+   },
+   "subjectStatus": "not_present",
+   "observed": "太空爆焰+远处舰体射出蓝色光束，无机体特写",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G01"
+  },
+  {
+   "sourceRange": {
+    "startMs": 40000,
+    "endMs": 60000
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶舱操纵面板与手特写",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G02"
+  },
+  {
+   "sourceRange": {
+    "startMs": 60000,
+    "endMs": 80000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金配色报丧女妖头肩部特写（未觉醒，金色精神感应骨架未发光）",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G03"
+  },
+  {
+   "sourceRange": {
+    "startMs": 80000,
+    "endMs": 100000
+   },
+   "subjectStatus": "mixed",
+   "observed": "深色报丧女妖持光束步枪射击+青绿色量产机同框",
+   "editingUse": "仅可承担对峙/语境节拍，不得单独作主体证据",
+   "risks": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "observationId": "exp-G04"
+  },
+  {
+   "sourceRange": {
+    "startMs": 100000,
+    "endMs": 120000
+   },
+   "subjectStatus": "not_present",
+   "observed": "星空星云空镜",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G05"
+  },
+  {
+   "sourceRange": {
+    "startMs": 120000,
+    "endMs": 140000
+   },
+   "subjectStatus": "not_present",
+   "observed": "蓝色光束线横贯特效",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G06"
+  },
+  {
+   "sourceRange": {
+    "startMs": 140000,
+    "endMs": 160000
+   },
+   "subjectStatus": "not_present",
+   "observed": "暗星空小亮点+字幕组制作名单烧录（校對Lucifer等）",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "observationId": "exp-G07"
+  },
+  {
+   "sourceRange": {
+    "startMs": 160000,
+    "endMs": 180000
+   },
+   "subjectStatus": "not_present",
+   "observed": "星空小亮点空镜",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G08"
+  },
+  {
+   "sourceRange": {
+    "startMs": 180000,
+    "endMs": 200000
+   },
+   "subjectStatus": "person_only",
+   "observed": "红发少年（巴纳吉）驾驶舱呐喊",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G09"
+  },
+  {
+   "sourceRange": {
+    "startMs": 200000,
+    "endMs": 220000
+   },
+   "subjectStatus": "person_only",
+   "observed": "红发少年驾驶舱，字幕『独角兽与报丧女妖在互相牵引着』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G10"
+  },
+  {
+   "sourceRange": {
+    "startMs": 220000,
+    "endMs": 240000
+   },
+   "subjectStatus": "person_only",
+   "observed": "深色驾驶服棕发驾驶员（利迪）舱内，字幕『利迪先生 不可以』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G11"
+  },
+  {
+   "sourceRange": {
+    "startMs": 240000,
+    "endMs": 260000
+   },
+   "subjectStatus": "not_present",
+   "observed": "蓝色漩涡光束特效",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G12"
+  },
+  {
+   "sourceRange": {
+    "startMs": 260000,
+    "endMs": 280000
+   },
+   "subjectStatus": "mixed",
+   "observed": "白色独角兽（毁灭模式红骨架）特写与黑色机体同框对峙",
+   "editingUse": "仅可承担对峙/语境节拍，不得单独作主体证据",
+   "risks": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "observationId": "exp-G13"
+  },
+  {
+   "sourceRange": {
+    "startMs": 280000,
+    "endMs": 300000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪舱内红目镜特写，字幕『那原本不是诅咒而是祈愿』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G14"
+  },
+  {
+   "sourceRange": {
+    "startMs": 300000,
+    "endMs": 320000
+   },
+   "subjectStatus": "not_present",
+   "observed": "粉紫色机体（非目标）发射粉色光束",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G15"
+  },
+  {
+   "sourceRange": {
+    "startMs": 320000,
+    "endMs": 340000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪震惊表情特写『什么？』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G16"
+  },
+  {
+   "sourceRange": {
+    "startMs": 340000,
+    "endMs": 360000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金报丧女妖持枪立于爆焰残骸旁",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G17"
+  },
+  {
+   "sourceRange": {
+    "startMs": 360000,
+    "endMs": 380000
+   },
+   "subjectStatus": "mixed",
+   "observed": "青绿色机体发射光束+远处小黑机影",
+   "editingUse": "仅可承担对峙/语境节拍，不得单独作主体证据",
+   "risks": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "observationId": "exp-G18"
+  },
+  {
+   "sourceRange": {
+    "startMs": 380000,
+    "endMs": 400000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "报丧女妖头部特写：面具展开、绿色精神感应骨架发光、红眼（NT-D 觉醒）",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G19"
+  },
+  {
+   "sourceRange": {
+    "startMs": 400000,
+    "endMs": 420000
+   },
+   "subjectStatus": "mixed",
+   "observed": "绿色机体头部+深色机体橙眼同框",
+   "editingUse": "仅可承担对峙/语境节拍，不得单独作主体证据",
+   "risks": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "observationId": "exp-G20"
+  },
+  {
+   "sourceRange": {
+    "startMs": 420000,
+    "endMs": 440000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金报丧女妖远景飞行+蓝色漩涡背景",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G21"
+  },
+  {
+   "sourceRange": {
+    "startMs": 440000,
+    "endMs": 460000
+   },
+   "subjectStatus": "person_only",
+   "observed": "粉衣女性乘员，字幕『收集到的人心的杂念』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G22"
+  },
+  {
+   "sourceRange": {
+    "startMs": 460000,
+    "endMs": 480000
+   },
+   "subjectStatus": "person_only",
+   "observed": "白衣人群群像",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G23"
+  },
+  {
+   "sourceRange": {
+    "startMs": 480000,
+    "endMs": 500000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金报丧女妖持大型光束步枪瞄准，金色骨架发光",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G24"
+  },
+  {
+   "sourceRange": {
+    "startMs": 500000,
+    "endMs": 520000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪面部特写（帽檐阴影）",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G25"
+  },
+  {
+   "sourceRange": {
+    "startMs": 520000,
+    "endMs": 540000
+   },
+   "subjectStatus": "not_present",
+   "observed": "绿色机体群环绕火焰圆环特效",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G26"
+  },
+  {
+   "sourceRange": {
+    "startMs": 540000,
+    "endMs": 560000
+   },
+   "subjectStatus": "person_only",
+   "observed": "白衣帽女性面部紫光，字幕『超出数值上限的感应波』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G27"
+  },
+  {
+   "sourceRange": {
+    "startMs": 560000,
+    "endMs": 580000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪双手掩面、白光起",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G28"
+  },
+  {
+   "sourceRange": {
+    "startMs": 580000,
+    "endMs": 600000
+   },
+   "subjectStatus": "person_only",
+   "observed": "深色驾驶服人物翻滚动作",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G29"
+  },
+  {
+   "sourceRange": {
+    "startMs": 600000,
+    "endMs": 620000
+   },
+   "subjectStatus": "person_only",
+   "observed": "舰桥白衣乘员群，字幕『利迪少尉 报丧女妖也参战了』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G30"
+  },
+  {
+   "sourceRange": {
+    "startMs": 620000,
+    "endMs": 640000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金报丧女妖侧身持光束步枪射击",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G31"
+  },
+  {
+   "sourceRange": {
+    "startMs": 640000,
+    "endMs": 660000
+   },
+   "subjectStatus": "mixed",
+   "observed": "青绿发光独角兽+黑金报丧女妖同框对峙",
+   "editingUse": "仅可承担对峙/语境节拍，不得单独作主体证据",
+   "risks": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "observationId": "exp-G32"
+  },
+  {
+   "sourceRange": {
+    "startMs": 660000,
+    "endMs": 680000
+   },
+   "subjectStatus": "not_present",
+   "observed": "大型绿色光束炮（拖曳炮）特写",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G33"
+  },
+  {
+   "sourceRange": {
+    "startMs": 680000,
+    "endMs": 700000
+   },
+   "subjectStatus": "not_present",
+   "observed": "熔岩状爆焰云",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G34"
+  },
+  {
+   "sourceRange": {
+    "startMs": 700000,
+    "endMs": 720000
+   },
+   "subjectStatus": "person_only",
+   "observed": "白盔红框人物面部，字幕『那么我也只能应战了』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G35"
+  },
+  {
+   "sourceRange": {
+    "startMs": 720000,
+    "endMs": 740000
+   },
+   "subjectStatus": "person_only",
+   "observed": "驾驶舱内乘员+外部爆焰红光",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G36"
+  },
+  {
+   "sourceRange": {
+    "startMs": 740000,
+    "endMs": 760000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "黑金报丧女妖站立于粉色弹射结构上（骨架白色微光）",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [],
+   "observationId": "exp-G37"
+  },
+  {
+   "sourceRange": {
+    "startMs": 760000,
+    "endMs": 780000
+   },
+   "subjectStatus": "person_only",
+   "observed": "老年男性面部特写（皱眉）",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G38"
+  },
+  {
+   "sourceRange": {
+    "startMs": 780000,
+    "endMs": 800000
+   },
+   "subjectStatus": "person_only",
+   "observed": "老年男性+短发女性军官，字幕『控制态势微调整』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G39"
+  },
+  {
+   "sourceRange": {
+    "startMs": 800000,
+    "endMs": 820000
+   },
+   "subjectStatus": "person_only",
+   "observed": "老年男性正面特写",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G40"
+  },
+  {
+   "sourceRange": {
+    "startMs": 820000,
+    "endMs": 840000
+   },
+   "subjectStatus": "person_only",
+   "observed": "老年男性侧影",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G41"
+  },
+  {
+   "sourceRange": {
+    "startMs": 840000,
+    "endMs": 860000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪舱内，字幕『测定为殖民卫星大小的物体』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G42"
+  },
+  {
+   "sourceRange": {
+    "startMs": 860000,
+    "endMs": 880000
+   },
+   "subjectStatus": "person_only",
+   "observed": "深色驾驶服红光面罩人物，字幕『并非只将人口丢到宇宙』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G43"
+  },
+  {
+   "sourceRange": {
+    "startMs": 880000,
+    "endMs": 900000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪舱内，字幕『我们是被祝福着出生到这世上的』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G44"
+  },
+  {
+   "sourceRange": {
+    "startMs": 900000,
+    "endMs": 920000
+   },
+   "subjectStatus": "person_only",
+   "observed": "利迪舱内橙色光",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G45"
+  },
+  {
+   "sourceRange": {
+    "startMs": 920000,
+    "endMs": 940000
+   },
+   "subjectStatus": "person_only",
+   "observed": "舰桥群像，字幕『格利普斯里面也有上千人』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G46"
+  },
+  {
+   "sourceRange": {
+    "startMs": 940000,
+    "endMs": 960000
+   },
+   "subjectStatus": "person_only",
+   "observed": "舰桥侧影，字幕『注意力强度数值』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G47"
+  },
+  {
+   "sourceRange": {
+    "startMs": 960000,
+    "endMs": 980000
+   },
+   "subjectStatus": "person_only",
+   "observed": "老年男性特写+左上角时钟烧录（11 10 09 08）",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle",
+    "timestamp_watermark"
+   ],
+   "observationId": "exp-G48"
+  },
+  {
+   "sourceRange": {
+    "startMs": 980000,
+    "endMs": 1000000
+   },
+   "subjectStatus": "person_only",
+   "observed": "绿军装白发指挥官仰视",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G49"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1000000,
+    "endMs": 1020000
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色爆光带绿边特效",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G50"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1020000,
+    "endMs": 1040000
+   },
+   "subjectStatus": "not_present",
+   "observed": "全屏绿色光粒子+小型十字机影（绿光幽灵效果）",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [],
+   "observationId": "exp-G51"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1040000,
+    "endMs": 1060000
+   },
+   "subjectStatus": "uncertain",
+   "observed": "青色结晶状 X 形物体（特效物体，机体身份不可辨）",
+   "editingUse": "排除（身份不可辨）",
+   "risks": [],
+   "observationId": "exp-G52"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1060000,
+    "endMs": 1080000
+   },
+   "subjectStatus": "person_only",
+   "observed": "巴纳吉头盔正面，字幕『你和公主两人就能转化悲伤为力量』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G53"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1080000,
+    "endMs": 1100000
+   },
+   "subjectStatus": "person_only",
+   "observed": "黑发少年面部绿光",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G54"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1100000,
+    "endMs": 1120000
+   },
+   "subjectStatus": "person_only",
+   "observed": "黑发驾驶员舱内，字幕『你不用管这边先走』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G55"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1120000,
+    "endMs": 1140000
+   },
+   "subjectStatus": "person_only",
+   "observed": "金发少年舱内喊，字幕『你才刚诞生而已 巴纳吉』",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [
+    "burned_subtitle"
+   ],
+   "observationId": "exp-G56"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1140000,
+    "endMs": 1160000
+   },
+   "subjectStatus": "person_only",
+   "observed": "暗舱内驾驶服人物俯身",
+   "editingUse": "仅可承担驾驶员/乘员反应节拍（口播点名人物时）",
+   "risks": [],
+   "observationId": "exp-G57"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1160000,
+    "endMs": 1180000
+   },
+   "subjectStatus": "confirmed",
+   "observed": "报丧女妖头部大特写：绿色精神感应骨架发光、金色 V 字天线、面具展开（NT-D）",
+   "editingUse": "可承担报丧女妖主体节拍（外观/觉醒/持枪/射击）",
+   "risks": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "observationId": "exp-G58"
+  },
+  {
+   "sourceRange": {
+    "startMs": 1180000,
+    "endMs": 1195321
+   },
+   "subjectStatus": "not_present",
+   "observed": "白色舰队群太空航行+字幕『而听到这场转播的各位』",
+   "editingUse": "排除（环境空镜仅作节奏留白候选，需断言层再验）",
+   "risks": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "observationId": "exp-G59"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "purpose": "bgm_chain_audit",
+  "projectId": "banshee-intro-001",
+  "status": "passed",
+  "checks": [
+    {
+      "id": "bgmMixPresent",
+      "status": "passed",
+      "detail": "assembly record bgmMix found"
+    },
+    {
+      "id": "contractFileHash",
+      "status": "passed",
+      "detail": "contract sha 6FDF5B10F705… vs assembly record 6FDF5B10F705…"
+    },
+    {
+      "id": "contractPurpose",
+      "status": "passed",
+      "detail": "music-expert bgm_mix_contract v0.1"
+    },
+    {
+      "id": "bgmFileHash",
+      "status": "passed",
+      "detail": "delivered BGM bytes 0B2F301892EE… == contract == assembly record"
+    },
+    {
+      "id": "bgmPlanHash",
+      "status": "passed",
+      "detail": "contract BGM hash == approved G3 plan bgmPlan.audioSha256"
+    },
+    {
+      "id": "planFileHash",
+      "status": "passed",
+      "detail": "contract references the exact plan file presented to it"
+    },
+    {
+      "id": "alignmentFileHash",
+      "status": "passed",
+      "detail": "alignment file sha == contract == plan bgmPlan.alignmentSha256"
+    },
+    {
+      "id": "reportCacheKey",
+      "status": "passed",
+      "detail": "analysis report cacheKey == delivered BGM hash"
+    },
+    {
+      "id": "audibilityRecheck",
+      "status": "passed",
+      "detail": "report -10.2 + bed -8.0 - duck 12.0 = -30.2 LUFS (contract -30.2, window [-32.0, -20.0])"
+    },
+    {
+      "id": "executionFidelity",
+      "status": "passed",
+      "detail": "assembly bgmMix offset/bed/duck/fades/duckSegments == contract fields"
+    },
+    {
+      "id": "measuredInPlace",
+      "status": "passed",
+      "detail": "measured -21.2 vs predicted -21.2 LUFS (duty-weighted)"
+    },
+    {
+      "id": "registrationChain",
+      "status": "passed",
+      "detail": "candidate registration covers the delivered bytes (registration file hash == material-pack record)"
+    },
+    {
+      "id": "licenseCleared",
+      "status": "passed",
+      "detail": "license=cleared-for-project evidence=整轨系用户经官方渠道取得并存于 zaku-intro-001 素材包（库内档案 0B2F3018…，license 只升不降）；本项目复用重清权登记，使用范围=仅内部留存（先例=zaku-intro-003 复用重清权）"
+    },
+    {
+      "id": "distributionBoundary",
+      "status": "passed",
+      "detail": "boundary=internal_test matches material-pack registration"
+    },
+    {
+      "id": "sourceAudioExcluded",
+      "status": "passed",
+      "detail": "plan source-audio policy recorded: \"exclude\""
+    }
+  ],
+  "bgm": {
+    "audio": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+    "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+    "license": "cleared-for-project",
+    "licenseEvidence": "整轨系用户经官方渠道取得并存于 zaku-intro-001 素材包（库内档案 0B2F3018…，license 只升不降）；本项目复用重清权登记，使用范围=仅内部留存（先例=zaku-intro-003 复用重清权）",
+    "distributionBoundary": "internal_test",
+    "measuredInPlaceLufs": -21.2
+  },
+  "inputs": {
+    "assemblyRecord": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2-装配记录-v0.1.json",
+    "plan": "工作台/banshee-intro-001/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+    "registration": "工作台/banshee-intro-001/G0-素材包/07_授权音频/BGM-候选登记-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json",
+    "materialPack": "工作台/banshee-intro-001/G0-素材包/material-pack.json"
+  }
+}

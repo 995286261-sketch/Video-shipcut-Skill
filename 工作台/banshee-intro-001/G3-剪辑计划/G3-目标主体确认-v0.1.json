@@ -1,0 +1,42 @@
+{
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "schemaVersion": "0.1",
+ "targetSubject": {
+  "canonicalName": "报丧女妖·命运女神 RX-0(N) Banshee Norn（黑绿配色精神感应框架试作机，NT-D 觉醒时面具四向展开、精神感应框架泛绿光）",
+  "userConfirmed": true,
+  "confirmationBasis": "approvalSource=auto-policy：G0 开工单 Q1 主题=报丧女妖介绍片（用户原话『做一个 介绍 报丧女妖 的视频』）；策略条款 subject_policy 预授权承载主体政策（用户逐字批准『全部默认建议』）。确认对象=主体身份+识别/排除规则，非逐片段。",
+  "autoPolicyRef": "工作台/banshee-intro-001/auto-policy.json",
+  "identificationRules": [
+   "黑（深炭黑）机身+绿色精神感应框架发光是首要识别特征（区别于独角兽白/毁灭模式红）",
+   "面具/护甲四向展开露出内部绿色框架 = NT-D 觉醒形态，确认同机",
+   "G2 字幕条直接点名时刻（ev-001 1:40 / ev-007 8:40 等）附近的机体按台词上下文判为报丧女妖",
+   "与白色独角兽同框时，报丧女妖=深色带绿框架一方"
+  ],
+  "exclusionRules": [
+   "白色独角兽 RX-0 单独画面（仅作对峙语境，不得当报丧女妖入选）",
+   "刹帝利、新安洲、杰钢等联邦/吉恩量产量子机与杂兵机",
+   "人物舱内/驾驶服镜头单独出现时判 person_only，不计主体镜头",
+   "无法区分独角兽与报丧女妖视角的模糊剪影一律 uncertain，不入选"
+  ]
+ },
+ "sufficiencyFallback": {
+  "preApproved": "shorten_output",
+  "approvedBy": "auto-policy 条款 sufficiency_shorten（basis: 草案卡第 4 条；用户逐字批准『全部默认建议』；approvalSource=auto-policy，非人类逐字口令）",
+  "approvedAt": "2026-10-09T16:26:00+08:00",
+  "note": "素材缺口时自动采用缩短成品路径；不免除最终八列回显。"
+ },
+ "analysisScopeDecision": {
+  "mode": "全片分层探索",
+  "spec": "scdet 镜头切点检测全片（阈值如实登记）+ 20s 网格补盲（复用 G2 字幕条采样带）；候选窗口 4fps 局部加密",
+  "basis": "素材为 19:55 机体专题剪辑（标题=报丧女妖命运女神），主体占比预期高；G2 字幕条已证明 20s 网格可覆盖关键节点",
+  "tokenNote": "自动模式按 g3-plan.md 成本提醒条款如实登记：全片探索帧数=scdet 子镜头数（预计数百），逐帧观察以瓦片批读+账本逐帧记录入账"
+ },
+ "candidateVerificationRule": "每个最终候选以窗口内探针帧逐帧核验（scdet 子镜头全量中帧+窗口起/中/终帧目视，4fps 内），任一探针不满足节拍最低可见证据或触犯排除规则（红色新安洲、白色独角兽主体帧）即拆段或换窗；身份判据=targetSubject.identificationRules + exclusionRules，逐帧回链观察账本。",
+ "candidateVerificationRuleRefs": {
+  "ledgerRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.2.json",
+  "promptVersion": "g3-explore-verify-v0.2",
+  "method": "候选窗口内 scdet 子镜头全量中帧+窗口起/终帧目视（4fps 内探针），逐帧回链观察账本；断言层任一探针不满足节拍最低可见证据=拆段或换窗",
+  "identitySource": "targetSubject.identificationRules + exclusionRules"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "materialPack": "工作台/banshee-intro-001/G0-素材包/material-pack.json",
+ "sourceAssetId": "source-02-rx-0-n-17620f86",
+ "sourceMs": 1170373,
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "title": "报丧女妖——与皇帝命定的命运女神",
+ "fontsize": 64,
+ "output": "工作台/banshee-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+ "note": "封面帧=批准计划 packagingDecisions.coverFrameMs 1170373（NT-D 觉醒头部大特写，seg-04 源窗口 1164500–1177106 内）；⑫ 通道=materialPack+sourceAssetId+sourceMs 由装配器从登记件机抽，禁自选手帧文件；底部 84–100% 字幕带与封面标题错层"
+}

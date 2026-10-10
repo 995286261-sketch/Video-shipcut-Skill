@@ -1,0 +1,126 @@
+{
+  "boundaries": [
+    {
+      "durationMs": 800,
+      "fromSegmentId": "seg-02",
+      "offsetMs": 25568,
+      "toSegmentId": "seg-03a",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 800,
+      "fromSegmentId": "seg-04",
+      "offsetMs": 48193,
+      "toSegmentId": "seg-05",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 700,
+      "fromSegmentId": "seg-07",
+      "offsetMs": 81818,
+      "toSegmentId": "seg-08",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 700,
+      "fromSegmentId": "seg-09",
+      "offsetMs": 101188,
+      "toSegmentId": "seg-10",
+      "transition": "fade"
+    },
+    {
+      "durationMs": 800,
+      "fromSegmentId": "seg-11",
+      "offsetMs": 117785,
+      "toSegmentId": "seg-12",
+      "transition": "fade"
+    }
+  ],
+  "evidenceSha256": "8A7C8DCB8A7E887926876BAA6929710E0E5427F400DDC7D4618DBD3B0D8DB3F6",
+  "gridInvariant": true,
+  "hostProfile": "工作台/banshee-intro-001/G3-剪辑计划/转场-宿主能力档-v0.1.json",
+  "hostProfileSha256": "EAB25EF098C17DBE10692943DBF6E385E4A941BF879C531D0F066183FFDE17F8",
+  "inputEvidence": "工作台/banshee-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "inputPlan": "工作台/banshee-intro-001/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+  "masterFades": {
+    "fadeInMs": 1200,
+    "fadeOutMs": 800
+  },
+  "planSha256": "5E401E04C11FF9DF29F41B41044F4F82FD4AF169E85B0234DD731CE9635C9DC2",
+  "purpose": "transition_directive",
+  "schemaVersion": "0.1",
+  "segments": [
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-01",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-02",
+      "tailExtraMs": 400
+    },
+    {
+      "headExtraMs": 400,
+      "segmentId": "seg-03a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-03b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-04",
+      "tailExtraMs": 400
+    },
+    {
+      "headExtraMs": 400,
+      "segmentId": "seg-05",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-06",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-07",
+      "tailExtraMs": 350
+    },
+    {
+      "headExtraMs": 350,
+      "segmentId": "seg-08",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-09",
+      "tailExtraMs": 350
+    },
+    {
+      "headExtraMs": 350,
+      "segmentId": "seg-10",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-11",
+      "tailExtraMs": 400
+    },
+    {
+      "headExtraMs": 400,
+      "segmentId": "seg-12",
+      "tailExtraMs": 0
+    }
+  ],
+  "skill": "transition-expert",
+  "timelineDurationMs": 124000,
+  "transitionVocabulary": [
+    "叠化",
+    "黑场入",
+    "黑场出"
+  ]
+}

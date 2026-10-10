@@ -1,0 +1,198 @@
+{
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "schemaVersion": "0.1",
+ "generatedBy": "机械投影自批准计划 G3-剪辑计划-v0.2.json（段网格+章节边界）",
+ "sourceAsset": {
+  "assetId": "source-02-rx-0-n-17620f86",
+  "path": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+  "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+ },
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 54000,
+   "sourceEndMs": 67955,
+   "outputStartMs": 0,
+   "outputEndMs": 13955
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 344000,
+   "sourceEndMs": 356013,
+   "outputStartMs": 13955,
+   "outputEndMs": 25968
+  },
+  {
+   "segmentId": "seg-03a",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 734000,
+   "sourceEndMs": 740532,
+   "outputStartMs": 25968,
+   "outputEndMs": 32500
+  },
+  {
+   "segmentId": "seg-03b",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 616540,
+   "sourceEndMs": 620027,
+   "outputStartMs": 32500,
+   "outputEndMs": 35987
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 1164500,
+   "sourceEndMs": 1177106,
+   "outputStartMs": 35987,
+   "outputEndMs": 48593
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 178000,
+   "sourceEndMs": 189045,
+   "outputStartMs": 48593,
+   "outputEndMs": 59638
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 376500,
+   "sourceEndMs": 385831,
+   "outputStartMs": 59638,
+   "outputEndMs": 68969
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 254000,
+   "sourceEndMs": 267199,
+   "outputStartMs": 68969,
+   "outputEndMs": 82168
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 276000,
+   "sourceEndMs": 284600,
+   "outputStartMs": 82168,
+   "outputEndMs": 90768
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 535000,
+   "sourceEndMs": 545770,
+   "outputStartMs": 90768,
+   "outputEndMs": 101538
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 673330,
+   "sourceEndMs": 679999,
+   "outputStartMs": 101538,
+   "outputEndMs": 108207
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 874000,
+   "sourceEndMs": 883978,
+   "outputStartMs": 108207,
+   "outputEndMs": 118185
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceStartMs": 415200,
+   "sourceEndMs": 421015,
+   "outputStartMs": 118185,
+   "outputEndMs": 124000
+  }
+ ],
+ "chapters": [
+  {
+   "chapterId": "ch-01",
+   "output": "clips/ch-01.mp4",
+   "outputStartMs": 0,
+   "outputEndMs": 25968,
+   "segments": [
+    "seg-01",
+    "seg-02"
+   ]
+  },
+  {
+   "chapterId": "ch-02",
+   "output": "clips/ch-02.mp4",
+   "outputStartMs": 25968,
+   "outputEndMs": 48593,
+   "segments": [
+    "seg-03a",
+    "seg-03b",
+    "seg-04"
+   ]
+  },
+  {
+   "chapterId": "ch-03",
+   "output": "clips/ch-03.mp4",
+   "outputStartMs": 48593,
+   "outputEndMs": 82168,
+   "segments": [
+    "seg-05",
+    "seg-06",
+    "seg-07"
+   ]
+  },
+  {
+   "chapterId": "ch-04",
+   "output": "clips/ch-04.mp4",
+   "outputStartMs": 82168,
+   "outputEndMs": 108207,
+   "segments": [
+    "seg-08",
+    "seg-09",
+    "seg-10"
+   ]
+  },
+  {
+   "chapterId": "ch-05",
+   "output": "clips/ch-05.mp4",
+   "outputStartMs": 108207,
+   "outputEndMs": 124000,
+   "segments": [
+    "seg-11",
+    "seg-12"
+   ]
+  }
+ ]
+}

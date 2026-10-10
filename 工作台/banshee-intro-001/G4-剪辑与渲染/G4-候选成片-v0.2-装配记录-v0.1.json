@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "banshee-intro-001",
+  "status": "assembled",
+  "manifest": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.2.json",
+  "timelineDurationMs": 124000,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-001.mp4",
+      "sha256": "47A3EC6AEA8CDCD0F71570A06D457D71B73D66A2B2CC940D3AEF2E4A3CF9CEF8"
+    },
+    {
+      "segmentId": "seg-02",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-002.mp4",
+      "sha256": "B0352A39AE20FA76AB884FF15EBDCDAB3638F028BE6FB9B1AAD14C6547F6D782"
+    },
+    {
+      "segmentId": "seg-03a",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-003.mp4",
+      "sha256": "14A0EE60B5B2BD7785885AA3D7B69C5E11800DC7E7AD72D91B1E87733D36955E"
+    },
+    {
+      "segmentId": "seg-03b",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-004.mp4",
+      "sha256": "349618A9DFAAC3396C240BF7F662B2F291DD2304B5A3740268829801DE43121D"
+    },
+    {
+      "segmentId": "seg-04",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-005.mp4",
+      "sha256": "79778B42EAB5401B13A90900B1CBBA22A07E32D9EF62C059A8E5AD34614E4D4F"
+    },
+    {
+      "segmentId": "seg-05",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-006.mp4",
+      "sha256": "929CC2FA04889438C98D6B93EED778A186AE98F3E29E6863CBADDD67FB73020E"
+    },
+    {
+      "segmentId": "seg-06",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-007.mp4",
+      "sha256": "19A46874328C1D3BED866C816967DF7280506FDCC7DA1D3206AFB5517F479449"
+    },
+    {
+      "segmentId": "seg-07",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-008.mp4",
+      "sha256": "E4CAAB787B5B2067D699EC16823543AEC5B15254AAB38634032661BFF142EC2C"
+    },
+    {
+      "segmentId": "seg-08",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-009.mp4",
+      "sha256": "516B380FDFB530CDB2E3ECA6F721AA0729370090A71F3B2BCDCEBAC949DA3DE2"
+    },
+    {
+      "segmentId": "seg-09",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-010.mp4",
+      "sha256": "BCB4A3B58FB6CD1A2125A8D18776B5364F71399AF67291BFA90EB4FD98B156AB"
+    },
+    {
+      "segmentId": "seg-10",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-011.mp4",
+      "sha256": "9FB249CBEFB21A2DC4166A6BE734A7381484CBF6176DA15E0D01629472A9F504"
+    },
+    {
+      "segmentId": "seg-11",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-012.mp4",
+      "sha256": "57BBFA19137ED4ABDADAFE1A8A64F6F0C19403FEA83CE417736DD21886BE459D"
+    },
+    {
+      "segmentId": "seg-12",
+      "file": "工作台/banshee-intro-001/G4-剪辑与渲染/clean-segments/clean-segments/seg-013.mp4",
+      "sha256": "DB94AEC34C9038053098AB633A2109CCC50987C0F4102E14717F24C679FCE17A"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+    "sha256": "0C8FC941753D8F942F8D1C6FE956395C262376DD7CC14FF8FB537C7BF89F4F53",
+    "durationMs": 124000,
+    "loudness": {
+      "integratedLufs": -14.9,
+      "truePeakDbtp": -1.7,
+      "engine": "ffmpeg-ebur128",
+      "chain": "loudness-plan verbatim (linear-verbatim)",
+      "targetIntegratedLufs": -14.0,
+      "caveat": "measured on the assembled master including the BGM bed, not narration alone"
+    }
+  },
+  "loudness": {
+    "planRef": {
+      "path": "工作台/banshee-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+      "sha256": "7125266A60422E0BD91CBC2415D6ACBFD6292258641DFF1F8C0E06E51D95AE12"
+    },
+    "planStatus": "ready",
+    "mode": "linear-verbatim",
+    "targetProfile": {
+      "integratedLufs": -14.0,
+      "truePeakDbtp": -1.5,
+      "lraTargetLu": 9.0
+    },
+    "threeWayCheck": "G2 loud_plan.targetProfile == manifest.loudnessTarget（G3 包装镜像）== 执行链参数",
+    "pureNarration": {
+      "engine": "ffmpeg-ebur128",
+      "integratedLufs": -14.0,
+      "truePeakDbtp": -2.3,
+      "deviationLu": 0.0,
+      "truePeakOverDb": -0.8,
+      "verdict": "within-tolerance",
+      "toleranceLu": 1.0,
+      "toleranceSource": "合同 §3 默认"
+    },
+    "loudnormStats": {
+      "input_i": "-16.41",
+      "input_tp": "-4.72",
+      "input_lra": "7.30",
+      "input_thresh": "-26.56",
+      "output_i": "-13.97",
+      "output_tp": "-2.28",
+      "output_lra": "7.30",
+      "output_thresh": "-24.13",
+      "normalization_type": "linear",
+      "target_offset": "-0.03"
+    }
+  },
+  "bgmMix": {
+    "audio": {
+      "path": "工作台/banshee-intro-001/G0-素材包/07_授权音频/LOW-PHONK.mp3",
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E"
+    },
+    "contract": {
+      "path": "工作台/banshee-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.1.json",
+      "sha256": "6FDF5B10F7050B1540036988B9313025E8B611AEB7488F86C5DE31DE1803714D"
+    },
+    "trackOffsetMs": 31687,
+    "bedGainDb": -8.0,
+    "duckReductionDb": 12.0,
+    "duckSegments": [
+      {
+        "fromMs": 7000,
+        "toMs": 11409,
+        "sentenceIds": [
+          "s01"
+        ]
+      },
+      {
+        "fromMs": 16500,
+        "toMs": 23427,
+        "sentenceIds": [
+          "s02"
+        ]
+      },
+      {
+        "fromMs": 28500,
+        "toMs": 33473,
+        "sentenceIds": [
+          "s03"
+        ]
+      },
+      {
+        "fromMs": 38500,
+        "toMs": 46176,
+        "sentenceIds": [
+          "s04"
+        ]
+      },
+      {
+        "fromMs": 51000,
+        "toMs": 57276,
+        "sentenceIds": [
+          "s05"
+        ]
+      },
+      {
+        "fromMs": 62000,
+        "toMs": 66437,
+        "sentenceIds": [
+          "s06"
+        ]
+      },
+      {
+        "fromMs": 71500,
+        "toMs": 79836,
+        "sentenceIds": [
+          "s07"
+        ]
+      },
+      {
+        "fromMs": 84500,
+        "toMs": 88535,
+        "sentenceIds": [
+          "s08"
+        ]
+      },
+      {
+        "fromMs": 93000,
+        "toMs": 99576,
+        "sentenceIds": [
+          "s09"
+        ]
+      },
+      {
+        "fromMs": 103500,
+        "toMs": 105913,
+        "sentenceIds": [
+          "s10"
+        ]
+      },
+      {
+        "fromMs": 110500,
+        "toMs": 116870,
+        "sentenceIds": [
+          "s11"
+        ]
+      },
+      {
+        "fromMs": 119500,
+        "toMs": 123146,
+        "sentenceIds": [
+          "s12"
+        ]
+      }
+    ],
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 122000,
+      "fadeOutMs": 2000
+    },
+    "measuredInPlaceLufs": -21.2
+  },
+  "subtitleAss": {
+    "path": "工作台/banshee-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.ass",
+    "sha256": "E7E7647E31F8E491DA474D149D7EC32AD61695C9472931DE72495FD8FA927E68"
+  },
+  "output": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2.mp4",
+  "outputSha256": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+  "probedDurationMs": 124000,
+  "fps": 24,
+  "fpsSource": "explicit-override",
+  "cover": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+  "coverProvenance": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+    "materialPack": "工作台/banshee-intro-001/G0-素材包/material-pack.json",
+    "sourceAssetId": "source-02-rx-0-n-17620f86",
+    "sourceAssetPath": "工作台/banshee-intro-001/G0-素材包/02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+    "sourceAssetSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+    "sourceMs": 1170373,
+    "sourceTimelineMs": null,
+    "framePath": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2-assemble-work/cover-frame.jpg",
+    "frameSha256": "A6CF4386BDBACE7BDE6222B919D876BFFE1D7B2B5D69E1FCC91A33171BA0E5CA"
+  },
+  "chapterCards": {
+    "path": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+    "sha256": "D0470F666795843160BD8FEE388300A71ED8EE72E8064F97060842B273C98B88",
+    "cards": 1,
+    "subtitleCuesTrimmed": 0
+  },
+  "titleBar": null,
+  "transitionDirective": {
+    "path": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "AF447DD9382A4830CBCCBF345F59F5BA327912584C05C15C8FD0449859FDA506",
+    "boundaries": 5,
+    "masterFades": {
+      "fadeInMs": 1200,
+      "fadeOutMs": 800
+    }
+  },
+  "filterGraph": "[0:v]fps=fps=24,format=yuv420p,setsar=1[segv0];[1:v]fps=fps=24,format=yuv420p,setsar=1[segv1];[2:v]fps=fps=24,format=yuv420p,setsar=1[segv2];[3:v]fps=fps=24,format=yuv420p,setsar=1[segv3];[4:v]fps=fps=24,format=yuv420p,setsar=1[segv4];[5:v]fps=fps=24,format=yuv420p,setsar=1[segv5];[6:v]fps=fps=24,format=yuv420p,setsar=1[segv6];[7:v]fps=fps=24,format=yuv420p,setsar=1[segv7];[8:v]fps=fps=24,format=yuv420p,setsar=1[segv8];[9:v]fps=fps=24,format=yuv420p,setsar=1[segv9];[10:v]fps=fps=24,format=yuv420p,setsar=1[segv10];[11:v]fps=fps=24,format=yuv420p,setsar=1[segv11];[12:v]fps=fps=24,format=yuv420p,setsar=1[segv12];[segv0][segv1]concat=n=2:v=1:a=0[vcat0];[vcat0]settb=AVTB[xc1m];[segv2]settb=AVTB[xc1s];[xc1m][xc1s]xfade=transition=fade:duration=0.800:offset=25.568[vcat1];[vcat1][segv3]concat=n=2:v=1:a=0[vcat2];[vcat2][segv4]concat=n=2:v=1:a=0[vcat3];[vcat3]settb=AVTB[xc4m];[segv5]settb=AVTB[xc4s];[xc4m][xc4s]xfade=transition=fade:duration=0.800:offset=48.193[vcat4];[vcat4][segv6]concat=n=2:v=1:a=0[vcat5];[vcat5][segv7]concat=n=2:v=1:a=0[vcat6];[vcat6]settb=AVTB[xc7m];[segv8]settb=AVTB[xc7s];[xc7m][xc7s]xfade=transition=fade:duration=0.700:offset=81.818[vcat7];[vcat7][segv9]concat=n=2:v=1:a=0[vcat8];[vcat8]settb=AVTB[xc9m];[segv10]settb=AVTB[xc9s];[xc9m][xc9s]xfade=transition=fade:duration=0.700:offset=101.188[vcat9];[vcat9][segv11]concat=n=2:v=1:a=0[vcat10];[vcat10]settb=AVTB[xc11m];[segv12]settb=AVTB[xc11s];[xc11m][xc11s]xfade=transition=fade:duration=0.800:offset=117.785[vcat11];[vcat11]format=yuv420p,subtitles=captions.ass,drawtext=fontfile=/System/Library/Fonts/Supplemental/Songti.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2-assemble-work/chapter-card-1.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=h*0.1200:enable='between(t,1.200,6.500)',fade=t=in:st=0:d=1.200,fade=t=out:st=123.200:d=0.800[v];[13:a]loudnorm=I=-14.0:TP=-1.5:LRA=9.0:measured_I=-16.44:measured_TP=-4.72:measured_LRA=7.2:measured_thresh=-26.6:offset=0.0:linear=true:print_format=json[narr];[14:a]volume=-8dB,volume=-12dB:enable='between(t,7.000,11.409)+between(t,16.500,23.427)+between(t,28.500,33.473)+between(t,38.500,46.176)+between(t,51.000,57.276)+between(t,62.000,66.437)+between(t,71.500,79.836)+between(t,84.500,88.535)+between(t,93.000,99.576)+between(t,103.500,105.913)+between(t,110.500,116.870)+between(t,119.500,123.146)',afade=t=in:st=0:d=2.000,afade=t=out:st=122.000:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-候选成片-v0.2-assemble-work"
+}

@@ -1,0 +1,14 @@
+{
+ "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+ "fontsize": 60,
+ "yRatio": 0.12,
+ "cards": [
+  {
+   "chapterId": "title-01",
+   "title": "报丧女妖——与皇帝命定的命运女神",
+   "startMs": 1200,
+   "endMs": 6500
+  }
+ ],
+ "note": "G3 批准 packagingDecisions.chapterCards 原样（1.2–6.5s 上部标题车道，起点 1200=黑场入完成后浮现；卡期间装配器自动裁开字幕 cue）"
+}

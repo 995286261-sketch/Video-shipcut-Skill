@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/检索词卡-v0.1/BGM-检索词-v0.1.json",
+    "terms": [
+      "Industrial",
+      "Techno",
+      "Driving",
+      "Dark",
+      "EBM"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-10-09T16:33:34+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2637950,
+      "title": "Industrial",
+      "artist": "Frank Klepacki",
+      "album": "Command & Conquer (Original Soundtrack)",
+      "durationMs": 173545,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=2637950",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2637950.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Frank Klepacki - Industrial",
+      "retrievedAt": "2026-10-09T16:33:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-2637950-Industrial.mp3",
+      "sha256": "E1BACAA862F8003F5C50204EBB64B8BE5EB8BF11D4274A16158FAF4E21984426",
+      "byteSize": 2777800,
+      "previewSchemeUpgraded": [
+        "m701.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 31168016,
+      "title": "Industrial",
+      "artist": "Elkony",
+      "album": "Shadowmatic (Original Game Soundtrack)",
+      "durationMs": 198000,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=31168016",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=31168016.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Elkony - Industrial",
+      "retrievedAt": "2026-10-09T16:33:21+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-31168016-Industrial.mp3",
+      "sha256": "02F91E90817EA6BF2C613F88D1C59303A68B295EF6F98EACD2A333F309C2066C",
+      "byteSize": 3169010,
+      "previewSchemeUpgraded": [
+        "m701.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1987055223,
+      "title": "Industrial",
+      "artist": "PaXell",
+      "album": "Industrial",
+      "durationMs": 330922,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1987055223",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1987055223.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "PaXell - Industrial",
+      "retrievedAt": "2026-10-09T16:33:22+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-1987055223-Industrial.mp3",
+      "sha256": "516B9AA65A8B97DB897AA7CA5AED2CBEB03EF39FDEAD7DA4D58CF2A1DF8680CD",
+      "byteSize": 5296004,
+      "previewSchemeUpgraded": [
+        "m701.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1887515388,
+      "title": "Industrial",
+      "artist": "Goose4Real、OCRASIA MUSIC",
+      "album": "Industrial",
+      "durationMs": 164623,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1887515388",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1887515388.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Goose4Real、OCRASIA MUSIC - Industrial",
+      "retrievedAt": "2026-10-09T16:33:26+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-1887515388-Industrial.mp3",
+      "sha256": "6CE952A4F7534B5A0BCFAAD0220CEA2F91186FA675FD6935DCFD3B59FE161AF7",
+      "byteSize": 2634858,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1336864086,
+      "title": "Industrial",
+      "artist": "Lukas Termena",
+      "album": "Industrial",
+      "durationMs": 266784,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=1336864086",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1336864086.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Lukas Termena - Industrial",
+      "retrievedAt": "2026-10-09T16:33:29+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-1336864086-Industrial.mp3",
+      "sha256": "FF263E1782564F8C1E639992E894B05B0A42842E8F9DE4D2507DEAE4A0C7CA5D",
+      "byteSize": 4269497,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 517675660,
+      "title": "Buck (Original Mix)",
+      "artist": "Ansome、Ossian",
+      "album": "005",
+      "durationMs": 332692,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=517675660",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=517675660.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Ansome、Ossian - Buck (Original Mix)",
+      "retrievedAt": "2026-10-09T16:33:30+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-517675660-Buck_(Original_Mix).mp3",
+      "sha256": "3B8986939EBF11E7C81B61B60D883E70A59537191CE6F039A95308A7D5AB3C34",
+      "byteSize": 5324008,
+      "previewSchemeUpgraded": [
+        "m10.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 544621009,
+      "title": "Face Orion (Original Mix)",
+      "artist": "Savage Cult",
+      "album": "Blood Artefacts",
+      "durationMs": 399600,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=544621009",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=544621009.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Savage Cult - Face Orion (Original Mix)",
+      "retrievedAt": "2026-10-09T16:33:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-544621009-Face_Orion_(Original_Mix).mp3",
+      "sha256": "FD10B5158B5EFA503B40DAF90902C19D25DB360261BDF3FEF2A9315373603F57",
+      "byteSize": 6394819,
+      "previewSchemeUpgraded": [
+        "m10.music.126.net"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 1880185579,
+      "name": "Industrial",
+      "reason": "duration 80947ms outside [160.0,600.0]s"
+    },
+    {
+      "neteaseId": 2023383724,
+      "name": "INDUSTRIAL",
+      "reason": "duration 147204ms outside [160.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 7,
+    "minimumExpected": 3
+  }
+}

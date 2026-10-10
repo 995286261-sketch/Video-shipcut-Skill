@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.0.1",
+    "modelOverride": null
+  },
+  "reference": "工作台/banshee-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "referenceSha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Face Orion (Original Mix)",
+      "neteaseId": 544621009,
+      "sha256": "FD10B5158B5EFA503B40DAF90902C19D25DB360261BDF3FEF2A9315373603F57",
+      "reused": "ab-cache",
+      "notes": "（复用本项目 A/B 试听缓存，零成本）\n\n1. 差距：参照曲是带叙事的工业电子，有清晰鼓点和人声；候选曲是纯器乐的硬核Techno，节奏极快且密集，无人声。\n2. 能否使用：不适合。其过快且单一的节奏会盖过人声，无法为解说留出空间。\n3. 贴合度：2分。能量虽足但缺乏叙事所需的呼吸感与层次，不适合作为解说类视频的BGM。"
+    },
+    {
+      "title": "driving-39ab2e44-4c54-4747-8000-dc6d17df184b.wav",
+      "neteaseId": null,
+      "sha256": "EC072117445543DBB1843287FCFEE898E5AD22705A1AF83E8A0919615C3BEB11",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏强劲、带有工业感的电子乐，充满张力；候选曲则是写实的车内环境音（引擎、路噪），无明确旋律与节奏型，气质沉闷被动。\n2) 不能。它缺乏音乐所需的节拍和情绪推进，无法制造“高燃”感或配合卡点剪辑。\n3) 贴合度：1分。理由是候选曲仅为环境噪音，完全不具备作为高燃BGM的音乐属性。"
+    },
+    {
+      "title": "INTENSE AMBEINT RHYTHMIC PULSE.WAV",
+      "neteaseId": null,
+      "sha256": "5B8353AD3A18D1FD10AB3748D913A5D4E95CCAEC04E9E16FB91010710E80D698",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是节奏强劲、鼓点清晰的工业电子，充满动能；候选曲则是氛围黑暗、缺乏明确节拍的暗黑氛围音乐，听感压抑混沌。\n2) 不能。候选曲缺少高燃卡点必需的清晰鼓点和能量爆发力，无法支撑快节奏剪辑。\n3) 贴合度：2/10。理由：其缓慢混沌的氛围与项目所需的高燃推进感完全背道而驰。"
+    },
+    {
+      "title": "Darksynth",
+      "neteaseId": null,
+      "sha256": "FF8F0870B35B2BCEAB9D4626AF0A0D6847065E5BE3340995023A757FB16CBF36",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是强节奏的电子乐，鼓点硬朗、气质紧张；候选曲是舒缓的管弦氛围乐，无鼓点、气质庄严悲悯。\n2) 不能。候选曲缺乏驱动性的节奏和爆发力，完全无法支撑“高燃卡点”所需的能量感。\n3) 贴合度：1分。理由：音乐情绪与画面需求背道而驰，从“史诗战争”错配成“肃穆哀悼”。"
+    },
+    {
+      "title": "Industrial",
+      "neteaseId": 1336864086,
+      "sha256": "FF263E1782564F8C1E639992E894B05B0A42842E8F9DE4D2507DEAE4A0C7CA5D",
+      "reused": "ab-cache",
+      "notes": "（复用本项目 A/B 试听缓存，零成本）\n\n1) 差距巨大。参照曲是硬朗的工业Techno，节奏强劲、压迫感足；候选曲则是空灵的氛围音乐（Ambient），节奏舒缓、气质冥想。\n2) 不能。候选曲缺乏鼓点和爆发力，完全无法支撑“高燃卡点”所需的能量与冲击力。\n3) 贴合度：1分。理由：风格南辕北辙，候选曲过于平静，与项目所需的紧张战斗氛围背道而驰。"
+    },
+    {
+      "title": "蝙蝠侠Stage-1（工业电子）",
+      "neteaseId": 3340765796,
+      "sha256": "CCBA4DF2C39ED7A4AA478B9578C91156E38C5B1B987564EE49BA52742913DA90",
+      "reused": "ab-cache",
+      "notes": "（复用本项目 A/B 试听缓存，零成本）\n\n1) 差距显著：参照曲是节奏稳定的Techno，气质冷酷机械；候选曲是高速J-Core/Trance，旋律华丽且节奏极快。\n2) 不适合。候选曲速度过快且信息过载，会干扰旁白，缺乏参照曲的叙事压迫感。\n3) 4分。虽同样高燃，但候选曲过于喧闹花哨，与项目所需的冷峻工业风不符。"
+    },
+    {
+      "title": "Darksynth",
+      "neteaseId": null,
+      "sha256": "B0DF8430007CFEA0086C1E85E48FF8FBBFB1A26C64C8D9BDDDD3FF535C1D8331",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是快节奏、强鼓点的工业电子，充满机械感和紧迫叙事性；候选曲则是慢速、氛围化的影视原声，以铺底音色和旋律为主，气质深沉悬疑。\n2) 不能。候选曲缺乏强劲的节奏点和爆发力，无法支撑“高燃卡点”所需的能量感。\n3) 贴合度2分。候选曲的舒缓氛围与项目所需的硬核科技感及激昂节奏完全背道而驰。"
+    },
+    {
+      "title": "悬空城（工业电子）",
+      "neteaseId": 3340764213,
+      "sha256": "181826AF5947083092479EC87F935E26A5536FBF9F167E64D8D27827582E4C6F",
+      "reused": "ab-cache",
+      "notes": "（复用本项目 A/B 试听缓存，零成本）\n\n1. 差距：参照曲是节奏稳定、氛围冷峻的工业Techno，重在叙事铺垫；候选曲则是结构复杂、爆发力极强的硬核电子/金属核，充满攻击性。\n2. 能否使用：不能。其风格过于激进且段落切换频繁，会严重干扰旁白叙述。\n3. 贴合度：3分。音乐虽高燃，但气质与影片的历史纪录片基调完全不符。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

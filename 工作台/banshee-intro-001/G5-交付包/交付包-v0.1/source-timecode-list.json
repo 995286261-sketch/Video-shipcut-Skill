@@ -1,0 +1,169 @@
+{
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "schemaVersion": "0.1",
+ "sourceAsset": {
+  "assetId": "source-02-rx-0-n-17620f86",
+  "path": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+  "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+ },
+ "chapters": [
+  {
+   "chapterId": "ch-01",
+   "clip": "clips/ch-01.mp4",
+   "outputStartMs": 0,
+   "outputEndMs": 25968,
+   "segments": [
+    {
+     "segmentId": "seg-01",
+     "sourceStartMs": 54000,
+     "sourceEndMs": 67955,
+     "outputStartMs": 0,
+     "outputEndMs": 13955,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-02",
+     "sourceStartMs": 344000,
+     "sourceEndMs": 356013,
+     "outputStartMs": 13955,
+     "outputEndMs": 25968,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    }
+   ]
+  },
+  {
+   "chapterId": "ch-02",
+   "clip": "clips/ch-02.mp4",
+   "outputStartMs": 25968,
+   "outputEndMs": 48593,
+   "segments": [
+    {
+     "segmentId": "seg-03a",
+     "sourceStartMs": 734000,
+     "sourceEndMs": 740532,
+     "outputStartMs": 25968,
+     "outputEndMs": 32500,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-03b",
+     "sourceStartMs": 616540,
+     "sourceEndMs": 620027,
+     "outputStartMs": 32500,
+     "outputEndMs": 35987,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-04",
+     "sourceStartMs": 1164500,
+     "sourceEndMs": 1177106,
+     "outputStartMs": 35987,
+     "outputEndMs": 48593,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    }
+   ]
+  },
+  {
+   "chapterId": "ch-03",
+   "clip": "clips/ch-03.mp4",
+   "outputStartMs": 48593,
+   "outputEndMs": 82168,
+   "segments": [
+    {
+     "segmentId": "seg-05",
+     "sourceStartMs": 178000,
+     "sourceEndMs": 189045,
+     "outputStartMs": 48593,
+     "outputEndMs": 59638,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-06",
+     "sourceStartMs": 376500,
+     "sourceEndMs": 385831,
+     "outputStartMs": 59638,
+     "outputEndMs": 68969,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-07",
+     "sourceStartMs": 254000,
+     "sourceEndMs": 267199,
+     "outputStartMs": 68969,
+     "outputEndMs": 82168,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    }
+   ]
+  },
+  {
+   "chapterId": "ch-04",
+   "clip": "clips/ch-04.mp4",
+   "outputStartMs": 82168,
+   "outputEndMs": 108207,
+   "segments": [
+    {
+     "segmentId": "seg-08",
+     "sourceStartMs": 276000,
+     "sourceEndMs": 284600,
+     "outputStartMs": 82168,
+     "outputEndMs": 90768,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-09",
+     "sourceStartMs": 535000,
+     "sourceEndMs": 545770,
+     "outputStartMs": 90768,
+     "outputEndMs": 101538,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-10",
+     "sourceStartMs": 673330,
+     "sourceEndMs": 679999,
+     "outputStartMs": 101538,
+     "outputEndMs": 108207,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    }
+   ]
+  },
+  {
+   "chapterId": "ch-05",
+   "clip": "clips/ch-05.mp4",
+   "outputStartMs": 108207,
+   "outputEndMs": 124000,
+   "segments": [
+    {
+     "segmentId": "seg-11",
+     "sourceStartMs": 874000,
+     "sourceEndMs": 883978,
+     "outputStartMs": 108207,
+     "outputEndMs": 118185,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    },
+    {
+     "segmentId": "seg-12",
+     "sourceStartMs": 415200,
+     "sourceEndMs": 421015,
+     "outputStartMs": 118185,
+     "outputEndMs": 124000,
+     "assetId": "source-02-rx-0-n-17620f86",
+     "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+    }
+   ]
+  }
+ ]
+}

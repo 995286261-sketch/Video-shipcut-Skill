@@ -1,0 +1,255 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "status": "review_required",
+ "narrationDraft": "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+ "narrationDecisionRef": "工作台/banshee-intro-001/G2-证据与口播/G2-决定-v0.1.json",
+ "timingBasis": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+ "placementNote": "句间留白=编辑性呼吸（durationDecision.intentionalSilence），旁白轴句区间=配音清单实测时长（v0.1 就地修订：s12 提前至 119500、总长定 124000，其余不变；未入任何收据指纹）",
+ "beats": [
+  {
+   "beatId": "beat-001",
+   "sentenceId": "s01",
+   "outputStartMs": 7000,
+   "outputEndMs": 11409,
+   "narrationText": "In the Universal Century, not every mobile suit gets to be the hero's machine.",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "报丧女妖出现在战斗语境（非主角机的参战画面）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "报丧女妖持枪/射击镜头",
+    "混战镜头"
+   ],
+   "evidenceRefs": [
+    "ev-015"
+   ]
+  },
+  {
+   "beatId": "beat-002",
+   "sentenceId": "s02",
+   "outputStartMs": 16500,
+   "outputEndMs": 23427,
+   "narrationText": "R-X zero N, the Banshee Norn, Goddess of Fate: the Earth Federation's second answer to the riddle of the Unicorn.",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "可辨认的报丧女妖·命运女神（黑金配色/金色骨架/面具造型任一组合）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "机体头部特写",
+    "全身/半身镜头"
+   ],
+   "evidenceRefs": [
+    "ev-014",
+    "ev-015"
+   ]
+  },
+  {
+   "beatId": "beat-003",
+   "sentenceId": "s03",
+   "outputStartMs": 28500,
+   "outputEndMs": 33473,
+   "narrationText": "Like the Unicorn, she carries a psycho-frame, armor that answers a Newtype's will.",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "精神感应骨架可见（金色或发光骨架纹路）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "骨架发光特写",
+    "机体中近景"
+   ],
+   "evidenceRefs": [
+    "ev-015"
+   ]
+  },
+  {
+   "beatId": "beat-004",
+   "sentenceId": "s04",
+   "outputStartMs": 38500,
+   "outputEndMs": 46176,
+   "narrationText": "When the N-T-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive.",
+   "claim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": [
+     "NT-D 觉醒形态：面具展开+骨架发光（本片素材为绿色光）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "头部展开特写",
+    "觉醒全身镜头"
+   ],
+   "evidenceRefs": [
+    "ev-015"
+   ]
+  },
+  {
+   "beatId": "beat-005",
+   "sentenceId": "s05",
+   "outputStartMs": 51000,
+   "outputEndMs": 57276,
+   "narrationText": "Her pilot is no chosen one. Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny.",
+   "claim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": [
+     "驾驶员利迪·马纳斯舱内画面（深色驾驶服/红目镜）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "舱内特写",
+    "驾驶操作画面"
+   ],
+   "evidenceRefs": [
+    "ev-002",
+    "ev-007"
+   ]
+  },
+  {
+   "beatId": "beat-006",
+   "sentenceId": "s06",
+   "outputStartMs": 62000,
+   "outputEndMs": 66437,
+   "narrationText": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them.",
+   "claim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": [
+     "巴纳吉舱内画面（红发少年/白驾驶服）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "驾驶舱呐喊镜头"
+   ],
+   "evidenceRefs": [
+    "ev-001",
+    "ev-012"
+   ]
+  },
+  {
+   "beatId": "beat-007",
+   "sentenceId": "s07",
+   "outputStartMs": 71500,
+   "outputEndMs": 79836,
+   "narrationText": "The two machines were built as sisters. In the dark of space they do not simply fight. As the line goes: the Unicorn and the Banshee are pulling on each other.",
+   "claim": {
+    "type": "object",
+    "minimumVisibleEvidence": [
+     "独角兽与报丧女妖同框对峙（白机+黑金机）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "双机同框",
+    "字幕『互相牵引』台词画面"
+   ],
+   "evidenceRefs": [
+    "ev-001"
+   ]
+  },
+  {
+   "beatId": "beat-008",
+   "sentenceId": "s08",
+   "outputStartMs": 84500,
+   "outputEndMs": 88535,
+   "narrationText": "And when the psycho-frame screams, it is not a curse. It was a prayer.",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "『祈愿』字幕台词画面或觉醒机体（承载该句台词证据）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "利迪舱内+字幕",
+    "报丧女妖绿光镜头"
+   ],
+   "evidenceRefs": [
+    "ev-003"
+   ]
+  },
+  {
+   "beatId": "beat-009",
+   "sentenceId": "s09",
+   "outputStartMs": 93000,
+   "outputEndMs": 99576,
+   "narrationText": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once.",
+   "claim": {
+    "type": "action",
+    "minimumVisibleEvidence": [
+     "感应波/回响语境画面（紫光人脸/白光/环绕特效+对应字幕）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "反应波场景",
+    "绿机群特效"
+   ],
+   "evidenceRefs": [
+    "ev-005",
+    "ev-006"
+   ]
+  },
+  {
+   "beatId": "beat-010",
+   "sentenceId": "s10",
+   "outputStartMs": 103500,
+   "outputEndMs": 105913,
+   "narrationText": "She was built to bury the secret of Laplace.",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "太空战斗爆焰/毁灭语境画面（『埋葬秘密』的视觉承载）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "爆焰云",
+    "战场远景"
+   ],
+   "evidenceRefs": [
+    "ev-008"
+   ]
+  },
+  {
+   "beatId": "beat-011",
+   "sentenceId": "s11",
+   "outputStartMs": 110500,
+   "outputEndMs": 116870,
+   "narrationText": "In the end, even the Federation's sharpest spear could not stop the truth being born. We were blessed when we were born.",
+   "claim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": [
+     "『被祝福着出生』字幕台词画面（利迪舱内）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "台词字幕镜头",
+    "舰桥群像"
+   ],
+   "evidenceRefs": [
+    "ev-009",
+    "ev-010"
+   ]
+  },
+  {
+   "beatId": "beat-012",
+   "sentenceId": "s12",
+   "outputStartMs": 119500,
+   "outputEndMs": 123146,
+   "narrationText": "The Banshee Norn: the reluctant angel of the Universal Century.",
+   "claim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": [
+     "报丧女妖 NT-D 头部大特写收尾（绿骨架+金 V 天线）"
+    ]
+   },
+   "allowedVisualAlternatives": [
+    "觉醒头部特写"
+   ],
+   "evidenceRefs": [
+    "G1-claim-004"
+   ]
+  }
+ ]
+}

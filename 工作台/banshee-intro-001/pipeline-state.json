@@ -1,0 +1,492 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "internal_test",
+  "distribution": "internal_test",
+  "bgm": {
+    "decision": "provided",
+    "preference": null,
+    "libraryPending": false,
+    "clearCondition": "G1 \u672b\u51fa\u68c0\u7d22\u8bcd\u5361\u627e\u4e50 \u2192 \u7528\u6237\u6311\u66f2 \u2192 \u7ecf\u5b98\u65b9\u6e20\u9053\u53d6\u5f97\u6574\u8f68\u5e76\u767b\u8bb0\u56de\u586b 07_\u6388\u6743\u97f3\u9891/ \u540e\u6539 provided",
+    "history": [
+      {
+        "at": "2026-10-09T08:59:44Z",
+        "from": "use_library_later",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json",
+        "note": "\u59d4\u6258\u9009\u5b9a\uff08music_delegated_selection \u9884\u6388\u6743\uff09\uff1a51 \u9996\u5165\u6c60 36 \u9996\u8033\u6735 A/B \u65e0'\u80fd\u4f7f\u7528'\uff0c\u53d6\u6c60\u5185\u552f\u4e00\u6e05\u6743\u7eff\u706f+\u5168\u957f+\u9a71\u52a8\u8282\u594f\u7684 LOW-PHONK\uff0c\u8d34\u5408\u5ea6 4/10 \u5982\u5b9e\u62ab\u9732"
+      }
+    ],
+    "evidence": "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json"
+  },
+  "approvalMode": "auto",
+  "currentNode": "completed",
+  "status": "completed_auto_reviewed_with_accepted_warnings",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.6.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-v0.5.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "G1 \u65b9\u5411\u4e0e\u97f3\u4e50\u7ed3\u679c\u56de\u663e\uff08\u81ea\u52a8\u6a21\u5f0f\uff1a\u5361\u7167\u51fa\uff0c\u6279\u51c6\u8d70\u7b56\u7565\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u9700\u6c42\u753b\u50cf-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-v0.1/BGM-\u68c0\u7d22\u8bcd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-v0.2/BGM-\u68c0\u7d22\u8bcd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5e93\u5185\u6279\u6b21/BGM-\u5019\u9009\u6e05\u5355-\u5e93\u5185-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5019\u9009-netease-v0.2/BGM-\u5019\u9009\u6e05\u5355-netease-20261009T164251.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5019\u9009-freesound-v0.2/BGM-\u5019\u9009\u6e05\u5355-freesound-20261009T165244.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.6.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-v0.5.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.5.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u5206\u6790\u62a5\u544a-LOW-PHONK-0B2F3018.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-10-09T17:05:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "11AC1080DB46556278CD81669F28095547D6A5E412BF0467197BF63F596A015B",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md": "AD7743536787AE4E9678EB1DE15257CD233FE69DDB78F2E376508091792B1931",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json": "656C1F4EF37EAF69FA79736B46B42D230AEE777DCE1E7F465C821BFF5382A352",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u8f93\u5165-v0.1.json": "656C1F4EF37EAF69FA79736B46B42D230AEE777DCE1E7F465C821BFF5382A352",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md": "64166A8023DB041B7AC826D7F5401AC7202AC7767C5540B683169E046F109E9D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u53c2\u8003\u89c6\u9891\u5206\u6790/reference-analysis-manifest-v0.1.json": "9295961C9D9A26B8D5B0C01E97EF12C04008820D8BE3B31BB320BCD1FF120216",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u9700\u6c42\u753b\u50cf-v0.1.json": "6903F07459E7F3BE47561440CCA8E1231E233A3F27B3BCD223301F787B311E54",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-v0.1/BGM-\u68c0\u7d22\u8bcd-v0.1.json": "6EF462F166E7E8CE19EAB108DCF07CCDBDD70FD505C992D0DEABBB808139B33A",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u68c0\u7d22\u8bcd\u5361-v0.2/BGM-\u68c0\u7d22\u8bcd-v0.1.json": "4D8A9CCEBF7CACBF8F88AE3560808BB23A5356D4FD2DDE11E1C391FD524E1087",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5e93\u5185\u6279\u6b21/BGM-\u5019\u9009\u6e05\u5355-\u5e93\u5185-v0.2.json": "36644307EA00F1E0E4D0C0E0E6C4BFCEC28A8E470ED1466C489B25732E99453D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5019\u9009-netease-v0.2/BGM-\u5019\u9009\u6e05\u5355-netease-20261009T164251.json": "BDBEA5701A318DC8460FF4DF13E04EDDEBFF6131581F44714945C6726FF79E44",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/\u5019\u9009-freesound-v0.2/BGM-\u5019\u9009\u6e05\u5355-freesound-20261009T165244.json": "19D019ED1C18B14870CBC97512A68AFE34E6C964F65A303EC55FB96D958BB7A7",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u63a8\u8350\u6392\u5e8f-v0.6.json": "BD637A4D4E96CE7525784D2F0B8922E12BA7A2B33F71AFE2E4C1D270C1BE7585",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/AB\u8bd5\u542c\u7b14\u8bb0-v0.5.json": "42C27D85BFA02D7D0A5347C880F2959ACCEF2C203EF6DF907ACB0A8F1EFDD579",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.5.md": "143CCACA458668119A62162F07957CA5718C16AC682DDAD668D8E015E2CDC47A",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-BGM\u627e\u4e50/BGM-\u5206\u6790\u62a5\u544a-LOW-PHONK-0B2F3018.json": "1CC97DB2C628C68E7CF0B85FA8D360406864055F0BCD1D6E9C59F4514E14D29A",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json": "EC52E911FAD780E854D14F99ED592644E81AEABFACC978CD90712B7F775B28BF",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md": "73C7CD970A3B2E347F8625D2140475CD18322571303B08DFE843F1CDB41532F8",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md": "FA321762392717CA16756EF34484FD772F131A7195C9BB983241BE9708F39145",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json": "5F23C585596E37A3548570BECF1B6DDFDA70335D506FF1A8BD64A0FA0CCFAFAC",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json": "60C0F16519E1105AACCF832955636C4538DBE63199F3C8760A25481D1E072119"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G1",
+        "approvalResponse": "auto-policy:G1",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-10-09T09:02:19Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": []
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "G2 \u8bc1\u636e/\u53e3\u64ad/\u914d\u97f3/\u54cd\u5ea6\u56de\u663e\uff08\u81ea\u52a8\u6a21\u5f0f\uff1a\u5361\u7167\u51fa\uff0c\u6279\u51c6\u8d70\u7b56\u7565\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/banshee-source-contact-sheet.jpg",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/\u65c1\u767d\u5168\u7a3f-Samantha.wav",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Karen/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-10-09T17:25:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "6579C2BB4DFE0BA78AF2198017D42A7BDEF68612FD8940CB5ED6DECCDB880162",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json": "266E52167D003B233055F2A43F8AF36B979EC726D754F35ECF35F614ABB3D11F",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u51c6\u5907\u62a5\u544a-v0.1.md": "59290A8AD50C05CC96D29BC0153647C846FB4EDB1E259AD87C89DB0BE5662F08",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/banshee-source-contact-sheet.jpg": "D143BFED7F2C814B32410326B0B6E67D3B2C7C56EB4A1CFED10FCF190187C001",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md": "3125B724B176ACBFF734BF1290014955A13116BCD97AF1B420E033594EF2A4FE",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json": "7E3C3BE3A58A93E6B1B69EC283644580E3702CEEFEAF8327361B0C44D305739D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/\u65c1\u767d\u5168\u7a3f-Samantha.wav": "D651BA37180DFB3BCD09677A2AF111B0F293BEAE00115DEE0C4DA1E41E8F44A5",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Karen/G2-\u914d\u97f3\u6e05\u5355-v0.1.json": "D685A6F9321A696FF1CBC3BE5235D603A6CD0FDCD445C906C52B75C7C87E6764",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json": "6488C8FC27FEDB21CA98B64C3F97D3C7CB31B87D45975C0C103E2E4CDF372B8F",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json": "310F52E1E8914B1918C190D237477D0AEADB4B6E5903EE8E8DAD4322804699A6",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json": "CB23AFA897FF21C11A3AC641AC02A894C5A8504157C2044F6E42D3669AC172D8",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md": "B4992CBE0C83478D1EB8712689F87BB4B635852C0AE8C37D48357527AE8E5CB6"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G2",
+        "approvalResponse": "auto-policy:G2",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: \u7528\u6237\u539f\u8bdd\u300cAI\u65c1\u767d\u300d\u9a8c\u6536\u63a8\u8350\u9ed8\u8ba4\uff08\u82f1\u6587\uff0c\u97f3\u8272 Samantha/Daniel/Karen \u5230 G2 \u8bd5\u542c\u5361\u5b9a\uff09\u3002\u7cfb\u7edf\u58f0\u4e3a\u9884\u89c8\u7ea7\u97f3\u8d28\uff0c\u6210\u7247\u6cbf\u7528\u9884\u89c8\u7ea7\u914d\u97f3\u5347\u6210\u54c1\u7ea7\uff0c\u6b64\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\u3002\u8349\u6848\u5361\u7b2c 2 \u6761\u83b7\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002\uff1bloudness_blocked_exit: \u8349\u6848\u5361\u7b2c 5 \u6761\uff1a\u54cd\u5ea6\u8ba1\u5212 blocked\uff08\u6e90\u7269\u7406\u5929\u82b1\u677f\u591f\u4e0d\u5230\u76ee\u6807\uff09\u65f6\uff0c\u63a5\u53d7\u964d\u76ee\u6807\u5230\u5929\u82b1\u677f\u6570\u503c\u7684\u8ba9\u6b65\u51fa\u8def\u7ee7\u7eed\u8d70\uff0c\u8ba9\u6b65\u6570\u5b57\u5728\u5361\u4e0a\u70b9\u540d\u62ab\u9732\u3002\u7528\u6237\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: \u7528\u6237\u539f\u8bdd\u300cAI\u65c1\u767d\u300d\u9a8c\u6536\u63a8\u8350\u9ed8\u8ba4\uff08\u82f1\u6587\uff0c\u97f3\u8272 Samantha/Daniel/Karen \u5230 G2 \u8bd5\u542c\u5361\u5b9a\uff09\u3002\u7cfb\u7edf\u58f0\u4e3a\u9884\u89c8\u7ea7\u97f3\u8d28\uff0c\u6210\u7247\u6cbf\u7528\u9884\u89c8\u7ea7\u914d\u97f3\u5347\u6210\u54c1\u7ea7\uff0c\u6b64\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\u3002\u8349\u6848\u5361\u7b2c 2 \u6761\u83b7\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002\uff1bloudness_blocked_exit: \u8349\u6848\u5361\u7b2c 5 \u6761\uff1a\u54cd\u5ea6\u8ba1\u5212 blocked\uff08\u6e90\u7269\u7406\u5929\u82b1\u677f\u591f\u4e0d\u5230\u76ee\u6807\uff09\u65f6\uff0c\u63a5\u53d7\u964d\u76ee\u6807\u5230\u5929\u82b1\u677f\u6570\u503c\u7684\u8ba9\u6b65\u51fa\u8def\u7ee7\u7eed\u8d70\uff0c\u8ba9\u6b65\u6570\u5b57\u5728\u5361\u4e0a\u70b9\u540d\u62ab\u9732\u3002\u7528\u6237\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-10-09T09:13:50Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [
+          "preview_voice_production",
+          "loudness_blocked_exit"
+        ],
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.2.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.3.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/\u6df7\u97f3\u9884\u68c0-\u7f51\u683c-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "G3\u91cd\u6279\uff1a\u6279\u51c6\u8ba1\u5212\u96f6\u6539\u52a8\uff0c\u56de\u7089\u4ec5\u56e0G4\u6df7\u97f3\u5e8a\u53c2\u6570\uff08\u89c1rework-ref\u6df7\u97f3\u9884\u68c0-\u7f51\u683c\uff09\uff1b\u539f\u8bed\u4e49\u5bf9\u9f50/\u4e3b\u4f53/\u9884\u89c8\u5ba1\u6838\u70b9\u5747\u7ef4\u6301\u9996\u8f6e\u72b6\u6001"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.3.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.srt",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/\u5b57\u5e55-\u6e32\u67d3\u5668\u80fd\u529b\u6863-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-10-09T18:06:35+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "F13E58489DA807ED49E6CEE739AF3802692C8EC3E543BAD78DE851535D385150",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md": "5FF6049E4C66071453125246FA4308DED050FACFDC06C2D701F60F243186F2A9",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.1.json": "4F2154493C9600956017AE852E78B2579349ADA1D0B04C66A8157341AF84553F",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json": "5E401E04C11FF9DF29F41B41044F4F82FD4AF169E85B0234DD731CE9635C9DC2",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json": "5EC8B90BD4EEB9245FE13E82902521B81A54FFA0890568159F37598EFB59E660",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u5206\u6790-v0.1.json": "ADB914D585945DB272202BCF64D3ADB39E5F768CEEB7AC1DDB05C7D9559B6800",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.2.json": "B6035CD268338C4B60B1B1ABAA4E99DD754C6ABA79295BE125B6DAEEAD745863",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u76ee\u6807\u4e3b\u4f53\u786e\u8ba4-v0.1.json": "0BA4EF4EB1DDAA6B83E73885ED46526C5482ABE58805479ED75C77C31883EF4D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json": "0C3A6C7D692273DA95F018E9147E0F791F267601C8BBB7CFBD99D3C5F4C89AD8",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u5bbf\u4e3b\u80fd\u529b\u6863-v0.1.json": "EAB25EF098C17DBE10692943DBF6E385E4A941BF879C531D0F066183FFDE17F8",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.1.json": "E29BDA2D4C1D921CD509553018B14BFF16047FE72EF78502C096C761F0BC930C",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.3.json": "2E16F14C8BA1916ED0F1C957A4D0334036A93F38D70A0F10B28659BA33ABA58D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.2.json": "1E0653001A4746782A0912E7B064BD7BA678A645A81F3759556B08A9435FDEF6",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/BGM/BGM-\u5bf9\u9f50\u56de\u663e-v0.2.md": "7F34C34593211716D307095E8C839BA4868297110F2BF1A761B558964A3DB3D0",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json": "9210566EBDFF05DFD69496E5E6A3FD0B25E295C36F8CFE9E9071B3F52B6098A5",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.ass": "E7E7647E31F8E491DA474D149D7EC32AD61695C9472931DE72495FD8FA927E68",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.1.srt": "50635E9DB67FBEDD378D5D964CC3FB1A3249AF5D8EF222009C2A02DD3F8CF632",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.1.json": "3FB06899122ADA34724FE5BD73509DDED4BA3DF2581107AB8E61E5C2EA9D6E68",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/\u5b57\u5e55-\u6e32\u67d3\u5668\u80fd\u529b\u6863-v0.1.json": "E5B9016D0F4C4978703CE87945418E291D1B7F5F29190DB7DCC47EADE8934B7C",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json": "CB23AFA897FF21C11A3AC641AC02A894C5A8504157C2044F6E42D3669AC172D8",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.2.json": "8A7C8DCB8A7E887926876BAA6929710E0E5427F400DDC7D4618DBD3B0D8DB3F6",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json": "60C0F16519E1105AACCF832955636C4538DBE63199F3C8760A25481D1E072119",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md": "DBEACFEE1B6DDDCA453A83F3B1264A35F9B22BF7D2B5059D7FF701969585019E",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json": "6CE23262D987DF6075230E4A999509A6A71443395DFC83085C25E2991AE3CF02"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G3",
+        "approvalResponse": "auto-policy:G3",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 subject_policy: \u8349\u6848\u5361\u7b2c 3 \u6761\uff1aG3 \u4e3b\u4f53\u653f\u7b56=\u53ea\u6536\u5f55\u80fd\u660e\u786e\u8bc6\u522b\u4e3a\u62a5\u4e27\u5973\u5996\uff08RX-0(N) \u547d\u8fd0\u5973\u795e\uff09\u7684\u955c\u5934\uff0c\u8bc6\u522b\u4e0d\u786e\u5b9a\u7684\u753b\u9762\u4e0d\u5165\u6210\u7247\uff1b\u7d20\u6750\u81ea\u5e26\u53f0\u6807\u6c34\u5370\u753b\u9762\u7167\u539f\u6837\u4fdd\u7559\u3002\u7528\u6237\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 subject_policy: \u8349\u6848\u5361\u7b2c 3 \u6761\uff1aG3 \u4e3b\u4f53\u653f\u7b56=\u53ea\u6536\u5f55\u80fd\u660e\u786e\u8bc6\u522b\u4e3a\u62a5\u4e27\u5973\u5996\uff08RX-0(N) \u547d\u8fd0\u5973\u795e\uff09\u7684\u955c\u5934\uff0c\u8bc6\u522b\u4e0d\u786e\u5b9a\u7684\u753b\u9762\u4e0d\u5165\u6210\u7247\uff1b\u7d20\u6750\u81ea\u5e26\u53f0\u6807\u6c34\u5370\u753b\u9762\u7167\u539f\u6837\u4fdd\u7559\u3002\u7528\u6237\u9010\u5b57\u6279\u51c6\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u300d\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-10-09T10:50:15Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [
+          "subject_policy"
+        ],
+        "editPlanRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2.mp4",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.2.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.2.md",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/\u6df7\u97f3\u9884\u68c0-\u7f51\u683c-v0.1.json"
+      ],
+      "humanReviewPoints": [
+        "\u6df7\u97f3\u56de\u7089\u91cd\u6279\uff1a\u5e8a-8/duck-12 \u4f7f\u4e3b\u8f68-14.9\u5165\u00b11.0\u5bb9\u5dee\uff08G5\u54cd\u5ea6failed\u7684\u00a76-\u2461\u6267\u884c\u5c42\u4fee\u6b63\uff09\uff0c\u753b\u9762\u5c42\u4e0e\u6279\u51c6\u8ba1\u5212\u96f6\u6539\u52a8"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.2.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2.mp4",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u7f69\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c\u56de\u663e-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/\u6df7\u97f3\u9884\u68c0-\u7f51\u683c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/\u5c01\u9762\u5408\u6210-v0.1.jpg",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-10-09T18:56:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.2.md": "138E80E44DAD26450F4BCEE5763AE782A0201E616CA6ABAE108134E186EBCCBB",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md": "823331E1DE48074613E758277376716D2DF7611551771A2E7B53FB30EC0DAD89",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.2.json": "232F89C4855C5BC2F8791AC69E2248EDC061207B03F31C02169272C4B3F894FE",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2.mp4": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2-\u88c5\u914d\u8bb0\u5f55-v0.1.json": "1825C67687EA607228A488CFAB6BA4C4371E8E63147FF41F9091B2CAA10ADD29",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.2.json": "E225C5877781EE882059768D93988E6226B0AA2C1AD4A09D1D57EA19719ADA1B",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.1.json": "AF447DD9382A4830CBCCBF345F59F5BA327912584C05C15C8FD0449859FDA506",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u7f69\u5408\u540c-v0.1.json": "5879474F4EA83C024DA5D9EB172DA7FCAABEC39641B199E6EAC8F299A925C569",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json": "E77863611FC4F893676918D8714C38E207DF10519ABA4A18381CABF55DEBEFE5",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json": "D0470F666795843160BD8FEE388300A71ED8EE72E8064F97060842B273C98B88",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav": "0C8FC941753D8F942F8D1C6FE956395C262376DD7CC14FF8FB537C7BF89F4F53",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.1.json": "6FDF5B10F7050B1540036988B9313025E8B611AEB7488F86C5DE31DE1803714D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c\u56de\u663e-v0.1.md": "C882817CE8A69EEDB1FFB17456060903E26F2973D153911DA9364E9A0B279962",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/\u6df7\u97f3\u9884\u68c0-\u7f51\u683c-v0.1.json": "1E717BE06FA7F0CE98EBD30C69CFFA54AC6127FCA36FF17CF19D49B3CE6EA047",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json": "218B15DA6D2BBE1472056DD9B7A3BA58389B818CE8E9AFF0DD6D334E9CE8574F",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json": "7125266A60422E0BD91CBC2415D6ACBFD6292258641DFF1F8C0E06E51D95AE12",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/\u5c01\u9762\u5408\u6210-v0.1.jpg": "FB3BCAE5E9B61857A448F3F8F2091486E7020DAE3449D457183D4FA4F5390519",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json": "5E401E04C11FF9DF29F41B41044F4F82FD4AF169E85B0234DD731CE9635C9DC2",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json": "60C0F16519E1105AACCF832955636C4538DBE63199F3C8760A25481D1E072119",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md": "DBEACFEE1B6DDDCA453A83F3B1264A35F9B22BF7D2B5059D7FF701969585019E",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json": "E646FDCE6809ED831E4F1A0F7F93832777D219734BE761A29C818B62E5CEAA17"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55-v0.2.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e-v0.2.json",
+        "approvalToken": "auto-policy:G4",
+        "approvalResponse": "auto-policy:G4",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-10-09T10:56:21Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [],
+        "localRenderRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.2.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed_auto_reviewed_with_accepted_warnings",
+      "inputRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.2.mp4",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json"
+      ],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/delivery-manifest.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/metadata-validation-report.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/loudness-audit.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/bgm-chain-audit.json",
+        "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [
+        "\u6df7\u97f3\u56de\u7089\u91cd\u5efa\u5305\uff1a\u54cd\u5ea6 passed\uff08\u9996\u9a8c failed \u7559\u75d5\u2465\uff09\uff1b\u4e09\u6761\u8b66\u544a\u70b9\u540d\u63a5\u53d7\uff1b\u4eba\u5de5\u9a8c\u6536\u672a\u6267\u884c\u5982\u5b9e\u62ab\u9732\uff08auto-policy \u66ff\u4ee3\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/loudness-audit.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/subtitle-srt-check.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/transition-audit.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/human-review-decision.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/g5-check-frames.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/README.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/edit-plan.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/export-config.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-10-10T10:20:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md": "E84E3DD007946B77F8B59BE2EF82518653520FCDBE6619068881C32491139E85",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md": "E05C94965306414775FF4ECBE8DBA82620BD13BAA023DF0135411B7CCB5D8834",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/final-video.mp4": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/delivery-manifest.json": "5985988C4E02CAF680FEBA6D7E7BCA44DE69D82DDB69BD063861EC299D44EA5E",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/metadata-validation-report.json": "4DD4C042505259EFDD09BBDB47D4B2275D307793C1EC1A4B423646C795C40058",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/loudness-audit.json": "2127091154188F904B67C71A37B78E94528BE46124A5DA77F0566076B676F08E",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/subtitle-srt-check.json": "C6E9F87FB49A649CBB77B2CBD21AA9F3FB5922703F6E727DFC30BF5CF1A878F1",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/transition-audit.json": "845D4EFE84295A2E6ECA6F80E3AAFF6618E636146F395C9B7B02D7FFC0F08EAF",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/bgm-chain-audit.json": "5D81A51280AC36020F41F64355E90985D4E779F87AE955933BE67D5DE620104F",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/human-review-decision.json": "7E1810373B8CC0A696F568E2BD9F0DC6B5672AF23B5410C61FC0A0C32C8F482D",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/g5-check-frames.json": "94C84D525BD6668DA81C9F716D2A9CBE2DC06261A581AB9D1A8B3D475ED6B011",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/README.md": "021A97AD43EACB486955617C49581AE142502A7DE85B3EB3212EDCC08149113A",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/edit-plan.json": "FA84DD787A367FF04DB76B230354B1E41AE4240DA15ED451A26CB12692D4D349",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/export-config.json": "3B07E79333FC26E37E09DCE8DD38660E12C6A24D79F52836F797EA23A5B67EA6",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/source-timecode-list.json": "E6FCAE2D0379806397826E9FB7BA1B945C41A17927520022927AD8E17C1C1C51",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.2.json": "5E401E04C11FF9DF29F41B41044F4F82FD4AF169E85B0234DD731CE9635C9DC2",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json": "7125266A60422E0BD91CBC2415D6ACBFD6292258641DFF1F8C0E06E51D95AE12",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json": "60C0F16519E1105AACCF832955636C4538DBE63199F3C8760A25481D1E072119",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/\u95ee\u9898\u6e05\u5355-v0.1.md": "56B4A8FDDE2F3A4486B0547D0203DAF0E692FC65D424E5D2717259065EC3CC2A",
+          "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json": "95EB5B417B390CF1F2065029B06FA58531178DCA6F078DAB97B3FCB9E43BC5FC"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G5",
+        "approvalResponse": "auto-policy:G5",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08banshee-intro-001\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-10-09 \u5728\u7b56\u7565\u9884\u6388\u6743\u8349\u6848\u5361\u4e0a\u7684\u9010\u5b57\u6279\u51c6\uff1a\u300c\u5168\u90e8\u9ed8\u8ba4\u5efa\u8bae\u554a\uff0c\u8fd9\u8fb9\u6ca1\u5fc5\u8981\u505c\u4e0b\u6765\u7684\uff0c\u4f60\u53ea\u9700\u8981\u628a\u5361\u7247\u56de\u663e\u793a\u7ed9\u7528\u6237\u770b\uff0c\u81ea\u5df1\u8dd1\u5c31\u884c\u4e86\uff0c\u7528\u6237\u53d1\u73b0\u4e0d\u5bf9\u81ea\u7136\u4f1a\u6253\u65ad\u4f60\u300d",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-10-10T02:10:40Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [],
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.2/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [
+    "BGM\u300aLOW-PHONK\u300b\u672a\u6e05\u6743\uff1a\u4ec5\u9650\u5185\u90e8\u7559\u5b58\uff0c\u5bf9\u5916\u53d1\u5e03\u5fc5\u987b\u5148\u6362\u66f2\u5e76\u91cd\u8d70 G4/G5",
+    "\u6e90\u7d20\u6750\u4e3a\u4ed6\u4eba B\u7ad9\u6df7\u526a\uff1a\u753b\u9762\u5185\u6c34\u5370/\u53f0\u6807/\u5f39\u5e55\u6b8b\u7559\u6309 internal_test \u8fb9\u754c\u4fdd\u7559\u4e0d\u6e05\u9664",
+    "\u914d\u97f3=\u9884\u89c8\u7ea7\u7cfb\u7edf\u58f0\uff08macOS Samantha\uff09\u6cbf\u7528\u6210\u54c1\uff08preview_voice_production \u9884\u6388\u6743\uff09"
+  ],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-10-09T08:26:12Z",
+  "updatedAt": "2026-10-10T02:10:40Z",
+  "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/banshee-intro-001/auto-policy.json",
+  "amendmentHistory": [
+    {
+      "fromNode": "G5",
+      "toNode": "G3",
+      "reason": "G5 \u54cd\u5ea6\u9a8c\u6536 failed\uff08\u4e3b\u8f68 -15.3 vs \u76ee\u6807 -14.0 \u8d85 \u00b11.0\uff0c\u6210\u56e0\u00a75-\u2461\u6df7\u97f3\u53e3\u5f84\uff09\u3002\u6309 \u00a76-\u2461 \u6388\u6743\u4fee\u6b63 G4 \u6df7\u97f3\u6267\u884c\u53c2\u6570\uff1a\u5e8a -12\u2192-8\u3001duck -6\u2192-12\uff08\u9884\u68c0\u7f51\u683c\u5b9e\u6d4b\u53cc\u95f8\u5c45\u4e2d\uff1a-14.5/-1.7/LR9.5\uff09\u3002\u5df2\u6279\u8ba1\u5212\u4e0e\u76ee\u6807\u6863\u96f6\u6539\u52a8\u3002\u56de\u7089\u540e G3 \u91cd\u6279\uff08\u540c\u8ba1\u5212\uff09\u2192 G4 \u91cd\u505a \u2192 G5 \u91cd\u5efa",
+      "reworkRef": "\u5de5\u4f5c\u53f0/banshee-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/\u6df7\u97f3\u9884\u68c0-\u7f51\u683c-v0.1.json",
+      "reopenedAt": "2026-10-09T10:49:42Z"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "02F91E90817EA6BF2C613F88D1C59303A68B295EF6F98EACD2A333F309C2066C",
+  "aliases": [
+    {
+      "title": "Industrial",
+      "neteaseId": 31168016,
+      "sourceUrl": "https://music.163.com/song?id=31168016",
+      "provenance": "netease_search",
+      "project": "banshee-intro-001",
+      "seenAt": "2026-10-09T08:48:51Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.1/netease-31168016-Industrial.mp3",
+      "recordedAt": "2026-10-09T08:48:51Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-10-09T08:48:51Z",
+  "updatedAt": "2026-10-09T08:48:51Z"
+}

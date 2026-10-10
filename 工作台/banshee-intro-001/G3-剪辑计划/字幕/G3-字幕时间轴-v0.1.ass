@@ -1,0 +1,26 @@
+[Script Info]
+Title: banshee-intro-001 G3 口播主字幕（v0.1 十二句实测码）
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Narration,Arial,27,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,2,20,20,115,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:07.00,0:00:11.41,Narration,,0,0,0,,In the Universal Century, not every mobile suit gets to be the hero's machine.
+Dialogue: 0,0:00:16.50,0:00:23.44,Narration,,0,0,0,,R-X zero N, the Banshee Norn, Goddess of Fate:\Nthe Earth Federation's second answer to the riddle of the Unicorn.
+Dialogue: 0,0:00:28.50,0:00:33.47,Narration,,0,0,0,,Like the Unicorn, she carries a psycho-frame,\Narmor that answers a Newtype's will.
+Dialogue: 0,0:00:38.50,0:00:46.18,Narration,,0,0,0,,When the N-T-D system awakens, the mask splits, the frame burns green,\Nand a machine of order starts to look disturbingly alive.
+Dialogue: 0,0:00:51.00,0:00:57.28,Narration,,0,0,0,,Her pilot is no chosen one. Riddhe Marcenas,\Na Federation ace, fighting for duty rather than destiny.
+Dialogue: 0,0:01:02.00,0:01:06.44,Narration,,0,0,0,,While Banagher rides the Unicorn toward answers,\NRiddhe is ordered to silence them.
+Dialogue: 0,0:01:11.50,0:01:19.84,Narration,,0,0,0,,The two machines were built as sisters. In the dark of space\Nthey do not simply fight: the Unicorn and the Banshee are pulling on each other.
+Dialogue: 0,0:01:24.50,0:01:28.54,Narration,,0,0,0,,And when the psycho-frame screams, it is not a curse. It was a prayer.
+Dialogue: 0,0:01:33.00,0:01:39.58,Narration,,0,0,0,,Near the end, sensors report resonance beyond every measurable limit,\Nas if countless hearts were sounding at once.
+Dialogue: 0,0:01:43.50,0:01:45.91,Narration,,0,0,0,,She was built to bury the secret of Laplace.
+Dialogue: 0,0:01:50.50,0:01:56.87,Narration,,0,0,0,,In the end, even the Federation's sharpest spear\Ncould not stop the truth being born. We were blessed when we were born.
+Dialogue: 0,0:01:59.50,0:02:03.15,Narration,,0,0,0,,The Banshee Norn: the reluctant angel of the Universal Century.

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": "industrial,techno,ebm,dark",
+    "similarTo": null,
+    "termsFile": "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/检索词卡-v0.1/BGM-检索词-v0.1.json",
+    "terms": [
+      "Industrial",
+      "Techno",
+      "Driving",
+      "Dark",
+      "EBM"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 160.0,
+    "appliedMinSec": 160.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-10-09T16:51:38+08:00",
+  "candidates": [],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "Industrial",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Techno",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Driving",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Dark",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "EBM",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Industrial",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Techno",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Driving",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "Dark",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    },
+    {
+      "query": "EBM",
+      "returned": 0,
+      "cap": 12,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

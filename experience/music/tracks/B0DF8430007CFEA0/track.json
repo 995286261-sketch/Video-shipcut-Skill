@@ -9,6 +9,12 @@
       "provenance": "netease_search",
       "project": "psycho-zaku-intro-002",
       "seenAt": "2026-09-17T07:05:16Z"
+    },
+    {
+      "title": "Darksynth",
+      "provenance": "netease",
+      "project": "banshee-intro-001",
+      "seenAt": "2026-10-09T08:40:52Z"
     }
   ],
   "audioRefs": [
@@ -25,5 +31,5 @@
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-17T07:05:16Z",
-  "updatedAt": "2026-09-17T07:05:16Z"
+  "updatedAt": "2026-10-09T08:40:52Z"
 }

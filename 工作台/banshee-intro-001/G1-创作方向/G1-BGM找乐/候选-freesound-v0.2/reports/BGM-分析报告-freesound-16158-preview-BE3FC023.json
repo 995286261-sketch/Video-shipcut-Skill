@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_music_analysis",
+  "analysisVersion": "music-expert-analysis-v0.2",
+  "cacheKey": {
+    "sha256": "BE3FC023A7B46C8BC982D74CEE37D7786ECB06CD2951131019E639B1F1C66CEB",
+    "analysisVersion": "music-expert-analysis-v0.2",
+    "sampleRate": 22050,
+    "mediaKind": "audio"
+  },
+  "source": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16158-preview.mp3",
+    "sha256": "BE3FC023A7B46C8BC982D74CEE37D7786ECB06CD2951131019E639B1F1C66CEB",
+    "mediaKind": "audio",
+    "audioCodecProbe": "mp3",
+    "channelsProbe": 2,
+    "durationSecProbe": 2.194286,
+    "decodedDurationMs": 2143
+  },
+  "tempoBpm": 112.35,
+  "beatsMs": [
+    464,
+    998,
+    1533
+  ],
+  "onsetsMs": [
+    232,
+    441,
+    673,
+    882,
+    998,
+    1091,
+    1207,
+    1324,
+    1416,
+    1533,
+    1649,
+    1741,
+    1950
+  ],
+  "hitPoints": [
+    {
+      "tMs": 232,
+      "kind": "accent"
+    },
+    {
+      "tMs": 464,
+      "kind": "beat"
+    },
+    {
+      "tMs": 673,
+      "kind": "accent"
+    },
+    {
+      "tMs": 998,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1207,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1324,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1533,
+      "kind": "beat"
+    },
+    {
+      "tMs": 1741,
+      "kind": "accent"
+    },
+    {
+      "tMs": 1950,
+      "kind": "accent"
+    }
+  ],
+  "energySegments": [
+    {
+      "startMs": 0,
+      "endMs": 2136,
+      "energyMean": 0.121528
+    }
+  ],
+  "energyCurve": [
+    {
+      "tMs": 0,
+      "rms": 0.129545
+    },
+    {
+      "tMs": 372,
+      "rms": 0.077414
+    },
+    {
+      "tMs": 743,
+      "rms": 0.010269
+    },
+    {
+      "tMs": 1115,
+      "rms": 0.205204
+    },
+    {
+      "tMs": 1486,
+      "rms": 0.127018
+    },
+    {
+      "tMs": 1858,
+      "rms": 0.087857
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -16.6,
+    "loudnessRangeLu": 0.0,
+    "truePeakDbtp": null,
+    "engine": "ffmpeg-ebur128"
+  },
+  "timing": {
+    "durationMsSource": "decoded samples",
+    "unit": "integer milliseconds; human display timecodes are derived downstream"
+  }
+}

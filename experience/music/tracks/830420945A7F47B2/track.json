@@ -18,6 +18,12 @@
       "provenance": "netease_preview",
       "project": "psycho-zaku-intro-002",
       "seenAt": "2026-09-17T08:21:51Z"
+    },
+    {
+      "title": "The Darkest Alleys (Final Stage)",
+      "provenance": "netease",
+      "project": "banshee-intro-001",
+      "seenAt": "2026-10-09T08:48:14Z"
     }
   ],
   "audioRefs": [
@@ -34,5 +40,5 @@
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-17T08:17:44Z",
-  "updatedAt": "2026-09-17T08:21:51Z"
+  "updatedAt": "2026-10-09T08:48:14Z"
 }

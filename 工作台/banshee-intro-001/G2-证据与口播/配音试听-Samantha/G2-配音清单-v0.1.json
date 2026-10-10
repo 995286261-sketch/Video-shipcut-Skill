@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G2",
+  "purpose": "narration_synthesis_measured_durations",
+  "provider": "macos_say",
+  "voice": "Samantha",
+  "voiceTier": "preview_only",
+  "tierNotice": "macOS system TTS is preview-tier by default; production use requires authorized neural TTS (e.g. Bailian CosyVoice), a human voice, or the user's verbatim explicit approval recorded in the G2 decision field previewTierProductionApproval (green light, 2026-09-29; disclosure word 预览级 must appear in the quoted approval).",
+  "measuredTotalDurationMs": 66074,
+  "sentences": [
+    {
+      "sentenceId": "s01",
+      "text": "In the Universal Century, not every mobile suit gets to be the hero's machine.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s01.wav",
+      "durationMs": 4409
+    },
+    {
+      "sentenceId": "s02",
+      "text": "R-X zero N, the Banshee Norn, Goddess of Fate: the Earth Federation's second answer to the riddle of the Unicorn.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s02.wav",
+      "durationMs": 6927
+    },
+    {
+      "sentenceId": "s03",
+      "text": "Like the Unicorn, she carries a psycho-frame, armor that answers a Newtype's will.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s03.wav",
+      "durationMs": 4973
+    },
+    {
+      "sentenceId": "s04",
+      "text": "When the N-T-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s04.wav",
+      "durationMs": 7676
+    },
+    {
+      "sentenceId": "s05",
+      "text": "Her pilot is no chosen one. Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s05.wav",
+      "durationMs": 6276
+    },
+    {
+      "sentenceId": "s06",
+      "text": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s06.wav",
+      "durationMs": 4437
+    },
+    {
+      "sentenceId": "s07",
+      "text": "The two machines were built as sisters. In the dark of space they do not simply fight. As the line goes: the Unicorn and the Banshee are pulling on each other.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s07.wav",
+      "durationMs": 8336
+    },
+    {
+      "sentenceId": "s08",
+      "text": "And when the psycho-frame screams, it is not a curse. It was a prayer.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s08.wav",
+      "durationMs": 4035
+    },
+    {
+      "sentenceId": "s09",
+      "text": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s09.wav",
+      "durationMs": 6576
+    },
+    {
+      "sentenceId": "s10",
+      "text": "She was built to bury the secret of Laplace.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s10.wav",
+      "durationMs": 2413
+    },
+    {
+      "sentenceId": "s11",
+      "text": "In the end, even the Federation's sharpest spear could not stop the truth being born. We were blessed when we were born.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s11.wav",
+      "durationMs": 6370
+    },
+    {
+      "sentenceId": "s12",
+      "text": "The Banshee Norn: the reluctant angel of the Universal Century.",
+      "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s12.wav",
+      "durationMs": 3646
+    }
+  ],
+  "asrVerification": {
+    "engine": "faster-whisper",
+    "model": "small",
+    "minRatio": 0.6,
+    "initialPrompt": "Banshee Norn, psycho-frame, NT-D, Riddhe Marcenas, Banagher, Unicorn, Universal Century, Laplace",
+    "perSentence": [
+      {
+        "sentenceId": "s01",
+        "expected": "IntheUniversalCenturynoteverymobilesuitgetstobetheherosmachine",
+        "heard": "IntheUniversalCenturynoteverymobilesuitgetstobetheherosmachine",
+        "similarity": 1.0
+      },
+      {
+        "sentenceId": "s02",
+        "expected": "RXzeroNtheBansheeNornGoddessofFatetheEarthFederationssecondanswertotheriddleoftheUnicorn",
+        "heard": "RX0NTheBansheeNornGoddessofFateTheEarthFederation2ndAnswertotheRiddheoftheUnicorn",
+        "similarity": 0.876
+      },
+      {
+        "sentenceId": "s03",
+        "expected": "LiketheUnicornshecarriesapsychoframearmorthatanswersaNewtypeswill",
+        "heard": "liketheunicornshecarriesapsychoframearmorthatanswersanewtypeswill",
+        "similarity": 0.954
+      },
+      {
+        "sentenceId": "s04",
+        "expected": "WhentheNTDsystemawakensthemasksplitstheframeburnsgreenandamachineoforderstartstolookdisturbinglyalive",
+        "heard": "WhentheNTDsystemawakensthemasksplitstheframeburnsgreenandamachineoforderstartstolookdisturbinglyalive",
+        "similarity": 1.0
+      },
+      {
+        "sentenceId": "s05",
+        "expected": "HerpilotisnochosenoneRiddheMarcenasaFederationacefightingfordutyratherthandestiny",
+        "heard": "她的pilotisnochosenoneRiddheMarcenasafederationacefightingfordutyratherthandestiny",
+        "similarity": 0.957
+      },
+      {
+        "sentenceId": "s06",
+        "expected": "WhileBanagherridestheUnicorntowardanswersRiddheisorderedtosilencethem",
+        "heard": "whileBanagherridestheunicorntowardanswersRiddheisorderedtosilencethem",
+        "similarity": 0.971
+      },
+      {
+        "sentenceId": "s07",
+        "expected": "ThetwomachineswerebuiltassistersInthedarkofspacetheydonotsimplyfightAsthelinegoestheUnicornandtheBansheearepullingoneachother",
+        "heard": "ThetwomachineswerebuiltassistersInthedarkofspacetheydonotsimplyfightAsthelinegoestheunicornandtheBansheearepullingoneachother",
+        "similarity": 0.992
+      },
+      {
+        "sentenceId": "s08",
+        "expected": "AndwhenthepsychoframescreamsitisnotacurseItwasaprayer",
+        "heard": "Andwhenthepsychoframescreamsitisnotacurseitwasaprayer",
+        "similarity": 0.981
+      },
+      {
+        "sentenceId": "s09",
+        "expected": "Neartheendsensorsreportresonancebeyondeverymeasurablelimitasifcountlessheartsweresoundingatonce",
+        "heard": "接近尾端线索报纸报纸beyondeverymeasurablelimitasifcountlessheartsweresoundingatonce",
+        "similarity": 0.75
+      },
+      {
+        "sentenceId": "s10",
+        "expected": "ShewasbuilttoburythesecretofLaplace",
+        "heard": "ShewasbuilttoburythesecretofLaplace",
+        "similarity": 1.0
+      },
+      {
+        "sentenceId": "s11",
+        "expected": "IntheendeventheFederationssharpestspearcouldnotstopthetruthbeingbornWewereblessedwhenwewereborn",
+        "heard": "IntheendeventhefederationssharpestspearcouldnotstopthetruthbeingbornWewereblessedwhenwewereborn",
+        "similarity": 0.989
+      },
+      {
+        "sentenceId": "s12",
+        "expected": "TheBansheeNornthereluctantangeloftheUniversalCentury",
+        "heard": "BansheeNornReluctantAngeloftheUniversalCentury",
+        "similarity": 0.898
+      }
+    ]
+  },
+  "cacheKey": "68C54897FC911C020D2A65B4E2E7BCC49A10EB708F98E713D5EFE851BCEB3FAD"
+}

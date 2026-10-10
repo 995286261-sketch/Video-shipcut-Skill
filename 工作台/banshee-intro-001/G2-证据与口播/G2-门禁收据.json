@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "node": "G2",
+  "cardType": "g2_evidence_narration_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-10-09T17:25:00+08:00",
+  "reviewCardRef": "工作台/banshee-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/banshee-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/G2-证据准备报告-v0.1.md",
+    "工作台/banshee-intro-001/G2-证据与口播/banshee-source-contact-sheet.jpg",
+    "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+    "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+    "工作台/banshee-intro-001/G2-证据与口播/配音试听-Karen/G2-配音清单-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/响度/响度-实测报告-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/响度/响度-归一化计划-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/G2-决定-v0.1.json",
+    "工作台/banshee-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md",
+    "工作台/banshee-intro-001/G2-证据与口播/G2-确认记录.md"
+  ],
+  "checklist": [
+    {"id": "approved_narration", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md"},
+    {"id": "fact_citation", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/G2-证据清单-v0.1.json"},
+    {"id": "g2_card", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/G2-最终回显卡-v0.1.md"},
+    {"id": "voice_brief", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json"}
+  ],
+  "extraChecks": [
+    {"id": "evidence_report_transcript_demoted", "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/G2-证据准备报告-v0.1.md"},
+    {"id": "loudness_ceiling_disclosed_exit_preauthorized", "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/响度/响度-归一化计划-v0.1.json"},
+    {"id": "g2_decision_validated_0_2", "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G2-证据与口播/G2-决定-v0.1.json"}
+  ],
+  "notes": "自动模式：卡照出、批准走策略。Daniel s09 ASR 回读失败（相似度 0，其余 11 句 ≥0.957）如实入账——失败运行不落配音清单，句 wav 在 配音试听-Daniel/，回读明细在任务日志；机器转写幻觉文本仅存档不引用。"
+}

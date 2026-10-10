@@ -1,0 +1,105 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "subject": "banshee-intro-001 交付包机器质检",
+ "reviewedAt": "2026-10-10T09:57:02+08:00",
+ "checks": {
+  "decode": "pass（完整解码零错误，机器实测）",
+  "videoCodec": "h264（机器实测，与 export-config 对账在 --media 校验中通过）",
+  "dimensions": "1280x720（机器实测）",
+  "fps": "24/1（机器实测，⑧丙对账通过）",
+  "audio": "aac 48000Hz 2ch（机器实测）",
+  "duration": "124000ms（机器实测）",
+  "blackFrames": "pass（编排方实测 2026-10-10：blackdetect d=0.1 仅两处——0–0.208s=批准黑场入窗口内、90.875–91.0s=seg-09 源内容暗帧（源 535.1s 场景切换，非渲染伪影）；批准转场窗口外无计划外黑帧）",
+  "silence": "pass（编排方实测 2026-10-10：silencedetect -45dB/1.0s 全片零命中——句间留白由 BGM 床覆盖，无死静音段）",
+  "duplicateSegments": "pass（13 段·同素材源窗口两两不相交，机器实算）",
+  "cover": "1280x720（机器实测尺寸；目视确认归人审）"
+ },
+ "artifacts": {
+  "finalVideo": {
+   "path": "final-video.mp4",
+   "sha256": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD"
+  },
+  "cover": {
+   "path": "cover.jpg",
+   "sha256": "FB3BCAE5E9B61857A448F3F8F2091486E7020DAE3449D457183D4FA4F5390519"
+  },
+  "subtitles": {
+   "path": "subtitles.srt",
+   "sha256": "50635E9DB67FBEDD378D5D964CC3FB1A3249AF5D8EF222009C2A02DD3F8CF632"
+  },
+  "chapterClips": [
+   {
+    "path": "clips/ch-01.mp4",
+    "sha256": "CCCA0C7A9120C521D0B2B000CC68D61A2B0DEF69C470EF279434B79000799823"
+   },
+   {
+    "path": "clips/ch-02.mp4",
+    "sha256": "0E9386767602EE43280AC13859F7E0144A346FE8A6D5C1F6A1F2C9E292FBC74F"
+   },
+   {
+    "path": "clips/ch-03.mp4",
+    "sha256": "ADC24BA2A56E12F0AE6381348CD4F9823F9BEE090A368CF1BA01DBBE3C5EBD8E"
+   },
+   {
+    "path": "clips/ch-04.mp4",
+    "sha256": "CBF1C25CD94C48615B17E1B2421041A90F179ED76EC31BEFBAF7B092767AC9CF"
+   },
+   {
+    "path": "clips/ch-05.mp4",
+    "sha256": "32BE2A271DE4F129E417DDDA4C32F8E9FB019C17DB8ACD05BD9B7D6450E2D88A"
+   }
+  ],
+  "README.md": {
+   "path": "README.md",
+   "sha256": "021A97AD43EACB486955617C49581AE142502A7DE85B3EB3212EDCC08149113A"
+  },
+  "bgm-chain-audit.json": {
+   "path": "bgm-chain-audit.json",
+   "sha256": "5D81A51280AC36020F41F64355E90985D4E779F87AE955933BE67D5DE620104F"
+  },
+  "edit-plan.json": {
+   "path": "edit-plan.json",
+   "sha256": "FA84DD787A367FF04DB76B230354B1E41AE4240DA15ED451A26CB12692D4D349"
+  },
+  "edit-timeline.md": {
+   "path": "edit-timeline.md",
+   "sha256": "8001C54EA2F95B1D1A39E99B9E099B108D38A5444DDBC987DC4DB42098B4A9ED"
+  },
+  "export-config.json": {
+   "path": "export-config.json",
+   "sha256": "3B07E79333FC26E37E09DCE8DD38660E12C6A24D79F52836F797EA23A5B67EA6"
+  },
+  "failure-samples/README.md": {
+   "path": "failure-samples/README.md",
+   "sha256": "FBB3EFBD8A91249CA2B91DB13069B8BD7E29C00E76218B67B60F2E78A7D7F9B8"
+  },
+  "loudness-audit.json": {
+   "path": "loudness-audit.json",
+   "sha256": "2127091154188F904B67C71A37B78E94528BE46124A5DA77F0566076B676F08E"
+  },
+  "source-timecode-list.json": {
+   "path": "source-timecode-list.json",
+   "sha256": "E6FCAE2D0379806397826E9FB7BA1B945C41A17927520022927AD8E17C1C1C51"
+  },
+  "subtitle-srt-check.json": {
+   "path": "subtitle-srt-check.json",
+   "sha256": "C6E9F87FB49A649CBB77B2CBD21AA9F3FB5922703F6E727DFC30BF5CF1A878F1"
+  },
+  "transition-audit.json": {
+   "path": "transition-audit.json",
+   "sha256": "845D4EFE84295A2E6ECA6F80E3AAFF6618E636146F395C9B7B02D7FFC0F08EAF"
+  },
+  "响度-验收审计-v0.1.json": {
+   "path": "响度-验收审计-v0.1.json",
+   "sha256": "2127091154188F904B67C71A37B78E94528BE46124A5DA77F0566076B676F08E"
+  }
+ },
+ "warnings": [],
+ "humanReview": "待人工门禁关单后逐字回填（口令原文+批准记录指向）",
+ "status": "g5_pending_human_review",
+ "finishedAt": "2026-10-10T09:57:02+08:00",
+ "generatedBy": "g5_validate_delivery.py --report-out",
+ "checksNote": "blackFrames/silence 两行为报告生成后编排方 ffmpeg 实测回填（报告指示的合法路径）；artifacts 未改动。"
+}

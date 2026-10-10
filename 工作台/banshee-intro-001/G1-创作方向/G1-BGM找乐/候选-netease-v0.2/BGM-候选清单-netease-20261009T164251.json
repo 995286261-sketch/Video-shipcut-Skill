@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "netease_search",
+  "usageBoundary": "internal_test 试听选型专用；未清权候选禁止进入任何对外分发项目的剪辑计划",
+  "query": {
+    "termsFile": "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/检索词卡-v0.2/BGM-检索词-v0.1.json",
+    "terms": [
+      "工业电子 压迫",
+      "EBM dark",
+      "dark techno driving",
+      "hard techno aggressive instrumental",
+      "cinematic cyberpunk action score"
+    ]
+  },
+  "partialFailures": [],
+  "retrievedAt": "2026-10-09T16:42:51+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3387326984,
+      "title": "暗黑风哥特风欧美暗黑病娇压迫感疯批氛围剪辑踩点暗黑电子工业电子",
+      "artist": "胡波",
+      "album": "暗黑风哥特风欧美暗黑病娇压迫感疯批氛围剪辑踩点暗黑电子工业电子",
+      "durationMs": 244088,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3387326984",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3387326984.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "胡波 - 暗黑风哥特风欧美暗黑病娇压迫感疯批氛围剪辑踩点暗黑电子工业电子",
+      "retrievedAt": "2026-10-09T16:42:31+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-3387326984-暗黑风哥特风欧美暗黑病娇压迫感疯批氛围剪辑踩点暗黑电子工业电子.mp3",
+      "sha256": "89C1595B94F0D6713AF16B119E830AF29548076394961DCEE9C1E4CCCD077C03",
+      "byteSize": 3906290,
+      "previewSchemeUpgraded": [
+        "m701.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3398951739,
+      "title": "康定溜溜",
+      "artist": "化一",
+      "album": "康定溜溜",
+      "durationMs": 164168,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3398951739",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3398951739.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "化一 - 康定溜溜",
+      "retrievedAt": "2026-10-09T16:42:32+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-3398951739-康定溜溜.mp3",
+      "sha256": "8FD120B8DA5F0BA14C99A32E576C43BB05350C0DD0673C58170869DEB0FFF7D2",
+      "byteSize": 2627753,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 1966162824,
+      "title": "【FREE】2022.7.22 EBM Rap Instr 1 <<Loveless>>",
+      "artist": "Ziguo Chen",
+      "album": "【FREE】Loveless 外太空",
+      "durationMs": 354716,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=1966162824",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=1966162824.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "Ziguo Chen - 【FREE】2022.7.22 EBM Rap Instr 1 <<Loveless>>",
+      "retrievedAt": "2026-10-09T16:42:35+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-1966162824-【FREE】2022.7.22_EBM_Rap_Instr_1_Loveless.mp3",
+      "sha256": "5F10D0071A0F60A8F57F067E9C9CC2F065B51D3AF778734A83297F725FE99E33",
+      "byteSize": 5676347,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2719532493,
+      "title": "404号公路没有灯塔",
+      "artist": "渊经年",
+      "album": "月亮在忙 很想月亮",
+      "durationMs": 214056,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=2719532493",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2719532493.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "渊经年 - 404号公路没有灯塔",
+      "retrievedAt": "2026-10-09T16:42:38+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-2719532493-404号公路没有灯塔.mp3",
+      "sha256": "F2A1628841FB40CB4409615352E960038F33A4ED236E580A0C1FD4F72235C818",
+      "byteSize": 3425709,
+      "previewSchemeUpgraded": [
+        "m701.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3340515513,
+      "title": "硅谷卷云袖1",
+      "artist": "青旭破晓",
+      "album": "青旭破晓",
+      "durationMs": 314952,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3340515513",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3340515513.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "青旭破晓 - 硅谷卷云袖1",
+      "retrievedAt": "2026-10-09T16:42:41+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-3340515513-硅谷卷云袖1.mp3",
+      "sha256": "B63AEF1DDF3883D29924C1E45374693B9EFB2CE0DE7CE4DBEB5E99CD61D23429",
+      "byteSize": 5040045,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 3437575363,
+      "title": "顶峰爆发",
+      "artist": "小杨",
+      "album": "顶峰爆发",
+      "durationMs": 194813,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=3437575363",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=3437575363.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "小杨 - 顶峰爆发",
+      "retrievedAt": "2026-10-09T16:42:44+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-3437575363-顶峰爆发.mp3",
+      "sha256": "E12BD7D1A4BB34B8B2238877A16984747AA2886BB407525084D88859CA79074A",
+      "byteSize": 3118125,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2746852131,
+      "title": "歌词拆解猎场Dismantlingthe_美的回忆",
+      "artist": "小元音乐",
+      "album": "歌词拆解猎场Dismantlingthe",
+      "durationMs": 207168,
+      "fee": 0,
+      "sourceUrl": "https://music.163.com/song?id=2746852131",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2746852131.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "小元音乐 - 歌词拆解猎场Dismantlingthe_美的回忆",
+      "retrievedAt": "2026-10-09T16:42:47+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-2746852131-歌词拆解猎场Dismantlingthe_美的回忆.mp3",
+      "sha256": "4D57C676A3178C1EED8399B6D39BB04C1BC47F57A563F178E950AC6D67FCBDE8",
+      "byteSize": 3315501,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "netease_search",
+      "neteaseId": 2689935845,
+      "title": "碎碎念",
+      "artist": "三昱",
+      "album": "神念子念",
+      "durationMs": 165818,
+      "fee": 8,
+      "sourceUrl": "https://music.163.com/song?id=2689935845",
+      "previewUrl": "https://music.163.com/song/media/outer/url?id=2689935845.mp3",
+      "license": "uncleared-platform-catalog",
+      "licenseNote": "平台曲库仅覆盖端内播放授权；候选只用于 internal_test 试听选型。整轨必须经人通过官方渠道取得并用 music_register_candidate.py 登记真实许可证据后方可进剪辑计划（sourcing-contract 轨道三）。",
+      "attributionRequired": true,
+      "attributionText": "三昱 - 碎碎念",
+      "retrievedAt": "2026-10-09T16:42:49+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-2689935845-碎碎念.mp3",
+      "sha256": "6FC0CFD913F7BB7289E1E2A8EADC5CE732C6BA9F173C6C232D689DF08F6671D4",
+      "byteSize": 2654084,
+      "previewSchemeUpgraded": [
+        "m801.music.126.net"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "neteaseId": 3337699720,
+      "name": "破阵 · 剑气啸",
+      "reason": "duration 123792ms outside [160.0,600.0]s"
+    }
+  ],
+  "sufficiency": {
+    "count": 8,
+    "minimumExpected": 3
+  }
+}

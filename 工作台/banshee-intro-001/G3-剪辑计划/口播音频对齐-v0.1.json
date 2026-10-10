@@ -1,0 +1,1157 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "approved_narration_audio_alignment",
+  "audioRef": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+  "engine": "faster-whisper",
+  "model": "small",
+  "cacheKey": {
+    "sha256": "D651BA37180DFB3BCD09677A2AF111B0F293BEAE00115DEE0C4DA1E41E8F44A5",
+    "language": "en",
+    "model": "small",
+    "device": "cpu",
+    "computeType": "int8",
+    "runtimeVersion": "g3-align-narration-v0.2"
+  },
+  "language": "en",
+  "languageProbability": 1,
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 4200,
+      "text": "In the Universal Century, not every mobile suit gets to be the hero's machine.",
+      "words": [
+        {
+          "startMs": 0,
+          "endMs": 100,
+          "text": " In"
+        },
+        {
+          "startMs": 100,
+          "endMs": 220,
+          "text": " the"
+        },
+        {
+          "startMs": 220,
+          "endMs": 680,
+          "text": " Universal"
+        },
+        {
+          "startMs": 680,
+          "endMs": 1260,
+          "text": " Century,"
+        },
+        {
+          "startMs": 1620,
+          "endMs": 1780,
+          "text": " not"
+        },
+        {
+          "startMs": 1780,
+          "endMs": 2040,
+          "text": " every"
+        },
+        {
+          "startMs": 2040,
+          "endMs": 2320,
+          "text": " mobile"
+        },
+        {
+          "startMs": 2320,
+          "endMs": 2620,
+          "text": " suit"
+        },
+        {
+          "startMs": 2620,
+          "endMs": 2880,
+          "text": " gets"
+        },
+        {
+          "startMs": 2880,
+          "endMs": 3120,
+          "text": " to"
+        },
+        {
+          "startMs": 3120,
+          "endMs": 3240,
+          "text": " be"
+        },
+        {
+          "startMs": 3240,
+          "endMs": 3360,
+          "text": " the"
+        },
+        {
+          "startMs": 3360,
+          "endMs": 3800,
+          "text": " hero's"
+        },
+        {
+          "startMs": 3800,
+          "endMs": 4200,
+          "text": " machine."
+        }
+      ]
+    },
+    {
+      "startMs": 4860,
+      "endMs": 11100,
+      "text": "Rx0N, The Banjee Norn, Goddess of Fate, The Earth Federation's second answer to the riddle of the Unicorn.",
+      "words": [
+        {
+          "startMs": 4860,
+          "endMs": 5380,
+          "text": " Rx0N,"
+        },
+        {
+          "startMs": 5660,
+          "endMs": 5780,
+          "text": " The"
+        },
+        {
+          "startMs": 5780,
+          "endMs": 6180,
+          "text": " Banjee"
+        },
+        {
+          "startMs": 6180,
+          "endMs": 6500,
+          "text": " Norn,"
+        },
+        {
+          "startMs": 6840,
+          "endMs": 7080,
+          "text": " Goddess"
+        },
+        {
+          "startMs": 7080,
+          "endMs": 7380,
+          "text": " of"
+        },
+        {
+          "startMs": 7380,
+          "endMs": 7640,
+          "text": " Fate,"
+        },
+        {
+          "startMs": 8000,
+          "endMs": 8120,
+          "text": " The"
+        },
+        {
+          "startMs": 8120,
+          "endMs": 8340,
+          "text": " Earth"
+        },
+        {
+          "startMs": 8340,
+          "endMs": 9100,
+          "text": " Federation's"
+        },
+        {
+          "startMs": 9100,
+          "endMs": 9320,
+          "text": " second"
+        },
+        {
+          "startMs": 9320,
+          "endMs": 9720,
+          "text": " answer"
+        },
+        {
+          "startMs": 9720,
+          "endMs": 9940,
+          "text": " to"
+        },
+        {
+          "startMs": 9940,
+          "endMs": 10080,
+          "text": " the"
+        },
+        {
+          "startMs": 10080,
+          "endMs": 10360,
+          "text": " riddle"
+        },
+        {
+          "startMs": 10360,
+          "endMs": 10460,
+          "text": " of"
+        },
+        {
+          "startMs": 10460,
+          "endMs": 10580,
+          "text": " the"
+        },
+        {
+          "startMs": 10580,
+          "endMs": 11100,
+          "text": " Unicorn."
+        }
+      ]
+    },
+    {
+      "startMs": 11320,
+      "endMs": 16160,
+      "text": "Like the Unicorn, she carries a psycho-frame, armor that answers a new type's will.",
+      "words": [
+        {
+          "startMs": 11320,
+          "endMs": 11500,
+          "text": " Like"
+        },
+        {
+          "startMs": 11500,
+          "endMs": 11680,
+          "text": " the"
+        },
+        {
+          "startMs": 11680,
+          "endMs": 12200,
+          "text": " Unicorn,"
+        },
+        {
+          "startMs": 12620,
+          "endMs": 12780,
+          "text": " she"
+        },
+        {
+          "startMs": 12780,
+          "endMs": 13140,
+          "text": " carries"
+        },
+        {
+          "startMs": 13140,
+          "endMs": 13360,
+          "text": " a"
+        },
+        {
+          "startMs": 13360,
+          "endMs": 13600,
+          "text": " psycho"
+        },
+        {
+          "startMs": 13600,
+          "endMs": 14000,
+          "text": "-frame,"
+        },
+        {
+          "startMs": 14360,
+          "endMs": 14600,
+          "text": " armor"
+        },
+        {
+          "startMs": 14600,
+          "endMs": 14840,
+          "text": " that"
+        },
+        {
+          "startMs": 14840,
+          "endMs": 15240,
+          "text": " answers"
+        },
+        {
+          "startMs": 15240,
+          "endMs": 15460,
+          "text": " a"
+        },
+        {
+          "startMs": 15460,
+          "endMs": 15560,
+          "text": " new"
+        },
+        {
+          "startMs": 15560,
+          "endMs": 15980,
+          "text": " type's"
+        },
+        {
+          "startMs": 15980,
+          "endMs": 16160,
+          "text": " will."
+        }
+      ]
+    },
+    {
+      "startMs": 16320,
+      "endMs": 23820,
+      "text": "When the NT-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive.",
+      "words": [
+        {
+          "startMs": 16320,
+          "endMs": 16460,
+          "text": " When"
+        },
+        {
+          "startMs": 16460,
+          "endMs": 16600,
+          "text": " the"
+        },
+        {
+          "startMs": 16600,
+          "endMs": 16880,
+          "text": " NT"
+        },
+        {
+          "startMs": 16880,
+          "endMs": 17120,
+          "text": "-D"
+        },
+        {
+          "startMs": 17120,
+          "endMs": 17520,
+          "text": " system"
+        },
+        {
+          "startMs": 17520,
+          "endMs": 18140,
+          "text": " awakens,"
+        },
+        {
+          "startMs": 18460,
+          "endMs": 18600,
+          "text": " the"
+        },
+        {
+          "startMs": 18600,
+          "endMs": 18880,
+          "text": " mask"
+        },
+        {
+          "startMs": 18880,
+          "endMs": 19220,
+          "text": " splits,"
+        },
+        {
+          "startMs": 19680,
+          "endMs": 19820,
+          "text": " the"
+        },
+        {
+          "startMs": 19820,
+          "endMs": 20080,
+          "text": " frame"
+        },
+        {
+          "startMs": 20080,
+          "endMs": 20360,
+          "text": " burns"
+        },
+        {
+          "startMs": 20360,
+          "endMs": 20720,
+          "text": " green,"
+        },
+        {
+          "startMs": 21040,
+          "endMs": 21220,
+          "text": " and"
+        },
+        {
+          "startMs": 21220,
+          "endMs": 21320,
+          "text": " a"
+        },
+        {
+          "startMs": 21320,
+          "endMs": 21600,
+          "text": " machine"
+        },
+        {
+          "startMs": 21600,
+          "endMs": 21800,
+          "text": " of"
+        },
+        {
+          "startMs": 21800,
+          "endMs": 22000,
+          "text": " order"
+        },
+        {
+          "startMs": 22000,
+          "endMs": 22340,
+          "text": " starts"
+        },
+        {
+          "startMs": 22340,
+          "endMs": 22640,
+          "text": " to"
+        },
+        {
+          "startMs": 22640,
+          "endMs": 22800,
+          "text": " look"
+        },
+        {
+          "startMs": 22800,
+          "endMs": 23500,
+          "text": " disturbingly"
+        },
+        {
+          "startMs": 23500,
+          "endMs": 23820,
+          "text": " alive."
+        }
+      ]
+    },
+    {
+      "startMs": 24000,
+      "endMs": 25540,
+      "text": "Her pilot is no-chosen one.",
+      "words": [
+        {
+          "startMs": 24000,
+          "endMs": 24140,
+          "text": " Her"
+        },
+        {
+          "startMs": 24140,
+          "endMs": 24460,
+          "text": " pilot"
+        },
+        {
+          "startMs": 24460,
+          "endMs": 24640,
+          "text": " is"
+        },
+        {
+          "startMs": 24640,
+          "endMs": 24840,
+          "text": " no"
+        },
+        {
+          "startMs": 24840,
+          "endMs": 25220,
+          "text": "-chosen"
+        },
+        {
+          "startMs": 25220,
+          "endMs": 25540,
+          "text": " one."
+        }
+      ]
+    },
+    {
+      "startMs": 25540,
+      "endMs": 30080,
+      "text": "Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny.",
+      "words": [
+        {
+          "startMs": 25540,
+          "endMs": 26180,
+          "text": " Riddhe"
+        },
+        {
+          "startMs": 26180,
+          "endMs": 26540,
+          "text": " Marcenas,"
+        },
+        {
+          "startMs": 26960,
+          "endMs": 27100,
+          "text": " a"
+        },
+        {
+          "startMs": 27100,
+          "endMs": 27460,
+          "text": " Federation"
+        },
+        {
+          "startMs": 27460,
+          "endMs": 27920,
+          "text": " ace,"
+        },
+        {
+          "startMs": 28280,
+          "endMs": 28600,
+          "text": " fighting"
+        },
+        {
+          "startMs": 28600,
+          "endMs": 28860,
+          "text": " for"
+        },
+        {
+          "startMs": 28860,
+          "endMs": 29080,
+          "text": " duty"
+        },
+        {
+          "startMs": 29080,
+          "endMs": 29400,
+          "text": " rather"
+        },
+        {
+          "startMs": 29400,
+          "endMs": 29660,
+          "text": " than"
+        },
+        {
+          "startMs": 29660,
+          "endMs": 30080,
+          "text": " destiny."
+        }
+      ]
+    },
+    {
+      "startMs": 30260,
+      "endMs": 34520,
+      "text": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them.",
+      "words": [
+        {
+          "startMs": 30260,
+          "endMs": 30440,
+          "text": " While"
+        },
+        {
+          "startMs": 30440,
+          "endMs": 30940,
+          "text": " Banagher"
+        },
+        {
+          "startMs": 30940,
+          "endMs": 31200,
+          "text": " rides"
+        },
+        {
+          "startMs": 31200,
+          "endMs": 31400,
+          "text": " the"
+        },
+        {
+          "startMs": 31400,
+          "endMs": 31800,
+          "text": " Unicorn"
+        },
+        {
+          "startMs": 31800,
+          "endMs": 32120,
+          "text": " toward"
+        },
+        {
+          "startMs": 32120,
+          "endMs": 32540,
+          "text": " answers,"
+        },
+        {
+          "startMs": 33060,
+          "endMs": 33200,
+          "text": " Riddhe"
+        },
+        {
+          "startMs": 33200,
+          "endMs": 33320,
+          "text": " is"
+        },
+        {
+          "startMs": 33320,
+          "endMs": 33540,
+          "text": " ordered"
+        },
+        {
+          "startMs": 33540,
+          "endMs": 33780,
+          "text": " to"
+        },
+        {
+          "startMs": 33780,
+          "endMs": 34140,
+          "text": " silence"
+        },
+        {
+          "startMs": 34140,
+          "endMs": 34520,
+          "text": " them."
+        }
+      ]
+    },
+    {
+      "startMs": 34700,
+      "endMs": 36360,
+      "text": "The two machines were built as sisters.",
+      "words": [
+        {
+          "startMs": 34700,
+          "endMs": 34780,
+          "text": " The"
+        },
+        {
+          "startMs": 34780,
+          "endMs": 35000,
+          "text": " two"
+        },
+        {
+          "startMs": 35000,
+          "endMs": 35400,
+          "text": " machines"
+        },
+        {
+          "startMs": 35400,
+          "endMs": 35600,
+          "text": " were"
+        },
+        {
+          "startMs": 35600,
+          "endMs": 35840,
+          "text": " built"
+        },
+        {
+          "startMs": 35840,
+          "endMs": 35980,
+          "text": " as"
+        },
+        {
+          "startMs": 35980,
+          "endMs": 36360,
+          "text": " sisters."
+        }
+      ]
+    },
+    {
+      "startMs": 36780,
+      "endMs": 39060,
+      "text": "In the dark of space they do not simply fight.",
+      "words": [
+        {
+          "startMs": 36780,
+          "endMs": 36940,
+          "text": " In"
+        },
+        {
+          "startMs": 36940,
+          "endMs": 37060,
+          "text": " the"
+        },
+        {
+          "startMs": 37060,
+          "endMs": 37300,
+          "text": " dark"
+        },
+        {
+          "startMs": 37300,
+          "endMs": 37460,
+          "text": " of"
+        },
+        {
+          "startMs": 37460,
+          "endMs": 37760,
+          "text": " space"
+        },
+        {
+          "startMs": 37760,
+          "endMs": 38000,
+          "text": " they"
+        },
+        {
+          "startMs": 38000,
+          "endMs": 38180,
+          "text": " do"
+        },
+        {
+          "startMs": 38180,
+          "endMs": 38360,
+          "text": " not"
+        },
+        {
+          "startMs": 38360,
+          "endMs": 38720,
+          "text": " simply"
+        },
+        {
+          "startMs": 38720,
+          "endMs": 39060,
+          "text": " fight."
+        }
+      ]
+    },
+    {
+      "startMs": 39380,
+      "endMs": 42940,
+      "text": "As the line goes, the Unicorn and the Banjee are pulling on each other.",
+      "words": [
+        {
+          "startMs": 39380,
+          "endMs": 39560,
+          "text": " As"
+        },
+        {
+          "startMs": 39560,
+          "endMs": 39700,
+          "text": " the"
+        },
+        {
+          "startMs": 39700,
+          "endMs": 39920,
+          "text": " line"
+        },
+        {
+          "startMs": 39920,
+          "endMs": 40200,
+          "text": " goes,"
+        },
+        {
+          "startMs": 40580,
+          "endMs": 40700,
+          "text": " the"
+        },
+        {
+          "startMs": 40700,
+          "endMs": 41100,
+          "text": " Unicorn"
+        },
+        {
+          "startMs": 41100,
+          "endMs": 41320,
+          "text": " and"
+        },
+        {
+          "startMs": 41320,
+          "endMs": 41440,
+          "text": " the"
+        },
+        {
+          "startMs": 41440,
+          "endMs": 41860,
+          "text": " Banjee"
+        },
+        {
+          "startMs": 41860,
+          "endMs": 41980,
+          "text": " are"
+        },
+        {
+          "startMs": 41980,
+          "endMs": 42200,
+          "text": " pulling"
+        },
+        {
+          "startMs": 42200,
+          "endMs": 42460,
+          "text": " on"
+        },
+        {
+          "startMs": 42460,
+          "endMs": 42660,
+          "text": " each"
+        },
+        {
+          "startMs": 42660,
+          "endMs": 42940,
+          "text": " other."
+        }
+      ]
+    },
+    {
+      "startMs": 43020,
+      "endMs": 46880,
+      "text": "And when the psycho-frame screams, it is not a curse, it was a prayer.",
+      "words": [
+        {
+          "startMs": 43020,
+          "endMs": 43160,
+          "text": " And"
+        },
+        {
+          "startMs": 43160,
+          "endMs": 43300,
+          "text": " when"
+        },
+        {
+          "startMs": 43300,
+          "endMs": 43440,
+          "text": " the"
+        },
+        {
+          "startMs": 43440,
+          "endMs": 43720,
+          "text": " psycho"
+        },
+        {
+          "startMs": 43720,
+          "endMs": 44080,
+          "text": "-frame"
+        },
+        {
+          "startMs": 44080,
+          "endMs": 44440,
+          "text": " screams,"
+        },
+        {
+          "startMs": 44960,
+          "endMs": 45100,
+          "text": " it"
+        },
+        {
+          "startMs": 45100,
+          "endMs": 45220,
+          "text": " is"
+        },
+        {
+          "startMs": 45220,
+          "endMs": 45420,
+          "text": " not"
+        },
+        {
+          "startMs": 45420,
+          "endMs": 45620,
+          "text": " a"
+        },
+        {
+          "startMs": 45620,
+          "endMs": 45800,
+          "text": " curse,"
+        },
+        {
+          "startMs": 46180,
+          "endMs": 46340,
+          "text": " it"
+        },
+        {
+          "startMs": 46340,
+          "endMs": 46500,
+          "text": " was"
+        },
+        {
+          "startMs": 46500,
+          "endMs": 46660,
+          "text": " a"
+        },
+        {
+          "startMs": 46660,
+          "endMs": 46880,
+          "text": " prayer."
+        }
+      ]
+    },
+    {
+      "startMs": 47080,
+      "endMs": 53440,
+      "text": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once.",
+      "words": [
+        {
+          "startMs": 47080,
+          "endMs": 47220,
+          "text": " Near"
+        },
+        {
+          "startMs": 47220,
+          "endMs": 47400,
+          "text": " the"
+        },
+        {
+          "startMs": 47400,
+          "endMs": 47740,
+          "text": " end,"
+        },
+        {
+          "startMs": 48020,
+          "endMs": 48340,
+          "text": " sensors"
+        },
+        {
+          "startMs": 48340,
+          "endMs": 48860,
+          "text": " report"
+        },
+        {
+          "startMs": 48860,
+          "endMs": 49280,
+          "text": " resonance"
+        },
+        {
+          "startMs": 49280,
+          "endMs": 49740,
+          "text": " beyond"
+        },
+        {
+          "startMs": 49740,
+          "endMs": 50080,
+          "text": " every"
+        },
+        {
+          "startMs": 50080,
+          "endMs": 50540,
+          "text": " measurable"
+        },
+        {
+          "startMs": 50540,
+          "endMs": 50980,
+          "text": " limit,"
+        },
+        {
+          "startMs": 51280,
+          "endMs": 51460,
+          "text": " as"
+        },
+        {
+          "startMs": 51460,
+          "endMs": 51620,
+          "text": " if"
+        },
+        {
+          "startMs": 51620,
+          "endMs": 51960,
+          "text": " countless"
+        },
+        {
+          "startMs": 51960,
+          "endMs": 52360,
+          "text": " hearts"
+        },
+        {
+          "startMs": 52360,
+          "endMs": 52560,
+          "text": " were"
+        },
+        {
+          "startMs": 52560,
+          "endMs": 52900,
+          "text": " sounding"
+        },
+        {
+          "startMs": 52900,
+          "endMs": 53120,
+          "text": " at"
+        },
+        {
+          "startMs": 53120,
+          "endMs": 53440,
+          "text": " once."
+        }
+      ]
+    },
+    {
+      "startMs": 53440,
+      "endMs": 55760,
+      "text": "She was built to bury the secret of Laplace.",
+      "words": [
+        {
+          "startMs": 53440,
+          "endMs": 53800,
+          "text": " She"
+        },
+        {
+          "startMs": 53800,
+          "endMs": 53980,
+          "text": " was"
+        },
+        {
+          "startMs": 53980,
+          "endMs": 54200,
+          "text": " built"
+        },
+        {
+          "startMs": 54200,
+          "endMs": 54400,
+          "text": " to"
+        },
+        {
+          "startMs": 54400,
+          "endMs": 54620,
+          "text": " bury"
+        },
+        {
+          "startMs": 54620,
+          "endMs": 54820,
+          "text": " the"
+        },
+        {
+          "startMs": 54820,
+          "endMs": 55160,
+          "text": " secret"
+        },
+        {
+          "startMs": 55160,
+          "endMs": 55360,
+          "text": " of"
+        },
+        {
+          "startMs": 55360,
+          "endMs": 55760,
+          "text": " Laplace."
+        }
+      ]
+    },
+    {
+      "startMs": 56040,
+      "endMs": 60480,
+      "text": "In the end, even the Federation's sharpest spear could not stop the truth being born.",
+      "words": [
+        {
+          "startMs": 56040,
+          "endMs": 56160,
+          "text": " In"
+        },
+        {
+          "startMs": 56160,
+          "endMs": 56280,
+          "text": " the"
+        },
+        {
+          "startMs": 56280,
+          "endMs": 56580,
+          "text": " end,"
+        },
+        {
+          "startMs": 56820,
+          "endMs": 57040,
+          "text": " even"
+        },
+        {
+          "startMs": 57040,
+          "endMs": 57200,
+          "text": " the"
+        },
+        {
+          "startMs": 57200,
+          "endMs": 57880,
+          "text": " Federation's"
+        },
+        {
+          "startMs": 57880,
+          "endMs": 58320,
+          "text": " sharpest"
+        },
+        {
+          "startMs": 58320,
+          "endMs": 58600,
+          "text": " spear"
+        },
+        {
+          "startMs": 58600,
+          "endMs": 58820,
+          "text": " could"
+        },
+        {
+          "startMs": 58820,
+          "endMs": 59040,
+          "text": " not"
+        },
+        {
+          "startMs": 59040,
+          "endMs": 59380,
+          "text": " stop"
+        },
+        {
+          "startMs": 59380,
+          "endMs": 59600,
+          "text": " the"
+        },
+        {
+          "startMs": 59600,
+          "endMs": 59840,
+          "text": " truth"
+        },
+        {
+          "startMs": 59840,
+          "endMs": 60180,
+          "text": " being"
+        },
+        {
+          "startMs": 60180,
+          "endMs": 60480,
+          "text": " born."
+        }
+      ]
+    },
+    {
+      "startMs": 60860,
+      "endMs": 62260,
+      "text": "We were blessed when we were born.",
+      "words": [
+        {
+          "startMs": 60860,
+          "endMs": 60980,
+          "text": " We"
+        },
+        {
+          "startMs": 60980,
+          "endMs": 61140,
+          "text": " were"
+        },
+        {
+          "startMs": 61140,
+          "endMs": 61440,
+          "text": " blessed"
+        },
+        {
+          "startMs": 61440,
+          "endMs": 61640,
+          "text": " when"
+        },
+        {
+          "startMs": 61640,
+          "endMs": 61800,
+          "text": " we"
+        },
+        {
+          "startMs": 61800,
+          "endMs": 61960,
+          "text": " were"
+        },
+        {
+          "startMs": 61960,
+          "endMs": 62260,
+          "text": " born."
+        }
+      ]
+    },
+    {
+      "startMs": 62420,
+      "endMs": 65820,
+      "text": "The Banjee Norn, the reluctant angel of the Universal Century",
+      "words": [
+        {
+          "startMs": 62420,
+          "endMs": 62520,
+          "text": " The"
+        },
+        {
+          "startMs": 62520,
+          "endMs": 62960,
+          "text": " Banjee"
+        },
+        {
+          "startMs": 62960,
+          "endMs": 63320,
+          "text": " Norn,"
+        },
+        {
+          "startMs": 63580,
+          "endMs": 63700,
+          "text": " the"
+        },
+        {
+          "startMs": 63700,
+          "endMs": 64080,
+          "text": " reluctant"
+        },
+        {
+          "startMs": 64080,
+          "endMs": 64540,
+          "text": " angel"
+        },
+        {
+          "startMs": 64540,
+          "endMs": 64720,
+          "text": " of"
+        },
+        {
+          "startMs": 64720,
+          "endMs": 64840,
+          "text": " the"
+        },
+        {
+          "startMs": 64840,
+          "endMs": 65260,
+          "text": " Universal"
+        },
+        {
+          "startMs": 65260,
+          "endMs": 65820,
+          "text": " Century"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "resolution": [
+  1280,
+  720
+ ],
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "片头标题卡 0.2–6.5s（上部车道，与 N01 cue 7.0s 起错开）"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "本项目未启用"
+  },
+  "narration": {
+   "topPct": 70,
+   "bottomPct": 84,
+   "fontsize": 27,
+   "maxLines": 2,
+   "marginV": 115,
+   "marginL": 20,
+   "marginR": 20,
+   "autoWrap": false
+  },
+  "sourceExclusion": {
+   "topPct": 84,
+   "bottomPct": 100,
+   "usage": "源烧录字幕带（全片普遍）：口播字幕永不进入本区"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "mask": "13 个入选窗口全部带烧录中日字幕（底部 ~84–100%）：G4 以画面相融窄遮罩（黑底条 alpha 0.85）覆盖 84–100% 区域；crop 会破坏 16:9 构图故不采用",
+  "watermark": "140s 字幕组名单/960s 时钟不在入选窗口；1160–1180s 名单烧录在 84% 以下由遮罩覆盖；台标保留计入 G5 分发边界披露（internal_test）"
+ },
+ "rules": [
+  "一条口播一个排版块（12 cue 与 G2 批准稿逐句一一对应，逐字未改，仅显式 \\N 语义断行）",
+  "英文断行按空格；宽度模型=全角1.0em/其余0.55em，可用宽=1280−40=1240px，最宽行 44.55em×27=1203px ✓",
+  "渲染器能力档 autoWrap=false（探测于 字幕-渲染器能力档-v0.1.json）：长句必须显式 \\N",
+  "片头标题卡与 N01 错开 0.5s（6.5s vs 7.0s）"
+ ],
+ "experienceBasis": "经验库查询 1280x720=resolutionMiss（4 条命中均为 1080p/其他），回落模板默认按 1080p 64px 等比缩至 720p≈43px，再按英文 0.55em 宽度模型收敛到 27px 保证两行封顶；批准≠继承"
+}

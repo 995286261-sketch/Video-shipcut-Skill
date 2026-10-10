@@ -1,0 +1,121 @@
+{
+ "schemaVersion": "0.2",
+ "node": "G3",
+ "purpose": "music_align 输入（输出轴口播边界）",
+ "derivedFrom": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+ "derivedFromSha256": "7E3C3BE3A58A93E6B1B69EC283644580E3702CEEFEAF8327361B0C44D305739D",
+ "derivationNote": "startMs=输出轴落位（G3 口播语义节拍 v0.1 placement，时间轴 124000ms）；durationMs=Samantha 实测。v0.1 用的是叙述轴累计（错轴，转场校验暴露），v0.2 修正为成片网格坐标（音不动画面服从）。",
+ "voice": "Samantha",
+ "voiceTier": "preview_only",
+ "measuredTotalDurationMs": 66074,
+ "sentences": [
+  {
+   "sentenceId": "s01",
+   "text": "In the Universal Century, not every mobile suit gets to be the hero's machine.",
+   "startMs": 7000,
+   "durationMs": 4409,
+   "measuredStartMs": 7000,
+   "measuredDurMs": 4409,
+   "measuredEndMs": 11409
+  },
+  {
+   "sentenceId": "s02",
+   "text": "R-X zero N, the Banshee Norn, Goddess of Fate: the Earth Federation's second answer to the riddle of the Unicorn.",
+   "startMs": 16500,
+   "durationMs": 6927,
+   "measuredStartMs": 16500,
+   "measuredDurMs": 6927,
+   "measuredEndMs": 23427
+  },
+  {
+   "sentenceId": "s03",
+   "text": "Like the Unicorn, she carries a psycho-frame, armor that answers a Newtype's will.",
+   "startMs": 28500,
+   "durationMs": 4973,
+   "measuredStartMs": 28500,
+   "measuredDurMs": 4973,
+   "measuredEndMs": 33473
+  },
+  {
+   "sentenceId": "s04",
+   "text": "When the N-T-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive.",
+   "startMs": 38500,
+   "durationMs": 7676,
+   "measuredStartMs": 38500,
+   "measuredDurMs": 7676,
+   "measuredEndMs": 46176
+  },
+  {
+   "sentenceId": "s05",
+   "text": "Her pilot is no chosen one. Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny.",
+   "startMs": 51000,
+   "durationMs": 6276,
+   "measuredStartMs": 51000,
+   "measuredDurMs": 6276,
+   "measuredEndMs": 57276
+  },
+  {
+   "sentenceId": "s06",
+   "text": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them.",
+   "startMs": 62000,
+   "durationMs": 4437,
+   "measuredStartMs": 62000,
+   "measuredDurMs": 4437,
+   "measuredEndMs": 66437
+  },
+  {
+   "sentenceId": "s07",
+   "text": "The two machines were built as sisters. In the dark of space they do not simply fight. As the line goes: the Unicorn and the Banshee are pulling on each other.",
+   "startMs": 71500,
+   "durationMs": 8336,
+   "measuredStartMs": 71500,
+   "measuredDurMs": 8336,
+   "measuredEndMs": 79836
+  },
+  {
+   "sentenceId": "s08",
+   "text": "And when the psycho-frame screams, it is not a curse. It was a prayer.",
+   "startMs": 84500,
+   "durationMs": 4035,
+   "measuredStartMs": 84500,
+   "measuredDurMs": 4035,
+   "measuredEndMs": 88535
+  },
+  {
+   "sentenceId": "s09",
+   "text": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once.",
+   "startMs": 93000,
+   "durationMs": 6576,
+   "measuredStartMs": 93000,
+   "measuredDurMs": 6576,
+   "measuredEndMs": 99576
+  },
+  {
+   "sentenceId": "s10",
+   "text": "She was built to bury the secret of Laplace.",
+   "startMs": 103500,
+   "durationMs": 2413,
+   "measuredStartMs": 103500,
+   "measuredDurMs": 2413,
+   "measuredEndMs": 105913
+  },
+  {
+   "sentenceId": "s11",
+   "text": "In the end, even the Federation's sharpest spear could not stop the truth being born. We were blessed when we were born.",
+   "startMs": 110500,
+   "durationMs": 6370,
+   "measuredStartMs": 110500,
+   "measuredDurMs": 6370,
+   "measuredEndMs": 116870
+  },
+  {
+   "sentenceId": "s12",
+   "text": "The Banshee Norn: the reluctant angel of the Universal Century.",
+   "startMs": 119500,
+   "durationMs": 3646,
+   "measuredStartMs": 119500,
+   "measuredDurMs": 3646,
+   "measuredEndMs": 123146
+  }
+ ]
+}

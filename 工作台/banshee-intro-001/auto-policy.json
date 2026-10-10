@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "auto-approval-policy",
+  "projectId": "banshee-intro-001",
+  "authorizedBy": "用户（host-session）",
+  "authorizedAt": "2026-10-09T16:26:00+08:00",
+  "statement": "本项目（banshee-intro-001，内部留存）采用自动确认：G0–G5 各门禁的机器校验照跑、回显卡每节点边界照出，一张不减；批准由本策略预授权代替人工口令，命中条款按策略自动确认并如实记 approvalSource=auto-policy（绝不伪造人类原话）。预授权未覆盖的信任类事项照停（宁可停不可猜）；未清权音乐×对外发布、授权不明×对外发布、人工背书断言三类永久不可预授权。依据=用户 2026-10-09 在策略预授权草案卡上的逐字批准：「全部默认建议啊，这边没必要停下来的，你只需要把卡片回显示给用户看，自己跑就行了，用户发现不对自然会打断你」",
+  "preAuthorizations": [
+    {
+      "category": "subject_policy",
+      "basis": "草案卡第 3 条：G3 主体政策=只收录能明确识别为报丧女妖（RX-0(N) 命运女神）的镜头，识别不确定的画面不入成片；素材自带台标水印画面照原样保留。用户逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00"
+    },
+    {
+      "category": "music_delegated_selection",
+      "basis": "用户开工单原话「背景音乐你来帮我找」+草案卡第 1 条（G1 末检索候选、按试听笔记选出最贴合一首直接用，不再等用户挑曲）获逐字批准「全部默认建议」。通道=内部留存→网易云全曲库试听件选型，未清权状态如实登记。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00"
+    },
+    {
+      "category": "preview_voice_production",
+      "basis": "用户原话「AI旁白」验收推荐默认（英文，音色 Samantha/Daniel/Karen 到 G2 试听卡定）。系统声为预览级音质，成片沿用预览级配音升成品级，此披露随卡与交付包一字不松。草案卡第 2 条获逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00"
+    },
+    {
+      "category": "sufficiency_shorten",
+      "basis": "草案卡第 4 条：素材不足以支撑规划时长时，默认走缩短/改写回 G2 的充分性兜底，不缩短画面叙事完整性优先于凑时长。用户逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00"
+    },
+    {
+      "category": "loudness_blocked_exit",
+      "basis": "草案卡第 5 条：响度计划 blocked（源物理天花板够不到目标）时，接受降目标到天花板数值的让步出路继续走，让步数字在卡上点名披露。用户逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00",
+      "parameters": { "exit": "把目标响度降到至多" }
+    },
+    {
+      "category": "transition_preview_waiver",
+      "basis": "草案卡第 6 条：转场试装预览照生成、视觉模型逐帧查看；仅当预览产物本机无法生成（blocked_previews）需豁免时，视为用户预先知情批准『批准的是未见过的效果』这一披露。用户逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00"
+    },
+    {
+      "category": "warning_acceptance",
+      "basis": "草案卡第 7 条（窄授权）：仅限素材自带的平台水印/版权台标保留类警告，逐条点名露出后视为接受；其他任何警告不在授权范围，出现即停下等用户。用户逐字批准「全部默认建议」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-10-09T16:26:00+08:00",
+      "parameters": { "scopes": ["水印", "台标"] }
+    }
+  ]
+}

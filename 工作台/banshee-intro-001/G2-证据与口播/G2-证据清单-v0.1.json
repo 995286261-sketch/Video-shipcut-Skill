@@ -1,0 +1,27 @@
+{
+  "projectId": "banshee-intro-001",
+  "status": "complete",
+  "evidencePolicy": "证据=素材包内文件的画面/字幕实读；机器转写仅草稿证据（本素材音轨为日语歌曲，离线转写输出为幻觉文本，不得引用）；口播句逐条回指 evidenceId，无据句标 pending 或按编辑观点句处理",
+  "sourceEvidence": [
+    {"evidenceId": "ev-001", "assetId": "source-02-rx-0-n-17620f86", "startMs": 140000, "endMs": 142000, "kind": "burned_in_subtitle", "quote": "獨角獸與報喪女妖在互相牽引著 / ユニコーンとバンシィが引っ張り合ってる", "method": "字幕条采样视觉实读（20s 步进）"},
+    {"evidenceId": "ev-002", "assetId": "source-02-rx-0-n-17620f86", "startMs": 160000, "endMs": 162000, "kind": "burned_in_subtitle", "quote": "利迪先生 不可以！/ リディさん、ダメだ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-003", "assetId": "source-02-rx-0-n-17620f86", "startMs": 240000, "endMs": 242000, "kind": "burned_in_subtitle", "quote": "那原本不是詛咒而是祈願 / あれは呪いじゃなくて祈りだったんだ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-004", "assetId": "source-02-rx-0-n-17620f86", "startMs": 420000, "endMs": 422000, "kind": "burned_in_subtitle", "quote": "收集到的人心的雜念 / 人の雑念を拾ってるんだ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-005", "assetId": "source-02-rx-0-n-17620f86", "startMs": 500000, "endMs": 502000, "kind": "burned_in_subtitle", "quote": "超出數值上限的…感應波！/ 数値を超えた…感応波だと…", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-006", "assetId": "source-02-rx-0-n-17620f86", "startMs": 520000, "endMs": 522000, "kind": "burned_in_subtitle", "quote": "有這麼多的人互相迴響著 / こんなにたくさんの人が響き合っている", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-007", "assetId": "source-02-rx-0-n-17620f86", "startMs": 540000, "endMs": 542000, "kind": "burned_in_subtitle", "quote": "利迪少尉 報喪女妖也參戰了 / リディ少尉、バンシィが参戦する道徳", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-008", "assetId": "source-02-rx-0-n-17620f86", "startMs": 680000, "endMs": 682000, "kind": "burned_in_subtitle", "quote": "測定為殖民衛星大小的物體 / フロニーサイズの物體と測定", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-009", "assetId": "source-02-rx-0-n-17620f86", "startMs": 720000, "endMs": 722000, "kind": "burned_in_subtitle", "quote": "我們是被祝福著出生到這世上的 / おれたちは祝福されて生まれてきたんだ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-010", "assetId": "source-02-rx-0-n-17620f86", "startMs": 740000, "endMs": 742000, "kind": "burned_in_subtitle", "quote": "格利普斯裡面也有上千人在啊 / グリプス2にも千人以上の人間が詰めてるんだぞ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-011", "assetId": "source-02-rx-0-n-17620f86", "startMs": 820000, "endMs": 822000, "kind": "burned_in_subtitle", "quote": "你和公主兩人 就能轉化悲傷為力量照亮前路 / 悲しみを糧として道を照らせば 妳姫と2人で", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-012", "assetId": "source-02-rx-0-n-17620f86", "startMs": 860000, "endMs": 862000, "kind": "burned_in_subtitle", "quote": "你才…剛誕生而已 巴納吉！/ お前はまだ生まれたばかりなんだから バナージ", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-013", "assetId": "source-02-rx-0-n-17620f86", "startMs": 900000, "endMs": 902000, "kind": "burned_in_subtitle", "quote": "而聽到這場轉播的各位 / この成きをお聞きの皆さん", "method": "字幕条采样视觉实读"},
+    {"evidenceId": "ev-014", "assetId": "source-02-rx-0-n-17620f86", "startMs": 0, "endMs": 1195321, "kind": "asset_identity", "quote": "素材文件名《【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）》，用户 2026-10-09 亲手提供；sha256 D3E966E0… 与 material-pack.json 对账一致", "method": "登记件对账"},
+    {"evidenceId": "ev-015", "assetId": "source-02-rx-0-n-17620f86", "startMs": 0, "endMs": 1195321, "kind": "visual_frames", "quote": "联系表 30 格+字幕条 60 格：黑绿配色报丧女妖多次出场（面具展开/绿色精神感应框架发光/与白色独角兽对峙），确认主体画面充足", "method": "帧采样视觉实读（banshee-source-contact-sheet.jpg、字幕条 strip-1..3）"}
+  ],
+  "draftEvidence": [
+    {"evidenceId": "ev-T01", "assetId": "source-02-rx-0-n-17620f86", "kind": "machine_transcript_draft", "note": "转写 283 段为日语歌曲音轨上的幻觉输出（语言误检 zh），仅存档不得引用", "ref": "工作台/banshee-intro-001/G2-证据与口播/转写/banshee-source/"}
+  ],
+  "factEvidenceRefs": ["ev-001", "ev-002", "ev-003", "ev-004", "ev-005", "ev-006", "ev-007", "ev-008", "ev-009", "ev-010", "ev-011", "ev-012", "ev-013", "ev-014", "ev-015"],
+  "handoff": "G3 按 ev 时间码选主体镜头；identityStatus 判定须抽帧精看（联系表只作定位）；口播 s06/s10 的概括句按 pending 处理（叙事概括，画面佐证在 ev-001/ev-013）"
+}

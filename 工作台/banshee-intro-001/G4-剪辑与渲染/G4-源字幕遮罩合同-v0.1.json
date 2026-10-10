@@ -1,0 +1,168 @@
+{
+ "node": "G4",
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "canvas": {
+  "width": 1280,
+  "height": 720
+ },
+ "masks": [
+  {
+   "maskId": "m-seg-01",
+   "segmentId": "seg-01",
+   "outputFromMs": 0,
+   "outputToMs": 13955,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-02",
+   "segmentId": "seg-02",
+   "outputFromMs": 13955,
+   "outputToMs": 25968,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-03a",
+   "segmentId": "seg-03a",
+   "outputFromMs": 25968,
+   "outputToMs": 32500,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-03b",
+   "segmentId": "seg-03b",
+   "outputFromMs": 32500,
+   "outputToMs": 35987,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-04",
+   "segmentId": "seg-04",
+   "outputFromMs": 35987,
+   "outputToMs": 48593,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-05",
+   "segmentId": "seg-05",
+   "outputFromMs": 48593,
+   "outputToMs": 59638,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-06",
+   "segmentId": "seg-06",
+   "outputFromMs": 59638,
+   "outputToMs": 68969,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-07",
+   "segmentId": "seg-07",
+   "outputFromMs": 68969,
+   "outputToMs": 82168,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-08",
+   "segmentId": "seg-08",
+   "outputFromMs": 82168,
+   "outputToMs": 90768,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-09",
+   "segmentId": "seg-09",
+   "outputFromMs": 90768,
+   "outputToMs": 101538,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-10",
+   "segmentId": "seg-10",
+   "outputFromMs": 101538,
+   "outputToMs": 108207,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-11",
+   "segmentId": "seg-11",
+   "outputFromMs": 108207,
+   "outputToMs": 118185,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  },
+  {
+   "maskId": "m-seg-12",
+   "segmentId": "seg-12",
+   "outputFromMs": 118185,
+   "outputToMs": 124000,
+   "bandYpx": [
+    605,
+    720
+   ],
+   "color": "black@0.85",
+   "basis": "G3 批准 sourceCaptionTreatment=mask 84–100%%（720x0.84=605）；逐段转写自批准表，非现场发明"
+  }
+ ],
+ "note": "源烧录中日字幕带=底部 84–100%；全 13 段全覆盖（每段起止=其输出区间）。"
+}

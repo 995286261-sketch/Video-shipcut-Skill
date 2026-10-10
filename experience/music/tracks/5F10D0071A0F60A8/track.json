@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "5F10D0071A0F60A8F57F067E9C9CC2F065B51D3AF778734A83297F725FE99E33",
+  "aliases": [
+    {
+      "title": "【FREE】2022.7.22 EBM Rap Instr 1 <<Loveless>>",
+      "neteaseId": 1966162824,
+      "sourceUrl": "https://music.163.com/song?id=1966162824",
+      "provenance": "netease_search",
+      "project": "banshee-intro-001",
+      "seenAt": "2026-10-09T08:46:35Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-1966162824-【FREE】2022.7.22_EBM_Rap_Instr_1_Loveless.mp3",
+      "recordedAt": "2026-10-09T08:46:35Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-10-09T08:46:35Z",
+  "updatedAt": "2026-10-09T08:46:35Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "node": "G1",
+  "cardType": "g1_direction_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-10-09T17:05:00+08:00",
+  "reviewCardRef": "工作台/banshee-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+  "basisRefs": [
+    "工作台/banshee-intro-001/G1-创作方向/G1-方向简报.md",
+    "工作台/banshee-intro-001/G1-创作方向/G1-方向简报.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-方向输入-v0.1.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-方向确认记录.md",
+    "工作台/banshee-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md",
+    "工作台/banshee-intro-001/G1-创作方向/G1-参考视频分析/reference-analysis-manifest-v0.1.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/BGM-需求画像-v0.1.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/检索词卡-v0.1/BGM-检索词-v0.1.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/检索词卡-v0.2/BGM-检索词-v0.1.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/库内批次/BGM-候选清单-库内-v0.2.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/BGM-候选清单-netease-20261009T164251.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/BGM-候选清单-freesound-20261009T165244.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/BGM-推荐排序-v0.6.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/AB试听笔记-v0.5.json",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/BGM-试听笔记回显-v0.5.md",
+    "工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+    "工作台/banshee-intro-001/G0-素材包/07_授权音频/BGM-候选登记-LOW-PHONK-VodKe-HSHK-Pnan-0B2F3018.json",
+    "工作台/banshee-intro-001/G0-素材包/01_需求说明.md",
+    "工作台/banshee-intro-001/G0-素材包/04_授权说明.md",
+    "工作台/banshee-intro-001/G0-素材包/material-pack.json",
+    "工作台/banshee-intro-001/auto-policy.json"
+  ],
+  "checklist": [
+    {"id": "direction_brief", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G1-创作方向/G1-方向简报.md"},
+    {"id": "claims_and_boundaries", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G1-创作方向/G1-方向简报.json"},
+    {"id": "direction_card", "required": true, "status": "completed", "evidenceRef": "工作台/banshee-intro-001/G1-创作方向/G1-最终回显卡-v0.1.md"}
+  ]
+}

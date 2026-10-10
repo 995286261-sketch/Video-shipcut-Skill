@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "0.2",
+  "purpose": "bgm_alignment",
+  "skill": "music-expert",
+  "inputs": {
+    "report": "工作台/banshee-intro-001/G0-素材包/07_授权音频/BGM-分析报告-LOW-PHONK-0B2F3018.json",
+    "voiceBrief": "工作台/banshee-intro-001/G3-剪辑计划/BGM/配音清单-派生-带起点-v0.2.json",
+    "reportCacheKey": {
+      "sha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+      "analysisVersion": "music-expert-analysis-v0.2",
+      "sampleRate": 22050,
+      "mediaKind": "video-with-audio"
+    },
+    "briefProjectId": null
+  },
+  "alignment": {
+    "offsetMs": 31687,
+    "rawOffsetMs": 31687,
+    "clampedDeviationMs": 0,
+    "basis": "climax sentence s04 center 0:42.338 ← top-energy segment center 1:14.025",
+    "topEnergySegment": {
+      "startMs": 61115,
+      "endMs": 86936,
+      "energyMean": 0.315979
+    },
+    "topSegmentOnTimeline": [
+      29428,
+      55249
+    ],
+    "climaxAnchorSentence": "s04",
+    "coveredSentences": [
+      {
+        "sentenceId": "s03",
+        "overlapMs": 4045
+      },
+      {
+        "sentenceId": "s04",
+        "overlapMs": 7676
+      },
+      {
+        "sentenceId": "s05",
+        "overlapMs": 4249
+      }
+    ],
+    "trackMs": 177875,
+    "timelineMs": 124000,
+    "tempoBpm": 112.35,
+    "trackTitle": "LOW-PHONK.mp3"
+  },
+  "boundaries": [
+    {
+      "sentenceId": "s01",
+      "startMs": 7000,
+      "endMs": 11409
+    },
+    {
+      "sentenceId": "s02",
+      "startMs": 16500,
+      "endMs": 23427
+    },
+    {
+      "sentenceId": "s03",
+      "startMs": 28500,
+      "endMs": 33473
+    },
+    {
+      "sentenceId": "s04",
+      "startMs": 38500,
+      "endMs": 46176
+    },
+    {
+      "sentenceId": "s05",
+      "startMs": 51000,
+      "endMs": 57276
+    },
+    {
+      "sentenceId": "s06",
+      "startMs": 62000,
+      "endMs": 66437
+    },
+    {
+      "sentenceId": "s07",
+      "startMs": 71500,
+      "endMs": 79836
+    },
+    {
+      "sentenceId": "s08",
+      "startMs": 84500,
+      "endMs": 88535
+    },
+    {
+      "sentenceId": "s09",
+      "startMs": 93000,
+      "endMs": 99576
+    },
+    {
+      "sentenceId": "s10",
+      "startMs": 103500,
+      "endMs": 105913
+    },
+    {
+      "sentenceId": "s11",
+      "startMs": 110500,
+      "endMs": 116870
+    },
+    {
+      "sentenceId": "s12",
+      "startMs": 119500,
+      "endMs": 123146
+    }
+  ],
+  "snapped": [
+    {
+      "sentenceId": "s01",
+      "boundary": "start",
+      "boundaryMs": 7000,
+      "hitPointTrackMs": 38777,
+      "hitPointTimelineMs": 7090,
+      "deltaMs": 90
+    },
+    {
+      "sentenceId": "s01",
+      "boundary": "end",
+      "boundaryMs": 11409,
+      "hitPointTrackMs": 43119,
+      "hitPointTimelineMs": 11432,
+      "deltaMs": 23
+    },
+    {
+      "sentenceId": "s02",
+      "boundary": "start",
+      "boundaryMs": 16500,
+      "hitPointTrackMs": 48298,
+      "hitPointTimelineMs": 16611,
+      "deltaMs": 111
+    },
+    {
+      "sentenceId": "s02",
+      "boundary": "end",
+      "boundaryMs": 23427,
+      "hitPointTrackMs": 55147,
+      "hitPointTimelineMs": 23460,
+      "deltaMs": 33
+    },
+    {
+      "sentenceId": "s03",
+      "boundary": "start",
+      "boundaryMs": 28500,
+      "hitPointTrackMs": 60070,
+      "hitPointTimelineMs": 28383,
+      "deltaMs": -117
+    },
+    {
+      "sentenceId": "s03",
+      "boundary": "end",
+      "boundaryMs": 33473,
+      "hitPointTrackMs": 65225,
+      "hitPointTimelineMs": 33538,
+      "deltaMs": 65
+    },
+    {
+      "sentenceId": "s04",
+      "boundary": "start",
+      "boundaryMs": 38500,
+      "hitPointTrackMs": 70124,
+      "hitPointTimelineMs": 38437,
+      "deltaMs": -63
+    },
+    {
+      "sentenceId": "s04",
+      "boundary": "end",
+      "boundaryMs": 46176,
+      "hitPointTrackMs": 77764,
+      "hitPointTimelineMs": 46077,
+      "deltaMs": -99
+    },
+    {
+      "sentenceId": "s05",
+      "boundary": "start",
+      "boundaryMs": 51000,
+      "hitPointTrackMs": 82663,
+      "hitPointTimelineMs": 50976,
+      "deltaMs": -24
+    },
+    {
+      "sentenceId": "s05",
+      "boundary": "end",
+      "boundaryMs": 57276,
+      "hitPointTrackMs": 88979,
+      "hitPointTimelineMs": 57292,
+      "deltaMs": 16
+    },
+    {
+      "sentenceId": "s06",
+      "boundary": "start",
+      "boundaryMs": 62000,
+      "hitPointTrackMs": 93623,
+      "hitPointTimelineMs": 61936,
+      "deltaMs": -64
+    },
+    {
+      "sentenceId": "s06",
+      "boundary": "end",
+      "boundaryMs": 66437,
+      "hitPointTrackMs": 98244,
+      "hitPointTimelineMs": 66557,
+      "deltaMs": 120
+    },
+    {
+      "sentenceId": "s07",
+      "boundary": "start",
+      "boundaryMs": 71500,
+      "hitPointTrackMs": 103166,
+      "hitPointTimelineMs": 71479,
+      "deltaMs": -21
+    },
+    {
+      "sentenceId": "s07",
+      "boundary": "end",
+      "boundaryMs": 79836,
+      "hitPointTrackMs": 111572,
+      "hitPointTimelineMs": 79885,
+      "deltaMs": 49
+    },
+    {
+      "sentenceId": "s08",
+      "boundary": "start",
+      "boundaryMs": 84500,
+      "hitPointTrackMs": 116216,
+      "hitPointTimelineMs": 84529,
+      "deltaMs": 29
+    },
+    {
+      "sentenceId": "s08",
+      "boundary": "end",
+      "boundaryMs": 88535,
+      "hitPointTrackMs": 120326,
+      "hitPointTimelineMs": 88639,
+      "deltaMs": 104
+    },
+    {
+      "sentenceId": "s09",
+      "boundary": "start",
+      "boundaryMs": 93000,
+      "hitPointTrackMs": 124668,
+      "hitPointTimelineMs": 92981,
+      "deltaMs": -19
+    },
+    {
+      "sentenceId": "s09",
+      "boundary": "end",
+      "boundaryMs": 99576,
+      "hitPointTrackMs": 131216,
+      "hitPointTimelineMs": 99529,
+      "deltaMs": -47
+    },
+    {
+      "sentenceId": "s10",
+      "boundary": "start",
+      "boundaryMs": 103500,
+      "hitPointTrackMs": 135326,
+      "hitPointTimelineMs": 103639,
+      "deltaMs": 139
+    },
+    {
+      "sentenceId": "s10",
+      "boundary": "end",
+      "boundaryMs": 105913,
+      "hitPointTrackMs": 137485,
+      "hitPointTimelineMs": 105798,
+      "deltaMs": -115
+    },
+    {
+      "sentenceId": "s11",
+      "boundary": "start",
+      "boundaryMs": 110500,
+      "hitPointTrackMs": 142129,
+      "hitPointTimelineMs": 110442,
+      "deltaMs": -58
+    },
+    {
+      "sentenceId": "s11",
+      "boundary": "end",
+      "boundaryMs": 116870,
+      "hitPointTrackMs": 148677,
+      "hitPointTimelineMs": 116990,
+      "deltaMs": 120
+    },
+    {
+      "sentenceId": "s12",
+      "boundary": "start",
+      "boundaryMs": 119500,
+      "hitPointTrackMs": 151139,
+      "hitPointTimelineMs": 119452,
+      "deltaMs": -48
+    }
+  ],
+  "missed": [],
+  "layout": {
+    "tierVocabulary": [
+      "快切",
+      "推进",
+      "常规",
+      "留白"
+    ],
+    "rule": {
+      "kind": "segment-energy-quantile",
+      "quantiles": [
+        0.75,
+        0.5,
+        0.25
+      ],
+      "cutoffs": [
+        0.3126,
+        0.2754,
+        0.1228
+      ],
+      "flatFallback": null
+    },
+    "note": "layoutTier 是机械草稿（§6-④）：能量分位数定档，阈值由 --tier-quantiles 可调；最终档位以 G3 八列终审回显为准，用户可逐行改，改后即为计划事实",
+    "perSentence": [
+      {
+        "sentenceId": "s01",
+        "energyWeightedMean": 0.3044,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "s02",
+        "energyWeightedMean": 0.1337,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "s03",
+        "energyWeightedMean": 0.2759,
+        "layoutTierDraft": "推进"
+      },
+      {
+        "sentenceId": "s04",
+        "energyWeightedMean": 0.316,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s05",
+        "energyWeightedMean": 0.2395,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "s06",
+        "energyWeightedMean": 0.0716,
+        "layoutTierDraft": "留白"
+      },
+      {
+        "sentenceId": "s07",
+        "energyWeightedMean": 0.2148,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "s08",
+        "energyWeightedMean": 0.2463,
+        "layoutTierDraft": "常规"
+      },
+      {
+        "sentenceId": "s09",
+        "energyWeightedMean": 0.3153,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s10",
+        "energyWeightedMean": 0.3153,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s11",
+        "energyWeightedMean": 0.3153,
+        "layoutTierDraft": "快切"
+      },
+      {
+        "sentenceId": "s12",
+        "energyWeightedMean": 0.3153,
+        "layoutTierDraft": "快切"
+      }
+    ],
+    "phrasesOnTimeline": [
+      {
+        "phraseId": "P1",
+        "trackStartMs": 17461,
+        "trackEndMs": 49784,
+        "timelineStartMs": 0,
+        "timelineEndMs": 18097,
+        "energyMean": 0.3044,
+        "layoutTierDraft": "推进",
+        "coversSentences": [
+          "s01",
+          "s02"
+        ]
+      },
+      {
+        "phraseId": "P2",
+        "trackStartMs": 49876,
+        "trackEndMs": 61022,
+        "timelineStartMs": 18189,
+        "timelineEndMs": 29335,
+        "energyMean": 0.0816,
+        "layoutTierDraft": "留白",
+        "coversSentences": [
+          "s02",
+          "s03"
+        ]
+      },
+      {
+        "phraseId": "P3",
+        "trackStartMs": 61115,
+        "trackEndMs": 86936,
+        "timelineStartMs": 29428,
+        "timelineEndMs": 55249,
+        "energyMean": 0.316,
+        "layoutTierDraft": "快切",
+        "coversSentences": [
+          "s03",
+          "s04",
+          "s05"
+        ]
+      },
+      {
+        "phraseId": "P4",
+        "trackStartMs": 87028,
+        "trackEndMs": 104676,
+        "timelineStartMs": 55341,
+        "timelineEndMs": 72989,
+        "energyMean": 0.0716,
+        "layoutTierDraft": "留白",
+        "coversSentences": [
+          "s05",
+          "s06",
+          "s07"
+        ]
+      },
+      {
+        "phraseId": "P5",
+        "trackStartMs": 104768,
+        "trackEndMs": 122137,
+        "timelineStartMs": 73081,
+        "timelineEndMs": 90450,
+        "energyMean": 0.2463,
+        "layoutTierDraft": "常规",
+        "coversSentences": [
+          "s07",
+          "s08"
+        ]
+      },
+      {
+        "phraseId": "P6",
+        "trackStartMs": 122230,
+        "trackEndMs": 156967,
+        "timelineStartMs": 90543,
+        "timelineEndMs": 124000,
+        "energyMean": 0.3153,
+        "layoutTierDraft": "快切",
+        "coversSentences": [
+          "s09",
+          "s10",
+          "s11",
+          "s12"
+        ]
+      }
+    ]
+  },
+  "ducking": [
+    {
+      "sentenceId": "s01",
+      "fromMs": 7000,
+      "toMs": 11409
+    },
+    {
+      "sentenceId": "s02",
+      "fromMs": 16500,
+      "toMs": 23427
+    },
+    {
+      "sentenceId": "s03",
+      "fromMs": 28500,
+      "toMs": 33473
+    },
+    {
+      "sentenceId": "s04",
+      "fromMs": 38500,
+      "toMs": 46176
+    },
+    {
+      "sentenceId": "s05",
+      "fromMs": 51000,
+      "toMs": 57276
+    },
+    {
+      "sentenceId": "s06",
+      "fromMs": 62000,
+      "toMs": 66437
+    },
+    {
+      "sentenceId": "s07",
+      "fromMs": 71500,
+      "toMs": 79836
+    },
+    {
+      "sentenceId": "s08",
+      "fromMs": 84500,
+      "toMs": 88535
+    },
+    {
+      "sentenceId": "s09",
+      "fromMs": 93000,
+      "toMs": 99576
+    },
+    {
+      "sentenceId": "s10",
+      "fromMs": 103500,
+      "toMs": 105913
+    },
+    {
+      "sentenceId": "s11",
+      "fromMs": 110500,
+      "toMs": 116870
+    },
+    {
+      "sentenceId": "s12",
+      "fromMs": 119500,
+      "toMs": 123146
+    }
+  ],
+  "fades": {
+    "fadeInMs": 2000,
+    "fadeOutStartMs": 122000,
+    "fadeOutMs": 2000
+  },
+  "discipline": "snapping is advisory only: narration durations are authoritative, never stretch or trim speech to hit accents",
+  "files": {
+    "json": "工作台/banshee-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+    "echo": "工作台/banshee-intro-001/G3-剪辑计划/BGM/BGM-对齐回显-v0.2.md"
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "performed": false,
+ "replacedBy": "auto-policy:G5",
+ "approvalSource": "auto-policy",
+ "verbatim": "本项目（banshee-intro-001，内部留存）采用自动确认：G0–G5 各门禁的机器校验照跑、回显卡每节点边界照出，一张不减；批准由本策略预授权代替人工口令，命中条款按策略自动确认并如实记 approvalSource=auto-policy（绝不伪造人类原话）。预授权未覆盖的信任类事项照停（宁可停不可猜）；未清权音乐×对外发布、授权不明×对外发布、人工背书断言三类永久不可预授权。依据=用户 2026-10-09 在策略预授权草案卡上的逐字批准：「全部默认建议啊，这边没必要停下来的，你只需要把卡片回显示给用户看，自己跑就行了，用户发现不对自然会打断你」",
+ "status": "approved",
+ "decision": "accepted",
+ "decidedAt": "2026-10-10T10:05:00+08:00",
+ "acceptedWarnings": [
+  "BGM《LOW-PHONK》未清权：仅限内部留存；对外发布必须先换曲并重走 G4/G5，否则违反权益（委托选定+4/10 贴合度披露随 G1）",
+  "源素材为他人 B站混剪（个人学习/内部留存边界）：画面内水印/台标/弹幕残留按边界保留不清除，底部烧录字幕以 84–100% 遮罩处理",
+  "配音=预览级系统声（macOS Samantha）沿用成品：preview_voice_production 预授权，逐字批准含『预览级』披露词"
+ ],
+ "disclosure": "人工听感/观看验收未执行，由策略自动确认替代；机器校验（解码/黑帧/静音/重复/制式/响度/字幕/转场/BGM 链）全部实跑通过，见 metadata-validation-report.json 与各审计件。响度首验 failed 回炉重做全程留痕（问题清单 ⑥⑦⑧）。",
+ "autoPolicyRef": "工作台/banshee-intro-001/auto-policy.json"
+}

@@ -1,0 +1,543 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "banshee-intro-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/banshee-intro-001/G3-剪辑计划/G3-剪辑计划-v0.2.json",
+  "inputEvidence": "工作台/banshee-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 13,
+  "timelineDurationMs": 124000,
+  "targetDurationMs": 124000,
+  "durationDeltaMs": 0,
+  "targetFps": 24,
+  "loudnessTarget": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 54000,
+        "endMs": 67955,
+        "durationMs": 13955
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 13955,
+        "durationMs": 13955
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 54000,
+        "endMs": 67955,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-02",
+      "order": 2,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 344000,
+        "endMs": 356013,
+        "durationMs": 12013
+      },
+      "timeline": {
+        "startMs": 13955,
+        "endMs": 25968,
+        "durationMs": 12013
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 344000,
+        "endMs": 356013,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 400
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-03a",
+      "order": 3,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 734000,
+        "endMs": 740532,
+        "durationMs": 6532
+      },
+      "timeline": {
+        "startMs": 25968,
+        "endMs": 32500,
+        "durationMs": 6532
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 734000,
+        "endMs": 740532,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 400,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-03b",
+      "order": 4,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 616540,
+        "endMs": 620027,
+        "durationMs": 3487
+      },
+      "timeline": {
+        "startMs": 32500,
+        "endMs": 35987,
+        "durationMs": 3487
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 616540,
+        "endMs": 620027,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 5,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 1164500,
+        "endMs": 1177106,
+        "durationMs": 12606
+      },
+      "timeline": {
+        "startMs": 35987,
+        "endMs": 48593,
+        "durationMs": 12606
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 1164500,
+        "endMs": 1177106,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 400
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05",
+      "order": 6,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 178000,
+        "endMs": 189045,
+        "durationMs": 11045
+      },
+      "timeline": {
+        "startMs": 48593,
+        "endMs": 59638,
+        "durationMs": 11045
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 178000,
+        "endMs": 189045,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 400,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06",
+      "order": 7,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 376500,
+        "endMs": 385831,
+        "durationMs": 9331
+      },
+      "timeline": {
+        "startMs": 59638,
+        "endMs": 68969,
+        "durationMs": 9331
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 376500,
+        "endMs": 385831,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07",
+      "order": 8,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 254000,
+        "endMs": 267199,
+        "durationMs": 13199
+      },
+      "timeline": {
+        "startMs": 68969,
+        "endMs": 82168,
+        "durationMs": 13199
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 254000,
+        "endMs": 267199,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 350
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 9,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 276000,
+        "endMs": 284600,
+        "durationMs": 8600
+      },
+      "timeline": {
+        "startMs": 82168,
+        "endMs": 90768,
+        "durationMs": 8600
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 276000,
+        "endMs": 284600,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 350,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-09",
+      "order": 10,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 535000,
+        "endMs": 545770,
+        "durationMs": 10770
+      },
+      "timeline": {
+        "startMs": 90768,
+        "endMs": 101538,
+        "durationMs": 10770
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 535000,
+        "endMs": 545770,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 350
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-10",
+      "order": 11,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 673330,
+        "endMs": 679999,
+        "durationMs": 6669
+      },
+      "timeline": {
+        "startMs": 101538,
+        "endMs": 108207,
+        "durationMs": 6669
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 673330,
+        "endMs": 679999,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 350,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-11",
+      "order": 12,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 874000,
+        "endMs": 883978,
+        "durationMs": 9978
+      },
+      "timeline": {
+        "startMs": 108207,
+        "endMs": 118185,
+        "durationMs": 9978
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 874000,
+        "endMs": 883978,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 400
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-12",
+      "order": 13,
+      "assetId": "source-02-rx-0-n-17620f86",
+      "source": {
+        "relativePath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+        "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+        "startMs": 415200,
+        "endMs": 421015,
+        "durationMs": 5815
+      },
+      "timeline": {
+        "startMs": 118185,
+        "endMs": 124000,
+        "durationMs": 5815
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 415200,
+        "endMs": 421015,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 400,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-013.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    }
+  ],
+  "transitionDirective": {
+    "path": "工作台/banshee-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.1.json",
+    "sha256": "AF447DD9382A4830CBCCBF345F59F5BA327912584C05C15C8FD0449859FDA506",
+    "boundaries": 5,
+    "masterFades": {
+      "fadeInMs": 1200,
+      "fadeOutMs": 800
+    }
+  },
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "ab",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.0.1",
+    "modelOverride": null
+  },
+  "reference": "工作台/banshee-intro-001/G0-素材包/05_风格参考/冷战奇迹-逆羽雄鹰-1080P.mp4",
+  "projectBrief": "给本项目当高燃卡点 BGM",
+  "referenceSha256": "DF263D11B1AE3BA576EF848E5D6BBD5ABA14B96BD29AA3442E22A17588CE6992",
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Face Orion (Original Mix)",
+      "neteaseId": 544621009,
+      "sha256": "FD10B5158B5EFA503B40DAF90902C19D25DB360261BDF3FEF2A9315373603F57",
+      "reused": false,
+      "notes": "1. 差距：参照曲是带叙事的工业电子，有清晰鼓点和人声；候选曲是纯器乐的硬核Techno，节奏极快且密集，无人声。\n2. 能否使用：不适合。其过快且单一的节奏会盖过人声，无法为解说留出空间。\n3. 贴合度：2分。能量虽足但缺乏叙事所需的呼吸感与层次，不适合作为解说类视频的BGM。"
+    },
+    {
+      "title": "Industrial",
+      "neteaseId": 1336864086,
+      "sha256": "FF263E1782564F8C1E639992E894B05B0A42842E8F9DE4D2507DEAE4A0C7CA5D",
+      "reused": false,
+      "notes": "1) 差距巨大。参照曲是硬朗的工业Techno，节奏强劲、压迫感足；候选曲则是空灵的氛围音乐（Ambient），节奏舒缓、气质冥想。\n2) 不能。候选曲缺乏鼓点和爆发力，完全无法支撑“高燃卡点”所需的能量与冲击力。\n3) 贴合度：1分。理由：风格南辕北辙，候选曲过于平静，与项目所需的紧张战斗氛围背道而驰。"
+    },
+    {
+      "title": "蝙蝠侠Stage-1（工业电子）",
+      "neteaseId": 3340765796,
+      "sha256": "CCBA4DF2C39ED7A4AA478B9578C91156E38C5B1B987564EE49BA52742913DA90",
+      "reused": false,
+      "notes": "1) 差距显著：参照曲是节奏稳定的Techno，气质冷酷机械；候选曲是高速J-Core/Trance，旋律华丽且节奏极快。\n2) 不适合。候选曲速度过快且信息过载，会干扰旁白，缺乏参照曲的叙事压迫感。\n3) 4分。虽同样高燃，但候选曲过于喧闹花哨，与项目所需的冷峻工业风不符。"
+    },
+    {
+      "title": "悬空城（工业电子）",
+      "neteaseId": 3340764213,
+      "sha256": "181826AF5947083092479EC87F935E26A5536FBF9F167E64D8D27827582E4C6F",
+      "reused": false,
+      "notes": "1. 差距：参照曲是节奏稳定、氛围冷峻的工业Techno，重在叙事铺垫；候选曲则是结构复杂、爆发力极强的硬核电子/金属核，充满攻击性。\n2. 能否使用：不能。其风格过于激进且段落切换频繁，会严重干扰旁白叙述。\n3. 贴合度：3分。音乐虽高燃，但气质与影片的历史纪录片基调完全不符。"
+    },
+    {
+      "title": "弥渡山歌Phonk House",
+      "neteaseId": 2744664065,
+      "sha256": "A24B461B13D1A7944D87DD35645F4B384CA5DF8F0351DDD583C1EB46B0A9BF2E",
+      "reused": false,
+      "notes": "1. 差距：参照曲是工业感硬核Techno，气质冷峻、节奏沉稳；候选曲是欢快Eurodance，合成器明亮，节奏跳跃。2.\n不适合：候选曲过于活泼娱乐，无法承载军事历史的厚重与紧张感，会破坏叙事氛围。3. 贴合度：2/10。理由：曲风南辕北辙，将严肃纪录片瞬间变成了迪斯科现场。"
+    },
+    {
+      "title": "Buck (Original Mix)",
+      "neteaseId": 517675660,
+      "sha256": "3B8986939EBF11E7C81B61B60D883E70A59537191CE6F039A95308A7D5AB3C34",
+      "reused": false,
+      "notes": "1) 差距：参照曲是叙事感强的Techno，鼓点沉稳；候选曲是旋律激进的Hard Trance，节奏更快、攻击性更强。\n2) 结论：不能。候选曲能量过剩，会盖过人声，破坏历史叙事的厚重感。\n3) 贴合度：4分。理由：音乐风格过于躁动，与纪录片所需的史诗氛围不符。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

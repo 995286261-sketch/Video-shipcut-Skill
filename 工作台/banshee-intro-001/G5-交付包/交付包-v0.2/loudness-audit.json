@@ -1,0 +1,45 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_verify",
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G5-交付包/交付包-v0.2/final-video.mp4",
+  "version": "v0.1",
+  "output": "工作台/banshee-intro-001/G5-交付包/交付包-v0.2/响度-验收审计-v0.1.json",
+  "status": "passed",
+  "planRef": "工作台/banshee-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+  "planVersion": "v0.2",
+  "planStatus": "ready",
+  "planRefSha256": "7125266A60422E0BD91CBC2415D6ACBFD6292258641DFF1F8C0E06E51D95AE12",
+  "assemblyRef": null,
+  "targetProfile": {
+    "integratedLufs": -14.0,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 9.0
+  },
+  "toleranceLu": 1.0,
+  "toleranceSource": "合同默认",
+  "tpSlackDb": 0.3,
+  "masterMeasured": {
+    "integratedLufs": -14.9,
+    "truePeakDbtp": -1.7,
+    "loudnessRangeLu": 5.9,
+    "engine": "ffmpeg-ebur128"
+  },
+  "checks": [
+    {
+      "check": "integratedWithinTolerance",
+      "pass": true,
+      "detail": "实测 -14.9 vs 目标 -14.0，偏差 -0.9 LU（容差 ±1.0 LU）"
+    },
+    {
+      "check": "truePeakWithinCeiling",
+      "pass": true,
+      "detail": "实测 TP -1.7 vs 上限 -1.5 dBTP（防回退余量 0.3）"
+    }
+  ],
+  "masterSha256": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+  "disclosureNote": null,
+  "failNote": null,
+  "verifiedAt": "2026-10-10T01:50:30Z"
+}

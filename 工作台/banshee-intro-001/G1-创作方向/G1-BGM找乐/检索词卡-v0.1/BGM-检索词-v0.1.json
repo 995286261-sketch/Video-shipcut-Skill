@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": null,
+    "themeRef": null,
+    "themeText": null,
+    "styleBriefRef": "工作台/banshee-intro-001/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "Industrial",
+      "rationale": "画像流派 Industrial Techno/EBM 原词",
+      "source": "theme"
+    },
+    {
+      "term": "Techno",
+      "rationale": "参照曲画像英文检索词原词（bl 2.0.1 耳朵证据）",
+      "source": "theme"
+    },
+    {
+      "term": "Driving",
+      "rationale": "画像节奏型'持续强烈驱动感'英文检索词原词",
+      "source": "theme"
+    },
+    {
+      "term": "Dark",
+      "rationale": "画像情绪'紧张冷酷'英文检索词原词",
+      "source": "theme"
+    },
+    {
+      "term": "EBM",
+      "rationale": "画像流派原词",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 160,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-10-09T16:33:09+08:00"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G2",
+  "projectId": "banshee-intro-001",
+  "status": "approved_for_g3",
+  "decidedAt": "2026-10-09T17:20:00+08:00",
+  "approvalMode": "auto",
+  "autoPolicyRef": "工作台/banshee-intro-001/auto-policy.json",
+  "approvedNarrationRef": "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+  "factCitationRef": "工作台/banshee-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+  "voiceBriefRef": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+  "loudnessPlanRef": "工作台/banshee-intro-001/G2-证据与口播/响度/响度-归一化计划-v0.1.json",
+  "narration": {
+    "language": "en-US",
+    "voice": "Samantha",
+    "provider": "macos_say",
+    "voiceTier": "preview_only",
+    "measuredTotalDurationMs": 66074,
+    "asrVerified": true,
+    "fullTrackRef": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+    "alternatives": [
+      {"voice": "Karen", "status": "passed", "measuredTotalDurationMs": 66997, "asrVerified": true, "note": "备选，en_AU"},
+      {"voice": "Daniel", "status": "asr_readback_failed", "note": "s09 回读相似度 0（其余 11 句 ≥0.957），如实入账，不作默认推荐"}
+    ]
+  },
+  "previewTierProductionApproval": "auto-policy 条款 preview_voice_production 原文：『系统声为预览级音质，成片沿用预览级配音升成品级，此披露随卡与交付包一字不松。草案卡第 2 条获逐字批准「全部默认建议」。』（approvalSource=auto-policy，非人类逐字口令；红线留痕：绝不伪造人类原话）",
+  "loudnessDisclosure": {
+    "ceilingLufs": -16.1,
+    "targetLufs": -14.0,
+    "planStatus": "blocked_true-peak",
+    "acceptedExit": "把目标响度降到至多 -16.1 LUFS（保住现 TP 上限 -1.5）",
+    "exitBasis": "auto-policy 条款 loudness_blocked_exit（parameters.exit=「把目标响度降到至多」双向子串命中第 2 条出路）；G4 装配轨上按专员纪律重新规划",
+    "humanWords": "整片平均响度最响可到 −16.1 LUFS（目标 −14，源物理天花板所限；配音轨实测 −16.2 LUFS、真峰 −1.7 dBTP）"
+  },
+  "permittedFactIds": [
+    "G1-claim-001", "G1-claim-002", "G1-claim-003", "G1-claim-004",
+    "ev-001", "ev-002", "ev-003", "ev-004", "ev-005", "ev-006", "ev-007",
+    "ev-008", "ev-009", "ev-010", "ev-011", "ev-012", "ev-013", "ev-014", "ev-015"
+  ],
+  "prohibitedTopics": [
+    "不得把小说专属设定当画面事实陈述（如普露十二身份线；G1-claim-002 已按字幕证据修正为利迪·马纳斯）",
+    "不得引用机器转写的幻觉文本作为台词/事实证据（转写仅作草稿证据存档）",
+    "不得虚构 720P 源之外的画质承诺，不拉框放大、不 AI 高清化冒充原生",
+    "不得对外分发（authorization/distribution=internal_test，源素材未对外清权）",
+    "风格参考片《冷战奇迹》文案与画面不得进入本片事实或镜头"
+  ],
+  "supersededDraftRefs": [],
+  "userManuallyVerifiedClaims": [],
+  "handoffToG3": "按 G2-证据清单-v0.1.json 时间码选主体镜头（identityStatus 判定须抽帧精看）；口播 12 句实测时长为成片节奏基准（总 66.074s，逐句见配音清单）；响度在装配轨重规划"
+}

@@ -1,0 +1,573 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "industrial techno",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "industrial techno"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 90.0,
+    "appliedMinSec": 90.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-10-09T16:52:44+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16167,
+      "title": "Industrial Wack8.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16167/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 5.14286,
+      "tags": [
+        "bass",
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:51:58+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16167-preview.mp3",
+      "sha256": "DF4992D9EE1DD9516815AECEC12514B8ECE4EFF60A27EC8479AE730C0E99628D",
+      "byteSize": 120752
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16166,
+      "title": "Industrial Wack7.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16166/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "bass",
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:00+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16166-preview.mp3",
+      "sha256": "C5113CDB7F368F9E5094C334A745D4A42D7A7AD8D6A6F2F3F5C3F0F7A89117E1",
+      "byteSize": 161147
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16165,
+      "title": "Industrial Wack6.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16165/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "drum",
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "percussive",
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16165-preview.mp3",
+      "sha256": "448F6C34206BD0FE7968DDC325BCE675C6BA4AB68A8B924079B44D1FB7724356",
+      "byteSize": 162292
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16164,
+      "title": "Industrial Wack5.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16164/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:04+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16164-preview.mp3",
+      "sha256": "B69FB05C7DB5C69E812F8898429C7660595BF9035C55500CA8832F3A3D8515B8",
+      "byteSize": 160776
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16163,
+      "title": "Industrial Wack4.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16163/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:06+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16163-preview.mp3",
+      "sha256": "DC5B93D74643C8829B791DA0B04DF9198C2156B56257139F075F8E26D359EF54",
+      "byteSize": 163970
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16162,
+      "title": "Industrial Wack2.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16162/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:08+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16162-preview.mp3",
+      "sha256": "C03D8FB04D8A7BF421EEAAD834F35AC937E49BB3131A3F8E34D61F1C452A5A6B",
+      "byteSize": 163428
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16161,
+      "title": "Industrial Wack1.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16161/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 6.85714,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:10+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16161-preview.mp3",
+      "sha256": "AE4C6303EFDE9667993A0D082A6AA9B8AAD6C44382A9F13323005050C1BDD7D4",
+      "byteSize": 160458
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16160,
+      "title": "Industrial Season A11.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16160/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:12+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16160-preview.mp3",
+      "sha256": "4701AE3E665CB2C52717A9F9FF6F6AA62BD8C0F43AE52599B2D4FBA4AA55BBCA",
+      "byteSize": 51036
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16159,
+      "title": "Industrial Season A10.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16159/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:14+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16159-preview.mp3",
+      "sha256": "2205255EA28C6FE236A901652ECFD4035B78FD9D95E8CDC6209460E27D7BA59D",
+      "byteSize": 50932
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16158,
+      "title": "Industrial BassPop 2.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16158/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:15+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16158-preview.mp3",
+      "sha256": "BE3FC023A7B46C8BC982D74CEE37D7786ECB06CD2951131019E639B1F1C66CEB",
+      "byteSize": 49632
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16157,
+      "title": "Industrial BassPop 1.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16157/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16157-preview.mp3",
+      "sha256": "EBE4F1C5DF5DAC627DDCAAD1448B3FC6EBA9AB91BDF0F40DCCE9A5F8A9167C9D",
+      "byteSize": 52450
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 16156,
+      "title": "Industrial Bass 1.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/16156/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.14286,
+      "tags": [
+        "house",
+        "industrial",
+        "loop",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:18+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-16156-preview.mp3",
+      "sha256": "97933B7FCFE3EB5B802DC34DEA41F8BC803442253AB07521B17D53103CD2C5DA",
+      "byteSize": 58979
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 814777,
+      "title": "DSGNImpt_Techno Industrial Impacts_EM",
+      "author": "newlocknew",
+      "sourceUrl": "https://freesound.org/s/814777/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 63.829,
+      "tags": [
+        "artificial",
+        "cinematic",
+        "dark",
+        "drum",
+        "drums",
+        "effect",
+        "electronic",
+        "experimental",
+        "hit",
+        "impact",
+        "industrial",
+        "kick"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "percussive",
+        "electronic",
+        "steady",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-10-09T16:52:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-814777-preview.mp3",
+      "sha256": "CD7481DE645560D9C2153725A117EEA60A15796CF83B2CCFA4BB046B96884CB1",
+      "byteSize": 1293528
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 826519,
+      "title": "Industrial Estate 48",
+      "author": "Thomas_Bey_William_Bailey",
+      "sourceUrl": "https://freesound.org/s/826519/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 2.0,
+      "tags": [
+        "120bpm",
+        "Ableton",
+        "chaos",
+        "industrial",
+        "loops",
+        "soundtrack",
+        "techno"
+      ],
+      "styleTags": [
+        "steady",
+        "electronic"
+      ],
+      "retrievedAt": "2026-10-09T16:52:37+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-826519-preview.mp3",
+      "sha256": "E9BAC0A652048317071E90E24F9236BF0746DF2E545EC7FF6642FED1723B5AEB",
+      "byteSize": 56112
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 360640,
+      "title": "EnginFox 37.wav",
+      "author": "visual",
+      "sourceUrl": "https://freesound.org/s/360640/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 16.0,
+      "tags": [
+        "dance",
+        "electronic",
+        "house",
+        "industrial",
+        "loop",
+        "synth",
+        "techno"
+      ],
+      "styleTags": [
+        "electronic",
+        "steady"
+      ],
+      "retrievedAt": "2026-10-09T16:52:38+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-freesound-v0.2/candidates/freesound-360640-preview.mp3",
+      "sha256": "719F7F8AE774E0BB345F557EB35660D4815227C5CD94E549B3ED55BBBBDA8E20",
+      "byteSize": 346249
+    }
+  ],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "industrial techno",
+      "returned": 45,
+      "cap": 15,
+      "kept": 15
+    }
+  ],
+  "sufficiency": {
+    "count": 15,
+    "minimumExpected": 3
+  }
+}

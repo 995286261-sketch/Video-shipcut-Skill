@@ -1,0 +1,56 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G2",
+ "derivedFrom": "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+ "sentences": [
+  {
+   "sentenceId": "s01",
+   "text": "In the Universal Century, not every mobile suit gets to be the hero's machine."
+  },
+  {
+   "sentenceId": "s02",
+   "text": "R-X zero N, the Banshee Norn, Goddess of Fate: the Earth Federation's second answer to the riddle of the Unicorn."
+  },
+  {
+   "sentenceId": "s03",
+   "text": "Like the Unicorn, she carries a psycho-frame, armor that answers a Newtype's will."
+  },
+  {
+   "sentenceId": "s04",
+   "text": "When the N-T-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive."
+  },
+  {
+   "sentenceId": "s05",
+   "text": "Her pilot is no chosen one. Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny."
+  },
+  {
+   "sentenceId": "s06",
+   "text": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them."
+  },
+  {
+   "sentenceId": "s07",
+   "text": "The two machines were built as sisters. In the dark of space they do not simply fight: the Unicorn and the Banshee are pulling on each other."
+  },
+  {
+   "sentenceId": "s08",
+   "text": "And when the psycho-frame screams, it is not a curse. It was a prayer."
+  },
+  {
+   "sentenceId": "s09",
+   "text": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once."
+  },
+  {
+   "sentenceId": "s10",
+   "text": "She was built to bury the secret of Laplace."
+  },
+  {
+   "sentenceId": "s11",
+   "text": "In the end, even the Federation's sharpest spear could not stop the truth being born. We were blessed when we were born."
+  },
+  {
+   "sentenceId": "s12",
+   "text": "The Banshee Norn: the reluctant angel of the Universal Century."
+  }
+ ]
+}

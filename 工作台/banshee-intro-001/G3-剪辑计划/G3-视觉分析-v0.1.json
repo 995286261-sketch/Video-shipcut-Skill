@@ -1,0 +1,1044 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "全片 20s 网格探索层（60 帧逐帧目视）+ scdet(0.30) 切点统计（940 切点）；候选窗口另走断言层 4fps 探针",
+ "method": "ffmpeg fps=1/20 中帧 480x270 带秒标 + 4x3 拼版目视（zcode-host-session / main-agent-multimodal-vision / g3-explore-v0.1）",
+ "cacheKey": {
+  "assetId": "source-02-rx-0-n-17620f86",
+  "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+  "sourceRange": {
+   "startMs": 0,
+   "endMs": 1195321
+  },
+  "gridIntervalSec": 20,
+  "detector": "scdet-0.30",
+  "provider": "zcode-host-session",
+  "model": "main-agent-multimodal-vision",
+  "promptVersion": "g3-explore-v0.1"
+ },
+ "targetAssets": [
+  {
+   "assetId": "source-02-rx-0-n-17620f86",
+   "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "analysisStatus": "completed",
+   "identitySummary": {
+    "confirmed": 8,
+    "mixed": 5,
+    "uncertain": 1,
+    "person_only": 33,
+    "not_present": 13
+   },
+   "riskFlags": [
+    "burned_subtitle（全片普遍）",
+    "fansub_credit（140s/1160s/1180s 字幕组名单）",
+    "timestamp_watermark（960s 左上时钟）"
+   ],
+   "keyframes": [
+    {
+     "sourceMs": 0,
+     "frameRef": "G3-视觉分析/探索层/grid-01.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "两台舱内白衣乘员（正面+侧面），烧录中日字幕",
+     "identityStatus": "person_only",
+     "recordId": "exp-G00"
+    },
+    {
+     "sourceMs": 20000,
+     "frameRef": "G3-视觉分析/探索层/grid-02.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "太空爆焰+远处舰体射出蓝色光束，无机体特写",
+     "identityStatus": "not_present",
+     "recordId": "exp-G01"
+    },
+    {
+     "sourceMs": 40000,
+     "frameRef": "G3-视觉分析/探索层/grid-03.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶舱操纵面板与手特写",
+     "identityStatus": "person_only",
+     "recordId": "exp-G02"
+    },
+    {
+     "sourceMs": 60000,
+     "frameRef": "G3-视觉分析/探索层/grid-04.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金配色报丧女妖头肩部特写（未觉醒，金色精神感应骨架未发光）",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G03"
+    },
+    {
+     "sourceMs": 80000,
+     "frameRef": "G3-视觉分析/探索层/grid-05.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色报丧女妖持光束步枪射击+青绿色量产机同框",
+     "identityStatus": "mixed",
+     "recordId": "exp-G04"
+    },
+    {
+     "sourceMs": 100000,
+     "frameRef": "G3-视觉分析/探索层/grid-06.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "星空星云空镜",
+     "identityStatus": "not_present",
+     "recordId": "exp-G05"
+    },
+    {
+     "sourceMs": 120000,
+     "frameRef": "G3-视觉分析/探索层/grid-07.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "蓝色光束线横贯特效",
+     "identityStatus": "not_present",
+     "recordId": "exp-G06"
+    },
+    {
+     "sourceMs": 140000,
+     "frameRef": "G3-视觉分析/探索层/grid-08.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗星空小亮点+字幕组制作名单烧录（校對Lucifer等）",
+     "identityStatus": "not_present",
+     "recordId": "exp-G07"
+    },
+    {
+     "sourceMs": 160000,
+     "frameRef": "G3-视觉分析/探索层/grid-09.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "星空小亮点空镜",
+     "identityStatus": "not_present",
+     "recordId": "exp-G08"
+    },
+    {
+     "sourceMs": 180000,
+     "frameRef": "G3-视觉分析/探索层/grid-10.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红发少年（巴纳吉）驾驶舱呐喊",
+     "identityStatus": "person_only",
+     "recordId": "exp-G09"
+    },
+    {
+     "sourceMs": 200000,
+     "frameRef": "G3-视觉分析/探索层/grid-11.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "红发少年驾驶舱，字幕『独角兽与报丧女妖在互相牵引着』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G10"
+    },
+    {
+     "sourceMs": 220000,
+     "frameRef": "G3-视觉分析/探索层/grid-12.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色驾驶服棕发驾驶员（利迪）舱内，字幕『利迪先生 不可以』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G11"
+    },
+    {
+     "sourceMs": 240000,
+     "frameRef": "G3-视觉分析/探索层/grid-13.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "蓝色漩涡光束特效",
+     "identityStatus": "not_present",
+     "recordId": "exp-G12"
+    },
+    {
+     "sourceMs": 260000,
+     "frameRef": "G3-视觉分析/探索层/grid-14.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色独角兽（毁灭模式红骨架）特写与黑色机体同框对峙",
+     "identityStatus": "mixed",
+     "recordId": "exp-G13"
+    },
+    {
+     "sourceMs": 280000,
+     "frameRef": "G3-视觉分析/探索层/grid-15.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪舱内红目镜特写，字幕『那原本不是诅咒而是祈愿』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G14"
+    },
+    {
+     "sourceMs": 300000,
+     "frameRef": "G3-视觉分析/探索层/grid-16.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "粉紫色机体（非目标）发射粉色光束",
+     "identityStatus": "not_present",
+     "recordId": "exp-G15"
+    },
+    {
+     "sourceMs": 320000,
+     "frameRef": "G3-视觉分析/探索层/grid-17.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪震惊表情特写『什么？』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G16"
+    },
+    {
+     "sourceMs": 340000,
+     "frameRef": "G3-视觉分析/探索层/grid-18.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖持枪立于爆焰残骸旁",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G17"
+    },
+    {
+     "sourceMs": 360000,
+     "frameRef": "G3-视觉分析/探索层/grid-19.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿色机体发射光束+远处小黑机影",
+     "identityStatus": "mixed",
+     "recordId": "exp-G18"
+    },
+    {
+     "sourceMs": 380000,
+     "frameRef": "G3-视觉分析/探索层/grid-20.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部特写：面具展开、绿色精神感应骨架发光、红眼（NT-D 觉醒）",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G19"
+    },
+    {
+     "sourceMs": 400000,
+     "frameRef": "G3-视觉分析/探索层/grid-21.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色机体头部+深色机体橙眼同框",
+     "identityStatus": "mixed",
+     "recordId": "exp-G20"
+    },
+    {
+     "sourceMs": 420000,
+     "frameRef": "G3-视觉分析/探索层/grid-22.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖远景飞行+蓝色漩涡背景",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G21"
+    },
+    {
+     "sourceMs": 440000,
+     "frameRef": "G3-视觉分析/探索层/grid-23.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "粉衣女性乘员，字幕『收集到的人心的杂念』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G22"
+    },
+    {
+     "sourceMs": 460000,
+     "frameRef": "G3-视觉分析/探索层/grid-24.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白衣人群群像",
+     "identityStatus": "person_only",
+     "recordId": "exp-G23"
+    },
+    {
+     "sourceMs": 480000,
+     "frameRef": "G3-视觉分析/探索层/grid-25.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖持大型光束步枪瞄准，金色骨架发光",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G24"
+    },
+    {
+     "sourceMs": 500000,
+     "frameRef": "G3-视觉分析/探索层/grid-26.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪面部特写（帽檐阴影）",
+     "identityStatus": "person_only",
+     "recordId": "exp-G25"
+    },
+    {
+     "sourceMs": 520000,
+     "frameRef": "G3-视觉分析/探索层/grid-27.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色机体群环绕火焰圆环特效",
+     "identityStatus": "not_present",
+     "recordId": "exp-G26"
+    },
+    {
+     "sourceMs": 540000,
+     "frameRef": "G3-视觉分析/探索层/grid-28.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白衣帽女性面部紫光，字幕『超出数值上限的感应波』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G27"
+    },
+    {
+     "sourceMs": 560000,
+     "frameRef": "G3-视觉分析/探索层/grid-29.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪双手掩面、白光起",
+     "identityStatus": "person_only",
+     "recordId": "exp-G28"
+    },
+    {
+     "sourceMs": 580000,
+     "frameRef": "G3-视觉分析/探索层/grid-30.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色驾驶服人物翻滚动作",
+     "identityStatus": "person_only",
+     "recordId": "exp-G29"
+    },
+    {
+     "sourceMs": 600000,
+     "frameRef": "G3-视觉分析/探索层/grid-31.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "舰桥白衣乘员群，字幕『利迪少尉 报丧女妖也参战了』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G30"
+    },
+    {
+     "sourceMs": 620000,
+     "frameRef": "G3-视觉分析/探索层/grid-32.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖侧身持光束步枪射击",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G31"
+    },
+    {
+     "sourceMs": 640000,
+     "frameRef": "G3-视觉分析/探索层/grid-33.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿发光独角兽+黑金报丧女妖同框对峙",
+     "identityStatus": "mixed",
+     "recordId": "exp-G32"
+    },
+    {
+     "sourceMs": 660000,
+     "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "大型绿色光束炮（拖曳炮）特写",
+     "identityStatus": "not_present",
+     "recordId": "exp-G33"
+    },
+    {
+     "sourceMs": 680000,
+     "frameRef": "G3-视觉分析/探索层/grid-35.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "熔岩状爆焰云",
+     "identityStatus": "not_present",
+     "recordId": "exp-G34"
+    },
+    {
+     "sourceMs": 700000,
+     "frameRef": "G3-视觉分析/探索层/grid-36.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白盔红框人物面部，字幕『那么我也只能应战了』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G35"
+    },
+    {
+     "sourceMs": 720000,
+     "frameRef": "G3-视觉分析/探索层/grid-37.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "驾驶舱内乘员+外部爆焰红光",
+     "identityStatus": "person_only",
+     "recordId": "exp-G36"
+    },
+    {
+     "sourceMs": 740000,
+     "frameRef": "G3-视觉分析/探索层/grid-38.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖站立于粉色弹射结构上（骨架白色微光）",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G37"
+    },
+    {
+     "sourceMs": 760000,
+     "frameRef": "G3-视觉分析/探索层/grid-39.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "老年男性面部特写（皱眉）",
+     "identityStatus": "person_only",
+     "recordId": "exp-G38"
+    },
+    {
+     "sourceMs": 780000,
+     "frameRef": "G3-视觉分析/探索层/grid-40.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "老年男性+短发女性军官，字幕『控制态势微调整』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G39"
+    },
+    {
+     "sourceMs": 800000,
+     "frameRef": "G3-视觉分析/探索层/grid-41.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "老年男性正面特写",
+     "identityStatus": "person_only",
+     "recordId": "exp-G40"
+    },
+    {
+     "sourceMs": 820000,
+     "frameRef": "G3-视觉分析/探索层/grid-42.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "老年男性侧影",
+     "identityStatus": "person_only",
+     "recordId": "exp-G41"
+    },
+    {
+     "sourceMs": 840000,
+     "frameRef": "G3-视觉分析/探索层/grid-43.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪舱内，字幕『测定为殖民卫星大小的物体』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G42"
+    },
+    {
+     "sourceMs": 860000,
+     "frameRef": "G3-视觉分析/探索层/grid-44.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "深色驾驶服红光面罩人物，字幕『并非只将人口丢到宇宙』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G43"
+    },
+    {
+     "sourceMs": 880000,
+     "frameRef": "G3-视觉分析/探索层/grid-45.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪舱内，字幕『我们是被祝福着出生到这世上的』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G44"
+    },
+    {
+     "sourceMs": 900000,
+     "frameRef": "G3-视觉分析/探索层/grid-46.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪舱内橙色光",
+     "identityStatus": "person_only",
+     "recordId": "exp-G45"
+    },
+    {
+     "sourceMs": 920000,
+     "frameRef": "G3-视觉分析/探索层/grid-47.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "舰桥群像，字幕『格利普斯里面也有上千人』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G46"
+    },
+    {
+     "sourceMs": 940000,
+     "frameRef": "G3-视觉分析/探索层/grid-48.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "舰桥侧影，字幕『注意力强度数值』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G47"
+    },
+    {
+     "sourceMs": 960000,
+     "frameRef": "G3-视觉分析/探索层/grid-49.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "老年男性特写+左上角时钟烧录（11 10 09 08）",
+     "identityStatus": "person_only",
+     "recordId": "exp-G48"
+    },
+    {
+     "sourceMs": 980000,
+     "frameRef": "G3-视觉分析/探索层/grid-50.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿军装白发指挥官仰视",
+     "identityStatus": "person_only",
+     "recordId": "exp-G49"
+    },
+    {
+     "sourceMs": 1000000,
+     "frameRef": "G3-视觉分析/探索层/grid-51.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色爆光带绿边特效",
+     "identityStatus": "not_present",
+     "recordId": "exp-G50"
+    },
+    {
+     "sourceMs": 1020000,
+     "frameRef": "G3-视觉分析/探索层/grid-52.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "全屏绿色光粒子+小型十字机影（绿光幽灵效果）",
+     "identityStatus": "not_present",
+     "recordId": "exp-G51"
+    },
+    {
+     "sourceMs": 1040000,
+     "frameRef": "G3-视觉分析/探索层/grid-53.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青色结晶状 X 形物体（特效物体，机体身份不可辨）",
+     "identityStatus": "uncertain",
+     "recordId": "exp-G52"
+    },
+    {
+     "sourceMs": 1060000,
+     "frameRef": "G3-视觉分析/探索层/grid-54.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "巴纳吉头盔正面，字幕『你和公主两人就能转化悲伤为力量』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G53"
+    },
+    {
+     "sourceMs": 1080000,
+     "frameRef": "G3-视觉分析/探索层/grid-55.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑发少年面部绿光",
+     "identityStatus": "person_only",
+     "recordId": "exp-G54"
+    },
+    {
+     "sourceMs": 1100000,
+     "frameRef": "G3-视觉分析/探索层/grid-56.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑发驾驶员舱内，字幕『你不用管这边先走』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G55"
+    },
+    {
+     "sourceMs": 1120000,
+     "frameRef": "G3-视觉分析/探索层/grid-57.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "金发少年舱内喊，字幕『你才刚诞生而已 巴纳吉』",
+     "identityStatus": "person_only",
+     "recordId": "exp-G56"
+    },
+    {
+     "sourceMs": 1140000,
+     "frameRef": "G3-视觉分析/探索层/grid-58.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗舱内驾驶服人物俯身",
+     "identityStatus": "person_only",
+     "recordId": "exp-G57"
+    },
+    {
+     "sourceMs": 1160000,
+     "frameRef": "G3-视觉分析/探索层/grid-59.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部大特写：绿色精神感应骨架发光、金色 V 字天线、面具展开（NT-D）",
+     "identityStatus": "confirmed",
+     "recordId": "exp-G58"
+    },
+    {
+     "sourceMs": 1180000,
+     "frameRef": "G3-视觉分析/探索层/grid-60.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色舰队群太空航行+字幕『而听到这场转播的各位』",
+     "identityStatus": "not_present",
+     "recordId": "exp-G59"
+    },
+    {
+     "sourceMs": 54000,
+     "frameRef": "G3-画面验证帧/w01-54000-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "黑金报丧女妖头胸特写+光束步枪（未觉醒）",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V001"
+    },
+    {
+     "sourceMs": 55385,
+     "frameRef": "G3-画面验证帧/w01-55385-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖半身持大型光束步枪，金色骨架",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V002"
+    },
+    {
+     "sourceMs": 57762,
+     "frameRef": "G3-画面验证帧/w01-57762-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿色量产机蓝光中飞行（非目标）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V003"
+    },
+    {
+     "sourceMs": 61871,
+     "frameRef": "G3-画面验证帧/w01-61871-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿机体头部特写（非目标）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V004"
+    },
+    {
+     "sourceMs": 64748,
+     "frameRef": "G3-画面验证帧/w01-64748-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿机体群编队（非目标）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V005"
+    },
+    {
+     "sourceMs": 67954,
+     "frameRef": "G3-画面验证帧/w01-67954-end.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿扎古型特写（非目标）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V006"
+    },
+    {
+     "sourceMs": 344350,
+     "frameRef": "G3-画面验证帧/x02-344350.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部特写：红眼+白色精神感应骨架发光+金天线",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V007"
+    },
+    {
+     "sourceMs": 346643,
+     "frameRef": "G3-画面验证帧/x02-346643.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆焰+报丧女妖金骨架机体",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V008"
+    },
+    {
+     "sourceMs": 350043,
+     "frameRef": "G3-画面验证帧/x02-350043.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖持枪立于爆焰残骸旁",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V009"
+    },
+    {
+     "sourceMs": 353918,
+     "frameRef": "G3-画面验证帧/x02-353918.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖光束战斧+粉机远景",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V010"
+    },
+    {
+     "sourceMs": 355999,
+     "frameRef": "G3-画面验证帧/x02-355999.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "小行星带+报丧女妖头部",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V011"
+    },
+    {
+     "sourceMs": 734000,
+     "frameRef": "G3-画面验证帧/w03c-734000-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部：红眼+金/白骨架发光特写",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V012"
+    },
+    {
+     "sourceMs": 736984,
+     "frameRef": "G3-画面验证帧/w03c-736984-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "躯干白色骨架发光",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V013"
+    },
+    {
+     "sourceMs": 737943,
+     "frameRef": "G3-画面验证帧/w03c-737943-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "持大型光束炮瞄准",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V014"
+    },
+    {
+     "sourceMs": 739612,
+     "frameRef": "G3-画面验证帧/w03c-739612-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "开火爆焰",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V015"
+    },
+    {
+     "sourceMs": 740446,
+     "frameRef": "G3-画面验证帧/w03c-740446-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆焰中机体剪影",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V016"
+    },
+    {
+     "sourceMs": 616540,
+     "frameRef": "G3-画面验证帧/w03b2-616540-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖持多管炮于甲板结构",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V017"
+    },
+    {
+     "sourceMs": 618283,
+     "frameRef": "G3-画面验证帧/w03b2-618283-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "多管炮瞄准（炮身绿灯）",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V018"
+    },
+    {
+     "sourceMs": 620026,
+     "frameRef": "G3-画面验证帧/w03b2-620026-end.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "紫蓝光束射出",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V019"
+    },
+    {
+     "sourceMs": 1165540,
+     "frameRef": "G3-画面验证帧/w12b-1165540.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪呐喊，字幕『報喪女妖！バンシィ！』（启动命令）",
+     "identityStatus": "person_only",
+     "recordId": "obs-V020"
+    },
+    {
+     "sourceMs": 1169831,
+     "frameRef": "G3-画面验证帧/w12b-1169831.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "NT-D：面具展开+绿色精神感应骨架发光+金天线",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V021"
+    },
+    {
+     "sourceMs": 1170373,
+     "frameRef": "G3-画面验证帧/w12b-1170373.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "NT-D 头部大特写（绿光）",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V022"
+    },
+    {
+     "sourceMs": 1171165,
+     "frameRef": "G3-画面验证帧/w12b-1171165.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "头部+绿骨架侧面",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V023"
+    },
+    {
+     "sourceMs": 1172124,
+     "frameRef": "G3-画面验证帧/w12b-1172124.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色粒子+金天线觉醒特效",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V024"
+    },
+    {
+     "sourceMs": 1173584,
+     "frameRef": "G3-画面验证帧/w12b-1173584.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "蓝光漩涡突进（机体剪影）",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V025"
+    },
+    {
+     "sourceMs": 178000,
+     "frameRef": "G3-画面验证帧/w06-178000-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪瘫坐驾驶舱，字幕『為什麼NT-D就是不發動』",
+     "identityStatus": "person_only",
+     "recordId": "obs-V026"
+    },
+    {
+     "sourceMs": 182665,
+     "frameRef": "G3-画面验证帧/w06-182665-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "同上镜头延续",
+     "identityStatus": "person_only",
+     "recordId": "obs-V027"
+    },
+    {
+     "sourceMs": 187330,
+     "frameRef": "G3-画面验证帧/w06-187330-end.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖持大型光束炮（红眼/金骨架/炮身绿灯）",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V028"
+    },
+    {
+     "sourceMs": 377875,
+     "frameRef": "G3-画面验证帧/w04-377875-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "巴纳吉驾驶舱",
+     "identityStatus": "person_only",
+     "recordId": "obs-V029"
+    },
+    {
+     "sourceMs": 379502,
+     "frameRef": "G3-画面验证帧/w04-379502-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白色独角兽毁灭模式（红骨架）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V030"
+    },
+    {
+     "sourceMs": 381295,
+     "frameRef": "G3-画面验证帧/w04-381295-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "独角兽毁灭模式全身+炮",
+     "identityStatus": "not_present",
+     "recordId": "obs-V031"
+    },
+    {
+     "sourceMs": 383527,
+     "frameRef": "G3-画面验证帧/w04-383527-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖金色骨架发光特写",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V032"
+    },
+    {
+     "sourceMs": 384507,
+     "frameRef": "G3-画面验证帧/w04-384507-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿机+报丧女妖绿金发光同框",
+     "identityStatus": "mixed",
+     "recordId": "obs-V033"
+    },
+    {
+     "sourceMs": 385490,
+     "frameRef": "G3-视觉分析/探索层/grid-20.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "青绿机体多管炮（非目标）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V034"
+    },
+    {
+     "sourceMs": 255810,
+     "frameRef": "G3-画面验证帧/w07-255810-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪驾驶舱",
+     "identityStatus": "person_only",
+     "recordId": "obs-V035"
+    },
+    {
+     "sourceMs": 259456,
+     "frameRef": "G3-画面验证帧/w07-259456-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "双机红蓝光束对峙+字幕『讓拉普拉斯之盒的詛咒』",
+     "identityStatus": "mixed",
+     "recordId": "obs-V036"
+    },
+    {
+     "sourceMs": 263981,
+     "frameRef": "G3-画面验证帧/w07-263981-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部红眼金骨架",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V037"
+    },
+    {
+     "sourceMs": 265044,
+     "frameRef": "G3-画面验证帧/w07-265044-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖躯干金骨架+蓝光",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V038"
+    },
+    {
+     "sourceMs": 266935,
+     "frameRef": "G3-画面验证帧/w07-266935-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白独角兽(红骨架)与报丧女妖同框",
+     "identityStatus": "mixed",
+     "recordId": "obs-V039"
+    },
+    {
+     "sourceMs": 267198,
+     "frameRef": "G3-画面验证帧/w07-267198-end.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "双机同框延续",
+     "identityStatus": "mixed",
+     "recordId": "obs-V040"
+    },
+    {
+     "sourceMs": 276000,
+     "frameRef": "G3-画面验证帧/w08-276000-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "利迪驾驶舱，字幕『留下詛咒的馬瑟納斯家』",
+     "identityStatus": "person_only",
+     "recordId": "obs-V041"
+    },
+    {
+     "sourceMs": 279225,
+     "frameRef": "G3-画面验证帧/w08-279225-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖与红独角兽光束军刀交锋",
+     "identityStatus": "mixed",
+     "recordId": "obs-V042"
+    },
+    {
+     "sourceMs": 280893,
+     "frameRef": "G3-画面验证帧/w08-280893-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖战斧+红独角兽，字幕『只要各自繼承血緣的我們消失了』",
+     "identityStatus": "mixed",
+     "recordId": "obs-V043"
+    },
+    {
+     "sourceMs": 283309,
+     "frameRef": "G3-画面验证帧/w08-283309-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "巴纳吉驾驶舱，字幕『這百年來的恩怨也會消滅』",
+     "identityStatus": "person_only",
+     "recordId": "obs-V044"
+    },
+    {
+     "sourceMs": 536986,
+     "frameRef": "G3-画面验证帧/w09-536986-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "巴纳吉呐喊（感应波语境）",
+     "identityStatus": "person_only",
+     "recordId": "obs-V045"
+    },
+    {
+     "sourceMs": 540000,
+     "frameRef": "G3-视觉分析/探索层/grid-28.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白衣帽女性紫光，字幕『超出數值上限的…感應波！』（G2 探索层同帧）",
+     "identityStatus": "person_only",
+     "recordId": "obs-V046"
+    },
+    {
+     "sourceMs": 543201,
+     "frameRef": "G3-画面验证帧/w09-543201-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白机红骨架头部特写（独角兽）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V047"
+    },
+    {
+     "sourceMs": 545528,
+     "frameRef": "G3-画面验证帧/w09-545528-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "白机张臂+蓝色交叉光（共振姿态）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V048"
+    },
+    {
+     "sourceMs": 673555,
+     "frameRef": "G3-画面验证帧/x10-673555.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色发光机体射出橙色光束（绿光幽灵）",
+     "identityStatus": "uncertain",
+     "recordId": "obs-V049"
+    },
+    {
+     "sourceMs": 675580,
+     "frameRef": "G3-画面验证帧/x10-675580.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿机攀附褐色巨块（拉普拉斯之盒语境）",
+     "identityStatus": "uncertain",
+     "recordId": "obs-V050"
+    },
+    {
+     "sourceMs": 677582,
+     "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "绿色幽灵机+金色报丧女妖同框",
+     "identityStatus": "mixed",
+     "recordId": "obs-V051"
+    },
+    {
+     "sourceMs": 679414,
+     "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "金色报丧女妖头部白色骨架发光",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V052"
+    },
+    {
+     "sourceMs": 874000,
+     "frameRef": "G3-画面验证帧/w11-874000-start.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "巴纳吉驾驶舱，字幕『希望與宏大的祈願一起送出』",
+     "identityStatus": "person_only",
+     "recordId": "obs-V053"
+    },
+    {
+     "sourceMs": 876268,
+     "frameRef": "G3-画面验证帧/w11-876268-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "同上延续",
+     "identityStatus": "person_only",
+     "recordId": "obs-V054"
+    },
+    {
+     "sourceMs": 881757,
+     "frameRef": "G3-画面验证帧/w11-881757-mid.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗景+字幕『那究竟會成為詛咒 還是可能性』",
+     "identityStatus": "person_only",
+     "recordId": "obs-V055"
+    },
+    {
+     "sourceMs": 883977,
+     "frameRef": "G3-视觉分析/探索层/grid-45.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "暗蓝背景机体剪影（过渡）",
+     "identityStatus": "not_present",
+     "recordId": "obs-V056"
+    },
+    {
+     "sourceMs": 416287,
+     "frameRef": "G3-画面验证帧/x12-416287.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "爆焰+金骨架机体",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V057"
+    },
+    {
+     "sourceMs": 418331,
+     "frameRef": "G3-画面验证帧/x12-418331.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部金骨架发光+绿光",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V058"
+    },
+    {
+     "sourceMs": 419499,
+     "frameRef": "G3-画面验证帧/x12-419499.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖头部越过绿机肩甲",
+     "identityStatus": "mixed",
+     "recordId": "obs-V059"
+    },
+    {
+     "sourceMs": 420187,
+     "frameRef": "G3-画面验证帧/x12-420187.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖全身金骨架+绿机盾",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V060"
+    },
+    {
+     "sourceMs": 420499,
+     "frameRef": "G3-画面验证帧/x12-420499.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "报丧女妖持光束军刀立姿",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V061"
+    },
+    {
+     "sourceMs": 420729,
+     "frameRef": "G3-视觉分析/探索层/grid-22.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "军刀+金骨架特写",
+     "identityStatus": "confirmed",
+     "recordId": "obs-V062"
+    },
+    {
+     "sourceMs": 474000,
+     "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "窗口 474–484s 全为利迪驾驶舱/乘员群像，报丧女妖仅 ~480s 短镜头，弃用",
+     "identityStatus": "person_only",
+     "recordId": "obs-V063"
+    },
+    {
+     "sourceMs": 374000,
+     "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "窗口 374–386.6s 主体为白色独角兽毁灭模式+青绿机，弃用",
+     "identityStatus": "not_present",
+     "recordId": "obs-V064"
+    },
+    {
+     "sourceMs": 1153000,
+     "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "窗口 1153–1173.8s 前段为利迪驾驶舱，觉醒头像段改判给 seg-04/seg-12 分区使用",
+     "identityStatus": "person_only",
+     "recordId": "obs-V065"
+    }
+   ]
+  }
+ ],
+ "analyzedAt": "2026-10-09T09:21:18Z",
+ "keyframeSource": "G3-视觉观察账本-v0.2.json 全量 125 记录映射（探索层 60 + 断言层 65，逐帧回链账本）"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "6FC0CFD913F7BB7289E1E2A8EADC5CE732C6BA9F173C6C232D689DF08F6671D4",
+  "aliases": [
+    {
+      "title": "碎碎念",
+      "neteaseId": 2689935845,
+      "sourceUrl": "https://music.163.com/song?id=2689935845",
+      "provenance": "netease_search",
+      "project": "banshee-intro-001",
+      "seenAt": "2026-10-09T08:48:46Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G1-创作方向/G1-BGM找乐/候选-netease-v0.2/netease-2689935845-碎碎念.mp3",
+      "recordedAt": "2026-10-09T08:48:46Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "uncleared-platform-catalog",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-10-09T08:48:46Z",
+  "updatedAt": "2026-10-09T08:48:46Z"
+}

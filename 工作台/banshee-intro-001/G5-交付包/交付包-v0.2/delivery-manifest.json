@@ -1,0 +1,645 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    },
+    {
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceProbe": {
+        "durationMs": 1195321,
+        "video": {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "frameRate": "24000/1001"
+        },
+        "audio": {
+          "codec": "aac",
+          "sampleRate": 44100,
+          "channels": 2
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 54000,
+      "sourceEndMs": 67955,
+      "outputStartMs": 0,
+      "outputEndMs": 13955
+    },
+    {
+      "segmentId": "seg-02",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 344000,
+      "sourceEndMs": 356013,
+      "outputStartMs": 13955,
+      "outputEndMs": 25968
+    },
+    {
+      "segmentId": "seg-03a",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 734000,
+      "sourceEndMs": 740532,
+      "outputStartMs": 25968,
+      "outputEndMs": 32500
+    },
+    {
+      "segmentId": "seg-03b",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 616540,
+      "sourceEndMs": 620027,
+      "outputStartMs": 32500,
+      "outputEndMs": 35987
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 1164500,
+      "sourceEndMs": 1177106,
+      "outputStartMs": 35987,
+      "outputEndMs": 48593
+    },
+    {
+      "segmentId": "seg-05",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 178000,
+      "sourceEndMs": 189045,
+      "outputStartMs": 48593,
+      "outputEndMs": 59638
+    },
+    {
+      "segmentId": "seg-06",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 376500,
+      "sourceEndMs": 385831,
+      "outputStartMs": 59638,
+      "outputEndMs": 68969
+    },
+    {
+      "segmentId": "seg-07",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 254000,
+      "sourceEndMs": 267199,
+      "outputStartMs": 68969,
+      "outputEndMs": 82168
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 276000,
+      "sourceEndMs": 284600,
+      "outputStartMs": 82168,
+      "outputEndMs": 90768
+    },
+    {
+      "segmentId": "seg-09",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 535000,
+      "sourceEndMs": 545770,
+      "outputStartMs": 90768,
+      "outputEndMs": 101538
+    },
+    {
+      "segmentId": "seg-10",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 673330,
+      "sourceEndMs": 679999,
+      "outputStartMs": 101538,
+      "outputEndMs": 108207
+    },
+    {
+      "segmentId": "seg-11",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 874000,
+      "sourceEndMs": 883978,
+      "outputStartMs": 108207,
+      "outputEndMs": 118185
+    },
+    {
+      "segmentId": "seg-12",
+      "assetId": "source-02-rx-0-n-17620f86",
+      "sourceAssetPath": "02_原始素材/【怀旧向】高达动画机体集－报丧女妖命运女神（RX-0(N)）.mp4",
+      "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+      "sourceStartMs": 415200,
+      "sourceEndMs": 421015,
+      "outputStartMs": 118185,
+      "outputEndMs": 124000
+    }
+  ],
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "outputStartMs": 0,
+        "outputEndMs": 13955,
+        "purpose": "开场：报丧女妖头胸特写+光束步枪（54–56s），随后青绿量产机群战斗正对『不是每台机体都属于主角』",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-02",
+        "outputStartMs": 13955,
+        "outputEndMs": 25968,
+        "purpose": "身份宣告：红眼+精神感应骨架发光头部特写、爆焰中立姿持枪（344–356s 全探针 confirmed）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-03a",
+        "outputStartMs": 25968,
+        "outputEndMs": 32500,
+        "purpose": "精神感应框架：头部/躯干骨架发光+大光束炮瞄准开火（734–740.5s 全探针 confirmed）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-03b",
+        "outputStartMs": 32500,
+        "outputEndMs": 35987,
+        "purpose": "骨架承接：甲板整备持炮→紫蓝光束射出（616.5–620s 三探针 confirmed），句尾『回应新人类意志』的武器化画面",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-04",
+        "outputStartMs": 35987,
+        "outputEndMs": 48593,
+        "purpose": "NT-D 序列完整链：利迪呐喊『报丧女妖！』→面具展开绿光→觉醒特写→绿粒子→蓝光突进（1164.5–1177.1s）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-05",
+        "outputStartMs": 48593,
+        "outputEndMs": 59638,
+        "purpose": "驾驶员：不是天选之人的利迪（NT-D 不发动的挫败）+其机体大光束炮（178–189s）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-06",
+        "outputStartMs": 59638,
+        "outputEndMs": 68969,
+        "purpose": "双线：巴纳吉驾独角兽驶向答案（377.9/379.5/381.3s）+报丧女妖金骨架特写与绿机同框（383.5/384.5s=奉命拦截语境）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-07",
+        "outputStartMs": 68969,
+        "outputEndMs": 82168,
+        "purpose": "姊妹机：报丧女妖红眼头部（264s）+双机光束交锋同框（266.9–267.2s）+『互相牵引』台词语境（ev-001）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-08",
+        "outputStartMs": 82168,
+        "outputEndMs": 90768,
+        "purpose": "不是诅咒而是祈愿：马瑟纳斯/毕斯特家诅咒台词+光束军刀交锋+百年恩怨台词（276–284.6s）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-09",
+        "outputStartMs": 90768,
+        "outputEndMs": 101538,
+        "purpose": "感应波超限：探索层 540s 字幕帧+巴纳吉反应+白机张臂共振（535–545.8s）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-10",
+        "outputStartMs": 101538,
+        "outputEndMs": 108207,
+        "purpose": "埋葬秘密：绿光幽灵机体攀附巨块+金色报丧女妖头部白骨架（673.3–680s）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-11",
+        "outputStartMs": 108207,
+        "outputEndMs": 118185,
+        "purpose": "被祝福出生：巴纳吉祈愿字幕+诅咒/可能性字幕（874–882s，ev-009/ev-010 台词语境）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-12",
+        "outputStartMs": 118185,
+        "outputEndMs": 124000,
+        "purpose": "终幕：报丧女妖金骨架+光束军刀立姿特写（415.2–421s）",
+        "loop": false,
+        "duplicateFill": false
+      }
+    ],
+    "audio": {
+      "narration": [
+        {
+          "sentenceId": "s01",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s01.wav",
+          "outputStartMs": 7000
+        },
+        {
+          "sentenceId": "s02",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s02.wav",
+          "outputStartMs": 16500
+        },
+        {
+          "sentenceId": "s03",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s03.wav",
+          "outputStartMs": 28500
+        },
+        {
+          "sentenceId": "s04",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s04.wav",
+          "outputStartMs": 38500
+        },
+        {
+          "sentenceId": "s05",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s05.wav",
+          "outputStartMs": 51000
+        },
+        {
+          "sentenceId": "s06",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s06.wav",
+          "outputStartMs": 62000
+        },
+        {
+          "sentenceId": "s07",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s07.wav",
+          "outputStartMs": 71500
+        },
+        {
+          "sentenceId": "s08",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s08.wav",
+          "outputStartMs": 84500
+        },
+        {
+          "sentenceId": "s09",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s09.wav",
+          "outputStartMs": 93000
+        },
+        {
+          "sentenceId": "s10",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s10.wav",
+          "outputStartMs": 103500
+        },
+        {
+          "sentenceId": "s11",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s11.wav",
+          "outputStartMs": 110500
+        },
+        {
+          "sentenceId": "s12",
+          "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s12.wav",
+          "outputStartMs": 119500
+        }
+      ]
+    },
+    "exportConfig": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24
+    }
+  },
+  "artifacts": {
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "8001C54EA2F95B1D1A39E99B9E099B108D38A5444DDBC987DC4DB42098B4A9ED"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "G3 终审八列回显（唯一人工门禁；自动模式下=策略批准+卡照出）",
+    "语义选镜结果：13 段全部 direct_match（探针见各段 visualVerification）",
+    "源字幕处理=全段 mask 底部 84–100%（烧录字幕全片普遍）",
+    "响度：G2 天花板披露 −16.1 LUFS 让步出路（策略条款），G4 装配轨重规划",
+    "BGM：LOW-PHONK 委托选定+4/10 贴合度披露随 G1，对齐 offset 53875ms/missed s01 边界 204ms 如实报告",
+    "G5 机检：完整解码/黑帧/静音/重复检查+必检帧目视（播放审核卡）",
+    "分发边界=internal_test：源=他人 B站混剪（只读、未清权）、BGM LOW-PHONK 未清权——对外发布必须换曲重走 G4/G5",
+    "预览级系统声（Samantha）成品沿用披露（preview_voice_production 预授权）",
+    "响度：纯口播 −14.0 偏差 0.0 within-tolerance；主轨含乐床量纲读数只记账（合同 §5 成因②）"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "ev-001",
+    "ev-002",
+    "ev-003",
+    "ev-004",
+    "ev-005",
+    "ev-006",
+    "ev-007",
+    "ev-008",
+    "ev-009",
+    "ev-010",
+    "ev-011",
+    "ev-012",
+    "ev-013",
+    "ev-014",
+    "ev-015",
+    "G1-claim-004"
+  ],
+  "warnings": [
+    "accepted_warning:\"BGM\\u300aLOW-PHONK\\u300b\\u672a\\u6e05\\u6743\\uff1a\\u4ec5\\u9650\\u5185\\u90e8\\u7559\\u5b58\\uff1b\\u5bf9\\u5916\\u53d1\\u5e03\\u5fc5\\u987b\\u5148\\u6362\\u66f2\\u5e76\\u91cd\\u8d70 G4/G5\\uff0c\\u5426\\u5219\\u8fdd\\u53cd\\u6743\\u76ca\\uff08\\u59d4\\u6258\\u9009\\u5b9a+4/10 \\u8d34\\u5408\\u5ea6\\u62ab\\u9732\\u968f G1\\uff09\"",
+    "accepted_warning:\"\\u6e90\\u7d20\\u6750\\u4e3a\\u4ed6\\u4eba B\\u7ad9\\u6df7\\u526a\\uff08\\u4e2a\\u4eba\\u5b66\\u4e60/\\u5185\\u90e8\\u7559\\u5b58\\u8fb9\\u754c\\uff09\\uff1a\\u753b\\u9762\\u5185\\u6c34\\u5370/\\u53f0\\u6807/\\u5f39\\u5e55\\u6b8b\\u7559\\u6309\\u8fb9\\u754c\\u4fdd\\u7559\\u4e0d\\u6e05\\u9664\\uff0c\\u5e95\\u90e8\\u70e7\\u5f55\\u5b57\\u5e55\\u4ee5 84\\u2013100% \\u906e\\u7f69\\u5904\\u7406\"",
+    "accepted_warning:\"\\u914d\\u97f3=\\u9884\\u89c8\\u7ea7\\u7cfb\\u7edf\\u58f0\\uff08macOS Samantha\\uff09\\u6cbf\\u7528\\u6210\\u54c1\\uff1apreview_voice_production \\u9884\\u6388\\u6743\\uff0c\\u9010\\u5b57\\u6279\\u51c6\\u542b\\u300e\\u9884\\u89c8\\u7ea7\\u300f\\u62ab\\u9732\\u8bcd\""
+  ],
+  "authorization": {
+    "source": "他人 B站混剪（个人学习/内部留存边界，只读）",
+    "voice": "macOS 系统声 Samantha（预览级，预授权沿用）"
+  },
+  "distribution": {
+    "scope": "internal_test",
+    "notForDistribution": true
+  },
+  "status": "pending_human_review",
+  "finishedAt": null,
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  }
+}

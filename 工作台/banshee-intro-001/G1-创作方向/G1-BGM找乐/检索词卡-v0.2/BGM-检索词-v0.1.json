@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": null,
+    "themeRef": null,
+    "themeText": null,
+    "styleBriefRef": "工作台/banshee-intro-001/G1-创作方向/G1-参考视频分析/BGM-风格简报-冷战奇迹-v0.1.json"
+  },
+  "terms": [
+    {
+      "term": "工业电子 压迫",
+      "rationale": "画像流派中文直译+情绪原词'紧张高压'",
+      "source": "theme"
+    },
+    {
+      "term": "EBM dark",
+      "rationale": "画像流派 EBM 原词+情绪'冷酷'",
+      "source": "theme"
+    },
+    {
+      "term": "dark techno driving",
+      "rationale": "画像英文检索词原样组合",
+      "source": "theme"
+    },
+    {
+      "term": "hard techno aggressive instrumental",
+      "rationale": "画像'失真侵略性合成器贝斯'+'纯器乐需给人声留空间'",
+      "source": "theme"
+    },
+    {
+      "term": "cinematic cyberpunk action score",
+      "rationale": "本片为机体解说叙事片，需带叙事推进的动作配乐层（方向简报 coreViewpoint 依据）",
+      "source": "brief"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 160,
+    "durationMaxSec": null,
+    "bpmRange": [
+      110.7,
+      135.4
+    ]
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-10-09T16:42:18+08:00"
+}

@@ -1,0 +1,19 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_measure",
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+  "version": "v0.1",
+  "output": "工作台/banshee-intro-001/G2-证据与口播/响度/响度-实测报告-v0.1.json",
+  "measured": {
+    "integratedLufs": -16.2,
+    "truePeakDbtp": -1.7,
+    "loudnessRangeLu": 1.5,
+    "engine": "ffmpeg-ebur128"
+  },
+  "sha256": "D651BA37180DFB3BCD09677A2AF111B0F293BEAE00115DEE0C4DA1E41E8F44A5",
+  "status": "measured",
+  "measuredAt": "2026-10-09T09:09:29Z",
+  "unitsNote": "LUFS=集成响度（平均有多响）；dBTP=真峰值（会不会爆）；LU=动态范围宽度"
+}

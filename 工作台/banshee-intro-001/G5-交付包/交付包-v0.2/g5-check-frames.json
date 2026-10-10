@@ -1,0 +1,67 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "purpose": "g5_check_frames",
+ "subject": "交付包 final-video.mp4 必检帧（8 帧逐帧亲验，2026-10-10）",
+ "finalVideoSha256": "AA3FE45AB416B44660A4C1FE51C7D8E0C85A13FDF4E41C7C7A623B26299B1EBD",
+ "blackWindowInvestigation": "blackdetect 90.875–91.0s 与逐帧亮度 90.792–90.958s=seg-09 头部源内容暗转（源 535.05 暗星空/535.172 亮舱对照+干净段 seg-010.mp4 同帧比对），非渲染伪影，落在批准句间静默带 88.535–93.000s",
+ "frames": [
+  {
+   "timecode": "0:00.600",
+   "file": "必检帧/g5-0.6.jpg",
+   "sha256": "7CA47DD7CF3946EDA953BC877C2E53AB80B1FFD2E4CF79C1C5995707A4ACCC9E",
+   "observed": "黑场入窗口内：报丧女妖金天线+大光束炮自暗渐显",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "0:03.000",
+   "file": "必检帧/g5-3.0.jpg",
+   "sha256": "3A9599D892AF86C2A5B4783D34C329DE5AB5BB3EA51BD52DDAD8612766DFEDA4",
+   "observed": "章节卡完整无豆腐字",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "0:25.000",
+   "file": "必检帧/g5-25.0.jpg",
+   "sha256": "B65F930ACE5DDADA3FB84E0BD5B576FC1938DF4EB76FFE6E5E93838A153CB01D",
+   "observed": "seg-02 金骨架发光+粉机远景（账本 353s 吻合）",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "0:48.000",
+   "file": "必检帧/g5-48.0.jpg",
+   "sha256": "F7DD7BB58FFF565120A465624D53F336F23F3FD29EE5ED8F52668D6FF821F9CF",
+   "observed": "seg-04 尾部利迪驾驶舱+绿光头戴+源字幕压暗",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "1:00.000",
+   "file": "必检帧/g5-60.0.jpg",
+   "sha256": "A9476A543F6C3DCFDD07AC452256801612E742C5BD442F770F663692585094F2",
+   "observed": "seg-06 巴纳吉驾驶舱特写（账本 377s 吻合）",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "1:30.940",
+   "file": "必检帧/g5-90.94.jpg",
+   "sha256": "E1B89EFBDEDFC753667DE954E39410B1A2EDF56E764C023A57BC4F1AEFCCD22A",
+   "observed": "seg-09 头部暗星空=源 535.0–535.17 原片转场内容（专项查实）",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "2:02.600",
+   "file": "必检帧/g5-122.6.jpg",
+   "sha256": "265D1B4D55647C2FA97BAB693BBC050A19330794FE053C01A82EA1DE985BA582",
+   "observed": "seg-12 金骨架红眼越绿机盾甲+终句字幕",
+   "verdict": "pass"
+  },
+  {
+   "timecode": "2:03.900",
+   "file": "必检帧/g5-123.9.jpg",
+   "sha256": "6C55C655CDB9D22069C8E2EA40960C53A81FDAF12CD834DA0D6DE16BFE90FA47",
+   "observed": "黑场出窗口：压暗进行中",
+   "verdict": "pass"
+  }
+ ]
+}

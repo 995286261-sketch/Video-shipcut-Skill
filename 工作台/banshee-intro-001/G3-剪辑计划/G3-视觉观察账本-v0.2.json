@@ -1,0 +1,2223 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "sourceMedia": {
+  "assetId": "source-02-rx-0-n-17620f86",
+  "sha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA"
+ },
+ "purpose": "G3.2 探索层逐帧观察账本（20s 网格 60 帧；scdet 0.30 全片 940 切点统计在册，20 分钟体量下探索以 20s 网格近似、候选窗口断言层 4fps 加密补验——成本策略如实登记）",
+ "analysisMethod": "ffmpeg fps=1/20 抽帧 480x270 + drawtext 秒标 + 4x3 带标拼版 5 张 + 主 agent 多模态目视",
+ "provenance": "本项目新鲜分析（2026-10-09）；v0.2 追加断言层验证记录 65 条（g3-explore-verify-v0.2）",
+ "records": [
+  {
+   "recordId": "exp-G00",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 0,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-01.jpg",
+   "observedVisuals": "两台舱内白衣乘员（正面+侧面），烧录中日字幕",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G01",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 20000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-02.jpg",
+   "observedVisuals": "太空爆焰+远处舰体射出蓝色光束，无机体特写",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G02",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 40000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-03.jpg",
+   "observedVisuals": "驾驶舱操纵面板与手特写",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G03",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 60000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-04.jpg",
+   "observedVisuals": "黑金配色报丧女妖头肩部特写（未觉醒，金色精神感应骨架未发光）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G04",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 80000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-05.jpg",
+   "observedVisuals": "深色报丧女妖持光束步枪射击+青绿色量产机同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G05",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 100000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-06.jpg",
+   "observedVisuals": "星空星云空镜",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G06",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 120000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-07.jpg",
+   "observedVisuals": "蓝色光束线横贯特效",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G07",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 140000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-08.jpg",
+   "observedVisuals": "暗星空小亮点+字幕组制作名单烧录（校對Lucifer等）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G08",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 160000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-09.jpg",
+   "observedVisuals": "星空小亮点空镜",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G09",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 180000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-10.jpg",
+   "observedVisuals": "红发少年（巴纳吉）驾驶舱呐喊",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G10",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 200000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-11.jpg",
+   "observedVisuals": "红发少年驾驶舱，字幕『独角兽与报丧女妖在互相牵引着』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G11",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 220000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-12.jpg",
+   "observedVisuals": "深色驾驶服棕发驾驶员（利迪）舱内，字幕『利迪先生 不可以』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G12",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 240000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-13.jpg",
+   "observedVisuals": "蓝色漩涡光束特效",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G13",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 260000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-14.jpg",
+   "observedVisuals": "白色独角兽（毁灭模式红骨架）特写与黑色机体同框对峙",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G14",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 280000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-15.jpg",
+   "observedVisuals": "利迪舱内红目镜特写，字幕『那原本不是诅咒而是祈愿』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G15",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 300000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-16.jpg",
+   "observedVisuals": "粉紫色机体（非目标）发射粉色光束",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G16",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 320000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-17.jpg",
+   "observedVisuals": "利迪震惊表情特写『什么？』",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G17",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 340000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-18.jpg",
+   "observedVisuals": "黑金报丧女妖持枪立于爆焰残骸旁",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G18",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 360000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-19.jpg",
+   "observedVisuals": "青绿色机体发射光束+远处小黑机影",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G19",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 380000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-20.jpg",
+   "observedVisuals": "报丧女妖头部特写：面具展开、绿色精神感应骨架发光、红眼（NT-D 觉醒）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G20",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 400000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-21.jpg",
+   "observedVisuals": "绿色机体头部+深色机体橙眼同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G21",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 420000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-22.jpg",
+   "observedVisuals": "黑金报丧女妖远景飞行+蓝色漩涡背景",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G22",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 440000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-23.jpg",
+   "observedVisuals": "粉衣女性乘员，字幕『收集到的人心的杂念』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G23",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 460000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-24.jpg",
+   "observedVisuals": "白衣人群群像",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G24",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 480000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-25.jpg",
+   "observedVisuals": "黑金报丧女妖持大型光束步枪瞄准，金色骨架发光",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G25",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 500000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-26.jpg",
+   "observedVisuals": "利迪面部特写（帽檐阴影）",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G26",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 520000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-27.jpg",
+   "observedVisuals": "绿色机体群环绕火焰圆环特效",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G27",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 540000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-28.jpg",
+   "observedVisuals": "白衣帽女性面部紫光，字幕『超出数值上限的感应波』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G28",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 560000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-29.jpg",
+   "observedVisuals": "利迪双手掩面、白光起",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G29",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 580000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-30.jpg",
+   "observedVisuals": "深色驾驶服人物翻滚动作",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G30",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 600000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-31.jpg",
+   "observedVisuals": "舰桥白衣乘员群，字幕『利迪少尉 报丧女妖也参战了』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G31",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 620000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-32.jpg",
+   "observedVisuals": "黑金报丧女妖侧身持光束步枪射击",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G32",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 640000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-33.jpg",
+   "observedVisuals": "青绿发光独角兽+黑金报丧女妖同框对峙",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle",
+    "mixed_subject"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G33",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 660000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+   "observedVisuals": "大型绿色光束炮（拖曳炮）特写",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G34",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 680000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-35.jpg",
+   "observedVisuals": "熔岩状爆焰云",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G35",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 700000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-36.jpg",
+   "observedVisuals": "白盔红框人物面部，字幕『那么我也只能应战了』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G36",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 720000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-37.jpg",
+   "observedVisuals": "驾驶舱内乘员+外部爆焰红光",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G37",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 740000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-38.jpg",
+   "observedVisuals": "黑金报丧女妖站立于粉色弹射结构上（骨架白色微光）",
+   "identityStatus": "confirmed",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G38",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 760000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-39.jpg",
+   "observedVisuals": "老年男性面部特写（皱眉）",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G39",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 780000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-40.jpg",
+   "observedVisuals": "老年男性+短发女性军官，字幕『控制态势微调整』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G40",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 800000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-41.jpg",
+   "observedVisuals": "老年男性正面特写",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G41",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 820000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-42.jpg",
+   "observedVisuals": "老年男性侧影",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G42",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 840000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-43.jpg",
+   "observedVisuals": "利迪舱内，字幕『测定为殖民卫星大小的物体』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G43",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 860000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-44.jpg",
+   "observedVisuals": "深色驾驶服红光面罩人物，字幕『并非只将人口丢到宇宙』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G44",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 880000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-45.jpg",
+   "observedVisuals": "利迪舱内，字幕『我们是被祝福着出生到这世上的』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G45",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 900000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-46.jpg",
+   "observedVisuals": "利迪舱内橙色光",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G46",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 920000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-47.jpg",
+   "observedVisuals": "舰桥群像，字幕『格利普斯里面也有上千人』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G47",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 940000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-48.jpg",
+   "observedVisuals": "舰桥侧影，字幕『注意力强度数值』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G48",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 960000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-49.jpg",
+   "observedVisuals": "老年男性特写+左上角时钟烧录（11 10 09 08）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle",
+    "timestamp_watermark"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G49",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 980000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-50.jpg",
+   "observedVisuals": "绿军装白发指挥官仰视",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G50",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1000000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-51.jpg",
+   "observedVisuals": "白色爆光带绿边特效",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G51",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1020000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-52.jpg",
+   "observedVisuals": "全屏绿色光粒子+小型十字机影（绿光幽灵效果）",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G52",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1040000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-53.jpg",
+   "observedVisuals": "青色结晶状 X 形物体（特效物体，机体身份不可辨）",
+   "identityStatus": "uncertain",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G53",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1060000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-54.jpg",
+   "observedVisuals": "巴纳吉头盔正面，字幕『你和公主两人就能转化悲伤为力量』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G54",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1080000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-55.jpg",
+   "observedVisuals": "黑发少年面部绿光",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G55",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1100000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-56.jpg",
+   "observedVisuals": "黑发驾驶员舱内，字幕『你不用管这边先走』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G56",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1120000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-57.jpg",
+   "observedVisuals": "金发少年舱内喊，字幕『你才刚诞生而已 巴纳吉』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G57",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1140000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-58.jpg",
+   "observedVisuals": "暗舱内驾驶服人物俯身",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G58",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1160000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-59.jpg",
+   "observedVisuals": "报丧女妖头部大特写：绿色精神感应骨架发光、金色 V 字天线、面具展开（NT-D）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "exp-G59",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1180000,
+   "frameExtractionSpec": "20s 网格中帧, 480x270 jpg, drawtext 秒标",
+   "analysisPromptVersion": "g3-explore-v0.1",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-60.jpg",
+   "observedVisuals": "白色舰队群太空航行+字幕『而听到这场转播的各位』",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle",
+    "fansub_credit"
+   ],
+   "createdAt": "2026-10-09T09:21:18Z"
+  },
+  {
+   "recordId": "obs-V001",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 54000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-54000-start.jpg",
+   "observedVisuals": "黑金报丧女妖头胸特写+光束步枪（未觉醒）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V002",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 55385,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-55385-mid.jpg",
+   "observedVisuals": "报丧女妖半身持大型光束步枪，金色骨架",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V003",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 57762,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-57762-mid.jpg",
+   "observedVisuals": "青绿色量产机蓝光中飞行（非目标）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V004",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 61871,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-61871-mid.jpg",
+   "observedVisuals": "青绿机体头部特写（非目标）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V005",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 64748,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-64748-mid.jpg",
+   "observedVisuals": "青绿机体群编队（非目标）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V006",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 67954,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w01-67954-end.jpg",
+   "observedVisuals": "青绿扎古型特写（非目标）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V007",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 344350,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x02-344350.jpg",
+   "observedVisuals": "报丧女妖头部特写：红眼+白色精神感应骨架发光+金天线",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V008",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 346643,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x02-346643.jpg",
+   "observedVisuals": "爆焰+报丧女妖金骨架机体",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V009",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 350043,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x02-350043.jpg",
+   "observedVisuals": "报丧女妖持枪立于爆焰残骸旁",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V010",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 353918,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x02-353918.jpg",
+   "observedVisuals": "报丧女妖光束战斧+粉机远景",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V011",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 355999,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x02-355999.jpg",
+   "observedVisuals": "小行星带+报丧女妖头部",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V012",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 734000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03c-734000-start.jpg",
+   "observedVisuals": "报丧女妖头部：红眼+金/白骨架发光特写",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V013",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 736984,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03c-736984-mid.jpg",
+   "observedVisuals": "躯干白色骨架发光",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V014",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 737943,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03c-737943-mid.jpg",
+   "observedVisuals": "持大型光束炮瞄准",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V015",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 739612,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03c-739612-mid.jpg",
+   "observedVisuals": "开火爆焰",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V016",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 740446,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03c-740446-mid.jpg",
+   "observedVisuals": "爆焰中机体剪影",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V017",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 616540,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03b2-616540-start.jpg",
+   "observedVisuals": "报丧女妖持多管炮于甲板结构",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V018",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 618283,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03b2-618283-mid.jpg",
+   "observedVisuals": "多管炮瞄准（炮身绿灯）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V019",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 620026,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w03b2-620026-end.jpg",
+   "observedVisuals": "紫蓝光束射出",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V020",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1165540,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1165540.jpg",
+   "observedVisuals": "利迪呐喊，字幕『報喪女妖！バンシィ！』（启动命令）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V021",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1169831,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1169831.jpg",
+   "observedVisuals": "NT-D：面具展开+绿色精神感应骨架发光+金天线",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V022",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1170373,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1170373.jpg",
+   "observedVisuals": "NT-D 头部大特写（绿光）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V023",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1171165,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1171165.jpg",
+   "observedVisuals": "头部+绿骨架侧面",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V024",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1172124,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1172124.jpg",
+   "observedVisuals": "绿色粒子+金天线觉醒特效",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V025",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1173584,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w12b-1173584.jpg",
+   "observedVisuals": "蓝光漩涡突进（机体剪影）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V026",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 178000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w06-178000-start.jpg",
+   "observedVisuals": "利迪瘫坐驾驶舱，字幕『為什麼NT-D就是不發動』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V027",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 182665,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w06-182665-mid.jpg",
+   "observedVisuals": "同上镜头延续",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V028",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 187330,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w06-187330-end.jpg",
+   "observedVisuals": "报丧女妖持大型光束炮（红眼/金骨架/炮身绿灯）",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V029",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 377875,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w04-377875-mid.jpg",
+   "observedVisuals": "巴纳吉驾驶舱",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V030",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 379502,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w04-379502-mid.jpg",
+   "observedVisuals": "白色独角兽毁灭模式（红骨架）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V031",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 381295,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w04-381295-mid.jpg",
+   "observedVisuals": "独角兽毁灭模式全身+炮",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V032",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 383527,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w04-383527-mid.jpg",
+   "observedVisuals": "报丧女妖金色骨架发光特写",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V033",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 384507,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w04-384507-mid.jpg",
+   "observedVisuals": "绿机+报丧女妖绿金发光同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V034",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 385490,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-20.jpg",
+   "observedVisuals": "青绿机体多管炮（非目标）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V035",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 255810,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-255810-mid.jpg",
+   "observedVisuals": "利迪驾驶舱",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V036",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 259456,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-259456-mid.jpg",
+   "observedVisuals": "双机红蓝光束对峙+字幕『讓拉普拉斯之盒的詛咒』",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V037",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 263981,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-263981-mid.jpg",
+   "observedVisuals": "报丧女妖头部红眼金骨架",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V038",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 265044,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-265044-mid.jpg",
+   "observedVisuals": "报丧女妖躯干金骨架+蓝光",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V039",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 266935,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-266935-mid.jpg",
+   "observedVisuals": "白独角兽(红骨架)与报丧女妖同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V040",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 267198,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w07-267198-end.jpg",
+   "observedVisuals": "双机同框延续",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V041",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 276000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w08-276000-start.jpg",
+   "observedVisuals": "利迪驾驶舱，字幕『留下詛咒的馬瑟納斯家』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V042",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 279225,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w08-279225-mid.jpg",
+   "observedVisuals": "报丧女妖与红独角兽光束军刀交锋",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V043",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 280893,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w08-280893-mid.jpg",
+   "observedVisuals": "报丧女妖战斧+红独角兽，字幕『只要各自繼承血緣的我們消失了』",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V044",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 283309,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w08-283309-mid.jpg",
+   "observedVisuals": "巴纳吉驾驶舱，字幕『這百年來的恩怨也會消滅』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V045",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 536986,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w09-536986-mid.jpg",
+   "observedVisuals": "巴纳吉呐喊（感应波语境）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V046",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 540000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-28.jpg",
+   "observedVisuals": "白衣帽女性紫光，字幕『超出數值上限的…感應波！』（G2 探索层同帧）",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V047",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 543201,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w09-543201-mid.jpg",
+   "observedVisuals": "白机红骨架头部特写（独角兽）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V048",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 545528,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w09-545528-mid.jpg",
+   "observedVisuals": "白机张臂+蓝色交叉光（共振姿态）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V049",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 673555,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x10-673555.jpg",
+   "observedVisuals": "绿色发光机体射出橙色光束（绿光幽灵）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V050",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 675580,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x10-675580.jpg",
+   "observedVisuals": "绿机攀附褐色巨块（拉普拉斯之盒语境）",
+   "identityStatus": "uncertain",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V051",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 677582,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+   "observedVisuals": "绿色幽灵机+金色报丧女妖同框",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V052",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 679414,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-34.jpg",
+   "observedVisuals": "金色报丧女妖头部白色骨架发光",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V053",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 874000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w11-874000-start.jpg",
+   "observedVisuals": "巴纳吉驾驶舱，字幕『希望與宏大的祈願一起送出』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V054",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 876268,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w11-876268-mid.jpg",
+   "observedVisuals": "同上延续",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V055",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 881757,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/w11-881757-mid.jpg",
+   "observedVisuals": "暗景+字幕『那究竟會成為詛咒 還是可能性』",
+   "identityStatus": "person_only",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V056",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 883977,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-45.jpg",
+   "observedVisuals": "暗蓝背景机体剪影（过渡）",
+   "identityStatus": "not_present",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V057",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 416287,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x12-416287.jpg",
+   "observedVisuals": "爆焰+金骨架机体",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V058",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 418331,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x12-418331.jpg",
+   "observedVisuals": "报丧女妖头部金骨架发光+绿光",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V059",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 419499,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x12-419499.jpg",
+   "observedVisuals": "报丧女妖头部越过绿机肩甲",
+   "identityStatus": "mixed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V060",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 420187,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x12-420187.jpg",
+   "observedVisuals": "报丧女妖全身金骨架+绿机盾",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V061",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 420499,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/x12-420499.jpg",
+   "observedVisuals": "报丧女妖持光束军刀立姿",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V062",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 420729,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-视觉分析/探索层/grid-22.jpg",
+   "observedVisuals": "军刀+金骨架特写",
+   "identityStatus": "confirmed",
+   "riskFlags": [
+    "burned_subtitle"
+   ],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V063",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 474000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+   "observedVisuals": "窗口 474–484s 全为利迪驾驶舱/乘员群像，报丧女妖仅 ~480s 短镜头，弃用",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V064",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 374000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+   "observedVisuals": "窗口 374–386.6s 主体为白色独角兽毁灭模式+青绿机，弃用",
+   "identityStatus": "not_present",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:37:31Z"
+  },
+  {
+   "recordId": "obs-V065",
+   "sourceAssetId": "source-02-rx-0-n-17620f86",
+   "sourceSha256": "D3E966E06FF7DBE94E4E8C36E9A6B006CCE6D31C024721F23F6CCEDCBE367FAA",
+   "sourceMs": 1153000,
+   "frameExtractionSpec": "scdet(0.30) 子镜头中帧+窗口起/终帧, 480x270 jpg, drawtext 窗口+毫秒标",
+   "analysisPromptVersion": "g3-explore-verify-v0.2",
+   "provider": "zcode-host-session",
+   "model": "main-agent-multimodal-vision",
+   "analysisStatus": "completed",
+   "frameRef": "G3-画面验证帧/sheet-w03.jpg",
+   "observedVisuals": "窗口 1153–1173.8s 前段为利迪驾驶舱，觉醒头像段改判给 seg-04/seg-12 分区使用",
+   "identityStatus": "person_only",
+   "riskFlags": [],
+   "createdAt": "2026-10-09T09:37:31Z"
+  }
+ ]
+}

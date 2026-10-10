@@ -1,0 +1,58 @@
+{
+ "projectId": "banshee-intro-001",
+ "coreQuestion": "报丧女妖凭什么成为 UC 世纪里最锋利也最宿命的那台机体？",
+ "audience": "高达系列观众/怀旧向同好（B站格式横版，内部留存）",
+ "title": "报丧女妖——与皇帝命定的命运女神",
+ "titleExpressionType": "editorial_expression",
+ "coreViewpoint": "同为人造'怪物'，报丧女妖不靠独角兽的主角光环：NT-D 的疯狂变形、精神感应屏障与'A.A.式'的悲情戏份，让它成为全片最像'反派女主角'的机体——强在设定，痛也在设定。",
+ "outputPreferences": {
+  "aspectRatio": "16:9",
+  "targetDurationSec": [
+   120,
+   210
+  ],
+  "usagePurpose": "personal_internal_preview"
+ },
+ "bgmDecision": "use_library_later",
+ "directionChoice": {
+  "id": "spec-and-fate",
+  "label": "规格与宿命：NT-D 双面性与'命定相遇'讲一台悲剧女主角机",
+  "source": "agent_recommendation"
+ },
+ "styleRules": [
+  "顶部双语大标题栏：中文主标+英文副标（沿参考片开场标题卡形态；同字节档案复用，sha 对账见分析区）",
+  "暗色底+白色粗体信息层，规格/数据以信息卡呈现（参考片军事纪录片式信息密度）",
+  "剪辑节奏：常规段平均镜长约 6-7 秒，高潮段（NT-D 展开/战斗段落）缩短切点、跟拍不硬凑卡点",
+  "口播语言英文（AI 配音·预览级系统声，声线到 G2 试听卡定）、信息卡中文并存；解说+画面证据推进"
+ ],
+ "expressionBoundaries": [
+  "不使用未核实的'最强/无敌/碾压'类绝对化断言，战绩与设定表述以素材画面与公开剧情为限（G2 逐条核）",
+  "不贬损其他作品或其他机体来抬高报丧女妖",
+  "参考片原句、画面、音乐、Logo 一律不带入输出，只借鉴抽象节奏与信息层形态",
+  "素材系第三方高达动画剪辑合集（SUNRISE 版权画面+平台水印原样）：本片仅内部留存，不对外发布；画面自带台标水印不抹除、逐条点名披露",
+  "源素材实测为 720P（1280x720, 23.976fps）：输出按原生 720P 记账，不做 1080P 拉伸伪高清"
+ ],
+ "claims": [
+  {
+   "claimId": "claim-001",
+   "text": "RX-0(N) 报丧女妖（命运女神）是地球联邦军开发的 NT-D 实验机二号机，与独角兽高达同源",
+   "status": "pending"
+  },
+  {
+   "claimId": "claim-002",
+   "text": "RX-0(N) 报丧女妖（命运女神）在 OVA《机动战士高达 UC》第 4 话起参战，驾驶员为利迪·马纳斯（少尉）",
+   "status": "pending",
+   "revisionNote": "2026-10-09 G2 字幕证据（源片 560s「利迪少尉 報喪女妖也參戰了」）修正原稿误写'普露第十二（凤·村雨）'（那是小说版设定，OVA 证据不支持）；待 G2 事实卡正式确认"
+  },
+  {
+   "claimId": "claim-003",
+   "text": "报丧女妖具备精神感应屏障（Mental-Frame Barrier）能力，NT-D 系统启动后装甲展开进入'恶魔形态'",
+   "status": "pending"
+  },
+  {
+   "claimId": "claim-004",
+   "text": "报丧女妖主要登场于《机动战士高达 UC》OVA 第 4 话起的战斗段落",
+   "status": "pending"
+  }
+ ]
+}

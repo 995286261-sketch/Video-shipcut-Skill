@@ -1,0 +1,49 @@
+{
+ "projectId": "banshee-intro-001",
+ "node": "G5",
+ "platform": "bilibili（B站横版制式；去向=内部留存，不实际上传）",
+ "video": {
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "codec": "h264",
+  "aspectRatio": "16:9"
+ },
+ "audio": {
+  "codec": "aac",
+  "sampleRate": 44100,
+  "channels": 2,
+  "loudnessTarget": {
+   "integratedLufs": -14.0,
+   "truePeakDbtp": -1.5,
+   "lraTargetLu": 9.0
+  }
+ },
+ "duration": {
+  "targetMs": 124000,
+  "actualMs": 124000,
+  "deltaMs": 0
+ },
+ "subtitles": {
+  "burnedIn": true,
+  "srtDelivered": true,
+  "language": "en"
+ },
+ "cover": {
+  "delivered": "cover.jpg",
+  "sourceMs": 1170373
+ },
+ "music": {
+  "track": "LOW-PHONK",
+  "clearedRights": false,
+  "boundary": "internal_test only"
+ },
+ "authorization": {
+  "source": "他人 B站混剪（个人学习/内部留存边界，只读）",
+  "voice": "macOS 系统声 Samantha（预览级，预授权沿用）"
+ },
+ "distribution": {
+  "scope": "internal_test",
+  "notForDistribution": true
+ }
+}

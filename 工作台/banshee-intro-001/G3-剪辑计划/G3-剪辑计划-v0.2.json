@@ -1,0 +1,1105 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "banshee-intro-001",
+ "node": "G3",
+ "status": "approved_for_g4",
+ "sourceAudioPolicy": "exclude",
+ "fps": 24,
+ "timelineDurationMs": 124000,
+ "narrationDraft": "工作台/banshee-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+ "narrationDecisionRef": "工作台/banshee-intro-001/G2-证据与口播/G2-决定-v0.1.json",
+ "semanticBeatRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+ "visualAnalysisRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-视觉分析-v0.1.json",
+ "subjectConfirmationRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+ "observationLedgerRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.2.json",
+ "verificationFramesRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+ "durationDecision": {
+  "targetDurationSec": 124,
+  "narrationEstimatedDurationSec": 66.074,
+  "resolution": "preserve_target_with_editorial_padding",
+  "decisionReason": "G1 目标时长区间 [120,210]s；口播实测 66.074s（配音清单），以片头 7s 氛围+11 处句间呼吸（对齐产物输出轴边界）+片尾 0.854s 收束补足节奏（自动模式：用户验收推荐默认『全部默认建议』，无补素材诉求；sufficiency_shorten 预授权在场未触发）。",
+  "intentionalSilence": [
+   {
+    "startMs": 0,
+    "endMs": 7000,
+    "purpose": "片头建立氛围（黑场入+机体特写）",
+    "bgmPolicy": "approved_bgm_fade_in"
+   },
+   {
+    "startMs": 11409,
+    "endMs": 16500,
+    "purpose": "s01→s02 战斗语境呼吸",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 23427,
+    "endMs": 28500,
+    "purpose": "身份宣告→骨架介绍停顿",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 33473,
+    "endMs": 38500,
+    "purpose": "骨架→觉醒蓄势",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 46176,
+    "endMs": 51000,
+    "purpose": "觉醒高潮余韵",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 57276,
+    "endMs": 62000,
+    "purpose": "驾驶员→双线转场",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 66437,
+    "endMs": 71500,
+    "purpose": "拦截令→姊妹机蓄势",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 79836,
+    "endMs": 84500,
+    "purpose": "对峙→诅咒台词",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 88535,
+    "endMs": 93000,
+    "purpose": "祈愿→感应波",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 99576,
+    "endMs": 103500,
+    "purpose": "共振→拉普拉斯秘密",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 105913,
+    "endMs": 110500,
+    "purpose": "秘密→祝福台词",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 116870,
+    "endMs": 119500,
+    "purpose": "台词→终幕",
+    "bgmPolicy": "approved_bgm_sustained_ducking_off"
+   },
+   {
+    "startMs": 123146,
+    "endMs": 124000,
+    "purpose": "片尾黑场出收束",
+    "bgmPolicy": "approved_bgm_fade_out"
+   }
+  ],
+  "antiFillRule": {
+   "disallowRepeatedSegments": true,
+   "disallowLoops": true,
+   "disallowMeaninglessSlowMotion": true,
+   "disallowUnverifiedFactPadding": true
+  }
+ },
+ "bgmPlan": {
+  "audioSha256": "0B2F301892EE339C648B023B7BD3BB2D6FFC11192AE473DE4A6511AC8CF67D4E",
+  "reportSha256": "1CC97DB2C628C68E7CF0B85FA8D360406864055F0BCD1D6E9C59F4514E14D29A",
+  "alignmentRef": "工作台/banshee-intro-001/G3-剪辑计划/BGM/BGM-对齐建议-v0.2.json",
+  "alignmentSha256": "1E0653001A4746782A0912E7B064BD7BA678A645A81F3759556B08A9435FDEF6",
+  "trackOffsetMs": 31687,
+  "fades": {
+   "fadeInMs": 2000,
+   "fadeOutStartMs": 122000,
+   "fadeOutMs": 2000
+  },
+  "duckingPolicy": "口播活跃区间 BGM 压低（对齐产物 ducking 12 句区间，输出轴坐标）；深度参数 G4 执行前拍板（§6-②）"
+ },
+ "packagingDecisions": {
+  "fps": 24,
+  "aspectRatioPolicy": "16:9 原生 1280x720（源即 720P，不拉伸不放大）",
+  "loudnessTarget": {
+   "integratedLufs": -14.0,
+   "truePeakDbtp": -1.5,
+   "lraTargetLu": 9.0
+  },
+  "coverFrameMs": 1170373,
+  "coverNote": "封面=NT-D 觉醒头部大特写（面具展开+绿色骨架+金 V 天线，seg-04 窗口内 1170.373s）；底部字幕带由标题版式避让；章节卡起点 1200ms=黑场入(1200ms)完成后浮现",
+  "chapterCards": [
+   {
+    "startMs": 1200,
+    "endMs": 6500,
+    "title": "报丧女妖——与皇帝命定的命运女神",
+    "lane": "title(8–18%)"
+   }
+  ],
+  "subtitleTimelineRef": "工作台/banshee-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.srt",
+  "subtitleCheckRef": "工作台/banshee-intro-001/G3-剪辑计划/字幕/G3-字幕复检报告-v0.1.json",
+  "subtitleAssRef": "工作台/banshee-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.ass",
+  "subtitleLayoutContractRef": "工作台/banshee-intro-001/G3-剪辑计划/字幕/G3-字幕布局合同-v0.1.json",
+  "experienceQuery": "字幕经验库 1280x720=resolutionMiss（4 命中均非本分辨率），回落模板默认按宽度模型收敛 27px——卡上必显"
+ },
+ "segments": [
+  {
+   "segmentId": "seg-01",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 54000,
+   "endMs": 67955,
+   "outputStartMs": 0,
+   "outputEndMs": 13955,
+   "outputDurationMs": 13955,
+   "sourceDurationMs": 13955,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "narrationStartMs": 7000,
+   "narrationEndMs": 11409,
+   "narrationText": "In the Universal Century, not every mobile suit gets to be the hero's machine.",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "报丧女妖出现在战斗语境（窗口起段 54–56s 已验证）+非主角量产机群像"
+   },
+   "semanticBeatIds": [
+    "beat-001"
+   ],
+   "reason": "开场：报丧女妖头胸特写+光束步枪（54–56s），随后青绿量产机群战斗正对『不是每台机体都属于主角』",
+   "evidenceRefs": [
+    "ev-014",
+    "ev-015"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "54s：黑金报丧女妖头胸特写+光束步枪（未觉醒）；55s：报丧女妖半身持大型光束步枪，金色骨架；57s：青绿色量产机蓝光中飞行（非目标）；61s：青绿机体头部特写（非目标）；64s：青绿机体群编队（非目标）；67s：青绿扎古型特写（非目标）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w01-54000-start.jpg",
+     "G3-画面验证帧/w01-55385-mid.jpg",
+     "G3-画面验证帧/w01-57762-mid.jpg",
+     "G3-画面验证帧/w01-61871-mid.jpg",
+     "G3-画面验证帧/w01-64748-mid.jpg",
+     "G3-画面验证帧/w01-67954-end.jpg"
+    ],
+    "observedVisuals": "54s：黑金报丧女妖头胸特写+光束步枪（未觉醒）；55s：报丧女妖半身持大型光束步枪，金色骨架；57s：青绿色量产机蓝光中飞行（非目标）；61s：青绿机体头部特写（非目标）",
+    "derivedFromObservationIds": [
+     "obs-V001",
+     "obs-V002",
+     "obs-V003",
+     "obs-V004",
+     "obs-V005",
+     "obs-V006"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "黑场入",
+   "transitionDurationMs": 1200,
+   "transitionReason": "自黑场淡入，报丧女妖静默特写渐显，建立宇宙世纪战场氛围（首段入场专用，不压口播：旁白 7.0s 起）"
+  },
+  {
+   "segmentId": "seg-02",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 344000,
+   "endMs": 356013,
+   "outputStartMs": 13955,
+   "outputEndMs": 25968,
+   "outputDurationMs": 12013,
+   "sourceDurationMs": 12013,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 16500,
+   "narrationEndMs": 23427,
+   "narrationText": "R-X zero N, the Banshee Norn, Goddess of Fate: the Earth Federation's second answer to the riddle of the Unicorn.",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "可辨认报丧女妖：黑金配色/红眼/金骨架（344.4s 头部特写）"
+   },
+   "semanticBeatIds": [
+    "beat-002"
+   ],
+   "reason": "身份宣告：红眼+精神感应骨架发光头部特写、爆焰中立姿持枪（344–356s 全探针 confirmed）",
+   "evidenceRefs": [
+    "ev-014",
+    "ev-015"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "344s：报丧女妖头部特写：红眼+白色精神感应骨架发光+金天线；346s：爆焰+报丧女妖金骨架机体；350s：报丧女妖持枪立于爆焰残骸旁；353s：报丧女妖光束战斧+粉机远景；355s：小行星带+报丧女妖头部"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/x02-344350.jpg",
+     "G3-画面验证帧/x02-346643.jpg",
+     "G3-画面验证帧/x02-350043.jpg",
+     "G3-画面验证帧/x02-353918.jpg",
+     "G3-画面验证帧/x02-355999.jpg"
+    ],
+    "observedVisuals": "344s：报丧女妖头部特写：红眼+白色精神感应骨架发光+金天线；346s：爆焰+报丧女妖金骨架机体；350s：报丧女妖持枪立于爆焰残骸旁；353s：报丧女妖光束战斧+粉机远景",
+    "derivedFromObservationIds": [
+     "obs-V007",
+     "obs-V008",
+     "obs-V009",
+     "obs-V010",
+     "obs-V011"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 800,
+   "transitionReason": "356s 军刀立姿→734s 骨架发光特写：同一主体不同时空的身份宣告承接，叠化衔接登场"
+  },
+  {
+   "segmentId": "seg-03a",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 734000,
+   "endMs": 740532,
+   "outputStartMs": 25968,
+   "outputEndMs": 32500,
+   "outputDurationMs": 6532,
+   "sourceDurationMs": 6532,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 28500,
+   "narrationEndMs": 30500,
+   "narrationText": "Like the Unicorn, she carries a psycho-frame,",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "精神感应骨架可见：金/白骨架发光特写（734–737s）"
+   },
+   "semanticBeatIds": [
+    "beat-003"
+   ],
+   "reason": "精神感应框架：头部/躯干骨架发光+大光束炮瞄准开火（734–740.5s 全探针 confirmed）（32500 切点落在 s03 句内，叠化被红线否决=硬切）",
+   "evidenceRefs": [
+    "ev-015"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "734s：报丧女妖头部：红眼+金/白骨架发光特写；736s：躯干白色骨架发光；737s：持大型光束炮瞄准；739s：开火爆焰；740s：爆焰中机体剪影"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w03c-734000-start.jpg",
+     "G3-画面验证帧/w03c-736984-mid.jpg",
+     "G3-画面验证帧/w03c-737943-mid.jpg",
+     "G3-画面验证帧/w03c-739612-mid.jpg",
+     "G3-画面验证帧/w03c-740446-mid.jpg"
+    ],
+    "observedVisuals": "734s：报丧女妖头部：红眼+金/白骨架发光特写；736s：躯干白色骨架发光；737s：持大型光束炮瞄准；739s：开火爆焰",
+    "derivedFromObservationIds": [
+     "obs-V012",
+     "obs-V013",
+     "obs-V014",
+     "obs-V015",
+     "obs-V016"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-03b",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 616540,
+   "endMs": 620027,
+   "outputStartMs": 32500,
+   "outputEndMs": 35987,
+   "outputDurationMs": 3487,
+   "sourceDurationMs": 3487,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 30500,
+   "narrationEndMs": 33473,
+   "narrationText": "armor that answers a Newtype's will.",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "报丧女妖持多管炮（金骨架+炮身绿灯，616.5–620s）"
+   },
+   "semanticBeatIds": [
+    "beat-003"
+   ],
+   "reason": "骨架承接：甲板整备持炮→紫蓝光束射出（616.5–620s 三探针 confirmed），句尾『回应新人类意志』的武器化画面",
+   "evidenceRefs": [
+    "ev-015"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "616s：报丧女妖持多管炮于甲板结构；618s：多管炮瞄准（炮身绿灯）；620s：紫蓝光束射出"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w03b2-616540-start.jpg",
+     "G3-画面验证帧/w03b2-618283-mid.jpg",
+     "G3-画面验证帧/w03b2-620026-end.jpg"
+    ],
+    "observedVisuals": "616s：报丧女妖持多管炮于甲板结构；618s：多管炮瞄准（炮身绿灯）；620s：紫蓝光束射出",
+    "derivedFromObservationIds": [
+     "obs-V017",
+     "obs-V018",
+     "obs-V019"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-04",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 1164500,
+   "endMs": 1177106,
+   "outputStartMs": 35987,
+   "outputEndMs": 48593,
+   "outputDurationMs": 12606,
+   "sourceDurationMs": 12606,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 38500,
+   "narrationEndMs": 46176,
+   "narrationText": "When the N-T-D system awakens, the mask splits, the frame burns green, and a machine of order starts to look disturbingly alive.",
+   "narrativeClaim": {
+    "type": "state_change",
+    "minimumVisibleEvidence": "NT-D 觉醒：面具展开+绿色骨架发光（1169.8–1172.1s 三探针）+启动命令字幕（1165.5s）"
+   },
+   "semanticBeatIds": [
+    "beat-004"
+   ],
+   "reason": "NT-D 序列完整链：利迪呐喊『报丧女妖！』→面具展开绿光→觉醒特写→绿粒子→蓝光突进（1164.5–1177.1s）",
+   "evidenceRefs": [
+    "ev-015",
+    "ev-003"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "1165s：利迪呐喊，字幕『報喪女妖！バンシィ！』（启动命令）；1169s：NT-D：面具展开+绿色精神感应骨架发光+金天线；1170s：NT-D 头部大特写（绿光）；1171s：头部+绿骨架侧面；1172s：绿色粒子+金天线觉醒特效；1173s：蓝光漩涡突进（机体剪影）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w12b-1165540.jpg",
+     "G3-画面验证帧/w12b-1169831.jpg",
+     "G3-画面验证帧/w12b-1170373.jpg",
+     "G3-画面验证帧/w12b-1171165.jpg",
+     "G3-画面验证帧/w12b-1172124.jpg",
+     "G3-画面验证帧/w12b-1173584.jpg"
+    ],
+    "observedVisuals": "1165s：利迪呐喊，字幕『報喪女妖！バンシィ！』（启动命令）；1169s：NT-D：面具展开+绿色精神感应骨架发光+金天线；1170s：NT-D 头部大特写（绿光）；1171s：头部+绿骨架侧面",
+    "derivedFromObservationIds": [
+     "obs-V020",
+     "obs-V021",
+     "obs-V022",
+     "obs-V023",
+     "obs-V024",
+     "obs-V025"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 800,
+   "transitionReason": "觉醒高潮蓝光突进→驾驶舱：从机体到驾驶员的情绪落点，叠化完成主语移交"
+  },
+  {
+   "segmentId": "seg-05",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 178000,
+   "endMs": 189045,
+   "outputStartMs": 48593,
+   "outputEndMs": 59638,
+   "outputDurationMs": 11045,
+   "sourceDurationMs": 11045,
+   "mappingMode": "one_to_one",
+   "layoutTier": "快切",
+   "narrationStartMs": 51000,
+   "narrationEndMs": 57276,
+   "narrationText": "Her pilot is no chosen one. Riddhe Marcenas, a Federation ace, fighting for duty rather than destiny.",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "利迪·马纳斯驾驶舱（字幕『為什麼NT-D就是不發動』）+报丧女妖大光束炮（187.3s）"
+   },
+   "semanticBeatIds": [
+    "beat-005"
+   ],
+   "reason": "驾驶员：不是天选之人的利迪（NT-D 不发动的挫败）+其机体大光束炮（178–189s）",
+   "evidenceRefs": [
+    "ev-002",
+    "ev-007"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "178s：利迪瘫坐驾驶舱，字幕『為什麼NT-D就是不發動』；182s：同上镜头延续；187s：报丧女妖持大型光束炮（红眼/金骨架/炮身绿灯）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w06-178000-start.jpg",
+     "G3-画面验证帧/w06-182665-mid.jpg",
+     "G3-画面验证帧/w06-187330-end.jpg"
+    ],
+    "observedVisuals": "178s：利迪瘫坐驾驶舱，字幕『為什麼NT-D就是不發動』；182s：同上镜头延续；187s：报丧女妖持大型光束炮（红眼/金骨架/炮身绿灯）",
+    "derivedFromObservationIds": [
+     "obs-V026",
+     "obs-V027",
+     "obs-V028"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-06",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 376500,
+   "endMs": 385831,
+   "outputStartMs": 59638,
+   "outputEndMs": 68969,
+   "outputDurationMs": 9331,
+   "sourceDurationMs": 9331,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 62000,
+   "narrationEndMs": 66437,
+   "narrationText": "While Banagher rides the Unicorn toward answers, Riddhe is ordered to silence them.",
+   "narrativeClaim": {
+    "type": "character_reaction",
+    "minimumVisibleEvidence": "巴纳吉驾驶舱+白色独角兽毁灭模式+报丧女妖金骨架（377.9–384.5s 多探针）"
+   },
+   "semanticBeatIds": [
+    "beat-006"
+   ],
+   "reason": "双线：巴纳吉驾独角兽驶向答案（377.9/379.5/381.3s）+报丧女妖金骨架特写与绿机同框（383.5/384.5s=奉命拦截语境）",
+   "evidenceRefs": [
+    "ev-001",
+    "ev-012"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "377s：巴纳吉驾驶舱；379s：白色独角兽毁灭模式（红骨架）；381s：独角兽毁灭模式全身+炮；383s：报丧女妖金色骨架发光特写；384s：绿机+报丧女妖绿金发光同框；385s：青绿机体多管炮（非目标）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w04-377875-mid.jpg",
+     "G3-画面验证帧/w04-379502-mid.jpg",
+     "G3-画面验证帧/w04-381295-mid.jpg",
+     "G3-画面验证帧/w04-383527-mid.jpg",
+     "G3-画面验证帧/w04-384507-mid.jpg",
+     "G3-视觉分析/探索层/grid-20.jpg"
+    ],
+    "observedVisuals": "377s：巴纳吉驾驶舱；379s：白色独角兽毁灭模式（红骨架）；381s：独角兽毁灭模式全身+炮；383s：报丧女妖金色骨架发光特写",
+    "derivedFromObservationIds": [
+     "obs-V029",
+     "obs-V030",
+     "obs-V031",
+     "obs-V032",
+     "obs-V033",
+     "obs-V034"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-07",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 254000,
+   "endMs": 267199,
+   "outputStartMs": 68969,
+   "outputEndMs": 82168,
+   "outputDurationMs": 13199,
+   "sourceDurationMs": 13199,
+   "mappingMode": "one_to_one",
+   "layoutTier": "留白",
+   "narrationStartMs": 71500,
+   "narrationEndMs": 79836,
+   "narrationText": "The two machines were built as sisters. In the dark of space they do not simply fight. As the line goes: the Unicorn and the Banshee are pulling on each other.",
+   "narrativeClaim": {
+    "type": "object",
+    "minimumVisibleEvidence": "双机同框对峙：白独角兽(红骨架)+黑金报丧女妖（266.9/267.2s）+『拉普拉斯之盒』字幕（259.5s）"
+   },
+   "semanticBeatIds": [
+    "beat-007"
+   ],
+   "reason": "姊妹机：报丧女妖红眼头部（264s）+双机光束交锋同框（266.9–267.2s）+『互相牵引』台词语境（ev-001）",
+   "evidenceRefs": [
+    "ev-001"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "255s：利迪驾驶舱；259s：双机红蓝光束对峙+字幕『讓拉普拉斯之盒的詛咒』；263s：报丧女妖头部红眼金骨架；265s：报丧女妖躯干金骨架+蓝光；266s：白独角兽(红骨架)与报丧女妖同框；267s：双机同框延续"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w07-255810-mid.jpg",
+     "G3-画面验证帧/w07-259456-mid.jpg",
+     "G3-画面验证帧/w07-263981-mid.jpg",
+     "G3-画面验证帧/w07-265044-mid.jpg",
+     "G3-画面验证帧/w07-266935-mid.jpg",
+     "G3-画面验证帧/w07-267198-end.jpg"
+    ],
+    "observedVisuals": "255s：利迪驾驶舱；259s：双机红蓝光束对峙+字幕『讓拉普拉斯之盒的詛咒』；263s：报丧女妖头部红眼金骨架；265s：报丧女妖躯干金骨架+蓝光",
+    "derivedFromObservationIds": [
+     "obs-V035",
+     "obs-V036",
+     "obs-V037",
+     "obs-V038",
+     "obs-V039",
+     "obs-V040"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 700,
+   "transitionReason": "双机对峙→家系台词：同一战斗场景内从机体切至驾驶员，叠化保持时空连续"
+  },
+  {
+   "segmentId": "seg-08",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 276000,
+   "endMs": 284600,
+   "outputStartMs": 82168,
+   "outputEndMs": 90768,
+   "outputDurationMs": 8600,
+   "sourceDurationMs": 8600,
+   "mappingMode": "one_to_one",
+   "layoutTier": "留白",
+   "narrationStartMs": 84500,
+   "narrationEndMs": 88535,
+   "narrationText": "And when the psycho-frame screams, it is not a curse. It was a prayer.",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "『詛咒』家系字幕（276s）+双机军刀交锋（279.2/280.9s）+『恩怨消滅』字幕（283.3s）"
+   },
+   "semanticBeatIds": [
+    "beat-008"
+   ],
+   "reason": "不是诅咒而是祈愿：马瑟纳斯/毕斯特家诅咒台词+光束军刀交锋+百年恩怨台词（276–284.6s）",
+   "evidenceRefs": [
+    "ev-003"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "276s：利迪驾驶舱，字幕『留下詛咒的馬瑟納斯家』；279s：报丧女妖与红独角兽光束军刀交锋；280s：报丧女妖战斧+红独角兽，字幕『只要各自繼承血緣的我們消失了』；283s：巴纳吉驾驶舱，字幕『這百年來的恩怨也會消滅』"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w08-276000-start.jpg",
+     "G3-画面验证帧/w08-279225-mid.jpg",
+     "G3-画面验证帧/w08-280893-mid.jpg",
+     "G3-画面验证帧/w08-283309-mid.jpg"
+    ],
+    "observedVisuals": "276s：利迪驾驶舱，字幕『留下詛咒的馬瑟納斯家』；279s：报丧女妖与红独角兽光束军刀交锋；280s：报丧女妖战斧+红独角兽，字幕『只要各自繼承血緣的我們消失了』；283s：巴纳吉驾驶舱，字幕『這百年來的恩怨也會消滅』",
+    "derivedFromObservationIds": [
+     "obs-V041",
+     "obs-V042",
+     "obs-V043",
+     "obs-V044"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-09",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 535000,
+   "endMs": 545770,
+   "outputStartMs": 90768,
+   "outputEndMs": 101538,
+   "outputDurationMs": 10770,
+   "sourceDurationMs": 10770,
+   "mappingMode": "one_to_one",
+   "layoutTier": "常规",
+   "narrationStartMs": 93000,
+   "narrationEndMs": 99576,
+   "narrationText": "Near the end, sensors report resonance beyond every measurable limit, as if countless hearts were sounding at once.",
+   "narrativeClaim": {
+    "type": "action",
+    "minimumVisibleEvidence": "『超出數值上限的…感應波！』字幕（540s）+巴纳吉呐喊（537s）+张臂蓝光交叉共振姿态（545.5s）"
+   },
+   "semanticBeatIds": [
+    "beat-009"
+   ],
+   "reason": "感应波超限：探索层 540s 字幕帧+巴纳吉反应+白机张臂共振（535–545.8s）",
+   "evidenceRefs": [
+    "ev-005",
+    "ev-006"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "536s：巴纳吉呐喊（感应波语境）；540s：白衣帽女性紫光，字幕『超出數值上限的…感應波！』（G2 探索层同帧）；543s：白机红骨架头部特写（独角兽）；545s：白机张臂+蓝色交叉光（共振姿态）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w09-536986-mid.jpg",
+     "G3-视觉分析/探索层/grid-28.jpg",
+     "G3-画面验证帧/w09-543201-mid.jpg",
+     "G3-画面验证帧/w09-545528-mid.jpg"
+    ],
+    "observedVisuals": "536s：巴纳吉呐喊（感应波语境）；540s：白衣帽女性紫光，字幕『超出數值上限的…感應波！』（G2 探索层同帧）；543s：白机红骨架头部特写（独角兽）；545s：白机张臂+蓝色交叉光（共振姿态）",
+    "derivedFromObservationIds": [
+     "obs-V045",
+     "obs-V046",
+     "obs-V047",
+     "obs-V048"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 700,
+   "transitionReason": "共振白光→绿色幽灵机：从『无数人心回响』到拉普拉斯秘密的意象过渡"
+  },
+  {
+   "segmentId": "seg-10",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 673330,
+   "endMs": 679999,
+   "outputStartMs": 101538,
+   "outputEndMs": 108207,
+   "outputDurationMs": 6669,
+   "sourceDurationMs": 6669,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 103500,
+   "narrationEndMs": 105913,
+   "narrationText": "She was built to bury the secret of Laplace.",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "绿色幽灵机体+褐色巨块（拉普拉斯之盒语境，673.6–676.5s）+金报丧女妖同框（677.6s）"
+   },
+   "semanticBeatIds": [
+    "beat-010"
+   ],
+   "reason": "埋葬秘密：绿光幽灵机体攀附巨块+金色报丧女妖头部白骨架（673.3–680s）",
+   "evidenceRefs": [
+    "ev-008"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "673s：绿色发光机体射出橙色光束（绿光幽灵）；675s：绿机攀附褐色巨块（拉普拉斯之盒语境）；677s：绿色幽灵机+金色报丧女妖同框；679s：金色报丧女妖头部白色骨架发光"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/x10-673555.jpg",
+     "G3-画面验证帧/x10-675580.jpg",
+     "G3-视觉分析/探索层/grid-34.jpg",
+     "G3-视觉分析/探索层/grid-34.jpg"
+    ],
+    "observedVisuals": "673s：绿色发光机体射出橙色光束（绿光幽灵）；675s：绿机攀附褐色巨块（拉普拉斯之盒语境）；677s：绿色幽灵机+金色报丧女妖同框；679s：金色报丧女妖头部白色骨架发光",
+    "derivedFromObservationIds": [
+     "obs-V049",
+     "obs-V050",
+     "obs-V051",
+     "obs-V052"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   }
+  },
+  {
+   "segmentId": "seg-11",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 874000,
+   "endMs": 883978,
+   "outputStartMs": 108207,
+   "outputEndMs": 118185,
+   "outputDurationMs": 9978,
+   "sourceDurationMs": 9978,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 110500,
+   "narrationEndMs": 116870,
+   "narrationText": "In the end, even the Federation's sharpest spear could not stop the truth being born. We were blessed when we were born.",
+   "narrativeClaim": {
+    "type": "abstract_conclusion",
+    "minimumVisibleEvidence": "『希望與宏大的祈願一起送出』字幕（874s）+『詛咒還是可能性』字幕（881.8s）"
+   },
+   "semanticBeatIds": [
+    "beat-011"
+   ],
+   "reason": "被祝福出生：巴纳吉祈愿字幕+诅咒/可能性字幕（874–882s，ev-009/ev-010 台词语境）",
+   "evidenceRefs": [
+    "ev-009",
+    "ev-010"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "874s：巴纳吉驾驶舱，字幕『希望與宏大的祈願一起送出』；876s：同上延续；881s：暗景+字幕『那究竟會成為詛咒 還是可能性』；883s：暗蓝背景机体剪影（过渡）"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/w11-874000-start.jpg",
+     "G3-画面验证帧/w11-876268-mid.jpg",
+     "G3-画面验证帧/w11-881757-mid.jpg",
+     "G3-视觉分析/探索层/grid-45.jpg"
+    ],
+    "observedVisuals": "874s：巴纳吉驾驶舱，字幕『希望與宏大的祈願一起送出』；876s：同上延续；881s：暗景+字幕『那究竟會成為詛咒 還是可能性』；883s：暗蓝背景机体剪影（过渡）",
+    "derivedFromObservationIds": [
+     "obs-V053",
+     "obs-V054",
+     "obs-V055",
+     "obs-V056"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "叠化",
+   "transitionDurationMs": 800,
+   "transitionReason": "祈愿台词→报丧女妖军刀立姿：把台词的收束交给机体定格，叠化推向终幕"
+  },
+  {
+   "segmentId": "seg-12",
+   "assetId": "source-02-rx-0-n-17620f86",
+   "startMs": 415200,
+   "endMs": 421015,
+   "outputStartMs": 118185,
+   "outputEndMs": 124000,
+   "outputDurationMs": 5815,
+   "sourceDurationMs": 5815,
+   "mappingMode": "one_to_one",
+   "layoutTier": "推进",
+   "narrationStartMs": 119500,
+   "narrationEndMs": 123146,
+   "narrationText": "The Banshee Norn: the reluctant angel of the Universal Century.",
+   "narrativeClaim": {
+    "type": "appearance",
+    "minimumVisibleEvidence": "报丧女妖光束军刀立姿+金骨架发光（418.3–420.7s 全探针 confirmed）"
+   },
+   "semanticBeatIds": [
+    "beat-012"
+   ],
+   "reason": "终幕：报丧女妖金骨架+光束军刀立姿特写（415.2–421s）",
+   "evidenceRefs": [
+    "ev-015",
+    "G1-claim-004"
+   ],
+   "status": "approved",
+   "semanticAlignment": {
+    "status": "direct_match",
+    "evidence": "416s：爆焰+金骨架机体；418s：报丧女妖头部金骨架发光+绿光；419s：报丧女妖头部越过绿机肩甲；420s：报丧女妖全身金骨架+绿机盾；420s：报丧女妖持光束军刀立姿；420s：军刀+金骨架特写"
+   },
+   "sourceCaptionTreatment": {
+    "mode": "mask",
+    "note": "窗口带烧录中日字幕（底部约 84–100%）：G4 以黑底窄遮罩(alpha 0.85)覆盖 84–100% 区域（crop 伤 16:9 构图，弃用）"
+   },
+   "visualVerification": {
+    "status": "verified",
+    "frameManifestRef": "工作台/banshee-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "frameRefs": [
+     "G3-画面验证帧/x12-416287.jpg",
+     "G3-画面验证帧/x12-418331.jpg",
+     "G3-画面验证帧/x12-419499.jpg",
+     "G3-画面验证帧/x12-420187.jpg",
+     "G3-画面验证帧/x12-420499.jpg",
+     "G3-视觉分析/探索层/grid-22.jpg"
+    ],
+    "observedVisuals": "416s：爆焰+金骨架机体；418s：报丧女妖头部金骨架发光+绿光；419s：报丧女妖头部越过绿机肩甲；420s：报丧女妖全身金骨架+绿机盾",
+    "derivedFromObservationIds": [
+     "obs-V057",
+     "obs-V058",
+     "obs-V059",
+     "obs-V060",
+     "obs-V061",
+     "obs-V062"
+    ],
+    "verifiedBy": "zcode-host-session 主 agent 多模态目视（探针帧逐帧）",
+    "verifiedAt": "2026-10-09T09:53:06Z"
+   },
+   "transitionInstruction": "黑场出",
+   "transitionDurationMs": 800,
+   "transitionReason": "军刀立姿渐黑收束：与开场黑场入呼应（口播 123.146s 已尽，窗口不压旁白）"
+  }
+ ],
+ "editPlan": {
+  "timeline": [
+   {
+    "segmentId": "seg-01",
+    "outputStartMs": 0,
+    "outputEndMs": 13955,
+    "purpose": "开场：报丧女妖头胸特写+光束步枪（54–56s），随后青绿量产机群战斗正对『不是每台机体都属于主角』",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-02",
+    "outputStartMs": 13955,
+    "outputEndMs": 25968,
+    "purpose": "身份宣告：红眼+精神感应骨架发光头部特写、爆焰中立姿持枪（344–356s 全探针 confirmed）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-03a",
+    "outputStartMs": 25968,
+    "outputEndMs": 32500,
+    "purpose": "精神感应框架：头部/躯干骨架发光+大光束炮瞄准开火（734–740.5s 全探针 confirmed）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-03b",
+    "outputStartMs": 32500,
+    "outputEndMs": 35987,
+    "purpose": "骨架承接：甲板整备持炮→紫蓝光束射出（616.5–620s 三探针 confirmed），句尾『回应新人类意志』的武器化画面",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-04",
+    "outputStartMs": 35987,
+    "outputEndMs": 48593,
+    "purpose": "NT-D 序列完整链：利迪呐喊『报丧女妖！』→面具展开绿光→觉醒特写→绿粒子→蓝光突进（1164.5–1177.1s）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-05",
+    "outputStartMs": 48593,
+    "outputEndMs": 59638,
+    "purpose": "驾驶员：不是天选之人的利迪（NT-D 不发动的挫败）+其机体大光束炮（178–189s）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-06",
+    "outputStartMs": 59638,
+    "outputEndMs": 68969,
+    "purpose": "双线：巴纳吉驾独角兽驶向答案（377.9/379.5/381.3s）+报丧女妖金骨架特写与绿机同框（383.5/384.5s=奉命拦截语境）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-07",
+    "outputStartMs": 68969,
+    "outputEndMs": 82168,
+    "purpose": "姊妹机：报丧女妖红眼头部（264s）+双机光束交锋同框（266.9–267.2s）+『互相牵引』台词语境（ev-001）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-08",
+    "outputStartMs": 82168,
+    "outputEndMs": 90768,
+    "purpose": "不是诅咒而是祈愿：马瑟纳斯/毕斯特家诅咒台词+光束军刀交锋+百年恩怨台词（276–284.6s）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-09",
+    "outputStartMs": 90768,
+    "outputEndMs": 101538,
+    "purpose": "感应波超限：探索层 540s 字幕帧+巴纳吉反应+白机张臂共振（535–545.8s）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-10",
+    "outputStartMs": 101538,
+    "outputEndMs": 108207,
+    "purpose": "埋葬秘密：绿光幽灵机体攀附巨块+金色报丧女妖头部白骨架（673.3–680s）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-11",
+    "outputStartMs": 108207,
+    "outputEndMs": 118185,
+    "purpose": "被祝福出生：巴纳吉祈愿字幕+诅咒/可能性字幕（874–882s，ev-009/ev-010 台词语境）",
+    "loop": false,
+    "duplicateFill": false
+   },
+   {
+    "segmentId": "seg-12",
+    "outputStartMs": 118185,
+    "outputEndMs": 124000,
+    "purpose": "终幕：报丧女妖金骨架+光束军刀立姿特写（415.2–421s）",
+    "loop": false,
+    "duplicateFill": false
+   }
+  ],
+  "audio": {
+   "narration": [
+    {
+     "sentenceId": "s01",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s01.wav",
+     "outputStartMs": 7000
+    },
+    {
+     "sentenceId": "s02",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s02.wav",
+     "outputStartMs": 16500
+    },
+    {
+     "sentenceId": "s03",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s03.wav",
+     "outputStartMs": 28500
+    },
+    {
+     "sentenceId": "s04",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s04.wav",
+     "outputStartMs": 38500
+    },
+    {
+     "sentenceId": "s05",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s05.wav",
+     "outputStartMs": 51000
+    },
+    {
+     "sentenceId": "s06",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s06.wav",
+     "outputStartMs": 62000
+    },
+    {
+     "sentenceId": "s07",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s07.wav",
+     "outputStartMs": 71500
+    },
+    {
+     "sentenceId": "s08",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s08.wav",
+     "outputStartMs": 84500
+    },
+    {
+     "sentenceId": "s09",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s09.wav",
+     "outputStartMs": 93000
+    },
+    {
+     "sentenceId": "s10",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s10.wav",
+     "outputStartMs": 103500
+    },
+    {
+     "sentenceId": "s11",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s11.wav",
+     "outputStartMs": 110500
+    },
+    {
+     "sentenceId": "s12",
+     "file": "工作台/banshee-intro-001/G2-证据与口播/配音试听-Samantha/s12.wav",
+     "outputStartMs": 119500
+    }
+   ]
+  },
+  "exportConfig": {
+   "width": 1280,
+   "height": 720,
+   "fps": 24
+  }
+ },
+ "humanReviewPoints": [
+  "G3 终审八列回显（唯一人工门禁；自动模式下=策略批准+卡照出）",
+  "语义选镜结果：13 段全部 direct_match（探针见各段 visualVerification）",
+  "源字幕处理=全段 mask 底部 84–100%（烧录字幕全片普遍）",
+  "响度：G2 天花板披露 −16.1 LUFS 让步出路（策略条款），G4 装配轨重规划",
+  "BGM：LOW-PHONK 委托选定+4/10 贴合度披露随 G1，对齐 offset 53875ms/missed s01 边界 204ms 如实报告"
+ ],
+ "timelineReview": {
+  "status": "confirmed",
+  "confirmedBy": "系统按策略自动确认（auto-policy:G3）",
+  "confirmedAt": "2026-10-09T10:05:23Z",
+  "feedback": "自动模式：八列回显卡照出、逐切点试装预览在场（先看后批的前提由预览小样满足，非静默批准）。批准范围=本计划全量：13 段输出网格 0–124000ms、7 处转场（黑场入1200/5叠化700–800/黑场出800，s03 句内叠化被音画红线否决）、BGM 依据区（offset 31687、吸附23/23、ducking 12 句）、包装决定（24fps、响度目标 −14/−1.5/9 含 G2 天花板 −16.1 让步出路披露、封面 19:30.373、章节卡 1.2–6.5s、字幕 SRT/ASS+复检 passed、经验库 720P resolutionMiss 回落默认）、源字幕全段 mask 84–100%。",
+  "basisRefs": [
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.2.json",
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-回显数据-v0.1.json",
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-最终回显卡-v0.1.md",
+   "工作台/banshee-intro-001/G3-剪辑计划/预览小样/转场-预览清单-v0.3.json",
+   "工作台/banshee-intro-001/auto-policy.json"
+  ]
+ },
+ "g3Approval": {
+  "approvedBy": "auto-policy:G3（approvalSource=auto-policy，绝不伪造人类原话）",
+  "approvedAt": "2026-10-09T10:05:23Z",
+  "basisRefs": [
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-确认记录.md",
+   "工作台/banshee-intro-001/G3-剪辑计划/G3-最终回显卡-v0.1.md"
+  ]
+ },
+ "transitionRevisionNote": "v0.1→v0.2 仅批准链字段变化（status/timelineReview/g3Approval），剪辑事实（区间/转场/口播落位/BGM/包装）一字未动；v0.1 为 review_required 草案（口播区间错挂叙述轴、s03 句内叠化未剔、章节卡与黑场入窗口交叠），全部在草案期修正并由校验器背书。"
+}

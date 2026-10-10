@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "banshee-intro-001",
+  "purpose": "G5 响度验收 failed（主轨 -15.3 vs 目标 -14.0，偏差 -1.3 超 ±1.0；真峰 -1.4 通过）后的测量式预检：合同 §5 成因②混音口径，床/duck 深度为 §6-② 授权 G4 执行层参数。逐组合实渲实测定档，不靠重跑碰运气。",
+  "gateLines": {
+    "integratedTargetLufs": -14.0,
+    "integratedToleranceLu": 1.0,
+    "truePeakCeilingDbtp": -1.5,
+    "truePeakSlackDbtp": 0.3,
+    "truePeakPassLimitDbtp": -1.2,
+    "loudnessRangeTargetLu": 9.0,
+    "audibilityGuardLufs": -33.0
+  },
+  "method": "audio-only 预检：与 g4_assemble 逐字同链——配音轨 loudnorm(计划 verbatim chain) + 循环 BGM volume=<bed>dB 再 volume=<duck>dB:enable=<12句duck区间> + afade in 2.0s / out 2.0s（轨偏移 31687ms 对齐出点）+ amix=inputs=2:duration=longest:normalize=0，输出 44.1k 立体声，loud_measure.py 实测。",
+  "measurements": [
+    {"bedGainDb": -12.0, "duckReductionDb": -6.0, "note": "现行合同 v0.1（成片实测，非预检）", "integratedLufs": -15.3, "truePeakDbtp": -1.4, "passIntegrated": false, "passTruePeak": true},
+    {"bedGainDb": -6.0, "duckReductionDb": -6.0, "integratedLufs": -14.0, "truePeakDbtp": -0.4, "passIntegrated": true, "passTruePeak": false},
+    {"bedGainDb": -8.0, "duckReductionDb": -6.0, "integratedLufs": -14.3, "truePeakDbtp": -0.8, "passIntegrated": true, "passTruePeak": false},
+    {"bedGainDb": -9.0, "duckReductionDb": -6.0, "integratedLufs": -14.5, "truePeakDbtp": -1.0, "passIntegrated": true, "passTruePeak": false},
+    {"bedGainDb": -7.0, "duckReductionDb": -12.0, "integratedLufs": -14.4, "truePeakDbtp": -1.6, "passIntegrated": true, "passTruePeak": true},
+    {"bedGainDb": -8.0, "duckReductionDb": -9.0, "integratedLufs": -14.5, "truePeakDbtp": -1.3, "passIntegrated": true, "passTruePeak": true},
+    {"bedGainDb": -8.0, "duckReductionDb": -12.0, "integratedLufs": -14.5, "truePeakDbtp": -1.7, "passIntegrated": true, "passTruePeak": true},
+    {"bedGainDb": -9.0, "duckReductionDb": -9.0, "integratedLufs": -14.6, "truePeakDbtp": -1.5, "passIntegrated": true, "passTruePeak": true},
+    {"bedGainDb": -9.0, "duckReductionDb": -12.0, "integratedLufs": -14.7, "truePeakDbtp": -1.8, "passIntegrated": true, "passTruePeak": true},
+    {"bedGainDb": -10.0, "duckReductionDb": -9.0, "integratedLufs": -14.7, "truePeakDbtp": -1.6, "passIntegrated": true, "passTruePeak": true}
+  ],
+  "selection": {
+    "bedGainDb": -8.0,
+    "duckReductionDb": -12.0,
+    "rationale": "双闸居中：主轨综合 -14.5（偏差 -0.5，容差 ±1.0 内留半格余量）、真峰 -1.7（优于上限 -1.5 本身，非仅靠 0.3 松弛带）、动态范围 9.5（目标 9.0 容差内）。口播下 BGM 就位 -30.2 LUFS，高于可闻性红线 -33（zaku guard）。静段床 -18.2，对比现行 -22.2 更贴 LOW-PHONK 委托选定的铺陈意图；duck 由 -6 加深到 -12 属呼吸感增强，逐句 duck 区间不变。",
+    "aestheticDisclosure": "与已批 v0.1 混音的可闻差异：静段/句间 BGM 更明显，口播下 BGM 更靠后。G4 回显卡重新披露。"
+  },
+  "measurementReports": "预检 wav 与逐组合 loud_measure 报告在临时工作区 /Users/chuanzhangbigye/工作/WorkSpace/banshee-预检-v0.1/（非正式产物，正式合同以本文件+新混音合同为准）",
+  "processLesson": "music_mix_plan 的 predictedLufs 只预测就位 BGM（可闻性/漂移闸用），不预测混完主轨的综合响度——床深对主轨综合与真峰的合成效应此前无预检工序，导致问题迟至 G5 验收才暴露。已入账 问题清单-v0.1.md ⑥。"
+}
