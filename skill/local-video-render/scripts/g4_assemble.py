@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -803,7 +804,17 @@ def main() -> int:
         bgm_in_place = measure_bgm_in_place(args.bgm_audio, mix_contract, timeline_ms)
         if bgm_in_place is not None and bgm_in_place < -33.0:
             fail(f"measured in-place BGM is {bgm_in_place:.1f} LUFS — inaudible under the voice; rerun music_mix_plan.py with a shallower bed/duck (zaku guard)")
-        predicted = (mix_contract.get("predictedLufs") or {}).get("bedDuckedLufs")
+        # banshee-001 实测抓出：bedDuckedLufs 是全程压满 duck 的最坏值，而 duck 只覆盖
+        # 口播占空段（本案 53%）；拿最坏值对实测=把正确混音误报为漂移。对账对象改为
+        # 按 duckSegments 占空能量加权预测（无占空信息时退回床值上界对账）。
+        pred_map = mix_contract.get("predictedLufs") or {}
+        predicted = pred_map.get("bedDuckedLufs")
+        bed_full = pred_map.get("bedFullLufs")
+        duck_segs = mix_contract.get("duckSegments") or []
+        if predicted is not None and bed_full is not None and duck_segs:
+            duty = min(1.0, sum(max(0.0, (s["toMs"] - s["fromMs"]) / max(timeline_ms, 1)) for s in duck_segs))
+            energy = duty * 10 ** (float(predicted) / 10) + (1 - duty) * 10 ** (float(bed_full) / 10)
+            predicted = round(10 * math.log10(energy), 1) if energy > 0 else None
         if bgm_in_place is not None and predicted is not None and abs(bgm_in_place - float(predicted)) > 3.0:
             fail(f"measured in-place BGM {bgm_in_place:.1f} LUFS deviates from the contract prediction {predicted} LUFS by more than 3 LU — chain drift, investigate before delivering")
 

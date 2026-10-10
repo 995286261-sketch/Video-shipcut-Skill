@@ -142,9 +142,13 @@ def main():
             fail(f"negative transition extra for {segment.get('segmentId')}")
         if head_extra and segment["source"]["startMs"] - head_extra < 0:
             fail(f"transition head extra for {segment.get('segmentId')} runs before source start (指令与源范围矛盾)")
-        duration=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"]+head_extra+tail_extra)/1000
-        source_duration=(segment["source"]["endMs"]-segment["source"]["startMs"])/1000
-        if duration - (head_extra + tail_extra)/1000 > source_duration:
+        # 整数毫秒比较（banshee-001 实测抓出：浮点 (6669+350)/1000-0.35=6.669000000000001
+        # 会把 one_to_one+手柄的合法段误判越界；判据不变——输出网格必须进得了批准源区间）。
+        # duration=段文件秒长（网格+手柄，喂 ffmpeg -t）；网格与源区间对账用整数毫秒。
+        grid_ms=(segment["timeline"]["endMs"]-segment["timeline"]["startMs"])
+        source_duration=(segment["source"]["endMs"]-segment["source"]["startMs"])
+        duration=(grid_ms+head_extra+tail_extra)/1000
+        if grid_ms > source_duration:
             fail(f"output duration exceeds approved source range for {segment.get('segmentId')}")
         crop=f"crop=iw:trunc(ih*{1-args.crop_bottom_ratio}):0:0,"
         vf=crop+f"scale={target_width}:{target_height}:force_original_aspect_ratio=decrease,pad={target_width}:{target_height}:(ow-iw)/2:(oh-ih)/2:color=0x101418,setsar=1,fps={args.fps}"

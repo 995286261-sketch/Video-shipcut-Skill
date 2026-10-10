@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 SCHEMA_VERSION = "0.1"
@@ -148,14 +149,27 @@ def audit(assembly: dict, plan: dict, registration: dict, material_pack: dict) -
                else "G4 mix parameters diverge from the contract — mix was hand-tampered or stale")
 
     # --- link 6: measured in-place bed level --------------------------------
+    # banshee-001 抓出 ④ 的 G5 侧残留：bedDuckedLufs 是全程压满 duck 的最坏值，实测覆盖
+    # 全时间轴（duck 只占口播段）；拿最坏值对实测=把正确混音误报为漂移。与 g4_assemble
+    # 同源：按 duckSegments 占空能量加权预测（缺字段退回最坏值对账）。
     measured = bgm_mix.get("measuredInPlaceLufs")
     stated = predicted.get("bedDuckedLufs")
+    bed_full = predicted.get("bedFullLufs")
+    duck_segs = contract.get("duckSegments") or []
+    timeline_ms = contract.get("timelineMs") or 0
+    weighted = None
+    if stated is not None and bed_full is not None and duck_segs and timeline_ms:
+        duty = min(1.0, sum(max(0.0, (s["toMs"] - s["fromMs"]) / timeline_ms) for s in duck_segs))
+        energy = duty * 10 ** (float(stated) / 10) + (1 - duty) * 10 ** (float(bed_full) / 10)
+        weighted = round(10 * math.log10(energy), 1) if energy > 0 else None
+    compare = weighted if weighted is not None else stated
     if not isinstance(measured, (int, float)):
         audit_.add("measuredInPlace", False, "assembly record lacks measuredInPlaceLufs — verification was not run")
-    elif measured < MEASURE_FLOOR_LUFS or stated is None or abs(measured - stated) > MEASURE_DRIFT_LU:
-        audit_.add("measuredInPlace", False, f"measured {measured} LUFS breaches floor {MEASURE_FLOOR_LUFS} or drifts from predicted {stated} by > {MEASURE_DRIFT_LU} LU")
+    elif measured < MEASURE_FLOOR_LUFS or compare is None or abs(measured - float(compare)) > MEASURE_DRIFT_LU:
+        audit_.add("measuredInPlace", False, f"measured {measured} LUFS breaches floor {MEASURE_FLOOR_LUFS} or drifts from predicted {compare} LUFS by > {MEASURE_DRIFT_LU} LU")
     else:
-        audit_.add("measuredInPlace", True, f"measured {measured} vs predicted {stated} LUFS — within drift")
+        audit_.add("measuredInPlace", True, f"measured {measured} vs predicted {compare} LUFS (duty-weighted)" if weighted is not None
+                   else f"measured {measured} vs predicted {compare} LUFS — within drift")
 
     # --- link 7: license & distribution boundary at G0 -----------------------
     reg_sha = sha256(registration.get("_path", "")) if registration.get("_path") else None
