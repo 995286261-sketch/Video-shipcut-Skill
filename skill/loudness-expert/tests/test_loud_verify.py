@@ -180,6 +180,28 @@ class VerifyRejectionTests(unittest.TestCase):
             self.assertEqual(code, 1)
             self.assertIn("master", doc["error"])
 
+    # ---- ⑩ 入包副本先验（banshee-001 台账，2026-10-10 用户拍板甲案）：两条合同校验
+    # 在测量之前 fail-fast，不需要 ffmpeg。----
+    def test_bundle_copy_bad_name_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path = self._plan_doc(Path(tmp))
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(plan_path),
+                                                   "--output-dir", tmp,
+                                                   "--bundle-copy", str(Path(tmp) / "loudness-report.json")])
+            self.assertEqual(code, 1)
+            self.assertIn("loudness-audit.json", doc["error"])
+            self.assertIn("命名", doc["error"])
+
+    def test_bundle_copy_missing_dir_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plan_path = self._plan_doc(Path(tmp))
+            ghost = Path(tmp) / "no-such-bundle" / "loudness-audit.json"
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(plan_path),
+                                                   "--output-dir", tmp, "--bundle-copy", str(ghost)])
+            self.assertEqual(code, 1)
+            self.assertIn("目录不存在", doc["error"])
+            self.assertFalse(ghost.parent.exists())  # 不替你创建目录树
+
 
 @unittest.skipUnless(HAS_FFMPEG, "ffmpeg 缺席——blocked 档端到端验收用例不适用（skip 非通过）")
 class BlockedTierE2ETests(unittest.TestCase):
@@ -234,6 +256,56 @@ class BlockedTierE2ETests(unittest.TestCase):
                                                      "--output-dir", str(work), "--assembly-record", str(assembly_path)])
             self.assertEqual(code, 1)
             self.assertEqual(audit["status"], "failed")
+
+
+@unittest.skipUnless(HAS_FFMPEG, "ffmpeg 缺席——入包副本端到端用例不适用（skip 非通过）")
+class BundleCopyE2ETests(unittest.TestCase):
+    """⑩ 机械入包副本：字节相同双写入包；不同内容目标=拒覆盖且写前罢工（banshee 手工 cp 改名搬运的退役替代）。"""
+
+    def _ready_pair(self, tmp_path: Path, work: Path) -> "tuple[Path, Path]":
+        src = make_sine(tmp_path, "quiet.wav", 0.02)
+        _, plan = run_cli(loud_plan.main, ["--input", str(src), "--output-dir", str(work),
+                                           "--profile", "video"])
+        normalized = tmp_path / "normalized.wav"
+        self.assertTrue(loud_core.render_with_chain(src, plan["chain"], normalized))
+        return Path(plan["output"]), normalized
+
+    def test_bundle_copy_written_byte_identical(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            work, bundle = tmp_path / "work", tmp_path / "bundle"
+            bundle.mkdir()
+            plan_path, master = self._ready_pair(tmp_path, work)
+            target = bundle / "loudness-audit.json"
+            code, audit = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(master),
+                                                     "--output-dir", str(work),
+                                                     "--bundle-copy", str(target)])
+            self.assertEqual(code, 0)
+            native = Path(audit["output"])
+            self.assertEqual(native.read_bytes(), target.read_bytes())  # 字节完全相同
+            self.assertEqual(audit["bundleCopy"]["path"], str(target))
+            self.assertTrue(audit["bundleCopy"]["byteIdenticalToNative"])
+            # 入包副本本身就是 G5 校验器要读的合同名文件，内容身份不缺
+            copied = json.loads(target.read_text(encoding="utf-8"))
+            self.assertEqual(copied["purpose"], "loud_verify")
+            self.assertEqual(copied["status"], "passed")
+
+    def test_bundle_copy_refuses_overwrite_and_writes_nothing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            work, bundle = tmp_path / "work", tmp_path / "bundle"
+            bundle.mkdir()
+            plan_path, master = self._ready_pair(tmp_path, work)
+            target = bundle / "loudness-audit.json"
+            stale = b'{"status": "from-a-previous-project"}\n'
+            target.write_bytes(stale)
+            code, doc = run_cli(loud_verify.main, ["--plan", str(plan_path), "--master", str(master),
+                                                   "--output-dir", str(work),
+                                                   "--bundle-copy", str(target)])
+            self.assertEqual(code, 1)
+            self.assertIn("拒绝覆盖", doc["error"])
+            self.assertEqual(target.read_bytes(), stale)  # 旧副本原样未动
+            self.assertEqual(list(work.glob("响度-验收审计-*.json")), [])  # 原生报告也没写=写前罢工
 
 
 if __name__ == "__main__":

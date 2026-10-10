@@ -3,7 +3,13 @@
 用法：loud_verify.py --plan <响度-归一化计划-v0.N.json> --master <成片文件>
         --output-dir <目录> [--project-id <ID>] [--tolerance-lu <LU，默认=合同 1.0>]
         [--assembly-record <G4装配记录>]（blocked 档计划验收必带，丙分档口径）
+        [--bundle-copy <交付包/loudness-audit.json>]（⑩ 机械入包副本，见下）
 产物：《响度-验收审计-v0.N.json》——独立 ebur128 复测 master 对账 plan 目标。
+⑩ 入包副本（banshee-001 台账，2026-10-10 用户拍板甲案）：带 --bundle-copy 时，除原生
+版本报告外，把**字节完全相同**的一份按交付合同名写进交付包目标路径——G5 校验器只认
+loudness-audit.json，手工 cp 改名搬运退役。守同版覆盖禁令（⑩/㉘）：目标已存在且内容
+不同=罢工拒覆盖（在写入任何文件之前拒绝）；目标名必须逐字 loudness-audit.json；
+目标目录必须已存在。原生版本报告永远是事实源，bundleCopy 字段如实记两侧路径。
 三态（响度接线批四 2026-09-28，与批三 G4 分档口径同源）：
 - plan ready：|ΔI| ≤ 容差 且 TP ≤ 上限+余量 → passed，否则 failed（承诺过就得达标）。
 - plan blocked_*（真 TTS 源常态）：必带 --assembly-record 且与 G4 记账逐字对账
@@ -54,7 +60,25 @@ def main(argv=None) -> None:
                         help="覆盖合同容差（须给理由，报告如实记来源）")
     parser.add_argument("--assembly-record", default=None,
                         help="G4 装配记录（blocked 档计划验收必带：loudness 块 planRef 哈希/mode/targetProfile 三项对账）")
+    parser.add_argument("--bundle-copy", default=None,
+                        help="⑩ 入包副本：交付包内 loudness-audit.json 的完整路径，"
+                             "验收报告字节相同地双写一份入包（目标已存在且内容不同=拒覆盖罢工）")
     args = parser.parse_args(argv)
+
+    bundle_path = None
+    if args.bundle_copy:
+        # 两条合同先验放在测量之前 fail-fast：写错名/写飞目录不该烧一轮 ebur128 再报错。
+        bundle_path = Path(args.bundle_copy)
+        if bundle_path.name != "loudness-audit.json":
+            loud_core.emit({"status": "error",
+                            "error": "--bundle-copy 目标必须逐字命名为交付合同的 loudness-audit.json"
+                                     "（当前={0}）——入包副本的意义就是合同名对齐，不许再随手起名".format(
+                                         bundle_path.name)}, 1)
+        if not bundle_path.parent.is_dir():
+            loud_core.emit({"status": "error",
+                            "error": "--bundle-copy 目标目录不存在: {0}——副本只写进已存在的交付包目录，"
+                                     "本工具不替你创建目录树（先建包/进包目录再来）".format(
+                                         bundle_path.parent)}, 1)
 
     plan_path = Path(args.plan)
     master_path = Path(args.master)
@@ -132,7 +156,22 @@ def main(argv=None) -> None:
                              "failed 不是重跑一次碰运气——偏差来自源天花板/混音口径/回退三成因，逐条排查见合同 §5"
                              if status == "failed" else None),
                 "verifiedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")})
-    out_path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if bundle_path is not None:
+        doc["bundleCopy"] = {"path": str(bundle_path), "byteIdenticalToNative": True,
+                             "nativeReport": str(out_path),
+                             "note": "⑩ 机械入包副本：交付合同名 loudness-audit.json，与原生版本报告"
+                                     "字节相同；原生报告永远是事实源，手工 cp 改名搬运退役"}
+    payload = json.dumps(doc, ensure_ascii=False, indent=2) + "\n"
+    if bundle_path is not None and bundle_path.is_file() \
+            and bundle_path.read_bytes() != payload.encode("utf-8"):
+        # ⑩/㉘ 同版覆盖禁令：入包副本只认"同内容重放"，不同内容=另一次验收的事实，
+        # 谁也不能悄悄盖掉谁——删旧副本或换新版交付包目录再来，且在写任何文件之前罢工。
+        loud_core.emit({"status": "error",
+                        "error": "入包副本拒绝覆盖既有不同内容: {0}——删旧副本或改用新版交付包目录"
+                                 "后重跑验收（本次未写入任何文件）".format(bundle_path)}, 1)
+    out_path.write_text(payload, encoding="utf-8")
+    if bundle_path is not None:
+        bundle_path.write_text(payload, encoding="utf-8")
     loud_core.emit(doc, 0 if status == "passed" else 1)
 
 

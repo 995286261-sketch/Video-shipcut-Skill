@@ -29,7 +29,7 @@ metadata:
 
 - 实测：`scripts/loud_measure.py --input <文件> --output-dir <目录> [--project-id]` → 《响度-实测报告-v0.N.json》。
 - 规划：`scripts/loud_plan.py --input <源> --output-dir <目录> (--profile video|podcast | --target-lufs+--true-peak+--lra-target) [--project-id]` → 《响度-归一化计划-v0.N.json》：ready 含逐字 chain；blocked 含 reasons+exits；**ceilingLufs（现 TP 上限下最响可到几）永远给出——G2 配音天花板披露的数据源**。blocked 落盘摊开并 exit 1（卡住≠失败静默）。
-- 验收：`scripts/loud_verify.py --plan <计划> --master <成片> --output-dir <目录> [--tolerance-lu]` → 《响度-验收审计-v0.N.json》：独立 ebur128 复测对账目标±容差与 TP 上限；plan 身份不符/非 ready/文件缺失一律拒。
+- 验收：`scripts/loud_verify.py --plan <计划> --master <成片> --output-dir <目录> [--tolerance-lu] [--bundle-copy <交付包/loudness-audit.json>]` → 《响度-验收审计-v0.N.json》：独立 ebur128 复测对账目标±容差与 TP 上限；plan 身份不符/非 ready/文件缺失一律拒。`--bundle-copy`＝⑩机械入包副本：与原生报告**字节完全相同**的一份按交付合同名写进交付包（目标名必须逐字 loudness-audit.json、目录必须已存在、既有不同内容＝**写入任何文件之前**罢工拒覆盖），人肉 cp 改名搬运退役；原生版本报告永远是事实源，报告 `bundleCopy` 字段如实记两侧路径。
 - 回显卡：`scripts/loud_echo.py --artifact <产物>` → 固定表格 Markdown 卡（呈现层零算术，数据逐字取自产物；非本专员产物拒渲染——防手制卡，⑤ 先例）。
 - 共享模块（只许 import）：`scripts/loud_core.py`（测量封装、可行性纯函数、版本命名 ㉘ 永不覆盖、产物身份头）。
 - 不要用临时脚本或手敲 ffmpeg 替代。
