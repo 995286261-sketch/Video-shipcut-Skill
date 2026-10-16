@@ -149,6 +149,21 @@ class G3CallbackValidatorTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("placeholder", result.stdout)
 
+    def test_verbatim_narration_with_english_none_passes(self):
+        # v1.33.1（connector 彩排清单#15）：批准英文旁白正文里的普通词 none 不是占位符。
+        value = self.callback()
+        value["rows"][0]["narrationText"] = "But almost every major power wants it, and none of them admits it."
+        result = self.run_cli(value, self.plan())
+        self.assertEqual(result.returncode, 0, result.stdout)
+
+    def test_placeholder_still_blocked_in_operator_fields(self):
+        # 逐字引用豁免不放松编排字段：observedVisuals 没填完仍须拒。
+        value = self.callback()
+        value["rows"][0]["observedVisuals"] = "待定"
+        result = self.run_cli(value, self.plan())
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("placeholder", result.stdout)
+
     def test_semantic_mismatch_is_blocked(self):
         value = self.callback()
         value["rows"][0]["semanticStatus"] = "semantic_mismatch"

@@ -18,6 +18,9 @@ SELECTION_HEADERS = [
     "实际画面观察", "语义结论 / 风险", "下一步",
 ]
 PLACEHOLDER = re.compile(r"未生成|待缩窄|候选|待定|\bnone\b|^无$", re.IGNORECASE)
+# Fields that carry verbatim approved content and are byte-checked elsewhere
+# against the plan/G2 decision — placeholder scanning must not veto their text.
+VERBATIM_QUOTE_FIELDS = frozenset({"narrationText"})
 # Shared controlled vocabulary with validate_g3_plan.py / music_align v0.2.
 LAYOUT_TIERS = {"快切", "推进", "常规", "留白"}
 # Transition vocabulary shared with validate_g3_plan.py and
@@ -212,7 +215,11 @@ def validate_final(callback: dict, plan: dict, alignment: dict | None = None, *,
         missing = sorted(required - set(row))
         if missing:
             fail(f"final_review row missing required fields: {', '.join(missing)}")
-        if contains_placeholder(row):
+        # v1.33.1（connector 彩排清单#15）：占位符扫描只查编排者自填字段。
+        # narrationText 是逐字引用字段——本函数随后就机验它与计划逐字相等，而计划旁白
+        # 又受 G2 批准 verbatim 纪律保护；批准正文里的普通英文词（"…and none of them…"）
+        # 被当占位符误杀=假阳性，逐字引用字段退出扫描，防"没填完"的本意不变。
+        if contains_placeholder({k: v for k, v in row.items() if k not in VERBATIM_QUOTE_FIELDS}):
             fail("final_review cannot contain candidate or unresolved placeholder text")
         segment_id = nonempty(row["segmentId"], "segmentId")
         if not re.fullmatch(r"seg-[A-Za-z0-9_-]+", segment_id):
