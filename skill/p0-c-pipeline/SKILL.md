@@ -46,6 +46,8 @@ Record a node's artifact references and review items, set it to `review_required
 
 Per operator-dialogue's single-echo contract (用户 2026-09-11 定案): a node stops for the user exactly once — its final review echo, rendered on the five-section skeleton in [final echo style guide](references/final-echo-style-guide.md) (conclusion first; machine fields only in the evidence section). Mid-node preference decisions (title, angle, search terms, track pick, style parameters) carry preselected defaults rendered as 【默认=推荐｜依据】 on that card; the user's rejection re-runs only the rejected step. Gate tokens never disappear, G0 intake questions are never pre-answered, and fact/identity/acceptance decisions (G3 目标主体, G5 human QA) are never defaulted.
 
+Capability preflight (v1.34.0, 用户令 2026-10-22): G0 按 `references/capability-audit-contract.md` 出盘点并入册；每节点开工读 `status` 的 `capabilityAudit` 决定摊卡——**有事才报**（全绿零噪音，与当前节点相关的缺口进③区一行）。G3 批准的计划若新增能力（转场/BGM/配音），重跑 `capability_audit.py` 增量新版并重新入册（版本自增不覆盖），变化行随 G4 闸呈小卡。G4 装配命令**必带 `--pipeline-state`**（硬闸绑定核验；历史补跑缺省只走如实披露通道并摊卡，新编排禁用）。
+
 ## Hard gates
 
 - G2 approval requires `approvedNarrationRef` and `factCitationRef`.

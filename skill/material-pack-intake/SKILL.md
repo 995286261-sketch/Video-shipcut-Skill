@@ -17,8 +17,9 @@ metadata:
 1. 根据平台自动推导画幅和时长建议。
 2. 看到素材文件夹后，按需追问：品牌资产、禁用内容、授权范围、参考素材分类、配音需求。
 3. 把收集到的信息写入 `01_需求说明.md` 和 `04_授权说明.md`。
+4. **能力预检盘点（v1.34.0，合同 `../p0-c-pipeline/references/capability-audit-contract.md`）**：九问特征确定后、资料清单回显呈出前，跑 `~/.local/bin/python3 <仓库>/skill/p0-c-pipeline/scripts/capability_audit.py --project 工作台/<pid> --profile <九问推出：要BGM→bgm、要配音→narration、烧字卡/字幕→subtitles；转场通常 G3 才定、留增量>`（配音项目把用户点名的音色逐个 `--voice` 传入）。零缺口也出表——申报是确认物不是提问物；**申报非预授权**：有缺口不阻塞 G0，缺口节点前必须补齐或人工拍板降级。`register`/`validate`/`init` 走完后立刻 `pipeline_state.py capability-audit` 入册。
 
-整理完成后，**必须向用户展示资料清单回显**（已收到什么、待确认什么、项目信息），用户确认后才执行 `register` 和 `validate`。
+整理完成后，**必须向用户展示资料清单回显**（已收到什么、待确认什么、项目信息），并按样式指南 v1.5 附**工具盘点块**：③区结论行（全绿=一行"工具盘点：全部就绪"；有缺口=点名+影响+补法）、④区盘点表（数字逐字取盘点文件，卡尾出处行不得删）。用户确认后才执行 `register` 和 `validate`。
 
 详细规则见 `references/g0-start-form.md` 和 `references/user-guidance.md`。
 

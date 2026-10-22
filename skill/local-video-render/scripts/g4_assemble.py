@@ -38,6 +38,17 @@ accepted only for the controlled-dynamic tier and must surface on the review car
 the sole exemption --mix-precheck-waiver requires an honest disclosure text and is
 recorded as waived. banshee lesson: without this gate the master loudness problem
 survives until G5 after a full video render, and the rework costs a whole G3–G4 loop.
+
+Capability preflight gate (v1.34.0, 用户令 2026-10-22：硬闸+如实披露豁免，禁软提醒):
+--pipeline-state carries the project state; if its capabilityAudit block exists the
+assembly verifies the artifact is on disk, its sha256 matches the registration, and
+the probe timestamp is not older than the latest G3 approval — the gate that keeps
+"started as a silent film, added narration at G4 with no voice pack installed" from
+rendering a silent master. A pre-v1.34.0 state without the block, or a historical
+manual run without --pipeline-state, passes ONLY with an honest legacy disclosure
+recorded and surfaced on the review card (never silently). Sole exemption:
+--capability-audit-waiver with the user's verbatim words — the AI never discloses
+on the user's behalf.
 """
 from __future__ import annotations
 
@@ -48,6 +59,7 @@ import math
 import re
 import shutil
 import subprocess
+from datetime import datetime
 import sys
 from pathlib import Path
 
@@ -343,6 +355,61 @@ def measure_bgm_in_place(bgm_path: Path, contract: dict, timeline_ms: int) -> fl
         return None
     value = float(matches[-1])
     return None if value <= -69.9 else value
+
+
+def capability_audit_gate(state: dict) -> dict:
+    """v1.34.0 能力预检闸（用户令 2026-10-22：申报类＝硬闸+如实披露豁免，禁软提醒）。
+    state 有 capabilityAudit 块＝对账文件在场+指纹相符+时效不早于最近一次 G3 批准
+    （防"按默片开工、G4 加了配音而音色包没装"）；无块＝老项目 legacy 如实披露放行
+    （旧项目零影响，但永不静默——记录与回显卡都必须摊开）。"""
+    audit = state.get("capabilityAudit")
+    if audit is None:
+        return {"status": "legacy-unaudited",
+                "disclosure": "本项目先于能力盘点制度建立、state 无盘点块——如实披露放行，摊上 G4 回显卡"}
+    path = Path(str(audit.get("file") or ""))
+    if not audit.get("file") or not path.is_file():
+        fail(f"能力盘点块指向的文件不在盘上：{audit.get('file')!r}——重跑 capability_audit.py 增量盘点并经 pipeline_state.py capability-audit 入册")
+    if sha256(path).upper() != str(audit.get("sha256") or "").upper():
+        fail("能力盘点文件指纹与 state 登记不符——盘点在册后被改动＝过期，重跑盘点并入册")
+    probed = str(audit.get("probedAt") or "")
+    g3_approval = ((state.get("nodes") or {}).get("G3") or {}).get("approval") or {}
+    approved = str(g3_approval.get("approvedAt") or "")
+
+    def _iso(value: str):
+        # 历史 state 有 Z 结尾时间戳（banshee G3 实盘所见），py3.9 的 fromisoformat 不认 Z——统一补 +00:00。
+        return datetime.fromisoformat(value.replace("Z", "+00:00")) if value else None
+
+    try:
+        probed_dt = _iso(probed)
+        approved_dt = _iso(approved)
+    except ValueError as error:
+        fail(f"能力盘点/批准时间戳无法解析（probedAt={probed!r} g3ApprovedAt={approved!r}）：{error}")
+    if probed_dt is not None and approved_dt is not None and probed_dt < approved_dt:
+        fail(f"能力盘点（{probed}）旧于最近一次 G3 批准（{approved}）——计划变了、工具箱没重检：重跑增量盘点并入册；"
+             "唯一豁免 --capability-audit-waiver '<用户逐字原话>'（AI 永不代披露）")
+    block = {"status": "bound", "file": str(path), "sha256": sha256(path), "probedAt": probed,
+             "g3ApprovedAt": approved or None, "summary": audit.get("summary")}
+    missing = audit.get("missing") or []
+    block["missing"] = missing
+    if missing:
+        block["disclosure"] = "盘点存在缺口——相关行必须摊上 G4 回显卡（有事才报，有报必摊）"
+    return block
+
+
+def resolve_capability_block(pipeline_state: Path | None, waiver: str | None) -> dict:
+    """v1.34.0 闸路由（独立成函数供单测）：双旗互斥、空文本豁免拒绝、绑定核验、
+    历史补跑通道——四种去向全部落账可见，无一静默。"""
+    if waiver is not None:
+        if pipeline_state:
+            fail("--pipeline-state 与 --capability-audit-waiver 互斥——要么持绑定盘点过闸，要么如实披露，不许既要又要")
+        if not str(waiver).strip():
+            fail("能力盘点豁免必须携带如实披露文本（跳过了什么、为什么、用户逐字原话）——静默放行闸门不允许（v1.34.0 唯一豁免）")
+        return {"status": "waived", "reason": str(waiver).strip(),
+                "disclosure": "能力盘点核验未执行，如实披露；必须摊上 G4 回显卡"}
+    if pipeline_state:
+        return capability_audit_gate(load(require_file(pipeline_state, "pipeline-state")))
+    return {"status": "legacy-unwired",
+            "disclosure": "未传 --pipeline-state（历史手动旗标补跑通道）——盘点核验未执行，如实披露，摊上回显卡；新编排禁用此通道"}
 
 
 def build_assemble_command(list_file: Path, inputs: list[Path], filter_complex: str, output: Path, fps: int, duration_s: float,
@@ -698,6 +765,10 @@ def main() -> int:
                         help="台账⑦：g4_mix_precheck.py 的《混音预检报告》（混 BGM 装配必备——主轨响度在渲染前已过闸）")
     parser.add_argument("--mix-precheck-waiver", type=str,
                         help="台账⑦唯一豁免：如实披露文本（跳过了什么、为什么），落账 waived 并摊上回显卡")
+    parser.add_argument("--pipeline-state", type=Path,
+                        help="v1.34.0 能力预检闸：pipeline-state.json 路径（新编排必带——capabilityAudit 块在册则对账+时效核验）")
+    parser.add_argument("--capability-audit-waiver", type=str,
+                        help="v1.34.0 唯一豁免：用户逐字原话的如实披露（跳过了什么、为什么），落账 waived 并摊上回显卡")
     parser.add_argument("--fps", type=int, default=None,
                         help="override; by default inherit the manifest targetFps from the approved plan (issue 002-⑨)")
     parser.add_argument("--duration-tolerance-ms", type=int, default=400)
@@ -855,6 +926,8 @@ def main() -> int:
                 timeline_ms=timeline_ms, contract_sha=sha256(args.bgm_mix_contract), narration_sha=sha256(narration),
                 bgm_sha=sha256(args.bgm_audio), plan_sha=sha256(args.loudness_plan))
             mix_precheck_block["report"] = {"path": str(args.mix_precheck_report), "sha256": sha256(args.mix_precheck_report)}
+    # v1.34.0 能力预检闸（用户令 2026-10-22：申报类=硬闸+如实披露豁免，不做软提醒）。
+    capability_block = resolve_capability_block(args.pipeline_state, args.capability_audit_waiver)
     card_filters: list[str] = []
     card_ranges: list[tuple[int, int]] = []
     if args.chapter_cards:
@@ -955,6 +1028,8 @@ def main() -> int:
         "loudness": loudness_block,
         # 台账⑦：主轨混音预检绑定凭证（bound / bound-disclosed / waived），G5 审计可复对账
         "mixPrecheck": mix_precheck_block,
+        # v1.34.0：能力预检申报凭证（bound / legacy-unaudited / legacy-unwired / waived），G5 可复对账
+        "capabilityAudit": capability_block,
         "bgmMix": {
             "audio": {"path": str(args.bgm_audio), "sha256": sha256(args.bgm_audio)},
             "contract": {"path": str(args.bgm_mix_contract), "sha256": sha256(args.bgm_mix_contract)},

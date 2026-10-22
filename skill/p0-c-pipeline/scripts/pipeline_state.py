@@ -131,6 +131,13 @@ def validate_state(state: dict) -> None:
         value = state["nodes"].get(node)
         if not isinstance(value, dict) or value.get("status") not in STATES:
             emit({"status": "invalid", "error": "invalid node state", "node": node}, 2)
+    # v1.34.0 能力预检申报：块可选——老项目无块＝legacy 不追溯；在场必须形状齐
+    #（申报形状歪而运行时对的 v0.13.1 教训：歪形状当场拒，不许半块上岗）。
+    audit = state.get("capabilityAudit")
+    if audit is not None:
+        absent = [key for key in ("file", "sha256", "probedAt", "summary") if key not in audit]
+        if absent:
+            emit({"status": "invalid", "error": "capabilityAudit 块缺必备字段", "fields": absent}, 2)
 
 
 def write_state(path: Path, state: dict) -> None:
@@ -524,6 +531,32 @@ def command_init(args: argparse.Namespace) -> None:
     emit({"status": "created", "state": str(destination), "currentNode": "G1", "approvalMode": mode, "nextAction": state["nextAction"]})
 
 
+def command_capability_audit(args: argparse.Namespace) -> None:
+    """能力盘点入册（v1.34.0）：只认 capability_audit.py 真产物，手补件冒充拒收
+    （台账⑦同款纪律）；重跑盘点则旧块进 capabilityAuditHistory，永不覆盖留痕。"""
+    state_path = Path(args.state)
+    state = read_state(state_path)
+    audit_path = Path(args.audit_file)
+    if not audit_path.is_file():
+        emit({"status": "blocked", "error": f"盘点文件不在盘上：{audit_path}"}, 2)
+    report = json.loads(audit_path.read_text(encoding="utf-8"))
+    if report.get("kind") != "capability-audit" or report.get("schemaVersion") != "0.1":
+        emit({"status": "blocked", "error": "盘点文件不是 capability-audit v0.1 产物——不许手补件冒充专员产物（台账⑦同款）"}, 2)
+    block = {
+        "file": str(audit_path), "sha256": sha256_file(audit_path),
+        "probedAt": report.get("probedAt"), "profile": report.get("profile", []),
+        "summary": report.get("summary") or {},
+        "missing": [{"id": item["id"], "label": item.get("labelPlain"), "affects": item.get("affects", [])}
+                    for item in report.get("items", []) if item.get("status") == "missing"],
+    }
+    if state.get("capabilityAudit"):
+        state.setdefault("capabilityAuditHistory", []).append(state["capabilityAudit"])
+    state["capabilityAudit"] = block
+    write_state(state_path, state)
+    emit({"status": "recorded", "capabilityAudit": block,
+          "nextAction": "把盘点摊上本节点回显（缺口=③区点名）；缺口只影响后段节点时不阻塞开工，缺口节点前必须补齐或人工拍板降级"})
+
+
 def command_status(args: argparse.Namespace) -> None:
     state = read_state(Path(args.state))
     node = state["currentNode"]
@@ -532,7 +565,7 @@ def command_status(args: argparse.Namespace) -> None:
     bgm = state.get("bgm") or {}
     if bgm.get("libraryPending"):
         bgm = {**bgm, "reminder": "BGM 待找乐：G1 末出检索词卡 → 找乐 → 用户挑曲 → 官方渠道取得整轨并登记 → `bgm-choice` 翻槽；G3 批准前槽必须已清"}
-    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "approvalMode": state.get("approvalMode", "human"), "autoPolicyRef": state.get("autoPolicyRef"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "nextAction": state["nextAction"]})
+    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "approvalMode": state.get("approvalMode", "human"), "autoPolicyRef": state.get("autoPolicyRef"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "capabilityAudit": state.get("capabilityAudit"), "nextAction": state["nextAction"]})
 
 
 
@@ -942,13 +975,16 @@ def parser() -> argparse.ArgumentParser:
     approve.add_argument("--approval-token"); approve.add_argument("--approval-response")
     approve.add_argument("--auto", action="store_true", help="自动确认模式：按策略批准本闸（要求项目 approvalMode=auto；不得与口令参数同传）")
     approve.add_argument("--approved-narration-ref"); approve.add_argument("--fact-citation-ref"); approve.add_argument("--voice-brief-ref"); approve.add_argument("--edit-plan-ref"); approve.add_argument("--timeline-review-ref"); approve.add_argument("--g4-output-mode", choices=("local_direct", "chatcut"), default="local_direct"); approve.add_argument("--local-render-ref"); approve.add_argument("--g4-validation-ref"); approve.add_argument("--chatcut-export-ref"); approve.add_argument("--delivery-manifest-ref"); approve.add_argument("--g5-validation-ref"); approve.add_argument("--accepted-warnings"); approve.add_argument("--accepted-warning", action="append"); approve.set_defaults(func=command_approve)
+    audit = sub.add_parser("capability-audit")
+    audit.add_argument("--state", required=True); audit.add_argument("--audit-file", required=True)
+    audit.set_defaults(func=command_capability_audit)
     reopen = sub.add_parser("reopen"); reopen.add_argument("--state", required=True); reopen.add_argument("--reason", required=True); reopen.add_argument("--rework-ref", required=True); reopen.set_defaults(func=command_reopen)
     reopen_g3 = sub.add_parser("reopen-g3"); reopen_g3.add_argument("--state", required=True); reopen_g3.add_argument("--reason", required=True); reopen_g3.add_argument("--rework-ref", required=True); reopen_g3.set_defaults(func=command_reopen_g3)
     sam = sub.add_parser("set-approval-mode")
     sam.add_argument("--state", required=True); sam.add_argument("--mode", choices=APPROVAL_MODES, required=True)
     sam.add_argument("--reason", required=True, help="切换理由（append-only 历史，禁隐式切换）"); sam.add_argument("--auto-policy")
     sam.set_defaults(func=command_set_approval_mode)
-    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3, sam):
+    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3, sam, audit):
         command.add_argument("--unicode", action="store_true", help="Emit readable Unicode JSON for UTF-8 terminals")
     return result
 

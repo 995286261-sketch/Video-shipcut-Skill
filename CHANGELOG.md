@@ -1,5 +1,17 @@
 # 变更记录
 
+## v1.34.0 — 2026-10-22 — **缺口开工前申报版本（能力预检）**
+
+发布范围＝冻结修正后的首支新功能批次（用户 10-22 明令恢复本地 skill 开发：本地提交保回退、push 云仓前先问、验证后升 connector；方案定稿 `docs/改进-能力预检申报-v0.1.md`，合同唯一事实源 `skill/p0-c-pipeline/references/capability-audit-contract.md`）。借鉴源＝OpenMontage preflight 申报纪律（10-21/22 公平测试所见"不许到素材阶段才暴雷"）；治我方病史：say/bl 静音回退、网易云 SSRF 走到才暴雷（zaku-003 台账②）、token 当场缺当场配。
+
+- **盘点聚合**：新 `skill/p0-c-pipeline/scripts/capability_audit.py`——按 G0 九问特征点名单（bgm/narration/subtitles/transitions 增量），**零新探针逻辑**（逐项转调各专员现成探针：㉛字形/`subtitle_probe_renderer`/`transition_probe_host`/`music_listen_omni`/`local_tts`）；未涉项不探测不报缺（`probed:false`，未涉却声称探过＝造假）；凭据只验在场、值永不落盘（金丝雀测试断言）；`能力盘点-vN.json` 版本自增永不覆盖（㉘形制）。申报非预授权：有缺口不阻塞 G0，缺口节点前必须补齐或人工拍板降级。
+- **state 入册**：`pipeline_state.py capability-audit` 只认真产物（手补件拒收，⑦同款）、重跑旧块进 `capabilityAuditHistory`；`validate_state` 块可选＝老项目 legacy 不追溯，**在场四字段必须齐**（半块不当 legacy 放过——v0.13.1 申报歪形教训常驻化）；`status` 摊出 `capabilityAudit`。
+- **G4 硬闸**（用户定案"申报类=机器硬闸+如实披露豁免，禁软提醒"）：装配 `resolve_capability_block` 四去向全落账摊卡无一静默——bound／罢工（指纹不符、盘点旧于最近一次 G3 批准、时间戳不可解析，报错点名重跑与入册命令）／waived（用户逐字原话唯一豁免、与 --pipeline-state 互斥、AI 永不代披露）／legacy 双形（state 无块或未传 state——如实披露放行摊卡，新编排禁用缺省通道）。防实案＝按默片开工→G4 加配音→音色包没装→渲染出哑片。
+- **卡律**：样式指南 v1.4→v1.5——G0 最终回显③区盘点结论行+④区内联盘点表（数字逐字取盘点文件、卡尾出处行不得删）；G1–G5 **有事才报**（全绿零噪音——用户问"有必要吗"后由"每卡一行"自审改定）；禁词表补盘点字段名人话译法。
+- **测试**：新单测 10+10 例全绿（时效罢工/篡改/手补件/半块/互斥/空豁免/金丝雀/history）；**全量回归 50 测试文件逐文件绿（净增 2）、py3.9 编译零错**；banshee 真项目彩排两跑（只读、产物 WorkSpace/cap-audit-rehearsal/）：正常环境 8/8 全绿、拔 token 环境 `bgm-search` 一处点名。
+- **发版前用户实测追加一件真修**：演示 G4 三形态过闸时发现 banshee 老 state 的 G3 `approvedAt` 带 `Z`、新盘点带 `+08:00`——py3.9 `fromisoformat` 不认 Z，老项目带新盘点过闸会**误罢工**。闸内 `_iso` 统一补 `+00:00`（冤枉人也是病），+1 例 Z 混排双向（放行向+罢工向）锁住；修后 gate 11 例、g4_assemble 全套 60 例、全量回归 50 文件重跑全绿。六形态当场全过：新鲜 bound／过期罢工（文案带豁免出路）／逐字原话 waived／空豁免拒／双旗互斥拒／老项目 legacy 如实披露。
+- ⚠ 本版本未取得 Mimosa 深扫结论，不宣称项目安全。**已随用户 10-22 令测试通过后 push**（新规首跑：先测后问再推）。
+
 ## v1.33.1 — 2026-10-16 — **逐字引用豁免版本（connector 彩排缺陷修复）**
 
 发布范围＝公司 connector 集成彩排（unicorn-panel-001，彩排问题清单 **#15**）暴露的引擎缺陷修复，属 2026-10-10 冻结登记的允许改动类（connector 联调暴露的引擎缺陷），用户 2026-10-16 逐字裁决「甲·引擎缺陷修复批」。
