@@ -10,7 +10,7 @@ Do not ask the user to name a skill or prepare technical artifacts. Infer the re
 
 ## Automatic Routing
 
-1. No validated material pack or project state: run G0 with `material-pack-intake`, writing the new project's formal artifacts under `工作台/<projectId>/`.
+1. No validated material pack or project state: before G0, run `pipeline_state.py workspace-root` (read-only). If `needsUserChoice=true`, present the one-time workbench-location card (default 仓库内 `工作台/` recommended; or the user's own directory) and record the choice verbatim via `workspace-root --set ... --user-words '<原话>'` — the AI never chooses alone. Then run G0 with `material-pack-intake`, writing the new project's formal artifacts under `<登记根>/工作台/<projectId>/` (init enforces this location; see `skill/p0-c-pipeline/references/workspace-root-contract.md`).
 2. Existing `工作台/<projectId>/pipeline-state.json`: read it before any other action, report the current node, and invoke only the routed specialist skill. `归档/` is audit-only and must never be used to recover project state.
 3. Do not read, repair, or infer state from legacy `run-manifest.json`.
 4. Keep all source media read-only. Respect authorization and distribution limits.

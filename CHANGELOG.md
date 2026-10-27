@@ -1,5 +1,16 @@
 # 变更记录
 
+## v1.35.0 — 2026-10-23 — **工作台选址版本（入口层+落点硬闸）**
+
+发布范围＝两批并一版：①README 入口层重排（上手引导层补建，治评审"不知从何入手"；本地先试，connector 移植等验证后另批）；②工作台选址合同（connector `workspaceRootRef` 硬闸语义的本地补齐——落点从文档约定升级为机器合同）。合同唯一事实源 `skill/p0-c-pipeline/references/workspace-root-contract.md`。
+
+- **入口层**：README 新增"第一次来，先对号入座"角色指路表（用户/验证者/改造者/评估者各给第一条动作）、"用起来的节奏"三步（AI 问→回显卡→逐字批准，循环六次）、"一分钟自检"命令（`for f in skill/*/tests/test_*.py; do python3 "$f"; done`，实跑全绿；个别文件真调 ffmpeg 已如实披露）；快速开始改三步实操式；G0 能力盘点首次进公开介绍（口径＝合同文本指路）。红线自查：新增零公司内容、零内部项目名、零事故细节。
+- **选址合同**：规范根解析唯一正道 `resolve_workspace_root()`＝env `P0C_WORKSPACE_HOME` > 人的逐字选址记录 `工作台选址.json`（gitignore 常驻——个人绝对路径永不入库，用例盯梢）> 仓库默认；G0 第 0 步 `pipeline_state.py workspace-root`（只读）报 `needsUserChoice`，编排出一张**一次性选址小卡**（甲=仓内 `工作台/` 推荐；选甲也落账，此后不再问——机器级静态事实非动态追问项）；`--set` **无用户逐字原话拒写**（AI 永不代选，批准口令同纪律）；根含"工作台"段=⑤嵌套语义拒。
+- **init 硬闸**：新工单落点必须正好 `<登记根>/工作台/<projectId>/`，越界 `blocked` 点名登记根与出处、**罢工先于建目录**；state 落账 `workspaceRoot{root,source,workbench}`、`status` 摊出（续工审计不用猜）。选址记录半形/歪形读写两侧如实报错不静默降级（v0.13.1 教训常驻）。
+- 规程同步：AGENTS.md 路由第 1 条前置选址步；material-pack-intake G0 第 0 步；p0-c-pipeline SKILL 成段；README"东西落在哪"改写为"第一次问一次、机器记账"。
+- 测试：新 `test_workspace_root.py` 11 例（优先级/代选拒/嵌套拒/半形如实/绑定罢工/搬根换闸/gitignore 卫生）；两处旧 fixture（test_pipeline_state 60 例共享 setUp、test_capability_audit）改 env 注入+工作台正形；撞并修一处 py3.9 注解兼容（`dict|None`→future import）。**全量回归 51/51 逐文件绿**（净增 1）。
+- ⚠ connector 升钉 ≥v1.35.0 时 `script/flow` 真引擎通道必须注入 `P0C_WORKSPACE_HOME=<workspaceRootRef>`（已记合同 §5），否则 init 闸按引擎仓默认根对账、面板工单必炸。完整深扫结论未取得，不宣称安全。
+
 ## v1.34.0 — 2026-10-22 — **缺口开工前申报版本（能力预检）**
 
 发布范围＝冻结修正后的首支新功能批次（用户 10-22 明令恢复本地 skill 开发：本地提交保回退、push 云仓前先问、验证后升 connector；方案定稿 `docs/改进-能力预检申报-v0.1.md`，合同唯一事实源 `skill/p0-c-pipeline/references/capability-audit-contract.md`）。借鉴源＝OpenMontage preflight 申报纪律（10-21/22 公平测试所见"不许到素材阶段才暴雷"）；治我方病史：say/bl 静音回退、网易云 SSRF 走到才暴雷（zaku-003 台账②）、token 当场缺当场配。

@@ -8,7 +8,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from project_layout import CHATCUT_DIRECTORY, require_g4_file, require_g5_file, require_project_file
+from project_layout import (CHATCUT_DIRECTORY, choice_file, require_g4_file, require_g5_file,
+                            resolve_workspace_root, require_project_file, set_choice,
+                            workspace_gate, WORKSPACE_DIR_NAME, WORKSPACE_HOME_ENV)
 from review_gate import load_review_gate, require_basis_references, reviewed_file_hashes, sha256_file
 
 NODES = ("G0", "G1", "G2", "G3", "G4", "G5")
@@ -503,6 +505,12 @@ def command_init(args: argparse.Namespace) -> None:
     destination = Path(args.state)
     if destination.exists():
         emit({"status": "blocked", "error": "state file already exists", "path": str(destination)}, 2)
+    # v1.35.0 工作台选址硬闸：新项目落点必须正好在 <登记根>/工作台/<projectId>/（env>选址记录>仓库默认），
+    # AI 没有临场指路的第四种自由；合同见 references/workspace-root-contract.md。
+    try:
+        workspace = workspace_gate(destination)
+    except ValueError as error:
+        emit({"status": "blocked", "error": str(error)}, 2)
     # v1.22.0 输入端选模式：auto 必须带策略文件（当场校验，坏策略不开工）。
     mode = getattr(args, "approval_mode", "human") or "human"
     policy_ref = None
@@ -527,8 +535,12 @@ def command_init(args: argparse.Namespace) -> None:
     }
     if policy_ref:
         state["autoPolicyRef"] = policy_ref
+    # 落账的住址（v1.35.0）：root+source 随 state 永久可审——续工/审计不用猜。
+    state["workspaceRoot"] = {"root": str(workspace["root"]), "source": workspace["source"],
+                              "workbench": str(workspace["root"] / WORKSPACE_DIR_NAME)}
     write_state(destination, state)
-    emit({"status": "created", "state": str(destination), "currentNode": "G1", "approvalMode": mode, "nextAction": state["nextAction"]})
+    emit({"status": "created", "state": str(destination), "currentNode": "G1", "approvalMode": mode,
+          "workspaceRoot": state["workspaceRoot"], "nextAction": state["nextAction"]})
 
 
 def command_capability_audit(args: argparse.Namespace) -> None:
@@ -565,7 +577,7 @@ def command_status(args: argparse.Namespace) -> None:
     bgm = state.get("bgm") or {}
     if bgm.get("libraryPending"):
         bgm = {**bgm, "reminder": "BGM 待找乐：G1 末出检索词卡 → 找乐 → 用户挑曲 → 官方渠道取得整轨并登记 → `bgm-choice` 翻槽；G3 批准前槽必须已清"}
-    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "approvalMode": state.get("approvalMode", "human"), "autoPolicyRef": state.get("autoPolicyRef"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "capabilityAudit": state.get("capabilityAudit"), "nextAction": state["nextAction"]})
+    emit({"status": state["status"], "projectId": state["projectId"], "currentNode": node, "nodeStatus": record.get("status"), "approvalMode": state.get("approvalMode", "human"), "autoPolicyRef": state.get("autoPolicyRef"), "inputRefs": record.get("inputRefs", []), "artifactRefs": record.get("artifactRefs", []), "humanReviewPoints": record.get("humanReviewPoints", []), "reviewGate": review_gate, "reviewGateStatus": "ready" if review_gate else "missing", "acceptedWarnings": state.get("acceptedWarnings", []), "bgm": bgm, "capabilityAudit": state.get("capabilityAudit"), "workspaceRoot": state.get("workspaceRoot"), "nextAction": state["nextAction"]})
 
 
 
@@ -952,6 +964,33 @@ def command_approve(args: argparse.Namespace) -> None:
     emit({"status": "approved", "approvedNode": node, "currentNode": state["currentNode"], "nextAction": state["nextAction"]})
 
 
+def command_workspace_root(args: argparse.Namespace) -> None:
+    """工作台选址（v1.35.0）：读=当前登记根与是否首次待选；写=必须带人的逐字原话。
+    选址是机器级事实不是项目动态项：落账一次、之后 init 硬闸按此对账。"""
+    if getattr(args, "set", None):
+        try:
+            record = set_choice(args.set, args.user_words, now())
+        except ValueError as error:
+            emit({"status": "blocked", "error": str(error)}, 2)
+        emit({"status": "recorded", "root": record["root"], "source": "choice",
+              "workbench": str(Path(record["root"]) / WORKSPACE_DIR_NAME),
+              "userWords": record["userWords"], "choiceFile": str(choice_file()),
+              "nextAction": "选址已落账；此后新项目 init 必须落在该根的 工作台/ 之下（越界=罢工点名）。"
+                            "回到 G0 开工单九问。"})
+        return
+    try:
+        ws = resolve_workspace_root()
+    except ValueError as error:
+        emit({"status": "blocked", "error": str(error)}, 2)
+    emit({"status": "completed", "root": str(ws["root"]), "source": ws["source"],
+          "workbench": str(ws["root"] / WORKSPACE_DIR_NAME),
+          "userWords": (ws["record"] or {}).get("userWords"),
+          "needsUserChoice": ws["source"] == "default",
+          "hint": f"needsUserChoice=true 时先出一张一次性选址小卡（甲=仓库默认 {WORKSPACE_DIR_NAME}/ 推荐；"
+                  f"乙=用户逐字给的目录），选完经 workspace-root --set --user-words '<原话>' 落账；"
+                  f"机器环境以 {WORKSPACE_HOME_ENV} 注入根视为人已定。"})
+
+
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser()
     sub = result.add_subparsers(dest="command", required=True)
@@ -962,6 +1001,10 @@ def parser() -> argparse.ArgumentParser:
                       help="输入端选审批模式（v1.22.0）：human=每节点真人口令（默认）；auto=策略自动确认（必带 --auto-policy）")
     init.add_argument("--auto-policy", help="auto 模式必带：预授权策略 JSON（kind=auto-approval-policy，schemaVersion 0.1）")
     init.set_defaults(func=command_init)
+    wroot = sub.add_parser("workspace-root", help="工作台选址：读登记/首次待选；写=人逐字原话落账（v1.35.0）")
+    wroot.add_argument("--set", help="新根目录（工作台之父目录；含 工作台 段=⑤嵌套语义拒）")
+    wroot.add_argument("--user-words", help="用户选址原话（--set 必带；AI 永不代选）")
+    wroot.set_defaults(func=command_workspace_root)
     status = sub.add_parser("status"); status.add_argument("--state", required=True); status.set_defaults(func=command_status)
     record = sub.add_parser("record"); record.add_argument("--state", required=True); record.add_argument("--node", choices=NODES, required=True)
     record.add_argument("--node-status", choices=sorted(STATES), required=True); record.add_argument("--input-ref", action="append"); record.add_argument("--artifact-ref", action="append"); record.add_argument("--review-point", action="append"); record.set_defaults(func=command_record)
@@ -984,7 +1027,7 @@ def parser() -> argparse.ArgumentParser:
     sam.add_argument("--state", required=True); sam.add_argument("--mode", choices=APPROVAL_MODES, required=True)
     sam.add_argument("--reason", required=True, help="切换理由（append-only 历史，禁隐式切换）"); sam.add_argument("--auto-policy")
     sam.set_defaults(func=command_set_approval_mode)
-    for command in (init, status, record, review, bgm, approve, reopen, reopen_g3, sam, audit):
+    for command in (init, wroot, status, record, review, bgm, approve, reopen, reopen_g3, sam, audit):
         command.add_argument("--unicode", action="store_true", help="Emit readable Unicode JSON for UTF-8 terminals")
     return result
 

@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -33,8 +34,14 @@ class PipelineStateTest(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
-        self.pack = self.root / "material-pack.json"
+        # v1.35.0 工作台选址硬闸：测试机器环境以 P0C_WORKSPACE_HOME 注入登记根，
+        # 项目按正形 <根>/工作台/<projectId>/ 落位（run_cli 子进程继承 env）。
+        self.home = Path(self.temp.name).resolve()
+        os.environ["P0C_WORKSPACE_HOME"] = str(self.home)
+        self.addCleanup(os.environ.pop, "P0C_WORKSPACE_HOME", None)
+        self.root = self.home / "工作台" / "demo-001"
+        self.root.mkdir(parents=True)
+        self.pack = self.home / "material-pack.json"
         self.state = self.root / "pipeline-state.json"
         self.pack.write_text(json.dumps({"packStatus": "complete"}), encoding="utf-8")
         self.files = {}

@@ -57,8 +57,12 @@ class CapabilityAuditTest(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.project = Path(self.temp.name) / "demo-proj"
-        self.project.mkdir()
+        # v1.35.0 工作台选址硬闸：以 env 注入登记根，项目按正形 <根>/工作台/<pid>/ 落位（init 走进程内调用）。
+        self.home = Path(self.temp.name).resolve()
+        os.environ["P0C_WORKSPACE_HOME"] = str(self.home)
+        self.addCleanup(os.environ.pop, "P0C_WORKSPACE_HOME", None)
+        self.project = self.home / "工作台" / "demo-proj"
+        self.project.mkdir(parents=True)
 
     def audit(self, extra_args=()):
         argv = ["--project", str(self.project)]
