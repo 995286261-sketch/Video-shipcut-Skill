@@ -11,7 +11,7 @@ metadata:
 
 ## 对话式引导
 
-**第 0 步（开工前一次性，v1.35.0）：工作台选址。** 先跑 `pipeline_state.py workspace-root`（只读）；`needsUserChoice=true` 时出一张**一次性选址小卡**（甲=仓库内 `工作台/`，推荐、直接确认可过；乙=用户点名其他目录），选定后 `workspace-root --set <根> --user-words '<用户逐字原话>'` 落账——**无原话拒写，AI 永不代选**；选甲也落账，落账后不再问。此后正式产物一律写 `<登记根>/工作台/<projectId>/`，合同见 `../p0-c-pipeline/references/workspace-root-contract.md`（init 硬闸会点名越界）。
+**第 0 步（开工前一次性，v1.35.0）：工作台选址。** 先跑 `pipeline_state.py workspace-root`（只读）；`needsUserChoice=true` 时照 `references/workspace-location-card.md` 的模板出**一次性选址卡**（禁止即兴散文或改模板选项；甲=仓库内 `工作台/` 带默认推荐；乙=用户点名其他目录），选定后逐字执行 `workspace-root --set <根> --user-words '<用户原话>'` 落账——**无原话拒写，AI 永不代选**；选甲也落账，落账后不再问。此后正式产物一律写 `<登记根>/工作台/<projectId>/`，合同见 `../p0-c-pipeline/references/workspace-root-contract.md`（init 硬闸会点名越界）。
 
 随后必须主动带用户完成素材包。先展示 `references/g0-start-form.md` 的**开工单九问**（做什么、给谁看、发哪个平台、素材在哪、想要什么感觉、BGM、旁白配音、品牌素材、片子去向、审批方式——一卡问完，固定追问项不另开第二张卡），接受自然语言回答，不要要求用户写技术字段。
 

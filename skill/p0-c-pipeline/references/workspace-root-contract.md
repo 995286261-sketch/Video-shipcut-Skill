@@ -19,7 +19,7 @@
 ## 2. 首次必问（编排规程，一次性）
 
 - 新会话进 G0 前，编排先跑 `pipeline_state.py workspace-root`（只读）：
-  `needsUserChoice=true`（source=default 且无记录）→ 出一张**一次性选址小卡**：
+  `needsUserChoice=true`（source=default 且无记录）→ 照 `skill/material-pack-intake/references/workspace-location-card.md` 的固定模板出**一次性选址卡**（禁止即兴散文/改选项，用户可见环节走预设卡片纪律）：
   - 甲（推荐、直接确认可过）：仓库内 `工作台/`——样例项目都在，方便对照；
   - 乙：用户点名的其他目录（如大容量盘），用户给目录或原话即视为选址答复。
 - 选完必须落账：`pipeline_state.py workspace-root --set <根> --user-words '<用户逐字原话>'`。
