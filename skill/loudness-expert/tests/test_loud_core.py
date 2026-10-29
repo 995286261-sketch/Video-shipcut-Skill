@@ -58,15 +58,43 @@ class FeasibilityTests(unittest.TestCase):
         self.assertEqual(verdict["exits"], [])
 
     def test_true_peak_ceiling_blocks_with_fix_numbers(self):
+        # v1.35.1 前本用例把"提到至少 11.0 dBTP"（TP 合法域上限是 0）钉成期望——
+        # 代数正确但越界。现断言实话句取代不可能选项，降目标出路仍带数。
         verdict = loud_core.linear_feasibility(
             {"inputI": -30.0, "inputTp": -5.0, "inputLra": 4.0}, self.PROFILE)
         self.assertFalse(verdict["feasible"])
         self.assertEqual(verdict["blockedReasons"], ["true-peak"])
         self.assertEqual(verdict["ceilingLufs"], -26.5)
         joined = "|".join(verdict["exits"])
-        self.assertIn("11.0", joined)   # 估算后 TP——提上限的数
-        self.assertIn("-26.5", joined)  # 降目标的数
+        self.assertNotIn("提到至少 11", joined)   # 域外建议绝不上出路
+        self.assertIn("提上限救不了", joined)      # 越界方向改为实话
+        self.assertIn("-26.5", joined)            # 降目标的数（域内，保留数值化）
         self.assertIn("先压缩", joined)
+
+    def test_tp_suggestion_kept_when_within_domain(self):
+        # 域内建议值照旧数值化（当日面板演示案实数：-23.75→-8、上限-9 → 估顶-7.26）
+        verdict = loud_core.linear_feasibility(
+            {"inputI": -23.75, "inputTp": -23.01, "inputLra": 0.0},
+            {"integratedLufs": -8.0, "truePeakDbtp": -9.0, "lraTargetLu": 9.0})
+        joined = "|".join(verdict["exits"])
+        self.assertIn("把 TP 上限提到至少 -7.3 dBTP", joined)
+        self.assertNotIn("救不了", joined)
+
+    def test_ceil_floor_honest_when_below_I_domain(self):
+        # 极静源+极近顶：保住上限需降到 -84.5，低于 I 合法域底 -70 → 实话句
+        verdict = loud_core.linear_feasibility(
+            {"inputI": -85.0, "inputTp": -2.0, "inputLra": 4.0}, self.PROFILE)
+        joined = "|".join(verdict["exits"])
+        self.assertIn("降目标也救不了", joined)
+        self.assertNotIn("降到至多 -84", joined)
+
+    def test_lra_suggestion_honest_when_above_domain(self):
+        # 源 LRA 60 超 LRA 目标合法域顶 50 → 不给"提到至少 60"的假出路
+        verdict = loud_core.linear_feasibility(
+            {"inputI": -14.0, "inputTp": -20.0, "inputLra": 60.0}, self.PROFILE)
+        joined = "|".join(verdict["exits"])
+        self.assertIn("提 LRA 目标救不了", joined)
+        self.assertNotIn("提到至少 60", joined)
 
     def test_lra_target_below_source_blocks(self):
         verdict = loud_core.linear_feasibility(

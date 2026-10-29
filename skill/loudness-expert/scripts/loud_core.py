@@ -30,6 +30,12 @@ PROFILES = {
     "video": {"integratedLufs": -14.0, "truePeakDbtp": -1.5, "lraTargetLu": 9.0},
     "podcast": {"integratedLufs": -16.0, "truePeakDbtp": -2.0, "lraTargetLu": 7.0},
 }
+# loudnorm 滤镜参数合法域（v1.35.1 域钳制：exits 的每条建议值必须落在所属参数域内，
+# 越界出路改为实话句——zaku-003 实跑暴露"建议提到至少 8.8 dBTP"而 TP 域上限是 0，
+# 代数反解正确但没查解的定义域，等于给用户列一扇不存在的门）。
+LOUDNORM_I_RANGE = (-70.0, -5.0)
+LOUDNORM_TP_RANGE = (-9.0, 0.0)
+LOUDNORM_LRA_RANGE = (0.0, 50.0)
 # 验收容差（合同 §3 工程惯例常数，随报告如实带出，不是隐藏默认）
 DEFAULT_TOLERANCE_LU = 1.0
 # 线性模式实测 TP 允许超出 TP 上限的余量（loudnorm 保证的是估算值，非硬限幅）
@@ -144,15 +150,27 @@ def linear_feasibility(measured: dict, profile: dict) -> dict:
     ceiling = profile["truePeakDbtp"] - measured["inputTp"] + measured["inputI"]
     if not tp_ok:
         reasons.append("true-peak")
-        exits.append("把 TP 上限提到至少 {:.1f} dBTP（线性增益 {:.2f} dB 后估算 TP 将到 {:.2f}）"
-                     .format(estimated_tp, gain, estimated_tp))
-        exits.append("把目标响度降到至多 {:.1f} LUFS（保住现 TP 上限 {:.1f}）"
-                     .format(ceiling, profile["truePeakDbtp"]))
+        if estimated_tp > LOUDNORM_TP_RANGE[1]:
+            exits.append("提上限救不了：TP 上限合法最高 0 dBTP，线性增益 {:.2f} dB 后估算仍到 "
+                         "{:.1f}——此路不存在，只能降目标或先压缩".format(gain, estimated_tp))
+        else:
+            exits.append("把 TP 上限提到至少 {:.1f} dBTP（线性增益 {:.2f} dB 后估算 TP 将到 {:.2f}）"
+                         .format(estimated_tp, gain, estimated_tp))
+        if ceiling < LOUDNORM_I_RANGE[0]:
+            exits.append("降目标也救不了：目标响度合法最低 -70 LUFS，保住现上限 {:.1f} 需降到 "
+                         "{:.1f}——只能先压缩".format(profile["truePeakDbtp"], ceiling))
+        else:
+            exits.append("把目标响度降到至多 {:.1f} LUFS（保住现 TP 上限 {:.1f}）"
+                         .format(ceiling, profile["truePeakDbtp"]))
         exits.append("先压缩后测：源峰均比过高属素材天花板，先跑压缩链再对本产物重新规划")
     if not lra_ok:
         reasons.append("loudness-range")
-        exits.append("把 LRA 目标提到至少 {:.1f} LU（当前源 LRA {:.1f}）"
-                     .format(measured["inputLra"], measured["inputLra"]))
+        if measured["inputLra"] > LOUDNORM_LRA_RANGE[1]:
+            exits.append("提 LRA 目标救不了：LRA 目标合法最高 50 LU，源 LRA {:.1f} 已超界"
+                         "——只能先压缩收窄动态".format(measured["inputLra"]))
+        else:
+            exits.append("把 LRA 目标提到至少 {:.1f} LU（当前源 LRA {:.1f}）"
+                         .format(measured["inputLra"], measured["inputLra"]))
         exits.append("先压缩收窄动态后重新规划")
     return {"gainDb": round(gain, 2), "estimatedTruePeak": round(estimated_tp, 2),
             "feasible": tp_ok and lra_ok, "blockedReasons": reasons,

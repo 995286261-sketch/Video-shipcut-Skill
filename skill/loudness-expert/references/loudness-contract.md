@@ -1,6 +1,6 @@
 # 响度合同（loudness-contract）——唯一事实源
 
-版本 v0.1（2026-09-28 立册）。一切响度口径以本文件为准；脚本与报告与本文件冲突时，以本文件为裁判、脚本改。调研背景与裁决过程：`docs/响度专项-调研与方案讨论-v0.1.md`。
+版本 v0.2（v0.1 于 2026-09-28 立册；v0.2 于 2026-10-29 增 §4 出路域钳制条款，随引擎 v1.35.1）。一切响度口径以本文件为准；脚本与报告与本文件冲突时，以本文件为裁判、脚本改。调研背景与裁决过程：`docs/响度专项-调研与方案讨论-v0.1.md`。
 
 ## 1. 量纲纪律
 
@@ -32,7 +32,7 @@
 
 - 规划口径 = loudnorm pass1 `print_format=json`（input_i/input_tp/input_lra/input_thresh）——这四个数原样喂回第二遍 `measured_*`，规划与执行零换算。
 - 验收口径 = ebur128——与执行链不同滤镜，互不背书；同文件双口径读数差 >0.5 LU = 引擎异常（单测 `test_engine_agreement` 锁死）。
-- **静默回退防线**（官方文档 ffmpeg filters 8.97）：linear=true 前提＝目标 LRA≥源 LRA 且线性增益后估算 TP≤上限，任一不满足滤镜**退回 dynamic 且不报错**。专员纪律：先算后放行，不满足→`blocked_*`（落盘摊开、exit 1、exits 给可修数值）；接线后执行者若发现实际以 dynamic 跑（如 stats `normalization_type` 非 linear），视同违规拦单。
+- **静默回退防线**（官方文档 ffmpeg filters 8.97）：linear=true 前提＝目标 LRA≥源 LRA 且线性增益后估算 TP≤上限，任一不满足滤镜**退回 dynamic 且不报错**。专员纪律：先算后放行，不满足→`blocked_*`（落盘摊开、exit 1、exits 给可修数值）。**出路域钳制（v0.2，2026-10-29）**：exits 的每条建议值必须落在所属参数的合法域（loudnorm I∈[-70,-5] LUFS、TP∈[-9,0] dBTP、LRA∈[0,50] LU），越界方向自动改实话句（"提上限救不了…此路不存在"）——zaku-003 实跑暴露的"建议提到至少 8.8 dBTP"即教训：不等式反解正确、解出界未查，等于给用户列一扇不存在的门；接线后执行者若发现实际以 dynamic 跑（如 stats `normalization_type` 非 linear），视同违规拦单。
 
 ## 5. 偏差三成因（failed 排查顺序，failNote 指向本节）
 
