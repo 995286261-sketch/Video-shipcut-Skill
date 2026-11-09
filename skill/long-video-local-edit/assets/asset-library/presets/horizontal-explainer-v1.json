@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "presetId": "horizontal-editorial-explainer-v1",
+  "presetId": "horizontal-explainer-v1",
   "purpose": "Evidence-led horizontal explainer with restrained information layers.",
   "canvas": {"aspectRatio": "16:9", "defaultWidth": 1920, "defaultHeight": 1080, "defaultFps": 30},
   "visual": {

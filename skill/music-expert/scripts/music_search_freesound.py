@@ -6,7 +6,9 @@ references/sourcing-contract.md). Every candidate keeps: source URL, per-sound l
 author, retrieval time, downloaded preview SHA-256 and a decode probe result (issue 023
 rule). A missing token or any network/auth failure is a structured block — the script
 never silently falls back to another source. Source files already owned by the user are
-never touched here.
+never touched here. Review #3 chain (2026-11-09): presence is not validity — before any
+search budget is spent, one cheap authenticated call confirms the token still works, and
+the block points at the setup guide (references/freesound-token-sop-card.md).
 """
 from __future__ import annotations
 
@@ -26,6 +28,7 @@ from pathlib import Path
 import music_tags
 
 API_BASE = "https://freesound.org/apiv2"
+SETUP_GUIDE = "skill/music-expert/references/freesound-token-sop-card.md"
 
 # --- URL allowlist guard (SSRF, Mimosa L3 pre-commit 2026-09-21): only the official
 # Freesound host may ever be fetched, and redirects are refused, never blind-followed.
@@ -193,10 +196,26 @@ def main() -> int:
     token = (os.environ.get("MUSIC_EXPERT_FREESOUND_TOKEN") or os.environ.get("P0C_FREESOUND_TOKEN") or "").strip()
     if not token:
         emit({"status": "blocked", "blockers": [{"type": "missing_token",
-              "detail": "MUSIC_EXPERT_FREESOUND_TOKEN (or the legacy P0C_FREESOUND_TOKEN) is unset; register a free Freesound API token. Silent fallback to unlicensed sources is forbidden (sourcing-contract)."}]})
+              "detail": "MUSIC_EXPERT_FREESOUND_TOKEN (or the legacy P0C_FREESOUND_TOKEN) is unset; register a free Freesound API token. Silent fallback to unlicensed sources is forbidden (sourcing-contract).",
+              "setupGuide": SETUP_GUIDE}]})
         return 2
     if not args.no_download and shutil.which("ffmpeg") is None:
         emit({"status": "blocked", "blockers": [{"type": "missing_toolchain", "detail": "ffmpeg required for the decode probe of downloads"}]})
+        return 2
+
+    # Review #3 (2026-11-09): the if chain the user signed off — token present is not
+    # token usable. ONE cheap authenticated call up front; a dead key stops here with
+    # the setup guide instead of mid-search, and a rate/network problem never blames
+    # the key. The AI never touches the value — this runs inside the script's env.
+    _, preflight_error = api_get(token, "/account/self/", {})
+    if preflight_error:
+        kind = preflight_error["type"]
+        blocker = {"type": {"auth_failed": "invalid_token", "network_failed": "network_unreachable"}.get(kind, kind),
+                   "detail": preflight_error["detail"]}
+        if kind == "auth_failed":
+            blocker["setupGuide"] = SETUP_GUIDE
+            blocker["hint"] = "token rejected (HTTP 401/403): apply a fresh one and follow the guide; the value stays out of chat"
+        emit({"status": "blocked", "blockers": [blocker]})
         return 2
 
     # Issue 002-③: the duration floor starts as a hard filter; when it starves the pool

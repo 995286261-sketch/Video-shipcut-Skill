@@ -14,6 +14,18 @@ stripped; cue order follows [Events] write order (same order `--srt` pair-checks
 
 Handshake (plugin standard): explicit CLI args in, derived .srt + JSON report out.
 Exit codes: 0=completed, 2=invalid input, 1=runtime failure.
+
+Write-boundary contract (2026-11-02 platform review, issue "subtitle.convert can
+escape the instance workbench and clobber existing files"):
+  * the derived SRT may only land inside the project's workbench directory
+    (first ``工作台/<projectId>/`` ancestor of the ASS). For ASS files outside a
+    workbench project (scratch fixtures), output stays inside the ASS's own directory.
+  * both paths are realpath-resolved: a symlink in or out of the boundary is checked
+    after resolution, so a symlink cannot smuggle a write past the gate.
+  * never overwrite: an existing target file fails closed; the source ASS master is
+    read-only and can never be a write target.
+Mirrors p0-c-pipeline/project_layout.py by contract (skills never import each other),
+same pattern as local-video-render/g4_prepare.py enforce_g4_root (issue ㉚).
 """
 from __future__ import annotations
 
@@ -27,6 +39,7 @@ from pathlib import Path
 
 ASS_TIME = re.compile(r"^(\d+):(\d{2}):(\d{2})\.(\d{2})$")
 OVERRIDE_TAG = re.compile(r"\{[^{}]*\}")
+WORKBENCH_DIRECTORY = "工作台"
 
 
 def fail(message: str) -> None:
@@ -89,6 +102,45 @@ def build_srt(cues: list[tuple[int, int, str]]) -> str:
     return "\n\n".join(blocks) + "\n"
 
 
+def workbench_root(given_path: Path) -> Path | None:
+    """First 工作台/<projectId>/ ancestor of the given (unresolved) path."""
+    given = given_path.absolute()
+    for parent in given.parents:
+        if parent.parent is not None and parent.parent.name == WORKBENCH_DIRECTORY:
+            return parent
+    return None
+
+
+def enforce_write_boundary(ass_path: Path, out_path: Path) -> Path:
+    """Gate the derived-SRT landing spot; return the boundary root for reporting.
+
+    The boundary is the project workbench directory when the ASS lives in one;
+    otherwise the ASS's own directory (scratch fixtures stay self-contained).
+    Realpath on both sides closes the symlink loophole in both directions."""
+    real_ass = ass_path.resolve()
+    root = workbench_root(ass_path)
+    if root is not None:
+        boundary = root.resolve()
+        if boundary != real_ass and boundary not in real_ass.parents:
+            fail(f"ASS symlink escapes its workbench directory: given {ass_path} "
+                 f"resolves to {real_ass}, outside {boundary}")
+    else:
+        boundary = real_ass.parent
+    if out_path.resolve() == real_ass:
+        fail(f"derived SRT target is the source ASS master itself ({real_ass}); "
+             "approved masters are read-only")
+    real_out = out_path.resolve()
+    if boundary != real_out and boundary not in real_out.parents:
+        inside = ("the project workbench directory" if root is not None
+                  else "the ASS's own directory (scratch mode: ASS outside 工作台 stays self-contained)")
+        fail(f"derived SRT must stay inside {inside} {boundary}, "
+             f"got {real_out}; 产物只写实例工作台 (2026-11-02 review boundary contract)")
+    if real_out.exists():
+        fail(f"refusing to overwrite existing file {real_out}; derive into a fresh "
+             "name or remove the old artifact deliberately (engine never clobbers)")
+    return boundary
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -112,6 +164,7 @@ def main(argv: list[str] | None = None) -> int:
     srt_text = build_srt(cues)
 
     out = args.out if args.out else args.ass.with_suffix(".srt")
+    boundary = enforce_write_boundary(args.ass, out)
     out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", encoding="utf-8", newline="\n") as handle:
         handle.write(srt_text)
@@ -121,6 +174,7 @@ def main(argv: list[str] | None = None) -> int:
     print(json.dumps({
         "status": "completed",
         "srt": str(out),
+        "boundary": str(boundary),
         "cues": len(cues),
         "sourceAss": str(args.ass),
         "sourceSha256": hashlib.sha256(args.ass.read_bytes()).hexdigest().upper(),

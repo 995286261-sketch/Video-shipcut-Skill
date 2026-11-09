@@ -147,5 +147,83 @@ class ConvertStrikeTests(unittest.TestCase):
             self.assertIn("no visible text", payload["error"])
 
 
+class ConvertBoundaryTests(unittest.TestCase):
+    """2026-11-02 platform review: 产物只写实例工作台、源媒体只读、永不覆盖."""
+
+    EVENT = "Dialogue: 0,0:00:01.00,0:00:02.00,Narration,,0,0,0,,hi\n"
+
+    def make_project(self, tmp: Path) -> Path:
+        project = tmp / "工作台" / "border-001"
+        project.mkdir(parents=True)
+        return write_ass(project, self.EVENT)
+
+    def test_derived_srt_inside_project_workbench_is_accepted(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            ass = self.make_project(tmp)
+            out = tmp / "工作台" / "border-001" / "G5-交付" / "timeline.srt"
+            code, payload = run(["--ass", str(ass), "--out", str(out)])
+            self.assertEqual(code, 0, payload)
+            self.assertTrue(out.is_file())
+
+    def test_write_outside_workbench_project_is_refused(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            ass = self.make_project(tmp)
+            victim = tmp / "victim.txt"
+            victim.write_text("SENTINEL\n", encoding="utf-8")
+            code, payload = run(["--ass", str(ass), "--out", str(victim)])
+            self.assertEqual(code, 2, payload)
+            self.assertIn("must stay inside", payload["error"])
+            self.assertEqual(victim.read_text(encoding="utf-8"), "SENTINEL\n")
+
+    def test_scratch_mode_escape_out_of_ass_directory_is_refused(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            src_dir = tmp / "scratch"
+            src_dir.mkdir()
+            ass = write_ass(src_dir, self.EVENT)
+            out = tmp / "elsewhere.srt"
+            code, payload = run(["--ass", str(ass), "--out", str(out)])
+            self.assertEqual(code, 2, payload)
+            self.assertIn("scratch mode", payload["error"])
+
+    def test_existing_target_is_never_overwritten(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            ass = self.make_project(tmp)
+            out = tmp / "工作台" / "border-001" / "timeline.srt"
+            out.write_text("OLD ARTIFACT\n", encoding="utf-8")
+            code, payload = run(["--ass", str(ass), "--out", str(out)])
+            self.assertEqual(code, 2, payload)
+            self.assertIn("overwrite", payload["error"])
+            self.assertEqual(out.read_text(encoding="utf-8"), "OLD ARTIFACT\n")
+
+    def test_source_master_is_read_only(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            ass = self.make_project(tmp)
+            before = ass.read_bytes()
+            code, payload = run(["--ass", str(ass), "--out", str(ass)])
+            self.assertEqual(code, 2, payload)
+            self.assertIn("read-only", payload["error"])
+            self.assertEqual(ass.read_bytes(), before)
+
+    def test_symlink_out_of_workbench_cannot_smuggle_a_write(self):
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = Path(raw)
+            ass = self.make_project(tmp)
+            project = tmp / "工作台" / "border-001"
+            outside = tmp / "outside"
+            outside.mkdir()
+            link = project / "escape"
+            link.symlink_to(outside, target_is_directory=True)
+            victim = outside / "sneaky.srt"
+            code, payload = run(["--ass", str(ass), "--out", str(link / "sneaky.srt")])
+            self.assertEqual(code, 2, payload)
+            self.assertIn("must stay inside", payload["error"])
+            self.assertFalse(victim.exists())
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

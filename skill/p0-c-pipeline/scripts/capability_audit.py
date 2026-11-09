@@ -136,9 +136,9 @@ def probe_freesound_token() -> tuple[str, dict, str]:
     found = next((name for name in names if os.environ.get(name)), None)
     if found is None:
         return "missing", {"check": "env present only", "lookedFor": list(names)}, \
-            "申请 Freesound token（freesound.org/apiv2/apply）写入 ~/.zshrc（MUSIC_EXPERT_FREESOUND_TOKEN），别让 AI 经手值"
+            "申请 Freesound token（freesound.org/apiv2/apply）写入 ~/.zshrc（MUSIC_EXPERT_FREESOUND_TOKEN），别让 AI 经手值；分步指引=skill/music-expert/references/freesound-token-sop-card.md"
     return "ready", {"check": "env present only", "found": found,
-                     "note": "网络连通未在本盘点实测，找乐实战时由 music-expert 核验"}, ""
+                     "note": "本盘点只验在场；可用与否由找乐门前一次轻量调用核验（评审#3 if 链，失效=罢工并出 SOP 卡）"}, ""
 
 
 def probe_listen() -> tuple[str, dict, str]:

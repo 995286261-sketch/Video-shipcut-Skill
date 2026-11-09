@@ -536,5 +536,112 @@ class SsrfGuardTest(unittest.TestCase):
         self.assertIsNone(g("http://127.0.0.1:9/search", self.ne.SEARCH_ALLOWED_HOSTS))
 
 
+class SearchTokenPreflightTest(unittest.TestCase):
+    """评审 #3（2026-11-09 用户定案）：在场≠可用。找乐门开工 if 链——
+    令牌在场后先拿 /account/self/ 做一次轻量验证，死钥匙在烧检索预算之前
+    就罢工并指路 SOP 卡；限流/断网各报各的，不许甩锅钥匙。"""
+
+    def load(self):
+        import importlib.util
+        scripts_dir = str(SEARCH.parent)
+        if scripts_dir not in sys.path:
+            sys.path.insert(0, scripts_dir)
+        spec = importlib.util.spec_from_file_location("msf_preflight", SEARCH)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def run_main(self, module, tmp, fake):
+        import contextlib
+        import io
+        import unittest.mock
+        calls = []
+
+        def recording_api_get(token, path, params):
+            calls.append(path)
+            return fake(path)
+
+        module.api_get = recording_api_get
+        argv = [str(SEARCH), "--query", "ambient", "--output-dir", tmp, "--no-download"]
+        buffer = io.StringIO()
+        with unittest.mock.patch.object(sys, "argv", argv), \
+                unittest.mock.patch.dict(os.environ, {"MUSIC_EXPERT_FREESOUND_TOKEN": "dummy"}), \
+                contextlib.redirect_stdout(buffer):
+            code = module.main()
+        return code, json.loads(buffer.getvalue()), calls
+
+    def test_dead_key_blocks_before_any_search_and_points_to_guide(self):
+        module = self.load()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+
+        def fake(path):
+            return None, {"type": "auth_failed", "detail": f"HTTP 401 from {path}"}
+
+        code, payload, calls = self.run_main(module, tmp.name, fake)
+        self.assertEqual(2, code)
+        self.assertEqual("blocked", payload["status"])
+        self.assertEqual("invalid_token", payload["blockers"][0]["type"])
+        self.assertIn("freesound-token-sop-card", payload["blockers"][0]["setupGuide"])
+        self.assertEqual(["/account/self/"], calls)  # 检索一步没烧，当场收工
+
+    def test_network_failure_never_blames_the_key(self):
+        module = self.load()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+
+        def fake(path):
+            return None, {"type": "network_failed", "detail": "timed out"}
+
+        code, payload, calls = self.run_main(module, tmp.name, fake)
+        self.assertEqual(2, code)
+        blocker = payload["blockers"][0]
+        self.assertEqual("network_unreachable", blocker["type"])
+        self.assertNotIn("setupGuide", blocker)  # 断网不是换钥匙的事
+        self.assertEqual(["/account/self/"], calls)
+
+    def test_rate_limit_passes_through_as_itself(self):
+        module = self.load()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+
+        def fake(path):
+            return None, {"type": "rate_limited", "detail": "HTTP 429"}
+
+        code, payload, _ = self.run_main(module, tmp.name, fake)
+        self.assertEqual(2, code)
+        self.assertEqual("rate_limited", payload["blockers"][0]["type"])
+
+    def test_live_key_proceeds_past_preflight_into_search(self):
+        module = self.load()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+
+        def fake(path):
+            if path == "/account/self/":
+                return {"username": "someone"}, None
+            return {"results": [{"id": 1, "name": "a track", "duration": 300.0,
+                                 "username": "u",
+                                 "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+                                 "tags": ["electronic"]}]}, None
+
+        code, payload, calls = self.run_main(module, tmp.name, fake)
+        self.assertEqual(0, code)
+        self.assertEqual("/account/self/", calls[0])  # 先验钥匙，后干活
+        self.assertIn("/search/text/", calls)
+
+    def test_missing_token_block_carries_setup_guide(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = dict(os.environ)
+        env.pop("MUSIC_EXPERT_FREESOUND_TOKEN", None)
+        env["P0C_FREESOUND_TOKEN"] = ""
+        result = subprocess.run([PYTHON, str(SEARCH), "--query", "ambient", "--output-dir", tmp.name],
+                                capture_output=True, text=True, encoding="utf-8", env=env)
+        payload = json.loads(result.stdout)
+        self.assertEqual("missing_token", payload["blockers"][0]["type"])
+        self.assertIn("freesound-token-sop-card", payload["blockers"][0]["setupGuide"])
+
+
 if __name__ == "__main__":
     unittest.main()
