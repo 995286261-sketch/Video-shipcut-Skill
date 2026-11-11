@@ -49,5 +49,6 @@
   `test -n "${MUSIC_EXPERT_FREESOUND_TOKEN:-}" && echo present || echo absent`
   ——注意：装载本机 shell 配置时也只用不回显的姿势，任何打印含 TOKEN 行的
   输出都禁止（token 泄露三次的既有纪律）。
-- 可用核验由找乐脚本自己完成（`/account/self/` 一次轻量调用，见评审 #3 if 链），
+- 可用核验由找乐脚本自己完成（检索窗口 `/search/text/` 一次最小请求探针，见评审 #3
+  if 链；2026-11-11 彩排缺陷修复——探针必须与干正事同窗口，文档在册+真机冒烟过），
   AI 不代跑网络请求、不接触值。

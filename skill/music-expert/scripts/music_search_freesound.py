@@ -207,7 +207,18 @@ def main() -> int:
     # token usable. ONE cheap authenticated call up front; a dead key stops here with
     # the setup guide instead of mid-search, and a rate/network problem never blames
     # the key. The AI never touches the value — this runs inside the script's env.
-    _, preflight_error = api_get(token, "/account/self/", {})
+    # Rehearsal defect fix (2026-11-11): the probe IS the search window itself.
+    #   - /account/self/ does not exist on Freesound (live HTTP 404). It was written
+    #     from memory; mock tests exercise the triage logic but can never catch a
+    #     wrong address — hence the new discipline: every external endpoint in code
+    #     must trace to a line in the provider's official API docs AND pass one live
+    #     smoke before release.
+    #   - /me/ (documented) is NOT a valid substitute: it rejects API-client tokens
+    #     with 401 while the same token gets 200 on search (OAuth2-only window;
+    #     live-verified 2026-11-11).
+    #   - /search/text/ is doc-listed, is the exact window this script then uses, and
+    #     discriminates keys: live 200 with the real key, live 401 with a fake key.
+    _, preflight_error = api_get(token, "/search/text/", {"query": "preflight-probe", "page_size": 1})
     if preflight_error:
         kind = preflight_error["type"]
         blocker = {"type": {"auth_failed": "invalid_token", "network_failed": "network_unreachable"}.get(kind, kind),

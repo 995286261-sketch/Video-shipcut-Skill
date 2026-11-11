@@ -538,8 +538,11 @@ class SsrfGuardTest(unittest.TestCase):
 
 class SearchTokenPreflightTest(unittest.TestCase):
     """评审 #3（2026-11-09 用户定案）：在场≠可用。找乐门开工 if 链——
-    令牌在场后先拿 /account/self/ 做一次轻量验证，死钥匙在烧检索预算之前
-    就罢工并指路 SOP 卡；限流/断网各报各的，不许甩锅钥匙。"""
+    令牌在场后先对检索窗口本身（/search/text/ 最小请求）做一次轻量验证，
+    死钥匙在烧检索预算之前就罢工并指路 SOP 卡；限流/断网各报各的，不许甩锅钥匙。
+    彩排缺陷修复（2026-11-11）：探针端点从凭记忆写的 /account/self/（Freesound
+    查无此门，活体 404）改为文档在册、判别力实测过的检索窗口；mock 防得住逻辑
+    防不住门牌号，外部端点必须文档可溯+发版前真机冒烟。"""
 
     def load(self):
         import importlib.util
@@ -583,7 +586,7 @@ class SearchTokenPreflightTest(unittest.TestCase):
         self.assertEqual("blocked", payload["status"])
         self.assertEqual("invalid_token", payload["blockers"][0]["type"])
         self.assertIn("freesound-token-sop-card", payload["blockers"][0]["setupGuide"])
-        self.assertEqual(["/account/self/"], calls)  # 检索一步没烧，当场收工
+        self.assertEqual(["/search/text/"], calls)  # 探针即检索窗口；检索一步没烧，当场收工
 
     def test_network_failure_never_blames_the_key(self):
         module = self.load()
@@ -598,7 +601,7 @@ class SearchTokenPreflightTest(unittest.TestCase):
         blocker = payload["blockers"][0]
         self.assertEqual("network_unreachable", blocker["type"])
         self.assertNotIn("setupGuide", blocker)  # 断网不是换钥匙的事
-        self.assertEqual(["/account/self/"], calls)
+        self.assertEqual(["/search/text/"], calls)
 
     def test_rate_limit_passes_through_as_itself(self):
         module = self.load()
@@ -618,8 +621,7 @@ class SearchTokenPreflightTest(unittest.TestCase):
         self.addCleanup(tmp.cleanup)
 
         def fake(path):
-            if path == "/account/self/":
-                return {"username": "someone"}, None
+            # 探针与真检索同窗口：预检只看有无错误，返回正常检索结果即可
             return {"results": [{"id": 1, "name": "a track", "duration": 300.0,
                                  "username": "u",
                                  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
@@ -627,8 +629,8 @@ class SearchTokenPreflightTest(unittest.TestCase):
 
         code, payload, calls = self.run_main(module, tmp.name, fake)
         self.assertEqual(0, code)
-        self.assertEqual("/account/self/", calls[0])  # 先验钥匙，后干活
-        self.assertIn("/search/text/", calls)
+        self.assertEqual("/search/text/", calls[0])  # 先验钥匙，后干活；同窗两打
+        self.assertGreaterEqual(len(calls), 2)
 
     def test_missing_token_block_carries_setup_guide(self):
         tmp = tempfile.TemporaryDirectory()
