@@ -150,6 +150,43 @@ class BgmChainAuditTests(unittest.TestCase):
         self.assertEqual(2, result.returncode)
         self.assertIn("distributionBoundary", self.failed_ids(payload))
 
+    # ---- 缺口①（2026-11-16）：署名义务从登记件抬进握手块 ----------------------
+
+    def _reticket(self, **reg_fields):
+        """改登记件许可栏后同步素材包哈希——让署名用例只命中该命中的检查项
+        （registrationChain 的哈希对账不许被无关改动误伤）。"""
+        reg = json.loads(self.registration.read_text(encoding="utf-8"))
+        reg.update(reg_fields)
+        self._write(self.registration, reg)
+        pack = json.loads(self.pack.read_text(encoding="utf-8"))
+        rec = pack["audioAssets"][0]["bgmRegistration"]
+        rec["sha256"] = sha256(self.registration)
+        rec["licenseType"] = reg["license"]
+        self._write(self.pack, pack)
+
+    def test_cleared_license_records_no_obligation(self):
+        # banshee 基线零影响：cleared-for-project 无署名义务→不新增检查项、握手块 required=false
+        result, payload = self.run_audit()
+        self.assertEqual(0, result.returncode, payload)
+        self.assertFalse(payload["bgm"]["attributionRequired"])
+        self.assertNotIn("attributionRecorded", {item["id"] for item in payload["checks"]})
+
+    def test_cc_by_handshakes_obligation_into_delivery(self):
+        self._reticket(license="cc-by",
+                       attribution="LOW-PHONK by VodKe, https://freesound.org/people/VodKe/ (CC-BY 4.0)")
+        result, payload = self.run_audit()
+        self.assertEqual(0, result.returncode, payload)
+        self.assertTrue(payload["bgm"]["attributionRequired"])
+        statuses = {item["id"]: item["status"] for item in payload["checks"]}
+        self.assertEqual("passed", statuses["attributionRecorded"])
+
+    def test_cc_by_registered_without_text_blocked(self):
+        # 检索侧解读出了义务、登记却没填文案=当场罢工，义务不许静默滑进交付
+        self._reticket(license="cc-by", attribution="none")
+        result, payload = self.run_audit()
+        self.assertEqual(2, result.returncode)
+        self.assertIn("attributionRecorded", self.failed_ids(payload))
+
 
 if __name__ == "__main__":
     unittest.main()

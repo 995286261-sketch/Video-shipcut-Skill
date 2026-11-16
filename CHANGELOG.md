@@ -1,5 +1,14 @@
 # 变更记录
 
+## v1.35.4 — 2026-11-16 — BGM 署名义务闭环（版权盘点缺口①）：链审计抬义务、交付机械派生署名件、封包三道硬闸
+
+- **缺口来历（11-13 版权六层盘点后与用户逐条讨论定案）**：Freesound 检索侧从一开始就解读每曲许可（classify_license），CC-BY/CC-BY-SA 过白名单，但其法律条件=发布时必须署名。义务字段登记（attribution）→经验库（黄灯警告）→链审计一路带着，**唯独交付链从未闭环**：交付包 REQUIRED 十四件无署名件、G5 审计不验"有义务曲是否带件"——发布不署名即违约，机器全程知情、无人设防。历史真跑未爆因所有在册 BGM 均 cleared-for-project/unverified（attribution="none"）；但白名单**故意放行** CC-BY，下一次自动选曲即引爆，接新素材库后更多。
+- **修法（机器硬闸＋如实披露，不做软提醒——用户 10-22 纪律的又一次落闸）**：① `g5_audit_bgm_chain.py` 新增 link 8 `attributionRecorded`（许可有义务而登记文案为 none=罢工），并把 `bgm.attributionRequired/attribution` 抬进输出握手块——义务自此不再掉出链路。② `g5_build_delivery_manifest.py` 新增 `--bgm-audit`：审计件身份（purpose）、projectId 对账（防串台）、status==passed 三道先验；CC-BY 家族→包内机械派生 `attribution-credits.md`、manifest 记 `attribution` 块（与 subtitle_convert 同家规：给人发布的文案只许机械派生、禁手写换算）；**计划含 bgmPlan 而不交审计=拒建**。③ `g5_validate_delivery.py` 新增 `check_attribution`：有义务缺件/手改（manifest 原文不在件内逐字）/无义务冒幽灵件=三种都拒封。**R3 时代编码在产物**：老封存 manifest 无此块不追溯、严禁事后手补（补=造假）；banshee/sinjuku 等存量包字节零影响。
+- **合同先行**（schema 文档=builder/validator 唯一真源）：`delivery-bundle-schema.md` 写死 `attribution` 块形状与两道硬闸；`media-qa-delivery/SKILL.md` 装配序列改"链审计先行、build 带 --bgm-audit"；`music-expert/references/sourcing-contract.md` 接缝线记署名义务五步闭环（解读→带文→验→出件→封包）。
+- **回归**：全仓 11 目录 **733 例全绿**（本批 +10：审计 3 例——cleared 零影响/cc-by 握手抬义务/义务无文罢工；装配校验 7 例——CC-BY 正例封包、cleared 留账无件、缺件拒、手改拒、幽灵拒、bgmPlan 不交审计拒建、罢工件/冒名件/串台件拒建）。
+- **connector 承接**：另批升钉 v1.35.4 重建出包；交付/审计门参数走 payload 透传，builder 新罢工以引擎结构化拒绝原样透传，无面板侧代码改动。
+- **深扫交底**：完整深度安全扫描结论未取得前，本批不宣称安全。
+
 ## v1.35.3 — 2026-11-11 — 找乐预检探针缺陷修复：端点文档可溯+真机冒烟纪律成文
 
 - **病根（表④彩排真抓）**：v1.35.2 新装的凭据可用性预检调用 `/account/self/`——Freesound **没有这个端点**（真机 HTTP 404），好钥匙也在检索前被全量堵死。写码时凭记忆定端点名、未查官方文档；开发期 5 例 mock 测试验得分诊逻辑、验不了门牌号——**mock 防得住逻辑错，防不住地址错**。彩排第一次真联网当场现形（表④"完整流程验收"价值的第一个实证）。

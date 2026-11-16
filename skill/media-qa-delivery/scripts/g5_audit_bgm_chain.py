@@ -31,6 +31,9 @@ SCHEMA_VERSION = "0.1"
 MEASURE_FLOOR_LUFS = -33.0
 MEASURE_DRIFT_LU = 3.0
 PREDICT_DRIFT_LU = 0.1
+# 缺口①（2026-11-16）：CC-BY 家族的许可条件=发布时必须署名。此前该义务只停在
+# 经验库黄灯软提醒（用户纪律：申报类=机器硬闸，软提醒不算），从未抬进交付链。
+ATTRIBUTION_REQUIRED_LICENSES = {"cc-by", "cc-by-sa"}
 
 
 def sha256(path: str | Path) -> str:
@@ -188,6 +191,19 @@ def audit(assembly: dict, plan: dict, registration: dict, material_pack: dict) -
     audit_.add("distributionBoundary",
                bool(boundary) and boundary == pack_reg.get("distributionBoundary"),
                f"boundary={boundary} matches material-pack registration")
+
+    # --- link 8: attribution obligation (CC-BY family) -----------------------
+    # 有署名义务的曲子，登记件必须带署名原文；此事实经 bgm 握手块抬给交付组装，
+    # 由 g5_build_delivery_manifest.py 机械派生 attribution-credits.md（唯一正道），
+    # g5_validate_delivery.py 封包时验件在位。义务不静默、不靠人记。
+    attribution_text = str(registration.get("attribution") or "none")
+    if license_type in ATTRIBUTION_REQUIRED_LICENSES:
+        audit_.add("attributionRecorded", attribution_text != "none",
+                   f"license={license_type} carries a mandatory attribution condition; "
+                   f"registration text={attribution_text!r}"
+                   if attribution_text != "none" else
+                   f"license={license_type} requires attribution but registration carries "
+                   "attribution='none' — re-register with the license-required credit text")
     policy = plan.get("sourceAudioPolicy") or {}
     if plan.get("sourceAudioPolicy"):
         audit_.add("sourceAudioExcluded", True, f"plan source-audio policy recorded: {json.dumps(policy, ensure_ascii=False)[:120]}")
@@ -229,6 +245,9 @@ def main() -> int:
             "license": registration.get("license"),
             "licenseEvidence": registration.get("licenseEvidence"),
             "distributionBoundary": registration.get("distributionBoundary"),
+            # 握手块抬走署名义务（缺口①）：组装层凭这两键决定是否机械派生署名件
+            "attributionRequired": registration.get("license") in ATTRIBUTION_REQUIRED_LICENSES,
+            "attribution": str(registration.get("attribution") or "none"),
             "measuredInPlaceLufs": assembly.get("bgmMix", {}).get("measuredInPlaceLufs"),
         },
         "inputs": {

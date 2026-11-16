@@ -32,6 +32,8 @@
 
 `schemaVersion`（当前 `"0.1"`）、`projectId`、`sourceProbe`（数组，每项含 `assetId`+`sourceProbe`）、`segments`（顶层扁平数组，每项含 `segmentId`，必须与 source-timecode-list 的 segments **集合相等**）、`editPlan`、`artifacts`（含 `editTimeline`：`{path, sha256}`）、`qaReport`、`humanReviewPoints`、`evidenceRefs`、`warnings`、`status`、`finishedAt`（非空字符串；**语义=机器质检收口时刻，不是交付关单时刻**——关单以 pipeline-state 的 `确认G5` 审批为准。`status` 以 `pending` 开头时允许暂缺，质检收口后必须回填；002 问题⑬裁决）。`status` 以 `completed` 开头时，`human-review-decision.json` 必须已是 `approved`+`accepted`。`authorization`、`distribution` 两个边界字段必须非空。
 
+**`attribution` 块（缺口①，2026-11-16 新增，可选字段——不入 `CONTRACT_FIELDS` 非空清单）**：形状 `{"required": bool, "license": <链审计 bgm.license>, "text": <署名原文，仅 required:true 时>, "artifact": "attribution-credits.md"（仅 required:true 时）}`。唯一出生地=`g5_build_delivery_manifest.py --bgm-audit`：审计件身份（`purpose==bgm_chain_audit`）、projectId 对账（防串台）、`status==passed` 三道先验后，按握手块 `bgm.attributionRequired`（=license ∈ {cc-by, cc-by-sa}，判定源在 `g5_audit_bgm_chain.py` 的 `ATTRIBUTION_REQUIRED_LICENSES`）机械派生包内 `attribution-credits.md` 并在 manifest 留账；required:false 也留账（有 BGM 就有义务记录）。builder 硬闸：**计划含 `bgmPlan` 而不交 `--bgm-audit`=拒建**（义务记录不许缺席）。validator 硬闸（`check_attribution`）：required:true→件必在位+`artifact` 逐字+`text` 非空非 none+原文逐字在件内；无义务冒件=幽灵；两者皆拒封包。**时代编码在产物（R3）**：老封存 manifest 无此块=当时合同不要求，不追溯、严禁事后手补（补=造假）；新包由 builder 硬闸保证必带。署名件是人发布时抄进平台简介的唯一出处——经验库黄灯"分发前核对 attribution"自本批起从软提醒升级为机器闭环。
+
 ## source-timecode-list.json
 
 顶层 `projectId` + 两个数组：

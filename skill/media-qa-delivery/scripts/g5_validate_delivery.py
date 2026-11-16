@@ -64,6 +64,37 @@ def check_transition_audit(bundle: Path, errors: list[str]) -> None:
         errors.append("transition-audit.json is stale: recorded master sha256 does not match the bundle's final-video.mp4 (re-run the audit after any re-render)")
 
 
+def check_attribution(bundle: Path, manifest: dict, errors: list[str]) -> None:
+    """署名义务闭环硬闸（缺口①，2026-11-16 用户定案）：链审计说这首 BGM 的许可
+    要求署名（cc-by / cc-by-sa）时，包内必带 attribution-credits.md，且 manifest
+    记的署名原文必须逐字在件内——发布不署名即违约，封包这步机器拦死。
+    无义务的新包也必留账（builder 出的 attribution 块 required:false）。
+    R3 时代编码在产物：老封存 manifest 无 attribution 块不追溯、不许事后补造
+    （补=造假），但幽灵署名件照样两头都拦。"""
+    block = manifest.get("attribution")
+    credits = bundle / "attribution-credits.md"
+    if not isinstance(block, dict):
+        if credits.is_file():
+            errors.append("attribution-credits.md present but delivery manifest carries no attribution "
+                          "block — 幽灵署名件：重跑装配步机械派生或删件，不许手塞")
+        return
+    if block.get("required") is True:
+        if not credits.is_file():
+            errors.append("missing attribution-credits.md — BGM chain audit says the license requires "
+                          "attribution (发布不署名=违约)；重跑 g5_build_delivery_manifest --bgm-audit 机械派生")
+            return
+        text = str(block.get("text") or "")
+        if not text or text == "none":
+            errors.append("manifest attribution.required is true but attribution.text is empty/none — 义务没有出处，拒")
+        elif str(block.get("artifact") or "") != "attribution-credits.md":
+            errors.append("manifest attribution.artifact must name attribution-credits.md verbatim")
+        elif text not in credits.read_text(encoding="utf-8-sig"):
+            errors.append("attribution-credits.md does not contain the manifest's attribution text verbatim — "
+                          "本件是机器派生件：修链路重跑装配，不许手编")
+    elif credits.is_file():
+        errors.append("attribution-credits.md present although manifest says no attribution obligation — ghost artifact")
+
+
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
@@ -409,6 +440,7 @@ def main() -> int:
     check_delivery_srt(bundle, errors)
     check_transition_audit(bundle, errors)
     check_loudness_audit(bundle, plan, review, errors, allow_pending_acceptance=generating)
+    check_attribution(bundle, manifest, errors)
     if not generating and manifest.get("status", "").startswith("completed") and not (review.get("status") == "approved" and review.get("decision") == "accepted"):
         errors.append("completed bundle lacks accepted human review")
     # v1.22.0 自动确认模式的如实披露形状：performed:false 必须携带 auto-policy 来源——

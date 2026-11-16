@@ -407,4 +407,84 @@ class FpsReconciliationUnitTests(unittest.TestCase):
         self.assertIn("does not match", self.module.fps_reconciliation_error(30, None))
 
 
+class AttributionObligationTests(BundleFixture, unittest.TestCase):
+    """缺口①（2026-11-16 用户定案）：CC-BY 家族署名义务机器闭环——builder 吃链审计件
+    机械派生 attribution-credits.md、validator 对缺件/手改/幽灵三态罢工。黄灯软提醒
+    时代终结；无 BGM 的老包零影响（基线见 test_build_and_validate_bundle）。"""
+
+    CREDIT_TEXT = "LOW-PHONK (VodKe、HSHK、Pnan) — https://freesound.org/people/VodKe/sounds/333132/ (CC-BY 4.0)"
+
+    def chain_audit(self, required=True, status="passed", project=None, purpose="bgm_chain_audit"):
+        path = self.bundle.parent / "bgm-chain-audit.json"
+        path.write_text(json.dumps({
+            "schemaVersion": "0.1", "node": "G5", "purpose": purpose,
+            "projectId": project or self.project, "status": status,
+            "bgm": {"audio": "bgm.mp3", "sha256": "A" * 64,
+                    "license": "cc-by" if required else "cleared-for-project",
+                    "licenseEvidence": "freesound 许可页", "distributionBoundary": "internal_test",
+                    "attributionRequired": bool(required),
+                    "attribution": self.CREDIT_TEXT if required else "none"},
+        }, ensure_ascii=False), encoding="utf-8")
+        return path
+
+    def build_with_audit(self, audit, code=0):
+        return self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence,
+                            "--bgm-audit", audit, code=code)
+
+    def validate(self, code=0):
+        return self.run_cli(VALIDATE, "--bundle", self.bundle, code=code)
+
+    def test_cc_by_credits_derived_mechanically_and_bundle_seals(self):
+        out = self.build_with_audit(self.chain_audit(required=True))
+        self.assertEqual("created", out["status"])
+        manifest = json.loads((self.bundle / "delivery-manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(True, manifest["attribution"]["required"])
+        self.assertEqual("attribution-credits.md", manifest["attribution"]["artifact"])
+        self.assertEqual(self.CREDIT_TEXT, manifest["attribution"]["text"])
+        body = (self.bundle / "attribution-credits.md").read_text(encoding="utf-8")
+        self.assertIn(self.CREDIT_TEXT, body)
+        self.assertIn("机器派生", body)
+        self.assertEqual("valid", self.validate()["status"])
+
+    def test_cleared_license_keeps_accounting_without_artifact(self):
+        self.build_with_audit(self.chain_audit(required=False))
+        manifest = json.loads((self.bundle / "delivery-manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(False, manifest["attribution"]["required"])
+        self.assertFalse((self.bundle / "attribution-credits.md").exists())
+        self.assertEqual("valid", self.validate()["status"])
+
+    def test_missing_credits_refuses_seal(self):
+        self.build_with_audit(self.chain_audit(required=True))
+        (self.bundle / "attribution-credits.md").unlink()
+        out = self.validate(code=2)
+        self.assertIn("missing attribution-credits.md", " ".join(out["errors"]))
+
+    def test_hand_edited_credits_refuses_seal(self):
+        self.build_with_audit(self.chain_audit(required=True))
+        self.write("attribution-credits.md", "有人手改了署名件，原文没了\n".encode("utf-8"))
+        out = self.validate(code=2)
+        self.assertIn("verbatim", " ".join(out["errors"]))
+
+    def test_ghost_credits_refused_for_non_obligation(self):
+        self.build_with_audit(self.chain_audit(required=False))
+        self.write("attribution-credits.md", b"ghost\n")
+        out = self.validate(code=2)
+        self.assertIn("ghost", " ".join(out["errors"]))
+
+    def test_builder_requires_chain_audit_when_plan_has_bgm(self):
+        plan = json.loads((self.bundle / "edit-plan.json").read_text(encoding="utf-8"))
+        plan["bgmPlan"] = {"audioSha256": "A" * 64}
+        self.json("edit-plan.json", plan)
+        out = self.run_cli(BUILD, "--bundle", self.bundle, "--evidence", self.evidence, code=2)
+        self.assertIn("--bgm-audit", out["error"])
+
+    def test_builder_refuses_failed_or_wrong_source_audit(self):
+        out = self.build_with_audit(self.chain_audit(status="failed"), code=2)
+        self.assertIn("failed BGM chain audit", out["error"])
+        out = self.build_with_audit(self.chain_audit(purpose="something_else"), code=2)
+        self.assertIn("bgm_chain_audit", out["error"])
+        out = self.build_with_audit(self.chain_audit(project="other-project"), code=2)
+        self.assertIn("串台", out["error"])
+
+
 if __name__ == "__main__": unittest.main()

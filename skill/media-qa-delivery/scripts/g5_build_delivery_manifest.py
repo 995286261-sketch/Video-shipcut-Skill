@@ -19,6 +19,10 @@ def main() -> int:
     parser.add_argument("--bundle", required=True, type=Path)
     parser.add_argument("--evidence", required=True, type=Path,
                         help="Approved G2 evidence manifest containing sourceEvidence[].")
+    parser.add_argument("--bgm-audit", type=Path, default=None,
+                        help="G5 BGM chain audit (g5_audit_bgm_chain.py output). Required whenever "
+                             "the in-bundle edit-plan carries bgmPlan; its bgm block decides whether "
+                             "an attribution-credits.md is machine-derived into the bundle (缺口①).")
     parser.add_argument("--output", type=Path, help="Defaults to <bundle>/delivery-manifest.json")
     args = parser.parse_args()
     bundle = args.bundle.resolve()
@@ -87,6 +91,39 @@ def main() -> int:
     if plan.get("projectId") != manifest["projectId"] or (review and review.get("projectId") != manifest["projectId"]) \
             or (qa and qa.get("projectId") != manifest["projectId"]):
         raise ValueError("bundle component projectId mismatch")
+    # 缺口①（2026-11-16 用户定案）：BGM 署名义务机器闭环。链审计件是唯一输入源；
+    # 有 bgmPlan 而不交审计=当场拒建（义务记录不许缺席）；cc-by 家族=包内机械派生
+    # attribution-credits.md（与 subtitle_convert 同家规：给人发布的文案只许机械派生，
+    # 禁手写换算）。新旧 manifest 一律留 attribution 块（required 与否都有账）；
+    # R3：老封存包无此块=时代编码在产物，校验器不追溯、也不许事后补造。
+    if args.bgm_audit:
+        bgm_audit = load(args.bgm_audit)
+        if bgm_audit.get("purpose") != "bgm_chain_audit":
+            raise ValueError("--bgm-audit 不指向 G5 BGM 链审计件（purpose!=bgm_chain_audit），不得充当署名义务出处")
+        if bgm_audit.get("projectId") != manifest["projectId"]:
+            raise ValueError("bgm chain audit projectId 与本包不符——署名义务必须来自本项目那条链，防串台")
+        if bgm_audit.get("status") != "passed":
+            raise ValueError("refusing to build a manifest over a failed BGM chain audit — repair the chain and re-audit first")
+        bgm = bgm_audit.get("bgm", {})
+        if bgm.get("attributionRequired"):
+            credits_text = str(bgm.get("attribution") or "none")
+            if credits_text == "none":
+                raise ValueError("chain audit says attribution is required but the registered text is none — 审计件自相矛盾或被篡改，拒建")
+            (bundle / "attribution-credits.md").write_text(
+                "# 署名清单（机器派生，禁手写换算）\n\n"
+                f"本片配乐（sha256 {str(bgm.get('sha256', ''))[:12]}…）按 {bgm.get('license')} 许可使用，"
+                "该许可条件要求在发布时署名。发布文案必须逐字包含：\n\n"
+                f"- {credits_text}\n\n"
+                f"许可证据：{bgm.get('licenseEvidence')}\n\n"
+                f"本文件派生自 G5 BGM 链审计件（{args.bgm_audit.name}）；需变更请修复链路后重跑装配步，不许手改本件。\n",
+                encoding="utf-8")
+            manifest["attribution"] = {"required": True, "artifact": "attribution-credits.md",
+                                       "text": credits_text, "license": bgm.get("license")}
+        else:
+            manifest["attribution"] = {"required": False, "license": bgm.get("license")}
+    elif isinstance(plan.get("bgmPlan"), dict):
+        raise ValueError("edit-plan 含 bgmPlan 但未提供 --bgm-audit：署名义务必须机器闭环、不靠人记（缺口①，2026-11-16 规）——"
+                         "先跑 g5_audit_bgm_chain.py，再将其输出传给本装配步")
     output = (args.output or bundle / "delivery-manifest.json").resolve()
     if output.parent != bundle:
         raise ValueError("output must be directly inside the delivery bundle")
