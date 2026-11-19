@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "D5E216AF170B31979AF4759C72EC936942265E5F2F476FB8F2E741535F03ECBC",
+  "aliases": [
+    {
+      "title": "Epic Orchestral Cue",
+      "sourceUrl": "https://freesound.org/s/449202/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:30:24Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-449202-preview.mp3",
+      "recordedAt": "2026-11-19T05:30:24Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:30:24Z",
+  "updatedAt": "2026-11-19T05:30:24Z"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+  "aliases": [
+    {
+      "title": "Catchy Synthwave tune",
+      "sourceUrl": "https://freesound.org/s/686768/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:15:53Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-686768-preview.mp3",
+      "recordedAt": "2026-11-19T05:15:53Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:15:53Z",
+  "updatedAt": "2026-11-19T05:15:53Z"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "EA87FC48E648754D680957EF1774CBBDE0EAFABD70F0984D0231FB8FC3190A64",
+  "aliases": [
+    {
+      "title": "SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)",
+      "sourceUrl": "https://freesound.org/s/767835/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:30:08Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767835-preview.mp3",
+      "recordedAt": "2026-11-19T05:30:08Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:30:08Z",
+  "updatedAt": "2026-11-19T05:30:08Z"
+}

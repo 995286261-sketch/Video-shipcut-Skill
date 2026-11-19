@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "5389B8F243A690DD341B5F1A951D40EA4CD185649A515056A18018216130748E",
+  "aliases": [
+    {
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Drums",
+      "sourceUrl": "https://freesound.org/s/685541/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:16:47Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-685541-preview.mp3",
+      "recordedAt": "2026-11-19T05:16:47Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:16:47Z",
+  "updatedAt": "2026-11-19T05:16:47Z"
+}

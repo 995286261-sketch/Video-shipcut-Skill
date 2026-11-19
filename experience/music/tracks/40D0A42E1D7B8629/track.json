@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "40D0A42E1D7B862934C377F4F002206F790BFAAC2036F4816BB68A56D8B510BF",
+  "aliases": [
+    {
+      "title": "Space Arp F Chords.wav",
+      "sourceUrl": "https://freesound.org/s/473996/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:15:26Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-473996-preview.mp3",
+      "recordedAt": "2026-11-19T05:15:26Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc0",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:15:26Z",
+  "updatedAt": "2026-11-19T05:15:26Z"
+}

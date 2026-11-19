@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "8545A84D2DFB666F0558E905F2DB73E611EC18C61D9F7123C01CA96D815DDE70",
+  "aliases": [
+    {
+      "title": "Pawsome Vibes: Get Your Groove On with ‘Meow Meow",
+      "sourceUrl": "https://freesound.org/s/679355/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:15:37Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-679355-preview.mp3",
+      "recordedAt": "2026-11-19T05:15:37Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "cc-by",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:15:37Z",
+  "updatedAt": "2026-11-19T05:15:37Z"
+}

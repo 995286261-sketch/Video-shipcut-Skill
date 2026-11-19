@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "0F5B3D68E551C3D0B7B975D9317252404A9653E60C549B0C2E29E186FD38278A",
+  "aliases": [
+    {
+      "title": "Curious Little Adventure Synth Arpeggio",
+      "sourceUrl": "https://freesound.org/s/874784/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:16:34Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-874784-preview.mp3",
+      "recordedAt": "2026-11-19T05:16:34Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:16:34Z",
+  "updatedAt": "2026-11-19T05:16:34Z"
+}

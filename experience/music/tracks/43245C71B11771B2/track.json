@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "sha256": "43245C71B11771B2CD7A4AFD93FE390DF364BEFC1D85D81732E3F3E371825E40",
+  "aliases": [
+    {
+      "title": "SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)",
+      "sourceUrl": "https://freesound.org/s/767837/",
+      "provenance": "freesound_api",
+      "seenAt": "2026-11-19T05:30:44Z"
+    }
+  ],
+  "audioRefs": [
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767837-preview.mp3",
+      "recordedAt": "2026-11-19T05:30:44Z"
+    }
+  ],
+  "roles": [
+    "candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseEvidence": [],
+  "distributionBoundary": "internal_test",
+  "attributionRequired": true,
+  "createdAt": "2026-11-19T05:30:44Z",
+  "updatedAt": "2026-11-19T05:30:44Z"
+}

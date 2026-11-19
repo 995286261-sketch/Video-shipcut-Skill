@@ -14,6 +14,10 @@
     {
       "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/sinjuku-intro-001/G1-创作方向/G1-BGM找乐/candidates/freesound-767844-preview.mp3",
       "recordedAt": "2026-09-22T03:22:50Z"
+    },
+    {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767844-preview.mp3",
+      "recordedAt": "2026-11-19T05:30:56Z"
     }
   ],
   "roles": [
@@ -24,5 +28,5 @@
   "distributionBoundary": "internal_test",
   "attributionRequired": true,
   "createdAt": "2026-09-22T03:22:50Z",
-  "updatedAt": "2026-09-22T03:35:08Z"
+  "updatedAt": "2026-11-19T05:30:56Z"
 }
