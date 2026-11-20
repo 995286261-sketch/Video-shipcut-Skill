@@ -14,6 +14,8 @@ KEY_FIELDS = (
 )
 REQUIRED_FIELDS = KEY_FIELDS + ("recordId", "analysisStatus", "frameRef", "createdAt")
 STATUSES = {"completed", "failed", "timeout", "superseded"}
+CAPTION_KINDS = {"dialogue", "lyrics", "card", "watermark", "other"}
+CAPTION_CONFIDENCE = {"high", "medium", "low"}
 
 
 def now() -> str:
@@ -48,6 +50,37 @@ def require_record(record: dict) -> None:
             fail("completed record requires observedVisuals")
         if not isinstance(record.get("riskFlags", []), list):
             fail("completed record riskFlags must be a list")
+        require_caption_zones(record)
+
+
+def require_caption_zones(record: dict) -> None:
+    if "burned_subtitle" not in record.get("riskFlags", []):
+        return
+    zones = record.get("captionZones")
+    if not isinstance(zones, list) or not zones:
+        fail("burned_subtitle observation requires non-empty captionZones — 字幕站位必须记录，不许只记存在性（㉙）")
+    for zone in zones:
+        if not isinstance(zone, dict):
+            fail("captionZones entries must be objects")
+        if not isinstance(zone.get("text"), str) or not zone["text"].strip():
+            fail("caption zone requires non-empty text")
+        line = zone.get("line")
+        if not isinstance(line, int) or isinstance(line, bool) or line < 1:
+            fail("caption zone line must be a positive integer")
+        if zone.get("kind") not in CAPTION_KINDS:
+            fail(f"caption zone kind must be one of {sorted(CAPTION_KINDS)}")
+        rng = zone.get("yPctRange")
+        if (not isinstance(rng, list) or len(rng) != 2
+                or not all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in rng)
+                or not 0 <= rng[0] < rng[1] <= 100):
+            fail("caption zone yPctRange must be [a,b] numbers with 0 <= a < b <= 100")
+        xr = zone.get("xPctRange")
+        if xr is not None and (not isinstance(xr, list) or len(xr) != 2
+                or not all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in xr)
+                or not 0 <= xr[0] < xr[1] <= 100):
+            fail("caption zone xPctRange must be [a,b] numbers with 0 <= a < b <= 100")
+        if zone.get("confidence") is not None and zone["confidence"] not in CAPTION_CONFIDENCE:
+            fail("caption zone confidence must be high, medium, or low")
 
 
 def key(record: dict) -> tuple:

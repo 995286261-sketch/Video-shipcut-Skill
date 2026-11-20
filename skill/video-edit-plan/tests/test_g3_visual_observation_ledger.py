@@ -93,6 +93,64 @@ class VisualObservationLedgerTests(unittest.TestCase):
         result = self.command("--lookup", value)
         self.assertIn("timeout", result.stdout)
 
+    # ㉙（mickey-001）：burned_subtitle 必须带结构化站位 captionZones，只记存在性拒写入
+    def burned(self, record_id="obs-001"):
+        value = self.record(record_id)
+        value["riskFlags"] = ["burned_subtitle"]
+        value["captionZones"] = [{"text": "(Mickey)", "line": 1, "kind": "lyrics", "yPctRange": [81, 86], "confidence": "high"},
+                                 {"text": "(Mouse)", "line": 2, "kind": "lyrics", "yPctRange": [88, 93]}]
+        return value
+
+    def test_burned_subtitle_without_zones_is_rejected(self):
+        value = self.record()
+        value["riskFlags"] = ["burned_subtitle"]
+        result = self.command("--append", value)
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("captionZones", result.stdout + result.stderr)
+
+    def test_burned_subtitle_with_valid_zones_is_accepted(self):
+        result = self.command("--append", self.burned())
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+
+    def test_caption_zone_kind_outside_enum_is_rejected(self):
+        value = self.burned()
+        value["captionZones"][0]["kind"] = "karaoke"
+        result = self.command("--append", value)
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("kind", result.stdout + result.stderr)
+
+    def test_caption_zone_inverted_range_is_rejected(self):
+        value = self.burned()
+        value["captionZones"][0]["yPctRange"] = [86, 81]
+        result = self.command("--append", value)
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("yPctRange", result.stdout + result.stderr)
+
+    def test_caption_zone_missing_line_is_rejected(self):
+        value = self.burned()
+        value["captionZones"][0].pop("line")
+        result = self.command("--append", value)
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("line", result.stdout + result.stderr)
+
+    def test_supersede_applies_same_caption_zone_validation(self):
+        self.assertEqual(0, self.command("--append", self.record()).returncode)
+        replacement = self.record("obs-002")
+        replacement["riskFlags"] = ["burned_subtitle"]
+        replacement["correctionSource"] = "用户指认画面下方有卡拉OK烧字"
+        bad = self.command("--supersede", {"supersedesRecordId": "obs-001", "newRecord": replacement})
+        self.assertNotEqual(0, bad.returncode)
+        self.assertIn("captionZones", bad.stdout + bad.stderr)
+        replacement["captionZones"] = self.burned()["captionZones"]
+        good = self.command("--supersede", {"supersedesRecordId": "obs-001", "newRecord": replacement})
+        self.assertEqual(0, good.returncode, good.stdout + good.stderr)
+
+    def test_no_burned_flag_does_not_require_zones(self):
+        value = self.record()
+        value["riskFlags"] = ["watermark"]
+        result = self.command("--append", value)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

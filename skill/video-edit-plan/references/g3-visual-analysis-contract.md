@@ -18,6 +18,7 @@ G3 的目标主体筛选必须先完成“关键帧 → 多模态识图 → 结�
 - `identityStatus`：`confirmed`（已确认目标主体）、`person_only`（仅确认出现人物，未确认目标主体）、`uncertain`、`not_present` 或 `mixed`。除 `confirmed` 外一律不自动入选，只进入不可用素材统计。
 - `observedVisuals`：只描述实际看到的画面
 - `riskFlags`：例如 `channel_watermark`、`burned_subtitle`、`mixed_subject`、`overexposure`
+- `captionZones`（`riskFlags` 含 `burned_subtitle` 时**必填**，账本工具硬校验拒写）：逐条记录烧录字幕的**站位**，每条含 `text`（看到的文字）、`line`（第几行，正整数）、`kind`（受控枚举 `dialogue|lyrics|card|watermark|other`）、`yPctRange`（`[下沿,上沿]` 占画面高度百分比，0≤a<b≤100）、可选 `xPctRange`、`confidence`（`high|medium|low`）。本字段是 G4 遮罩合同机械生成的唯一位置依据（mickey-001 ㉙ 教训：只记"有没有"不记"在哪"，合同就拿对话字幕常数套了卡拉OK歌词）；观察 prompt 升版 `g3-explore-v0.2` 起必须要求模型逐帧输出站位。
 
 ## 缓存与文字索引
 
@@ -40,7 +41,7 @@ G3 的目标主体筛选必须先完成“关键帧 → 多模态识图 → 结�
 
 除全片 manifest 外，项目还必须维护追加式 `G3-视觉观察账本-v<version>.json`。它解决“同一张帧图被不同 Agent 重复送去识图”的问题；现有文字索引和接触表是范围级发现结果，不能替代逐帧账本。
 
-每条记录使用稳定 `recordId`，并至少包含 `sourceAssetId`、`sourceSha256`、`sourceMs`、`frameExtractionSpec`、`analysisPromptVersion`、`provider`、`model`、`analysisStatus`、`frameRef`、`observedVisuals`、`riskFlags`、`createdAt`。`analysisStatus` 只能是 `completed`、`failed`、`timeout` 或 `superseded`。同一 `sourceAssetId + sourceSha256 + sourceMs + frameExtractionSpec + analysisPromptVersion + provider + model` 是精确复用键。参与改判链的记录另有字段：改判产生的新记录带 `supersedesRecordId` 和非空 `correctionSource`；被改判的旧记录由工具自动写入 `supersededBy` 与 `supersededAt`。
+每条记录使用稳定 `recordId`，并至少包含 `sourceAssetId`、`sourceSha256`、`sourceMs`、`frameExtractionSpec`、`analysisPromptVersion`、`provider`、`model`、`analysisStatus`、`frameRef`、`observedVisuals`、`riskFlags`、`createdAt`；`riskFlags` 含 `burned_subtitle` 的记录必须另带 `captionZones`（见上），`--append`/`--supersede` 均走同一硬校验，缺位或形状不合当场拒写。`analysisStatus` 只能是 `completed`、`failed`、`timeout` 或 `superseded`。同一 `sourceAssetId + sourceSha256 + sourceMs + frameExtractionSpec + analysisPromptVersion + provider + model` 是精确复用键。参与改判链的记录另有字段：改判产生的新记录带 `supersedesRecordId` 和非空 `correctionSource`；被改判的旧记录由工具自动写入 `supersededBy` 与 `supersededAt`。
 
 每次多模态调用前必须先查账本：
 

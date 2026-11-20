@@ -807,6 +807,90 @@ class ValidateG3PlanTest(unittest.TestCase):
         self.assertIn("is not a media entry with assetId", joined)
         self.assertIn("webSourceEvidence", joined)
 
+    # ㉙（mickey-001）G3 级存在性对账：sourceCaptionTreatment 必须站在观察账本上
+    def approved_plan(self, decision, subject, ledger):
+        return self.plan(decision, status="approved_for_g4", timelineReview={
+            "status": "confirmed", "confirmedBy": "user", "confirmedAt": "2026-11-19", "feedback": "整体确认",
+            "basisRefs": [str(subject), str(ledger), "review.md"],
+        }, g3Approval={"approvedBy": "user", "approvedAt": "2026-11-19", "basisRefs": ["check.md"]})
+
+    def set_treatment(self, plan, mode, derive_ids):
+        content = json.loads(plan.read_text(encoding="utf-8"))
+        content["segments"][0]["sourceCaptionTreatment"] = {"mode": mode}
+        content["segments"][0]["visualVerification"]["derivedFromObservationIds"] = list(derive_ids)
+        plan.write_text(json.dumps(content), encoding="utf-8")
+        return plan
+
+    def ledger_with_burned(self):
+        path = self.ledger()
+        content = json.loads(path.read_text(encoding="utf-8"))
+        content["records"].append({
+            "recordId": "obs-burned", "sourceAssetId": "clip-1", "sourceSha256": "fixture-sha",
+            "sourceMs": 500, "frameExtractionSpec": "fixture", "analysisPromptVersion": "v1",
+            "provider": "local", "model": "vision", "analysisStatus": "completed",
+            "frameRef": "middle.jpg", "observedVisuals": "底部两行卡拉OK烧字",
+            "riskFlags": ["burned_subtitle"],
+            "captionZones": [{"text": "(Mickey)", "line": 1, "kind": "lyrics", "yPctRange": [81, 86]},
+                             {"text": "(Mouse)", "line": 2, "kind": "lyrics", "yPctRange": [88, 93]}],
+            "createdAt": "2026-11-19T00:00:02Z"})
+        path.write_text(json.dumps(content), encoding="utf-8")
+        return path
+
+    def decoded_errors(self, output):
+        payload = json.loads(output.strip().splitlines()[-1])
+        return " ".join(payload["errors"])
+
+    def test_mask_treatment_without_burned_observation_is_rejected(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger()
+        plan = self.set_treatment(self.approved_plan(decision, subject, ledger), "mask", ["obs-active"])
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertNotEqual(0, code)
+        self.assertIn("遮罩声明必须站在观察证据上", self.decoded_errors(output))
+
+    def test_mask_treatment_with_burned_observation_passes(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger_with_burned()
+        plan = self.set_treatment(self.approved_plan(decision, subject, ledger),
+                                  "mask", ["obs-active", "obs-burned"])
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertEqual(0, code, output)
+
+    def test_none_treatment_contradicting_burned_observation_is_rejected(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger_with_burned()
+        plan = self.set_treatment(self.approved_plan(decision, subject, ledger),
+                                  "none", ["obs-active", "obs-burned"])
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertNotEqual(0, code)
+        joined = self.decoded_errors(output)
+        self.assertIn("批准表与账本矛盾", joined)
+        self.assertIn("obs-burned", joined)
+
+    def test_caption_mode_enum_is_enforced(self):
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger()
+        plan = self.set_treatment(self.approved_plan(decision, subject, ledger), "blur", ["obs-active"])
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertNotEqual(0, code)
+        self.assertIn("sourceCaptionTreatment.mode 非法", self.decoded_errors(output))
+
+    def test_legacy_plan_without_treatment_is_not_retroactively_blocked(self):
+        # R3 不追溯：无 sourceCaptionTreatment 的旧计划照常通过（本闸只对未来项目生效）
+        decision = self.decision()
+        subject = self.subject_confirmation()
+        ledger = self.ledger()
+        plan = self.set_treatment(self.approved_plan(decision, subject, ledger), "none", ["obs-active"])
+        content = json.loads(plan.read_text(encoding="utf-8"))
+        content["segments"][0].pop("sourceCaptionTreatment")
+        plan.write_text(json.dumps(content), encoding="utf-8")
+        code, output = self.run_cli(plan, decision, subject=subject, ledger=ledger)
+        self.assertEqual(0, code, output)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -252,6 +252,33 @@ def validate_observation_ledger(plan: dict, ledger: dict) -> None:
                 fail(f"segment {segment.get('segmentId')} references unknown observation {observation_id}")
             if record.get("analysisStatus") != "completed":
                 fail(f"segment {segment.get('segmentId')} cannot use non-active observation {observation_id}")
+        validate_caption_treatment_against_ledger(segment, records)
+
+
+def validate_caption_treatment_against_ledger(segment: dict, records: list) -> None:
+    """㉙ 存在性对账（G3 级）：mode=mask 必须站在窗口内的烧字观察上；mode=none 与
+    窗口内烧字观察矛盾即拒。无 sourceCaptionTreatment 的旧计划不追溯（R3）。
+    位置对账（带 ⊇ 观测带并集）由 G4 g4_build_mask_contract.py 把关，两级闸。"""
+    treatment = segment.get("sourceCaptionTreatment")
+    if not isinstance(treatment, dict):
+        return
+    mode = treatment.get("mode")
+    if mode not in (None, "crop", "mask", "replace_clip", "none"):
+        fail(f"segment {segment.get('segmentId')} sourceCaptionTreatment.mode 非法：{mode!r}（允许 crop/mask/replace_clip/none）")
+    start, end = segment.get("startMs"), segment.get("endMs")
+    if not isinstance(start, int) or not isinstance(end, int):
+        return
+    burned = [r.get("recordId") for r in records if isinstance(r, dict)
+              and r.get("analysisStatus") == "completed" and "supersededBy" not in r
+              and r.get("sourceAssetId") == segment.get("assetId")
+              and isinstance(r.get("sourceMs"), int) and start <= r["sourceMs"] <= end
+              and "burned_subtitle" in (r.get("riskFlags") or [])]
+    if mode == "mask" and not burned:
+        fail(f"segment {segment.get('segmentId')} mode=mask 但源窗口 [{start},{end}]ms 内无 active "
+             "burned_subtitle 观察——遮罩声明必须站在观察证据上，先补测该窗口（㉙）")
+    if mode == "none" and burned:
+        fail(f"segment {segment.get('segmentId')} mode=none 却存在窗口内烧字观察 {burned}——"
+             "批准表与账本矛盾，改判或改 treatment，本校验器不调和（㉙）")
 
 
 def validate_duration_decision(plan: dict) -> None:

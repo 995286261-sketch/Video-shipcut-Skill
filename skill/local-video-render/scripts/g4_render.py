@@ -2,6 +2,7 @@
 """Render G4 video segments from G4-可编辑工程-v0.2.json using FFmpeg."""
 import argparse
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -68,7 +69,7 @@ def main():
     parser.add_argument("--source-pack", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--source-mask", type=Path,
-                        help="G4 source-caption masking contract (transcribed from the G3 approved table)")
+                        help="G4 source-caption masking contract (唯一生成入口=g4_build_mask_contract.py 机械派生，㉙)")
     parser.add_argument(
         "--aspect-ratio-policy",
         choices=("preserve_source", "explicit"),
@@ -105,9 +106,27 @@ def main():
         if not mask_canvas.get("height"):
             fail("mask contract lacks a canvas for ratio conversion")
         known = {segment.get("segmentId") for segment in data.get("segments", [])}
+        seen_ids = set()
         for mask in masks:
             if mask.get("segmentId") not in known:
                 fail(f"mask {mask.get('maskId')} targets unknown segment {mask.get('segmentId')}")
+            mask_id = mask.get("maskId")
+            if not isinstance(mask_id, str) or not mask_id.strip():
+                fail("mask requires a non-empty maskId")
+            if mask_id in seen_ids:
+                fail(f"duplicate maskId {mask_id}")
+            seen_ids.add(mask_id)
+            for key in ("outputFromMs", "outputToMs"):
+                value = mask.get(key)
+                if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+                    fail(f"mask {mask_id} requires non-negative integer {key} (got {value!r})")
+            band = mask.get("bandYpx")
+            if not (isinstance(band, list) and len(band) == 2
+                    and all(isinstance(v, int) and not isinstance(v, bool) for v in band)):
+                fail(f"mask {mask_id} bandYpx must be [int,int]")
+            color = mask.get("color", "black")
+            if not isinstance(color, str) or not re.fullmatch(r"[A-Za-z0-9@._%\-]+", color):
+                fail(f"mask {mask_id} color 含滤镜串危险字符：{color!r}")
     if args.aspect_ratio_policy == "explicit":
         if not args.width or not args.height:
             fail("explicit aspect ratio policy requires --width and --height")

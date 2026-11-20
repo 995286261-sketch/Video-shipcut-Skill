@@ -158,6 +158,8 @@ python skill/video-edit-plan/scripts/validate_g3_callback.py --callback <G3-回�
 
 先处理源字幕，再放新字幕；不得以“基本盖住”视为通过。标题/信息卡出现时，口播应错开 0.5–1 秒或切换车道。
 
+**机械消费两级闸（㉙，mickey-001 真案）**：`mode=mask` 的声明必须站在观察证据上——G3 校验器传 `--ledger` 时逐段对账（窗口内须有 active `burned_subtitle` 观察，`mode=none` 与窗口内烧字观察矛盾即拒）；G4 遮罩合同**唯一生成入口=`skill/local-video-render/scripts/g4_build_mask_contract.py`**，带位=观察 `captionZones` 并集−margin 机械推导，缺位置字段=拒（不许默认「在带内」），手写转写通道退役。位置字段出生规范见 `g3-visual-analysis-contract.md`。
+
 ## BGM 对齐与机器消费（G3.5，music-expert 接口）
 
 素材包 `07_授权音频` 有登记 BGM 时，G3.5 排时间线**必须**消费 BGM 专员对齐器，禁止手抄乐句表（002 教训：数字有出处但出处不可查证）：
