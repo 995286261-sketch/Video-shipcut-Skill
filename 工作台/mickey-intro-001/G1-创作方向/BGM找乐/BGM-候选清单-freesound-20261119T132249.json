@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "Follow the road SunixMuz",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "Follow the road SunixMuz"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 15.0,
+    "appliedMinSec": 15.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:22:49+08:00",
+  "candidates": [],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "Follow the road SunixMuz",
+      "returned": 0,
+      "cap": 2,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

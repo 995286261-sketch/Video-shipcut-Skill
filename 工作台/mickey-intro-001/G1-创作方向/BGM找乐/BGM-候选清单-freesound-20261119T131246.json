@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "feel good happy ukulele whistling",
+    "tags": "happy,feel-good,ukulele",
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "feel good happy ukulele whistling"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 100.0,
+    "appliedMinSec": 100.0,
+    "maxSec": 300.0
+  },
+  "retrievedAt": "2026-11-19T13:12:46+08:00",
+  "candidates": [],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "feel good happy ukulele whistling",
+      "returned": 0,
+      "cap": 8,
+      "kept": 0
+    },
+    {
+      "query": "feel good happy ukulele whistling",
+      "returned": 0,
+      "cap": 8,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

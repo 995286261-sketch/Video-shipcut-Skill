@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "materialPackId": "G0-素材包",
+  "sourceAssets": [
+    {
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceKind": "local-file",
+      "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "byteSize": 45899720,
+      "fileExtension": ".mp4"
+    },
+    {
+      "assetId": "source-02-48c9834f",
+      "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceKind": "local-file",
+      "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "byteSize": 29523081,
+      "fileExtension": ".mp4"
+    }
+  ],
+  "audioAssets": [
+    {
+      "assetId": "audio-07-catchy-synthwave-686768-fe20b27a",
+      "relativePath": "07_授权音频/Catchy-Synthwave-686768.mp3",
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+      "byteSize": 1601141,
+      "fileExtension": ".mp3",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "bgmRegistration": {
+        "relativePath": "07_授权音频/BGM-候选登记-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+        "sha256": "1ACFEE6D4B03D7E0F63792BCD518898C68A436820AA1821989AE4D1DAEEF9115",
+        "licenseType": "cc-by",
+        "distributionBoundary": "internal_test"
+      },
+      "bgmAnalysis": {
+        "relativePath": "07_授权音频/BGM-分析报告-freesound-686768-preview-AC34D1C0.json",
+        "sha256": "0C02FAD5F48CF9BD4FE09BD5802D5AC9AE9E8B983552CEA76C665061B4A83488"
+      }
+    }
+  ],
+  "bgm": {
+    "decision": "use_library_later",
+    "preference": null,
+    "libraryPending": true,
+    "clearCondition": "G1 末出检索词卡找乐 → 用户挑曲 → 经官方渠道取得整轨并登记回填 07_授权音频/ 后改 provided"
+  },
+  "packStatus": "complete",
+  "registeredAt": "2026-11-19T05:32:41.364452Z"
+}

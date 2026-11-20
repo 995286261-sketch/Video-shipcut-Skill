@@ -1,0 +1,37 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_plan",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+  "version": "v0.1",
+  "output": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.1.json",
+  "status": "blocked_true-peak",
+  "targetProfile": {
+    "integratedLufs": -17.4,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 6.0
+  },
+  "measured": {
+    "engine": "ffmpeg-loudnorm-pass1",
+    "inputI": -16.86,
+    "inputTp": -0.75,
+    "inputLra": 3.5,
+    "inputThresh": -27.07
+  },
+  "gainDb": -0.54,
+  "estimatedTruePeak": -1.29,
+  "ceilingLufs": -17.6,
+  "blockedReasons": [
+    "true-peak"
+  ],
+  "exits": [
+    "把 TP 上限提到至少 -1.3 dBTP（线性增益 -0.54 dB 后估算 TP 将到 -1.29）",
+    "把目标响度降到至多 -17.6 LUFS（保住现 TP 上限 -1.5）",
+    "先压缩后测：源峰均比过高属素材天花板，先跑压缩链再对本产物重新规划"
+  ],
+  "chain": null,
+  "chainNote": "linear=true 前提已在本文件对账通过；执行者逐字使用 chain、不许改参数。若执行环境实测与 inputI/inputTp 不符（源变了），chain 即作废必须重规划——回退 dynamic 视同违规。",
+  "sha256": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC",
+  "plannedAt": "2026-11-19T06:45:17Z"
+}

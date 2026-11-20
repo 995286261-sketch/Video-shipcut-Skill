@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "freesound",
+  "inputs": {
+    "preference": null,
+    "themeRef": null,
+    "themeText": "米老鼠98年进化介绍：从1928黑白蒸汽船到现代彩色树屋，温馨快节奏",
+    "styleBriefRef": null
+  },
+  "terms": [
+    {
+      "term": "upbeat playful synth",
+      "rationale": "温馨快节奏（用户第4问原话）+介绍感开场",
+      "source": "theme"
+    },
+    {
+      "term": "electro swing happy",
+      "rationale": "1928 时代梗×现代轻快（进化线方向卡）",
+      "source": "theme"
+    },
+    {
+      "term": "warm cartoon pizzicato",
+      "rationale": "卡通肢体幽默的弦乐拨奏质感（汽船威利画面气质）",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": null,
+    "durationMaxSec": null,
+    "bpmRange": null
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-11-19T13:06:29+08:00"
+}

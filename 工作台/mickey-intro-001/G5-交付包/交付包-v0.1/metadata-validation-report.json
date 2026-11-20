@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G5",
+  "subject": "mickey-intro-001 交付包机器质检",
+  "reviewedAt": "2026-11-19T15:10:25+08:00",
+  "checks": {
+    "decode": "pass（完整解码零错误，机器实测）",
+    "videoCodec": "h264（机器实测，与 export-config 对账在 --media 校验中通过）",
+    "dimensions": "1280x720（机器实测）",
+    "fps": "30/1（机器实测，⑧丙对账通过）",
+    "audio": "aac 44100Hz 2ch（机器实测）",
+    "duration": "66000ms（机器实测）",
+    "blackFrames": "pass（编排方实测 2026-11-19：blackdetect d=0.05/pix_th=0.10 四处——0–0.367s=批准黑场入窗口+源片头黑场起点、28.300–30.233s 与 30.333–30.500s=seg-04 源『THE END』虹幕收拢原生黑场（批准窗口 25.203–30.500 内源内容，非渲染伪影，人审点已列）、65.867–65.967s=批准黑场出窗口尾；批准转场窗口外无计划外黑帧）",
+    "silence": "pass（编排方实测 2026-11-19：silencedetect -45dB/0.3s 全片零命中——句间留白由 BGM 床覆盖，无死静音段）",
+    "duplicateSegments": "pass（12 段·同素材源窗口两两不相交，机器实算）",
+    "cover": "1280x720（机器实测尺寸；目视确认归人审）"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "3707AE9188061AB2BBDE902DC8BA57C05F806F35F02D080542E83AF709C0AC49"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "894C917C7A2173BEFFB34E0A3B8BCE0C6157B4629E4F81CF4770F0D9E9CE1D04"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "D4A4717FBAEB7DC7176766A038EDC4F13CF550BE3D5498F176FE63C5297C18E2"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch-01.mp4",
+        "sha256": "DA33ECFA83FF24EF0831239064BDBCC3759835BDE5F4A04C04FE2A20AA23D87C"
+      },
+      {
+        "path": "clips/ch-02.mp4",
+        "sha256": "F9FC4E0377EC8E51B2432311115FE85B8C5D9DF3549A04FCB21F07156105BF72"
+      },
+      {
+        "path": "clips/ch-03.mp4",
+        "sha256": "9129757C8DC233673C30A5B9E00B31EBD97D91EE4EA4CD2242BD4A7ACC3D0FD8"
+      },
+      {
+        "path": "clips/ch-04.mp4",
+        "sha256": "EE7271329137DB9FB0FE808666FD1C26040C2E7262B707F9D11747ABB4C7DC1D"
+      }
+    ],
+    "README.md": {
+      "path": "README.md",
+      "sha256": "F58DFD0742D61F771B6B559DD83B07DA2074191618ECA743B92422FE8CA68804"
+    },
+    "attribution-credits.md": {
+      "path": "attribution-credits.md",
+      "sha256": "C81AB21C4DA6BED34035A01FD82A02DB0592336CAF0E500F4107EB24EF5C21C2"
+    },
+    "bgm-chain-audit.json": {
+      "path": "bgm-chain-audit.json",
+      "sha256": "4416B1CCCB1220AB3E26AD6AB3282FC8D19D44EC472C083AD0EF8138513577AA"
+    },
+    "edit-plan.json": {
+      "path": "edit-plan.json",
+      "sha256": "7630D08C90E383A7D4A5580624C2FD283FEA3FFBD50DF7F631CD05A4B95692C3"
+    },
+    "edit-timeline.md": {
+      "path": "edit-timeline.md",
+      "sha256": "CF2EE13C91A27F49E19AB3F206CDF4679D5F02DAAAD19CFBE057BEA7CC652159"
+    },
+    "export-config.json": {
+      "path": "export-config.json",
+      "sha256": "A571B6D8A179F7416A436624632F450AE8CAD1916CFDC5F01749F67DCF9076DC"
+    },
+    "failure-samples/README.md": {
+      "path": "failure-samples/README.md",
+      "sha256": "20FFBF33C4AA5B0056F8ED5F861DAAEA8C5E23F576A7B517EDC5FF50BAD787DC"
+    },
+    "loudness-audit.json": {
+      "path": "loudness-audit.json",
+      "sha256": "7C32A0B6AF8BFED5354DFC991FDFA120CB4FE9E8A7F5D5B2B67AE61FF5A0F4E8"
+    },
+    "source-timecode-list.json": {
+      "path": "source-timecode-list.json",
+      "sha256": "E447E0460B81D0163821B808D52D86C2D7F4719638C441079EBF7D6A298193CB"
+    },
+    "subtitle-srt-check.json": {
+      "path": "subtitle-srt-check.json",
+      "sha256": "A913919B002D308E89457C9222FD4AF52D713A5BDE01CB9EED220DA28532D707"
+    },
+    "transition-audit.json": {
+      "path": "transition-audit.json",
+      "sha256": "3E77395D10DC6F50FC7C77C7DF406030C5ABDF316F1410409574404E03404DE1"
+    }
+  },
+  "warnings": [],
+  "humanReview": "待人工门禁关单后逐字回填（口令原文+批准记录指向）",
+  "status": "g5_pending_human_review",
+  "finishedAt": "2026-11-19T15:10:25+08:00",
+  "generatedBy": "g5_validate_delivery.py --report-out"
+}

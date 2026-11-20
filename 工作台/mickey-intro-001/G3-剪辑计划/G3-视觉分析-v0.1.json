@@ -1,0 +1,381 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "mickey-intro-001",
+ "node": "G3",
+ "status": "completed",
+ "analysisScope": "A 全片 20s 网格 25 帧 + B 全片 6s 网格 15 帧，瓦片批读逐帧入账",
+ "method": "ffmpeg 网格中帧 480x270 + 4x/5x 拼版目视（zcode-host-session / main-agent-multimodal-vision / g3-explore-v0.1）",
+ "provider": "zcode-host-session",
+ "model": "main-agent-multimodal-vision",
+ "promptVersion": "g3-explore-v0.1",
+ "targetAssets": [
+  {
+   "assetId": "source-02-1928-4k60-69e7b06a",
+   "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+   "analysisStatus": "completed",
+   "identitySummary": {
+    "confirmed": 16,
+    "mixed": 2,
+    "uncertain": 0,
+    "person_only": 0,
+    "not_present": 7
+   },
+   "riskFlags": [
+    "无烧录字幕",
+    "440s 后 THE END 片尾卡",
+    "增强版画质瑕疵（G0 已登记警告）"
+   ],
+   "keyframes": [
+    {
+     "sourceMs": 0,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-001-0000000000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "steamboat title card & establishing",
+     "identityStatus": "not_present",
+     "recordId": "exp-A01"
+    },
+    {
+     "sourceMs": 20000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-002-0000020000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "deck whistles close-up",
+     "identityStatus": "not_present",
+     "recordId": "exp-A02"
+    },
+    {
+     "sourceMs": 40000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-003-0000040000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Pete grabbing Mickey by scruff, bell",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A03"
+    },
+    {
+     "sourceMs": 60000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-004-0000060000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "parrot on perch",
+     "identityStatus": "not_present",
+     "recordId": "exp-A04"
+    },
+    {
+     "sourceMs": 80000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-005-0000080000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Pete face scowl close-up",
+     "identityStatus": "not_present",
+     "recordId": "exp-A05"
+    },
+    {
+     "sourceMs": 100000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-006-0000100000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Pete alone at wheel laughing",
+     "identityStatus": "not_present",
+     "recordId": "exp-A06"
+    },
+    {
+     "sourceMs": 120000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-007-0000120000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "steamboat by cliff, donkey ashore",
+     "identityStatus": "not_present",
+     "recordId": "exp-A07"
+    },
+    {
+     "sourceMs": 140000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-008-0000140000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "cow loaded aboard, Mickey beside",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A08"
+    },
+    {
+     "sourceMs": 160000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-009-0000160000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey running plank with load",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A09"
+    },
+    {
+     "sourceMs": 180000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-010-0000180000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey at winch, parrot cabin",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A10"
+    },
+    {
+     "sourceMs": 200000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-011-0000200000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "goat stretched as instrument",
+     "identityStatus": "not_present",
+     "recordId": "exp-A11"
+    },
+    {
+     "sourceMs": 220000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-012-0000220000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey vs goat chase",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A12"
+    },
+    {
+     "sourceMs": 240000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-013-0000240000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey+goat+Minnie trio",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A13"
+    },
+    {
+     "sourceMs": 260000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-014-0000260000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey banging kitchen pots",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A14"
+    },
+    {
+     "sourceMs": 280000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-015-0000280000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey conducting kitchen perc",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A15"
+    },
+    {
+     "sourceMs": 300000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-016-0000300000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey kitchen with pot and bird",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A16"
+    },
+    {
+     "sourceMs": 320000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-017-0000320000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey and Minnie at mirror",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A17"
+    },
+    {
+     "sourceMs": 340000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-018-0000340000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "barnyard group with Mickey center",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A18"
+    },
+    {
+     "sourceMs": 360000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-019-0000360000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "cow face close-up",
+     "identityStatus": "not_present",
+     "recordId": "exp-A19"
+    },
+    {
+     "sourceMs": 380000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-020-0000380000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "cow mouth open, Mickey pulling tooth",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A20"
+    },
+    {
+     "sourceMs": 400000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-021-0000400000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey vs Pete with sack",
+     "identityStatus": "confirmed",
+     "recordId": "exp-A21"
+    },
+    {
+     "sourceMs": 420000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-022-0000420000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "parrot in barrel",
+     "identityStatus": "not_present",
+     "recordId": "exp-A22"
+    },
+    {
+     "sourceMs": 440000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-023-0000440000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "THE END title card",
+     "identityStatus": "mixed",
+     "recordId": "exp-A23"
+    },
+    {
+     "sourceMs": 460000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-024-0000460000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "THE END tail",
+     "identityStatus": "mixed",
+     "recordId": "exp-A24"
+    },
+    {
+     "sourceMs": 463299,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-025-0000463299ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "final frame",
+     "identityStatus": "not_present",
+     "recordId": "exp-A25"
+    }
+   ]
+  },
+  {
+   "assetId": "source-02-48c9834f",
+   "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+   "analysisStatus": "completed",
+   "identitySummary": {
+    "confirmed": 8,
+    "mixed": 1,
+    "uncertain": 0,
+    "person_only": 0,
+    "not_present": 6
+   },
+   "riskFlags": [
+    "burned_subtitle（除首尾全部帧，底部 88–97% 简体中文字幕）",
+    "片尾 logo 卡无烧字"
+   ],
+   "keyframes": [
+    {
+     "sourceMs": 0,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-001-0000000000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "black fade-in start",
+     "identityStatus": "not_present",
+     "recordId": "exp-B01"
+    },
+    {
+     "sourceMs": 6000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-002-0000006000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "CGI Mickey singing close-up, burned subtitle",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B02"
+    },
+    {
+     "sourceMs": 12000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-003-0000012000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey singing arms out",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B03"
+    },
+    {
+     "sourceMs": 18000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-004-0000018000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey on grass, subtitle",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B04"
+    },
+    {
+     "sourceMs": 24000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-005-0000024000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey pointing camera, Clubhouse song subtitle",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B05"
+    },
+    {
+     "sourceMs": 30000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-006-0000030000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey singing, subtitle",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B06"
+    },
+    {
+     "sourceMs": 36000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-007-0000036000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Clubhouse exterior wide, no Mickey",
+     "identityStatus": "not_present",
+     "recordId": "exp-B07"
+    },
+    {
+     "sourceMs": 42000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-008-0000042000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey waving at yellow door",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B08"
+    },
+    {
+     "sourceMs": 48000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-009-0000048000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Goofy+giant glove+Minnie",
+     "identityStatus": "not_present",
+     "recordId": "exp-B09"
+    },
+    {
+     "sourceMs": 54000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-010-0000054000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Clubhouse opening invitation",
+     "identityStatus": "not_present",
+     "recordId": "exp-B10"
+    },
+    {
+     "sourceMs": 60000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-011-0000060000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Daisy walking",
+     "identityStatus": "not_present",
+     "recordId": "exp-B11"
+    },
+    {
+     "sourceMs": 66000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-012-0000066000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey in doorway waving",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B12"
+    },
+    {
+     "sourceMs": 72000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-013-0000072000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "Mickey inside by wall phone",
+     "identityStatus": "confirmed",
+     "recordId": "exp-B13"
+    },
+    {
+     "sourceMs": 78000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-014-0000078000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "lightbulb gag with glove",
+     "identityStatus": "not_present",
+     "recordId": "exp-B14"
+    },
+    {
+     "sourceMs": 84000,
+     "frameRef": "G3-视觉分析帧/关键帧/frame-015-0000084000ms.jpg",
+     "analysisStatus": "completed",
+     "observedVisuals": "CLUBHOUSE logo card (83.2s 预览实测仍带烧字)",
+     "identityStatus": "mixed",
+     "recordId": "exp-B15"
+    }
+   ]
+  }
+ ],
+ "cacheKey": {
+  "gridIntervalSec": {
+   "A": 20,
+   "B": 6
+  },
+  "provider": "zcode-host-session",
+  "model": "main-agent-multimodal-vision",
+  "promptVersion": "g3-explore-v0.1"
+ },
+ "sourcePackRef": "工作台/mickey-intro-001/G0-素材包/material-pack.json",
+ "failurePolicy": "任何帧无法判定=uncertain 入账且不得入选成片窗口"
+}

@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G3",
+  "status": "keyframes_ready",
+  "analysisScope": "full_source_interval_20000ms",
+  "cacheKey": {
+    "node": "G3",
+    "purpose": "keyframe-extraction",
+    "assetId": "source-02-1928-4k60-69e7b06a",
+    "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+    "sourceRange": {
+      "startMs": 0,
+      "endMs": 463299
+    },
+    "intervalMs": 20000
+  },
+  "sourcePackRef": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G0-素材包/material-pack.json",
+  "provider": null,
+  "model": null,
+  "promptVersion": null,
+  "targetAssets": [
+    {
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 463299
+      },
+      "keyframes": [
+        {
+          "frameId": "vf-001",
+          "requestedSourceMs": 0,
+          "sourceMs": 0,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-001-0000000000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-002",
+          "requestedSourceMs": 20000,
+          "sourceMs": 20000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-002-0000020000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-003",
+          "requestedSourceMs": 40000,
+          "sourceMs": 40000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-003-0000040000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-004",
+          "requestedSourceMs": 60000,
+          "sourceMs": 60000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-004-0000060000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-005",
+          "requestedSourceMs": 80000,
+          "sourceMs": 80000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-005-0000080000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-006",
+          "requestedSourceMs": 100000,
+          "sourceMs": 100000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-006-0000100000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-007",
+          "requestedSourceMs": 120000,
+          "sourceMs": 120000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-007-0000120000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-008",
+          "requestedSourceMs": 140000,
+          "sourceMs": 140000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-008-0000140000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-009",
+          "requestedSourceMs": 160000,
+          "sourceMs": 160000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-009-0000160000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-010",
+          "requestedSourceMs": 180000,
+          "sourceMs": 180000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-010-0000180000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-011",
+          "requestedSourceMs": 200000,
+          "sourceMs": 200000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-011-0000200000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-012",
+          "requestedSourceMs": 220000,
+          "sourceMs": 220000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-012-0000220000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-013",
+          "requestedSourceMs": 240000,
+          "sourceMs": 240000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-013-0000240000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-014",
+          "requestedSourceMs": 260000,
+          "sourceMs": 260000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-014-0000260000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-015",
+          "requestedSourceMs": 280000,
+          "sourceMs": 280000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-015-0000280000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-016",
+          "requestedSourceMs": 300000,
+          "sourceMs": 300000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-016-0000300000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-017",
+          "requestedSourceMs": 320000,
+          "sourceMs": 320000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-017-0000320000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-018",
+          "requestedSourceMs": 340000,
+          "sourceMs": 340000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-018-0000340000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-019",
+          "requestedSourceMs": 360000,
+          "sourceMs": 360000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-019-0000360000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-020",
+          "requestedSourceMs": 380000,
+          "sourceMs": 380000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-020-0000380000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-021",
+          "requestedSourceMs": 400000,
+          "sourceMs": 400000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-021-0000400000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-022",
+          "requestedSourceMs": 420000,
+          "sourceMs": 420000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-022-0000420000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-023",
+          "requestedSourceMs": 440000,
+          "sourceMs": 440000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-023-0000440000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-024",
+          "requestedSourceMs": 460000,
+          "sourceMs": 460000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-024-0000460000ms.jpg",
+          "analysisStatus": "pending"
+        },
+        {
+          "frameId": "vf-025",
+          "requestedSourceMs": 462299,
+          "sourceMs": 462299,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析帧/关键帧/frame-025-0000462299ms.jpg",
+          "analysisStatus": "pending"
+        }
+      ]
+    }
+  ],
+  "failurePolicy": "pending_or_failed_frames_cannot_be_marked_completed"
+}

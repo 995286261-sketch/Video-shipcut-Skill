@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "mickey-intro-001",
+  "status": "assembled",
+  "manifest": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.7.json",
+  "timelineDurationMs": 66000,
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-001.mp4",
+      "sha256": "E64EC62B764DFEE7AEC5E2BCB386A68874EC0A858B2901BA40B2611942DA14C0"
+    },
+    {
+      "segmentId": "seg-02a",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-002.mp4",
+      "sha256": "870E993E4DA8C4A76C031C9571FE65199F4751F71578E8E0336867F5C99F61ED"
+    },
+    {
+      "segmentId": "seg-02b",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-003.mp4",
+      "sha256": "3784C5E15631D159A048D9B46C3A77C4061E8F65B4497A00044D532E18D255F6"
+    },
+    {
+      "segmentId": "seg-03",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-004.mp4",
+      "sha256": "427746B013A7D16F26BD657A7D6511D83DBCA51A4D15101ADBD6353291E47052"
+    },
+    {
+      "segmentId": "seg-04",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-005.mp4",
+      "sha256": "CF49A19330E7BA68DC81252E5A5DBBBA03E11E6E084AD2DEE6C6DF70EA5EDC52"
+    },
+    {
+      "segmentId": "seg-05a",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-006.mp4",
+      "sha256": "BA66CAF7F4A9B9A44CBACEA4D837AD203361F123F3EA8D3D186B24FA495DCC12"
+    },
+    {
+      "segmentId": "seg-05b",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-007.mp4",
+      "sha256": "17D7ED5A47B299DC75AFFE6625F2D222652677DA8696E6762EAFCF37593721DD"
+    },
+    {
+      "segmentId": "seg-06a",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-008.mp4",
+      "sha256": "BA029714FFDD8E056DA743AF1163E69D9B673F6A29276ECDCB9C874F8FFE46A6"
+    },
+    {
+      "segmentId": "seg-06b",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-009.mp4",
+      "sha256": "CA2C86E48D31C3A282A5054AC9DEB5657A44FD2E7A06848E0E48F599F52B1B8D"
+    },
+    {
+      "segmentId": "seg-07a",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-010.mp4",
+      "sha256": "24DAD2A557A0AB022C80942CBFDBEF25FF23D54E941D63DA12B1BB4B80A14DFA"
+    },
+    {
+      "segmentId": "seg-07b",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-011.mp4",
+      "sha256": "02025590D1FE449AF838EFF53BD48BACA641D0B6B3D3D0827CD22A95C6C3CD15"
+    },
+    {
+      "segmentId": "seg-08",
+      "file": "工作台/mickey-intro-001/G4-剪辑与渲染/分段渲染/clean-segments/seg-012.mp4",
+      "sha256": "85B52D259C61461004F0966108211E364D6E1E4861F1DC0A4A89FED0F291F83B"
+    }
+  ],
+  "narrationAudio": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+    "sha256": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC",
+    "durationMs": 66000,
+    "loudness": {
+      "integratedLufs": -17.8,
+      "truePeakDbtp": -4.1,
+      "engine": "ffmpeg-ebur128",
+      "chain": "loudness-plan verbatim (linear-verbatim)",
+      "targetIntegratedLufs": -17.7,
+      "caveat": "measured on the assembled master including the BGM bed, not narration alone"
+    }
+  },
+  "loudness": {
+    "planRef": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+      "sha256": "AFCBF808981BECF23397728E2550EEF8A34A36A5C71E2A62B90017C385043FEB"
+    },
+    "planStatus": "ready",
+    "mode": "linear-verbatim",
+    "targetProfile": {
+      "integratedLufs": -17.7,
+      "truePeakDbtp": -1.5,
+      "lraTargetLu": 6.0
+    },
+    "threeWayCheck": "G2 loud_plan.targetProfile == manifest.loudnessTarget（G3 包装镜像）== 执行链参数",
+    "pureNarration": {
+      "engine": "ffmpeg-ebur128",
+      "integratedLufs": -17.7,
+      "truePeakDbtp": -1.6,
+      "deviationLu": 0.0,
+      "truePeakOverDb": -0.1,
+      "verdict": "within-tolerance",
+      "toleranceLu": 1.0,
+      "toleranceSource": "合同 §3 默认"
+    },
+    "loudnormStats": {
+      "input_i": "-16.82",
+      "input_tp": "-0.77",
+      "input_lra": "3.60",
+      "input_thresh": "-27.04",
+      "output_i": "-17.66",
+      "output_tp": "-1.61",
+      "output_lra": "3.50",
+      "output_thresh": "-27.88",
+      "normalization_type": "linear",
+      "target_offset": "-0.04"
+    }
+  },
+  "mixPrecheck": {
+    "status": "bound",
+    "verdict": "passed",
+    "contractCombination": {
+      "bedGainDb": -12.0,
+      "duckReductionDb": 6.0
+    },
+    "measuredMaster": {
+      "integratedLufs": -17.8,
+      "truePeakDbtp": -4.0,
+      "lraLu": 3.1
+    },
+    "deviationLu": -0.1,
+    "truePeakOverDb": -2.5,
+    "report": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/混音预检-v0.1.json",
+      "sha256": "5AA56FED702D0499A694CFDA65C4264549C00F0ACAE9424340A98A49D9166A4E"
+    }
+  },
+  "capabilityAudit": {
+    "status": "bound",
+    "file": "工作台/mickey-intro-001/G0-素材包/能力盘点-v0.4.json",
+    "sha256": "F046FED27CD0F9521B4E9FEB43879B06759CDA4D06AD4C6914EE550D4A770842",
+    "probedAt": "2026-11-19T14:52:04+08:00",
+    "g3ApprovedAt": "2026-11-19T06:50:26Z",
+    "summary": {
+      "ready": 8,
+      "missing": 0,
+      "notApplicable": 0,
+      "missingIds": []
+    },
+    "missing": []
+  },
+  "bgmMix": {
+    "audio": {
+      "path": "工作台/mickey-intro-001/G0-素材包/07_授权音频/Catchy-Synthwave-686768.mp3",
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E"
+    },
+    "contract": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.2.json",
+      "sha256": "FB309C20B4B62F2F4A3736F9502EE1D75F555EA305EF912CA78DA4F300EFC112"
+    },
+    "trackOffsetMs": 0,
+    "bedGainDb": -12.0,
+    "duckReductionDb": 6.0,
+    "duckSegments": [
+      {
+        "fromMs": 4000,
+        "toMs": 7619,
+        "sentenceIds": [
+          "s01"
+        ]
+      },
+      {
+        "fromMs": 8419,
+        "toMs": 13319,
+        "sentenceIds": [
+          "s02"
+        ]
+      },
+      {
+        "fromMs": 14119,
+        "toMs": 18582,
+        "sentenceIds": [
+          "s03"
+        ]
+      },
+      {
+        "fromMs": 19382,
+        "toMs": 25203,
+        "sentenceIds": [
+          "s04"
+        ]
+      },
+      {
+        "fromMs": 26003,
+        "toMs": 27772,
+        "sentenceIds": [
+          "s05"
+        ]
+      },
+      {
+        "fromMs": 31000,
+        "toMs": 35947,
+        "sentenceIds": [
+          "s06"
+        ]
+      },
+      {
+        "fromMs": 36247,
+        "toMs": 39315,
+        "sentenceIds": [
+          "s07"
+        ]
+      },
+      {
+        "fromMs": 40115,
+        "toMs": 43977,
+        "sentenceIds": [
+          "s08"
+        ]
+      },
+      {
+        "fromMs": 44777,
+        "toMs": 47649,
+        "sentenceIds": [
+          "s09"
+        ]
+      },
+      {
+        "fromMs": 48449,
+        "toMs": 51852,
+        "sentenceIds": [
+          "s10"
+        ]
+      },
+      {
+        "fromMs": 52652,
+        "toMs": 55059,
+        "sentenceIds": [
+          "s11"
+        ]
+      },
+      {
+        "fromMs": 55859,
+        "toMs": 57288,
+        "sentenceIds": [
+          "s12"
+        ]
+      }
+    ],
+    "fades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 64000,
+      "fadeOutMs": 2000
+    },
+    "measuredInPlaceLufs": -23.1
+  },
+  "subtitleAss": {
+    "path": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.ass",
+    "sha256": "30AF4C12F681443F6FF1E0603F858AA111AEA46773860F232D2430B74E2F7D27"
+  },
+  "output": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1.mp4",
+  "outputSha256": "3707AE9188061AB2BBDE902DC8BA57C05F806F35F02D080542E83AF709C0AC49",
+  "probedDurationMs": 66000,
+  "fps": 30,
+  "fpsSource": "manifest-targetFps",
+  "cover": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+  "coverProvenance": {
+    "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/cover/封面合成-v0.1.jpg",
+    "materialPack": "工作台/mickey-intro-001/G0-素材包/material-pack.json",
+    "sourceAssetId": "source-02-1928-4k60-69e7b06a",
+    "sourceAssetPath": "工作台/mickey-intro-001/G0-素材包/02_原始素材/汽船威利-1928-4K60增强版.mp4",
+    "sourceAssetSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+    "sourceMs": 264000,
+    "sourceTimelineMs": null,
+    "framePath": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work/cover-frame.jpg",
+    "frameSha256": "43B04594D6C486157B15931258FB3BF1A3EACFFCC9A62F0EA9EEDF9AA715855F"
+  },
+  "chapterCards": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-章节卡合同-v0.1.json",
+    "sha256": "8BD47F89F0CFE6ECE93D85600EF799ED25278F4E1B32659C2E9107BFE7960803",
+    "cards": 1,
+    "subtitleCuesTrimmed": 0
+  },
+  "titleBar": null,
+  "transitionDirective": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.3.json",
+    "sha256": "2F0C911C4691273DB31E7C791B3660F9BDDD5F85B620FE3BEC4540E0FD34AF3E",
+    "boundaries": 0,
+    "masterFades": {
+      "fadeInMs": 1200,
+      "fadeOutMs": 1500
+    }
+  },
+  "filterGraph": "[0:v]fps=fps=30,format=yuv420p,subtitles=captions.ass,drawtext=fontfile=/System/Library/Fonts/Supplemental/Songti.ttc:textfile=/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work/chapter-card-1.txt:fontsize=60:fontcolor=white:borderw=2:bordercolor=black@0.7:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=h*0.1200:enable='between(t,1.200,4.000)',fade=t=in:st=0:d=1.200,fade=t=out:st=64.500:d=1.500[v];[1:a]loudnorm=I=-17.7:TP=-1.5:LRA=6.0:measured_I=-16.86:measured_TP=-0.75:measured_LRA=3.5:measured_thresh=-27.07:offset=0.0:linear=true:print_format=json[narr];[2:a]volume=-12dB,volume=-6dB:enable='between(t,4.000,7.619)+between(t,8.419,13.319)+between(t,14.119,18.582)+between(t,19.382,25.203)+between(t,26.003,27.772)+between(t,31.000,35.947)+between(t,36.247,39.315)+between(t,40.115,43.977)+between(t,44.777,47.649)+between(t,48.449,51.852)+between(t,52.652,55.059)+between(t,55.859,57.288)',afade=t=in:st=0:d=2.000,afade=t=out:st=64.000:d=2.000[bed];[bed][narr]amix=inputs=2:duration=longest:normalize=0[aud]",
+  "workDir": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-候选成片-v0.1-assemble-work"
+}

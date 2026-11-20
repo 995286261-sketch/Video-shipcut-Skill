@@ -1,0 +1,95 @@
+{
+  "node": "G4",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "masks": [
+    {
+      "maskId": "m-seg-05a",
+      "segmentId": "seg-05a",
+      "outputFromMs": 30500,
+      "outputToMs": 35947,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-05b",
+      "segmentId": "seg-05b",
+      "outputFromMs": 35947,
+      "outputToMs": 39615,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-06a",
+      "segmentId": "seg-06a",
+      "outputFromMs": 39615,
+      "outputToMs": 43977,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-06b",
+      "segmentId": "seg-06b",
+      "outputFromMs": 43977,
+      "outputToMs": 48449,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-07a",
+      "segmentId": "seg-07a",
+      "outputFromMs": 48449,
+      "outputToMs": 51852,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-07b",
+      "segmentId": "seg-07b",
+      "outputFromMs": 51852,
+      "outputToMs": 55859,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    },
+    {
+      "maskId": "m-seg-08",
+      "segmentId": "seg-08",
+      "outputFromMs": 55859,
+      "outputToMs": 66000,
+      "bandYpx": [
+        619,
+        713
+      ],
+      "color": "black@0.85",
+      "basis": "G3 批准 sourceCaptionTreatment.mode=mask 86–99%（720×0.86=619，720×0.99=713）；逐段转写自批准表，非现场发明"
+    }
+  ]
+}

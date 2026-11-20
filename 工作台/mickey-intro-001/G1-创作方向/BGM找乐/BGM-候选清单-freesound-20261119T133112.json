@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "happy upbeat rock indie fun",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "happy upbeat rock indie fun"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 15.0,
+    "appliedMinSec": 15.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:31:12+08:00",
+  "candidates": [],
+  "excluded": [
+    {
+      "freesoundId": 751131,
+      "name": "Upbeat Indie Rock 220bpm (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 746633,
+      "name": "Indie Background (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 712946,
+      "name": "Indie Rock (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 751130,
+      "name": "Upbeat Indie Rock 220bpm loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 720623,
+      "name": "Upbeat Game (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 815018,
+      "name": "Uplifting Kiddy 96bpm loop ver2",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 815017,
+      "name": "Uplifting Kiddy 96bpm loop ver1",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 815019,
+      "name": "Uplifting Kiddy 96bpm (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 751135,
+      "name": "Upbeat Indie Rock 220bpm (short version)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 712945,
+      "name": "Indie Rock (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 720625,
+      "name": "Upbeat Game (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 746635,
+      "name": "Indie Background (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 720624,
+      "name": "Upbeat Game (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 712947,
+      "name": "Indie Rock (short ver)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 754447,
+      "name": "Funk Rock  - bpm 88 loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 747776,
+      "name": "My Trip (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 717423,
+      "name": "Fun Time For Kids - bpm 103 loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 796608,
+      "name": "Funny Children Reggae 86bpm loop ver.2",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 706388,
+      "name": "Uplifting Intro",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 796606,
+      "name": "Funny Children Reggae 86bpm loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 796609,
+      "name": "Funny Children Reggae 86bpm (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "perQuery": [
+    {
+      "query": "happy upbeat rock indie fun",
+      "returned": 21,
+      "cap": 8,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

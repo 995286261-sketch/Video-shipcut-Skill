@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "tool": "g4_mix_precheck",
+  "generatedBy": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/skill/local-video-render/scripts/g4_mix_precheck.py",
+  "projectId": "mickey-intro-001",
+  "status": "passed",
+  "inputs": {
+    "narrationAudio": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+      "sha256": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC"
+    },
+    "bgmAudio": {
+      "path": "工作台/mickey-intro-001/G0-素材包/07_授权音频/Catchy-Synthwave-686768.mp3",
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E"
+    },
+    "mixContract": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/BGM混音/BGM-混音合同-v0.2.json",
+      "sha256": "FB309C20B4B62F2F4A3736F9502EE1D75F555EA305EF912CA78DA4F300EFC112"
+    },
+    "loudnessPlan": {
+      "path": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+      "sha256": "AFCBF808981BECF23397728E2550EEF8A34A36A5C71E2A62B90017C385043FEB"
+    }
+  },
+  "timelineMs": 66000,
+  "gateLines": {
+    "targetProfile": {
+      "integratedLufs": -17.7,
+      "truePeakDbtp": -1.5,
+      "lraTargetLu": 6.0
+    },
+    "toleranceLu": 1.0,
+    "toleranceSource": "合同 §3 默认",
+    "tpSlackDb": 0.3,
+    "strictness": "linear-verbatim",
+    "note": "综合响度+真峰双闸与 G5 loud_verify 同源口径；LRA 只记录不判。"
+  },
+  "combinations": [
+    {
+      "bedGainDb": -12.0,
+      "duckReductionDb": 6.0,
+      "isContractCombination": true,
+      "measuredMaster": {
+        "integratedLufs": -17.8,
+        "truePeakDbtp": -4.0,
+        "lraLu": 3.1
+      },
+      "deviationLu": -0.1,
+      "truePeakOverDb": -2.5,
+      "verdict": "passed",
+      "graphFile": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/混音预检-v0.1-滤镜图/combo-01.filtergraph"
+    }
+  ],
+  "guidance": "主轨双闸通过——这份报告作为装配入参随 g4_assemble 进装配（报告入参见其帮助）。LRA 只记录不判，验收闸归 G5。",
+  "method": {
+    "chainSource": "g4_assemble.audio_filter_chain + 响度计划分档链——与装配同一函数同一文件，非复刻平行链",
+    "engine": "ffmpeg-ebur128",
+    "audioOnly": true
+  }
+}

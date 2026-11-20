@@ -1,0 +1,85 @@
+{
+  "boundaries": [],
+  "evidenceSha256": "36E262D729BE4E1BD0AA692D0564C59351D467D7A54E71CF412328DE5D7E3952",
+  "gridInvariant": true,
+  "hostProfile": null,
+  "hostProfileSha256": null,
+  "inputEvidence": "工作台/mickey-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "inputPlan": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.5.json",
+  "masterFades": {
+    "fadeInMs": 1200,
+    "fadeOutMs": 1500
+  },
+  "planSha256": "2C1327B55BF22655553B9B86455F2736E42DE5C5360B999D6E4A334B04C7BF4E",
+  "purpose": "transition_directive",
+  "schemaVersion": "0.1",
+  "segments": [
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-01",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-02a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-02b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-03",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-04",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-05a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-05b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-06a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-06b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-07a",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-07b",
+      "tailExtraMs": 0
+    },
+    {
+      "headExtraMs": 0,
+      "segmentId": "seg-08",
+      "tailExtraMs": 0
+    }
+  ],
+  "skill": "transition-expert",
+  "timelineDurationMs": 66000,
+  "transitionVocabulary": [
+    "硬切",
+    "黑场入",
+    "黑场出"
+  ]
+}

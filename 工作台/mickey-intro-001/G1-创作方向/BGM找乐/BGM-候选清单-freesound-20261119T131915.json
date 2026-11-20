@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": null,
+    "similarTo": null,
+    "termsFile": "工作台/mickey-intro-001/G1-创作方向/BGM找乐/BGM-检索词-v0.2.json",
+    "terms": [
+      "happy orchestral adventure",
+      "playful cartoon strings brass",
+      "upbeat warm cinematic comedy"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 120.0,
+    "appliedMinSec": 120.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:19:15+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 569782,
+      "title": "Orchestral Adventure Theme",
+      "author": "TheoJT",
+      "sourceUrl": "https://freesound.org/s/569782/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Orchestral Adventure Theme\" by TheoJT (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 71.0,
+      "tags": [
+        "action",
+        "adventure",
+        "adventurous",
+        "cello",
+        "cinematic",
+        "danger",
+        "dramatic",
+        "drums",
+        "epic",
+        "film",
+        "flute",
+        "happy"
+      ],
+      "styleTags": [
+        "driving",
+        "acoustic",
+        "epic",
+        "dark",
+        "percussive",
+        "orchestral",
+        "playful"
+      ],
+      "retrievedAt": "2026-11-19T13:17:13+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-569782-preview.mp3",
+      "sha256": "2BA8200BB94CC15E112787D60D30BB3BA00E1A8940E498268A7AA76C20A58D0F",
+      "byteSize": 1625469
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 716478,
+      "title": "Emotional appealing adventure soundtrack",
+      "author": "MusicByMisterbates",
+      "sourceUrl": "https://freesound.org/s/716478/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 61.0625,
+      "tags": [
+        "adventure",
+        "beautiful",
+        "big",
+        "bright",
+        "cinematic",
+        "drama",
+        "dramatic",
+        "emotional",
+        "film",
+        "game",
+        "happy",
+        "movie"
+      ],
+      "styleTags": [
+        "playful",
+        "epic",
+        "dark",
+        "melancholy",
+        "orchestral",
+        "driving"
+      ],
+      "retrievedAt": "2026-11-19T13:18:57+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-716478-preview.mp3",
+      "sha256": "1EEC46A22989745EEA27FEC45AC7257C825433689DEFAB67ECCFDA956C36C526",
+      "byteSize": 1408523
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 442792,
+      "name": "Epic Cinematic Music | Let's Go to Zanzibar",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 329860,
+      "name": "Adventure & Fantasy",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "perQuery": [
+    {
+      "query": "happy orchestral adventure",
+      "returned": 4,
+      "cap": 10,
+      "kept": 2
+    },
+    {
+      "query": "playful cartoon strings brass",
+      "returned": 0,
+      "cap": 10,
+      "kept": 0
+    },
+    {
+      "query": "upbeat warm cinematic comedy",
+      "returned": 0,
+      "cap": 10,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 2,
+    "minimumExpected": 3
+  }
+}

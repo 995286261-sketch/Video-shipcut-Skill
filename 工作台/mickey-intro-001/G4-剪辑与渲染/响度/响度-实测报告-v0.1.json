@@ -1,0 +1,19 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_measure",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+  "version": "v0.1",
+  "output": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-实测报告-v0.1.json",
+  "measured": {
+    "integratedLufs": -16.8,
+    "truePeakDbtp": -0.8,
+    "loudnessRangeLu": 3.6,
+    "engine": "ffmpeg-ebur128"
+  },
+  "sha256": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC",
+  "status": "measured",
+  "measuredAt": "2026-11-19T06:45:16Z",
+  "unitsNote": "LUFS=集成响度（平均有多响）；dBTP=真峰值（会不会爆）；LU=动态范围宽度"
+}

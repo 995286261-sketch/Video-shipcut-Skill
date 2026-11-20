@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G3",
+  "cardType": "g3_timeline_review",
+  "reviewStatus": "ready_for_approval",
+  "renderedAt": "2026-11-19T17:05:00+08:00",
+  "reviewCardRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-最终回显卡-v0.4.md",
+  "basisRefs": [
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-回显数据-v0.4.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-最终回显卡-v0.4.md",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-确认记录.md",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-回炉说明-逐句落位-v0.1.md",
+    "工作台/mickey-intro-001/G3-剪辑计划/转场-计划校验-v0.3.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/预览小样/转场-预览清单-v0.5.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.2.srt",
+    "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕复检报告-v0.2.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕布局合同-v0.1.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+    "工作台/mickey-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+    "工作台/mickey-intro-001/G2-证据与口播/G2-决定-v0.4.json",
+    "工作台/mickey-intro-001/G4-剪辑与渲染/BGM/配音清单-带起点-v0.1.json",
+    "工作台/mickey-intro-001/G4-剪辑与渲染/BGM/BGM-对齐建议-v0.1.json",
+    "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+    "工作台/mickey-intro-001/G1-创作方向/BGM找乐/登记/BGM-候选登记-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+    "工作台/mickey-intro-001/auto-policy.json",
+    "工作台/mickey-intro-001/问题清单-v0.8.md"
+  ],
+  "checklist": [
+    {
+      "id": "approved_edit_plan",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json"
+    },
+    {
+      "id": "final_timeline_review",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-回显数据-v0.4.json"
+    },
+    {
+      "id": "subtitle_timeline",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.2.srt"
+    },
+    {
+      "id": "bgm_decision",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G1-创作方向/BGM找乐/登记/BGM-候选登记-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json"
+    },
+    {
+      "id": "packaging_decisions",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.6.json"
+    },
+    {
+      "id": "g3_card",
+      "required": true,
+      "status": "completed",
+      "evidenceRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-最终回显卡-v0.4.md"
+    }
+  ]
+}

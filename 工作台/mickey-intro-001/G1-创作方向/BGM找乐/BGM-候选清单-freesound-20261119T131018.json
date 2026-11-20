@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "happy upbeat cartoon orchestral",
+    "tags": "happy,upbeat,cartoon",
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "happy upbeat cartoon orchestral"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 115.0,
+    "appliedMinSec": 115.0,
+    "maxSec": 300.0
+  },
+  "retrievedAt": "2026-11-19T13:10:18+08:00",
+  "candidates": [],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "happy upbeat cartoon orchestral",
+      "returned": 0,
+      "cap": 8,
+      "kept": 0
+    },
+    {
+      "query": "happy upbeat cartoon orchestral",
+      "returned": 0,
+      "cap": 8,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 0,
+    "minimumExpected": 3
+  }
+}

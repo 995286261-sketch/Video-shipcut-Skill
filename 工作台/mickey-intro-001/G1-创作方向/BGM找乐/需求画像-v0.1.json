@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm-requirements",
+  "targetDurationSec": 120,
+  "bpmRange": [
+    100,
+    135
+  ],
+  "styleTags": [
+    "warm",
+    "playful",
+    "orchestral",
+    "electronic",
+    "driving"
+  ],
+  "minSegments": 4,
+  "distributionBoundary": "internal_test",
+  "note": "依据=G0需求说明「温馨快节奏」→受控词表映射 warm/playful/driving + 候选池体裁 orchestral/electronic；BPM区间100-135=快节奏；素材池无 happy/cartoon 标签（受控词表外），如实映射"
+}

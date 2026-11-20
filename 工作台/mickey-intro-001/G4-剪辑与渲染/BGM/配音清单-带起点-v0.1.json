@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "bgm_voice_brief",
+  "artifactVersion": "v0.1",
+  "derivedFrom": {
+    "plan": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.4.json",
+    "planSha256": "6E0319EB768659E434547E8A0FFC843B35E6F171F1881AE3C7A4617F593A3FCF",
+    "voiceManifest": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+    "voiceManifestSha256": "E9FEC96F65ED8F3B4450B52006AE752B085125F3AB81FB020C3874AC364102EB"
+  },
+  "axisNote": "startMs=成片输出轴落位（逐字取自批准计划 narrationStartMs，句内切分片段按序缝合回整句）；durationMs=合成实测（逐字取自配音清单）。14 大轴口径的机械执行，声音轨累计在本通道无处出现。",
+  "voice": "Samantha",
+  "voiceTier": "preview_only",
+  "timelineDurationMs": 66000,
+  "measuredTotalDurationMs": 42560,
+  "sentences": [
+    {
+      "sentenceId": "s01",
+      "text": "A steam whistle. A wooden tiller. And a mouse who loved to laugh.",
+      "startMs": 4000,
+      "durationMs": 3619
+    },
+    {
+      "sentenceId": "s02",
+      "text": "The year was 1928 — one steamboat, one whistle, and a star was born.",
+      "startMs": 8419,
+      "durationMs": 4900
+    },
+    {
+      "sentenceId": "s03",
+      "text": "Black and white, endless energy — pure joy, engineered frame by frame.",
+      "startMs": 14119,
+      "durationMs": 4463
+    },
+    {
+      "sentenceId": "s04",
+      "text": "Ninety-five years later, the copyright clock ran out — and this classic Mickey belongs to everyone.",
+      "startMs": 19382,
+      "durationMs": 5821
+    },
+    {
+      "sentenceId": "s05",
+      "text": "But Mickey never stopped evolving.",
+      "startMs": 26003,
+      "durationMs": 1769
+    },
+    {
+      "sentenceId": "s06",
+      "text": "From theater shorts to the TV treehouse — a rounder, softer, sillier mouse.",
+      "startMs": 31000,
+      "durationMs": 4947
+    },
+    {
+      "sentenceId": "s07",
+      "text": "Same ears. Same shoes. New playgrounds.",
+      "startMs": 36247,
+      "durationMs": 3068
+    },
+    {
+      "sentenceId": "s08",
+      "text": "He has outlived trends, technologies, even time zones.",
+      "startMs": 40115,
+      "durationMs": 3862
+    },
+    {
+      "sentenceId": "s09",
+      "text": "Because the trick was never the whistle. It was the giggle.",
+      "startMs": 44777,
+      "durationMs": 2872
+    },
+    {
+      "sentenceId": "s10",
+      "text": "From steamboat to treehouse — nearly a century of oh boy!",
+      "startMs": 48449,
+      "durationMs": 3403
+    },
+    {
+      "sentenceId": "s11",
+      "text": "Mickey Mouse — still riding the same river.",
+      "startMs": 52652,
+      "durationMs": 2407
+    },
+    {
+      "sentenceId": "s12",
+      "text": "Thanks for sailing with us.",
+      "startMs": 55859,
+      "durationMs": 1429
+    }
+  ]
+}

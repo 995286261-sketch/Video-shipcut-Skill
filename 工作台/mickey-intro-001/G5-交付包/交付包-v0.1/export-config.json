@@ -1,0 +1,57 @@
+{
+  "projectId": "mickey-intro-001",
+  "node": "G5",
+  "platform": "bilibili（B站横版制式；去向=内部留存，不实际上传）",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "codec": "h264",
+    "aspectRatio": "16:9",
+    "note": "成片实际输出 1280x720@30；G3 计划政策文本写 1920x1080，无机器对账（问题 ㉖ 已登记，本片内部自洽）"
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": 44100,
+    "channels": 2,
+    "loudnessTarget": {
+      "integratedLufs": -17.7,
+      "truePeakDbtp": -1.5,
+      "lraTargetLu": 6.0
+    },
+    "narration": {
+      "voice": "Samantha",
+      "voiceTier": "preview_only",
+      "language": "en",
+      "placement": "per-sentence placed track (66.000s)"
+    },
+    "bgm": {
+      "track": "Catchy-Synthwave (Freesound 686768)",
+      "license": "cc-by",
+      "clearedRights": false,
+      "attributionObligation": true,
+      "attributionArtifact": "attribution-credits.md（机器派生，缺口①闭环）",
+      "boundary": "internal_test only"
+    }
+  },
+  "duration": {
+    "targetMs": 66000,
+    "actualMs": 66000,
+    "deltaMs": 0
+  },
+  "subtitles": {
+    "burnedIn": true,
+    "srtDelivered": true,
+    "language": "en",
+    "sourceCaptionTreatment": "B 段底部 86–99% 遮罩压淡源烧录中文（black@0.85，淡影可辨=问题 ㉗ 披露）"
+  },
+  "cover": {
+    "delivered": "cover.jpg",
+    "sourceMs": 264000
+  },
+  "authorization": {
+    "distribution": "internal_test",
+    "sourceBoundary": "两端素材=他人修复/补帧版（只读使用；增强瑕疵随 G0 警告披露）；不声称迪士尼官方授权",
+    "externalReleasePrecondition": "对外发布（B站）必须先清权 BGM 与源素材边界并重走 G4/G5；署名义务已随包"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "projectId": "mickey-intro-001",
+  "status": "complete",
+  "evidencePolicy": "证据=素材包文件实测/官方公开网页逐字摘录，逐条带 sha256 与 locator；无据句标 pending 或按编辑观点句处理；口播句逐条回指 evidenceId。公开证据通道真机受限（见 channelOutage），凡日期级断言无源即不用入稿——宁可删数字，不可默写。",
+  "sourceEvidence": [
+    {
+      "evidenceId": "ev-001",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "kind": "measured_fact",
+      "quote": "汽船威利增强版实测 1280×720@30fps、时长 463.299s；米奇妙妙屋修复版实测 1920×1080@25fps、84.0s、现代段烧录简体中文字幕",
+      "method": "ffprobe 实测（G0 已入册；对账资产=source-02-1928-4k60-69e7b06a + source-02-48c9834f）",
+      "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "relativePath": "03_事实依据/素材制式实测-2026-11-19.md",
+      "supportsClaim": "G1-claim-004"
+    }
+  ],
+  "externalEvidence": [
+    {
+      "evidenceId": "ev-002",
+      "kind": "official_public_web",
+      "sourceUrl": "https://www.copyright.gov/help/faq/faq-duration.html",
+      "retrievedAt": "2026-11-19",
+      "locator": "页首问答 'How long does copyright protection last?'（HTML 存档内检索命中段）",
+      "quote": "the copyright endures for a term of 95 years from the year of its first publication or a term of 120 years from the year of its creation, whichever expires first. For works first published prior to 1978, the term will vary depending on several factors.",
+      "method": "curl 抓取 HTML 全文入证据目录、去标签逐字摘录、sha256 存档",
+      "sha256": "ba1b849d0c41ca5e (HTML 文本前缀，全文见 uscopyright-faq-duration.html)",
+      "relativePath": "G2-证据与口播/证据/uscopyright-faq-duration.html",
+      "supportsClaim": "G1-claim-002",
+      "note": "支撑的是期限规则本身；'1928 发表'这一前提取素材包登记（文件名标注 1928+用户亲供），2024-01-01 进入公有域=1928+95 推算，推算行随证据报告明示"
+    }
+  ],
+  "pendingClaims": [
+    {
+      "claimId": "G1-claim-001",
+      "subject": "首映具体日期/场地（Nov 18, 1928 / Colony Theatre）",
+      "status": "pending",
+      "reason": "公开证据通道真机全数不可达（见 channelOutage），拒绝默写；口播稿已删具体日期、只用'1928 年'（依登记+期限规则旁证）",
+      "resolutionPath": "用户提供源文档或网络恢复后补挂证，G3 前不改口播事实句即可"
+    },
+    {
+      "claimId": "G1-claim-003",
+      "subject": "米奇妙妙屋首播年份 2006（Playhouse Disney）",
+      "status": "pending",
+      "reason": "同上；口播稿现代段用'后来的电视树屋'不带年份，规避断言",
+      "resolutionPath": "同上"
+    }
+  ],
+  "channelOutage": {
+    "testedAt": "2026-11-19T13:40+08:00",
+    "dead": [
+      "en.wikipedia.org/zh.wikipedia.org/simple.wikipedia.org：curl 000 连接失败（-m8，两轮）",
+      "commons.wikimedia.org：curl 000",
+      "britannica.com / imdb.com / baike.baidu.com：HTTP 403（bot 拦截）",
+      "loc.gov 搜索接口：Cloudflare 挑战页（站点头部 200 可达）",
+      "bl search web（百炼联网搜索 model 模式）：HTTP 403 insufficient_quota，免费额度耗尽"
+    ],
+    "alive": [
+      "freesound.org API（G1 找乐实走）",
+      "www.bing.com（可用作发现通道）",
+      "www.copyright.gov（HTML 与 PDF 均 200）"
+    ],
+    "verdict": "本机公开证据通道=窄可行（.gov+发现用搜索）/维基系不通；能力盘点 v0.2 七项全绿未覆盖'公开挂证可达性'=预检覆盖缺口（问题清单⑮）"
+  }
+}

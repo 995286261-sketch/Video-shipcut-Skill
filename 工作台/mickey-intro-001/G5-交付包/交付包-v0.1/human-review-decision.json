@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G5",
+  "performed": false,
+  "replacedBy": "auto-policy:G5",
+  "approvalSource": "auto-policy",
+  "verbatim": "本项目（mickey-intro-001，米老鼠介绍宣传片，内部留存）采用自动确认：G0–G5 各门禁的机器校验照跑、回显卡每节点边界照出，一张不减；批准由本策略预授权代替人工口令，命中条款按策略自动确认并如实记 approvalSource=auto-policy（绝不伪造人类原话）。预授权未覆盖的信任类事项照停（宁可停不可猜）；未清权音乐×对外发布、授权不明×对外发布、人工背书断言三类永久不可预授权。依据=用户 2026-11-19 开工单第 9 问逐字原话「本项目使用自动确认」与 G0 收尾预授权草案卡逐条过目后的逐字口令「全部按建议授权」（全文见 auto-policy.json statement）。",
+  "status": "approved",
+  "decision": "accepted",
+  "decidedAt": "2026-11-19T15:10:00+08:00",
+  "acceptedWarnings": [
+    "BGM《Catchy-Synthwave》(Freesound 686768) license=cc-by 未走完清权登记：仅限内部留存；对外发布必须按 attribution-credits.md 逐字署名并复核许可边界，否则违反权益（委托选定，署名义务机器闭环 v1.35.4 已随包兑现）",
+    "源素材=他人修复/补帧版（《汽船威利》4K60 超分补帧+《米奇妙妙屋》原版无水印修复；个人学习/内部留存边界）：增强瑕疵随 G0 警告披露；B 段烧录中文以 86–99% 遮罩 black@0.85 压淡、淡影可辨（问题 ㉗ 如实披露，非全遮）",
+    "配音=预览级系统声（macOS Samantha）：preview_voice_production 预授权，逐字批准含『预览级』披露词"
+  ],
+  "disclosure": "人工听感/观看验收未执行，由策略自动确认替代；机器校验（解码/黑帧/静音/重复/制式/响度/字幕/转场/BGM 链/署名三态）全部实跑通过，见 metadata-validation-report.json 与各审计件。另如实披露：G3 计划政策文本 1920x1080 vs 成片实际 1280x720@30 无机器对账（问题 ㉖，成片内部自洽）；响度目标经两次 reopen-g3 定格 −17.7（㉔），全程留痕。测试口径=先收集问题不修复（用户 11-19 亲令）。",
+  "autoPolicyRef": "工作台/mickey-intro-001/auto-policy.json"
+}

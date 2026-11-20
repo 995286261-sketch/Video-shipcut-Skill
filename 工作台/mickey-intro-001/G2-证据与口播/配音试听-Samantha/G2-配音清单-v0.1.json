@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G2",
+  "artifactVersion": "v0.1",
+  "purpose": "narration_synthesis_measured_durations",
+  "provider": "macos_say",
+  "voice": "Samantha",
+  "voiceTier": "preview_only",
+  "tierNotice": "macOS system TTS is preview-tier by default; production use requires authorized neural TTS (e.g. Bailian CosyVoice), a human voice, or the user's verbatim explicit approval recorded in the G2 decision field previewTierProductionApproval (green light, 2026-09-29; disclosure word 预览级 must appear in the quoted approval).",
+  "measuredTotalDurationMs": 42560,
+  "sentences": [
+    {
+      "sentenceId": "s01",
+      "text": "A steam whistle. A wooden tiller. And a mouse who loved to laugh.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s01.wav",
+      "durationMs": 3619
+    },
+    {
+      "sentenceId": "s02",
+      "text": "The year was 1928 — one steamboat, one whistle, and a star was born.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s02.wav",
+      "durationMs": 4900
+    },
+    {
+      "sentenceId": "s03",
+      "text": "Black and white, endless energy — pure joy, engineered frame by frame.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s03.wav",
+      "durationMs": 4463
+    },
+    {
+      "sentenceId": "s04",
+      "text": "Ninety-five years later, the copyright clock ran out — and this classic Mickey belongs to everyone.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s04.wav",
+      "durationMs": 5821
+    },
+    {
+      "sentenceId": "s05",
+      "text": "But Mickey never stopped evolving.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s05.wav",
+      "durationMs": 1769
+    },
+    {
+      "sentenceId": "s06",
+      "text": "From theater shorts to the TV treehouse — a rounder, softer, sillier mouse.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s06.wav",
+      "durationMs": 4947
+    },
+    {
+      "sentenceId": "s07",
+      "text": "Same ears. Same shoes. New playgrounds.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s07.wav",
+      "durationMs": 3068
+    },
+    {
+      "sentenceId": "s08",
+      "text": "He has outlived trends, technologies, even time zones.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s08.wav",
+      "durationMs": 3862
+    },
+    {
+      "sentenceId": "s09",
+      "text": "Because the trick was never the whistle. It was the giggle.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s09.wav",
+      "durationMs": 2872
+    },
+    {
+      "sentenceId": "s10",
+      "text": "From steamboat to treehouse — nearly a century of oh boy!",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s10.wav",
+      "durationMs": 3403
+    },
+    {
+      "sentenceId": "s11",
+      "text": "Mickey Mouse — still riding the same river.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s11.wav",
+      "durationMs": 2407
+    },
+    {
+      "sentenceId": "s12",
+      "text": "Thanks for sailing with us.",
+      "file": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/s12.wav",
+      "durationMs": 1429
+    }
+  ],
+  "asrVerification": null,
+  "cacheKey": "D24A70EDF53B107FFE0E8C4D8DE1A90407341235B4069C68585827CC63DE4DD2"
+}

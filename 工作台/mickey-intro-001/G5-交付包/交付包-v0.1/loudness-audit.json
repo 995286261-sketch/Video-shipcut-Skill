@@ -1,0 +1,51 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_verify",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G5-交付包/交付包-v0.1/final-video.mp4",
+  "version": "v0.1",
+  "output": "工作台/mickey-intro-001/G5-交付包/质检证据/响度/响度-验收审计-v0.1.json",
+  "status": "passed",
+  "planRef": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+  "planVersion": "v0.2",
+  "planStatus": "ready",
+  "planRefSha256": "AFCBF808981BECF23397728E2550EEF8A34A36A5C71E2A62B90017C385043FEB",
+  "assemblyRef": null,
+  "targetProfile": {
+    "integratedLufs": -17.7,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 6.0
+  },
+  "toleranceLu": 1.0,
+  "toleranceSource": "合同默认",
+  "tpSlackDb": 0.3,
+  "masterMeasured": {
+    "integratedLufs": -17.8,
+    "truePeakDbtp": -4.1,
+    "loudnessRangeLu": 3.1,
+    "engine": "ffmpeg-ebur128"
+  },
+  "checks": [
+    {
+      "check": "integratedWithinTolerance",
+      "pass": true,
+      "detail": "实测 -17.8 vs 目标 -17.7，偏差 -0.1 LU（容差 ±1.0 LU）"
+    },
+    {
+      "check": "truePeakWithinCeiling",
+      "pass": true,
+      "detail": "实测 TP -4.1 vs 上限 -1.5 dBTP（防回退余量 0.3）"
+    }
+  ],
+  "masterSha256": "3707AE9188061AB2BBDE902DC8BA57C05F806F35F02D080542E83AF709C0AC49",
+  "disclosureNote": null,
+  "failNote": null,
+  "verifiedAt": "2026-11-19T07:06:17Z",
+  "bundleCopy": {
+    "path": "工作台/mickey-intro-001/G5-交付包/交付包-v0.1/loudness-audit.json",
+    "byteIdenticalToNative": true,
+    "nativeReport": "工作台/mickey-intro-001/G5-交付包/质检证据/响度/响度-验收审计-v0.1.json",
+    "note": "⑩ 机械入包副本：交付合同名 loudness-audit.json，与原生版本报告字节相同；原生报告永远是事实源，手工 cp 改名搬运退役"
+  }
+}

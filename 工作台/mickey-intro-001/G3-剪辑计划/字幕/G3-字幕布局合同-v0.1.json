@@ -1,0 +1,40 @@
+{
+ "schemaVersion": "0.1",
+ "projectId": "mickey-intro-001",
+ "node": "G3",
+ "resolution": [
+  1920,
+  1080
+ ],
+ "lanes": {
+  "title": {
+   "topPct": 8,
+   "bottomPct": 18,
+   "usage": "片头标题卡 0.4–4.0s（上部车道，与 s01 cue 4.0s 起错开）"
+  },
+  "infoCard": {
+   "topPct": 30,
+   "bottomPct": 45,
+   "usage": "本项目未启用"
+  },
+  "narration": {
+   "topPct": 77,
+   "bottomPct": 85,
+   "fontsize": 58,
+   "maxLines": 2,
+   "marginV": 170,
+   "marginL": 60,
+   "marginR": 60,
+   "autoWrap": false
+  },
+  "sourceExclusion": {
+   "topPct": 86,
+   "bottomPct": 99,
+   "usage": "B 素材烧录中文字幕带（实测 88–97% 含余量）：口播字幕永不进入本区，G4 遮罩覆盖"
+  }
+ },
+ "sourceCaptionTreatment": {
+  "mask": "seg-05~08（B 素材全部入选窗口）底部 86–99% 黑底窄遮罩 alpha 0.85；crop 破坏 16:9 弃用",
+  "watermark": "A 素材无烧字/水印；增强版画质瑕疵按 G0 警告披露"
+ }
+}

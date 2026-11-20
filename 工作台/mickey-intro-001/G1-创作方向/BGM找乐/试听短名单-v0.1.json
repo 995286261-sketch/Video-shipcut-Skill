@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "listen-shortlist",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 874784,
+      "title": "Curious Little Adventure Synth Arpeggio",
+      "author": "MichiJung",
+      "sourceUrl": "https://freesound.org/s/874784/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Curious Little Adventure Synth Arpeggio\" by MichiJung (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 28.5,
+      "tags": [
+        "ComputerGame",
+        "adventure",
+        "app",
+        "arppegios",
+        "computer",
+        "dance",
+        "digital",
+        "dreamy",
+        "euphoria",
+        "exciting",
+        "fairy",
+        "film"
+      ],
+      "styleTags": [
+        "mysterious",
+        "orchestral",
+        "playful",
+        "steady",
+        "melancholy",
+        "electronic",
+        "driving"
+      ],
+      "retrievedAt": "2026-11-19T13:07:11+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-874784-preview.mp3",
+      "sha256": "0F5B3D68E551C3D0B7B975D9317252404A9653E60C549B0C2E29E186FD38278A",
+      "byteSize": 633381
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685541,
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Drums",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685541/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Neon Dreams: A Retro-Futuristic Synthwave Track - Drums\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 39.7241,
+      "tags": [
+        "80s",
+        "atmospheric",
+        "dreamy",
+        "drums",
+        "electronic",
+        "film",
+        "gaming",
+        "loop",
+        "melody",
+        "nostalgic",
+        "pads",
+        "podcast"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "retrievedAt": "2026-11-19T13:08:05+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-685541-preview.mp3",
+      "sha256": "5389B8F243A690DD341B5F1A951D40EA4CD185649A515056A18018216130748E",
+      "byteSize": 637696
+    }
+  ]
+}

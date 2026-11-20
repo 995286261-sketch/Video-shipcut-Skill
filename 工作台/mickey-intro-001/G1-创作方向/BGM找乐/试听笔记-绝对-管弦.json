@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "absolute",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.10.1",
+    "modelOverride": null
+  },
+  "reference": null,
+  "projectBrief": "2分钟米老鼠介绍宣传片，B站，温馨快节奏，英文旁白+ducking，1928汽船威利到现代演变线",
+  "referenceSha256": null,
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)",
+      "neteaseId": null,
+      "sha256": "D91FA0DF0C4304C576CAC92429BF6CA75AF41CAA749EFE4CAD8FBF5E663E557C",
+      "reused": false,
+      "notes": "1) **曲风**：史诗混合管弦乐（Epic Hybrid Orchestral），典型预告片音乐。\n2) **配器**：快速弦乐Ostinato、辉煌铜管、重型战鼓、Synth Bass及Riser/Impact音效。\n3) **情绪**：紧张激昂、宏大叙事、充满战斗张力。\n4) **能量**：铺垫00:00-00:10；高潮爆发00:10-01:07。\n5) **剪辑**：适合动作大片预告或高燃游戏混剪；忌用于抒情慢镜或静谧对话场景。"
+    },
+    {
+      "title": "SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)",
+      "neteaseId": null,
+      "sha256": "EA87FC48E648754D680957EF1774CBBDE0EAFABD70F0984D0231FB8FC3190A64",
+      "reused": false,
+      "notes": "1) 混合史诗管弦/电影预告片配乐（Hybrid Trailer）。\n2) 清冷钢琴、弦乐断奏与铺底、厚重铜管、定音鼓/混合打击、合成低音、Riser与Impact。\n3) 悲壮紧张，从内省悬念推向英雄式爆发。\n4) 铺垫约00:14–01:09，高潮约01:10–01:28；00:00–00:14为强引子。\n5) 适合史诗预告、战斗/夺冠混剪；不适合日常Vlog或轻松对话，会压过人声。"
+    },
+    {
+      "title": "Epic Orchestral Cue",
+      "neteaseId": null,
+      "sha256": "D5E216AF170B31979AF4759C72EC936942265E5F2F476FB8F2E741535F03ECBC",
+      "reused": false,
+      "notes": "1) **曲风**：史诗管弦乐（Epic Orchestral），典型的好莱坞电影预告片配乐。\n2) **乐器**：重型太鼓与定音鼓构建节奏骨架，铜管组（圆号/长号）演奏压迫感断奏，低音弦乐快速 ostinato，辅以金属撞击与 riser 音效。\n3) **情绪**：肃杀、紧迫、充满力量感与戏剧张力。\n4) **能量结构**：00:00-00:21 为铺垫段，节奏沉稳压抑；00:21-01:04 为高潮段，速度骤增，全编制轰鸣推进。\n5) **剪辑场景**：适合动作大片预告、游戏 Boss 战或极限运动混剪；不适合抒情文戏、自然纪录片或喜剧桥段。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

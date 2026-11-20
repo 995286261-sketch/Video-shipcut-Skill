@@ -1,0 +1,14 @@
+{
+  "fontFile": "/System/Library/Fonts/Supplemental/Songti.ttc",
+  "fontsize": 60,
+  "yRatio": 0.12,
+  "cards": [
+    {
+      "chapterId": "title-01",
+      "title": "从蒸汽船到树屋：米老鼠快讲",
+      "startMs": 1200,
+      "endMs": 4000
+    }
+  ],
+  "note": "G3 批准 packagingDecisions.chapterCards 原样（1.2–4.0s 上部标题车道，起点 1200=黑场入完成后浮现；卡期间装配器自动裁开字幕 cue）"
+}

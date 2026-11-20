@@ -1,0 +1,510 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": null,
+    "tags": null,
+    "similarTo": null,
+    "termsFile": "工作台/mickey-intro-001/G1-创作方向/BGM找乐/BGM-检索词-v0.1.json",
+    "terms": [
+      "upbeat playful synth",
+      "electro swing happy",
+      "warm cartoon pizzicato"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 100.0,
+    "appliedMinSec": 100.0,
+    "maxSec": 300.0
+  },
+  "retrievedAt": "2026-11-19T13:09:28+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 679355,
+      "title": "Pawsome Vibes: Get Your Groove On with ‘Meow Meow",
+      "author": "kjartan_abel",
+      "sourceUrl": "https://freesound.org/s/679355/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Pawsome Vibes: Get Your Groove On with ‘Meow Meow\" by kjartan_abel (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 73.8587,
+      "tags": [
+        "Background",
+        "Cat",
+        "Catchy",
+        "Commons",
+        "Creative",
+        "Electronic",
+        "Fun",
+        "Happy",
+        "Instrumental",
+        "Lo-fi",
+        "Modern",
+        "Playful"
+      ],
+      "styleTags": [
+        "steady",
+        "electronic",
+        "playful",
+        "driving",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:06:47+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-679355-preview.mp3",
+      "sha256": "8545A84D2DFB666F0558E905F2DB73E611EC18C61D9F7123C01CA96D815DDE70",
+      "byteSize": 1769712
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 874784,
+      "title": "Curious Little Adventure Synth Arpeggio",
+      "author": "MichiJung",
+      "sourceUrl": "https://freesound.org/s/874784/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Curious Little Adventure Synth Arpeggio\" by MichiJung (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 28.5,
+      "tags": [
+        "ComputerGame",
+        "adventure",
+        "app",
+        "arppegios",
+        "computer",
+        "dance",
+        "digital",
+        "dreamy",
+        "euphoria",
+        "exciting",
+        "fairy",
+        "film"
+      ],
+      "styleTags": [
+        "mysterious",
+        "orchestral",
+        "playful",
+        "steady",
+        "melancholy",
+        "electronic",
+        "driving"
+      ],
+      "retrievedAt": "2026-11-19T13:07:11+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-874784-preview.mp3",
+      "sha256": "0F5B3D68E551C3D0B7B975D9317252404A9653E60C549B0C2E29E186FD38278A",
+      "byteSize": 633381
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 473996,
+      "title": "Space Arp F Chords.wav",
+      "author": "BuytheField",
+      "sourceUrl": "https://freesound.org/s/473996/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 150.83,
+      "tags": [
+        "ambiance",
+        "ambience",
+        "ambient",
+        "arp",
+        "arpeggiated",
+        "arpeggio",
+        "atmosphere",
+        "background",
+        "cheery",
+        "chords",
+        "electronic",
+        "ethereal"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "steady",
+        "electronic",
+        "mysterious",
+        "orchestral",
+        "driving",
+        "melancholy"
+      ],
+      "retrievedAt": "2026-11-19T13:07:20+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-473996-preview.mp3",
+      "sha256": "40D0A42E1D7B862934C377F4F002206F790BFAAC2036F4816BB68A56D8B510BF",
+      "byteSize": 3405697
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685541,
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Drums",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685541/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Neon Dreams: A Retro-Futuristic Synthwave Track - Drums\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 39.7241,
+      "tags": [
+        "80s",
+        "atmospheric",
+        "dreamy",
+        "drums",
+        "electronic",
+        "film",
+        "gaming",
+        "loop",
+        "melody",
+        "nostalgic",
+        "pads",
+        "podcast"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "retrievedAt": "2026-11-19T13:08:05+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-685541-preview.mp3",
+      "sha256": "5389B8F243A690DD341B5F1A951D40EA4CD185649A515056A18018216130748E",
+      "byteSize": 637696
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685543,
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Instrument 02",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685543/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Neon Dreams: A Retro-Futuristic Synthwave Track - Instrument 02\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 39.7241,
+      "tags": [
+        "80s",
+        "atmospheric",
+        "dreamy",
+        "drums",
+        "electronic",
+        "film",
+        "gaming",
+        "loop",
+        "melody",
+        "nostalgic",
+        "pads",
+        "podcast"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "retrievedAt": "2026-11-19T13:08:14+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-685543-preview.mp3",
+      "sha256": "43C38BA357B9B271C8EC3B2B9116012A7F2194F21D3E9551D3D4068982DB4A66",
+      "byteSize": 668905
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 685542,
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Pad",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/685542/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Neon Dreams: A Retro-Futuristic Synthwave Track - Pad\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 39.7241,
+      "tags": [
+        "80s",
+        "atmospheric",
+        "dreamy",
+        "drums",
+        "electronic",
+        "film",
+        "gaming",
+        "loop",
+        "melody",
+        "nostalgic",
+        "pads",
+        "podcast"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "retrievedAt": "2026-11-19T13:08:25+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-685542-preview.mp3",
+      "sha256": "045DD2BB36C49236DD257A1875D5B7EF562BDE3C4403665BEB22C67309EAFC1C",
+      "byteSize": 791405
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 341370,
+      "title": "Galaga Song - Here We Go! (opening theme)",
+      "author": "SgtPepperArc360",
+      "sourceUrl": "https://freesound.org/s/341370/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Galaga Song - Here We Go! (opening theme)\" by SgtPepperArc360 (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 11.6455,
+      "tags": [
+        "arcade",
+        "arrangement",
+        "beginning",
+        "composition",
+        "galaxian",
+        "games",
+        "jingle",
+        "music",
+        "musical",
+        "opening",
+        "prepare",
+        "song"
+      ],
+      "styleTags": [
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-11-19T13:08:36+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-341370-preview.mp3",
+      "sha256": "D01CEBE8141AAF3D5C5A8DF1BA4EA3682ADE5DAD86BECB916C6B294D55F3903B",
+      "byteSize": 252888
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 686768,
+      "title": "Catchy Synthwave tune",
+      "author": "Robhog",
+      "sourceUrl": "https://freesound.org/s/686768/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Catchy Synthwave tune\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 66.4615,
+      "tags": [
+        "80s",
+        "atmospheric",
+        "dreamy",
+        "drums",
+        "electronic",
+        "film",
+        "gaming",
+        "loop",
+        "melody",
+        "nostalgic",
+        "pads",
+        "podcast"
+      ],
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "retrievedAt": "2026-11-19T13:08:40+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-686768-preview.mp3",
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+      "byteSize": 1601141
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 166263,
+      "title": "Some House Loop Patterns (Wav)",
+      "author": "afleetingspeck",
+      "sourceUrl": "https://freesound.org/s/166263/",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "attributionText": null,
+      "durationSecProbe": 98.0,
+      "tags": [
+        "Chord",
+        "Conga",
+        "Electro",
+        "Epic",
+        "Fusion",
+        "Groove",
+        "Hat",
+        "Heaven",
+        "Hi",
+        "Hit",
+        "House",
+        "Move"
+      ],
+      "styleTags": [
+        "electronic",
+        "epic",
+        "steady",
+        "percussive",
+        "jazz"
+      ],
+      "retrievedAt": "2026-11-19T13:09:02+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-166263-preview.mp3",
+      "sha256": "FA0742FE0267E07738916A174DA44E9F5D6B499ECD655CD317FF97D054C8FAA1",
+      "byteSize": 2018088
+    }
+  ],
+  "excluded": [
+    {
+      "freesoundId": 748950,
+      "name": "Upbeat Funky House (short ver.)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 748947,
+      "name": "Upbeat Funky House (loop ver.1)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 748949,
+      "name": "Upbeat Funky House (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 877348,
+      "name": "Body Work | Minimal Bass Instrumental",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 733399,
+      "name": "Dance and Spin Around (loop ver.2)",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 511412,
+      "name": "Fun Loop",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 877583,
+      "name": "All Night | Synth-pop Instrumental",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    },
+    {
+      "freesoundId": 877567,
+      "name": "Oblivious | Trap Soul Instrumental",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "reason": "license not in {CC0, CC-BY} or carries NC/ND/Sampling restriction"
+    }
+  ],
+  "perQuery": [
+    {
+      "query": "upbeat playful synth",
+      "returned": 24,
+      "cap": 8,
+      "kept": 8
+    },
+    {
+      "query": "electro swing happy",
+      "returned": 1,
+      "cap": 8,
+      "kept": 1
+    },
+    {
+      "query": "warm cartoon pizzicato",
+      "returned": 0,
+      "cap": 8,
+      "kept": 0
+    }
+  ],
+  "sufficiency": {
+    "count": 9,
+    "minimumExpected": 3
+  }
+}

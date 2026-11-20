@@ -1,0 +1,344 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G3",
+  "purpose": "visual-verification-frames",
+  "planRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.3.json",
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceRange": {
+        "startMs": 0,
+        "endMs": 8419
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 0,
+          "sourceMs": 0,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/start-0000000000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 4209,
+          "sourceMs": 4209,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/middle-0000004209ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 8418,
+          "sourceMs": 8418,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/end-0000008418ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-02a",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceRange": {
+        "startMs": 38000,
+        "endMs": 42900
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 38000,
+          "sourceMs": 38000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/start-0000038000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 40450,
+          "sourceMs": 40450,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/middle-0000040450ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 42899,
+          "sourceMs": 42899,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/end-0000042899ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-02b",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceRange": {
+        "startMs": 42900,
+        "endMs": 49381
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 42900,
+          "sourceMs": 42900,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/start-0000042900ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 46140,
+          "sourceMs": 46140,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/middle-0000046140ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 49380,
+          "sourceMs": 49380,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/end-0000049380ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceRange": {
+        "startMs": 378000,
+        "endMs": 383403
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 378000,
+          "sourceMs": 378000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/start-0000378000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 380701,
+          "sourceMs": 380701,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/middle-0000380701ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 383402,
+          "sourceMs": 383402,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/end-0000383402ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceRange": {
+        "startMs": 458000,
+        "endMs": 463297
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 458000,
+          "sourceMs": 458000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/start-0000458000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 460648,
+          "sourceMs": 460648,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/middle-0000460648ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 463296,
+          "sourceMs": 463296,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/end-0000463296ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 6000,
+        "endMs": 11447
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 6000,
+          "sourceMs": 6000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/start-0000006000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 8723,
+          "sourceMs": 8723,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/middle-0000008723ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 11446,
+          "sourceMs": 11446,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/end-0000011446ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 11447,
+        "endMs": 15115
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 11447,
+          "sourceMs": 11447,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/start-0000011447ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 13281,
+          "sourceMs": 13281,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/middle-0000013281ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 15114,
+          "sourceMs": 15114,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/end-0000015114ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 30000,
+        "endMs": 34362
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 30000,
+          "sourceMs": 30000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/start-0000030000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 32181,
+          "sourceMs": 32181,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/middle-0000032181ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 34361,
+          "sourceMs": 34361,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/end-0000034361ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 34362,
+        "endMs": 38834
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 34362,
+          "sourceMs": 34362,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/start-0000034362ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 36598,
+          "sourceMs": 36598,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/middle-0000036598ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 38833,
+          "sourceMs": 38833,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/end-0000038833ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 66000,
+        "endMs": 69403
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 66000,
+          "sourceMs": 66000,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/start-0000066000ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 67701,
+          "sourceMs": 67701,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/middle-0000067701ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 69402,
+          "sourceMs": 69402,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/end-0000069402ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 69403,
+        "endMs": 73410
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 69403,
+          "sourceMs": 69403,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/start-0000069403ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 71406,
+          "sourceMs": 71406,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/middle-0000071406ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 73409,
+          "sourceMs": 73409,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/end-0000073409ms.jpg"
+        }
+      ]
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-48c9834f",
+      "sourceRange": {
+        "startMs": 73410,
+        "endMs": 83551
+      },
+      "frames": [
+        {
+          "label": "start",
+          "requestedSourceMs": 73410,
+          "sourceMs": 73410,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/start-0000073410ms.jpg"
+        },
+        {
+          "label": "middle",
+          "requestedSourceMs": 78480,
+          "sourceMs": 78480,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/middle-0000078480ms.jpg"
+        },
+        {
+          "label": "end",
+          "requestedSourceMs": 83550,
+          "sourceMs": 83550,
+          "path": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/end-0000083550ms.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "0.2",
+  "node": "G4",
+  "projectId": "mickey-intro-001",
+  "status": "prepared_for_render",
+  "inputPlan": "工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.5.json",
+  "inputEvidence": "工作台/mickey-intro-001/G2-证据与口播/G2-证据清单-v0.2.json",
+  "durationDecisionRef": "plan.durationDecision",
+  "sourceAudioPolicy": "exclude",
+  "segmentCount": 12,
+  "timelineDurationMs": 66000,
+  "targetDurationMs": 66000,
+  "durationDeltaMs": 0,
+  "targetFps": 30,
+  "loudnessTarget": {
+    "integratedLufs": -17.4,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 6.0
+  },
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "order": 1,
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "source": {
+        "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+        "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+        "startMs": 0,
+        "endMs": 8419,
+        "durationMs": 8419
+      },
+      "timeline": {
+        "startMs": 0,
+        "endMs": 8419,
+        "durationMs": 8419
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 0,
+        "endMs": 8419,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-001.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-02a",
+      "order": 2,
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "source": {
+        "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+        "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+        "startMs": 38000,
+        "endMs": 42900,
+        "durationMs": 4900
+      },
+      "timeline": {
+        "startMs": 8419,
+        "endMs": 13319,
+        "durationMs": 4900
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 38000,
+        "endMs": 42900,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-002.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-02b",
+      "order": 3,
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "source": {
+        "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+        "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+        "startMs": 42900,
+        "endMs": 49381,
+        "durationMs": 6481
+      },
+      "timeline": {
+        "startMs": 13319,
+        "endMs": 19800,
+        "durationMs": 6481
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 42900,
+        "endMs": 49381,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-003.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-03",
+      "order": 4,
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "source": {
+        "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+        "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+        "startMs": 378000,
+        "endMs": 383403,
+        "durationMs": 5403
+      },
+      "timeline": {
+        "startMs": 19800,
+        "endMs": 25203,
+        "durationMs": 5403
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 378000,
+        "endMs": 383403,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-004.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-04",
+      "order": 5,
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "source": {
+        "relativePath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+        "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+        "startMs": 458000,
+        "endMs": 463297,
+        "durationMs": 5297
+      },
+      "timeline": {
+        "startMs": 25203,
+        "endMs": 30500,
+        "durationMs": 5297
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 458000,
+        "endMs": 463297,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-005.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05a",
+      "order": 6,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 6000,
+        "endMs": 11447,
+        "durationMs": 5447
+      },
+      "timeline": {
+        "startMs": 30500,
+        "endMs": 35947,
+        "durationMs": 5447
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 6000,
+        "endMs": 11447,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-006.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-05b",
+      "order": 7,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 11447,
+        "endMs": 15115,
+        "durationMs": 3668
+      },
+      "timeline": {
+        "startMs": 35947,
+        "endMs": 39615,
+        "durationMs": 3668
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 11447,
+        "endMs": 15115,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-007.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06a",
+      "order": 8,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 30000,
+        "endMs": 34362,
+        "durationMs": 4362
+      },
+      "timeline": {
+        "startMs": 39615,
+        "endMs": 43977,
+        "durationMs": 4362
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 30000,
+        "endMs": 34362,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-008.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-06b",
+      "order": 9,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 34362,
+        "endMs": 38834,
+        "durationMs": 4472
+      },
+      "timeline": {
+        "startMs": 43977,
+        "endMs": 48449,
+        "durationMs": 4472
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 34362,
+        "endMs": 38834,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-009.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07a",
+      "order": 10,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 66000,
+        "endMs": 69403,
+        "durationMs": 3403
+      },
+      "timeline": {
+        "startMs": 48449,
+        "endMs": 51852,
+        "durationMs": 3403
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 66000,
+        "endMs": 69403,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-010.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-07b",
+      "order": 11,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 69403,
+        "endMs": 73410,
+        "durationMs": 4007
+      },
+      "timeline": {
+        "startMs": 51852,
+        "endMs": 55859,
+        "durationMs": 4007
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 69403,
+        "endMs": 73410,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-011.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    },
+    {
+      "segmentId": "seg-08",
+      "order": 12,
+      "assetId": "source-02-48c9834f",
+      "source": {
+        "relativePath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+        "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+        "startMs": 73410,
+        "endMs": 83551,
+        "durationMs": 10141
+      },
+      "timeline": {
+        "startMs": 55859,
+        "endMs": 66000,
+        "durationMs": 10141
+      },
+      "mapping": {
+        "mode": "one_to_one",
+        "playbackRate": 1.0,
+        "freeze": null,
+        "padding": null
+      },
+      "editableSource": {
+        "startMs": 73410,
+        "endMs": 83551,
+        "handleBeforeMs": 0,
+        "handleAfterMs": 0
+      },
+      "transition": {
+        "headExtraMs": 0,
+        "tailExtraMs": 0
+      },
+      "output": {
+        "filename": "seg-012.mp4",
+        "audio": "excluded",
+        "subtitleTreatment": "per G3 source-subtitle policy"
+      },
+      "riskFlags": []
+    }
+  ],
+  "transitionDirective": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.2.json",
+    "sha256": "A242A5B55287EF743F6CECA7BD764F3C1C15988B8D7F2E9A9F8D553CA7BC7E42",
+    "boundaries": 0,
+    "masterFades": {
+      "fadeInMs": 1200,
+      "fadeOutMs": 1500
+    }
+  },
+  "renderRequirements": {
+    "preserveSegmentBoundaries": true,
+    "sourceAudio": "exclude",
+    "flattenedPreview": "qa_only_not_chatcut_timeline_source"
+  }
+}

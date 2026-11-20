@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "provenance": "manual_registration",
+  "title": "Catchy Synthwave tune (Freesound 686768)",
+  "audioPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-686768-preview.mp3",
+  "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+  "byteSize": 1601141,
+  "fileExtension": ".mp3",
+  "sourceUrl": "https://freesound.org/s/686768/",
+  "license": "cc-by",
+  "licenseEvidence": "https://freesound.org/s/686768/",
+  "attribution": "\"Catchy Synthwave tune\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+  "styleTags": [
+    "electronic",
+    "driving"
+  ],
+  "retrievedAt": "2026-11-19T13:31:50+08:00",
+  "distributionBoundary": "internal_test",
+  "decodeProbe": {
+    "status": "passed",
+    "engine": "ffmpeg"
+  },
+  "analysisRef": null
+}

@@ -1,0 +1,34 @@
+{
+ "projectId": "mickey-intro-001",
+ "node": "G3",
+ "schemaVersion": "0.1",
+ "targetSubject": {
+  "canonicalName": "米老鼠 Mickey Mouse（1928 黑白橡胶管四肢形态 + 现代 CGI 红裤白手套形态，两形态同为主体）",
+  "userConfirmed": true,
+  "confirmationBasis": "approvalSource=auto-policy：G0 开工单 Q1 主题=介绍米老鼠宣传片（用户原话『做一个米老鼠的宣传片，介绍一下米老鼠』）；策略条款 subject_policy 预授权承载主体政策（用户逐字『全部按建议授权』）。确认对象=主体身份+识别/排除规则，非逐片段。",
+  "autoPolicyRef": "工作台/mickey-intro-001/auto-policy.json",
+  "identificationRules": [
+   "黑白段：圆耳黑头+白手套+短裤=1928 形态米奇",
+   "彩色 CGI 段：黑圆耳+红短裤黄鞋白手套=现代形态米奇",
+   "两形态同判 confirmed（演变线主题本身）"
+  ],
+  "exclusionRules": [
+   "皮特（大猫）/奶牛/鹦鹉/山羊等配角单独画面判 not_present，不得当米奇镜头入选",
+   "戴西/高飞/米妮单独画面判 not_present",
+   "无法辨认的远景小点判 uncertain 不入选",
+   "种族争议年代段落（如黑人拟化情节）按 G1 风格规则整段回避，不入选"
+  ]
+ },
+ "sufficiencyFallback": {
+  "preApproved": "shorten_output",
+  "approvedBy": "auto-policy 条款 sufficiency_shorten（用户逐字『全部按建议授权』；approvalSource=auto-policy）",
+  "approvedAt": "2026-11-19T11:50:00+08:00",
+  "note": "BGM 供给时长不足已走本出路（G1 ⑫）；素材侧 84s+463s 覆盖充裕"
+ },
+ "analysisScopeDecision": {
+  "mode": "全片网格探索",
+  "spec": "A 20s 网格 25 帧 + B 6s 网格 15 帧（B 短素材加密）",
+  "basis": "素材总长 547s，网格成本可控；B 段 84s 需 6s 级密度定位遮罩窗口与 logo 卡"
+ },
+ "candidateVerificationRule": "每个入选窗口以网格帧+验证帧逐帧核验（A 20s 网格 25 帧、B 6s 网格 15 帧瓦片批读在案；G4 前窗口起/中/终验证帧复看）；任一帧不满足节拍最低可见证据或触犯排除规则（配角单独画面、种族争议段落）即换窗或弃段；身份判据=targetSubject.identificationRules+exclusionRules，逐帧回链观察账本 recordId。"
+}

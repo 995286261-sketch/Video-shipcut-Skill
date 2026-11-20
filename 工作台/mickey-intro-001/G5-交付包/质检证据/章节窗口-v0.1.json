@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "projectId": "mickey-intro-001",
+  "purpose": "章节窗口=编排编辑决定（4 章连续铺满 66000ms；成员段由输出网格机械判定）",
+  "chapters": [
+    { "chapterId": "ch-01", "title": "1928：汽船威利号", "outputStartMs": 0, "outputEndMs": 30500 },
+    { "chapterId": "ch-02", "title": "九十五年：演变", "outputStartMs": 30500, "outputEndMs": 48449 },
+    { "chapterId": "ch-03", "title": "诀窍不是汽笛", "outputStartMs": 48449, "outputEndMs": 55859 },
+    { "chapterId": "ch-04", "title": "河上再见", "outputStartMs": 55859, "outputEndMs": 66000 }
+  ]
+}

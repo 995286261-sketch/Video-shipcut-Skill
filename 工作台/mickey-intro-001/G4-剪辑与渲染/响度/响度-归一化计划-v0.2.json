@@ -1,0 +1,31 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_plan",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G4-剪辑与渲染/G4-配音轨-v0.1.wav",
+  "version": "v0.2",
+  "output": "工作台/mickey-intro-001/G4-剪辑与渲染/响度/响度-归一化计划-v0.2.json",
+  "status": "ready",
+  "targetProfile": {
+    "integratedLufs": -17.7,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 6.0
+  },
+  "measured": {
+    "engine": "ffmpeg-loudnorm-pass1",
+    "inputI": -16.86,
+    "inputTp": -0.75,
+    "inputLra": 3.5,
+    "inputThresh": -27.07
+  },
+  "gainDb": -0.84,
+  "estimatedTruePeak": -1.59,
+  "ceilingLufs": -17.6,
+  "blockedReasons": [],
+  "exits": [],
+  "chain": "loudnorm=I=-17.7:TP=-1.5:LRA=6.0:measured_I=-16.86:measured_TP=-0.75:measured_LRA=3.5:measured_thresh=-27.07:offset=0.0:linear=true:print_format=json",
+  "chainNote": "linear=true 前提已在本文件对账通过；执行者逐字使用 chain、不许改参数。若执行环境实测与 inputI/inputTp 不符（源变了），chain 即作废必须重规划——回退 dynamic 视同违规。",
+  "sha256": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC",
+  "plannedAt": "2026-11-19T06:46:14Z"
+}

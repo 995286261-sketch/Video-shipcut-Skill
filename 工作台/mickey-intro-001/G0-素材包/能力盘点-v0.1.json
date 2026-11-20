@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "capability-audit",
+  "skill": "p0-c-pipeline",
+  "projectId": "mickey-intro-001",
+  "profile": [
+    "bgm",
+    "narration",
+    "subtitles"
+  ],
+  "probedAt": "2026-11-19T11:42:58+08:00",
+  "host": {
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64"
+  },
+  "items": [
+    {
+      "id": "ffmpeg-core",
+      "labelPlain": "剪辑与渲染引擎（ffmpeg/ffprobe）",
+      "status": "ready",
+      "evidence": {
+        "versionLine": "ffmpeg version 7.0 Copyright (c) 2000-2024 the FFmpeg developers"
+      },
+      "affects": [
+        "G2",
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "loudness-meter",
+      "labelPlain": "测响度的尺（ebur128/loudnorm）",
+      "status": "ready",
+      "evidence": {
+        "check": "ffmpeg -filters",
+        "found": [
+          "ebur128",
+          "loudnorm",
+          "volumedetect"
+        ]
+      },
+      "affects": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "bgm-search",
+      "labelPlain": "找乐通道（Freesound 凭据在场）",
+      "status": "missing",
+      "evidence": {
+        "check": "env present only",
+        "lookedFor": [
+          "MUSIC_EXPERT_FREESOUND_TOKEN",
+          "P0C_FREESOUND_TOKEN"
+        ]
+      },
+      "affects": [
+        "G1"
+      ],
+      "remedy": "申请 Freesound token（freesound.org/apiv2/apply）写入 ~/.zshrc（MUSIC_EXPERT_FREESOUND_TOKEN），别让 AI 经手值；分步指引=skill/music-expert/references/freesound-token-sop-card.md"
+    },
+    {
+      "id": "listen",
+      "labelPlain": "这台机器的耳朵（试听笔记模型）",
+      "status": "ready",
+      "evidence": {
+        "check": "music_listen_omni.probe_capability",
+        "binary": "bl",
+        "detail": "bl 2.10.1"
+      },
+      "affects": [
+        "G1"
+      ]
+    },
+    {
+      "id": "narration-voices",
+      "labelPlain": "配音音色（系统语音）",
+      "status": "ready",
+      "evidence": {
+        "check": "local_tts.available_voices",
+        "installedCount": 174,
+        "requested": [],
+        "absent": []
+      },
+      "affects": [
+        "G2",
+        "G4"
+      ]
+    },
+    {
+      "id": "subtitles-render",
+      "labelPlain": "字幕烧录渲染",
+      "status": "ready",
+      "evidence": {
+        "check": "subtitle_probe_renderer.probe_ffmpeg",
+        "evidence": {
+          "versionLine": "ffmpeg version 7.0 Copyright (c) 2000-2024 the FFmpeg developers",
+          "libass": "unknown (enabled at build, no version line)",
+          "libassEnabled": true
+        }
+      },
+      "affects": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "card-fonts",
+      "labelPlain": "字卡/字幕字体在场",
+      "status": "ready",
+      "evidence": {
+        "listSource": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/skill/p0-c-pipeline/references/runtime-dependencies.md",
+        "declared": [
+          "/System/Library/Fonts/PingFang.ttc",
+          "/System/Library/Fonts/Supplemental/Songti.ttc"
+        ],
+        "present": [
+          "/System/Library/Fonts/Supplemental/Songti.ttc"
+        ]
+      },
+      "affects": [
+        "G4"
+      ]
+    },
+    {
+      "id": "transitions-xfade",
+      "labelPlain": "转场引擎（ffmpeg xfade）",
+      "status": "not_applicable",
+      "evidence": {
+        "probed": false
+      },
+      "affects": [
+        "G3",
+        "G4"
+      ],
+      "note": "本轮未涉（转场通常 G3 计划才定，届时增量重跑本盘点）"
+    }
+  ],
+  "summary": {
+    "ready": 6,
+    "missing": 1,
+    "notApplicable": 1,
+    "missingIds": [
+      "bgm-search"
+    ]
+  },
+  "basis": "能力预检申报——探针全部转调各专员现成入口（合同见 references/capability-audit-contract.md）；申报非预授权，缺口节点前必须补齐或人工拍板降级"
+}

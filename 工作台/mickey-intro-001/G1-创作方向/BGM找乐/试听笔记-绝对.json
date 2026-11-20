@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "absolute",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.10.1",
+    "modelOverride": null
+  },
+  "reference": null,
+  "projectBrief": "2分钟米老鼠介绍宣传片，B站，温馨快节奏，英文旁白+ducking",
+  "referenceSha256": null,
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Space Arp F Chords.wav",
+      "neteaseId": null,
+      "sha256": "40D0A42E1D7B862934C377F4F002206F790BFAAC2036F4816BB68A56D8B510BF",
+      "reused": false,
+      "notes": "1) **流派**：太空氛围电子 (Space Ambient / Glitch)。\n2) **音色**：纯合成器编制。高频电子琶音与水滴状Pluck音色交织，辅以深邃Pad铺底，无实体打击乐。\n3) **情绪**：空灵、神秘、充满未来科技感与悬浮感，冷静且克制。\n4) **能量**：铺垫段 00:00-00:21；高潮段 00:22-01:02（音符密度与速度骤增）；01:03后渐弱回落。\n5) **场景**：适合科技产品发布、太空探索纪录片或UI交互演示；不适合激烈动作戏或强情感宣泄的叙事画面。"
+    },
+    {
+      "title": "Pawsome Vibes: Get Your Groove On with ‘Meow Meow",
+      "neteaseId": null,
+      "sha256": "8545A84D2DFB666F0558E905F2DB73E611EC18C61D9F7123C01CA96D815DDE70",
+      "reused": false,
+      "notes": "1) **曲风**：Lo-fi Hip Hop（Chillhop）。\n2) **乐器与音色**：带哇音/颤音效果的电钢琴（Rhodes质感）、Boom-bap风格采样鼓组、低沉圆润的贝斯，叠加黑胶炒豆底噪。\n3) **情绪与气质**：慵懒、怀旧、放松、惬意，极具深夜氛围感。\n4) **能量结构**：全曲为平稳的Loop循环，无传统意义上的高潮爆发。主体段贯穿 00:00-01:14。\n5) **剪辑场景**：适合深夜Vlog、学习工作白噪音或咖啡品牌宣发；不适合快节奏动作戏或需要强烈情绪起伏的竞技混剪。"
+    },
+    {
+      "title": "Catchy Synthwave tune",
+      "neteaseId": null,
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+      "reused": false,
+      "notes": "1) 流派：出神舞曲 (Trance) 融合渐进浩室。\n2) 音色：强劲电子鼓、脉冲合成器贝斯、明亮 Lead Synth 及氛围 Pad。\n3) 气质：高能、激昂、充满速度感与未来科技气息。\n4) 结构：00:00-00:07 为节奏铺垫；00:07 主旋律切入后持续至高潮。\n5) 场景：适合运动混剪、游戏竞速或夜店镜头；不适合舒缓情感戏或静态访谈。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

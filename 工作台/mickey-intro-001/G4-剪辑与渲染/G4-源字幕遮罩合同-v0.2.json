@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G4",
+  "projectId": "mickey-intro-001",
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "masks": [
+    {
+      "maskId": "m-seg-05a",
+      "segmentId": "seg-05a",
+      "outputFromMs": 30500,
+      "outputToMs": 35947,
+      "bandYpx": [
+        626,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B02r2, exp-B16 的 captionZones 观测带并集 [(89, 96), (89, 96)]，margin 2.0pct 得带顶 87.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-05b",
+      "segmentId": "seg-05b",
+      "outputFromMs": 35947,
+      "outputToMs": 39615,
+      "bandYpx": [
+        634,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B03r2 的 captionZones 观测带并集 [(90, 96)]，margin 2.0pct 得带顶 88.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-06a",
+      "segmentId": "seg-06a",
+      "outputFromMs": 39615,
+      "outputToMs": 43977,
+      "bandYpx": [
+        626,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B06r2 的 captionZones 观测带并集 [(89, 96)]，margin 2.0pct 得带顶 87.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-06b",
+      "segmentId": "seg-06b",
+      "outputFromMs": 43977,
+      "outputToMs": 48449,
+      "bandYpx": [
+        583,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B22 的 captionZones 观测带并集 [(83, 89), (89, 95)]，margin 2.0pct 得带顶 81.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-07a",
+      "segmentId": "seg-07a",
+      "outputFromMs": 48449,
+      "outputToMs": 51852,
+      "bandYpx": [
+        626,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B12r2 的 captionZones 观测带并集 [(89, 96)]，margin 2.0pct 得带顶 87.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-07b",
+      "segmentId": "seg-07b",
+      "outputFromMs": 51852,
+      "outputToMs": 55859,
+      "bandYpx": [
+        583,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B13r2, exp-B24 的 captionZones 观测带并集 [(83, 88), (89, 95), (83, 88), (89, 95)]，margin 2.0pct 得带顶 81.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    },
+    {
+      "maskId": "m-seg-08",
+      "segmentId": "seg-08",
+      "outputFromMs": 55859,
+      "outputToMs": 66000,
+      "bandYpx": [
+        583,
+        720
+      ],
+      "color": "black@0.85",
+      "basis": "机械派生自观察记录 exp-B14r2, exp-B25, exp-B26, exp-B28, exp-B30 的 captionZones 观测带并集 [(83, 89), (89, 95), (83, 89), (89, 95), (83, 89), (89, 95), (90, 96), (90, 96)]，margin 2.0pct 得带顶 81.0%；y1=画布底缘如实反映 drawbox 画到底语义（㉚）"
+    }
+  ],
+  "generatedBy": "g4_build_mask_contract.py 机械派生自批准计划 sourceCaptionTreatment + 观察账本 captionZones（㉙：手写转写通道退役，本文件唯一生成入口）",
+  "derivedFrom": {
+    "plan": "G3-剪辑计划/G3-剪辑计划-v0.7.json",
+    "planSha256": "8A6E9802376388FD12EAAACBBEB798DCBCFF92921A926F01F82B2E2B7DE149A9",
+    "ledger": "G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+    "ledgerSha256": "DEB86B7F0F6DD50CDD61AAE6503EC571E955B9B91165C438471E0A7DFCDFC02E",
+    "marginPct": 2.0
+  },
+  "generatedAt": "2026-11-20T09:41:51Z"
+}

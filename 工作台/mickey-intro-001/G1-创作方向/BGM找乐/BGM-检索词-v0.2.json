@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "skill": "music-expert",
+  "purpose": "bgm_search_terms",
+  "catalog": "netease",
+  "inputs": {
+    "preference": null,
+    "themeRef": null,
+    "themeText": "米老鼠近百年演变：1928汽船威利黑白管弦 → 现代米奇妙妙屋",
+    "styleBriefRef": null
+  },
+  "terms": [
+    {
+      "term": "happy orchestral adventure",
+      "rationale": "受控词表 warm/orchestral+米老鼠黄金时代管弦乐拟像",
+      "source": "theme"
+    },
+    {
+      "term": "playful cartoon strings brass",
+      "rationale": "受控词表 playful+体裁直译(第一轮 playful 标签实测多为 lo-fi/电子，改体裁词直取真卡通管弦)",
+      "source": "theme"
+    },
+    {
+      "term": "upbeat warm cinematic comedy",
+      "rationale": "快节奏+温馨+喜剧短片体裁",
+      "source": "theme"
+    }
+  ],
+  "filters": {
+    "durationMinSec": 120,
+    "durationMaxSec": null,
+    "bpmRange": null
+  },
+  "distributionBoundary": "internal_test",
+  "retrievedAt": "2026-11-19T13:17:03+08:00"
+}

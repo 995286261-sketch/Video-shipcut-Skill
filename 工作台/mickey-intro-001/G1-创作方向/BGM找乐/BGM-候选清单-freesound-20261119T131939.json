@@ -1,0 +1,507 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "epic orchestral trailer",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "epic orchestral trailer"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 15.0,
+    "appliedMinSec": 15.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:19:39+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767842,
+      "title": "SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767842/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 95.12,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767835,
+      "title": "SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767835/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 141.32,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 449202,
+      "title": "Epic Orchestral Cue",
+      "author": "graham_makes",
+      "sourceUrl": "https://freesound.org/s/449202/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Orchestral Cue\" by graham_makes (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 81.7232,
+      "tags": [
+        "90bpm",
+        "brass",
+        "cinematic",
+        "dramatic",
+        "epic",
+        "film",
+        "hollywood",
+        "horns",
+        "intense",
+        "movie",
+        "orchestral",
+        "percussion"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "percussive"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767837,
+      "title": "SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767837/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 118.978,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767843,
+      "title": "SunixMuz - Dream alive (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767843/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Dream alive (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 93.5919,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767834,
+      "title": "SunixMuz - An Epic Journey (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767834/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - An Epic Journey (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 87.44,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767836,
+      "title": "SunixMuz - Battle Of Avalon (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767836/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Battle Of Avalon (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 68.76,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767840,
+      "title": "SunixMuz - Dark Castle (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767840/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Dark Castle (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 72.9233,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767841,
+      "title": "SunixMuz - Dark Cave (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767841/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Dark Cave (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 77.92,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767838,
+      "title": "SunixMuz - Brave Fight (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767838/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Brave Fight (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 66.08,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767844,
+      "title": "SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767844/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Follow the road (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 184.32,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767839,
+      "title": "SunixMuz - Bravery  (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767839/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Bravery  (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 83.92,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:19:39+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "not_run",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null
+    }
+  ],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "epic orchestral trailer",
+      "returned": 36,
+      "cap": 12,
+      "kept": 12
+    }
+  ],
+  "sufficiency": {
+    "count": 12,
+    "minimumExpected": 3
+  }
+}

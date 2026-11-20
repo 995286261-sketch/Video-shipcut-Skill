@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_audition_notes",
+  "mode": "absolute",
+  "capability": {
+    "available": true,
+    "audioModel": "bl 2.10.1",
+    "modelOverride": null
+  },
+  "reference": null,
+  "projectBrief": "2分钟米老鼠介绍宣传片，B站，温馨快节奏，英文旁白+ducking",
+  "referenceSha256": null,
+  "library": "experience/music",
+  "tracks": [
+    {
+      "title": "Curious Little Adventure Synth Arpeggio",
+      "neteaseId": null,
+      "sha256": "0F5B3D68E551C3D0B7B975D9317252404A9653E60C549B0C2E29E186FD38278A",
+      "reused": false,
+      "notes": "1) **曲风**：氛围电子 (Ambient Electronic) 融合故障艺术 (Glitch)。\n2) **乐器**：合成器Pad铺底、类似八音盒或钢片琴的清脆主旋律、数字颗粒音效。\n3) **情绪**：空灵、梦幻、带有轻微的怀旧与科幻疏离感。\n4) **能量结构**：铺垫段约 00:00-00:08（单一旋律引入）；高潮段约 00:08-00:18（声场拓宽，层次叠加）；随后渐弱至静音。\n5) **剪辑建议**：适合科幻电影开场、梦境转场或高科技产品发布会；不适合激烈动作戏或喧闹的派对场景。"
+    },
+    {
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Drums",
+      "neteaseId": null,
+      "sha256": "5389B8F243A690DD341B5F1A951D40EA4CD185649A515056A18018216130748E",
+      "reused": false,
+      "notes": "1) 曲风：复古电子舞曲 / 经典浩室（House）鼓点。\n2) 乐器与音色：纯电子打击乐，深沉弹性的底鼓（Kick）搭配清脆带混响的军鼓/拍手（Snare/Clap）。\n3) 情绪与气质：动感、机械、规律，充满复古俱乐部的驱动力。\n4) 能量结构：全曲为单一Loop循环，无铺垫与高潮之分，00:00至00:39能量保持恒定。\n5) 剪辑场景：适合复古舞池、运动健身或强节奏卡点视频；不适合注重情感叙事或舒缓放松的风景空镜。"
+    }
+  ],
+  "partialFailures": [],
+  "writebackFailures": [],
+  "skippedWithoutPreview": [],
+  "disclaimer": "模型试听笔记仅供参考，不作为门禁通过条件；最终取舍在人耳。"
+}

@@ -1,0 +1,19 @@
+{
+  "issue": "⑥ 现场实弹（mickey-intro-001，2026-11-19）",
+  "defect": "local_tts.py:138 model.transcribe(..., language=\"zh\") 硬编码；英文片走英文合成后 ASR 回读=中文幻觉",
+  "command": "local_tts.py --sentences <12句EN> --voice Samantha --verify-asr",
+  "status": "blocked (asr_readback_mismatch: s04 0.056 / s08 0.0 低于 0.6)",
+  "note": "合成层 12 句 wav 正常产出、blocked 发生在回读验证；其余十句回读 0.82-1.0 系英文逐字碰对，zh 幻觉只在复杂句爆——比彩排版认知更深一层",
+  "hallucinations": {
+    "s04": {
+      "expected": "Ninety-five years later, the copyright clock ran out — and this classic Mickey belongs to everyone.",
+      "heard_zh_hant": "95年後時隔時離開了這類型的Mikki是每個人都需要的",
+      "similarity": 0.056
+    },
+    "s08": {
+      "expected": "He has outlived trends, technologies, even time zones.",
+      "heard_zh_hant": "他有出生技術甚至時間",
+      "similarity": 0.0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "skill": "loudness-expert",
+  "purpose": "loud_plan",
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "source": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+  "version": "v0.3",
+  "output": "工作台/mickey-intro-001/G2-证据与口播/响度/响度-归一化计划-v0.3.json",
+  "status": "ready",
+  "targetProfile": {
+    "integratedLufs": -17.4,
+    "truePeakDbtp": -1.5,
+    "lraTargetLu": 6.0
+  },
+  "measured": {
+    "engine": "ffmpeg-loudnorm-pass1",
+    "inputI": -16.59,
+    "inputTp": -0.75,
+    "inputLra": 1.5,
+    "inputThresh": -26.62
+  },
+  "gainDb": -0.81,
+  "estimatedTruePeak": -1.56,
+  "ceilingLufs": -17.3,
+  "blockedReasons": [],
+  "exits": [],
+  "chain": "loudnorm=I=-17.4:TP=-1.5:LRA=6.0:measured_I=-16.59:measured_TP=-0.75:measured_LRA=1.5:measured_thresh=-26.62:offset=0.0:linear=true:print_format=json",
+  "chainNote": "linear=true 前提已在本文件对账通过；执行者逐字使用 chain、不许改参数。若执行环境实测与 inputI/inputTp 不符（源变了），chain 即作废必须重规划——回退 dynamic 视同违规。",
+  "sha256": "F6E0737A93456AA65FE3FDAE0815685BBA82B0DDCDA9DDFF0B6C22E6182CB534",
+  "plannedAt": "2026-11-19T06:17:30Z"
+}

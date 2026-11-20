@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_recommendation",
+  "profile": {
+    "schemaVersion": "0.1",
+    "purpose": "bgm-requirements",
+    "targetDurationSec": 120,
+    "bpmRange": [
+      100,
+      135
+    ],
+    "styleTags": [
+      "warm",
+      "playful",
+      "orchestral",
+      "electronic",
+      "driving"
+    ],
+    "minSegments": 4,
+    "distributionBoundary": "internal_test",
+    "note": "依据=G0需求说明「温馨快节奏」→受控词表映射 warm/playful/driving + 候选池体裁 orchestral/electronic；BPM区间100-135=快节奏；素材池无 happy/cartoon 标签（受控词表外），如实映射"
+  },
+  "minScore": 0.7,
+  "ranked": [
+    {
+      "title": "Space Arp F Chords.wav",
+      "freesoundId": 473996,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/473996/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-473996-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 150830,
+      "tempoBpm": 117.45,
+      "integratedLufs": -10.9,
+      "hitPointCount": 852,
+      "styleTags": [
+        "ambient-low",
+        "steady",
+        "electronic",
+        "mysterious",
+        "orchestral",
+        "driving",
+        "melancholy"
+      ],
+      "sha256": "40D0A42E1D7B862934C377F4F002206F790BFAAC2036F4816BB68A56D8B510BF",
+      "score": 0.96,
+      "notes": [
+        "tags 3/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:30.830"
+    },
+    {
+      "title": "Pawsome Vibes: Get Your Groove On with ‘Meow Meow",
+      "freesoundId": 679355,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/679355/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-679355-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 73859,
+      "tempoBpm": 103.36,
+      "integratedLufs": -16.8,
+      "hitPointCount": 358,
+      "styleTags": [
+        "steady",
+        "electronic",
+        "playful",
+        "driving",
+        "orchestral"
+      ],
+      "sha256": "8545A84D2DFB666F0558E905F2DB73E611EC18C61D9F7123C01CA96D815DDE70",
+      "score": 0.7574,
+      "notes": [
+        "shorter_than_target",
+        "tags 4/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:13.859"
+    },
+    {
+      "title": "Catchy Synthwave tune",
+      "freesoundId": 686768,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/686768/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-686768-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 66462,
+      "tempoBpm": 129.2,
+      "integratedLufs": -8.2,
+      "hitPointCount": 263,
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+      "score": 0.7015,
+      "notes": [
+        "shorter_than_target",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:06.462"
+    },
+    {
+      "title": "Some House Loop Patterns (Wav)",
+      "freesoundId": 166263,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/166263/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-166263-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 98000,
+      "tempoBpm": 95.7,
+      "integratedLufs": -17.4,
+      "hitPointCount": 476,
+      "styleTags": [
+        "electronic",
+        "epic",
+        "steady",
+        "percussive",
+        "jazz"
+      ],
+      "sha256": "FA0742FE0267E07738916A174DA44E9F5D6B499ECD655CD317FF97D054C8FAA1",
+      "score": 0.539,
+      "notes": [
+        "shorter_than_target",
+        "bpm_out_of_range",
+        "tags 1/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:38.000"
+    }
+  ],
+  "passing": [
+    {
+      "title": "Space Arp F Chords.wav",
+      "freesoundId": 473996,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/473996/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-473996-preview.mp3",
+      "licenseType": "cc0",
+      "attributionRequired": false,
+      "durationMs": 150830,
+      "tempoBpm": 117.45,
+      "integratedLufs": -10.9,
+      "hitPointCount": 852,
+      "styleTags": [
+        "ambient-low",
+        "steady",
+        "electronic",
+        "mysterious",
+        "orchestral",
+        "driving",
+        "melancholy"
+      ],
+      "sha256": "40D0A42E1D7B862934C377F4F002206F790BFAAC2036F4816BB68A56D8B510BF",
+      "score": 0.96,
+      "notes": [
+        "tags 3/5"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "2:30.830"
+    },
+    {
+      "title": "Pawsome Vibes: Get Your Groove On with ‘Meow Meow",
+      "freesoundId": 679355,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/679355/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-679355-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 73859,
+      "tempoBpm": 103.36,
+      "integratedLufs": -16.8,
+      "hitPointCount": 358,
+      "styleTags": [
+        "steady",
+        "electronic",
+        "playful",
+        "driving",
+        "orchestral"
+      ],
+      "sha256": "8545A84D2DFB666F0558E905F2DB73E611EC18C61D9F7123C01CA96D815DDE70",
+      "score": 0.7574,
+      "notes": [
+        "shorter_than_target",
+        "tags 4/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:13.859"
+    },
+    {
+      "title": "Catchy Synthwave tune",
+      "freesoundId": 686768,
+      "neteaseId": null,
+      "provenance": "freesound_api",
+      "sourceUrl": "https://freesound.org/s/686768/",
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-686768-preview.mp3",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "durationMs": 66462,
+      "tempoBpm": 129.2,
+      "integratedLufs": -8.2,
+      "hitPointCount": 263,
+      "styleTags": [
+        "ambient-low",
+        "mysterious",
+        "percussive",
+        "electronic",
+        "orchestral",
+        "steady"
+      ],
+      "sha256": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+      "score": 0.7015,
+      "notes": [
+        "shorter_than_target",
+        "tags 2/5",
+        "license_weighted_down"
+      ],
+      "infringementRisk": false,
+      "distributionBoundary": "internal_test",
+      "durationDisplay": "1:06.462"
+    }
+  ],
+  "unanalyzed": [
+    {
+      "title": "Curious Little Adventure Synth Arpeggio",
+      "freesoundId": 874784,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Drums",
+      "freesoundId": 685541,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Instrument 02",
+      "freesoundId": 685543,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Neon Dreams: A Retro-Futuristic Synthwave Track - Pad",
+      "freesoundId": 685542,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    },
+    {
+      "title": "Galaga Song - Here We Go! (opening theme)",
+      "freesoundId": 341370,
+      "hint": "run music_analyze.py on this candidate to make it rankable"
+    }
+  ],
+  "sufficiency": {
+    "passing": 3,
+    "minExpected": 3,
+    "enough": true,
+    "gapAction": null
+  }
+}

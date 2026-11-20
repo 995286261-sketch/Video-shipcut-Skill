@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "funny quirky cartoon comedy",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "funny quirky cartoon comedy"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 15.0,
+    "appliedMinSec": 15.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:20:01+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 427513,
+      "title": "Chiptune One.wav",
+      "author": "CarlosCarty",
+      "sourceUrl": "https://freesound.org/s/427513/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Chiptune One.wav\" by CarlosCarty (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 48.0,
+      "tags": [
+        "80",
+        "arcade",
+        "artificial",
+        "chiptune",
+        "computer",
+        "digital",
+        "electromechanics",
+        "film",
+        "game",
+        "machine",
+        "mechanical",
+        "retro"
+      ],
+      "styleTags": [
+        "orchestral",
+        "electronic"
+      ],
+      "retrievedAt": "2026-11-19T13:19:42+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-427513-preview.mp3",
+      "sha256": "16DCB4775DBCAD2B332A735057ED48B255818FC22AB6C37CB29B8111F0A4718B",
+      "byteSize": 1348734
+    }
+  ],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "funny quirky cartoon comedy",
+      "returned": 1,
+      "cap": 12,
+      "kept": 1
+    }
+  ],
+  "sufficiency": {
+    "count": 1,
+    "minimumExpected": 3
+  }
+}

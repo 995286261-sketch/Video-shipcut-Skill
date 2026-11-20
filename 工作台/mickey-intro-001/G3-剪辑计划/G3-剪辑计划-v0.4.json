@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G3",
+  "status": "approved_for_g4",
+  "sourceAudioPolicy": "exclude",
+  "fps": 30,
+  "timelineDurationMs": 66000,
+  "narrationDraft": "工作台/mickey-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+  "narrationDecisionRef": "工作台/mickey-intro-001/G2-证据与口播/G2-决定-v0.3.json",
+  "semanticBeatRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-口播语义节拍-v0.1.json",
+  "visualAnalysisRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉分析-v0.1.json",
+  "subjectConfirmationRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-目标主体确认-v0.1.json",
+  "observationLedgerRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-视觉观察账本-v0.1.json",
+  "verificationFramesRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+  "durationDecision": {
+    "targetDurationSec": 66,
+    "narrationEstimatedDurationSec": 42.56,
+    "resolution": "preserve_target_with_editorial_padding",
+    "decisionReason": "G1 ⑫ 时长闸已走缩短出路：目标由『2min 左右』修订为 66s（≤BGM 轨长 66508ms）。口播实测 42.56s+编辑性呼吸（片头 4s/转场 2.7s/片尾 8.7s）=66s。sufficiency_shorten 预授权在场（G1 卡+本卡双披露）。",
+    "intentionalSilence": [
+      {
+        "startMs": 0,
+        "endMs": 4000,
+        "purpose": "片头氛围（汽船+汽笛，黑场入 1200ms）",
+        "bgmPolicy": "approved_bgm_fade_in"
+      },
+      {
+        "startMs": 27772,
+        "endMs": 30500,
+        "purpose": "THE END→现代转场呼吸（crossfade 800ms 于 30500）",
+        "bgmPolicy": "approved_bgm_sustained"
+      },
+      {
+        "startMs": 57288,
+        "endMs": 66000,
+        "purpose": "片尾 logo 卡+音乐收束（fade out 64000 起）",
+        "bgmPolicy": "approved_bgm_fade_out"
+      }
+    ],
+    "antiFillRule": {
+      "disallowRepeatedSegments": true,
+      "disallowLoops": true,
+      "disallowMeaninglessSlowMotion": true,
+      "disallowUnverifiedFactPadding": true
+    }
+  },
+  "bgmPlanDeferred": {
+    "reason": "⑰ 新工程死锁：对齐件唯一正道 music_voice_brief 需 approved_for_g4 计划，而 G3 review_required 校验层要求对齐在场——决策层证据=登记件（收据 bgm_decision），执行链（voice_brief→align→bgmPlan 哈希绑定）随 G3 批准后在计划 v0.2 落位、G4 装配硬验",
+    "bgmRegistrationRef": "工作台/mickey-intro-001/G0-素材包/07_授权音频/BGM-候选登记-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+    "plannedTrackOffsetMs": 0,
+    "plannedFades": {
+      "fadeInMs": 2000,
+      "fadeOutStartMs": 64000,
+      "fadeOutMs": 2000
+    }
+  },
+  "packagingDecisions": {
+    "fps": 30,
+    "aspectRatioPolicy": "16:9 输出 1920x1080（B 原生 1080p25；A 720p30 升采样，增强瑕疵随 G0 警告披露）",
+    "loudnessTarget": {
+      "integratedLufs": -17.4,
+      "truePeakDbtp": -1.5,
+      "lraTargetLu": 6.0
+    },
+    "coverFrameMs": 264000,
+    "coverNote": "封面=A 素材厨房打击乐段米奇举棒指挥（264s 帧，seg 语境活力代表帧）；底部字幕带由标题版式避让",
+    "chapterCards": [
+      {
+        "startMs": 1200,
+        "endMs": 4000,
+        "title": "从蒸汽船到树屋：米老鼠快讲",
+        "lane": "title(8–18%)；起点=黑场入(1200ms)完成后浮现"
+      }
+    ],
+    "subtitleTimelineRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.2.srt",
+    "subtitleCheckRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕复检报告-v0.2.json",
+    "subtitleAssRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.1.ass",
+    "subtitleSrtRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕时间轴-v0.2.srt",
+    "subtitleLayoutContractRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/G3-字幕布局合同-v0.1.json",
+    "rendererCapabilityRef": "工作台/mickey-intro-001/G3-剪辑计划/字幕/字幕-渲染器能力档-v0.1.json",
+    "subtitleSrtNote": "v0.1→v0.2：s06 起点为让开叠化窗口 30500→31000，ASS 修订后 SRT 机械重派生；convert 引擎拒绝覆盖旧件（永不静默盖写，正向样本）",
+    "loudnessTargetNote": "目标随 G2 预授权出路执行定为 -17.4（-17.3 按专员自身估算仍越 TP 上限 -1.5，舍入不自洽=问题清单⑳候选）；决定件 v0.3 loudnessPlanRef 指向 ready 计划 v0.3"
+  },
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "startMs": 0,
+      "endMs": 8419,
+      "outputStartMs": 0,
+      "outputEndMs": 8419,
+      "outputDurationMs": 8419,
+      "sourceDurationMs": 8419,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "narrationStartMs": 4000,
+      "narrationEndMs": 7619,
+      "narrationText": "A steam whistle. A wooden tiller. And a mouse who loved to laugh.",
+      "narrativeClaim": {
+        "type": "editorial_opinion",
+        "minimumVisibleEvidence": "0–20s 网格帧：汽船河上建立镜头、甲板汽笛特写，米奇未出场按氛围入选"
+      },
+      "semanticBeatIds": [
+        "beat-001"
+      ],
+      "reason": "开场：修复版黑场+STEAMBOAT WILLIE 片头标题卡本体，1928 原片字卡即时代宣言（汽笛特写在 seg-02 窗 43690ms，验证帧实测）",
+      "evidenceRefs": [
+        "ev-001"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "0–20s 网格帧：汽船河上建立镜头、甲板汽笛特写，米奇未出场按氛围入选"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "none",
+        "note": "A 素材无烧录字幕（THE END 卡为原生片尾卡非字幕）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/start-0000000000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/middle-0000004209ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-01/end-0000008418ms.jpg"
+        ],
+        "observedVisuals": "start 0ms 纯黑帧（修复版片头黑场）；middle 4209ms/end 8418ms 片头标题卡：Walt Disney Cartoons presents / A MICKEY MOUSE SOUND CARTOON / STEAMBOAT WILLIE / A WALT DISNEY COMIC by UB IWERKS / Powers Cinephone System / COPYRIGHT MCMXXIX，左右各立米奇与米妮",
+        "derivedFromObservationIds": [
+          "exp-A01r1"
+        ]
+      },
+      "transitionInstruction": "黑场入",
+      "transitionDurationMs": 1200,
+      "transitionReason": "黑场入 1200ms：自黑场淡入汽船片头卡+建立镜头，1928 年代感入场（首段专用；不压口播——s01 于 4.0s 起，黑场 1.2s 完成）"
+    },
+    {
+      "segmentId": "seg-02a",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "startMs": 38000,
+      "endMs": 42900,
+      "outputStartMs": 8419,
+      "outputEndMs": 13319,
+      "outputDurationMs": 4900,
+      "sourceDurationMs": 4900,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "narrationStartMs": 8419,
+      "narrationEndMs": 13319,
+      "narrationText": "The year was 1928 — one steamboat, one whistle, and a star was born.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "字卡/汽笛/舵轮与米奇驾驶画面在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-002"
+      ],
+      "reason": "1928 诞生句：米奇舵轮前舞动（38000 已验帧），正对『one steamboat, one whistle, a star was born』",
+      "evidenceRefs": [
+        "ev-001"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "米奇+舵轮+救生圈（验证帧 38000 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "none",
+        "note": "A 素材无烧录字幕（THE END 卡为原生片尾卡非字幕）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/start-0000038000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/middle-0000040450ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02a/end-0000042899ms.jpg"
+        ],
+        "observedVisuals": "start 38000ms 米奇戴船长帽舵轮前舞动、背景救生圈；middle 40450ms 与 end 42899ms 阴云下三只蒸汽汽笛特写（无角色）",
+        "derivedFromObservationIds": [
+          "exp-A02",
+          "exp-A03r1"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-02b",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "startMs": 42900,
+      "endMs": 49381,
+      "outputStartMs": 13319,
+      "outputEndMs": 19800,
+      "outputDurationMs": 6481,
+      "sourceDurationMs": 6481,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "narrationStartMs": 14119,
+      "narrationEndMs": 18582,
+      "narrationText": "Black and white, endless energy — pure joy, engineered frame by frame.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "汽笛特写与皮特黑手套在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-003"
+      ],
+      "reason": "黑白能量句：汽笛特写+皮特黑手套入画（43690/49380 已验帧），橡胶管时代的打闹能量",
+      "evidenceRefs": [
+        "ev-001"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "汽笛特写+皮特黑手套（验证帧 43690/49380 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "none",
+        "note": "A 素材无烧录字幕（THE END 卡为原生片尾卡非字幕）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/start-0000042900ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/middle-0000046140ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-02b/end-0000049380ms.jpg"
+        ],
+        "observedVisuals": "start 42900ms 汽笛特写；middle 46140ms 米奇头从最短汽笛冒出（蒸汽云头+音符，名场面）；end 49380ms 米奇舵前舞动、右侧皮特黑手套伸入画面",
+        "derivedFromObservationIds": [
+          "exp-A03r1"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "startMs": 378000,
+      "endMs": 383403,
+      "outputStartMs": 19800,
+      "outputEndMs": 25203,
+      "outputDurationMs": 5403,
+      "sourceDurationMs": 5403,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "narrationStartMs": 19382,
+      "narrationEndMs": 25203,
+      "narrationText": "Ninety-five years later, the copyright clock ran out — and this classic Mickey belongs to everyone.",
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "380s 帧：奶牛大张嘴+米奇拔牙手套特写，主体=米奇 confirmed"
+      },
+      "semanticBeatIds": [
+        "beat-004"
+      ],
+      "reason": "公有域句配全片最名场面：米奇戴手套给奶牛拔牙（380s 帧），'属于每个人'的共享画面",
+      "evidenceRefs": [
+        "ev-001"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "380s 帧：奶牛大张嘴+米奇拔牙手套特写，主体=米奇 confirmed"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "none",
+        "note": "A 素材无烧录字幕（THE END 卡为原生片尾卡非字幕）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/start-0000378000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/middle-0000380701ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-03/end-0000383402ms.jpg"
+        ],
+        "observedVisuals": "start 378000ms 母牛张嘴喷音符、戴花米妮立右；middle 380701ms 母牛头部特写、米奇伸手向嘴；end 383402ms 母牛大张嘴露满口牙、米奇伸手拔牙",
+        "derivedFromObservationIds": [
+          "exp-A20"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "startMs": 458000,
+      "endMs": 463297,
+      "outputStartMs": 25203,
+      "outputEndMs": 30500,
+      "outputDurationMs": 5297,
+      "sourceDurationMs": 5297,
+      "mappingMode": "one_to_one",
+      "layoutTier": "留白",
+      "narrationStartMs": 26003,
+      "narrationEndMs": 27772,
+      "narrationText": "But Mickey never stopped evolving.",
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "440s 帧：MICKEY MOUSE SOUND CARTOON THE END 卡（mixed：字卡含米奇头像）"
+      },
+      "semanticBeatIds": [
+        "beat-005"
+      ],
+      "reason": "THE END 片尾卡=黑白时代句点，『从未停止演变』的转折留白；硬切入现代（原设计叠化因源手柄不足被机检摊牌，见 transitionReason）",
+      "evidenceRefs": [
+        "ev-001"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "440s 帧：MICKEY MOUSE SOUND CARTOON THE END 卡（mixed：字卡含米奇头像）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "none",
+        "note": "A 素材无烧录字幕（THE END 卡为原生片尾卡非字幕）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/start-0000458000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/middle-0000460648ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-04/end-0000463296ms.jpg"
+        ],
+        "observedVisuals": "start 458000ms/middle 460648ms THE END 收尾卡：MICKEY MOUSE SOUND CARTOON / THE END / A WALT DISNEY COMIC，左右各立米奇与米妮；end 463296ms 纯黑帧（自然转黑）",
+        "derivedFromObservationIds": [
+          "exp-A23r1",
+          "exp-A24",
+          "exp-A25"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-48c9834f",
+      "startMs": 6000,
+      "endMs": 11447,
+      "outputStartMs": 30500,
+      "outputEndMs": 35947,
+      "outputDurationMs": 5447,
+      "sourceDurationMs": 5447,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "narrationStartMs": 31000,
+      "narrationEndMs": 35947,
+      "narrationText": "From theater shorts to the TV treehouse — a rounder, softer, sillier mouse.",
+      "narrativeClaim": {
+        "type": "transition",
+        "minimumVisibleEvidence": "CGI 画风与唱歌口型在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-006"
+      ],
+      "reason": "演变句（从影院短片到电视树屋）：CGI 米奇唱歌特写『要不要进我的妙妙屋』（6000 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "CGI 米奇唱歌特写（验证帧 6000 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/start-0000006000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/middle-0000008723ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05a/end-0000011446ms.jpg"
+        ],
+        "observedVisuals": "start 6000ms CGI 米奇唱歌特写，烧字『要不要进我的妙妙屋』；middle 8723ms 米奇侧身双手张开（该帧无字幕）；end 11446ms 正面大笑，烧字『太好了』",
+        "derivedFromObservationIds": [
+          "exp-B02",
+          "exp-B03"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-48c9834f",
+      "startMs": 11447,
+      "endMs": 15115,
+      "outputStartMs": 35947,
+      "outputEndMs": 39615,
+      "outputDurationMs": 3668,
+      "sourceDurationMs": 3668,
+      "mappingMode": "one_to_one",
+      "layoutTier": "推进",
+      "narrationStartMs": 36247,
+      "narrationEndMs": 39315,
+      "narrationText": "Same ears. Same shoes. New playgrounds.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "米奇耳/鞋/手套与草地场景在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-007"
+      ],
+      "reason": "同一耳朵同一鞋：米奇前伸手微笑+草地空镜手套入画（10557/15114 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "米奇前伸+草地空镜（验证帧 10557/15114 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/start-0000011447ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/middle-0000013281ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-05b/end-0000015114ms.jpg"
+        ],
+        "observedVisuals": "start 11447ms 正面大笑『太好了』（与上段末连续）；middle 13281ms 树林空镜，烧字『我们走』；end 15114ms 草地空镜、米奇白手套右缘入画",
+        "derivedFromObservationIds": [
+          "exp-B04"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-48c9834f",
+      "startMs": 30000,
+      "endMs": 34362,
+      "outputStartMs": 39615,
+      "outputEndMs": 43977,
+      "outputDurationMs": 4362,
+      "sourceDurationMs": 4362,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "narrationStartMs": 40115,
+      "narrationEndMs": 43977,
+      "narrationText": "He has outlived trends, technologies, even time zones.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "米奇指镜头手势在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-008"
+      ],
+      "reason": "跨越潮流时区句：米奇指镜头『米斯嘎木斯嘎米老鼠』（30000 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "米奇双手指镜头（验证帧 30000 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/start-0000030000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/middle-0000032181ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06a/end-0000034361ms.jpg"
+        ],
+        "observedVisuals": "start 30000ms 米奇双手指镜头，烧字『米斯嘎 木斯嘎 米老鼠』；middle 32181ms 草地树林空镜（无字幕）；end 34361ms 巨大黑色米奇头气球升于红色圆顶上",
+        "derivedFromObservationIds": [
+          "exp-B05",
+          "exp-B06"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-48c9834f",
+      "startMs": 34362,
+      "endMs": 38834,
+      "outputStartMs": 43977,
+      "outputEndMs": 48449,
+      "outputDurationMs": 4472,
+      "sourceDurationMs": 4472,
+      "mappingMode": "one_to_one",
+      "layoutTier": "常规",
+      "narrationStartMs": 44777,
+      "narrationEndMs": 47649,
+      "narrationText": "Because the trick was never the whistle. It was the giggle.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "米奇头气球与妙妙屋建筑在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-009"
+      ],
+      "reason": "关键在笑声句：米奇头气球升起+妙妙屋全景（34417/38833 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "米奇头气球+妙妙屋全景（验证帧 34417/38833 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/start-0000034362ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/middle-0000036598ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-06b/end-0000038833ms.jpg"
+        ],
+        "observedVisuals": "start 34362ms 米奇头气球+红圆顶（与上段末连续）；middle 36598ms 妙妙屋全景成型（红圆顶、黄色门、白手套柱、蓝色滑梯）；end 38833ms 妙妙屋全景，烧字『(Mickey Mouse)』",
+        "derivedFromObservationIds": [
+          "exp-B07"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-48c9834f",
+      "startMs": 66000,
+      "endMs": 69403,
+      "outputStartMs": 48449,
+      "outputEndMs": 51852,
+      "outputDurationMs": 3403,
+      "sourceDurationMs": 3403,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "narrationStartMs": 48449,
+      "narrationEndMs": 51852,
+      "narrationText": "From steamboat to treehouse — nearly a century of oh boy!",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "门口招手与黄门在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-010"
+      ],
+      "reason": "oh boy 世纪台词句：米奇门口招手『米奇我在这』（66000 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "米奇门口招手（验证帧 66000 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/start-0000066000ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/middle-0000067701ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07a/end-0000069402ms.jpg"
+        ],
+        "observedVisuals": "start 66000ms 米奇黄色门口招手，烧字『米奇我在这』；middle 67701ms 米奇走入门内（紫色隧道/黄门/红地板，无字幕）；end 69402ms 米奇走向黄色墙上电话，烧字『(米奇妙妙屋 开启 快进来 非常好玩)』",
+        "derivedFromObservationIds": [
+          "exp-B10",
+          "exp-B12"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-48c9834f",
+      "startMs": 69403,
+      "endMs": 73410,
+      "outputStartMs": 51852,
+      "outputEndMs": 55859,
+      "outputDurationMs": 4007,
+      "sourceDurationMs": 4007,
+      "mappingMode": "one_to_one",
+      "layoutTier": "快切",
+      "narrationStartMs": 52652,
+      "narrationEndMs": 55059,
+      "narrationText": "Mickey Mouse — still riding the same river.",
+      "narrativeClaim": {
+        "type": "fact",
+        "minimumVisibleEvidence": "屋内电话与红地板在窗内可见"
+      },
+      "semanticBeatIds": [
+        "beat-011"
+      ],
+      "reason": "同一条河句：屋内电话旁+红地板（69705/73409 已验帧）",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "屋内电话旁米奇+红地板（验证帧 69705/73409 实测）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/start-0000069403ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/middle-0000071406ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-07b/end-0000073409ms.jpg"
+        ],
+        "observedVisuals": "start 69403ms 走向电话（与上段末连续，烧字同）；middle 71406ms 米奇伸手触黄色墙上电话；end 73409ms 屋内红地板画面",
+        "derivedFromObservationIds": [
+          "exp-B12",
+          "exp-B13"
+        ]
+      },
+      "transitionInstruction": "硬切"
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-48c9834f",
+      "startMs": 73410,
+      "endMs": 83551,
+      "outputStartMs": 55859,
+      "outputEndMs": 66000,
+      "outputDurationMs": 10141,
+      "sourceDurationMs": 10141,
+      "mappingMode": "one_to_one",
+      "layoutTier": "留白",
+      "narrationStartMs": 55859,
+      "narrationEndMs": 57288,
+      "narrationText": "Thanks for sailing with us.",
+      "narrativeClaim": {
+        "type": "abstract_conclusion",
+        "minimumVisibleEvidence": "78s 灯泡特写"
+      },
+      "semanticBeatIds": [
+        "beat-012"
+      ],
+      "reason": "收束：灯泡 gag→CLUBHOUSE logo 卡定格致谢，尾 8.7s 音乐收+遮罩带避让 logo",
+      "evidenceRefs": [
+        "ev-002"
+      ],
+      "status": "review",
+      "semanticAlignment": {
+        "status": "direct_match",
+        "evidence": "78s 灯泡特写；84s logo 卡（mixed，无烧字）"
+      },
+      "sourceCaptionTreatment": {
+        "mode": "mask",
+        "note": "窗口带烧录简体中文字幕（底部 88–97%，G1 目检+G3 账本实测）：G4 以黑底窄遮罩(alpha 0.85)覆盖 86–99% 区域（crop 伤 16:9 构图，弃用；与字幕带 77–85% 不重叠）"
+      },
+      "visualVerification": {
+        "status": "verified",
+        "frameManifestRef": "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/G3-visual-verification-frames.json",
+        "frameRefs": [
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/start-0000073410ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/middle-0000078480ms.jpg",
+          "工作台/mickey-intro-001/G3-剪辑计划/G3-画面验证帧/seg-08/end-0000083550ms.jpg"
+        ],
+        "observedVisuals": "start 73410ms 屋内红地板画面；middle 78480ms 灯泡特写（手套拉绳亮灯），烧字『I M MOUSE』；end 83550ms CLUBHOUSE 标题卡，底部仍有烧字『这是米奇妙妙屋』",
+        "derivedFromObservationIds": [
+          "exp-B14",
+          "exp-B15r1"
+        ]
+      },
+      "transitionInstruction": "黑场出",
+      "transitionDurationMs": 1500,
+      "transitionReason": "黑场出 1500ms：logo 卡定格后淡出收束致谢（末段专用；词表上限 1500ms 即取上限；不压口播——s12 止于 57288）"
+    }
+  ],
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "outputStartMs": 0,
+        "outputEndMs": 8419,
+        "purpose": "开场：修复版黑场+STEAMBOAT WILLIE 片头标题卡本体，1928 原片字卡即时代宣言（汽笛特写在 seg-02 窗 43690ms，验证帧实测）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-02a",
+        "outputStartMs": 8419,
+        "outputEndMs": 13319,
+        "purpose": "1928 诞生句：米奇舵轮前舞动（38000 已验帧），正对『one steamboat, one whistle, a star was born』",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-02b",
+        "outputStartMs": 13319,
+        "outputEndMs": 19800,
+        "purpose": "黑白能量句：汽笛特写+皮特黑手套入画（43690/49380 已验帧），橡胶管时代的打闹能量",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-03",
+        "outputStartMs": 19800,
+        "outputEndMs": 25203,
+        "purpose": "公有域句配全片最名场面：米奇戴手套给奶牛拔牙（380s 帧），'属于每个人'的共享画面",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-04",
+        "outputStartMs": 25203,
+        "outputEndMs": 30500,
+        "purpose": "THE END 片尾卡=黑白时代句点，『从未停止演变』的转折留白；硬切入现代（原设计叠化因源手柄不足被机检摊牌，见 transitionReason）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-05a",
+        "outputStartMs": 30500,
+        "outputEndMs": 35947,
+        "purpose": "演变句（从影院短片到电视树屋）：CGI 米奇唱歌特写『要不要进我的妙妙屋』（6000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-05b",
+        "outputStartMs": 35947,
+        "outputEndMs": 39615,
+        "purpose": "同一耳朵同一鞋：米奇前伸手微笑+草地空镜手套入画（10557/15114 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-06a",
+        "outputStartMs": 39615,
+        "outputEndMs": 43977,
+        "purpose": "跨越潮流时区句：米奇指镜头『米斯嘎木斯嘎米老鼠』（30000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-06b",
+        "outputStartMs": 43977,
+        "outputEndMs": 48449,
+        "purpose": "关键在笑声句：米奇头气球升起+妙妙屋全景（34417/38833 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-07a",
+        "outputStartMs": 48449,
+        "outputEndMs": 51852,
+        "purpose": "oh boy 世纪台词句：米奇门口招手『米奇我在这』（66000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-07b",
+        "outputStartMs": 51852,
+        "outputEndMs": 55859,
+        "purpose": "同一条河句：屋内电话旁+红地板（69705/73409 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-08",
+        "outputStartMs": 55859,
+        "outputEndMs": 66000,
+        "purpose": "收束：灯泡 gag→CLUBHOUSE logo 卡定格致谢，尾 8.7s 音乐收+遮罩带避让 logo",
+        "loop": false,
+        "duplicateFill": false
+      }
+    ]
+  },
+  "humanReviewPoints": [
+    "G3 终审八列回显（自动模式=策略批准+卡照出）",
+    "8 段全部 direct_match（瓦片批读账本在案）",
+    "B 段遮罩 86–99% 覆盖烧字带（实测 88–97% 含余量）",
+    "响度：G2 让步出路 −17.3 LUFS（策略条款）",
+    "BGM：Catchy Synthwave 委托选定+⑫ 缩短出路随 G1 卡；对齐链执行层按计划 v0.2 落位（⑰ 申报）",
+    "转场：黑场入/crossfade@30500/fade out 预览在案"
+  ],
+  "timelineReview": {
+    "status": "pending"
+  },
+  "artifactVersion": "v0.4",
+  "versionNote": "v0.3→v0.4：G3 重批完成（auto-policy 三拍在 state，依据=reopen 返工版卡 v0.3）；status=approved_for_g4 供 music_voice_brief 消费（⑰ 死锁出口）。批准依据字节=G3 收据绑定的 v0.3。"
+}

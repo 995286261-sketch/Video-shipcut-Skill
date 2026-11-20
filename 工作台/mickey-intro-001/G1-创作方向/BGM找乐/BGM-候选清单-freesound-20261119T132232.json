@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "0.1",
+  "purpose": "bgm_candidate_pool",
+  "source": "freesound",
+  "query": {
+    "text": "epic orchestral trailer",
+    "tags": null,
+    "similarTo": null,
+    "termsFile": null,
+    "terms": [
+      "epic orchestral trailer"
+    ]
+  },
+  "partialBlockers": [],
+  "durationFilter": {
+    "mode": "hard",
+    "requestedMinSec": 100.0,
+    "appliedMinSec": 100.0,
+    "maxSec": 600.0
+  },
+  "retrievedAt": "2026-11-19T13:22:32+08:00",
+  "candidates": [
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767842,
+      "title": "SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767842/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Devil Dance (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 95.12,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:20:17+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767842-preview.mp3",
+      "sha256": "D91FA0DF0C4304C576CAC92429BF6CA75AF41CAA749EFE4CAD8FBF5E663E557C",
+      "byteSize": 2199648
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767835,
+      "title": "SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767835/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Battle Melody (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 141.32,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:20:47+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767835-preview.mp3",
+      "sha256": "EA87FC48E648754D680957EF1774CBBDE0EAFABD70F0984D0231FB8FC3190A64",
+      "byteSize": 3239232
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 449202,
+      "title": "Epic Orchestral Cue",
+      "author": "graham_makes",
+      "sourceUrl": "https://freesound.org/s/449202/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"Epic Orchestral Cue\" by graham_makes (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 81.7232,
+      "tags": [
+        "90bpm",
+        "brass",
+        "cinematic",
+        "dramatic",
+        "epic",
+        "film",
+        "hollywood",
+        "horns",
+        "intense",
+        "movie",
+        "orchestral",
+        "percussion"
+      ],
+      "styleTags": [
+        "epic",
+        "dark",
+        "orchestral",
+        "percussive"
+      ],
+      "retrievedAt": "2026-11-19T13:21:30+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-449202-preview.mp3",
+      "sha256": "D5E216AF170B31979AF4759C72EC936942265E5F2F476FB8F2E741535F03ECBC",
+      "byteSize": 1916884
+    },
+    {
+      "schemaVersion": "0.1",
+      "skill": "music-expert",
+      "provenance": "freesound_api",
+      "freesoundId": 767837,
+      "title": "SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)",
+      "author": "SunixMuz",
+      "sourceUrl": "https://freesound.org/s/767837/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseType": "cc-by",
+      "attributionRequired": true,
+      "attributionText": "\"SunixMuz - Blessed Hall  (Opening, trailer, epic music, Free CCBY)\" by SunixMuz (https://creativecommons.org/licenses/by/4.0/)",
+      "durationSecProbe": 118.978,
+      "tags": [
+        "Audio",
+        "Epic",
+        "Fantasy",
+        "Free",
+        "Game",
+        "Music",
+        "Orchestral",
+        "Royalty-Free",
+        "Soundtrack",
+        "Trailer",
+        "fantasy"
+      ],
+      "styleTags": [
+        "epic",
+        "playful",
+        "orchestral"
+      ],
+      "retrievedAt": "2026-11-19T13:21:55+08:00",
+      "distributionBoundary": "internal_test",
+      "decodeProbe": {
+        "status": "passed",
+        "engine": "ffmpeg"
+      },
+      "analysisRef": null,
+      "previewPath": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G1-创作方向/BGM找乐/candidates/freesound-767837-preview.mp3",
+      "sha256": "43245C71B11771B2CD7A4AFD93FE390DF364BEFC1D85D81732E3F3E371825E40",
+      "byteSize": 2747424
+    }
+  ],
+  "excluded": [],
+  "perQuery": [
+    {
+      "query": "epic orchestral trailer",
+      "returned": 12,
+      "cap": 4,
+      "kept": 4
+    }
+  ],
+  "sufficiency": {
+    "count": 4,
+    "minimumExpected": 3
+  }
+}

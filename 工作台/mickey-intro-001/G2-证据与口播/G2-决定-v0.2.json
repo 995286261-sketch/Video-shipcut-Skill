@@ -1,0 +1,69 @@
+{
+ "schemaVersion": "0.2",
+ "node": "G2",
+ "projectId": "mickey-intro-001",
+ "status": "approved_for_g3",
+ "decidedAt": "2026-11-19T13:50:00+08:00",
+ "approvalMode": "auto",
+ "autoPolicyRef": "工作台/mickey-intro-001/auto-policy.json",
+ "approvedNarrationRef": "工作台/mickey-intro-001/G2-证据与口播/口播稿-v0.1-EN.md",
+ "factCitationRef": "工作台/mickey-intro-001/G2-证据与口播/G2-证据清单-v0.1.json",
+ "voiceBriefRef": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/G2-配音清单-v0.1.json",
+ "loudnessPlanRef": "工作台/mickey-intro-001/G2-证据与口播/响度/响度-归一化计划-v0.1.json",
+ "narration": {
+  "language": "en-US",
+  "voice": "Samantha",
+  "provider": "macos_say",
+  "voiceTier": "preview_only",
+  "measuredTotalDurationMs": 42560,
+  "asrVerified": false,
+  "asrSelfCheck": "⑥ 现场实弹在案（问题⑥实弹-英文ASR中文幻觉-2026-11-19.json）：--verify-asr 走 language=zh 硬编码通道，12 句中 s04/s08 回读繁体中文幻觉（0.056/0.0）整单 blocked；合成 wav 本身正常。绕行=去 --verify-asr 重跑（同参数同稿，产物字节一致复核=wav 已存在未重合成，清单为验证关闭件），asrVerified 如实 false，不冒充机器绿灯。旁白全稿-Samantha.wav=编排 ffmpeg concat 件（concat-list 在目录内，42.561451s 与清单实测 42560ms 吻合）",
+  "fullTrackRef": "工作台/mickey-intro-001/G2-证据与口播/配音试听-Samantha/旁白全稿-Samantha.wav",
+  "alternatives": [
+   {
+    "voice": "Daniel",
+    "status": "not_run",
+    "note": "⑥ 缺陷对所有英文音色同样成立（language=zh 与音色无关），试听卡三音色轮换留 G3 后如有必要再跑；本节点以 Samantha 为默认推荐（zaku-003 绿灯三音色之首）"
+   },
+   {
+    "voice": "Karen",
+    "status": "not_run",
+    "note": "同上"
+   }
+  ]
+ },
+ "previewTierProductionApproval": "auto-policy 条款 preview_voice_production 原文：『英文系统声 Samantha/Daniel/Karen 形制，预览级音质披露随卡与交付包一字不松。依据=用户 2026-11-19 逐字「本项目使用自动确认」「全部按建议授权」。』（approvalSource=auto-policy，非人类逐字口令；红线留痕：绝不伪造人类原话；披露词「预览级」在场）",
+ "loudnessDisclosure": {
+  "ceilingLufs": -17.3,
+  "targetLufs": -14.0,
+  "measuredInput": {
+   "integratedLufs": -16.5,
+   "truePeakDbtp": -0.8
+  },
+  "planStatus": "blocked_true-peak",
+  "acceptedExit": "把目标响度降到至多 -17.3 LUFS（保住现 TP 上限 -1.5）",
+  "exitBasis": "auto-policy 条款 loudness_blocked_exit（parameters.exit=「把目标响度降到至多」逐字命中计划件 exits[1]），让步数字随卡点名披露；G4 混音按 -17.3 目标出 ready 计划"
+ },
+ "citationStatus": {
+  "supported": [
+   "G1-claim-004（ev-001 素材实测）",
+   "G1-claim-002（ev-002 期限规则+推算行明示）"
+  ],
+  "pending": [
+   "G1-claim-001 首映日期/场地（口播已规避具体日期）",
+   "G1-claim-003 妙妙屋年份（口播已规避）"
+  ],
+  "channelOutageRef": "G2-证据清单-v0.1.json → channelOutage（公开挂证通道盘定，问题清单⑮候选已在证据件内申报）"
+ },
+ "artifactVersion": "v0.2",
+ "versionNote": "v0.1→v0.2：G3 校验器要求决定件携带 permittedFactIds，而 G2 approve 层未校验该字段（问题清单⑱候选：跨节点字段需求不同步，决定件被迫批准后再版）；内容语义零变化，仅新增受控清单字段；G2 收据指纹仍绑 v0.1（批准时字节），本 v0.2 为 G3 消费版",
+ "permittedFactIds": [
+  "G1-claim-001",
+  "G1-claim-002",
+  "G1-claim-003",
+  "G1-claim-004",
+  "ev-001",
+  "ev-002",
+  "ev-003"
+ ]
+}
