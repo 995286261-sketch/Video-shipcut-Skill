@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "sourcePackRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+  "authorization": "\u7528\u6237\u4eb2\u4f9b\u8fea\u58eb\u5c3c\u7d20\u6750\uff0c\u4ec5\u5185\u90e8\u7559\u5b58\u4f7f\u7528",
+  "distribution": "not_for_distribution",
+  "bgm": {
+    "decision": "provided",
+    "preference": null,
+    "libraryPending": false,
+    "clearCondition": "G1 \u672b\u51fa\u68c0\u7d22\u8bcd\u5361\u627e\u4e50 \u2192 \u7528\u6237\u6311\u66f2 \u2192 \u7ecf\u5b98\u65b9\u6e20\u9053\u53d6\u5f97\u6574\u8f68\u5e76\u767b\u8bb0\u56de\u586b 07_\u6388\u6743\u97f3\u9891/ \u540e\u6539 provided",
+    "history": [
+      {
+        "at": "2026-11-19T05:32:48Z",
+        "from": "use_library_later",
+        "to": "provided",
+        "evidence": "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+        "note": null
+      }
+    ],
+    "evidence": "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json"
+  },
+  "approvalMode": "auto",
+  "currentNode": "completed",
+  "status": "completed_auto_reviewed_with_accepted_warnings",
+  "nodes": {
+    "G0": {
+      "status": "completed",
+      "artifactRefs": [
+        "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/material-pack.json"
+      ],
+      "inputRefs": [],
+      "humanReviewPoints": [],
+      "approval": null
+    },
+    "G1": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g1_direction_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411\u8f93\u5165-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/03_\u4e8b\u5b9e\u4f9d\u636e/\u7d20\u6750\u5236\u5f0f\u5b9e\u6d4b-2026-11-19.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.2.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd\u56de\u663e-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T130928.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T131915.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T132910.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u9700\u6c42\u753b\u50cf-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u63a8\u8350\u6392\u5e8f-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u63a8\u8350\u56de\u663e-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u77ed\u540d\u53552.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u7ba1\u5f26.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u7ba1\u5f262.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.2.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.3.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.4.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u5206\u6790/BGM-\u5206\u6790\u62a5\u544a-freesound-686768-preview-AC34D1C0.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/Catchy-Synthwave-686768.mp3",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/material-pack.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.2.md"
+        ],
+        "checklistIds": [
+          "claims_and_boundaries",
+          "direction_brief",
+          "direction_card"
+        ],
+        "renderedAt": "2026-11-19T13:45:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "9AFA49E3881EA79F3811C8024410D778B1E645BA87EA3473884B6FEA1313FCAE",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.md": "E6A518B3803F04B079C9C0E131359992910336F068C2351EE5BAD46C556BA2A2",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u7b80\u62a5.json": "353363792381D640698808E695FAFBDB05062EC418B8BBAB9D8D424DFD1895B9",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411\u8f93\u5165-v0.1.json": "3B84CC1202E67C18A16A6FCAC4A464675FCA5ABAF29AFCFBE728F64AC09B2D6B",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md": "0CE7358B9A9275B213547E70BE5BC84D150809426F799D2D54A3DBBB3CF2ED94",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/03_\u4e8b\u5b9e\u4f9d\u636e/\u7d20\u6750\u5236\u5f0f\u5b9e\u6d4b-2026-11-19.md": "D53D78C2AAB600B69A12BFB11E0B2356A9B38BBB88B97EC04F65AB30DB784CC1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.1.json": "91821A7DE1A7E15F76BB38695CDDDB855F8B6CDDFF27AE95DAB04DE6B2C91749",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd-v0.2.json": "8F460B08E9940E946BC546CA6612BF0ED0580F72399D8BB9361C161E3556AEC3",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd\u56de\u663e-v0.1.md": "69A7DE4EC3627D8EB8AC1D2DE790B5E835DECC3FFDFB28010AAA4D6F38257847",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u68c0\u7d22\u8bcd\u56de\u663e-v0.2.md": "1EBDC5203F14CC0F26A93D38B21BD6E6B30B55E554CC00764D435AE377371C20",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T130928.json": "F1A7FB30B52F5366C151337B0C0B2F1BD8F002867080F653DB19DC27D5053CEE",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T131915.json": "78EC56875D39C3581FB19B73C78AFC4A07A01761EE7B99C3416B4DD79DC79283",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u5019\u9009\u6e05\u5355-freesound-20261119T132910.json": "16280465349E78AF88957317088AFA2A72ADD64C7D66126778F8667900E66C6D",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u9700\u6c42\u753b\u50cf-v0.1.json": "DDE6AF03D3BDDF2C11830BDF18DFF382465E7CB30ABE87E37386DB7E6951DFED",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u63a8\u8350\u6392\u5e8f-v0.1.json": "DA8BADF0E4B2C70D905F73EA5E02D245BE6CA5EB3EEB2226E4E5D8F14907C684",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u63a8\u8350\u56de\u663e-v0.1.md": "F30F60746173CFFE031383025C09A5076E991FF89B14EC188DB6FA7B8BCCA0CC",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9.json": "8C3EAD8C67B7894099686882858D12DFD4276CF944C2A88E622EEB2D6DEE17F6",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u77ed\u540d\u53552.json": "F4302A9B6244EE7CC6442B8C2FE9D536DDC361B61BFB64F9750A288B3F76E576",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u7ba1\u5f26.json": "2A934B4516017DEA7435D1DCB366F73156EE3C8F9EC43C5DDD936AA3DC42C089",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u8bd5\u542c\u7b14\u8bb0-\u7edd\u5bf9-\u7ba1\u5f262.json": "32BFBA67A2BF1D8A2FB68889E5125C0359C1F18D6A5D5551205E2C619415603F",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.1.md": "915066DC0A2C481F9DC5E73585984AE25AEDE05F34B663948629BB860AEF7BBC",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.2.md": "9AB1854533CF65A978C1631D3D93C9C4DACC7E93DEFD2C4F03F302331B3E92D0",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.3.md": "C514BFD1159B7EEF284922455404D81EA9AF535F4E79989F872033A2F4AE72F9",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/BGM-\u8bd5\u542c\u7b14\u8bb0\u56de\u663e-v0.4.md": "6CE5B35F6337A6A6514D78083DC7BA749EEA272A253B7418C39B61590105654C",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u5206\u6790/BGM-\u5206\u6790\u62a5\u544a-freesound-686768-preview-AC34D1C0.json": "0C02FAD5F48CF9BD4FE09BD5802D5AC9AE9E8B983552CEA76C665061B4A83488",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json": "1ACFEE6D4B03D7E0F63792BCD518898C68A436820AA1821989AE4D1DAEEF9115",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/07_\u6388\u6743\u97f3\u9891/Catchy-Synthwave-686768.mp3": "AC34D1C028D24B9D94C5C92DCA1F99494E844E39E4EB953B66E690E232F6C83E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/material-pack.json": "7A429EE5A49E9317860EE6D96CCAB64F22DED3A9CC65FE0CB691BC31C9F12686",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/01_\u9700\u6c42\u8bf4\u660e.md": "8E60628FCD251EF7D6F1B85FD7041C915776669E34ED5535D0448ECB946639C5",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/04_\u6388\u6743\u8bf4\u660e.md": "8F45816E0A7D1416803A6FD104A28CB51C49C2D7618E1401BB07233E869E8BC1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json": "A1808367C50ED7124B6817F076D537133E42277049BD2B6F65806B26B830710D",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.2.md": "F2EF4497F9AF0306130AC7B2E6840DF97D529B7EF9ED3E3E3D7C5ABA3D4150F4"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u65b9\u5411\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G1",
+        "approvalResponse": "auto-policy:G1",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-11-19T05:37:05Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": []
+      }
+    },
+    "G2": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json",
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g2_evidence_narration_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/\u65c1\u767d\u5168\u7a3f-Samantha.wav",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u95ee\u9898\u2465\u5b9e\u5f39-\u82f1\u6587ASR\u4e2d\u6587\u5e7b\u89c9-2026-11-19.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8bc1\u636e/uscopyright-faq-duration.html",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/03_\u4e8b\u5b9e\u4f9d\u636e/\u7d20\u6750\u5236\u5f0f\u5b9e\u6d4b-2026-11-19.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.4.md"
+        ],
+        "checklistIds": [
+          "approved_narration",
+          "fact_citation",
+          "g2_card",
+          "voice_brief"
+        ],
+        "renderedAt": "2026-11-19T13:52:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u6700\u7ec8\u56de\u663e\u5361-v0.1.md": "3A4F7096FE6AFF245B16C5D82941342CEC856AAA8AD9BB814D4B3FB0052E7AA2",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md": "9AB43A46E45413E78038B24C29D35AC2CBBF638B365ACCB5441778F475617A5F",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json": "B903C2149C6E4273EC106C2CEE1E3334E260DC95E57DB3E12C17E717706839BB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.1.json": "BA14D33662189542A25FF7694C14230D8E3DF7C4667F10A94D4B190EDDB25969",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md": "9C80FBC1AB2EB40D01875895CB444733E95DEC2EFC4F0B0013E335961CF06D5D",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json": "E9FEC96F65ED8F3B4450B52006AE752B085125F3AB81FB020C3874AC364102EB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/\u65c1\u767d\u5168\u7a3f-Samantha.wav": "F6E0737A93456AA65FE3FDAE0815685BBA82B0DDCDA9DDFF0B6C22E6182CB534",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json": "341ACE17F9B6337A43F437F74DA1A94AB8DEB45CF75D54EF0D01FFDB73EDF13E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.1.json": "F124CC40633C43088795C043C1459916005ED8065B9F86F7510A62AD2188CFA5",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u95ee\u9898\u2465\u5b9e\u5f39-\u82f1\u6587ASR\u4e2d\u6587\u5e7b\u89c9-2026-11-19.json": "A12656F989309DDF2EADC9E7D89849AE381061D1B5F214C5C837B12900C211CB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u8bc1\u636e/uscopyright-faq-duration.html": "0C5FE5F7AEF9A75290BF5B65176E81ADD55F0C1AD0A21B44D6F95F08AC09DA18",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/03_\u4e8b\u5b9e\u4f9d\u636e/\u7d20\u6750\u5236\u5f0f\u5b9e\u6d4b-2026-11-19.md": "D53D78C2AAB600B69A12BFB11E0B2356A9B38BBB88B97EC04F65AB30DB784CC1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/G1-\u95e8\u7981\u6536\u636e.json": "8528C248664FBB40ECF0908E19CE6AFC3ECB498CC318285CC93899A3C249D81E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json": "DE01FF3582C620705BE76238C41066F242B3B8F353FEFAB6E0EB80A50E217508",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.4.md": "6F24B23ED457DAD7AE6E219F4E0886D13CFC622C399BB071C54053A27E83423F"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G2",
+        "approvalResponse": "auto-policy:G2",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002\uff1bloudness_blocked_exit: \u54cd\u5ea6\u8ba1\u5212 blocked\uff08\u6e90\u7269\u7406\u5929\u82b1\u677f\u591f\u4e0d\u5230\u76ee\u6807\uff09\u65f6\u63a5\u53d7\u964d\u76ee\u6807\u8ba9\u6b65\u51fa\u8def\uff0c\u8ba9\u6b65\u6570\u5b57\u5361\u4e0a\u70b9\u540d\u62ab\u9732\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002\uff1bloudness_blocked_exit: \u54cd\u5ea6\u8ba1\u5212 blocked\uff08\u6e90\u7269\u7406\u5929\u82b1\u677f\u591f\u4e0d\u5230\u76ee\u6807\uff09\u65f6\u63a5\u53d7\u964d\u76ee\u6807\u8ba9\u6b65\u51fa\u8def\uff0c\u8ba9\u6b65\u6570\u5b57\u5361\u4e0a\u70b9\u540d\u62ab\u9732\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-11-19T05:46:20Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [
+          "preview_voice_production",
+          "loudness_blocked_exit"
+        ],
+        "approvedNarrationRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u53e3\u64ad\u7a3f-v0.1-EN.md",
+        "factCitationRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u8bc1\u636e\u6e05\u5355-v0.1.json",
+        "voiceBriefRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/\u914d\u97f3\u8bd5\u542c-Samantha/G2-\u914d\u97f3\u6e05\u5355-v0.1.json"
+      }
+    },
+    "G3": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.4.md"
+      ],
+      "humanReviewPoints": [
+        "\u54cd\u5ea6\u6362\u6863 -17.7\uff08\u552f\u4e00\u5b9e\u8d28\u53d8\u66f4\uff09+bgmBasis \u5165\u5361\uff08\u2470 \u95ed\u73af\uff09"
+      ],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g3_timeline_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.4.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.4.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u7089\u8bf4\u660e-\u9010\u53e5\u843d\u4f4d-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.3.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.5.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.2.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/\u914d\u97f3\u6e05\u5355-\u5e26\u8d77\u70b9-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u767b\u8bb0/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.8.md"
+        ],
+        "checklistIds": [
+          "approved_edit_plan",
+          "bgm_decision",
+          "final_timeline_review",
+          "g3_card",
+          "packaging_decisions",
+          "subtitle_timeline"
+        ],
+        "renderedAt": "2026-11-19T17:05:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u6700\u7ec8\u56de\u663e\u5361-v0.4.md": "3CB8EB656C147C590135BDA01B6DD95ACBF127E4EBF43B31003EA9A85F1D10A7",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json": "09E84B24583CD612ACF6742BE4695EDB0F5B4B5A892B3401836D136C67977127",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.4.json": "A8C6EA56C925BF2ADBB5533ED3B9975D826D27CDE76B24D533CACDB650974C10",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md": "9BAAEE8B5838D511E5654DA7EDEAE88FFBEB70AF22B5CEA82EE95C499FAC0EEF",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u7089\u8bf4\u660e-\u9010\u53e5\u843d\u4f4d-v0.1.md": "1F1B0480DA01E100E4F15DF3E7B539680E2FE55F5E8907365D560787736ACEE7",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u8f6c\u573a-\u8ba1\u5212\u6821\u9a8c-v0.3.json": "1808EEE87240B518BF8EE4D75496AD350C55471B61126A930F179C5E9F595569",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u9884\u89c8\u5c0f\u6837/\u8f6c\u573a-\u9884\u89c8\u6e05\u5355-v0.5.json": "74BE5D673D5BE8CE2799F6CEBA22E387F4E03D8022CCC206EEB1A10326B0624A",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u65f6\u95f4\u8f74-v0.2.srt": "D4A4717FBAEB7DC7176766A038EDC4F13CF550BE3D5498F176FE63C5297C18E2",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u590d\u68c0\u62a5\u544a-v0.2.json": "1868945DDAE3CEF90EC66E636EB29EB370C9783AF967BFB913A2B2390EF6FC10",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/\u5b57\u5e55/G3-\u5b57\u5e55\u5e03\u5c40\u5408\u540c-v0.1.json": "83F272917D2CF21F0395E6706F097C14CB576C431CFEFB4BECA66186406B20B1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u89c6\u89c9\u89c2\u5bdf\u8d26\u672c-v0.1.json": "41C9D38C6FE784579D4E1F896D75D20A4FEA9A17737B7ABC107AA640165E60FA",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u753b\u9762\u9a8c\u8bc1\u5e27/G3-visual-verification-frames.json": "C6343265B9BC5B259578B46ED33C4D5B0424468FF3F91E9E5826853A916C5FF9",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u53e3\u64ad\u8bed\u4e49\u8282\u62cd-v0.1.json": "0DC10487954E5EE4EBE49D53EF9BCEA19F272C13E36DF6B980EDE52967CB80F5",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json": "4FA98E4183DE68E3A153AD01A15C3135D291673121AC27D4BF9A073662C705C4",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/\u914d\u97f3\u6e05\u5355-\u5e26\u8d77\u70b9-v0.1.json": "44A51520F1F7E079F6064BF37550B06C318AAB659E7708F5457D146F3E5A0ECC",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.1.json": "32BB14ACF1D8C932364952D9D95C8D2A69660E86EA7678A21A1E2721F04FD6C1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json": "AFCBF808981BECF23397728E2550EEF8A34A36A5C71E2A62B90017C385043FEB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G1-\u521b\u4f5c\u65b9\u5411/BGM\u627e\u4e50/\u767b\u8bb0/BGM-\u5019\u9009\u767b\u8bb0-Catchy-Synthwave-tune-Freesound-686768-AC34D1C0.json": "1ACFEE6D4B03D7E0F63792BCD518898C68A436820AA1821989AE4D1DAEEF9115",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json": "DE01FF3582C620705BE76238C41066F242B3B8F353FEFAB6E0EB80A50E217508",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.8.md": "DB45F5442DD2FB7034B49754FE0E0E0DDB6C2E17A0E8E5BCDF645FC5275FB548"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u786e\u8ba4\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G3",
+        "approvalResponse": "auto-policy:G3",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002\uff1bsubject_policy: \u672c\u7247\u4e3a\u7c89\u4e1d\u5411\u4ecb\u7ecd\uff0c\u4e0d\u58f0\u79f0\u8fea\u58eb\u5c3c\u5b98\u65b9\u6388\u6743\uff1b\u53e3\u64ad\u4e8b\u5b9e\u8868\u8ff0\u4ee5\u516c\u5f00\u53ef\u6838\u5b9e\u8d44\u6599\u4e3a\u9650\uff0c\u4e3b\u4f53=\u7c73\u8001\u9f20\uff08\u8bc6\u522b\u4e0d\u786e\u5b9a\u4e0d\u5165\u6210\u7247\uff09\uff1bG1 \u65b9\u5411\u5361\u8bbe\u8868\u8fbe\u8fb9\u754c\u7167\u51fa\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002\uff1bsubject_policy: \u672c\u7247\u4e3a\u7c89\u4e1d\u5411\u4ecb\u7ecd\uff0c\u4e0d\u58f0\u79f0\u8fea\u58eb\u5c3c\u5b98\u65b9\u6388\u6743\uff1b\u53e3\u64ad\u4e8b\u5b9e\u8868\u8ff0\u4ee5\u516c\u5f00\u53ef\u6838\u5b9e\u8d44\u6599\u4e3a\u9650\uff0c\u4e3b\u4f53=\u7c73\u8001\u9f20\uff08\u8bc6\u522b\u4e0d\u786e\u5b9a\u4e0d\u5165\u6210\u7247\uff09\uff1bG1 \u65b9\u5411\u5361\u8bbe\u8868\u8fbe\u8fb9\u754c\u7167\u51fa\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-11-19T06:50:26Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [
+          "preview_voice_production",
+          "subject_policy"
+        ],
+        "editPlanRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.6.json",
+        "timelineReviewRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u663e\u6570\u636e-v0.4.json"
+      }
+    },
+    "G4": {
+      "status": "completed",
+      "inputRefs": [],
+      "artifactRefs": [
+        "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4"
+      ],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g4_candidate_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.7.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.3.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u7f69\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/\u914d\u97f3\u6e05\u5355-\u5e26\u8d77\u70b9-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.2.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u6df7\u97f3\u9884\u68c0-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/\u5c01\u9762\u5408\u6210-v0.1.jpg",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.7.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.9.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "candidate_or_export",
+          "playback_review_card",
+          "render_validation"
+        ],
+        "renderedAt": "2026-11-19T14:59:30+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md": "DFB95AECA9D17F2A273556F6FA7A992956CE36E8B814A7FFAFE607D2779FEDEB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md": "98E787364FE4C96742AF3A13DA3DE8F33937D0615EB92DCF385680BDCEFFA1C2",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json": "BFA36AF9C8005DF5FACD6D24FD5BFD294A4D024929E638CDB7377229500F1008",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4": "3707AE9188061AB2BBDE902DC8BA57C05F806F35F02D080542E83AF709C0AC49",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json": "3B08700CCE29D68A9FB7AAE249B6875FC335AD7922B6DEA7C0B8669627745B2E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u53ef\u7f16\u8f91\u5de5\u7a0b-v0.7.json": "28A4D3DA4D98C9EBA0CCAB837D22D9C5082B75F818A50B952E7378CEDA042F11",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u8f6c\u573a\u6267\u884c\u6307\u4ee4-v0.3.json": "2F0C911C4691273DB31E7C791B3660F9BDDD5F85B620FE3BEC4540E0FD34AF3E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e90\u5b57\u5e55\u906e\u7f69\u5408\u540c-v0.1.json": "E4FF48CD465EF34AA74D586468BC865B8B0852E7BE7635FBC04D587D564A00CA",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5c01\u9762\u5408\u540c-v0.1.json": "157B5A978F6BF0F3D31C494CC9915B8C7AF839222BBF396519C365D1FC089D3C",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u7ae0\u8282\u5361\u5408\u540c-v0.1.json": "8BD47F89F0CFE6ECE93D85600EF799ED25278F4E1B32659C2E9107BFE7960803",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u914d\u97f3\u8f68-v0.1.wav": "AD1CB53483BAF87BF216D03813A0947F8BCB25A5D93C724882BFBCDBF837F9CC",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/BGM-\u5bf9\u9f50\u5efa\u8bae-v0.1.json": "32BB14ACF1D8C932364952D9D95C8D2A69660E86EA7678A21A1E2721F04FD6C1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM/\u914d\u97f3\u6e05\u5355-\u5e26\u8d77\u70b9-v0.1.json": "44A51520F1F7E079F6064BF37550B06C318AAB659E7708F5457D146F3E5A0ECC",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/BGM\u6df7\u97f3/BGM-\u6df7\u97f3\u5408\u540c-v0.2.json": "FB309C20B4B62F2F4A3736F9502EE1D75F555EA305EF912CA78DA4F300EFC112",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5b9e\u6d4b\u62a5\u544a-v0.1.json": "08C0037E8BBD5666AE40C2FD43717EC673DB50AD2C7FAE8B209C26F991F89D08",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u54cd\u5ea6-\u5f52\u4e00\u5316\u8ba1\u5212-v0.2.json": "AFCBF808981BECF23397728E2550EEF8A34A36A5C71E2A62B90017C385043FEB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/\u54cd\u5ea6/\u6df7\u97f3\u9884\u68c0-v0.1.json": "5AA56FED702D0499A694CFDA65C4264549C00F0ACAE9424340A98A49D9166A4E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/cover/\u5c01\u9762\u5408\u6210-v0.1.jpg": "894C917C7A2173BEFFB34E0A3B8BCE0C6157B4629E4F81CF4770F0D9E9CE1D04",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.7.json": "8A6E9802376388FD12EAAACBBEB798DCBCFF92921A926F01F82B2E2B7DE149A9",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json": "4FA98E4183DE68E3A153AD01A15C3135D291673121AC27D4BF9A073662C705C4",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json": "DE01FF3582C620705BE76238C41066F242B3B8F353FEFAB6E0EB80A50E217508",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.9.md": "ED1F172FA1C85F0ACA294E6CAF34B783CF165694A71011C034A1F0E7F64F31EB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json": "A025D83A59E7550B30101D8F0FA1115417724B70143D5DA1D1C9ED0E14E130F6"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G4",
+        "approvalResponse": "auto-policy:G4",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002\uff5c\u9002\u7528\u9884\u6388\u6743 \u2192 preview_voice_production: AI \u82f1\u6587\u914d\u97f3\uff08\u7528\u6237\u9010\u5b57\u539f\u8bdd\u300c\u65c1\u767d\u7528\u82f1\u6587\u300d\uff09\uff0c\u97f3\u8272 G2 \u8bd5\u542c\u5361\u7167\u51fa\u9ed8\u8ba4\u63a8\u8350\uff0c\u9884\u89c8\u7ea7\u97f3\u8d28\u62ab\u9732\u968f\u5361\u4e0e\u4ea4\u4ed8\u5305\u4e00\u5b57\u4e0d\u677e\uff1b\u5df2\u767b\u8bb0\u7f3a\u9677\u2465\uff08local_tts ASR \u56de\u8bfb language=zh\uff09\u672c\u8f6e\u53ea\u8bb0\u4e0d\u4fee\uff0c\u8d70\u4eba\u5de5\u81ea\u7ea0+\u5982\u5b9e\u62ab\u9732\u901a\u9053\uff0c\u4e0d\u5192\u5145\u673a\u5668\u7eff\u706f\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\u4e0e 11-19 \u6d4b\u8bd5\u53e3\u5f84\u88c1\u51b3\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-11-19T07:01:19Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [
+          "preview_voice_production"
+        ],
+        "localRenderRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1.mp4",
+        "g4ValidationRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+        "outputMode": "local_direct"
+      }
+    },
+    "G5": {
+      "status": "completed_auto_reviewed_with_accepted_warnings",
+      "inputRefs": [],
+      "artifactRefs": [],
+      "humanReviewPoints": [],
+      "reviewGate": {
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "cardType": "g5_delivery_review",
+        "basisRefs": [
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/attribution-credits.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/loudness-audit.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitle-srt-check.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/transition-audit.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/human-review-decision.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/README.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/G5-BGM\u94fe\u5ba1\u8ba1-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.7.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.10.md",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json"
+        ],
+        "checklistIds": [
+          "check_frames",
+          "delivery_manifest",
+          "distribution_boundary",
+          "playback_review",
+          "qa_validation"
+        ],
+        "renderedAt": "2026-11-19T15:20:00+08:00",
+        "basisHashes": {
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u64ad\u653e\u5ba1\u6838\u5361-v0.1.md": "AB96955CF1A6FDAE76015BD1B3F239120C08589398145A276AE76D43770D7C55",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md": "0AF1A6082DE366204FD43468CF89CC0943B1801C385FE3F396904221659B7A50",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json": "044E0A5EA90BF15CE5ADA7A54CD3ED5AEE8FAB5B345393491725A86628D1066F",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json": "9149E5592A5C1C9E014BC81C408F5231BF87913DA0A21EFF9A2270E4CD0F9BDF",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/final-video.mp4": "3707AE9188061AB2BBDE902DC8BA57C05F806F35F02D080542E83AF709C0AC49",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/attribution-credits.md": "C81AB21C4DA6BED34035A01FD82A02DB0592336CAF0E500F4107EB24EF5C21C2",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/bgm-chain-audit.json": "4416B1CCCB1220AB3E26AD6AB3282FC8D19D44EC472C083AD0EF8138513577AA",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/loudness-audit.json": "7C32A0B6AF8BFED5354DFC991FDFA120CB4FE9E8A7F5D5B2B67AE61FF5A0F4E8",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/subtitle-srt-check.json": "A913919B002D308E89457C9222FD4AF52D713A5BDE01CB9EED220DA28532D707",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/transition-audit.json": "3E77395D10DC6F50FC7C77C7DF406030C5ABDF316F1410409574404E03404DE1",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/source-timecode-list.json": "E447E0460B81D0163821B808D52D86C2D7F4719638C441079EBF7D6A298193CB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/human-review-decision.json": "B06384A79C57CBE6D58678FB185CEA942623997FB9E93BEAA016CBA5DC61A068",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/README.md": "F58DFD0742D61F771B6B559DD83B07DA2074191618ECA743B92422FE8CA68804",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u8d28\u68c0\u8bc1\u636e/G5-BGM\u94fe\u5ba1\u8ba1-v0.1.json": "4416B1CCCB1220AB3E26AD6AB3282FC8D19D44EC472C083AD0EF8138513577AA",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u6e32\u67d3\u9a8c\u8bc1-v0.1.json": "BFA36AF9C8005DF5FACD6D24FD5BFD294A4D024929E638CDB7377229500F1008",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u5019\u9009\u6210\u7247-v0.1-\u88c5\u914d\u8bb0\u5f55-v0.1.json": "3B08700CCE29D68A9FB7AAE249B6875FC335AD7922B6DEA7C0B8669627745B2E",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u526a\u8f91\u8ba1\u5212-v0.7.json": "8A6E9802376388FD12EAAACBBEB798DCBCFF92921A926F01F82B2E2B7DE149A9",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json": "4FA98E4183DE68E3A153AD01A15C3135D291673121AC27D4BF9A073662C705C4",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json": "DE01FF3582C620705BE76238C41066F242B3B8F353FEFAB6E0EB80A50E217508",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/\u95ee\u9898\u6e05\u5355-v0.10.md": "861FA4D0199FE7A430CEEE71BAD3FF100789B8084380C235C6E90577CABE66F7",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json": "24B0075D7A5DF077F071C0EB4A7AFDD021BFCC0668C9657F354165A768DB6590",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G4-\u526a\u8f91\u4e0e\u6e32\u67d3/G4-\u56de\u653e\u590d\u6838\u5361-v0.1.md": "DFB95AECA9D17F2A273556F6FA7A992956CE36E8B814A7FFAFE607D2779FEDEB",
+          "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/export-config.json": "A571B6D8A179F7416A436624632F450AE8CAD1916CFDC5F01749F67DCF9076DC"
+        }
+      },
+      "approval": {
+        "approvalRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u6279\u51c6\u8bb0\u5f55.md",
+        "reviewGateRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/G5-\u95e8\u7981\u6536\u636e.json",
+        "approvalToken": "auto-policy:G5",
+        "approvalResponse": "auto-policy:G5",
+        "approvalTokenVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002",
+        "approvalResponseVerbatim": "\u672c\u9879\u76ee\uff08mickey-intro-001\uff0c\u7c73\u8001\u9f20\u4ecb\u7ecd\u5ba3\u4f20\u7247\uff0c\u5185\u90e8\u7559\u5b58\uff09\u91c7\u7528\u81ea\u52a8\u786e\u8ba4\uff1aG0\u2013G5 \u5404\u95e8\u7981\u7684\u673a\u5668\u6821\u9a8c\u7167\u8dd1\u3001\u56de\u663e\u5361\u6bcf\u8282\u70b9\u8fb9\u754c\u7167\u51fa\uff0c\u4e00\u5f20\u4e0d\u51cf\uff1b\u6279\u51c6\u7531\u672c\u7b56\u7565\u9884\u6388\u6743\u4ee3\u66ff\u4eba\u5de5\u53e3\u4ee4\uff0c\u547d\u4e2d\u6761\u6b3e\u6309\u7b56\u7565\u81ea\u52a8\u786e\u8ba4\u5e76\u5982\u5b9e\u8bb0 approvalSource=auto-policy\uff08\u7edd\u4e0d\u4f2a\u9020\u4eba\u7c7b\u539f\u8bdd\uff09\u3002\u9884\u6388\u6743\u672a\u8986\u76d6\u7684\u4fe1\u4efb\u7c7b\u4e8b\u9879\u7167\u505c\uff08\u5b81\u53ef\u505c\u4e0d\u53ef\u731c\uff09\uff1b\u672a\u6e05\u6743\u97f3\u4e50\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u6388\u6743\u4e0d\u660e\u00d7\u5bf9\u5916\u53d1\u5e03\u3001\u4eba\u5de5\u80cc\u4e66\u65ad\u8a00\u4e09\u7c7b\u6c38\u4e45\u4e0d\u53ef\u9884\u6388\u6743\u3002\u4f9d\u636e=\u7528\u6237 2026-11-19 \u5f00\u5de5\u5355\u7b2c 9 \u95ee\u9010\u5b57\u539f\u8bdd\u300c\u672c\u9879\u76ee\u4f7f\u7528\u81ea\u52a8\u786e\u8ba4\u300d\u4e0e G0 \u6536\u5c3e\u9884\u6388\u6743\u8349\u6848\u5361\u9010\u6761\u8fc7\u76ee\u540e\u7684\u9010\u5b57\u53e3\u4ee4\u300c\u5168\u90e8\u6309\u5efa\u8bae\u6388\u6743\u300d\uff1b\u672c\u7247\u4e3a\u672c\u5730\u9a8c\u6536\u64cd\u4f5c\u5355 v0.2 \u771f\u673a\u6d4b\u8bd5\u8f7d\u4f53\uff08\u7528\u6237\u4eb2\u4f9b\u65b0\u7d20\u6750\uff09\uff0c\u6d4b\u8bd5\u53e3\u5f84=\u5148\u6536\u96c6\u95ee\u9898\u4e0d\u4fee\u590d\uff08\u5df2\u767b\u8bb0\u2465\u2468\u7b49\u6cbf 11-18 \u5f69\u6392\u53f0\u8d26\uff09\u3002",
+        "normalizedFromVariant": false,
+        "approvedAt": "2026-11-19T07:14:28Z",
+        "approvalSource": "auto-policy",
+        "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+        "preAuthorizationsUsed": [],
+        "deliveryManifestRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/delivery-manifest.json",
+        "g5ValidationRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G5-\u4ea4\u4ed8\u5305/\u4ea4\u4ed8\u5305-v0.1/metadata-validation-report.json"
+      }
+    }
+  },
+  "acceptedWarnings": [
+    "BGM\u300aCatchy-Synthwave\u300b(Freesound 686768) cc-by \u672a\u8d70\u5b8c\u6e05\u6743\u767b\u8bb0\uff1a\u4ec5\u9650\u5185\u90e8\u7559\u5b58\uff1b\u5bf9\u5916\u53d1\u5e03\u5fc5\u987b\u6309 attribution-credits.md \u9010\u5b57\u7f72\u540d\u5e76\u590d\u6838\u8bb8\u53ef\u8fb9\u754c",
+    "\u6e90\u7d20\u6750=\u4ed6\u4eba\u4fee\u590d/\u8865\u5e27\u7248\uff08\u5185\u90e8\u7559\u5b58\u8fb9\u754c\uff09\uff1a\u589e\u5f3a\u7455\u75b5\u968f G0 \u8b66\u544a\u62ab\u9732\uff1bB \u6bb5\u70e7\u5f55\u4e2d\u6587\u906e\u7f69 black@0.85 \u538b\u6de1\u3001\u6de1\u5f71\u53ef\u8fa8\uff08\u3257\uff09",
+    "\u914d\u97f3=\u9884\u89c8\u7ea7\u7cfb\u7edf\u58f0\uff08macOS Samantha\uff09\uff1apreview_voice_production \u9884\u6388\u6743"
+  ],
+  "nextAction": "Local delivery is complete. Distribution remains subject to authorization.",
+  "createdAt": "2026-11-19T05:03:26Z",
+  "updatedAt": "2026-11-19T07:14:28Z",
+  "autoPolicyRef": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0/mickey-intro-001/auto-policy.json",
+  "workspaceRoot": {
+    "root": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill",
+    "source": "choice",
+    "workbench": "/Users/chuanzhangbigye/\u5de5\u4f5c/MySpace/Video-shipcut Skill/\u5de5\u4f5c\u53f0"
+  },
+  "capabilityAudit": {
+    "file": "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/\u80fd\u529b\u76d8\u70b9-v0.4.json",
+    "sha256": "F046FED27CD0F9521B4E9FEB43879B06759CDA4D06AD4C6914EE550D4A770842",
+    "probedAt": "2026-11-19T14:52:04+08:00",
+    "profile": [
+      "bgm",
+      "narration",
+      "subtitles",
+      "transitions"
+    ],
+    "summary": {
+      "ready": 8,
+      "missing": 0,
+      "notApplicable": 0,
+      "missingIds": []
+    },
+    "missing": []
+  },
+  "amendmentHistory": [
+    {
+      "fromNode": "G4",
+      "toNode": "G3",
+      "reason": "G4 brief \u7f62\u5de5\uff1a\u6279\u51c6\u8ba1\u5212 narration \u5e76\u8d26\u4e0e\u914d\u97f3\u6e05\u5355\u9010\u53e5\u5408\u540c\u4e0d\u9010\u5b57\u76f8\u7b49\uff08sentenceStitch \u4e03\u6761\uff09\uff0c\u9010\u53e5\u843d\u4f4d\u91cd\u6784\u56de\u7089 G3",
+      "reworkRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G3-\u526a\u8f91\u8ba1\u5212/G3-\u56de\u7089\u8bf4\u660e-\u9010\u53e5\u843d\u4f4d-v0.1.md",
+      "reopenedAt": "2026-11-19T06:30:29Z"
+    },
+    {
+      "fromNode": "G4",
+      "toNode": "G3",
+      "reason": "G4 \u88c5\u914d\u4e09\u53e3\u5f84\u5bf9\u8d26\u7f62\u5de5\uff1a\u6279\u51c6 loudnessTarget -17.4 \u5728\u653e\u7f6e\u8f68\u7269\u7406\u4e0d\u53ef\u8fbe\uff08\u9700 \u2264-17.61\uff09\uff0c\u6362\u6863\u56de G3 \u91cd\u6279\uff08\u53f0\u8d26\u246c+\u2473 \u518d\u73b0\uff0c\u95ee\u9898\u6e05\u5355\u3254\u5019\u9009\uff09",
+      "reworkRef": "\u5de5\u4f5c\u53f0/mickey-intro-001/G2-\u8bc1\u636e\u4e0e\u53e3\u64ad/G2-\u51b3\u5b9a-v0.4.json",
+      "reopenedAt": "2026-11-19T06:47:53Z"
+    }
+  ],
+  "capabilityAuditHistory": [
+    {
+      "file": "\u5de5\u4f5c\u53f0/mickey-intro-001/G0-\u7d20\u6750\u5305/\u80fd\u529b\u76d8\u70b9-v0.2.json",
+      "sha256": "E518C497B3DDC7ECB6FDDD8C4C8BB5BC817817DDB78637E19A87533B2E6BBC78",
+      "probedAt": "2026-11-19T11:43:11+08:00",
+      "profile": [
+        "bgm",
+        "narration",
+        "subtitles"
+      ],
+      "summary": {
+        "ready": 7,
+        "missing": 0,
+        "notApplicable": 1,
+        "missingIds": []
+      },
+      "missing": []
+    }
+  ]
+}

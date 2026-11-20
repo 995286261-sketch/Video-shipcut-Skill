@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "auto-approval-policy",
+  "projectId": "mickey-intro-001",
+  "authorizedBy": "用户（host-session）",
+  "authorizedAt": "2026-11-19T12:05:00+08:00",
+  "statement": "本项目（mickey-intro-001，米老鼠介绍宣传片，内部留存）采用自动确认：G0–G5 各门禁的机器校验照跑、回显卡每节点边界照出，一张不减；批准由本策略预授权代替人工口令，命中条款按策略自动确认并如实记 approvalSource=auto-policy（绝不伪造人类原话）。预授权未覆盖的信任类事项照停（宁可停不可猜）；未清权音乐×对外发布、授权不明×对外发布、人工背书断言三类永久不可预授权。依据=用户 2026-11-19 开工单第 9 问逐字原话「本项目使用自动确认」与 G0 收尾预授权草案卡逐条过目后的逐字口令「全部按建议授权」；本片为本地验收操作单 v0.2 真机测试载体（用户亲供新素材），测试口径=先收集问题不修复（已登记⑥⑨等沿 11-18 彩排台账）。",
+  "preAuthorizations": [
+    {
+      "category": "subject_policy",
+      "basis": "本片为粉丝向介绍，不声称迪士尼官方授权；口播事实表述以公开可核实资料为限，主体=米老鼠（识别不确定不入成片）；G1 方向卡设表达边界照出。依据=用户 2026-11-19「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00"
+    },
+    {
+      "category": "music_delegated_selection",
+      "basis": "BGM 委托检索通道选曲（槽=use_library_later）：内部用途默认网易云通道找试听件供选型，选中曲目必须官方渠道取得整轨并登记才进成片，登记不了即换曲；命中署名许可（CC-BY 家族）走 v1.35.4 机器署名闭环。依据=用户 2026-11-19 第 5 问原话「背景音乐你来配」+「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00"
+    },
+    {
+      "category": "preview_voice_production",
+      "basis": "AI 英文配音（用户逐字原话「旁白用英文」），音色 G2 试听卡照出默认推荐，预览级音质披露随卡与交付包一字不松；已登记缺陷⑥（local_tts ASR 回读 language=zh）本轮只记不修，走人工自纠+如实披露通道，不冒充机器绿灯。依据=用户 2026-11-19「全部按建议授权」与 11-19 测试口径裁决。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00"
+    },
+    {
+      "category": "sufficiency_shorten",
+      "basis": "素材不足以支撑规划时长（约 2 分钟）时默认走缩短/改写回 G2 兜底，不为凑时长损害叙事完整性。依据=用户 2026-11-19「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00"
+    },
+    {
+      "category": "loudness_blocked_exit",
+      "basis": "响度计划 blocked（源物理天花板够不到目标）时接受降目标让步出路，让步数字卡上点名披露。依据=用户 2026-11-19「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00",
+      "parameters": {
+        "exit": "把目标响度降到至多"
+      },
+      "revisionNote": "11-19 G2 修正：原 parameters.exit 系 G0 草案臆测数字（-15 LUFS），现场实测出路为 -17.3——机器硬闸如实拦截（正向样本）。修正为先例形制=出路族前缀，数字由现场计划件给出（banshee/彩排同形）。条款语义与 basis 未动。"
+    },
+    {
+      "category": "transition_preview_waiver",
+      "basis": "转场试装预览照生成、逐切点查看；仅当本机无法生成（blocked_previews）需豁免时视为预先知情批准，且卡上必须点名豁免理由，静默豁免不预授。依据=用户 2026-11-19「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00"
+    },
+    {
+      "category": "warning_acceptance",
+      "basis": "窄授权三范围：素材自带台标/水印残留、修复增强版画质瑕疵、成片时长相对 2 分钟 ±10% 偏差——逐条点名露出后视为接受；其他警告出现即停等用户。依据=用户 2026-11-19「全部按建议授权」。",
+      "authorizedBy": "用户（host-session）",
+      "authorizedAt": "2026-11-19T12:05:00+08:00",
+      "parameters": {
+        "scopes": [
+          "台标水印残留",
+          "修复增强画质瑕疵",
+          "时长±10%偏差"
+        ]
+      }
+    }
+  ]
+}
