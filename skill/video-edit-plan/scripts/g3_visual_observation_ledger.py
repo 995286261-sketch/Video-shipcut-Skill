@@ -16,6 +16,7 @@ REQUIRED_FIELDS = KEY_FIELDS + ("recordId", "analysisStatus", "frameRef", "creat
 STATUSES = {"completed", "failed", "timeout", "superseded"}
 CAPTION_KINDS = {"dialogue", "lyrics", "card", "watermark", "other"}
 CAPTION_CONFIDENCE = {"high", "medium", "low"}
+CAPTION_ZONES_ENFORCED_VERSION = "g3-explore-v0.2"
 
 
 def now() -> str:
@@ -55,6 +56,11 @@ def require_record(record: dict) -> None:
 
 def require_caption_zones(record: dict) -> None:
     if "burned_subtitle" not in record.get("riskFlags", []):
+        return
+    # 时代编码在产物（R3 同律，mickey 批二实弹案）：站位硬闸只对 g3-explore-v0.2 起的
+    # 观察生效；旧版记录不追溯重验（否则死锁——补站位的 supersede 被自己要补的旧记录拦下）。
+    # 第二道闸兜底：合同生成器对无 captionZones 的 burned 记录一律拒当遮罩证据，无洞可钻。
+    if record.get("analysisPromptVersion") != CAPTION_ZONES_ENFORCED_VERSION:
         return
     zones = record.get("captionZones")
     if not isinstance(zones, list) or not zones:

@@ -96,6 +96,7 @@ class VisualObservationLedgerTests(unittest.TestCase):
     # ㉙（mickey-001）：burned_subtitle 必须带结构化站位 captionZones，只记存在性拒写入
     def burned(self, record_id="obs-001"):
         value = self.record(record_id)
+        value["analysisPromptVersion"] = "g3-explore-v0.2"
         value["riskFlags"] = ["burned_subtitle"]
         value["captionZones"] = [{"text": "(Mickey)", "line": 1, "kind": "lyrics", "yPctRange": [81, 86], "confidence": "high"},
                                  {"text": "(Mouse)", "line": 2, "kind": "lyrics", "yPctRange": [88, 93]}]
@@ -103,10 +104,19 @@ class VisualObservationLedgerTests(unittest.TestCase):
 
     def test_burned_subtitle_without_zones_is_rejected(self):
         value = self.record()
+        value["analysisPromptVersion"] = "g3-explore-v0.2"
         value["riskFlags"] = ["burned_subtitle"]
         result = self.command("--append", value)
         self.assertNotEqual(0, result.returncode)
         self.assertIn("captionZones", result.stdout + result.stderr)
+
+    def test_pre_v02_era_burned_record_is_not_retroactively_blocked(self):
+        # R3 时代编码在产物（mickey 批二实弹死锁案）：v0.2 前旧记录不追溯重验，
+        # 否则补站位的 supersede 会被自己要补的旧记录拦下；遮罩证据由合同生成器第二道闸把关
+        value = self.record()
+        value["riskFlags"] = ["burned_subtitle"]
+        result = self.command("--append", value)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
 
     def test_burned_subtitle_with_valid_zones_is_accepted(self):
         result = self.command("--append", self.burned())
@@ -134,8 +144,11 @@ class VisualObservationLedgerTests(unittest.TestCase):
         self.assertIn("line", result.stdout + result.stderr)
 
     def test_supersede_applies_same_caption_zone_validation(self):
-        self.assertEqual(0, self.command("--append", self.record()).returncode)
+        original = self.record()
+        original["analysisPromptVersion"] = "g3-explore-v0.2"
+        self.assertEqual(0, self.command("--append", original).returncode)
         replacement = self.record("obs-002")
+        replacement["analysisPromptVersion"] = "g3-explore-v0.2"
         replacement["riskFlags"] = ["burned_subtitle"]
         replacement["correctionSource"] = "用户指认画面下方有卡拉OK烧字"
         bad = self.command("--supersede", {"supersedesRecordId": "obs-001", "newRecord": replacement})

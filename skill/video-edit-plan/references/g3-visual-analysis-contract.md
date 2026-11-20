@@ -18,7 +18,7 @@ G3 的目标主体筛选必须先完成“关键帧 → 多模态识图 → 结�
 - `identityStatus`：`confirmed`（已确认目标主体）、`person_only`（仅确认出现人物，未确认目标主体）、`uncertain`、`not_present` 或 `mixed`。除 `confirmed` 外一律不自动入选，只进入不可用素材统计。
 - `observedVisuals`：只描述实际看到的画面
 - `riskFlags`：例如 `channel_watermark`、`burned_subtitle`、`mixed_subject`、`overexposure`
-- `captionZones`（`riskFlags` 含 `burned_subtitle` 时**必填**，账本工具硬校验拒写）：逐条记录烧录字幕的**站位**，每条含 `text`（看到的文字）、`line`（第几行，正整数）、`kind`（受控枚举 `dialogue|lyrics|card|watermark|other`）、`yPctRange`（`[下沿,上沿]` 占画面高度百分比，0≤a<b≤100）、可选 `xPctRange`、`confidence`（`high|medium|low`）。本字段是 G4 遮罩合同机械生成的唯一位置依据（mickey-001 ㉙ 教训：只记"有没有"不记"在哪"，合同就拿对话字幕常数套了卡拉OK歌词）；观察 prompt 升版 `g3-explore-v0.2` 起必须要求模型逐帧输出站位。
+- `captionZones`（`riskFlags` 含 `burned_subtitle` 时**必填**，账本工具硬校验拒写）：逐条记录烧录字幕的**站位**，每条含 `text`（看到的文字）、`line`（第几行，正整数）、`kind`（受控枚举 `dialogue|lyrics|card|watermark|other`）、`yPctRange`（`[下沿,上沿]` 占画面高度百分比，0≤a<b≤100）、可选 `xPctRange`、`confidence`（`high|medium|low`）。本字段是 G4 遮罩合同机械生成的唯一位置依据（mickey-001 ㉙ 教训：只记"有没有"不记"在哪"，合同就拿对话字幕常数套了卡拉OK歌词）；观察 prompt 升版 `g3-explore-v0.2` 起必须要求模型逐帧输出站位。**时代编码在产物（R3 同律，v1.36.1）**：站位硬校验只对 `analysisPromptVersion=g3-explore-v0.2` 的记录生效，v0.2 之前的旧记录不追溯重验（否则死锁——账本每次写盘全量重验会把"补站位的 supersede"自己拦下，mickey 批二实弹案）；旧记录想当遮罩证据仍过不了第二道闸（合同生成器对无站位 burned 记录一律拒），无洞可钻。原位改判须逐字保留精确复用键（含提取规格与 prompt 版本），新帧住址写 `frameRef`、实测经过写 `correctionSource`/`observedVisuals`。
 
 ## 缓存与文字索引
 
