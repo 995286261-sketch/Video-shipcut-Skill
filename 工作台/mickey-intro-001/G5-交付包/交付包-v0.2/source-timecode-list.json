@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "0.1",
+  "node": "G5",
+  "projectId": "mickey-intro-001",
+  "generatedBy": "g5_build_traceability.py 机械投影自批准计划+装配记录+素材包登记（台账⑪甲案：手写通道退役，本文件唯一生成入口）",
+  "bindings": {
+    "plan": {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G3-剪辑计划/G3-剪辑计划-v0.7.json",
+      "sha256": "8A6E9802376388FD12EAAACBBEB798DCBCFF92921A926F01F82B2E2B7DE149A9"
+    },
+    "assemblyRecord": {
+      "path": "/Users/chuanzhangbigye/工作/WorkSpace/mickey-b2/G4-候选成片-v0.2-装配记录-v0.1.json",
+      "sha256": "DED4B325590F183429A7BA525CBACB4AEB67A635D47406D21A2B37F94DD4773A"
+    },
+    "materialPack": {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G0-素材包/material-pack.json",
+      "sha256": "7A429EE5A49E9317860EE6D96CCAB64F22DED3A9CC65FE0CB691BC31C9F12686"
+    },
+    "chapterWindows": {
+      "path": "/Users/chuanzhangbigye/工作/MySpace/Video-shipcut Skill/工作台/mickey-intro-001/G5-交付包/质检证据/章节窗口-v0.1.json",
+      "sha256": "E917CF3601FBDF1AF0F696EE033C8967394F581D0BB2F118347CF78CA38E76EA"
+    }
+  },
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 0,
+      "sourceEndMs": 8419,
+      "outputStartMs": 0,
+      "outputEndMs": 8419
+    },
+    {
+      "segmentId": "seg-02a",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 38000,
+      "sourceEndMs": 42900,
+      "outputStartMs": 8419,
+      "outputEndMs": 13319
+    },
+    {
+      "segmentId": "seg-02b",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 42900,
+      "sourceEndMs": 49381,
+      "outputStartMs": 13319,
+      "outputEndMs": 19800
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 378000,
+      "sourceEndMs": 383403,
+      "outputStartMs": 19800,
+      "outputEndMs": 25203
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 458000,
+      "sourceEndMs": 463297,
+      "outputStartMs": 25203,
+      "outputEndMs": 30500
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 6000,
+      "sourceEndMs": 11447,
+      "outputStartMs": 30500,
+      "outputEndMs": 35947
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 11447,
+      "sourceEndMs": 15115,
+      "outputStartMs": 35947,
+      "outputEndMs": 39615
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 30000,
+      "sourceEndMs": 34362,
+      "outputStartMs": 39615,
+      "outputEndMs": 43977
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 34362,
+      "sourceEndMs": 38834,
+      "outputStartMs": 43977,
+      "outputEndMs": 48449
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 66000,
+      "sourceEndMs": 69403,
+      "outputStartMs": 48449,
+      "outputEndMs": 51852
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 69403,
+      "sourceEndMs": 73410,
+      "outputStartMs": 51852,
+      "outputEndMs": 55859
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 73410,
+      "sourceEndMs": 83551,
+      "outputStartMs": 55859,
+      "outputEndMs": 66000
+    }
+  ],
+  "chapters": [
+    {
+      "chapterId": "ch-01",
+      "output": "clips/ch-01.mp4",
+      "outputStartMs": 0,
+      "outputEndMs": 30500,
+      "segments": [
+        "seg-01",
+        "seg-02a",
+        "seg-02b",
+        "seg-03",
+        "seg-04"
+      ]
+    },
+    {
+      "chapterId": "ch-02",
+      "output": "clips/ch-02.mp4",
+      "outputStartMs": 30500,
+      "outputEndMs": 48449,
+      "segments": [
+        "seg-05a",
+        "seg-05b",
+        "seg-06a",
+        "seg-06b"
+      ]
+    },
+    {
+      "chapterId": "ch-03",
+      "output": "clips/ch-03.mp4",
+      "outputStartMs": 48449,
+      "outputEndMs": 55859,
+      "segments": [
+        "seg-07a",
+        "seg-07b"
+      ]
+    },
+    {
+      "chapterId": "ch-04",
+      "output": "clips/ch-04.mp4",
+      "outputStartMs": 55859,
+      "outputEndMs": 66000,
+      "segments": [
+        "seg-08"
+      ]
+    }
+  ]
+}

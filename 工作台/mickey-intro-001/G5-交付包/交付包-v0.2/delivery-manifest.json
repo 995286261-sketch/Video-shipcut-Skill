@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G5",
+  "sourceProbe": [
+    {
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceProbe": {
+        "durationMs": 463299,
+        "video": {
+          "width": 1280,
+          "height": 720,
+          "frameRate": "30"
+        }
+      }
+    },
+    {
+      "assetId": "source-02-48c9834f",
+      "sha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceProbe": {
+        "durationMs": 84000,
+        "video": {
+          "width": 1920,
+          "height": 1080,
+          "frameRate": "25"
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "seg-01",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 0,
+      "sourceEndMs": 8419,
+      "outputStartMs": 0,
+      "outputEndMs": 8419
+    },
+    {
+      "segmentId": "seg-02a",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 38000,
+      "sourceEndMs": 42900,
+      "outputStartMs": 8419,
+      "outputEndMs": 13319
+    },
+    {
+      "segmentId": "seg-02b",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 42900,
+      "sourceEndMs": 49381,
+      "outputStartMs": 13319,
+      "outputEndMs": 19800
+    },
+    {
+      "segmentId": "seg-03",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 378000,
+      "sourceEndMs": 383403,
+      "outputStartMs": 19800,
+      "outputEndMs": 25203
+    },
+    {
+      "segmentId": "seg-04",
+      "assetId": "source-02-1928-4k60-69e7b06a",
+      "sourceAssetPath": "02_原始素材/汽船威利-1928-4K60增强版.mp4",
+      "sourceSha256": "DDED4B98241822DFD4DC397FB6A2B2855AD772D90C5007ACA42431CF2E96B5A9",
+      "sourceStartMs": 458000,
+      "sourceEndMs": 463297,
+      "outputStartMs": 25203,
+      "outputEndMs": 30500
+    },
+    {
+      "segmentId": "seg-05a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 6000,
+      "sourceEndMs": 11447,
+      "outputStartMs": 30500,
+      "outputEndMs": 35947
+    },
+    {
+      "segmentId": "seg-05b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 11447,
+      "sourceEndMs": 15115,
+      "outputStartMs": 35947,
+      "outputEndMs": 39615
+    },
+    {
+      "segmentId": "seg-06a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 30000,
+      "sourceEndMs": 34362,
+      "outputStartMs": 39615,
+      "outputEndMs": 43977
+    },
+    {
+      "segmentId": "seg-06b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 34362,
+      "sourceEndMs": 38834,
+      "outputStartMs": 43977,
+      "outputEndMs": 48449
+    },
+    {
+      "segmentId": "seg-07a",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 66000,
+      "sourceEndMs": 69403,
+      "outputStartMs": 48449,
+      "outputEndMs": 51852
+    },
+    {
+      "segmentId": "seg-07b",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 69403,
+      "sourceEndMs": 73410,
+      "outputStartMs": 51852,
+      "outputEndMs": 55859
+    },
+    {
+      "segmentId": "seg-08",
+      "assetId": "source-02-48c9834f",
+      "sourceAssetPath": "02_原始素材/米奇妙妙屋-高清修复版.mp4",
+      "sourceSha256": "837575845BA7E8FB01D8D1424961ABF0F9D28B27951976E5AE016DBF8932104D",
+      "sourceStartMs": 73410,
+      "sourceEndMs": 83551,
+      "outputStartMs": 55859,
+      "outputEndMs": 66000
+    }
+  ],
+  "editPlan": {
+    "timeline": [
+      {
+        "segmentId": "seg-01",
+        "outputStartMs": 0,
+        "outputEndMs": 8419,
+        "purpose": "开场：修复版黑场+STEAMBOAT WILLIE 片头标题卡本体，1928 原片字卡即时代宣言（汽笛特写在 seg-02 窗 43690ms，验证帧实测）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-02a",
+        "outputStartMs": 8419,
+        "outputEndMs": 13319,
+        "purpose": "1928 诞生句：米奇舵轮前舞动（38000 已验帧），正对『one steamboat, one whistle, a star was born』",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-02b",
+        "outputStartMs": 13319,
+        "outputEndMs": 19800,
+        "purpose": "黑白能量句：汽笛特写+皮特黑手套入画（43690/49380 已验帧），橡胶管时代的打闹能量",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-03",
+        "outputStartMs": 19800,
+        "outputEndMs": 25203,
+        "purpose": "公有域句配全片最名场面：米奇戴手套给奶牛拔牙（380s 帧），'属于每个人'的共享画面",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-04",
+        "outputStartMs": 25203,
+        "outputEndMs": 30500,
+        "purpose": "THE END 片尾卡=黑白时代句点，『从未停止演变』的转折留白；硬切入现代（原设计叠化因源手柄不足被机检摊牌，见 transitionReason）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-05a",
+        "outputStartMs": 30500,
+        "outputEndMs": 35947,
+        "purpose": "演变句（从影院短片到电视树屋）：CGI 米奇唱歌特写『要不要进我的妙妙屋』（6000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-05b",
+        "outputStartMs": 35947,
+        "outputEndMs": 39615,
+        "purpose": "同一耳朵同一鞋：米奇前伸手微笑+草地空镜手套入画（10557/15114 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-06a",
+        "outputStartMs": 39615,
+        "outputEndMs": 43977,
+        "purpose": "跨越潮流时区句：米奇指镜头『米斯嘎木斯嘎米老鼠』（30000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-06b",
+        "outputStartMs": 43977,
+        "outputEndMs": 48449,
+        "purpose": "关键在笑声句：米奇头气球升起+妙妙屋全景（34417/38833 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-07a",
+        "outputStartMs": 48449,
+        "outputEndMs": 51852,
+        "purpose": "oh boy 世纪台词句：米奇门口招手『米奇我在这』（66000 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-07b",
+        "outputStartMs": 51852,
+        "outputEndMs": 55859,
+        "purpose": "同一条河句：屋内电话旁+红地板（69705/73409 已验帧）",
+        "loop": false,
+        "duplicateFill": false
+      },
+      {
+        "segmentId": "seg-08",
+        "outputStartMs": 55859,
+        "outputEndMs": 66000,
+        "purpose": "收束：灯泡 gag→CLUBHOUSE logo 卡定格致谢，尾 8.7s 音乐收+遮罩带避让 logo",
+        "loop": false,
+        "duplicateFill": false
+      }
+    ]
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "0E51845376AE0A6FDE5D6B59FD23E1D59FFC21203F4588083BF6392AF58749C1"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "894C917C7A2173BEFFB34E0A3B8BCE0C6157B4629E4F81CF4770F0D9E9CE1D04"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "D4A4717FBAEB7DC7176766A038EDC4F13CF550BE3D5498F176FE63C5297C18E2"
+    },
+    "editTimeline": {
+      "path": "edit-timeline.md",
+      "sha256": "CF2EE13C91A27F49E19AB3F206CDF4679D5F02DAAAD19CFBE057BEA7CC652159"
+    }
+  },
+  "qaReport": "metadata-validation-report.json",
+  "humanReviewPoints": [
+    "G3 终审八列回显（唯一人工门禁；自动模式下=策略批准+卡照出，两次 reopen-g3 回炉重批在账）",
+    "语义选镜结果：12 段 direct_match 为主，验证帧工序抓到网格误判 3 处经 supersede 自纠（A01r1/A23r1/A03r1）",
+    "源字幕处理=B 段 7 处遮罩底部 86–99% black@0.85；0.85=压淡非全遮，淡影可辨（问题 ㉗ 披露）",
+    "seg-04 叠化降级硬切：源尾手柄仅 2ms，物理不可叠化，G3 披露并批准",
+    "响度：目标 −17.7=放置轨物理下限（㉔ 三口径罢工后二次 reopen 批准）；出路取整 ⑳ 两次实发",
+    "分辨率：计划政策文本 1920x1080 vs 成片 1280x720 无机器对账（问题 ㉖ 披露；成片内部自洽）",
+    "BGM：Catchy-Synthwave（Freesound 686768，cc-by）委托选定，链审计 passed；署名义务经 attribution-credits.md 机器闭环（缺口① 首跑实弹）",
+    "配音=预览级系统声 Samantha（voiceTier=preview_only，preview_voice_production 预授权）",
+    "G5 机检：完整解码/黑帧/静音/重复检查+12 帧目视（播放审核卡）",
+    "分发边界=internal_test：源=他人修复/补帧版（只读、增强瑕疵 G0 警告在账）、BGM 未清权——对外发布（B站）必须清权重走 G4/G5，署名清单已随包"
+  ],
+  "humanReviewDecision": "human-review-decision.json",
+  "evidenceRefs": [
+    "ev-001",
+    "ev-002"
+  ],
+  "warnings": [
+    "accepted_warning:\"BGM\\u300aCatchy-Synthwave\\u300b(Freesound 686768) license=cc-by \\u672a\\u8d70\\u5b8c\\u6e05\\u6743\\u767b\\u8bb0\\uff1a\\u4ec5\\u9650\\u5185\\u90e8\\u7559\\u5b58\\uff1b\\u5bf9\\u5916\\u53d1\\u5e03\\u5fc5\\u987b\\u6309 attribution-credits.md \\u9010\\u5b57\\u7f72\\u540d\\u5e76\\u590d\\u6838\\u8bb8\\u53ef\\u8fb9\\u754c\\uff0c\\u5426\\u5219\\u8fdd\\u53cd\\u6743\\u76ca\\uff08\\u59d4\\u6258\\u9009\\u5b9a\\uff0c\\u7f72\\u540d\\u4e49\\u52a1\\u673a\\u5668\\u95ed\\u73af v1.35.4 \\u5df2\\u968f\\u5305\\u5151\\u73b0\\uff09\"",
+    "accepted_warning:\"\\u6e90\\u7d20\\u6750=\\u4ed6\\u4eba\\u4fee\\u590d/\\u8865\\u5e27\\u7248\\uff08\\u300a\\u6c7d\\u8239\\u5a01\\u5229\\u300b4K60 \\u8d85\\u5206\\u8865\\u5e27+\\u300a\\u7c73\\u5947\\u5999\\u5999\\u5c4b\\u300b\\u539f\\u7248\\u65e0\\u6c34\\u5370\\u4fee\\u590d\\uff1b\\u4e2a\\u4eba\\u5b66\\u4e60/\\u5185\\u90e8\\u7559\\u5b58\\u8fb9\\u754c\\uff09\\uff1a\\u589e\\u5f3a\\u7455\\u75b5\\u968f G0 \\u8b66\\u544a\\u62ab\\u9732\\uff1bB \\u6bb5\\u70e7\\u5f55\\u5b57\\u5e55\\u7ecf v0.2 \\u673a\\u68b0\\u5408\\u540c\\u906e\\u7f69\\uff08\\u5e26\\u9876\\u6309\\u89c2\\u5bdf\\u7ad9\\u4f4d\\u9010\\u7a97 81\\u201388%\\uff0c\\u5168\\u70e7\\u5b57\\u5165\\u5e26\\u3001\\u5e26\\u5916\\u96f6\\u88f8\\u9732\\uff0c\\u3259 \\u4fee\\u590d\\uff09\\uff0cblack@0.85 \\u538b\\u6de1\\u3001\\u5e26\\u5185\\u6de1\\u5f71\\u53ef\\u8fa8\\uff08\\u95ee\\u9898 \\u3257 \\u5982\\u5b9e\\u62ab\\u9732\\uff0c\\u975e\\u5168\\u906e\\uff09\"",
+    "accepted_warning:\"\\u914d\\u97f3=\\u9884\\u89c8\\u7ea7\\u7cfb\\u7edf\\u58f0\\uff08macOS Samantha\\uff09\\uff1apreview_voice_production \\u9884\\u6388\\u6743\\uff0c\\u9010\\u5b57\\u6279\\u51c6\\u542b\\u300e\\u9884\\u89c8\\u7ea7\\u300f\\u62ab\\u9732\\u8bcd\""
+  ],
+  "authorization": {
+    "distribution": "internal_test",
+    "sourceBoundary": "两端素材=他人修复/补帧版（只读使用；增强瑕疵随 G0 警告披露）；不声称迪士尼官方授权",
+    "externalReleasePrecondition": "对外发布（B站）必须先清权 BGM 与源素材边界并重走 G4/G5；署名义务已随包"
+  },
+  "distribution": "not_specified",
+  "status": "valid_with_warnings",
+  "finishedAt": "2026-11-20T18:05:00+08:00",
+  "componentRefs": {
+    "traceability": "source-timecode-list.json",
+    "editPlan": "edit-plan.json",
+    "exportConfig": "export-config.json",
+    "qa": "metadata-validation-report.json",
+    "humanReview": "human-review-decision.json"
+  },
+  "attribution": {
+    "required": true,
+    "artifact": "attribution-credits.md",
+    "text": "\"Catchy Synthwave tune\" by Robhog (https://creativecommons.org/licenses/by/4.0/)",
+    "license": "cc-by"
+  }
+}

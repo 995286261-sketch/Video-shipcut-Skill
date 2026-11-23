@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "mickey-intro-001",
+  "node": "G5",
+  "subject": "mickey-intro-001 交付包机器质检",
+  "reviewedAt": "2026-11-23T11:01:30+08:00",
+  "checks": {
+    "decode": "pass（完整解码零错误，机器实测）",
+    "videoCodec": "h264（机器实测，与 export-config 对账在 --media 校验中通过）",
+    "dimensions": "1280x720（机器实测）",
+    "fps": "30/1（机器实测，⑧丙对账通过）",
+    "audio": "aac 44100Hz 2ch（机器实测）",
+    "duration": "66000ms（机器实测）",
+    "blackFrames": "pass（编排方 2026-11-23 转正位置现测：blackdetect d=0.05/pix_th=0.10 四处——0–0.367s=批准黑场入窗口+源片头黑场起点、28.300–30.233s 与 30.333–30.500s=seg-04 源『THE END』虹幕收拢原生黑场（批准内容）、65.867–65.967s=批准黑场出窗口尾部；与 v0.1/v0.2 彩排实测逐位一致）",
+    "silence": "pass（编排方 2026-11-23 转正位置现测：silencedetect n=-50dB:d=2 零命中，无连续静音段）",
+    "duplicateSegments": "pass（12 段·同素材源窗口两两不相交，机器实算）",
+    "cover": "1280x720（机器实测尺寸；目视确认归人审）"
+  },
+  "artifacts": {
+    "finalVideo": {
+      "path": "final-video.mp4",
+      "sha256": "0E51845376AE0A6FDE5D6B59FD23E1D59FFC21203F4588083BF6392AF58749C1"
+    },
+    "cover": {
+      "path": "cover.jpg",
+      "sha256": "894C917C7A2173BEFFB34E0A3B8BCE0C6157B4629E4F81CF4770F0D9E9CE1D04"
+    },
+    "subtitles": {
+      "path": "subtitles.srt",
+      "sha256": "D4A4717FBAEB7DC7176766A038EDC4F13CF550BE3D5498F176FE63C5297C18E2"
+    },
+    "chapterClips": [
+      {
+        "path": "clips/ch-01.mp4",
+        "sha256": "8FAC0E564B7383FD9DBCB7C6CD8FF3E3F7843B6E9DC96B52233DD89DC71DB801"
+      },
+      {
+        "path": "clips/ch-02.mp4",
+        "sha256": "7CA7C0EB1F8F5E0A776F76A27ABF02166FA519A39D6DE5284A67F2C3178B3F47"
+      },
+      {
+        "path": "clips/ch-03.mp4",
+        "sha256": "9D09337B7F4A41B7B842BA5675753EC43B5B7D0143E485BC06B78055B17C802B"
+      },
+      {
+        "path": "clips/ch-04.mp4",
+        "sha256": "8EED86C9265A0687F9AAA86E1F9C2166142EAE1BBF49CC66A7E395BC53985494"
+      }
+    ],
+    ".mimosa/hook-state/sess_33ea11e2-4fca-48ba-b7bf-463149887117.json": {
+      "path": ".mimosa/hook-state/sess_33ea11e2-4fca-48ba-b7bf-463149887117.json",
+      "sha256": "7906E520AA055DE3C72D13DEA39B57E963DFD245653D10660C129B3BE1BECC50"
+    },
+    "README.md": {
+      "path": "README.md",
+      "sha256": "FF6EE58509CDA89035B3280ED8AB8AF6A4C1868495823C31B9E056B4D3A68EE4"
+    },
+    "attribution-credits.md": {
+      "path": "attribution-credits.md",
+      "sha256": "C9CC0AA9996223DE4E1694FF6106AC8F80A90F715C27C4C9D720917278E37060"
+    },
+    "bgm-chain-audit.json": {
+      "path": "bgm-chain-audit.json",
+      "sha256": "37B383632A9401ABBBB96DAA4A901433853D96C399B7DCC1F249EE840A68C7BE"
+    },
+    "edit-plan.json": {
+      "path": "edit-plan.json",
+      "sha256": "7630D08C90E383A7D4A5580624C2FD283FEA3FFBD50DF7F631CD05A4B95692C3"
+    },
+    "edit-timeline.md": {
+      "path": "edit-timeline.md",
+      "sha256": "CF2EE13C91A27F49E19AB3F206CDF4679D5F02DAAAD19CFBE057BEA7CC652159"
+    },
+    "export-config.json": {
+      "path": "export-config.json",
+      "sha256": "A571B6D8A179F7416A436624632F450AE8CAD1916CFDC5F01749F67DCF9076DC"
+    },
+    "failure-samples/README.md": {
+      "path": "failure-samples/README.md",
+      "sha256": "20FFBF33C4AA5B0056F8ED5F861DAAEA8C5E23F576A7B517EDC5FF50BAD787DC"
+    },
+    "loudness-audit.json": {
+      "path": "loudness-audit.json",
+      "sha256": "56ED37DEE5CC0627A6D4B8EAD03FE188E27CB18B40DE86ECAC939EBD423556C8"
+    },
+    "source-timecode-list.json": {
+      "path": "source-timecode-list.json",
+      "sha256": "B0288773287E2FD3F8AAF9C96867A77C6F10B4A9B80EE87BAE68C82CFD1DD11D"
+    },
+    "subtitle-srt-check.json": {
+      "path": "subtitle-srt-check.json",
+      "sha256": "A913919B002D308E89457C9222FD4AF52D713A5BDE01CB9EED220DA28532D707"
+    },
+    "transition-audit.json": {
+      "path": "transition-audit.json",
+      "sha256": "294AB27A71F4356560F8903BE3AB3F960D1713ACAF21872C9C97F84EEC592F99"
+    }
+  },
+  "warnings": [],
+  "humanReview": "待人工门禁关单后逐字回填（口令原文+批准记录指向）",
+  "status": "g5_pending_human_review",
+  "finishedAt": "2026-11-23T11:01:30+08:00",
+  "generatedBy": "g5_validate_delivery.py --report-out"
+}

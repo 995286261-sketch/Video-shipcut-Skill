@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "skill": "transition-expert",
+  "purpose": "transition_check",
+  "generatedAt": "2026-11-20T17:53:38+08:00",
+  "checkedAt": "2026-11-20T17:53:38+08:00",
+  "transitions": [],
+  "masterFades": {
+    "fadeInMs": 1200,
+    "fadeOutMs": 1500
+  },
+  "gridInvariant": true,
+  "manifest": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-可编辑工程-v0.7.json",
+    "sha256": "28A4D3DA4D98C9EBA0CCAB837D22D9C5082B75F818A50B952E7378CEDA042F11"
+  },
+  "assemblyRecord": {
+    "path": "/Users/chuanzhangbigye/工作/WorkSpace/mickey-b2/G4-候选成片-v0.2-装配记录-v0.1.json",
+    "sha256": "DED4B325590F183429A7BA525CBACB4AEB67A635D47406D21A2B37F94DD4773A"
+  },
+  "directive": {
+    "path": "工作台/mickey-intro-001/G4-剪辑与渲染/G4-转场执行指令-v0.3.json",
+    "sha256": "2F0C911C4691273DB31E7C791B3660F9BDDD5F85B620FE3BEC4540E0FD34AF3E"
+  },
+  "master": {
+    "path": "/Users/chuanzhangbigye/工作/WorkSpace/mickey-b2/G4-候选成片-v0.2.mp4",
+    "sha256": "0E51845376AE0A6FDE5D6B59FD23E1D59FFC21203F4588083BF6392AF58749C1"
+  },
+  "errors": []
+}
